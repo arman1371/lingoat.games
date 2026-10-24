@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { createBrowserRouter, createMemoryRouter, type RouteObject } from 'react-router';
+import { createBrowserRouter, createMemoryRouter, Navigate, type RouteObject } from 'react-router';
 import { AppLayout } from './AppLayout';
 import { ErrorPage } from './ErrorPage';
 
@@ -20,7 +20,9 @@ export const routes: RouteObject[] = [
       { path: 'library', ...page(() => import('@/pages/LibraryPage')) },
       { path: 'play/:activityId', ...page(() => import('@/pages/PlayPage')) },
       { path: 'review', ...page(() => import('@/pages/ReviewPage')) },
-      { path: 'settings', ...page(() => import('@/pages/SettingsPage')) },
+      { path: 'progress', ...page(() => import('@/pages/ProgressPage')) },
+      { path: 'profile', ...page(() => import('@/pages/SettingsPage')) },
+      { path: 'settings', element: <Navigate to="/profile" replace /> },
       { path: '*', ...page(() => import('@/pages/NotFoundPage')) },
     ],
   },

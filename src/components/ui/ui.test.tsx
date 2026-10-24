@@ -11,6 +11,9 @@ import { Confetti } from './Confetti';
 import { Icon, type IconName } from './Icon';
 import { ICON_PATHS } from './iconPaths';
 import { IconButton } from './IconButton';
+import { Logo } from './Logo';
+import { StatCard } from './StatCard';
+import { StatPill } from './StatPill';
 import { FeedbackBanner } from './FeedbackBanner';
 import { ProgressBar } from './ProgressBar';
 import { SpeakButton } from './SpeakButton';
@@ -230,5 +233,29 @@ describe('design-system tones', () => {
     expect(container.querySelector('[aria-label="xp"] > div')).toHaveClass('bg-accent');
     expect(screen.getByTestId('s')).toHaveClass('border-primary');
     expect(screen.getByTestId('i').className).toContain('0_3px_0');
+  });
+});
+
+describe('StatPill, StatCard, Logo', () => {
+  it('StatPill is one named image with the value inside', () => {
+    render(
+      <StatPill icon="flame" tone="streak" value={12} label="12-day streak" data-testid="s" />,
+    );
+    const pill = screen.getByRole('img', { name: '12-day streak' });
+    expect(pill).toHaveTextContent('12');
+    expect(screen.getByTestId('s')).toBe(pill);
+  });
+  it('StatCard shows value, label and optional hint', () => {
+    render(<StatCard icon="zap" tone="xp" value={1240} label="Total XP" hint="Best: 3" />);
+    expect(screen.getByText('1240')).toBeInTheDocument();
+    expect(screen.getByText('Total XP')).toBeInTheDocument();
+    expect(screen.getByText('Best: 3')).toBeInTheDocument();
+  });
+  it('Logo is decorative and can drop the wordmark', () => {
+    const { container, rerender } = render(<Logo />);
+    expect(container).toHaveTextContent('lingoat');
+    rerender(<Logo showWordmark={false} />);
+    expect(container).not.toHaveTextContent('lingoat');
+    expect(container.querySelector('svg')).toHaveAttribute('aria-hidden', 'true');
   });
 });
