@@ -99,3 +99,38 @@ test.describe('mobile layout', () => {
     }
   });
 });
+
+test.describe('design-system controls', () => {
+  test('unit tabs: arrow keys switch the view and the tab panel follows', async ({ page }) => {
+    await page.goto('/levels/a1-1/units/a1-1-einkaufen');
+    const path = page.getByRole('tab', { name: /Step by step/ });
+    await path.focus();
+    await page.keyboard.press('ArrowRight');
+    await expect(page.getByRole('tab', { name: /All games/ })).toBeFocused();
+    await expect(page.getByRole('tabpanel').getByRole('list', { name: 'All games' })).toBeVisible();
+    await expect(page).toHaveURL(/view=explore/);
+  });
+
+  test('leaving a round asks first; Escape keeps you playing', async ({ page }) => {
+    await page.goto('/play/a1-1-hallo-flash?seed=1');
+    await page.getByTestId('start').click();
+    await page.getByRole('button', { name: 'Exit game' }).click();
+    const dialog = page.getByRole('dialog', { name: 'Leave this game?' });
+    await expect(dialog).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(dialog).toBeHidden();
+    await expect(page.getByTestId('card')).toBeVisible();
+    await page.getByRole('button', { name: 'Exit game' }).click();
+    await dialog.getByRole('button', { name: 'Leave' }).click();
+    await expect(page).toHaveURL(/units\/a1-1-hallo/);
+  });
+
+  test('settings switches toggle with the keyboard', async ({ page }) => {
+    await page.goto('/settings');
+    const sounds = page.getByRole('switch', { name: 'Sound effects' });
+    const before = await sounds.isChecked();
+    await sounds.focus();
+    await page.keyboard.press('Space');
+    expect(await sounds.isChecked()).toBe(!before);
+  });
+});

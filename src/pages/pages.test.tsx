@@ -524,6 +524,22 @@ describe('Play flow', () => {
     );
   });
 
+  it('asks before leaving a round in progress, and Keep playing stays', async () => {
+    const { user, router } = renderApp(`/play/${quiz.id}?seed=1`);
+    await user.click(await screen.findByTestId('start'));
+    await user.click(screen.getByRole('button', { name: 'Exit game' }));
+    const dialog = await screen.findByRole('dialog', { name: 'Leave this game?' });
+    await user.click(within(dialog).getByRole('button', { name: 'Keep playing' }));
+    expect(router.state.location.pathname).toBe(`/play/${quiz.id}`);
+    await user.click(screen.getByRole('button', { name: 'Exit game' }));
+    await user.click(
+      within(await screen.findByRole('dialog')).getByRole('button', { name: 'Leave' }),
+    );
+    await waitFor(() =>
+      expect(router.state.location.pathname).toBe('/levels/a1-1/units/a1-1-hallo'),
+    );
+  });
+
   it('shows not-found for an unknown activity', async () => {
     renderApp('/play/does-not-exist');
     expect(await screen.findByRole('heading', { name: 'Page not found' })).toBeInTheDocument();
@@ -586,15 +602,16 @@ describe('Settings', () => {
       .getState()
       .recordResult('x', { correct: 1, total: 1, played: [], mistakes: [] });
     const { user } = renderApp('/settings');
-    const confirm = vi
-      .spyOn(window, 'confirm')
-      .mockReturnValueOnce(false)
-      .mockReturnValueOnce(true);
     await user.click(await screen.findByRole('button', { name: 'Reset all progress' }));
+    const dialog = await screen.findByRole('dialog', { name: 'Reset all progress?' });
+    await user.click(within(dialog).getByRole('button', { name: 'Cancel' }));
     expect(useProgressStore.getState().xp).toBeGreaterThan(0);
     await user.click(screen.getByRole('button', { name: 'Reset all progress' }));
+    await user.click(
+      within(await screen.findByRole('dialog')).getByRole('button', { name: 'Reset all progress' }),
+    );
     expect(useProgressStore.getState().xp).toBe(0);
-    confirm.mockRestore();
+    expect(await screen.findByText('Progress reset.')).toBeInTheDocument();
   });
 });
 

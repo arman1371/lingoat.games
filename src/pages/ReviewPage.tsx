@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { StatePanel } from '@/components/ui/StatePanel';
 import { useContent } from '@/content/ContentProvider';
 import { playUrl } from '@/app/path';
 import { GAME_TYPE_LABELS } from '@/lib/filters';
@@ -28,12 +29,11 @@ export function ReviewPage() {
       </header>
 
       {due.length === 0 ? (
-        <p
-          className="rounded-2xl bg-surface-2 p-8 text-center text-lg font-bold text-muted"
-          data-testid="review-empty"
-        >
-          {t('review.empty')}
-        </p>
+        <div data-testid="review-empty">
+          <StatePanel kind="empty" title={t('review.emptyTitle')}>
+            {t('review.empty')}
+          </StatePanel>
+        </div>
       ) : (
         <>
           <div className="flex items-center justify-between gap-3">

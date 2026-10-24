@@ -1,6 +1,7 @@
 import { Link, useParams, useSearchParams } from 'react-router';
 import { ActivityCard } from '@/components/ActivityCard';
 import { Card } from '@/components/ui/Card';
+import { TabPanel, Tabs } from '@/components/ui/Tabs';
 import { useContent } from '@/content/ContentProvider';
 import { pathStates, playUrl } from '@/app/path';
 import { GAME_TYPE_LABELS } from '@/lib/filters';
@@ -54,75 +55,69 @@ export function UnitPage() {
             </p>
           ) : null}
         </Card>
-        <div
-          role="tablist"
-          aria-label="View"
-          className="grid grid-cols-2 gap-2 rounded-2xl bg-surface-2 p-1"
-        >
-          {(['path', 'explore'] as const).map((v) => (
-            <button
-              key={v}
-              role="tab"
-              type="button"
-              aria-selected={view === v}
-              onClick={() => setView(v)}
-              className={`min-h-11 rounded-xl text-sm font-extrabold ${view === v ? 'bg-surface text-primary shadow' : 'text-muted'}`}
-            >
-              {v === 'path' ? `🗺️ ${t('unit.path')}` : `🎮 ${t('unit.explore')}`}
-            </button>
-          ))}
-        </div>
+        <Tabs
+          id="unit-view"
+          label="View"
+          value={view}
+          onChange={setView}
+          tabs={[
+            { value: 'path', label: t('unit.path'), icon: 'map' },
+            { value: 'explore', label: t('unit.explore'), icon: 'grid' },
+          ]}
+        />
       </header>
 
-      {view === 'path' ? (
-        <ol aria-label="Guided path" className="flex flex-col gap-3">
-          {path.map((activity, i) => {
-            const state = states[i]!;
-            const stars = progress[activity.id]?.stars;
-            return (
-              <li key={activity.id} data-state={state} className="flex items-stretch gap-3">
-                <div className="flex flex-col items-center">
-                  <span
-                    aria-hidden="true"
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 font-extrabold ${
-                      state === 'done'
-                        ? 'border-success bg-success text-on-primary'
-                        : state === 'current'
-                          ? 'border-primary bg-primary text-on-primary'
-                          : 'border-line bg-surface text-muted'
-                    }`}
-                  >
-                    {state === 'done' ? '✓' : i + 1}
-                  </span>
-                  {i < path.length - 1 ? (
-                    <span aria-hidden="true" className="w-0.5 flex-1 bg-line" />
-                  ) : null}
-                </div>
-                <div className="flex-1 pb-2">
-                  <ActivityCard
-                    activity={activity}
-                    to={playUrl(activity.id, ids.slice(i + 1))}
-                    stars={stars}
-                    badge={state === 'current' ? 'Up next' : undefined}
-                  />
-                </div>
+      <TabPanel id="unit-view" value={view}>
+        {view === 'path' ? (
+          <ol aria-label="Guided path" className="flex flex-col gap-3">
+            {path.map((activity, i) => {
+              const state = states[i]!;
+              const stars = progress[activity.id]?.stars;
+              return (
+                <li key={activity.id} data-state={state} className="flex items-stretch gap-3">
+                  <div className="flex flex-col items-center">
+                    <span
+                      aria-hidden="true"
+                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 font-extrabold ${
+                        state === 'done'
+                          ? 'border-success bg-success text-on-primary'
+                          : state === 'current'
+                            ? 'border-primary bg-primary text-on-primary'
+                            : 'border-line bg-surface text-muted'
+                      }`}
+                    >
+                      {state === 'done' ? '✓' : i + 1}
+                    </span>
+                    {i < path.length - 1 ? (
+                      <span aria-hidden="true" className="w-0.5 flex-1 bg-line" />
+                    ) : null}
+                  </div>
+                  <div className="flex-1 pb-2">
+                    <ActivityCard
+                      activity={activity}
+                      to={playUrl(activity.id, ids.slice(i + 1))}
+                      stars={stars}
+                      badge={state === 'current' ? 'Up next' : undefined}
+                    />
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        ) : (
+          <ul aria-label="All games" className="grid gap-4 sm:grid-cols-2">
+            {path.map((activity) => (
+              <li key={activity.id}>
+                <ActivityCard
+                  activity={activity}
+                  to={playUrl(activity.id)}
+                  stars={progress[activity.id]?.stars}
+                />
               </li>
-            );
-          })}
-        </ol>
-      ) : (
-        <ul aria-label="All games" className="grid gap-4 sm:grid-cols-2">
-          {path.map((activity) => (
-            <li key={activity.id}>
-              <ActivityCard
-                activity={activity}
-                to={playUrl(activity.id)}
-                stars={progress[activity.id]?.stars}
-              />
-            </li>
-          ))}
-        </ul>
-      )}
+            ))}
+          </ul>
+        )}
+      </TabPanel>
       <p className="text-center text-sm text-muted">
         {path.length} games · {new Set(path.map((a) => a.gameType)).size} game types
         {' · '}

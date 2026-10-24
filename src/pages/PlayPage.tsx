@@ -1,6 +1,7 @@
 import { Suspense, useCallback, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import { Button } from '@/components/ui/Button';
+import { ConfirmDialog } from '@/components/ui/Dialog';
 import { useFocusOnMount } from '@/games/shared/useFocusOnMount';
 import { useContent } from '@/content/ContentProvider';
 import { getItems, withItems } from '@/content/items';
@@ -49,6 +50,7 @@ function PlayView({ activityId }: { activityId: string }) {
   const [seedState] = useState(randomSeed);
   const [run, setRun] = useState(0);
   const [started, setStarted] = useState(false);
+  const [confirmExit, setConfirmExit] = useState(false);
   const [done, setDone] = useState<{ result: GameResult; outcome: RecordOutcome } | null>(null);
   const startRef = useFocusOnMount<HTMLButtonElement>();
 
@@ -98,11 +100,13 @@ function PlayView({ activityId }: { activityId: string }) {
     : undefined;
 
   const exit = () => navigate(backTo);
+  // Leaving mid-round loses its progress, so ask first; the intro and result screens leave at once.
+  const requestExit = () => (started && !done ? setConfirmExit(true) : exit());
 
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between">
-        <Button variant="ghost" size="sm" onClick={exit} aria-label="Exit game">
+        <Button variant="ghost" size="sm" onClick={requestExit} aria-label="Exit game">
           ✕ Exit
         </Button>
         <p className="text-sm font-bold text-muted">
@@ -110,6 +114,17 @@ function PlayView({ activityId }: { activityId: string }) {
           {queue.length > 0 ? ` · ${queue.length} more in queue` : ''}
         </p>
       </div>
+
+      <ConfirmDialog
+        open={confirmExit}
+        title={t('play.exitTitle')}
+        body={t('play.exitBody')}
+        confirmLabel={t('play.exitConfirm')}
+        cancelLabel={t('play.exitStay')}
+        tone="danger"
+        onCancel={() => setConfirmExit(false)}
+        onConfirm={exit}
+      />
 
       {done ? (
         <ResultScreen

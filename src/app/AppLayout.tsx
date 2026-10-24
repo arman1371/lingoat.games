@@ -1,35 +1,36 @@
 import { Suspense, useEffect } from 'react';
 import { NavLink, Outlet, useLocation, Link } from 'react-router';
 import { ContentProvider, useContentState } from '@/content/ContentProvider';
+import { Skeleton } from '@/components/ui/Skeleton';
+import { StatePanel } from '@/components/ui/StatePanel';
 import { t } from '@/i18n';
 import { dayNumber } from '@/lib/srs';
 import { useProgressStore, visibleStreak } from '@/store/progressStore';
 import { useApplySettings } from './theme';
 
+function Loading() {
+  return (
+    <div role="status" className="flex flex-col gap-4 py-8">
+      <p className="sr-only">{t('common.loading')}</p>
+      <Skeleton className="h-40" />
+      <Skeleton className="h-24" />
+      <Skeleton className="h-24" />
+    </div>
+  );
+}
+
 function Gate() {
   const state = useContentState();
-  if (state.status === 'loading') {
-    return (
-      <p role="status" className="py-20 text-center text-xl font-bold text-muted">
-        {t('common.loading')}
-      </p>
-    );
-  }
+  if (state.status === 'loading') return <Loading />;
   if (state.status === 'error') {
     return (
-      <p role="alert" className="py-20 text-center text-xl font-bold text-danger">
-        Could not load the lessons: {state.message}
-      </p>
+      <StatePanel kind="error" title="Could not load the lessons">
+        {state.message}
+      </StatePanel>
     );
   }
   return (
-    <Suspense
-      fallback={
-        <p role="status" className="py-20 text-center text-xl font-bold text-muted">
-          {t('common.loading')}
-        </p>
-      }
-    >
+    <Suspense fallback={<Loading />}>
       <Outlet />
     </Suspense>
   );
@@ -85,7 +86,9 @@ function Shell() {
                   end={n.end}
                   className={({ isActive }) =>
                     `relative flex min-h-14 flex-col items-center justify-center gap-0.5 px-3 text-xs font-bold md:min-h-11 md:flex-row md:gap-2 md:rounded-xl md:text-sm ${
-                      isActive ? 'text-primary md:bg-primary-soft md:text-on-primary-soft' : 'text-muted hover:text-ink'
+                      isActive
+                        ? 'text-primary md:bg-primary-soft md:text-on-primary-soft'
+                        : 'text-muted hover:text-ink'
                     }`
                   }
                 >

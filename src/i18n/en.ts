@@ -53,6 +53,7 @@ export const en = {
     empty: 'Nothing to review – great job! Play more games to fill your box.',
     start: 'Review now ({n})',
     allDone: 'Review complete',
+    emptyTitle: 'All caught up',
   },
   settings: {
     title: 'Settings',
@@ -63,6 +64,15 @@ export const en = {
     ttsRate: 'Speech speed',
     reset: 'Reset all progress',
     resetConfirm: 'This deletes your XP, stars and mistakes. Continue?',
+    resetTitle: 'Reset all progress?',
+    resetDone: 'Progress reset.',
+    cancel: 'Cancel',
+  },
+  play: {
+    exitTitle: 'Leave this game?',
+    exitBody: 'Your progress in this round will be lost.',
+    exitConfirm: 'Leave',
+    exitStay: 'Keep playing',
   },
   result: {
     title: 'Well done!',

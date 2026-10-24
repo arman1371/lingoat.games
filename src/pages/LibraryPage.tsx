@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router';
 import { ActivityCard } from '@/components/ActivityCard';
 import { Button } from '@/components/ui/Button';
 import { Chip } from '@/components/ui/Chip';
+import { TextField } from '@/components/ui/TextField';
 import { useContent } from '@/content/ContentProvider';
 import { GAME_TYPES } from '@/content/gameTypes';
 import { LEVELS } from '@/content/levels';
@@ -79,16 +80,13 @@ export function LibraryPage() {
       </header>
 
       <div className="flex flex-col gap-3">
-        <label htmlFor="search" className="sr-only">
-          {t('library.search')}
-        </label>
-        <input
-          id="search"
+        <TextField
+          label={t('library.search')}
+          hideLabel
           type="search"
           value={filters.q}
           onChange={(e) => update({ q: e.target.value })}
-          placeholder={`🔍 ${t('library.search')}`}
-          className="min-h-12 w-full rounded-2xl border-2 border-line bg-surface px-4 text-lg text-ink"
+          placeholder={t('library.search')}
         />
         <details
           className="rounded-2xl border-2 border-line bg-surface p-3"

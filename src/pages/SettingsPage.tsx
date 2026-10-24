@@ -1,55 +1,26 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { ConfirmDialog } from '@/components/ui/Dialog';
+import { Segment } from '@/components/ui/Segment';
 import { SpeakButton } from '@/components/ui/SpeakButton';
+import { Toast } from '@/components/ui/Toast';
+import { Toggle } from '@/components/ui/Toggle';
 import { t } from '@/i18n';
 import { useProgressStore } from '@/store/progressStore';
 import { useSettingsStore, type MotionSetting, type ThemeSetting } from '@/store/settingsStore';
 
-function Segmented<T extends string>({
-  label,
-  value,
-  options,
-  onChange,
-}: {
-  label: string;
-  value: T;
-  options: { value: T; label: string }[];
-  onChange: (v: T) => void;
-}) {
-  return (
-    <fieldset className="flex flex-col gap-2">
-      <legend className="mb-1 font-extrabold text-ink">{label}</legend>
-      <div className="grid grid-flow-col gap-2">
-        {options.map((o) => (
-          <label
-            key={o.value}
-            className={`flex min-h-11 cursor-pointer items-center justify-center rounded-xl border-2 px-3 text-sm font-bold ${value === o.value ? 'border-primary bg-primary text-on-primary' : 'border-line bg-surface text-ink'}`}
-          >
-            <input
-              type="radio"
-              name={label}
-              value={o.value}
-              checked={value === o.value}
-              onChange={() => onChange(o.value)}
-              className="sr-only"
-            />
-            {o.label}
-          </label>
-        ))}
-      </div>
-    </fieldset>
-  );
-}
-
 export function SettingsPage() {
   const s = useSettingsStore();
   const reset = useProgressStore((p) => p.reset);
+  const [confirming, setConfirming] = useState(false);
+  const [toast, setToast] = useState<string | null>(null);
 
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-5">
       <h1 className="text-3xl font-extrabold text-ink">{t('settings.title')}</h1>
       <Card className="flex flex-col gap-5">
-        <Segmented<ThemeSetting>
+        <Segment<ThemeSetting>
           label={t('settings.theme')}
           value={s.theme}
           onChange={(theme) => s.set({ theme })}
@@ -59,7 +30,7 @@ export function SettingsPage() {
             { value: 'dark', label: 'Dark' },
           ]}
         />
-        <Segmented<MotionSetting>
+        <Segment<MotionSetting>
           label={t('settings.motion')}
           value={s.motion}
           onChange={(motion) => s.set({ motion })}
@@ -69,24 +40,16 @@ export function SettingsPage() {
             { value: 'reduced', label: 'Reduced' },
           ]}
         />
-        <label className="flex min-h-11 items-center justify-between gap-3 font-extrabold text-ink">
-          {t('settings.sounds')}
-          <input
-            type="checkbox"
-            className="h-6 w-6"
-            checked={s.sounds}
-            onChange={(e) => s.set({ sounds: e.target.checked })}
-          />
-        </label>
-        <label className="flex min-h-11 items-center justify-between gap-3 font-extrabold text-ink">
-          {t('settings.autoSpeak')}
-          <input
-            type="checkbox"
-            className="h-6 w-6"
-            checked={s.autoSpeak}
-            onChange={(e) => s.set({ autoSpeak: e.target.checked })}
-          />
-        </label>
+        <Toggle
+          label={t('settings.sounds')}
+          checked={s.sounds}
+          onChange={(sounds) => s.set({ sounds })}
+        />
+        <Toggle
+          label={t('settings.autoSpeak')}
+          checked={s.autoSpeak}
+          onChange={(autoSpeak) => s.set({ autoSpeak })}
+        />
         <div className="flex flex-col gap-2">
           <label htmlFor="rate" className="font-extrabold text-ink">
             {t('settings.ttsRate')}: {s.ttsRate.toFixed(1)}×
@@ -111,15 +74,25 @@ export function SettingsPage() {
         <p className="text-sm text-muted">
           Progress is stored only in this browser. Clearing site data removes it.
         </p>
-        <Button
-          variant="danger"
-          onClick={() => {
-            if (window.confirm(t('settings.resetConfirm'))) reset();
-          }}
-        >
+        <Button variant="danger" onClick={() => setConfirming(true)}>
           {t('settings.reset')}
         </Button>
       </Card>
+      <ConfirmDialog
+        open={confirming}
+        title={t('settings.resetTitle')}
+        body={t('settings.resetConfirm')}
+        confirmLabel={t('settings.reset')}
+        cancelLabel={t('settings.cancel')}
+        tone="danger"
+        onCancel={() => setConfirming(false)}
+        onConfirm={() => {
+          reset();
+          setConfirming(false);
+          setToast(t('settings.resetDone'));
+        }}
+      />
+      <Toast message={toast} onDismiss={() => setToast(null)} />
     </div>
   );
 }
