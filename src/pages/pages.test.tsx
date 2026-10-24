@@ -633,7 +633,7 @@ describe('Routing', () => {
       '#main',
     );
     expect(screen.getByLabelText('2 items to review')).toBeInTheDocument();
-    for (const name of ['Home', 'Games', 'Review', 'Settings']) {
+    for (const name of ['Learn', 'Games', 'Review', 'Progress', 'Profile']) {
       expect(
         within(screen.getByRole('navigation', { name: 'Main' })).getByRole('link', {
           name: new RegExp(name),
@@ -666,4 +666,49 @@ describe('Library – filter panel', () => {
     await user.click(screen.getByRole('button', { name: 'Clear filters' }));
     expect(panel).toHaveAttribute('open');
   }, 60_000);
+});
+
+describe('Progress and Profile', () => {
+  it('shows the progress page with stats and per-level bars', async () => {
+    useProgressStore
+      .getState()
+      .recordResult('a1-1-hallo-time-of-day', { correct: 5, total: 5, played: [], mistakes: [] });
+    const { user } = renderApp('/progress');
+    expect(await screen.findByRole('heading', { name: 'Progress', level: 1 })).toBeInTheDocument();
+    const stats = screen.getByRole('region', { name: 'Your stats' });
+    expect(within(stats).getByText('Total XP')).toBeInTheDocument();
+    expect(within(stats).getByText('Games played')).toBeInTheDocument();
+    expect(screen.getByRole('progressbar', { name: 'A1.1 progress' })).toHaveAttribute(
+      'aria-valuenow',
+      expect.stringMatching(/^[1-9]/),
+    );
+    await user.click(screen.getByRole('link', { name: /A1\.2/ }));
+    expect(await screen.findByRole('heading', { name: /A1\.2/, level: 1 })).toBeInTheDocument();
+  });
+
+  it('links the Fehlerkiste from the progress page', async () => {
+    useProgressStore
+      .getState()
+      .recordResult('act', { correct: 0, total: 1, played: ['a'], mistakes: ['a'] });
+    const { user, router } = renderApp('/progress');
+    await user.click(await screen.findByRole('link', { name: /Fehlerkiste/ }));
+    expect(router.state.location.pathname).toBe('/review');
+  });
+
+  it('serves settings on /profile and redirects the old /settings URL', async () => {
+    const { router } = renderApp('/settings');
+    expect(await screen.findByRole('heading', { name: 'Profile', level: 1 })).toBeInTheDocument();
+    expect(router.state.location.pathname).toBe('/profile');
+  });
+
+  it('marks the current destination in the main navigation', async () => {
+    renderApp('/progress');
+    await screen.findByRole('heading', { name: 'Progress', level: 1 });
+    const nav = screen.getByRole('navigation', { name: 'Main' });
+    expect(within(nav).getByRole('link', { name: 'Progress' })).toHaveAttribute(
+      'aria-current',
+      'page',
+    );
+    expect(within(nav).getByRole('link', { name: 'Learn' })).not.toHaveAttribute('aria-current');
+  });
 });
