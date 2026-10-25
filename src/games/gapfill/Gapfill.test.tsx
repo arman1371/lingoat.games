@@ -1,5 +1,7 @@
 import { screen } from '@testing-library/react';
 import { renderGame } from '@/test/render';
+import { stubSpeech } from '@/test/speech';
+import { DEFAULT_SETTINGS, useSettingsStore } from '@/store/settingsStore';
 import Gapfill from './Gapfill';
 
 const chips = {
@@ -81,5 +83,30 @@ describe('Gapfill grammar hints', () => {
     const { user } = renderGame(Gapfill, chips);
     await user.click(screen.getByRole('button', { name: 'Nacht' }));
     expect(screen.queryByTestId('mistake-hint')).not.toBeInTheDocument();
+  });
+});
+
+describe('Gapfill speech', () => {
+  let speech: ReturnType<typeof stubSpeech>;
+  beforeEach(() => {
+    speech = stubSpeech();
+  });
+  afterEach(() => {
+    speech.restore();
+    useSettingsStore.setState({ ...DEFAULT_SETTINGS });
+  });
+
+  it('reads the sentence without the missing word and stays silent when the answer is revealed', async () => {
+    const { user } = renderGame(Gapfill, typed);
+    expect(speech.spoken()).toEqual(['Ich, Anna.']);
+    await user.type(screen.getByLabelText('Missing word'), 'heiße{Enter}');
+    expect(screen.getByTestId('feedback')).toBeInTheDocument();
+    expect(speech.spoken()).toEqual(['Ich, Anna.']);
+  });
+
+  it('does not speak when "Read sentences aloud" is off', () => {
+    useSettingsStore.setState({ speakSentences: false });
+    renderGame(Gapfill, chips);
+    expect(speech.synth.speak).not.toHaveBeenCalled();
   });
 });

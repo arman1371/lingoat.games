@@ -1,5 +1,7 @@
 import { screen, within } from '@testing-library/react';
 import { renderGame } from '@/test/render';
+import { stubSpeech } from '@/test/speech';
+import { DEFAULT_SETTINGS, useSettingsStore } from '@/store/settingsStore';
 import Sentence from './Sentence';
 
 const config = {
@@ -91,5 +93,35 @@ describe('Sentence grammar hints', () => {
     await place(user, ['heißt', 'Wie', 'du?']);
     await user.click(screen.getByRole('button', { name: 'Check' }));
     expect(screen.getByTestId('mini-lesson')).toHaveTextContent('Asking questions');
+  });
+});
+
+describe('Sentence speech', () => {
+  let speech: ReturnType<typeof stubSpeech>;
+  beforeEach(() => {
+    speech = stubSpeech();
+  });
+  afterEach(() => {
+    speech.restore();
+    useSettingsStore.setState({ ...DEFAULT_SETTINGS });
+  });
+
+  it('speaks each word as it is selected, but not when it is removed again', async () => {
+    const { user } = renderGame(Sentence, config);
+    expect(speech.synth.speak).not.toHaveBeenCalled();
+    const words = SOLUTION[prompt()]!;
+    await place(user, words.slice(0, 2));
+    expect(speech.spoken()).toEqual(words.slice(0, 2));
+    await user.click(screen.getByRole('button', { name: `Remove ${words[1]}` }));
+    expect(speech.spoken()).toEqual(words.slice(0, 2));
+    await place(user, [words[1]!]);
+    expect(speech.spoken()).toEqual([words[0], words[1], words[1]]);
+  });
+
+  it('stays silent when "Read sentences aloud" is off', async () => {
+    useSettingsStore.setState({ speakSentences: false });
+    const { user } = renderGame(Sentence, config);
+    await place(user, SOLUTION[prompt()]!.slice(0, 1));
+    expect(speech.synth.speak).not.toHaveBeenCalled();
   });
 });

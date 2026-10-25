@@ -59,6 +59,14 @@ files) for every verdict. Dialogue (a cue per reply), blitz and memory call `use
 dialogue and self-graded flashcards pass `sounds: false` to `useSequence`. The "Sound effects" setting mutes
 them.
 
+Speech: `src/lib/tts.ts` wraps the browser voice (de-DE); every `speak()` cancels the previous utterance.
+Listening engines use `useAutoSpeak` (setting "Speak German automatically"). The "Read sentences aloud"
+setting (`speakSentences`, default on) covers the other engines through `useSentenceSpeech`: gap fill reads
+the sentence without the missing word (`spokenWithoutGap`, the gap becomes a comma pause), the sentence
+builder speaks each word as it is tapped, and dialogue speaks the new speaker lines. Nothing is spoken when
+an answer is revealed. Blitz and quiz stay silent on purpose: half of the blitz sentences are deliberately
+wrong, and a quiz `speak` text can give the answer away.
+
 ## Tags and filters
 
 `src/content/tags.ts` is the single vocabulary (skill / topic / grammar). Filter facets: level, unit, skill,

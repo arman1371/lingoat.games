@@ -5,7 +5,9 @@ import { FeedbackFooter, GameFrame, verdictTitle } from './GameFrame';
 import { shuffledOptions } from './choices';
 import { useSequence } from './useSequence';
 import { useNumberKeys } from './useNumberKeys';
+import { stubSpeech } from '@/test/speech';
 import { useAutoSpeak } from './useAutoSpeak';
+import { useSentenceSpeech, useSpeakSentence } from './useSentenceSpeech';
 import { useSettingsStore, DEFAULT_SETTINGS } from '@/store/settingsStore';
 
 const items = [{ id: 'a' }, { id: 'b' }, { id: 'c' }];
@@ -169,5 +171,46 @@ describe('useAutoSpeak', () => {
     renderHook(() => useAutoSpeak(undefined));
     renderHook(() => useAutoSpeak('Nope', false));
     expect(synth.speak).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('sentence speech', () => {
+  let speech: ReturnType<typeof stubSpeech>;
+  beforeEach(() => {
+    speech = stubSpeech();
+  });
+  afterEach(() => {
+    speech.restore();
+    useSettingsStore.setState({ ...DEFAULT_SETTINGS });
+  });
+
+  it('speaks a sentence once, at the speech rate, and again only when it changes', () => {
+    useSettingsStore.setState({ ttsRate: 0.7 });
+    const { rerender } = renderHook(({ text }) => useSpeakSentence(text), {
+      initialProps: { text: 'Ich, gern Kaffee.' },
+    });
+    rerender({ text: 'Ich, gern Kaffee.' });
+    expect(speech.spoken()).toEqual(['Ich, gern Kaffee.']);
+    expect(speech.synth.speak.mock.calls[0]?.[0]).toMatchObject({ lang: 'de-DE', rate: 0.7 });
+    rerender({ text: 'Wir, nach Hause.' });
+    expect(speech.spoken()).toEqual(['Ich, gern Kaffee.', 'Wir, nach Hause.']);
+    expect(speech.synth.cancel).toHaveBeenCalledTimes(2); // each utterance replaces the previous
+  });
+
+  it('stays quiet when the setting is off, whatever auto-speak says', () => {
+    useSettingsStore.setState({ speakSentences: false, autoSpeak: true });
+    renderHook(() => useSpeakSentence('Hallo'));
+    const { result } = renderHook(() => useSentenceSpeech());
+    result.current('Tschüss');
+    expect(speech.synth.speak).not.toHaveBeenCalled();
+  });
+
+  it('ignores empty text and missing speech support', () => {
+    const { result } = renderHook(() => useSentenceSpeech());
+    result.current(undefined);
+    result.current('');
+    expect(speech.synth.speak).not.toHaveBeenCalled();
+    speech.restore();
+    expect(() => result.current('Hallo')).not.toThrow();
   });
 });

@@ -8,8 +8,10 @@ import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
 import { shuffledOptions } from '../shared/choices';
 import { MistakeHint } from '../shared/MistakeHint';
 import { mistakeWhy } from '../shared/hints';
+import { useSpeakSentence } from '../shared/useSentenceSpeech';
 import { useSequence } from '../shared/useSequence';
 import type { GameProps } from '../types';
+import { spokenWithoutGap } from './logic';
 
 export function Gapfill({ config, seed, onFinish }: GameProps<'gapfill'>) {
   const seq = useSequence(config.items, seed, onFinish);
@@ -23,6 +25,7 @@ export function Gapfill({ config, seed, onFinish }: GameProps<'gapfill'>) {
     () => (item.options ? shuffledOptions(item.options, seed, item.id) : null),
     [item, seed],
   );
+  useSpeakSentence(spokenWithoutGap(before, after));
   const accepted = [item.answer, ...(item.alsoAccept ?? [])];
 
   const grade = (given: string) => {
