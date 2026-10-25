@@ -8,7 +8,7 @@ read it, so it should always match the code.
 
 `.github/workflows/graphify.yml` runs after every push to `main` (and on demand via _Run workflow_):
 
-1. checks out `main` and installs the pinned `graphifyy` version from PyPI;
+1. checks out `main` and installs the pinned `graphifyy` version from PyPI, verified by hash (see below);
 2. runs `graphify update .` (code-only AST extraction, no LLM, no API key; `GRAPHIFY_FORCE=1` so a commit
    that deletes code can shrink the graph);
 3. if Graphify changed `graphify-out/` (it leaves the files alone when the code graph is the same, e.g. after
@@ -21,6 +21,22 @@ would skip CI for that commit too.) A newer push cancels a still-running older r
 from the latest `main`, so nothing is lost).
 
 Committed: `graph.json` and `GRAPH_REPORT.md`; everything else in `graphify-out/` is ignored (see `.gitignore`).
+
+## Pinned install
+
+The job can push to `main`, so it never installs an unverified package. `.github/graphify/requirements.txt`
+lists `graphifyy` and all its transitive dependencies with `sha256` hashes, and the workflow installs it with
+`pip install --require-hashes --only-binary=:all:` (hash mismatch or sdist-only package fails the job). The
+Actions used in the workflow are pinned to full commit SHAs, with the version tag as a comment.
+
+To bump Graphify, edit the version in `.github/graphify/requirements.in` and run:
+
+```sh
+uv pip compile .github/graphify/requirements.in --generate-hashes --python-version 3.13 --universal \
+  --no-header -o .github/graphify/requirements.txt
+```
+
+Commit both files, and update the local install (below) to the same version.
 
 ## Repo settings
 
