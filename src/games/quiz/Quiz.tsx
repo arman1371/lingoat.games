@@ -4,6 +4,7 @@ import { ChoiceList } from '../shared/ChoiceList';
 import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
 import { shuffledOptions } from '../shared/choices';
 import { MistakeHint } from '../shared/MistakeHint';
+import { NounArticle } from '../shared/NounArticle';
 import { mistakeWhy } from '../shared/hints';
 import { useSequence } from '../shared/useSequence';
 import type { GameProps } from '../types';
@@ -42,6 +43,7 @@ export function Quiz({ config, seed, onFinish }: GameProps<'quiz'>) {
                     Answer: <strong>{q.answer}</strong>
                   </p>
                 ) : null}
+                <NounArticle text={q.prompt} answer={q.answer} />
                 {q.explanation ? <p>{q.explanation}</p> : null}
                 {!correct && picked !== null ? (
                   <MistakeHint why={mistakeWhy(q, picked)} lesson={q.lesson} />

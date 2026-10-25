@@ -10,6 +10,8 @@ import { getItems, withItems } from '@/content/items';
 import type { Activity } from '@/content/schema';
 import { GAME_HELP, gameComponents } from '@/games/registry';
 import { ActivityLessonContext } from '@/games/shared/hints';
+import { NounIndexContext } from '@/games/shared/NounArticle';
+import { buildNounIndex } from '@/lib/german/nouns';
 import { lessonForTags } from '@/content/lessons';
 import { playUrl } from '@/app/path';
 import { GAME_TYPE_LABELS } from '@/lib/filters';
@@ -56,6 +58,7 @@ function PlayView({ activityId }: { activityId: string }) {
   const [done, setDone] = useState<{ result: GameResult; outcome: RecordOutcome } | null>(null);
   const startRef = useFocusOnMount<HTMLButtonElement>();
 
+  const nounIndex = useMemo(() => buildNounIndex(content.vocab), [content.vocab]);
   const base = content.activityById.get(activityId);
   const activity: Activity | undefined = useMemo(() => {
     if (!base) return undefined;
@@ -172,12 +175,14 @@ function PlayView({ activityId }: { activityId: string }) {
           }
         >
           <ActivityLessonContext value={activity.lesson ?? lessonForTags(activity.tags)}>
-            <Game
-              key={`${activity.id}-${run}`}
-              config={activity.config}
-              seed={seed}
-              onFinish={onFinish}
-            />
+            <NounIndexContext value={nounIndex}>
+              <Game
+                key={`${activity.id}-${run}`}
+                config={activity.config}
+                seed={seed}
+                onFinish={onFinish}
+              />
+            </NounIndexContext>
           </ActivityLessonContext>
         </Suspense>
       )}

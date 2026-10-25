@@ -37,6 +37,11 @@ describe('builders', () => {
     expect(label(vocab[4]!)).toBe('danke');
   });
 
+  it('does not repeat an article that is already part of the word', () => {
+    const [name] = vocabList('u', 'Intro', [['der Name', 'name', '🏷️', 'der']]);
+    expect(label(name!)).toBe('der Name');
+  });
+
   it('keeps ids unique for words that only differ by case', () => {
     const v = vocabList('u', 'Pronouns', [
       ['sie', 'she'],
