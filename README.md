@@ -36,7 +36,7 @@ Unit lists are researched from course books, Goethe exam documents and the CEFR 
 
 ### Features
 
-- **13 game engines**: flashcards, quiz, memory, listen & pick, spell it, sentence builder, gap fill,
+- **13 game engines**: flashcards, quiz, memory (match two columns), listen & pick, spell it, sentence builder, gap fill,
   sort it (drag & drop), conjugation grid, blitz, dialogue, clock master and market stand.
 - **Guided path or free play**: follow a unit step by step, or filter the library by level, unit, skill,
   topic, grammar point, game type, difficulty and length, and play any filtered list as a queue.

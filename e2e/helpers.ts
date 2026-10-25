@@ -15,7 +15,7 @@ import c22 from '../src/content/c2-2';
 import type { Activity } from '../src/content/schema';
 import { parseTime, timeToGerman } from '../src/lib/german/time';
 import { totalCents } from '../src/games/market/logic';
-import { buildDeck } from '../src/games/memory/logic';
+import { buildColumns } from '../src/games/memory/logic';
 import { priceToGerman } from '../src/lib/german/numbers';
 
 export const SEED = 1;
@@ -115,11 +115,11 @@ const solvers: Record<Activity['gameType'], Solver> = {
 
   async memory(page, c) {
     // the ?seed= URL parameter makes the deck order reproducible
-    const deck = buildDeck(c.pairs, SEED);
+    const { left, right } = buildColumns(c.pairs, SEED);
     const cards = page.getByTestId('memory-card');
     for (const p of c.pairs) {
-      const a = cards.nth(deck.findIndex((d) => d.uid === `${p.id}:a`));
-      const b = cards.nth(deck.findIndex((d) => d.uid === `${p.id}:b`));
+      const a = cards.nth(left.findIndex((d) => d.pairId === p.id));
+      const b = cards.nth(left.length + right.findIndex((d) => d.pairId === p.id));
       await a.click();
       await b.click();
       await expect(a).toHaveAttribute('data-state', 'matched');

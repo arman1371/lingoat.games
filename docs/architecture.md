@@ -50,6 +50,8 @@ interface GameProps<T extends GameType> {
 ```
 
 Sequential engines use `useSequence` (shuffle, first-try verdicts, finish) and `GameFrame` / `FeedbackFooter`.
+Memory is a two-column matching board: words on the left, matches on the right, each column shuffled on its own
+(`buildColumns`); tap one card on each side to pair them. A wrong pair stays marked (with the usual `MistakeHint`) until the next tap.
 Every item has a stable `id`; that id is what the Fehlerkiste stores.
 
 Answer sounds: `useSequence` plays a tiny synthesized right/wrong cue (`src/lib/sfx.ts`, Web Audio, no asset

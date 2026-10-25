@@ -111,6 +111,15 @@ export const en = {
     toLibrary: 'More games',
     newBest: 'New best!',
   },
+  memory: {
+    label: 'Memory',
+    start: 'Tap a word, then tap its match.',
+    pickMatch: '{word}: now tap its match.',
+    match: 'Match! {a} = {b}',
+    miss: 'Not a pair – try again.',
+    words: 'Word',
+    matches: 'Match',
+  },
   hint: { why: 'Why not?', lesson: 'Mini lesson' },
   notFound: { title: 'Page not found', body: 'That page does not exist.', home: 'Back to home' },
 } as const;
