@@ -47,8 +47,9 @@ Files: the manifest and `misses.json` are committed. Images, cached API answers 
 `.image-cache/` (git-ignored). `npm run dev` and `npm run preview` serve `.image-cache/images/` at `/img/`
 so you see the photos locally.
 
-Fixing a wrong photo: add the id to `overrides.json` with a better `query` (or `skip`), delete its
-manifest entry, run the script again.
+Fixing a wrong photo: add the id to `overrides.json` with a better `query`, the Pixabay id of the exact
+photo (`{ "photo": 1995079 }`, the number at the end of the photo's page URL; use it when no query finds the
+right one, e.g. "orange" finds orange flowers) or `skip`, delete its manifest entry, run the script again.
 
 ## Storage and delivery
 

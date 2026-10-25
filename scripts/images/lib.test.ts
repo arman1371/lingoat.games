@@ -76,6 +76,7 @@ describe('queryFor', () => {
     expect(queryFor(noun())).toBe('apple');
     expect(queryFor(noun(), { 'u-apfel': { query: 'red apple' } })).toBe('red apple');
     expect(queryFor(noun(), { 'u-apfel': { skip: true } })).toBeNull();
+    expect(queryFor(noun(), { 'u-apfel': { photo: 123 } })).toBe('apple');
     expect(queryFor(noun({ de: 'Türkei', en: 'Turkey' }))).toBe('istanbul');
   });
 });
