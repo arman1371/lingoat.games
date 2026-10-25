@@ -14,7 +14,6 @@ import { NounIndexContext } from '@/games/shared/NounArticle';
 import { buildNounIndex } from '@/lib/german/nouns';
 import { lessonForTags } from '@/content/lessons';
 import { playUrl } from '@/app/path';
-import { GAME_TYPE_LABELS } from '@/lib/filters';
 import { parseSeed, randomSeed } from '@/lib/rng';
 import type { GameResult } from '@/lib/scoring';
 import { t } from '@/i18n';
@@ -95,7 +94,6 @@ function PlayView({ activityId }: { activityId: string }) {
       ? t('result.backToUnit')
       : t('result.toLibrary');
   const seed = (urlSeed ?? seedState) + run;
-  const type = GAME_TYPE_LABELS[activity.gameType];
   const Game = gameComponents[activity.gameType] as React.ComponentType<{
     config: unknown;
     seed: number;
@@ -113,13 +111,8 @@ function PlayView({ activityId }: { activityId: string }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-3">
+      <div className="flex items-center">
         <IconButton icon="close" onClick={requestExit} aria-label="Exit game" />
-        <GameTile type={activity.gameType} size="sm" />
-        <p className="text-sm font-bold uppercase tracking-wide text-muted">
-          {type.label}
-          {queue.length > 0 ? ` · ${queue.length} more in queue` : ''}
-        </p>
       </div>
 
       <ConfirmDialog

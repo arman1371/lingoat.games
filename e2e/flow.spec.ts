@@ -109,7 +109,8 @@ test.describe('game library and filters', () => {
     await expect(page.getByTestId('result-count')).toHaveText(`${quizzes.length} games`);
     await page.getByTestId('play-queue').click();
     await expect(page.getByRole('heading', { name: quizzes[0]!.title, level: 1 })).toBeVisible();
-    await expect(page.getByText(`${quizzes.length - 1} more in queue`)).toBeVisible();
+    const queued = new URL(page.url()).searchParams.get('q')?.split(',') ?? [];
+    expect(queued).toHaveLength(quizzes.length - 1);
   });
 
   test('searches by text', async ({ page }) => {
