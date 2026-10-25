@@ -52,12 +52,25 @@ manifest entry, run the script again.
 
 ## Storage and delivery
 
-Not in git (about 20 KiB × the number of photos). The plan is a Cloudflare R2 bucket plus a small Worker in
-front of the static assets that serves `/img/*` from it with a one-year immutable cache header, so
-Cloudflare's cache answers repeat requests and each photo is downloaded from Pixabay exactly once. The Worker and the
-bucket setup come in a separate change (`docs/deployment.md`). Until then `/img/*` answers 404 in production
-and every word simply shows its emoji. The service worker keeps viewed photos for offline play
-(`word-photos` cache).
+The image files are **never committed** (about 20 KiB × the number of photos): only the manifest is in git.
+They live in the Cloudflare R2 bucket `lingoat-images` (key = `<id>.webp`, `image/webp`, one-year immutable cache
+header). A small Worker (`worker/`, bound as `IMAGES` in `wrangler.jsonc`) answers `/img/<id>.webp` from the bucket;
+`run_worker_first: ["/img/*"]` means every other request is a plain static asset and never runs the Worker.
+A photo that is not in the bucket answers 404 (cached for five minutes), so the word shows its emoji. The
+service worker keeps viewed photos for offline play (`word-photos` cache).
+
+Upload after every `images:fetch` (idempotent: it lists the bucket and only uploads keys that are missing):
+
+```bash
+export R2_ACCESS_KEY_ID=… R2_SECRET_ACCESS_KEY=… CLOUDFLARE_ACCOUNT_ID=…   # never commit or print them
+npm run images:upload                    # uploads .image-cache/images/*.webp
+npm run images:upload -- --dir <folder>  # another folder, e.g. a hand-off folder from another machine
+npm run images:upload -- --dry-run       # only say what would be uploaded
+```
+
+To replace a photo, delete its object in the R2 dashboard (the Worker and browsers cache it for a year under the
+same URL, so prefer a new id or purge the cache) and upload again. The bucket must exist before `wrangler deploy`,
+otherwise the deploy fails on the `r2_buckets` binding: create it once with `npx wrangler r2 bucket create lingoat-images`.
 
 ## In the app
 

@@ -43,6 +43,8 @@ Notes
 
 - `public/_headers` sets long-lived caching for hashed assets and `no-cache` for `index.html` and the
   service worker, so new releases reach installed PWAs quickly.
+- `wrangler.jsonc` also has a `main` Worker (`worker/`) that serves `/img/*` from the R2 bucket `lingoat-images`; the
+  bucket must exist before deploying (`npx wrangler r2 bucket create lingoat-images`). See [images.md](images.md).
 - The service worker (vite-plugin-pwa, `autoUpdate`) precaches the shell and every level chunk for offline play.
 
 ## Other hosts
