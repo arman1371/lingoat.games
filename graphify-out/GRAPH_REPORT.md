@@ -1,17 +1,17 @@
 # Graph Report - lingoat.games  (2026-10-25)
 
 ## Corpus Check
-- 414 files · ~444,530 words
+- 414 files · ~444,623 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 8 file(s) not represented in the graph (top: (none) 5, .properties 1, .css 1)
 
 ## Summary
-- 2142 nodes · 7068 edges · 137 communities (128 shown, 9 thin omitted)
+- 2142 nodes · 7070 edges · 140 communities (131 shown, 9 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 77 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `25bb3fee`
+- Built from commit: `30e23cde`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -123,7 +123,10 @@
 - q
 - sent
 - a1-1/types.ts
+- u3-woher.ts
+- u8-einkaufen.ts
 - u1-kunst.ts
+- u6-freizeit.ts
 - typed
 - C1.2 – syllabus research, coverage and overlap with A1.1–B1.1
 - u2-literatur.ts
@@ -182,7 +185,7 @@
 - **B1.1 research sources** — docs_b1_1_coverage_schritte, docs_b1_1_coverage_menschen, docs_b1_1_coverage_netzwerk, docs_b1_1_coverage_ziel, docs_b1_1_coverage_goethe_b1, docs_b1_1_coverage_cefr [EXTRACTED 1.00]
 - **Level authoring knowledge (procedure, coverage rules, level docs)** — docs_adding_content_new_level, docs_a2_2_coverage, docs_b1_1_coverage [INFERRED 0.85]
 
-## Communities (137 total, 9 thin omitted)
+## Communities (140 total, 9 thin omitted)
 
 ### Community 0 - "c1-1/index.ts"
 Cohesion: 0.12
@@ -257,8 +260,8 @@ Cohesion: 0.11
 Nodes (38): ref_components_ui_feedbackbanner, ref_components_ui_speakbutton, ref_lib_tts, react, Props, collectNpcLines(), Dialogue(), Line (+30 more)
 
 ### Community 18 - "content/hints.ts"
-Cohesion: 0.13
-Nodes (17): ref_lib_german_adjectives, ref_lib_german_articles, ref_lib_german_conjugation, ref_test_factories, hints, hints, hints, hints (+9 more)
+Cohesion: 0.14
+Nodes (16): ref_lib_german_adjectives, ref_lib_german_articles, ref_lib_german_conjugation, hints, hints, hints, hints, adjectiveHint() (+8 more)
 
 ### Community 19 - "customTable"
 Cohesion: 0.14
@@ -277,8 +280,8 @@ Cohesion: 0.20
 Nodes (14): Blanks, compound(), modalPerfectTable(), passiveFutureTable(), passivePerfectTable(), passivePreteriteTable(), SixForms, stateTable() (+6 more)
 
 ### Community 23 - "lessons.ts"
-Cohesion: 0.14
-Nodes (17): Meta, ItemHint, BROAD, COVERS, isLessonId(), Lesson, LESSON_IDS, lessonForTags() (+9 more)
+Cohesion: 0.13
+Nodes (18): Meta, VocabPathOptions, ItemHint, BROAD, COVERS, isLessonId(), Lesson, LESSON_IDS (+10 more)
 
 ### Community 24 - "Clock.tsx"
 Cohesion: 0.23
@@ -357,8 +360,8 @@ Cohesion: 0.12
 Nodes (12): people, phrases, vocab, wer, familie, female, male, relatives (+4 more)
 
 ### Community 43 - "ContentProvider.tsx"
-Cohesion: 0.16
-Nodes (18): VocabList, VocabPathOptions, ContentContext, ContentProvider(), Props, State, Probe(), Strict() (+10 more)
+Cohesion: 0.24
+Nodes (12): ContentContext, ContentProvider(), Props, State, Probe(), Strict(), useContent(), useContentState() (+4 more)
 
 ### Community 44 - "vocabList"
 Cohesion: 0.06
@@ -588,13 +591,25 @@ Nodes (7): q(), eating, shopping, vocab, money, tourism, vocab
 Cohesion: 0.22
 Nodes (7): sent(), events, phrases, vocab, art, stage, vocab
 
-### Community 108 - "a1-1/types.ts"
-Cohesion: 0.09
-Nodes (15): countries, country(), languages, vocab, woher, words, freizeit, hobbies (+7 more)
+### Community 107 - "a1-1/types.ts"
+Cohesion: 0.33
+Nodes (7): ref_test_factories, VocabList, ContentIndex, EMPTY_INDEX, Activity, Unit, Vocab
+
+### Community 108 - "u3-woher.ts"
+Cohesion: 0.25
+Nodes (6): countries, country(), languages, vocab, woher, words
+
+### Community 109 - "u8-einkaufen.ts"
+Cohesion: 0.25
+Nodes (5): einkaufen, food, genderItems, shopping, vocab
 
 ### Community 110 - "u1-kunst.ts"
 Cohesion: 0.29
 Nodes (6): withWhy(), betrieb, grammarTags, LESSON, urteil, vocab
+
+### Community 111 - "u6-freizeit.ts"
+Cohesion: 0.40
+Nodes (3): freizeit, hobbies, vocab
 
 ### Community 112 - "typed"
 Cohesion: 0.33
@@ -705,7 +720,7 @@ Nodes (3): business, culture, vocab
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `react` to `Market.tsx`, `Toast.tsx`, `ui.test.tsx`, `playability.tsx`, `Conjugation.tsx`, `controls.test.tsx`, `Button.tsx`, `package.json`, `ContentProvider.tsx`, `@testing-library/react`, `AppLayout.tsx`, `sounds.test.tsx`, `PlayPage.tsx`, `Clock.tsx`, `IconButton.tsx`, `Icon.tsx`, `Tabs.tsx`, `Sentence.tsx`?**
-  _High betweenness centrality (0.074) - this node is a cross-community bridge._
+  _High betweenness centrality (0.073) - this node is a cross-community bridge._
 - **Why does `README (Deutsch Spielplatz)` connect `README (Deutsch Spielplatz)` to `C1.1 – syllabus research, coverage and overlap with A1.1–B1.2`, `B1.1 coverage and research doc`, `Deployment doc`, `B2.2 – syllabus research, coverage and overlap with A1.1–B2.1`, `Architecture doc`, `Code graph (Graphify)`, `C1.2 – syllabus research, coverage and overlap with A1.1–B1.1`, `C2.2 – syllabus research, coverage and overlap with A1.1–C2.1`, `B1.2 – syllabus research, coverage and overlap with A1.1–B1.1`, `B2.1 – syllabus research, coverage and overlap with A1.1–B1.2`?**
   _High betweenness centrality (0.059) - this node is a cross-community bridge._
 - **Why does `@testing-library/react` connect `@testing-library/react` to `Market.tsx`, `ui.test.tsx`, `playability.tsx`, `Conjugation.tsx`, `controls.test.tsx`, `package.json`, `ContentProvider.tsx`, `AppLayout.tsx`, `PlayPage.tsx`, `sounds.test.tsx`, `react`, `setup.ts`, `Clock.tsx`, `Sentence.tsx`?**

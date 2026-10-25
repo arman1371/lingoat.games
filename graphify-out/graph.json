@@ -348,17 +348,69 @@
       "source_location": "L4"
     },
     {
+      "id": "src_content_c2_2_helpers_vocablist",
+      "label": "VocabList",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 107,
+      "community_name": "a1-1/types.ts",
+      "file_type": "code",
+      "norm_label": "vocablist",
+      "source_file": "src/content/c2-2/helpers.ts",
+      "source_location": "L111"
+    },
+    {
+      "id": "src_content_index_contentindex",
+      "label": "ContentIndex",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 107,
+      "community_name": "a1-1/types.ts",
+      "file_type": "code",
+      "norm_label": "contentindex",
+      "source_file": "src/content/index.ts",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_content_schema_activity",
+      "label": "Activity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 107,
+      "community_name": "a1-1/types.ts",
+      "file_type": "code",
+      "norm_label": "activity",
+      "source_file": "src/content/schema.ts",
+      "source_location": "L298"
+    },
+    {
       "id": "src_content_schema_unit",
       "label": "Unit",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 108,
+      "community": 107,
       "community_name": "a1-1/types.ts",
       "file_type": "code",
       "norm_label": "unit",
       "source_file": "src/content/schema.ts",
       "source_location": "L325"
+    },
+    {
+      "id": "src_content_schema_vocab",
+      "label": "Vocab",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 107,
+      "community_name": "a1-1/types.ts",
+      "file_type": "code",
+      "norm_label": "vocab",
+      "source_file": "src/content/schema.ts",
+      "source_location": "L312"
     },
     {
       "id": "src_store_progressstore_activityprogress",
@@ -605,7 +657,7 @@
       "file_type": "code",
       "norm_label": "line",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "src_games_dialogue_dialogue_scene",
@@ -618,7 +670,7 @@
       "file_type": "code",
       "norm_label": "scene",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L10"
+      "source_location": "L11"
     },
     {
       "id": "src_games_registry_loader",
@@ -827,6 +879,19 @@
       "norm_label": "meta",
       "source_file": "src/content/builders.ts",
       "source_location": "L48"
+    },
+    {
+      "id": "src_content_c2_2_helpers_vocabpathoptions",
+      "label": "VocabPathOptions",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "lessons.ts",
+      "file_type": "code",
+      "norm_label": "vocabpathoptions",
+      "source_file": "src/content/c2-2/helpers.ts",
+      "source_location": "L119"
     },
     {
       "id": "src_content_hints_itemhint",
@@ -1167,32 +1232,6 @@
       "source_location": "L6"
     },
     {
-      "id": "src_content_c2_2_helpers_vocablist",
-      "label": "VocabList",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "ContentProvider.tsx",
-      "file_type": "code",
-      "norm_label": "vocablist",
-      "source_file": "src/content/c2-2/helpers.ts",
-      "source_location": "L111"
-    },
-    {
-      "id": "src_content_c2_2_helpers_vocabpathoptions",
-      "label": "VocabPathOptions",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "ContentProvider.tsx",
-      "file_type": "code",
-      "norm_label": "vocabpathoptions",
-      "source_file": "src/content/c2-2/helpers.ts",
-      "source_location": "L119"
-    },
-    {
       "id": "src_content_contentprovider_props",
       "label": "Props",
       "_callable": true,
@@ -1219,32 +1258,6 @@
       "source_location": "L6"
     },
     {
-      "id": "src_content_index_contentindex",
-      "label": "ContentIndex",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "ContentProvider.tsx",
-      "file_type": "code",
-      "norm_label": "contentindex",
-      "source_file": "src/content/index.ts",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_content_schema_activity",
-      "label": "Activity",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "ContentProvider.tsx",
-      "file_type": "code",
-      "norm_label": "activity",
-      "source_file": "src/content/schema.ts",
-      "source_location": "L298"
-    },
-    {
       "id": "src_content_schema_levelmeta",
       "label": "LevelMeta",
       "_callable": true,
@@ -1256,19 +1269,6 @@
       "norm_label": "levelmeta",
       "source_file": "src/content/schema.ts",
       "source_location": "L334"
-    },
-    {
-      "id": "src_content_schema_vocab",
-      "label": "Vocab",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "ContentProvider.tsx",
-      "file_type": "code",
-      "norm_label": "vocab",
-      "source_file": "src/content/schema.ts",
-      "source_location": "L312"
     },
     {
       "id": "src_lib_answer_check_answerverdict",
@@ -2400,7 +2400,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community_name": "u3-woher.ts",
       "file_type": "code",
       "norm_label": "country()",
       "source_file": "src/content/a1-1/u3-woher.ts",
@@ -2412,31 +2412,19 @@
       "_callable": true,
       "_origin": "ast",
       "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community_name": "u3-woher.ts",
       "file_type": "code",
       "norm_label": "table()",
       "source_file": "src/content/a1-1/u3-woher.ts",
       "source_location": "L60"
     },
     {
-      "id": "src_content_a1_1_u6_freizeit_table",
-      "label": "table()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
-      "file_type": "code",
-      "norm_label": "table()",
-      "source_file": "src/content/a1-1/u6-freizeit.ts",
-      "source_location": "L37"
-    },
-    {
       "id": "src_content_a1_1_u8_einkaufen_gap",
       "label": "gap()",
       "_callable": true,
       "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community": 109,
+      "community_name": "u8-einkaufen.ts",
       "file_type": "code",
       "norm_label": "gap()",
       "source_file": "src/content/a1-1/u8-einkaufen.ts",
@@ -2447,8 +2435,8 @@
       "label": "priceListen()",
       "_callable": true,
       "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community": 109,
+      "community_name": "u8-einkaufen.ts",
       "file_type": "code",
       "norm_label": "pricelisten()",
       "source_file": "src/content/a1-1/u8-einkaufen.ts",
@@ -2465,6 +2453,18 @@
       "norm_label": "withwhy()",
       "source_file": "src/content/c2-2/helpers.ts",
       "source_location": "L28"
+    },
+    {
+      "id": "src_content_a1_1_u6_freizeit_table",
+      "label": "table()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "u6-freizeit.ts",
+      "file_type": "code",
+      "norm_label": "table()",
+      "source_file": "src/content/a1-1/u6-freizeit.ts",
+      "source_location": "L37"
     },
     {
       "id": "src_content_a1_2_helpers_typed",
@@ -3064,7 +3064,7 @@
       "file_type": "code",
       "norm_label": "collectnpclines()",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L143"
+      "source_location": "L146"
     },
     {
       "id": "src_games_dialogue_dialogue_dialogue",
@@ -3076,7 +3076,7 @@
       "file_type": "code",
       "norm_label": "dialogue()",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "src_games_dialogue_dialogue_sceneview",
@@ -3088,7 +3088,7 @@
       "file_type": "code",
       "norm_label": "sceneview()",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "src_games_flashcards_flashcards_flashcards",
@@ -4768,7 +4768,7 @@
       "file_type": "code",
       "norm_label": "market()",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
       "id": "src_games_market_market_test_fillbasket",
@@ -8017,7 +8017,7 @@
       "id": "src_content_a1_1_types",
       "label": "a1-1/types.ts",
       "_origin": "ast",
-      "community": 108,
+      "community": 107,
       "community_name": "a1-1/types.ts",
       "file_type": "code",
       "norm_label": "a1-1/types.ts",
@@ -8025,11 +8025,44 @@
       "source_location": "L1"
     },
     {
+      "id": "src_content_index",
+      "label": "content/index.ts",
+      "_origin": "ast",
+      "community": 107,
+      "community_name": "a1-1/types.ts",
+      "file_type": "code",
+      "norm_label": "content/index.ts",
+      "source_file": "src/content/index.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_content_index_empty_index",
+      "label": "EMPTY_INDEX",
+      "_origin": "ast",
+      "community": 107,
+      "community_name": "a1-1/types.ts",
+      "file_type": "code",
+      "norm_label": "empty_index",
+      "source_file": "src/content/index.ts",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_content_index_test",
+      "label": "content/index.test.ts",
+      "_origin": "ast",
+      "community": 107,
+      "community_name": "a1-1/types.ts",
+      "file_type": "code",
+      "norm_label": "content/index.test.ts",
+      "source_file": "src/content/index.test.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "src_content_a1_1_u3_woher",
       "label": "u3-woher.ts",
       "_origin": "ast",
       "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community_name": "u3-woher.ts",
       "file_type": "code",
       "norm_label": "u3-woher.ts",
       "source_file": "src/content/a1-1/u3-woher.ts",
@@ -8040,7 +8073,7 @@
       "label": "countries",
       "_origin": "ast",
       "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community_name": "u3-woher.ts",
       "file_type": "code",
       "norm_label": "countries",
       "source_file": "src/content/a1-1/u3-woher.ts",
@@ -8051,7 +8084,7 @@
       "label": "languages",
       "_origin": "ast",
       "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community_name": "u3-woher.ts",
       "file_type": "code",
       "norm_label": "languages",
       "source_file": "src/content/a1-1/u3-woher.ts",
@@ -8062,7 +8095,7 @@
       "label": "vocab",
       "_origin": "ast",
       "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community_name": "u3-woher.ts",
       "file_type": "code",
       "norm_label": "vocab",
       "source_file": "src/content/a1-1/u3-woher.ts",
@@ -8073,7 +8106,7 @@
       "label": "woher",
       "_origin": "ast",
       "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community_name": "u3-woher.ts",
       "file_type": "code",
       "norm_label": "woher",
       "source_file": "src/content/a1-1/u3-woher.ts",
@@ -8084,62 +8117,18 @@
       "label": "words",
       "_origin": "ast",
       "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community_name": "u3-woher.ts",
       "file_type": "code",
       "norm_label": "words",
       "source_file": "src/content/a1-1/u3-woher.ts",
       "source_location": "L39"
     },
     {
-      "id": "src_content_a1_1_u6_freizeit",
-      "label": "u6-freizeit.ts",
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
-      "file_type": "code",
-      "norm_label": "u6-freizeit.ts",
-      "source_file": "src/content/a1-1/u6-freizeit.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_content_a1_1_u6_freizeit_freizeit",
-      "label": "freizeit",
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
-      "file_type": "code",
-      "norm_label": "freizeit",
-      "source_file": "src/content/a1-1/u6-freizeit.ts",
-      "source_location": "L50"
-    },
-    {
-      "id": "src_content_a1_1_u6_freizeit_hobbies",
-      "label": "hobbies",
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
-      "file_type": "code",
-      "norm_label": "hobbies",
-      "source_file": "src/content/a1-1/u6-freizeit.ts",
-      "source_location": "L35"
-    },
-    {
-      "id": "src_content_a1_1_u6_freizeit_vocab",
-      "label": "vocab",
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
-      "file_type": "code",
-      "norm_label": "vocab",
-      "source_file": "src/content/a1-1/u6-freizeit.ts",
-      "source_location": "L7"
-    },
-    {
       "id": "src_content_a1_1_u8_einkaufen",
       "label": "u8-einkaufen.ts",
       "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community": 109,
+      "community_name": "u8-einkaufen.ts",
       "file_type": "code",
       "norm_label": "u8-einkaufen.ts",
       "source_file": "src/content/a1-1/u8-einkaufen.ts",
@@ -8149,8 +8138,8 @@
       "id": "src_content_a1_1_u8_einkaufen_einkaufen",
       "label": "einkaufen",
       "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community": 109,
+      "community_name": "u8-einkaufen.ts",
       "file_type": "code",
       "norm_label": "einkaufen",
       "source_file": "src/content/a1-1/u8-einkaufen.ts",
@@ -8160,8 +8149,8 @@
       "id": "src_content_a1_1_u8_einkaufen_food",
       "label": "food",
       "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community": 109,
+      "community_name": "u8-einkaufen.ts",
       "file_type": "code",
       "norm_label": "food",
       "source_file": "src/content/a1-1/u8-einkaufen.ts",
@@ -8171,8 +8160,8 @@
       "id": "src_content_a1_1_u8_einkaufen_genderitems",
       "label": "genderItems",
       "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community": 109,
+      "community_name": "u8-einkaufen.ts",
       "file_type": "code",
       "norm_label": "genderitems",
       "source_file": "src/content/a1-1/u8-einkaufen.ts",
@@ -8182,8 +8171,8 @@
       "id": "src_content_a1_1_u8_einkaufen_shopping",
       "label": "shopping",
       "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community": 109,
+      "community_name": "u8-einkaufen.ts",
       "file_type": "code",
       "norm_label": "shopping",
       "source_file": "src/content/a1-1/u8-einkaufen.ts",
@@ -8193,8 +8182,8 @@
       "id": "src_content_a1_1_u8_einkaufen_vocab",
       "label": "vocab",
       "_origin": "ast",
-      "community": 108,
-      "community_name": "a1-1/types.ts",
+      "community": 109,
+      "community_name": "u8-einkaufen.ts",
       "file_type": "code",
       "norm_label": "vocab",
       "source_file": "src/content/a1-1/u8-einkaufen.ts",
@@ -8595,6 +8584,50 @@
       "norm_label": "vocab",
       "source_file": "src/content/c2-2/u1-kunst.ts",
       "source_location": "L57"
+    },
+    {
+      "id": "src_content_a1_1_u6_freizeit",
+      "label": "u6-freizeit.ts",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "u6-freizeit.ts",
+      "file_type": "code",
+      "norm_label": "u6-freizeit.ts",
+      "source_file": "src/content/a1-1/u6-freizeit.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_content_a1_1_u6_freizeit_freizeit",
+      "label": "freizeit",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "u6-freizeit.ts",
+      "file_type": "code",
+      "norm_label": "freizeit",
+      "source_file": "src/content/a1-1/u6-freizeit.ts",
+      "source_location": "L50"
+    },
+    {
+      "id": "src_content_a1_1_u6_freizeit_hobbies",
+      "label": "hobbies",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "u6-freizeit.ts",
+      "file_type": "code",
+      "norm_label": "hobbies",
+      "source_file": "src/content/a1-1/u6-freizeit.ts",
+      "source_location": "L35"
+    },
+    {
+      "id": "src_content_a1_1_u6_freizeit_vocab",
+      "label": "vocab",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "u6-freizeit.ts",
+      "file_type": "code",
+      "norm_label": "vocab",
+      "source_file": "src/content/a1-1/u6-freizeit.ts",
+      "source_location": "L7"
     },
     {
       "id": "src_content_a2_1_u6_aemter",
@@ -16254,39 +16287,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_content_index",
-      "label": "content/index.ts",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "ContentProvider.tsx",
-      "file_type": "code",
-      "norm_label": "content/index.ts",
-      "source_file": "src/content/index.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_content_index_empty_index",
-      "label": "EMPTY_INDEX",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "ContentProvider.tsx",
-      "file_type": "code",
-      "norm_label": "empty_index",
-      "source_file": "src/content/index.ts",
-      "source_location": "L29"
-    },
-    {
-      "id": "src_content_index_test",
-      "label": "content/index.test.ts",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "ContentProvider.tsx",
-      "file_type": "code",
-      "norm_label": "content/index.test.ts",
-      "source_file": "src/content/index.test.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "src_content_levels_levels",
       "label": "LEVELS",
       "_origin": "ast",
@@ -23679,6 +23679,30 @@
       "type": "external"
     },
     {
+      "id": "ref_games_shared_gameframe",
+      "label": "ref_games_shared_gameframe",
+      "_origin": "semantic",
+      "community": 101,
+      "community_name": "ui.test.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_games_shared_gameframe",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_test_factories",
+      "label": "ref_test_factories",
+      "_origin": "semantic",
+      "community": 107,
+      "community_name": "a1-1/types.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_test_factories",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_testing_library_jest_dom_vitest",
       "label": "ref_testing_library_jest_dom_vitest",
       "_origin": "semantic",
@@ -23831,6 +23855,18 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_ui_icon",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_ui_iconbutton",
+      "label": "ref_components_ui_iconbutton",
+      "_origin": "semantic",
+      "community": 15,
+      "community_name": "PlayPage.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_ui_iconbutton",
       "source_file": "",
       "type": "external"
     },
@@ -24143,18 +24179,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_lib_german_conjugation",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_test_factories",
-      "label": "ref_test_factories",
-      "_origin": "semantic",
-      "community": 18,
-      "community_name": "content/hints.ts",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_test_factories",
       "source_file": "",
       "type": "external"
     },
@@ -24671,28 +24695,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_test_render",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_games_shared_gameframe",
-      "label": "ref_games_shared_gameframe",
-      "community": 101,
-      "community_name": "ui.test.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_games_shared_gameframe",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_ui_iconbutton",
-      "label": "ref_components_ui_iconbutton",
-      "community": 15,
-      "community_name": "PlayPage.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_ui_iconbutton",
       "source_file": "",
       "type": "external"
     }
@@ -26267,7 +26269,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -26279,7 +26281,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -26291,7 +26293,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -26303,7 +26305,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L47",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -26447,7 +26449,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L125",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -26459,7 +26461,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -26471,7 +26473,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -26483,7 +26485,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -26495,7 +26497,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -26507,7 +26509,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L62",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -67185,7 +67187,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L3",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -67197,7 +67199,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -67209,7 +67211,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -67221,7 +67223,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -67233,7 +67235,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -67245,7 +67247,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -67257,7 +67259,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -67574,7 +67576,7 @@
     },
     {
       "source": "src_games_market_market",
-      "target": "src_games_types_gameprops",
+      "target": "src_games_shared_usesequence_usesequence",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67586,7 +67588,7 @@
     },
     {
       "source": "src_games_market_market",
-      "target": "src_games_market_logic_adjust",
+      "target": "src_games_types_gameprops",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -67594,6 +67596,18 @@
       "context": "import",
       "source_file": "src/games/market/Market.tsx",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_games_market_market",
+      "target": "src_games_market_logic_adjust",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/games/market/Market.tsx",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -67605,7 +67619,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -67617,7 +67631,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -67629,7 +67643,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -67641,7 +67655,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -67653,7 +67667,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -67665,24 +67679,12 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L7",
-      "weight": 1.0
-    },
-    {
-      "source": "src_games_market_market",
-      "target": "src_games_shared_useautospeak_useautospeak",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/games/market/Market.tsx",
       "source_location": "L8",
       "weight": 1.0
     },
     {
       "source": "src_games_market_market",
-      "target": "src_games_shared_usesequence_usesequence",
+      "target": "src_games_shared_useautospeak_useautospeak",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82093,7 +82095,7 @@
     },
     {
       "source": "src_games_dialogue_dialogue",
-      "target": "ref_components_ui_speakbutton",
+      "target": "ref_components_ui_mascot",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82105,7 +82107,7 @@
     },
     {
       "source": "src_games_dialogue_dialogue",
-      "target": "src_games_shared_choicelist",
+      "target": "ref_components_ui_speakbutton",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82117,7 +82119,7 @@
     },
     {
       "source": "src_games_dialogue_dialogue",
-      "target": "src_games_shared_gameframe",
+      "target": "src_games_shared_choicelist",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82129,7 +82131,7 @@
     },
     {
       "source": "src_games_dialogue_dialogue",
-      "target": "src_games_shared_choices",
+      "target": "src_games_shared_gameframe",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82141,7 +82143,7 @@
     },
     {
       "source": "src_games_dialogue_dialogue",
-      "target": "src_games_shared_useanswersound",
+      "target": "src_games_shared_choices",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82153,7 +82155,7 @@
     },
     {
       "source": "src_games_dialogue_dialogue",
-      "target": "src_games_shared_usesequence",
+      "target": "src_games_shared_useanswersound",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82165,7 +82167,7 @@
     },
     {
       "source": "src_games_dialogue_dialogue",
-      "target": "src_games_types",
+      "target": "src_games_shared_usesequence",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82173,6 +82175,18 @@
       "context": "import",
       "source_file": "src/games/dialogue/Dialogue.tsx",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_games_dialogue_dialogue",
+      "target": "src_games_types",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/games/dialogue/Dialogue.tsx",
+      "source_location": "L9",
       "type_only": true,
       "weight": 1.0
     },
@@ -82733,7 +82747,7 @@
     },
     {
       "source": "src_games_market_market",
-      "target": "src_games_types",
+      "target": "src_games_shared_usesequence",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82741,6 +82755,18 @@
       "context": "import",
       "source_file": "src/games/market/Market.tsx",
       "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_games_market_market",
+      "target": "src_games_types",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/games/market/Market.tsx",
+      "source_location": "L11",
       "type_only": true,
       "weight": 1.0
     },
@@ -82753,7 +82779,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -82770,7 +82796,7 @@
     },
     {
       "source": "src_games_market_market",
-      "target": "ref_components_ui_speakbutton",
+      "target": "ref_components_ui_mascot",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82782,7 +82808,7 @@
     },
     {
       "source": "src_games_market_market",
-      "target": "ref_lib_answer_check",
+      "target": "ref_components_ui_speakbutton",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82794,7 +82820,7 @@
     },
     {
       "source": "src_games_market_market",
-      "target": "ref_lib_german_numbers",
+      "target": "ref_lib_answer_check",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82806,7 +82832,7 @@
     },
     {
       "source": "src_games_market_market",
-      "target": "ref_i18n",
+      "target": "ref_lib_german_numbers",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82818,7 +82844,7 @@
     },
     {
       "source": "src_games_market_market",
-      "target": "src_games_shared_gameframe",
+      "target": "ref_i18n",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82830,7 +82856,7 @@
     },
     {
       "source": "src_games_market_market",
-      "target": "src_games_shared_useautospeak",
+      "target": "src_games_shared_gameframe",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -82842,7 +82868,7 @@
     },
     {
       "source": "src_games_market_market",
-      "target": "src_games_shared_usesequence",
+      "target": "src_games_shared_useautospeak",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -102578,7 +102604,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -102589,7 +102615,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -102600,7 +102626,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L143",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -102611,7 +102637,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -102622,7 +102648,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/dialogue/Dialogue.tsx",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -102809,7 +102835,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/market/Market.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -108124,5 +108150,5 @@
       "source_file": "docs/adding-content.md"
     }
   ],
-  "built_at_commit": "25bb3fee985c6d3e598a8099e1a523650cbca3d1"
+  "built_at_commit": "30e23cde74fca3f0f5eda3dcecc85457c53bd271"
 }
