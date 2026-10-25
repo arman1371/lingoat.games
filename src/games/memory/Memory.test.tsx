@@ -50,7 +50,12 @@ describe('memory logic', () => {
     const b = right.find((c) => c.uid === 'p1:b')!;
     expect(isMatch(a, b)).toBe(true);
     expect(isMatch(a, a)).toBe(false);
-    expect(isMatch(a, right.find((c) => c.uid === 'p2:b')!)).toBe(false);
+    expect(
+      isMatch(
+        a,
+        right.find((c) => c.uid === 'p2:b')!,
+      ),
+    ).toBe(false);
   });
 });
 
