@@ -1,5 +1,5 @@
 export const en = {
-  appName: 'lingoat',
+  appName: 'Lingoat',
   tagline: 'Play your way through German',
   nav: {
     home: 'Learn',

@@ -64,8 +64,14 @@ Upload (after `images:fetch`, from the machine that holds `.image-cache/`):
 ```bash
 # keys of an R2 API token with "Object Read & Write" on the bucket lingoat-images only
 export R2_ACCESS_KEY_ID=… R2_SECRET_ACCESS_KEY=… CLOUDFLARE_ACCOUNT_ID=…
-npm run images:upload             # skips what was uploaded before; --dir to upload from another folder
+npm run images:upload                    # lists the bucket first, uploads only the missing keys
+npm run images:upload -- --dir <folder>  # another folder, e.g. a hand-off folder from another machine
+npm run images:upload -- --dry-run       # only say what would be uploaded
 ```
+
+To replace a photo, delete its object in the R2 dashboard (the Worker and browsers cache it for a year under the
+same URL, so purge the cache) and upload again. The bucket must exist before `wrangler deploy`, otherwise the deploy
+fails on the `r2_buckets` binding: create it once with `npx wrangler r2 bucket create lingoat-images`.
 
 The Workers free plan allows 100,000 Worker requests a day; every photo view is one (cache hits included).
 At roughly 10 photos per game that is about 10,000 games a day. Beyond that, serve the bucket from a custom domain

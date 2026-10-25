@@ -14,20 +14,44 @@ interface Props {
   alt?: string;
 }
 
-/** Square word picture: the Pixabay photo when we have one, the emoji otherwise (Penpot "Word Image"). */
+/**
+ * Square word picture: the Pixabay photo when we have one, the emoji otherwise (Penpot "Word Image").
+ * The tile stays empty until it is known which of the two shows, so the emoji never flashes before a photo.
+ * The emoji is always in the DOM (hidden with opacity, not removed) so the fallback needs no re-render.
+ */
 export function WordImage({ id, emoji, alt = '' }: Props) {
   const manifest = useImageManifest();
-  return <WordTile key={id} id={id} emoji={emoji} alt={alt} hasPhoto={Boolean(manifest?.[id])} />;
+  return (
+    <WordTile
+      key={id}
+      id={id}
+      emoji={emoji}
+      alt={alt}
+      hasPhoto={Boolean(manifest?.[id])}
+      manifestReady={manifest !== null}
+    />
+  );
 }
 
-function WordTile({ id, emoji, alt, hasPhoto }: Props & { alt: string; hasPhoto: boolean }) {
+interface TileProps extends Props {
+  alt: string;
+  hasPhoto: boolean;
+  manifestReady: boolean;
+}
+
+function WordTile({ id, emoji, alt, hasPhoto, manifestReady }: TileProps) {
   const [state, setState] = useState<'pending' | 'loaded' | 'failed'>('pending');
   const photo = hasPhoto && state !== 'failed';
   if (!emoji && !photo) return null;
+  const showEmoji = manifestReady && !photo;
   return (
     <div className="relative grid size-40 shrink-0 place-items-center overflow-hidden rounded-3xl border-2 border-line bg-primary-soft">
       {emoji ? (
-        <span aria-hidden="true" className="text-7xl" data-testid="emoji">
+        <span
+          aria-hidden="true"
+          className={`text-7xl ${showEmoji ? 'opacity-100' : 'opacity-0'}`}
+          data-testid="emoji"
+        >
           {emoji}
         </span>
       ) : null}

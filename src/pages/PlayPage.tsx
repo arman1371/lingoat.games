@@ -1,4 +1,4 @@
-import { Suspense, useCallback, useMemo, useState } from 'react';
+import { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import { ConfirmDialog } from '@/components/ui/Dialog';
@@ -18,6 +18,7 @@ import { GAME_TYPE_LABELS } from '@/lib/filters';
 import { parseSeed, randomSeed } from '@/lib/rng';
 import type { GameResult } from '@/lib/scoring';
 import { t } from '@/i18n';
+import { preloadImageManifest } from '@/lib/useImageManifest';
 import { useProgressStore, type RecordOutcome } from '@/store/progressStore';
 import { NotFoundPage } from './NotFoundPage';
 import { ResultScreen } from './ResultScreen';
@@ -57,6 +58,8 @@ function PlayView({ activityId }: { activityId: string }) {
   const [confirmExit, setConfirmExit] = useState(false);
   const [done, setDone] = useState<{ result: GameResult; outcome: RecordOutcome } | null>(null);
   const startRef = useFocusOnMount<HTMLButtonElement>();
+  // ready before the first card, so a word with a photo never shows its emoji first
+  useEffect(() => void preloadImageManifest(), []);
 
   const nounIndex = useMemo(() => buildNounIndex(content.vocab), [content.vocab]);
   const base = content.activityById.get(activityId);

@@ -10,7 +10,7 @@ interface Props {
   className?: string;
 }
 
-/** Goaty, the lingoat mascot, as inline SVG. */
+/** Goaty, the Lingoat mascot, as inline SVG. */
 export function Mascot({ mood = 'happy', size = 96, title, className }: Props) {
   return (
     <svg

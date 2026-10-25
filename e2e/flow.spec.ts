@@ -198,14 +198,60 @@ test.describe('progress and review', () => {
   });
 });
 
+/** Width and height from a PNG's IHDR chunk. */
+function pngSize(png: Buffer) {
+  return { width: png.readUInt32BE(16), height: png.readUInt32BE(20) };
+}
+
 test('installable PWA assets are served', async ({ request }) => {
   const manifest = await request.get('/manifest.webmanifest');
   expect(manifest.ok()).toBe(true);
-  expect((await manifest.json()).name).toBe('lingoat');
+  const json = await manifest.json();
+  expect(json.name).toBe('Lingoat');
+  expect(json.theme_color).toBe('#584bca');
   expect((await request.get('/favicon.svg')).ok()).toBe(true);
+  // Goaty icons: any (192, 512), maskable and monochrome, each really that size
+  const purposes = json.icons.map(
+    (i: { sizes: string; purpose: string }) => `${i.purpose} ${i.sizes}`,
+  );
+  expect(purposes).toEqual([
+    'any 192x192',
+    'any 512x512',
+    'maskable 512x512',
+    'monochrome 512x512',
+  ]);
+  for (const icon of json.icons as { src: string; sizes: string }[]) {
+    const res = await request.get(`/${icon.src}`);
+    expect(res.ok(), icon.src).toBe(true);
+    const { width, height } = pngSize(await res.body());
+    expect(`${width}x${height}`, icon.src).toBe(icon.sizes);
+  }
+  const apple = await request.get('/apple-touch-icon.png');
+  expect(apple.ok()).toBe(true);
+  expect(pngSize(await apple.body())).toEqual({ width: 180, height: 180 });
+  const ico = await request.get('/favicon.ico');
+  expect(ico.ok()).toBe(true);
+  expect((await ico.body()).readUInt16LE(4)).toBe(3); // 16, 32 and 48 px images
   // SPA fallback for deep links (what _redirects does on Cloudflare Pages)
   const deep = await request.get('/levels/a1-1/units/a1-1-hallo');
   expect(deep.ok()).toBe(true);
+});
+
+test('the page head points at the Goaty icons', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('link[rel="icon"][type="image/svg+xml"]')).toHaveAttribute(
+    'href',
+    '/favicon.svg',
+  );
+  await expect(page.locator('link[rel="icon"][sizes="48x48"]')).toHaveAttribute(
+    'href',
+    '/favicon.ico',
+  );
+  await expect(page.locator('link[rel="apple-touch-icon"]')).toHaveAttribute(
+    'href',
+    '/apple-touch-icon.png',
+  );
+  await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute('content', '#584bca');
 });
 
 test('daily goal: playing a game fills the ring, and the goal can be changed in the profile', async ({
@@ -222,7 +268,7 @@ test('daily goal: playing a game fills the ring, and the goal can be changed in 
   await expect(goal.getByRole('progressbar')).not.toHaveAttribute('aria-valuenow', '0');
 });
 
-test('is called lingoat and keeps progress saved under the old spielplatz.* keys', async ({
+test('is called Lingoat and keeps progress saved under the old spielplatz.* keys', async ({
   page,
 }) => {
   await page.addInitScript(() => {
@@ -242,6 +288,6 @@ test('is called lingoat and keeps progress saved under the old spielplatz.* keys
     );
   });
   await page.goto('/');
-  await expect(page).toHaveTitle('lingoat');
+  await expect(page).toHaveTitle('Lingoat');
   await expect(page.getByTestId('xp')).toHaveText('42');
 });
