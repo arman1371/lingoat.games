@@ -28857,7 +28857,7 @@
       "node_kind": "heading",
       "norm_label": "in the app",
       "source_file": "docs/images.md",
-      "source_location": "L81"
+      "source_location": "L85"
     },
     {
       "id": "docs_report_a_problem_what_the_issue_contains",
@@ -34669,6 +34669,18 @@
       "type": "external"
     },
     {
+      "id": "ref_components_ui_choicecards",
+      "label": "ref_components_ui_choicecards",
+      "_origin": "semantic",
+      "community": 6,
+      "community_name": "SettingsPage.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_ui_choicecards",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_components_ui_confetti",
       "label": "ref_components_ui_confetti",
       "_origin": "semantic",
@@ -34773,6 +34785,18 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_ui_toggle",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_lib_progresstransfer",
+      "label": "ref_lib_progresstransfer",
+      "_origin": "semantic",
+      "community": 6,
+      "community_name": "SettingsPage.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_lib_progresstransfer",
       "source_file": "",
       "type": "external"
     },
@@ -35121,28 +35145,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_test_app",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_ui_choicecards",
-      "label": "ref_components_ui_choicecards",
-      "community": 6,
-      "community_name": "SettingsPage.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_ui_choicecards",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_lib_progresstransfer",
-      "label": "ref_lib_progresstransfer",
-      "community": 6,
-      "community_name": "SettingsPage.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_lib_progresstransfer",
       "source_file": "",
       "type": "external"
     }
@@ -39009,7 +39011,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "worker/index.ts",
-      "source_location": "L71",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -39021,7 +39023,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "worker/index.ts",
-      "source_location": "L72",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -39033,7 +39035,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "worker/index.ts",
-      "source_location": "L74",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -39045,7 +39047,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "worker/index.ts",
-      "source_location": "L44",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -39057,7 +39059,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "worker/index.ts",
-      "source_location": "L48",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -39069,7 +39071,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "worker/index.ts",
-      "source_location": "L64",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -107944,7 +107946,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/images.md",
-      "source_location": "L81",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -131561,7 +131563,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "worker/index.ts",
-      "source_location": "L69",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -133752,7 +133754,7 @@
       "confidence_score": 0.95,
       "context": "PlayPage",
       "source_file": "docs/images.md",
-      "source_location": "L92",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -133788,7 +133790,7 @@
       "confidence_score": 0.95,
       "context": "WordImage",
       "source_file": "docs/images.md",
-      "source_location": "L83",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -133932,7 +133934,7 @@
       "confidence_score": 0.95,
       "context": "useImageManifest",
       "source_file": "docs/images.md",
-      "source_location": "L83",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -134728,5 +134730,5 @@
       "source_file": "docs/adding-content.md"
     }
   ],
-  "built_at_commit": "83265f9949ef72e609b7f59fadd7709936398933"
+  "built_at_commit": "30115db570269355dd9e53a38e2ae807333acb8b"
 }

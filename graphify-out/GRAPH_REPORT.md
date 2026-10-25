@@ -1,7 +1,7 @@
 # Graph Report - lingoat.games  (2026-10-25)
 
 ## Corpus Check
-- 482 files · ~496,236 words
+- 482 files · ~496,387 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 9 file(s) not represented in the graph (top: (none) 5, .ico 1, .properties 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `83265f99`
+- Built from commit: `30115db5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -626,11 +626,11 @@ Nodes (112): sent(), tf(), you(), environment, materials, vocab, phrases, servic
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `react` to `Tabs.tsx`, `WordImage.tsx`, `Dialogue.tsx`, `ui.test.tsx`, `SettingsPage.tsx`, `StatePanel.tsx`, `router.tsx`, `Icon.tsx`, `package.json`, `controls.test.tsx`, `Gapfill.test.tsx`, `ContentProvider.tsx`, `PlayPage.tsx`, `app.tsx`, `playability.tsx`, `Button.tsx`, `Clock.tsx`, `@testing-library/react`?**
-  _High betweenness centrality (0.113) - this node is a cross-community bridge._
+  _High betweenness centrality (0.115) - this node is a cross-community bridge._
 - **Why does `vitest` connect `vitest` to `package.json`, `guard.ts`, `worker/index.ts`, `worker/report.ts`, `lib.ts`, `upload.ts`?**
   _High betweenness centrality (0.077) - this node is a cross-community bridge._
 - **Why does `@testing-library/react` connect `@testing-library/react` to `WordImage.tsx`, `Dialogue.tsx`, `ui.test.tsx`, `SettingsPage.tsx`, `router.tsx`, `Gapfill.test.tsx`, `controls.test.tsx`, `package.json`, `app.tsx`, `ContentProvider.tsx`, `PlayPage.tsx`, `progressTransfer.ts`, `react`, `Conjugation.test.tsx`, `playability.tsx`, `vitest`, `Clock.tsx`?**
-  _High betweenness centrality (0.057) - this node is a cross-community bridge._
+  _High betweenness centrality (0.059) - this node is a cross-community bridge._
 - **What connects `singleQuote`, `semi`, `trailingComma` to the rest of the system?**
   _1535 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `c1-2/index.ts` be split into smaller, more focused modules?**
