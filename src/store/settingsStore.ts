@@ -27,7 +27,7 @@ export const DEFAULT_SETTINGS = {
 
 export const useSettingsStore = create<SettingsState>()(
   persist((set) => ({ ...DEFAULT_SETTINGS, set: (patch) => set(patch) }), {
-    name: 'spielplatz.settings',
+    name: 'lingoat.settings',
     version: 1,
     storage: createJSONStorage(() => localRepository),
     partialize: ({ theme, motion, sounds, autoSpeak, ttsRate, dailyGoal }) => ({

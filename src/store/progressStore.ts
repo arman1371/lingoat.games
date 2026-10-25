@@ -127,7 +127,7 @@ export const useProgressStore = create<ProgressState>()(
       reset: () => set(initialProgress()),
     }),
     {
-      name: 'spielplatz.progress',
+      name: 'lingoat.progress',
       version: 1,
       storage: createJSONStorage(() => localRepository),
       partialize: ({ xp, streak, activities, mistakes, lastActivityId, daily }) => ({
