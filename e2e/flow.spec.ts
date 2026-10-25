@@ -201,7 +201,7 @@ test.describe('progress and review', () => {
 test('installable PWA assets are served', async ({ request }) => {
   const manifest = await request.get('/manifest.webmanifest');
   expect(manifest.ok()).toBe(true);
-  expect((await manifest.json()).name).toBe('lingoat');
+  expect((await manifest.json()).name).toBe('Lingoat');
   expect((await request.get('/favicon.svg')).ok()).toBe(true);
   // SPA fallback for deep links (what _redirects does on Cloudflare Pages)
   const deep = await request.get('/levels/a1-1/units/a1-1-hallo');
@@ -222,7 +222,7 @@ test('daily goal: playing a game fills the ring, and the goal can be changed in 
   await expect(goal.getByRole('progressbar')).not.toHaveAttribute('aria-valuenow', '0');
 });
 
-test('is called lingoat and keeps progress saved under the old spielplatz.* keys', async ({
+test('is called Lingoat and keeps progress saved under the old spielplatz.* keys', async ({
   page,
 }) => {
   await page.addInitScript(() => {
@@ -242,6 +242,6 @@ test('is called lingoat and keeps progress saved under the old spielplatz.* keys
     );
   });
   await page.goto('/');
-  await expect(page).toHaveTitle('lingoat');
+  await expect(page).toHaveTitle('Lingoat');
   await expect(page.getByTestId('xp')).toHaveText('42');
 });

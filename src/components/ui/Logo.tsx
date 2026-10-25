@@ -24,7 +24,7 @@ const MARK = [
   { d: 'M17.5 28.5C19.17 29.83 20.83 29.83 22.5 28.5', stroke: '#2E2420', strokeWidth: 1.4 },
 ] as const;
 
-/** The lingoat mark (goat head on a rounded square). Decorative; name the link around it. */
+/** The Lingoat mark (goat head on a rounded square). Decorative; name the link around it. */
 export function LogoMark({ size = 40 }: { size?: number }) {
   return (
     <svg viewBox="0 0 40 40" width={size} height={size} aria-hidden="true" focusable="false">

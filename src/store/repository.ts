@@ -7,7 +7,7 @@ import type { StateStorage } from 'zustand/middleware';
  */
 export type ProgressRepository = StateStorage;
 
-/** Keys used before the app was renamed to lingoat; read as a fallback so learners keep their progress. */
+/** Keys used before the app was renamed to Lingoat; read as a fallback so learners keep their progress. */
 const LEGACY_PREFIX = 'spielplatz.';
 const PREFIX = 'lingoat.';
 

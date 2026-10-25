@@ -1,4 +1,4 @@
-# lingoat – notes for Claude
+# Lingoat – notes for Claude
 
 Vite + React 19 + TypeScript + Tailwind 4 SPA with games for learning German (A1.1, A1.2, A2.1, A2.2, B1.1, B1.2, B2.1 and B2.2 done; later levels are
 content packs). Read `docs/architecture.md` and `docs/adding-content.md` before changing structure.

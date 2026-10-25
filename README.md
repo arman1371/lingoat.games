@@ -8,7 +8,7 @@
 **[lingoat.games](https://lingoat.games)**: short, focused games that follow the CEFR levels unit by
 unit, run entirely in the browser and need no account.
 
-The first language is **German** (the app currently ships as _lingoat_). More languages are
+The first language is **German** (the app currently ships as _Lingoat_). More languages are
 planned; the engines and the content model are built so that a course is data, not code, but the app does
 not support a second language yet (see [Roadmap](#roadmap)).
 
