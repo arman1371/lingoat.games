@@ -42,8 +42,9 @@ export function vocabList(unitId: string, field: string, rows: readonly VocabRow
   });
 }
 
-/** "der Apfel" for nouns, plain text otherwise. */
-export const label = (v: Vocab): string => (v.article ? `${v.article} ${v.de}` : v.de);
+/** "der Apfel" for nouns, plain text otherwise. A1.1 spells some nouns with the article already ("der Name"). */
+export const label = (v: Vocab): string =>
+  v.article && !v.de.startsWith(`${v.article} `) ? `${v.article} ${v.de}` : v.de;
 
 export interface Meta {
   title: string;

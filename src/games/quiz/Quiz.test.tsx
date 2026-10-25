@@ -1,5 +1,8 @@
-import { screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { buildNounIndex } from '@/lib/german/nouns';
 import { renderGame } from '@/test/render';
+import { NounIndexContext } from '../shared/NounArticle';
 import Quiz from './Quiz';
 
 const config = {
@@ -24,6 +27,37 @@ const config = {
 const ANSWER: Record<string, string> = { Hallo: 'hello', Tschüss: 'bye' };
 const WRONG: Record<string, string> = { Hallo: 'thanks', Tschüss: 'thanks' };
 const prompt = () => screen.getByTestId('prompt').textContent!;
+
+describe('Quiz noun article', () => {
+  const gap = {
+    questions: [
+      {
+        id: 'a1',
+        prompt: 'Ich nehme ___ Käse. (der Käse)',
+        options: ['den', 'dem', 'der'],
+        answer: 'den',
+      },
+    ],
+  };
+  const renderGap = () =>
+    render(
+      <NounIndexContext value={buildNounIndex([{ de: 'Käse', article: 'der' }])}>
+        <Quiz config={gap} seed={1} onFinish={vi.fn()} />
+      </NounIndexContext>,
+    );
+
+  it.each(['den', 'dem'])('shows the noun and its article after answering %s', async (pick) => {
+    renderGap();
+    await userEvent.click(screen.getByRole('button', { name: pick }));
+    expect(screen.getByTestId('noun-article-noun')).toHaveTextContent('der Käse');
+  });
+
+  it('shows no noun row for a plain vocabulary question', async () => {
+    renderGame(Quiz, config);
+    await userEvent.click(screen.getByRole('button', { name: 'thanks' }));
+    expect(screen.queryByTestId('noun-article')).not.toBeInTheDocument();
+  });
+});
 
 describe('Quiz', () => {
   it('plays through with correct answers', async () => {
