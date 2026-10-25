@@ -1,5 +1,6 @@
 import { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
+import { ReportButton } from '@/components/ReportButton';
 import { WordPhotoIndexContext } from '@/components/WordImage';
 import { Button } from '@/components/ui/Button';
 import { ConfirmDialog } from '@/components/ui/Dialog';
@@ -12,6 +13,7 @@ import type { Activity } from '@/content/schema';
 import { GAME_HELP, gameComponents } from '@/games/registry';
 import { ActivityLessonContext } from '@/games/shared/hints';
 import { NounIndexContext } from '@/games/shared/NounArticle';
+import { ReportItemContext } from '@/games/shared/useReportItem';
 import { buildNounIndex } from '@/lib/german/nouns';
 import { buildWordPhotoIndex } from '@/lib/wordPhotos';
 import { lessonForTags } from '@/content/lessons';
@@ -57,6 +59,7 @@ function PlayView({ activityId }: { activityId: string }) {
   const [run, setRun] = useState(0);
   const [started, setStarted] = useState(false);
   const [confirmExit, setConfirmExit] = useState(false);
+  const [reportItem, setReportItem] = useState<string>();
   const [done, setDone] = useState<{ result: GameResult; outcome: RecordOutcome } | null>(null);
   const startRef = useFocusOnMount<HTMLButtonElement>();
   // ready before the first card, so a word with a photo never shows its emoji first
@@ -114,8 +117,17 @@ function PlayView({ activityId }: { activityId: string }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center">
+      <div className="flex items-center justify-between">
         <IconButton icon="close" onClick={requestExit} aria-label="Exit game" />
+        {started && !done ? (
+          <ReportButton
+            activityId={activity.id}
+            levelId={unit?.levelId}
+            unitId={activity.unitId}
+            gameType={activity.gameType}
+            itemId={reportItem}
+          />
+        ) : null}
       </div>
 
       <ConfirmDialog
@@ -176,12 +188,14 @@ function PlayView({ activityId }: { activityId: string }) {
           <ActivityLessonContext value={activity.lesson ?? lessonForTags(activity.tags)}>
             <NounIndexContext value={nounIndex}>
               <WordPhotoIndexContext value={photoIndex}>
-                <Game
-                  key={`${activity.id}-${run}`}
-                  config={activity.config}
-                  seed={seed}
-                  onFinish={onFinish}
-                />
+                <ReportItemContext value={setReportItem}>
+                  <Game
+                    key={`${activity.id}-${run}`}
+                    config={activity.config}
+                    seed={seed}
+                    onFinish={onFinish}
+                  />
+                </ReportItemContext>
               </WordPhotoIndexContext>
             </NounIndexContext>
           </ActivityLessonContext>

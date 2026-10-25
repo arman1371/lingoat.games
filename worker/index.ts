@@ -1,16 +1,22 @@
 /**
  * Entry point of the Cloudflare Worker (wrangler.jsonc). Static files are served by the assets binding;
- * only `/img/*` (run_worker_first) comes through here and is answered from the R2 bucket `lingoat-images`,
- * which `npm run images:upload` fills. Photos never change under their name, so they are cached for a year
+ * only `/img/*` and `/api/*` (run_worker_first) come through here. `/img/*` is answered from the R2 bucket
+ * `lingoat-images`, which `npm run images:upload` fills; `/api/report` files player reports as GitHub issues
+ * (worker/report.ts, docs/report-a-problem.md). Photos never change under their name, so they are cached for a year
  * in the browser and in Cloudflare's cache: the bucket is read once per photo and data centre.
  */
+
+import { REPORT_PATH } from '../src/lib/report';
+import { handleReport, type ReportEnv } from './report';
+
+export { ReportGuard } from './guard';
 
 /** The slice of the Workers runtime types that this file uses (keeps the repo free of a types package). */
 export interface R2ObjectLike {
   body: ReadableStream;
   httpEtag: string;
 }
-export interface Env {
+export interface Env extends ReportEnv {
   ASSETS: { fetch(request: Request): Promise<Response> };
   IMAGES?: { get(key: string): Promise<R2ObjectLike | null> };
 }
@@ -62,6 +68,7 @@ export async function serveImage(
 export default {
   fetch(request: Request, env: Env, ctx: { waitUntil(work: Promise<unknown>): void }) {
     const { pathname } = new URL(request.url);
+    if (pathname === REPORT_PATH) return handleReport(request, env);
     if (!pathname.startsWith('/img/')) return env.ASSETS.fetch(request);
     const cache = (caches as unknown as { default: CacheLike }).default;
     return serveImage(request, env, cache, (work) => ctx.waitUntil(work));

@@ -1,5 +1,5 @@
 /// <reference types="vitest/config" />
-import { createReadStream, existsSync } from 'node:fs';
+import { createReadStream, existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 import type { Connect, Plugin } from 'vite';
 import { defineConfig } from 'vite';
@@ -26,7 +26,16 @@ const localWordPhotos = (): Plugin => {
   };
 };
 
+/** Shown in problem reports: the package version, plus the commit when the build environment names it. */
+const appVersion = (): string => {
+  const { version } = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8'));
+  const sha =
+    process.env.WORKERS_CI_COMMIT_SHA ?? process.env.CF_PAGES_COMMIT_SHA ?? process.env.GITHUB_SHA;
+  return sha ? `${version}+${sha.slice(0, 7)}` : version;
+};
+
 export default defineConfig({
+  define: { __APP_VERSION__: JSON.stringify(appVersion()) },
   plugins: [
     localWordPhotos(),
     react(),
@@ -84,6 +93,8 @@ export default defineConfig({
     setupFiles: ['./src/test/setup.ts'],
     include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.ts', 'worker/**/*.test.ts'],
     css: false,
+    // the real site key is a build setting; this is Cloudflare's always-passing test key
+    env: { VITE_TURNSTILE_SITE_KEY: '1x00000000000000000000AA' },
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html', 'lcov'],

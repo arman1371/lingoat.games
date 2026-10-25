@@ -5,12 +5,14 @@ interface DialogProps {
   open: boolean;
   onClose: () => void;
   title: string;
+  /** Picture above the title (a mascot); centres the title. */
+  hero?: ReactNode;
   children?: ReactNode;
   actions: ReactNode;
 }
 
 /** Modal built on the native `<dialog>`: focus trap, Escape and inert background come from the browser. */
-export function Dialog({ open, onClose, title, children, actions }: DialogProps) {
+export function Dialog({ open, onClose, title, hero, children, actions }: DialogProps) {
   const ref = useRef<HTMLDialogElement>(null);
   const titleId = useId();
 
@@ -28,7 +30,8 @@ export function Dialog({ open, onClose, title, children, actions }: DialogProps)
       onClose={onClose}
       className="m-auto w-[min(92vw,26rem)] rounded-3xl border-2 border-line bg-surface p-6 text-ink shadow-(--shadow-4) backdrop:bg-overlay"
     >
-      <h2 id={titleId} className="text-xl font-semibold">
+      {hero ? <div className="mb-3 flex justify-center">{hero}</div> : null}
+      <h2 id={titleId} className={`text-xl font-semibold ${hero ? 'text-center' : ''}`}>
         {title}
       </h2>
       {children ? <div className="mt-2 text-muted">{children}</div> : null}

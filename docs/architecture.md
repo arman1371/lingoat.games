@@ -71,6 +71,10 @@ builder speaks each word as it is tapped, and dialogue speaks the new speaker li
 an answer is revealed. Blitz and quiz stay silent on purpose: half of the blitz sentences are deliberately
 wrong, and a quiz `speak` text can give the answer away.
 
+Report a problem: a flag button in the play header files a GitHub issue through the Worker (`/api/report`),
+protected by Turnstile, a rate limit and a Durable Object guard; see [report-a-problem.md](report-a-problem.md).
+`useSequence` tells the play page which item is on screen (`useReportItem`).
+
 ## Tags and filters
 
 `src/content/tags.ts` is the single vocabulary (skill / topic / grammar). Filter facets: level, unit, skill,

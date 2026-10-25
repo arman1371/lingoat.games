@@ -51,7 +51,11 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version-file: .nvmrc, cache: npm }
       - run: npm ci
+      # Cloudflare's always-passing Turnstile test key: it shows the "Report a problem" button for the e2e tests.
+      # The real key is a build variable of the Cloudflare project.
       - run: npm run build
+        env:
+          VITE_TURNSTILE_SITE_KEY: 1x00000000000000000000AA
       - uses: actions/upload-artifact@v4
         with:
           name: dist
