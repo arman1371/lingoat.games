@@ -202,6 +202,8 @@ const solvers: Record<Activity['gameType'], Solver> = {
       const p = await prompt(page);
       const item = c.items.find((x: any) => x.text === p);
       await page.getByTestId(`bucket-${item.bucket}`).click();
+      await expect(page.getByTestId('feedback')).toHaveAttribute('data-kind', 'correct');
+      await cont(page);
     }
   },
 

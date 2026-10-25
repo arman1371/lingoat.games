@@ -164,6 +164,8 @@ export const SortitConfig = z
           bucket: id,
           emoji: z.string().optional(),
           speak: z.string().optional(),
+          /** English meaning shown with the verdict; filled from `<level>/translations.ts` or the vocabulary */
+          translation: text.optional(),
         }),
       )
       .min(1),

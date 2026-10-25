@@ -108,6 +108,15 @@ export function describeLevelContent(name: string, content: LevelContent, levelI
         }
       });
 
+      it('gives every Sort it card an English meaning for the verdict', () => {
+        const bare = acts.flatMap((a) =>
+          a.gameType === 'sortit'
+            ? a.config.items.filter((i) => !i.translation).map((i) => `${a.id}: ${i.text}`)
+            : [],
+        );
+        expect(bare).toEqual([]);
+      });
+
       it('has at least one vocabulary and one grammar-or-conversation activity', () => {
         const tags = new Set(acts.flatMap((a) => a.tags));
         expect(tags.has('vocabulary')).toBe(true);

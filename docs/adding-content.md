@@ -89,5 +89,8 @@ Order = guided path order (easy → hard). Aim for vocabulary → listening/spel
   - Existing levels add hints in `<level>/hints.ts` (a `HintOverlay` merged by `withHints` in `index.ts`);
     new content can write `lesson` / `why` directly on its items. The shared content suite checks that
     only grammar activities carry hints.
+- Sort it: every card needs an English meaning, shown with the verdict. It comes from a `translation` on
+  the item, then `<level>/translations.ts` (German text → English, merged by `withSortitTranslations` in
+  `index.ts`), then the vocabulary list (`Apfel` / `der Apfel`). The content suite fails for a card without one.
 - Sentence builder: attach punctuation to the last word, keep capitalisation as in the sentence (grading
   ignores case/punctuation) and list other valid word orders in `alsoAccept`.

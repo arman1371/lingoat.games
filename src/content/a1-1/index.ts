@@ -1,4 +1,6 @@
 import type { LevelContent } from '../schema';
+import { withSortitTranslations } from '../translations';
+import { sortitTranslations } from './translations';
 import { withHints } from '../hints';
 import { hints } from './hints';
 import { hallo } from './u1-hallo';
@@ -12,12 +14,18 @@ import { einkaufen } from './u8-einkaufen';
 
 const units = [hallo, wer, woher, zahlen, familie, freizeit, tag, einkaufen];
 
+const vocab = units.flatMap((u) => u.vocab);
+
 const content: LevelContent = {
   units: units.map((u) => u.unit),
-  vocab: units.flatMap((u) => u.vocab),
-  activities: withHints(
-    units.flatMap((u) => u.activities),
-    hints,
+  vocab,
+  activities: withSortitTranslations(
+    withHints(
+      units.flatMap((u) => u.activities),
+      hints,
+    ),
+    vocab,
+    sortitTranslations,
   ),
 };
 

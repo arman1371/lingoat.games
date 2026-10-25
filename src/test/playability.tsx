@@ -126,6 +126,7 @@ async function solve<T extends Activity['gameType']>(
         const shown = await prompt();
         const item = c.items.find((x: any) => x.text === shown);
         await user.click(screen.getByTestId(`bucket-${item.bucket}`));
+        await cont(user);
       }
       return;
     case 'conjugation':
