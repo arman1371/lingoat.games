@@ -1,3 +1,4 @@
+import { Icon } from '@/components/ui/Icon';
 import { useNumberKeys } from './useNumberKeys';
 
 interface Props {
@@ -35,15 +36,17 @@ export function ChoiceList({ options, onSelect, picked = null, answer, columns =
             type="button"
             disabled={locked}
             onClick={() => onSelect(option)}
-            className={`press flex min-h-14 items-center gap-3 rounded-2xl border-2 px-4 py-3 text-left text-lg font-bold text-ink shadow-[0_4px_0_var(--border)] disabled:cursor-default ${tone}`}
+            className={`press flex min-h-14 items-center gap-3 rounded-2xl border-2 px-4 py-3 text-left text-lg font-bold disabled:cursor-default ${tone}`}
           >
             <span
               aria-hidden="true"
-              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-surface-2 text-sm text-muted"
+              className="hidden h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-surface-2 text-sm text-muted md:flex"
             >
               {i + 1}
             </span>
-            <span>{option}</span>
+            <span className="flex-1">{option}</span>
+            {isAnswer ? <Icon name="check-circle" size={24} /> : null}
+            {isWrongPick ? <Icon name="x-circle" size={24} /> : null}
             {isAnswer ? <span className="sr-only">, correct answer</span> : null}
             {isWrongPick ? <span className="sr-only">, your answer, incorrect</span> : null}
           </button>

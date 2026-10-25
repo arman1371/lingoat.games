@@ -1,13 +1,26 @@
 import type { ReactNode } from 'react';
+import { Icon, type IconName } from './Icon';
 
 export type FeedbackKind = 'correct' | 'almost' | 'wrong';
 
-const STYLE: Record<FeedbackKind, string> = {
-  correct: 'bg-success-soft border-success',
-  almost: 'bg-warning-soft border-warning',
-  wrong: 'bg-danger-soft border-danger',
+/** Tinted sheet plus the round badge that carries the verdict, from the design's Feedback Sheet. */
+const STYLE: Record<FeedbackKind, { sheet: string; badge: string; icon: IconName }> = {
+  correct: {
+    sheet: 'bg-success-soft border-success-soft-line text-on-success-soft',
+    badge: 'bg-success text-on-primary',
+    icon: 'check',
+  },
+  almost: {
+    sheet: 'bg-warning-soft border-warning-soft-line text-on-warning-soft',
+    badge: 'bg-warning text-on-primary',
+    icon: 'warning',
+  },
+  wrong: {
+    sheet: 'bg-danger-soft border-danger-soft-line text-on-danger-soft',
+    badge: 'bg-danger text-on-primary',
+    icon: 'close',
+  },
 };
-const ICON: Record<FeedbackKind, string> = { correct: '✅', almost: '🟡', wrong: '❌' };
 
 interface Props {
   kind: FeedbackKind;
@@ -17,19 +30,25 @@ interface Props {
 
 /** Announced politely to screen readers; sits at the bottom of a game after each answer. */
 export function FeedbackBanner({ kind, title, children }: Props) {
+  const s = STYLE[kind];
   return (
     <div
       role="status"
       aria-live="polite"
       data-testid="feedback"
       data-kind={kind}
-      className={`anim-pop rounded-2xl border-2 p-4 ${STYLE[kind]} ${kind === 'wrong' ? 'anim-shake' : ''}`}
+      className={`anim-pop flex items-start gap-3 rounded-3xl border-2 p-4 ${s.sheet} ${kind === 'wrong' ? 'anim-shake' : ''}`}
     >
-      <p className="flex items-center gap-2 text-lg font-extrabold text-ink">
-        <span aria-hidden="true">{ICON[kind]}</span>
-        {title}
-      </p>
-      {children ? <div className="mt-1 text-ink">{children}</div> : null}
+      <span
+        aria-hidden="true"
+        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${s.badge}`}
+      >
+        <Icon name={s.icon} size={22} />
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className="font-display text-xl font-bold">{title}</p>
+        {children ? <div className="mt-1 text-ink">{children}</div> : null}
+      </div>
     </div>
   );
 }

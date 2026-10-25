@@ -1,4 +1,5 @@
 import { LESSONS, type LessonId } from '@/content/lessons';
+import { Icon } from '@/components/ui/Icon';
 import { t } from '@/i18n';
 import { useActivityLesson } from './hints';
 
@@ -21,15 +22,20 @@ export function MistakeHint({ why, lesson }: Props) {
   return (
     <div className="mt-2 flex flex-col gap-2" data-testid="mistake-hint">
       {why ? (
-        <p data-testid="mistake-why">
-          <span aria-hidden="true">💡 </span>
-          <strong>{t('hint.why')}</strong> {why}
+        <p
+          data-testid="mistake-why"
+          className="flex items-start gap-2 rounded-xl border-2 border-warning-soft-line bg-warning-soft p-3 text-on-warning-soft"
+        >
+          <Icon name="lightbulb" size={20} className="mt-0.5 shrink-0" />
+          <span>
+            <strong>{t('hint.why')}</strong> {why}
+          </span>
         </p>
       ) : null}
       {l ? (
         <div className="rounded-xl bg-surface p-3" data-testid="mini-lesson" data-lesson={id}>
-          <p className="font-extrabold">
-            <span aria-hidden="true">📘 </span>
+          <p className="flex items-center gap-2 font-bold">
+            <Icon name="book" size={18} />
             {t('hint.lesson')}: {l.title}
           </p>
           <p className="mt-1">{l.rule}</p>

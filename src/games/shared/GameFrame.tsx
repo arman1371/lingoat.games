@@ -21,7 +21,7 @@ export function GameFrame({ index, total, title, children, footer }: FrameProps)
         <div className="flex-1">
           <ProgressBar value={index / total} label="Progress" />
         </div>
-        <span className="text-sm font-bold text-muted" data-testid="counter">
+        <span className="text-sm font-bold tabular-nums text-muted" data-testid="counter">
           {Math.min(index + 1, total)} / {total}
         </span>
       </div>
@@ -47,7 +47,14 @@ export function FeedbackFooter({ kind, title, detail, isLast, onNext }: FooterPr
       <FeedbackBanner kind={kind} title={title}>
         {detail}
       </FeedbackBanner>
-      <Button ref={nextRef} size="lg" block onClick={onNext} data-testid="continue">
+      <Button
+        ref={nextRef}
+        size="lg"
+        block
+        variant={kind === 'correct' ? 'success' : kind === 'wrong' ? 'danger' : 'primary'}
+        onClick={onNext}
+        data-testid="continue"
+      >
         {isLast ? t('result.title') : t('common.continue')}
       </Button>
     </div>
