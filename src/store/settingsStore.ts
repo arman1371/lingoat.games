@@ -11,6 +11,8 @@ export interface SettingsState {
   sounds: boolean;
   autoSpeak: boolean;
   ttsRate: number;
+  /** XP to earn per day. */
+  dailyGoal: number;
   set: (patch: Partial<Omit<SettingsState, 'set'>>) => void;
 }
 
@@ -20,6 +22,7 @@ export const DEFAULT_SETTINGS = {
   sounds: true,
   autoSpeak: true,
   ttsRate: 0.9,
+  dailyGoal: 50,
 } satisfies Omit<SettingsState, 'set'>;
 
 export const useSettingsStore = create<SettingsState>()(
@@ -27,12 +30,13 @@ export const useSettingsStore = create<SettingsState>()(
     name: 'spielplatz.settings',
     version: 1,
     storage: createJSONStorage(() => localRepository),
-    partialize: ({ theme, motion, sounds, autoSpeak, ttsRate }) => ({
+    partialize: ({ theme, motion, sounds, autoSpeak, ttsRate, dailyGoal }) => ({
       theme,
       motion,
       sounds,
       autoSpeak,
       ttsRate,
+      dailyGoal,
     }),
   }),
 );

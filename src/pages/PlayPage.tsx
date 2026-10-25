@@ -2,6 +2,7 @@ import { Suspense, useCallback, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import { ConfirmDialog } from '@/components/ui/Dialog';
+import { GameTile } from '@/components/ui/GameTile';
 import { useFocusOnMount } from '@/games/shared/useFocusOnMount';
 import { useContent } from '@/content/ContentProvider';
 import { getItems, withItems } from '@/content/items';
@@ -145,12 +146,7 @@ function PlayView({ activityId }: { activityId: string }) {
           className="mx-auto flex max-w-md flex-col items-center gap-4 py-6 text-center"
           aria-labelledby="intro-title"
         >
-          <span
-            aria-hidden="true"
-            className="flex h-24 w-24 items-center justify-center rounded-3xl bg-primary-soft text-6xl"
-          >
-            {type.emoji}
-          </span>
+          <GameTile type={activity.gameType} size="lg" />
           <h1 id="intro-title" className="text-3xl font-extrabold text-ink">
             {activity.title}
           </h1>

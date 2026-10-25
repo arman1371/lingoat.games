@@ -207,3 +207,17 @@ test('installable PWA assets are served', async ({ request }) => {
   const deep = await request.get('/levels/a1-1/units/a1-1-hallo');
   expect(deep.ok()).toBe(true);
 });
+
+test('daily goal: playing a game fills the ring, and the goal can be changed in the profile', async ({
+  page,
+}) => {
+  await page.goto('/');
+  const goal = page.getByTestId('daily-goal');
+  await expect(goal).toContainText('0 of 50 XP collected');
+  await playPerfectly(page, 'a1-1-hallo-flash');
+  await page.goto('/profile');
+  await page.getByLabel('20', { exact: true }).check({ force: true });
+  await page.goto('/');
+  await expect(goal).toContainText('of 20 XP collected');
+  await expect(goal.getByRole('progressbar')).not.toHaveAttribute('aria-valuenow', '0');
+});

@@ -1,4 +1,10 @@
-import { initialProgress, nextStreak, useProgressStore, visibleStreak } from './progressStore';
+import {
+  dailyXp,
+  initialProgress,
+  nextStreak,
+  useProgressStore,
+  visibleStreak,
+} from './progressStore';
 import type { GameResult } from '@/lib/scoring';
 
 const res = (over: Partial<GameResult> = {}): GameResult => ({
@@ -75,5 +81,25 @@ describe('progressStore', () => {
     expect(raw.version).toBe(1);
     useProgressStore.getState().reset();
     expect(useProgressStore.getState().xp).toBe(0);
+  });
+});
+
+describe('daily XP', () => {
+  it('adds up within a day and starts over on the next', () => {
+    const { recordResult } = useProgressStore.getState();
+    const a = recordResult('act', res(), { today: 10 });
+    const b = recordResult('act2', res(), { today: 10 });
+    const s = useProgressStore.getState();
+    expect(dailyXp(s.daily, 10)).toBe(a.xpGained + b.xpGained);
+    expect(dailyXp(s.daily, 11)).toBe(0);
+    const c = recordResult('act', res(), { today: 11 });
+    expect(dailyXp(useProgressStore.getState().daily, 11)).toBe(c.xpGained);
+  });
+
+  it('starts at zero and is cleared by reset', () => {
+    expect(initialProgress().daily).toEqual({ day: 0, xp: 0 });
+    useProgressStore.getState().recordResult('act', res(), { today: 5 });
+    useProgressStore.getState().reset();
+    expect(useProgressStore.getState().daily).toEqual({ day: 0, xp: 0 });
   });
 });

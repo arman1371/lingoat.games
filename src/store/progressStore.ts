@@ -24,12 +24,19 @@ export interface RecordOutcome {
   newBest: boolean;
 }
 
+export interface DailyXp {
+  day: number;
+  xp: number;
+}
+
 export interface ProgressData {
   xp: number;
   streak: Streak;
   activities: Record<string, ActivityProgress>;
   mistakes: Record<string, Mistake>;
   lastActivityId: string | null;
+  /** XP earned on `day`; starts over on the next day. */
+  daily: DailyXp;
 }
 
 interface ProgressActions {
@@ -50,7 +57,11 @@ export const initialProgress = (): ProgressData => ({
   activities: {},
   mistakes: {},
   lastActivityId: null,
+  daily: { day: 0, xp: 0 },
 });
+
+/** XP earned today (0 when the stored day is an earlier one). */
+export const dailyXp = (daily: DailyXp, today: number) => (daily.day === today ? daily.xp : 0);
 
 export function nextStreak(prev: Streak, today: number): Streak {
   if (prev.lastDay === today) return prev;
@@ -105,6 +116,7 @@ export const useProgressStore = create<ProgressState>()(
 
         set({
           xp: state.xp + xpGained,
+          daily: { day: today, xp: dailyXp(state.daily, today) + xpGained },
           streak: nextStreak(state.streak, today),
           activities,
           mistakes,
@@ -118,12 +130,13 @@ export const useProgressStore = create<ProgressState>()(
       name: 'spielplatz.progress',
       version: 1,
       storage: createJSONStorage(() => localRepository),
-      partialize: ({ xp, streak, activities, mistakes, lastActivityId }) => ({
+      partialize: ({ xp, streak, activities, mistakes, lastActivityId, daily }) => ({
         xp,
         streak,
         activities,
         mistakes,
         lastActivityId,
+        daily,
       }),
       migrate: (persisted) => ({ ...initialProgress(), ...(persisted as Partial<ProgressData>) }),
     },

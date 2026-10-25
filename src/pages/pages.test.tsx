@@ -712,3 +712,27 @@ describe('Progress and Profile', () => {
     expect(within(nav).getByRole('link', { name: 'Learn' })).not.toHaveAttribute('aria-current');
   });
 });
+
+describe('Daily goal', () => {
+  it("shows today's XP on Home and follows the goal chosen in the profile", async () => {
+    useProgressStore
+      .getState()
+      .recordResult('a1-1-hallo-time-of-day', { correct: 5, total: 5, played: [], mistakes: [] });
+    const gained = useProgressStore.getState().daily.xp;
+    expect(gained).toBeGreaterThan(0);
+    const { user } = renderApp('/profile');
+    await user.click(await screen.findByLabelText('100'));
+    expect(useSettingsStore.getState().dailyGoal).toBe(100);
+    await user.click(
+      within(screen.getByRole('navigation', { name: 'Main' })).getByRole('link', { name: 'Learn' }),
+    );
+    const card = await screen.findByTestId('daily-goal');
+    expect(card).toHaveTextContent(`${gained} of 100 XP collected`);
+  });
+
+  it('links the home game shortcuts to the library filter', async () => {
+    const { user, router } = renderApp('/');
+    await user.click(await screen.findByTestId('home-game-quiz'));
+    expect(router.state.location.search).toBe('?type=quiz');
+  });
+});

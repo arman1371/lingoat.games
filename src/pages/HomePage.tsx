@@ -1,5 +1,8 @@
 import { Link } from 'react-router';
+import { DailyGoalCard } from '@/components/DailyGoalCard';
 import { Card } from '@/components/ui/Card';
+import { GameTile } from '@/components/ui/GameTile';
+import { StatCard } from '@/components/ui/StatCard';
 import { Button } from '@/components/ui/Button';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { useContent } from '@/content/ContentProvider';
@@ -8,7 +11,8 @@ import { nextActivity, playUrl, queueAfter } from '@/app/path';
 import { GAME_TYPE_LABELS } from '@/lib/filters';
 import { dayNumber } from '@/lib/srs';
 import { t } from '@/i18n';
-import { useProgressStore, visibleStreak } from '@/store/progressStore';
+import { dailyXp, useProgressStore, visibleStreak } from '@/store/progressStore';
+import { useSettingsStore } from '@/store/settingsStore';
 
 export function HomePage() {
   const content = useContent();
@@ -16,6 +20,8 @@ export function HomePage() {
   const xp = useProgressStore((s) => s.xp);
   const streak = useProgressStore((s) => visibleStreak(s.streak, dayNumber()));
   const mistakes = useProgressStore((s) => Object.keys(s.mistakes).length);
+  const todayXp = useProgressStore((s) => dailyXp(s.daily, dayNumber()));
+  const goal = useSettingsStore((s) => s.dailyGoal);
 
   const next = nextActivity(content.fullPath, progress);
   const nextIds = content.fullPath.map((a) => a.id);
@@ -23,20 +29,24 @@ export function HomePage() {
   const hasStarted = Object.keys(progress).length > 0;
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
+      <DailyGoalCard xp={todayXp} goal={goal} />
+
       <section
         className="rounded-3xl bg-primary p-6 text-on-primary shadow-[0_6px_0_var(--primary-edge)] md:p-8"
         aria-labelledby="hero-title"
       >
-        <p className="text-sm font-extrabold uppercase tracking-wider opacity-90">{t('tagline')}</p>
-        <h1 id="hero-title" className="mt-1 text-3xl font-extrabold md:text-4xl">
+        <p className="text-xs font-extrabold uppercase tracking-wider opacity-90">{t('tagline')}</p>
+        <h1 id="hero-title" className="mt-1 text-3xl font-semibold md:text-4xl">
           {hasStarted ? t('home.continueTitle') : t('home.startTitle')}
         </h1>
         {next && unit ? (
           <div className="mt-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-lg">
-              <span aria-hidden="true">{GAME_TYPE_LABELS[next.gameType].emoji} </span>
               <strong>{next.title}</strong>
+              <span className="block text-sm opacity-90">
+                {GAME_TYPE_LABELS[next.gameType].label}
+              </span>
               <span className="block opacity-90">
                 {unit.emoji} {unit.title}
               </span>
@@ -61,25 +71,41 @@ export function HomePage() {
         )}
       </section>
 
-      <section aria-label="Your stats" className="grid grid-cols-3 gap-3 text-center">
-        <Card>
-          <p className="text-2xl font-extrabold text-ink">🔥 {streak}</p>
-          <p className="text-sm text-muted">{t('home.streak', { n: streak })}</p>
-        </Card>
-        <Card>
-          <p className="text-2xl font-extrabold text-ink">⭐ {xp}</p>
-          <p className="text-sm text-muted">{t('home.xp', { n: xp })}</p>
-        </Card>
+      <section aria-label="Your stats" className="grid grid-cols-3 gap-3">
+        <StatCard
+          icon="flame"
+          tone="streak"
+          value={streak}
+          label={t('home.streak', { n: streak })}
+        />
+        <StatCard icon="zap" tone="xp" value={xp} label={t('home.xp', { n: xp })} />
         <Link to="/review" className="block">
-          <Card className="h-full">
-            <p className="text-2xl font-extrabold text-ink">📦 {mistakes}</p>
-            <p className="text-sm text-muted">Fehlerkiste</p>
-          </Card>
+          <StatCard icon="book" tone="info" value={mistakes} label="Fehlerkiste" />
         </Link>
       </section>
 
+      <section aria-labelledby="games-title" className="flex flex-col gap-3">
+        <h2 id="games-title" className="text-2xl font-semibold text-ink">
+          {t('home.gamesForYou')}
+        </h2>
+        <ul className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          {(['quiz', 'flashcards', 'memory', 'gapfill'] as const).map((type) => (
+            <li key={type}>
+              <Link
+                to={`/library?type=${type}`}
+                data-testid={`home-game-${type}`}
+                className="press flex flex-col items-center gap-2 rounded-2xl border border-line bg-surface p-3 text-center font-bold text-ink shadow-(--shadow-1) hover:bg-surface-2"
+              >
+                <GameTile type={type} size="md" />
+                {GAME_TYPE_LABELS[type].label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section aria-labelledby="levels-title">
-        <h2 id="levels-title" className="mb-3 text-2xl font-extrabold text-ink">
+        <h2 id="levels-title" className="mb-3 text-2xl font-semibold text-ink">
           {t('home.levels')}
         </h2>
         <ul className="grid gap-4 sm:grid-cols-2">
@@ -92,7 +118,7 @@ export function HomePage() {
             const body = (
               <Card className={`flex h-full flex-col gap-2 ${available ? '' : 'opacity-60'}`}>
                 <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-extrabold text-ink">{level.title}</h3>
+                  <h3 className="font-display text-2xl font-semibold text-ink">{level.title}</h3>
                   {!available ? (
                     <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-bold text-muted">
                       {t('common.comingSoon')}
