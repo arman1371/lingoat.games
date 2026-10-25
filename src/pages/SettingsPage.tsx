@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { ConfirmDialog } from '@/components/ui/Dialog';
+import { Mascot } from '@/components/ui/Mascot';
 import { Segment } from '@/components/ui/Segment';
 import { SpeakButton } from '@/components/ui/SpeakButton';
 import { Toast } from '@/components/ui/Toast';
@@ -18,8 +19,15 @@ export function SettingsPage() {
 
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-5">
-      <h1 className="text-3xl font-extrabold text-ink">{t('settings.title')}</h1>
+      <header className="flex items-center gap-4">
+        <Mascot mood="happy" size={72} />
+        <div>
+          <h1 className="text-3xl font-semibold text-ink">{t('profile.title')}</h1>
+          <p className="text-muted">{t('profile.subtitle')}</p>
+        </div>
+      </header>
       <Card className="flex flex-col gap-5">
+        <h2 className="text-xl font-semibold text-ink">{t('settings.title')}</h2>
         <Segment<ThemeSetting>
           label={t('settings.theme')}
           value={s.theme}

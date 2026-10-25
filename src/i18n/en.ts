@@ -1,7 +1,13 @@
 export const en = {
   appName: 'Deutsch Spielplatz',
   tagline: 'Play your way through German',
-  nav: { home: 'Home', library: 'Games', review: 'Review', settings: 'Settings' },
+  nav: {
+    home: 'Learn',
+    library: 'Games',
+    review: 'Review',
+    progress: 'Progress',
+    profile: 'Profile',
+  },
   common: {
     loading: 'Loading…',
     back: 'Back',
@@ -54,6 +60,19 @@ export const en = {
     start: 'Review now ({n})',
     allDone: 'Review complete',
     emptyTitle: 'All caught up',
+  },
+  profile: { title: 'Profile', subtitle: 'Everything is saved on this device.' },
+  progressPage: {
+    title: 'Progress',
+    intro: 'Your journey so far.',
+    xp: 'Total XP',
+    streak: 'Day streak',
+    streakBest: 'Best: {n}',
+    games: 'Games played',
+    stars: '{n} stars earned',
+    levels: 'Levels',
+    review: 'Fehlerkiste',
+    reviewHint: '{n} items waiting',
   },
   settings: {
     title: 'Settings',

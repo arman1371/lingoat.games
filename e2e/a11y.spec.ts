@@ -58,7 +58,8 @@ const PAGES: [string, string, string][] = [
   ['library', '/library', 'Game library'],
   ['library with level filter', '/library?lvl=a1-2', 'Game library'],
   ['review', '/review', 'Fehlerkiste'],
-  ['settings', '/settings', 'Settings'],
+  ['profile', '/profile', 'Profile'],
+  ['progress', '/progress', 'Progress'],
   ['play intro', '/play/a1-1-hallo-time-of-day?seed=1', 'Greeting for the time of day'],
   ['404', '/nope', 'Page not found'],
 ];

@@ -193,7 +193,7 @@ test.describe('progress and review', () => {
       .getByRole('dialog', { name: 'Reset all progress?' })
       .getByRole('button', { name: 'Reset all progress' })
       .click();
-    await expect(page.getByTestId('xp')).toHaveText('⭐ 0');
+    await expect(page.getByTestId('xp')).toHaveText('0');
     await expect(page.getByText('Progress reset.')).toBeVisible();
   });
 });
