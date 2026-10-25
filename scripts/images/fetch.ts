@@ -103,16 +103,25 @@ let apiCalls = 0;
 let apiCached = 0;
 
 async function search(query: string, lang: 'en' | 'de'): Promise<PixabayHit[]> {
-  const params = new URLSearchParams({
-    q: query,
-    lang,
-    image_type: 'photo',
-    safesearch: 'true',
-    min_width: String(SIZE),
-    min_height: String(SIZE),
-    order: 'popular',
-    per_page: '20',
-  });
+  return request(
+    new URLSearchParams({
+      q: query,
+      lang,
+      image_type: 'photo',
+      safesearch: 'true',
+      min_width: String(SIZE),
+      min_height: String(SIZE),
+      order: 'popular',
+      per_page: '20',
+    }),
+  );
+}
+
+/** One specific photo (an `overrides.json` `photo` id), checked only by the safe-search filter. */
+const byId = (id: number): Promise<PixabayHit[]> =>
+  request(new URLSearchParams({ id: String(id), safesearch: 'true' }));
+
+async function request(params: URLSearchParams): Promise<PixabayHit[]> {
   const file = join(
     CACHE,
     'api',
@@ -133,7 +142,10 @@ async function search(query: string, lang: 'en' | 'de'): Promise<PixabayHit[]> {
       await sleep(wait * 1000);
       continue;
     }
-    if (!res.ok) throw new Error(`Pixabay answered ${res.status} for "${query}"`);
+    if (!res.ok)
+      throw new Error(
+        `Pixabay answered ${res.status} for "${params.get('q') ?? params.get('id')}"`,
+      );
     const hits = ((await res.json()) as { hits: PixabayHit[] }).hits;
     await writeJson(file, hits);
     return hits;
@@ -215,6 +227,12 @@ async function main() {
 
   /** English meaning first; a word that finds nothing there is searched again by its German name. */
   async function choose(v: Vocab, query: string): Promise<Pick> {
+    const photo = overrides[v.id]?.photo;
+    if (photo) {
+      const [hit] = await byId(photo);
+      if (!hit) throw new Error(`override photo ${photo} not found`);
+      return { hit };
+    }
     let picked = pickHit(await search(query, 'en'), query);
     const de = germanQuery(v);
     if ('reason' in picked && de && !overrides[v.id]?.query) {

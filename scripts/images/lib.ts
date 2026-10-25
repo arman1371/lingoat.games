@@ -26,8 +26,11 @@ export interface PixabayHit {
   user_id: number;
 }
 
-/** Per-word overrides kept in `scripts/images/overrides.json`: a better query, or `skip` to keep the emoji. */
-export type Overrides = Record<string, { query?: string; skip?: true }>;
+/**
+ * Per-word overrides kept in `scripts/images/overrides.json`: a better query, the Pixabay id of the exact
+ * photo to use (when no query finds the right one), or `skip` to keep the emoji.
+ */
+export type Overrides = Record<string, { query?: string; photo?: number; skip?: true }>;
 
 /** German abstract-noun endings: a photo of "Freiheit" says nothing, so the emoji stays. */
 const ABSTRACT_SUFFIX = /(heit|keit|schaft|ismus|ität|tät)$/i;
