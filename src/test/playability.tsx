@@ -6,7 +6,7 @@ import { Suspense } from 'react';
 import { render, screen, waitFor, within, act, configure } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { gameComponents, gameLoaders } from '@/games/registry';
-import { buildDeck } from '@/games/memory/logic';
+import { buildColumns } from '@/games/memory/logic';
 import { parseTime, timeToGerman } from '@/lib/german/time';
 import { totalCents } from '@/games/market/logic';
 import { priceToGerman } from '@/lib/german/numbers';
@@ -59,11 +59,12 @@ async function solve<T extends Activity['gameType']>(
       }
       return;
     case 'memory': {
-      const deck = buildDeck(c.pairs, SEED);
+      const { left, right } = buildColumns(c.pairs, SEED);
       const cards = await screen.findAllByTestId('memory-card');
+      const n = left.length;
       for (const p of c.pairs) {
-        await user.click(cards[deck.findIndex((d) => d.uid === `${p.id}:a`)]!);
-        await user.click(cards[deck.findIndex((d) => d.uid === `${p.id}:b`)]!);
+        await user.click(cards[left.findIndex((d) => d.pairId === p.id)]!);
+        await user.click(cards[n + right.findIndex((d) => d.pairId === p.id)]!);
       }
       return;
     }

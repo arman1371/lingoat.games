@@ -6,7 +6,7 @@ import Quiz from '../quiz/Quiz';
 import Dialogue from '../dialogue/Dialogue';
 import Blitz from '../blitz/Blitz';
 import Memory from '../memory/Memory';
-import { buildDeck } from '../memory/logic';
+import { buildColumns } from '../memory/logic';
 import { useSequence } from './useSequence';
 
 vi.mock('@/lib/sfx', () => ({ playSfx: vi.fn(() => true) }));
@@ -100,14 +100,19 @@ describe('answer sounds', () => {
         { id: 'p2', a: 'Katze', b: 'cat' },
       ],
     };
-    const deck = buildDeck(config.pairs, 1);
-    const card = (uid: string) =>
-      screen.getAllByTestId('memory-card')[deck.findIndex((c) => c.uid === uid)]!;
+    const { left, right } = buildColumns(config.pairs, 1);
+    const card = (uid: string) => {
+      const all = screen.getAllByTestId('memory-card');
+      const l = left.findIndex((c) => c.uid === uid);
+      return all[l >= 0 ? l : left.length + right.findIndex((c) => c.uid === uid)]!;
+    };
     const { user } = renderGame(Memory, config, 1);
     await user.click(card('p1:a'));
-    await user.click(card('p1:b'));
+    await user.click(card('p2:b')); // wrong pair
+    await user.click(card('p1:a'));
+    await user.click(card('p1:b')); // right pair
     await user.click(card('p2:a'));
     await user.click(card('p1:a')); // already matched: ignored, no cue
-    expect(played()).toEqual(['correct']);
+    expect(played()).toEqual(['wrong', 'correct']);
   });
 });

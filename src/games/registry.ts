@@ -31,7 +31,7 @@ export const gameComponents = Object.fromEntries(
 export const GAME_HELP: Record<GameType, string> = {
   flashcards: 'Flip the card, then tell yourself honestly if you knew it.',
   quiz: 'Pick the right answer. Press 1–4 on the keyboard to answer fast.',
-  memory: 'Turn two cards at a time and find the matching pairs.',
+  memory: 'Match each word on the left with its partner on the right.',
   listen: 'Press the speaker, listen closely, then pick what you heard.',
   spell: 'Build or type the word. Use the ä ö ü ß keys if you need them.',
   sentence: 'Tap the words in the right order. Drag to rearrange.',
