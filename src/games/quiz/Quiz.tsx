@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { SpeakButton } from '@/components/ui/SpeakButton';
+import { WordImage } from '@/components/WordImage';
 import { ChoiceList } from '../shared/ChoiceList';
 import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
 import { shuffledOptions } from '../shared/choices';
@@ -57,11 +58,7 @@ export function Quiz({ config, seed, onFinish }: GameProps<'quiz'>) {
       }
     >
       <div className="flex flex-col items-center gap-3 text-center">
-        {q.emoji ? (
-          <span aria-hidden="true" className="text-6xl" data-testid="emoji">
-            {q.emoji}
-          </span>
-        ) : null}
+        <WordImage id={q.id} emoji={q.emoji} />
         <h2 className="text-3xl font-extrabold text-ink" data-testid="prompt">
           {q.prompt}
         </h2>

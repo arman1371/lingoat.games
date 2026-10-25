@@ -22,6 +22,7 @@ export const routes: RouteObject[] = [
       { path: 'review', ...page(() => import('@/pages/ReviewPage')) },
       { path: 'progress', ...page(() => import('@/pages/ProgressPage')) },
       { path: 'profile', ...page(() => import('@/pages/SettingsPage')) },
+      { path: 'credits', ...page(() => import('@/pages/CreditsPage')) },
       { path: 'settings', element: <Navigate to="/profile" replace /> },
       { path: '*', ...page(() => import('@/pages/NotFoundPage')) },
     ],

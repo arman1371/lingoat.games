@@ -1,4 +1,5 @@
-import { screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
+import { ImageManifestContext } from '@/lib/useImageManifest';
 import { renderGame } from '@/test/render';
 import Spell from './Spell';
 
@@ -73,5 +74,16 @@ describe('Spell', () => {
     expect(screen.getByTestId('feedback')).toHaveAttribute('data-kind', 'correct');
     await user.click(screen.getByTestId('continue'));
     expect(onFinish).toHaveBeenCalled();
+  });
+
+  it('shows the word photo with the emoji as fallback', () => {
+    render(
+      <ImageManifestContext.Provider value={{ u1: ['day-1/', 'someone', 7] }}>
+        <Spell config={unscramble} seed={1} onFinish={() => {}} />
+      </ImageManifestContext.Provider>,
+    );
+    expect(screen.getByTestId('word-photo')).toHaveAttribute('src', '/img/u1.webp');
+    fireEvent.error(screen.getByTestId('word-photo'));
+    expect(screen.getByTestId('emoji')).toHaveTextContent('📅');
   });
 });

@@ -174,6 +174,13 @@ A workflow refreshes it after every push to `main`; see [docs/graphify.md](docs/
 The production site [lingoat.games](https://lingoat.games) is a static build served by Cloudflare
 Workers (config in `wrangler.jsonc`). Setup and reasoning are in [docs/deployment.md](docs/deployment.md).
 
+## Image credits
+
+Word photos come from [Pixabay](https://pixabay.com) and are free to use under the
+[Pixabay Content License](https://pixabay.com/service/license-summary/). Each photo's author and source page are
+listed in the app (Profile → Image credits) and in
+[`src/content/images/manifest.json`](src/content/images/manifest.json). How they are fetched: [docs/images.md](docs/images.md).
+
 ## License
 
 No license has been chosen yet, so all rights are reserved by the author for now. Please open an issue if

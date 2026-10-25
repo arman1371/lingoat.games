@@ -2,6 +2,7 @@ import { useMemo, useRef, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { SpeakButton } from '@/components/ui/SpeakButton';
 import { UmlautKeyboard } from '@/components/ui/UmlautKeyboard';
+import { WordImage } from '@/components/WordImage';
 import { checkAnswer, checkNumeric, type AnswerVerdict } from '@/lib/answer-check';
 import { ttsSupported } from '@/lib/tts';
 import { t } from '@/i18n';
@@ -77,11 +78,7 @@ export function Spell({ config, seed, onFinish }: GameProps<'spell'>) {
       }
     >
       <div className="flex flex-col items-center gap-3 text-center">
-        {item.emoji ? (
-          <span aria-hidden="true" className="text-6xl">
-            {item.emoji}
-          </span>
-        ) : null}
+        <WordImage id={item.id} emoji={item.emoji} />
         <h2 className="text-2xl font-extrabold text-ink" data-testid="prompt">
           {item.mode === 'dictation' && canSpeak ? 'Type what you hear' : item.hint}
         </h2>

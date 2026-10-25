@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { ConfirmDialog } from '@/components/ui/Dialog';
@@ -94,6 +95,12 @@ export function SettingsPage() {
           </div>
         </div>
       </Card>
+      <Link to="/credits" className="block">
+        <Card interactive className="flex items-center justify-between gap-3">
+          <span className="font-semibold text-ink">{t('credits.link')}</span>
+          <span className="text-sm font-bold text-muted">{t('credits.linkHint')}</span>
+        </Card>
+      </Link>
       <Card className="flex flex-col gap-3">
         <h2 className="font-extrabold text-ink">Your data</h2>
         <p className="text-sm text-muted">

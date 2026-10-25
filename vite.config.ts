@@ -1,12 +1,34 @@
 /// <reference types="vitest/config" />
+import { createReadStream, existsSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
+import type { Connect, Plugin } from 'vite';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
+/**
+ * Local word photos: `npm run images:fetch` writes them to `.image-cache/images`; serve them at `/img/` so the
+ * dev and preview servers behave like production (where the Worker serves them from R2, see docs/images.md).
+ */
+const localWordPhotos = (): Plugin => {
+  const dir = fileURLToPath(new URL('./.image-cache/images/', import.meta.url));
+  const serve: Connect.NextHandleFunction = (req, res, next) => {
+    const name = /^\/img\/([a-z0-9-]+\.webp)$/.exec(req.url ?? '')?.[1];
+    if (!name || !existsSync(dir + name)) return next();
+    res.setHeader('Content-Type', 'image/webp');
+    createReadStream(dir + name).pipe(res);
+  };
+  return {
+    name: 'local-word-photos',
+    configureServer: (server) => void server.middlewares.use(serve),
+    configurePreviewServer: (server) => void server.middlewares.use(serve),
+  };
+};
+
 export default defineConfig({
   plugins: [
+    localWordPhotos(),
     react(),
     tailwindcss(),
     VitePWA({
@@ -40,6 +62,18 @@ export default defineConfig({
       workbox: {
         navigateFallback: '/index.html',
         globPatterns: ['**/*.{js,css,html,svg,woff2,png,ico}'],
+        // word photos are fetched on demand and then kept for offline play
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith('/img/'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'word-photos',
+              expiration: { maxEntries: 600, maxAgeSeconds: 60 * 60 * 24 * 90 },
+              cacheableResponse: { statuses: [200] },
+            },
+          },
+        ],
       },
     }),
   ],
@@ -48,7 +82,7 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: ['./src/test/setup.ts'],
-    include: ['src/**/*.test.{ts,tsx}'],
+    include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.ts', 'worker/**/*.test.ts'],
     css: false,
     coverage: {
       provider: 'v8',

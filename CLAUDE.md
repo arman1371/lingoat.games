@@ -13,6 +13,8 @@ content packs). Read `docs/architecture.md` and `docs/adding-content.md` before 
 - Accessibility is a hard requirement: axe must stay green (`e2e/a11y.spec.ts`), no nested interactive
   elements, no `autoFocus`, keyboard path for every game.
 - `src/content/**` must not import React or browser APIs (e2e imports it in Node).
+- Word photos: only through `scripts/images` (Pixabay, see `docs/images.md`); never commit image files or the
+  `PIXABAY_API_KEY`; every word keeps its emoji as fallback (`WordImage`).
 
 ## Commands
 
