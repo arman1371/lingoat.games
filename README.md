@@ -41,7 +41,7 @@ Unit lists are researched from course books, Goethe exam documents and the CEFR 
 - **Guided path or free play**: follow a unit step by step, or filter the library by level, unit, skill,
   topic, grammar point, game type, difficulty and length, and play any filtered list as a queue.
 - **Grammar hints and mini lessons** after a wrong answer, so a mistake explains itself.
-- **Fehlerkiste (review box)**: wrong answers go into a Leitner box and come back for spaced review.
+- **Mistake box**: wrong answers go into a Leitner box and come back for spaced review.
 - **Listening and sound**: speech through the browser's text-to-speech voice, short right/wrong sounds
   (can be muted in Settings).
 - **Local-first and private**: no back end and no account. Progress and settings stay in your browser

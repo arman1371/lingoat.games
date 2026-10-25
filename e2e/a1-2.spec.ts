@@ -133,7 +133,7 @@ test.describe('A1.2 – playing the games', () => {
     expect([...covered].sort()).toEqual(a12.units.map((u) => u.id).sort());
   });
 
-  test('a wrong answer in a grammar game goes to the Fehlerkiste and is reviewed', async ({
+  test('a wrong answer in a grammar game goes to the mistake box and is reviewed', async ({
     page,
   }) => {
     const gapfill = activity('a1-2-stadt-gap-wo');

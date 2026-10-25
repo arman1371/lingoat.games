@@ -35,7 +35,7 @@ export const en = {
     xp: '{n} XP',
     levels: 'Levels',
     gamesForYou: 'Games for you',
-    reviewCard: '{n} items waiting in your Fehlerkiste',
+    reviewCard: '{n} items waiting in your mistake box',
   },
   unit: {
     path: 'Step by step',
@@ -55,7 +55,7 @@ export const en = {
     level: 'Level',
   },
   review: {
-    title: 'Fehlerkiste',
+    title: 'Mistake box',
     intro: 'Items you got wrong come back here until you know them.',
     empty: 'Nothing to review – great job! Play more games to fill your box.',
     start: 'Review now ({n})',
@@ -79,7 +79,7 @@ export const en = {
     games: 'Games played',
     stars: '{n} stars earned',
     levels: 'Levels',
-    review: 'Fehlerkiste',
+    review: 'Mistake box',
     reviewHint: '{n} items waiting',
   },
   settings: {

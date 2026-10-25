@@ -80,7 +80,7 @@ export function HomePage() {
         />
         <StatCard icon="zap" tone="xp" value={xp} label={t('home.xp', { n: xp })} />
         <Link to="/review" className="block">
-          <StatCard icon="book" tone="info" value={mistakes} label="Fehlerkiste" />
+          <StatCard icon="book" tone="info" value={mistakes} label="Mistake box" />
         </Link>
       </section>
 

@@ -30,7 +30,7 @@ levels.ts ──load()──▶ LevelContent {units, vocab, activities}
                       │ gameComponents[gameType] (lazy)
                       ▼
         Engine({config, seed, onFinish}) ──GameResult──▶ progressStore.recordResult
-                                                         (stars, XP, streak, Fehlerkiste)
+                                                         (stars, XP, streak, mistake box)
 ```
 
 - **Guided path** = activities of a unit in authoring order; the first unfinished one is "up next".
@@ -52,7 +52,7 @@ interface GameProps<T extends GameType> {
 Sequential engines use `useSequence` (shuffle, first-try verdicts, finish) and `GameFrame` / `FeedbackFooter`.
 Memory is a two-column matching board: words on the left, matches on the right, each column shuffled on its own
 (`buildColumns`); tap one card on each side to pair them. A wrong pair stays marked (with the usual `MistakeHint`) until the next tap.
-Every item has a stable `id`; that id is what the Fehlerkiste stores.
+Every item has a stable `id`; that id is what the mistake box stores.
 
 Answer sounds: `useSequence` plays a tiny synthesized right/wrong cue (`src/lib/sfx.ts`, Web Audio, no asset
 files) for every verdict. Dialogue (a cue per reply), blitz and memory call `useAnswerSound()` themselves;

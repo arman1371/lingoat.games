@@ -526,7 +526,7 @@ describe('Play flow', () => {
     expect(screen.getByTestId('xp')).toHaveTextContent(String(progress.xp));
   });
 
-  it('collects mistakes in the Fehlerkiste and lets you play again', async () => {
+  it('collects mistakes in the mistake box and lets you play again', async () => {
     const { user } = renderApp(`/play/${quiz.id}?seed=2`);
     await user.click(await screen.findByTestId('start'));
     await playQuiz(user, quiz, { correct: false });
@@ -710,12 +710,12 @@ describe('Progress and Profile', () => {
     expect(await screen.findByRole('heading', { name: /A1\.2/, level: 1 })).toBeInTheDocument();
   });
 
-  it('links the Fehlerkiste from the progress page', async () => {
+  it('links the mistake box from the progress page', async () => {
     useProgressStore
       .getState()
       .recordResult('act', { correct: 0, total: 1, played: ['a'], mistakes: ['a'] });
     const { user, router } = renderApp('/progress');
-    await user.click(await screen.findByRole('link', { name: /Fehlerkiste/ }));
+    await user.click(await screen.findByRole('link', { name: /Mistake box/ }));
     expect(router.state.location.pathname).toBe('/review');
   });
 

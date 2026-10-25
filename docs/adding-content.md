@@ -67,7 +67,7 @@ Order = guided path order (easy → hard). Aim for vocabulary → listening/spel
 
 1. `src/content/gameTypes.ts`: add the type to `GAME_TYPES`.
 2. `src/content/schema.ts`: add a config schema and its `z.object({ …base, gameType: z.literal('x'), config })`
-   to `ActivitySchema`; add the items key in `src/content/items.ts` (needed for the Fehlerkiste).
+   to `ActivitySchema`; add the items key in `src/content/items.ts` (needed for the mistake box).
 3. `src/games/<engine>/<Engine>.tsx` implementing `GameProps<'x'>` (use `useSequence` + `GameFrame`), with
    `logic.ts` for anything non-trivial.
 4. Register it in `src/games/registry.ts` (lazy import + help text) and `GAME_TYPE_LABELS` in `src/lib/filters.ts`.

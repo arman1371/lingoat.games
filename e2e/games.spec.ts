@@ -34,7 +34,7 @@ test.describe('game engines', () => {
     });
   }
 
-  test('wrong answers earn a lower score and fill the Fehlerkiste', async ({ page }) => {
+  test('wrong answers earn a lower score and fill the mistake box', async ({ page }) => {
     const quiz = activity('a1-1-hallo-time-of-day');
     if (quiz.gameType !== 'quiz') throw new Error('expected a quiz');
     await page.goto(`/play/${quiz.id}?seed=${SEED}`);

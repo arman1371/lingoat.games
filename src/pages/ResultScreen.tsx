@@ -64,7 +64,7 @@ export function ResultScreen({
       {result.mistakes.length > 0 ? (
         <p className="rounded-2xl bg-warning-soft p-3 text-ink" data-testid="mistakes-note">
           {result.mistakes.length} item{result.mistakes.length === 1 ? '' : 's'} added to your
-          Fehlerkiste for later practice.
+          mistake box for later practice.
         </p>
       ) : null}
       <div className="flex w-full flex-col gap-3">
