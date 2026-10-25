@@ -110,6 +110,30 @@ export const en = {
     resetDone: 'Progress reset.',
     cancel: 'Cancel',
   },
+  data: {
+    title: 'Your data',
+    intro:
+      'Progress is stored only in this browser. Save it to a file to move it to another device or keep a backup.',
+    export: 'Export progress',
+    import: 'Import progress',
+    exported: 'Progress file saved.',
+    imported: 'Progress imported.',
+    confirmTitle: 'Import this progress?',
+    confirmBody:
+      'Saved {date}: {xp} XP, {games} games. We keep the best of both, so nothing you earned is lost. Settings are taken from the file.',
+    confirm: 'Import',
+    errorTitle: "Can't import this file",
+    errorRetry: 'Choose another file',
+    errorClose: 'Close',
+    errors: {
+      'too-large': 'This file is too large to be a Lingoat progress file. Nothing was changed.',
+      'not-json': 'This is not a Lingoat progress file, or it is damaged. Nothing was changed.',
+      'wrong-format': 'This is not a Lingoat progress file. Nothing was changed.',
+      'newer-version':
+        'This file comes from a newer version of Lingoat. Update the app and try again. Nothing was changed.',
+      invalid: 'This progress file is damaged. Nothing was changed.',
+    },
+  },
   play: {
     exitTitle: 'Leave this game?',
     exitBody: 'Your progress in this round will be lost.',

@@ -10,7 +10,11 @@
 3. **Everything is deterministic with a seed.** `?seed=` drives all shuffles and distractors
    (`src/lib/rng.ts`), which makes bugs reproducible and e2e tests stable.
 4. **Local-first.** Progress/settings are zustand stores persisted through `ProgressRepository`
-   (`src/store/repository.ts`). Swap it for a remote implementation to add sync.
+   (`src/store/repository.ts`). There are deliberately no accounts and no server-side learner data (GDPR);
+   to move to another device, Profile → Export/Import saves and loads one versioned JSON file
+   (`src/lib/progressTransfer.ts`). Import validates the file with zod and merges "best of both":
+   XP, stars, accuracy and plays never go down; settings come from the file. Bump
+   `TRANSFER_VERSION` when the file shape changes.
 5. **Accessible by default.** Real buttons/inputs, labelled groups, live regions for feedback,
    number-key shortcuts, 44 px targets, visible focus, no nested interactive controls, axe in CI.
 

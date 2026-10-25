@@ -5,7 +5,7 @@ import { localRepository } from './repository';
 export type ThemeSetting = 'system' | 'light' | 'dark';
 export type MotionSetting = 'system' | 'reduced' | 'full';
 
-export interface SettingsState {
+export interface SettingsData {
   theme: ThemeSetting;
   motion: MotionSetting;
   sounds: boolean;
@@ -15,7 +15,10 @@ export interface SettingsState {
   ttsRate: number;
   /** XP to earn per day. */
   dailyGoal: number;
-  set: (patch: Partial<Omit<SettingsState, 'set'>>) => void;
+}
+
+export interface SettingsState extends SettingsData {
+  set: (patch: Partial<SettingsData>) => void;
 }
 
 export const DEFAULT_SETTINGS = {
@@ -26,7 +29,7 @@ export const DEFAULT_SETTINGS = {
   speakSentences: true,
   ttsRate: 0.9,
   dailyGoal: 50,
-} satisfies Omit<SettingsState, 'set'>;
+} satisfies SettingsData;
 
 export const useSettingsStore = create<SettingsState>()(
   persist((set) => ({ ...DEFAULT_SETTINGS, set: (patch) => set(patch) }), {
