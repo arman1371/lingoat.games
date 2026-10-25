@@ -11,6 +11,8 @@ import { t } from '@/i18n';
 import { useProgressStore } from '@/store/progressStore';
 import { useSettingsStore, type MotionSetting, type ThemeSetting } from '@/store/settingsStore';
 
+type DailyGoalOption = '20' | '50' | '100';
+
 export function SettingsPage() {
   const s = useSettingsStore();
   const reset = useProgressStore((p) => p.reset);
@@ -28,6 +30,16 @@ export function SettingsPage() {
       </header>
       <Card className="flex flex-col gap-5">
         <h2 className="text-xl font-semibold text-ink">{t('settings.title')}</h2>
+        <Segment<DailyGoalOption>
+          label={t('dailyGoal.setting')}
+          value={String(s.dailyGoal) as DailyGoalOption}
+          onChange={(goal) => s.set({ dailyGoal: Number(goal) })}
+          options={[
+            { value: '20', label: '20' },
+            { value: '50', label: '50' },
+            { value: '100', label: '100' },
+          ]}
+        />
         <Segment<ThemeSetting>
           label={t('settings.theme')}
           value={s.theme}

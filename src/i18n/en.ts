@@ -34,6 +34,7 @@ export const en = {
     streak: '{n}-day streak',
     xp: '{n} XP',
     levels: 'Levels',
+    gamesForYou: 'Games for you',
     reviewCard: '{n} items waiting in your Fehlerkiste',
   },
   unit: {
@@ -60,6 +61,13 @@ export const en = {
     start: 'Review now ({n})',
     allDone: 'Review complete',
     emptyTitle: 'All caught up',
+  },
+  dailyGoal: {
+    title: 'Daily goal',
+    collected: '{xp} of {goal} XP collected',
+    left: '{n} XP to go',
+    done: 'Goal reached!',
+    setting: 'Daily goal (XP)',
   },
   profile: { title: 'Profile', subtitle: 'Everything is saved on this device.' },
   progressPage: {

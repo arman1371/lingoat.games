@@ -10,7 +10,11 @@ import { Chip, Tag } from './Chip';
 import { Confetti } from './Confetti';
 import { Icon, type IconName } from './Icon';
 import { ICON_PATHS } from './iconPaths';
+import { DailyGoalCard } from '../DailyGoalCard';
+import { GAME_TYPES } from '@/content/gameTypes';
+import { GameTile } from './GameTile';
 import { IconButton } from './IconButton';
+import { ProgressRing } from './ProgressRing';
 import { Logo } from './Logo';
 import { StatCard } from './StatCard';
 import { StatPill } from './StatPill';
@@ -257,5 +261,45 @@ describe('StatPill, StatCard, Logo', () => {
     rerender(<Logo showWordmark={false} />);
     expect(container).not.toHaveTextContent('lingoat');
     expect(container.querySelector('svg')).toHaveAttribute('aria-hidden', 'true');
+  });
+});
+
+describe('GameTile and ProgressRing', () => {
+  it('GameTile shows a decorative icon with the game colours for every game type', () => {
+    const { container } = render(
+      <>
+        {GAME_TYPES.map((g) => (
+          <GameTile key={g} type={g} size="sm" />
+        ))}
+      </>,
+    );
+    const tiles = container.querySelectorAll('[data-game]');
+    expect(tiles).toHaveLength(GAME_TYPES.length);
+    for (const tile of tiles) {
+      expect(tile).toHaveAttribute('aria-hidden', 'true');
+      expect(tile.querySelector('svg')).not.toBeNull();
+      expect(tile.className).toContain(`game-${tile.getAttribute('data-game')}-bg`);
+    }
+  });
+  it('ProgressRing exposes a clamped percentage as a progressbar', () => {
+    const { rerender } = render(<ProgressRing value={0.64} label="Goal" />);
+    const ring = screen.getByRole('progressbar', { name: 'Goal' });
+    expect(ring).toHaveAttribute('aria-valuenow', '64');
+    expect(ring).toHaveTextContent('64%');
+    rerender(<ProgressRing value={3} label="Goal" tone="xp" />);
+    expect(screen.getByRole('progressbar')).toHaveAttribute('aria-valuenow', '100');
+    rerender(<ProgressRing value={-1} label="Goal" />);
+    expect(screen.getByRole('progressbar')).toHaveAttribute('aria-valuenow', '0');
+  });
+  it('DailyGoalCard shows what is left and then the reached state', () => {
+    const { rerender } = render(<DailyGoalCard xp={32} goal={50} />);
+    expect(screen.getByText('32 of 50 XP collected')).toBeInTheDocument();
+    expect(screen.getByText('18 XP to go')).toBeInTheDocument();
+    rerender(<DailyGoalCard xp={60} goal={50} />);
+    expect(screen.getByText('Goal reached!')).toBeInTheDocument();
+    expect(screen.getByRole('progressbar', { name: 'Daily goal' })).toHaveAttribute(
+      'aria-valuenow',
+      '100',
+    );
   });
 });

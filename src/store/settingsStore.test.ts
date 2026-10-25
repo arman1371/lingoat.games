@@ -19,6 +19,12 @@ describe('settingsStore', () => {
     expect(JSON.parse(localStorage.getItem('spielplatz.settings')!).state.theme).toBe('dark');
   });
 
+  it('defaults the daily goal to 50 XP and persists changes', () => {
+    expect(useSettingsStore.getState().dailyGoal).toBe(50);
+    useSettingsStore.getState().set({ dailyGoal: 100 });
+    expect(JSON.parse(localStorage.getItem('spielplatz.settings')!).state.dailyGoal).toBe(100);
+  });
+
   it('resolves theme and motion', () => {
     expect(resolveTheme('system', true)).toBe('dark');
     expect(resolveTheme('system', false)).toBe('light');
