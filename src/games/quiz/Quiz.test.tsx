@@ -1,4 +1,5 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { ImageManifestContext } from '@/lib/useImageManifest';
 import userEvent from '@testing-library/user-event';
 import { buildNounIndex } from '@/lib/german/nouns';
 import { renderGame } from '@/test/render';
@@ -129,5 +130,17 @@ describe('Quiz grammar hints', () => {
     const vocab = renderGame(Quiz, config);
     await vocab.user.click(screen.getAllByRole('button', { name: /thanks/ })[0]!);
     expect(screen.queryByTestId('mistake-hint')).not.toBeInTheDocument();
+  });
+
+  it('shows the word photo above the question and keeps the emoji as fallback', () => {
+    render(
+      <ImageManifestContext.Provider value={{ q1: ['hello-1/', 'someone', 7] }}>
+        <Quiz config={{ questions: [config.questions[0]!] }} seed={1} onFinish={() => {}} />
+      </ImageManifestContext.Provider>,
+    );
+    expect(screen.getByTestId('word-photo')).toHaveAttribute('src', '/img/q1.webp');
+    expect(screen.getByTestId('word-photo')).toHaveAttribute('alt', ''); // never gives the answer away
+    fireEvent.error(screen.getByTestId('word-photo'));
+    expect(screen.getByTestId('emoji')).toHaveTextContent('👋');
   });
 });

@@ -1,4 +1,5 @@
-import { screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { ImageManifestContext } from '@/lib/useImageManifest';
 import { renderGame } from '@/test/render';
 import Flashcards from './Flashcards';
 
@@ -35,5 +36,17 @@ describe('Flashcards', () => {
     const result = onFinish.mock.calls[0]![0];
     expect(result).toMatchObject({ correct: 1, total: 2 });
     expect(result.mistakes).toEqual([first === 'Hallo' ? 'c1' : 'c2']);
+  });
+
+  it('shows the word photo on the card and falls back to the emoji when it does not load', () => {
+    const cards = [{ id: 'c1', front: 'Hallo', back: 'hello', emoji: '👋' }];
+    render(
+      <ImageManifestContext.Provider value={{ c1: ['hello-1/', 'someone', 7] }}>
+        <Flashcards config={{ cards }} seed={1} onFinish={() => {}} />
+      </ImageManifestContext.Provider>,
+    );
+    expect(screen.getByTestId('word-photo')).toHaveAttribute('src', '/img/c1.webp');
+    fireEvent.error(screen.getByTestId('word-photo'));
+    expect(screen.getByTestId('emoji')).toHaveTextContent('👋');
   });
 });

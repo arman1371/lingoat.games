@@ -70,6 +70,20 @@ export const en = {
     setting: 'Daily goal (XP)',
   },
   profile: { title: 'Profile', subtitle: 'Everything is saved on this device.' },
+  credits: {
+    title: 'Image credits',
+    link: 'Image credits',
+    linkHint: 'Where the word photos come from',
+    intro:
+      'Word photos come from Pixabay and are free to use under the Pixabay Content License. Tap a word to open its source page. Words without a photo show an emoji.',
+    count: '{n} photos',
+    search: 'Search words',
+    empty: 'No photo credits match your search.',
+    by: 'Photo by {author} on Pixabay',
+    opens: '(opens Pixabay in a new tab)',
+    more: 'Show more',
+    back: 'Back to profile',
+  },
   progressPage: {
     title: 'Progress',
     intro: 'Your journey so far.',

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
 import { SpeakButton } from '@/components/ui/SpeakButton';
+import { WordImage } from '@/components/WordImage';
 import { useAutoSpeak } from '../shared/useAutoSpeak';
 import { useSequence } from '../shared/useSequence';
 import { GameFrame } from '../shared/GameFrame';
@@ -28,11 +29,7 @@ export function Flashcards({ config, seed, onFinish }: GameProps<'flashcards'>) 
           flipped ? 'bg-primary-soft' : 'bg-surface'
         }`}
       >
-        {card.emoji ? (
-          <span aria-hidden="true" className="text-6xl">
-            {card.emoji}
-          </span>
-        ) : null}
+        <WordImage id={card.id} emoji={card.emoji} />
         <span className="font-display text-4xl font-bold text-ink" data-testid="card-text">
           {flipped ? card.back : card.front}
         </span>
