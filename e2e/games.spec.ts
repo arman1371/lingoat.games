@@ -105,7 +105,10 @@ test.describe('game engines', () => {
     });
     await page.mouse.move(to.x + to.width / 2, to.y + to.height / 2, { steps: 12 });
     await page.mouse.up();
-    await expect(page.getByTestId('flash')).toContainText('✓');
+    await expect(page.getByTestId('feedback')).toHaveAttribute('data-kind', 'correct');
+    await expect(page.getByTestId('translation')).toBeVisible();
+    await expect(target).toHaveClass(/border-success/);
+    await page.getByTestId('continue').click();
     await expect(page.getByTestId('counter')).toHaveText(/^2 \//);
   });
 

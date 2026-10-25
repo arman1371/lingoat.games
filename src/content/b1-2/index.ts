@@ -1,4 +1,6 @@
 import type { LevelContent } from '../schema';
+import { withSortitTranslations } from '../translations';
+import { sortitTranslations } from './translations';
 import { kollegen } from './u1-kollegen';
 import { digital } from './u2-digital';
 import { konsum } from './u3-konsum';
@@ -27,10 +29,16 @@ const units = [
   diskussion,
 ];
 
+const vocab = units.flatMap((u) => u.vocab);
+
 const content: LevelContent = {
   units: units.map((u) => u.unit),
-  vocab: units.flatMap((u) => u.vocab),
-  activities: units.flatMap((u) => u.activities),
+  vocab,
+  activities: withSortitTranslations(
+    units.flatMap((u) => u.activities),
+    vocab,
+    sortitTranslations,
+  ),
 };
 
 export default content;
