@@ -486,6 +486,26 @@ describe('Library', () => {
   }, 30_000);
 });
 
+describe('Unit map', () => {
+  it('marks finished units, the current unit and the rest of the map', async () => {
+    const [first, second, third] = content.units;
+    for (const a of content.activities.filter((x) => x.unitId === first!.id)) {
+      useProgressStore
+        .getState()
+        .recordResult(a.id, { correct: 3, total: 3, played: [], mistakes: [] });
+    }
+    renderApp('/levels/a1-1');
+    const units = await screen.findByRole('list', { name: 'Units' });
+    expect(within(units).getByTestId(`unit-${first!.id}`)).toHaveAttribute('data-state', 'done');
+    expect(within(units).getByTestId(`unit-${second!.id}`)).toHaveAttribute(
+      'data-state',
+      'current',
+    );
+    expect(within(units).getByTestId(`unit-${third!.id}`)).toHaveAttribute('data-state', 'open');
+    expect(screen.getByRole('progressbar', { name: /progress/ })).toBeInTheDocument();
+  });
+});
+
 describe('Play flow', () => {
   const quiz = activityById('a1-1-hallo-time-of-day');
 
@@ -497,6 +517,7 @@ describe('Play flow', () => {
     await playQuiz(user, quiz);
     expect(await screen.findByRole('heading', { name: 'Well done!' })).toBeInTheDocument();
     expect(screen.getByTestId('accuracy')).toHaveTextContent('100% correct');
+    expect(document.querySelector('[data-mood="celebrate"]')).not.toBeNull();
     expect(screen.getByTestId('next-activity')).toHaveTextContent(next.title);
     expect(screen.queryByTestId('mistakes-note')).not.toBeInTheDocument();
     const progress = useProgressStore.getState();

@@ -1,6 +1,7 @@
 import { Link, useParams, useSearchParams } from 'react-router';
 import { ActivityCard } from '@/components/ActivityCard';
 import { Card } from '@/components/ui/Card';
+import { Icon } from '@/components/ui/Icon';
 import { TabPanel, Tabs } from '@/components/ui/Tabs';
 import { useContent } from '@/content/ContentProvider';
 import { pathStates, playUrl } from '@/app/path';
@@ -27,18 +28,22 @@ export function UnitPage() {
   return (
     <div className="flex flex-col gap-6">
       <header className="flex flex-col gap-3">
-        <Link to={`/levels/${levelId}`} className="text-sm font-bold text-primary">
-          ← {levelId.toUpperCase().replace('-', '.')}
+        <Link
+          to={`/levels/${levelId}`}
+          className="inline-flex items-center gap-1 self-start text-sm font-bold text-primary"
+        >
+          <Icon name="chevron-left" size={16} />
+          {levelId.toUpperCase().replace('-', '.')}
         </Link>
         <div className="flex items-center gap-3">
           <span
             aria-hidden="true"
-            className="flex h-16 w-16 items-center justify-center rounded-3xl bg-primary-soft text-4xl"
+            className="flex h-16 w-16 items-center justify-center rounded-3xl bg-primary-soft text-4xl shadow-[0_4px_0_var(--primary-soft-border)]"
           >
             {unit.emoji}
           </span>
           <div>
-            <h1 className="text-3xl font-extrabold leading-tight text-ink">{unit.title}</h1>
+            <h1 className="text-3xl font-bold leading-tight text-ink">{unit.title}</h1>
             <p className="text-muted">{unit.subtitle}</p>
           </div>
         </div>
@@ -78,18 +83,18 @@ export function UnitPage() {
                   <div className="flex flex-col items-center">
                     <span
                       aria-hidden="true"
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 font-extrabold ${
+                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full font-bold ${
                         state === 'done'
-                          ? 'border-success bg-success text-on-primary'
+                          ? 'bg-success text-on-primary shadow-[0_3px_0_var(--success-edge)]'
                           : state === 'current'
-                            ? 'border-primary bg-primary text-on-primary'
-                            : 'border-line bg-surface text-muted'
+                            ? 'bg-primary text-on-primary shadow-[0_3px_0_var(--primary-edge)]'
+                            : 'bg-sunken text-muted shadow-[0_3px_0_var(--border)]'
                       }`}
                     >
-                      {state === 'done' ? '✓' : i + 1}
+                      {state === 'done' ? <Icon name="check" size={20} /> : i + 1}
                     </span>
                     {i < path.length - 1 ? (
-                      <span aria-hidden="true" className="w-0.5 flex-1 bg-line" />
+                      <span aria-hidden="true" className="w-1 flex-1 rounded-full bg-line" />
                     ) : null}
                   </div>
                   <div className="flex-1 pb-2">

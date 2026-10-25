@@ -1,10 +1,11 @@
 import { Link } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { GameTile } from '@/components/ui/GameTile';
+import { Icon } from '@/components/ui/Icon';
 import { StatePanel } from '@/components/ui/StatePanel';
 import { useContent } from '@/content/ContentProvider';
 import { playUrl } from '@/app/path';
-import { GAME_TYPE_LABELS } from '@/lib/filters';
 import { dayNumber, isDue } from '@/lib/srs';
 import { t } from '@/i18n';
 import { useProgressStore } from '@/store/progressStore';
@@ -24,7 +25,7 @@ export function ReviewPage() {
   return (
     <div className="flex flex-col gap-6">
       <header>
-        <h1 className="text-3xl font-extrabold text-ink">📦 {t('review.title')}</h1>
+        <h1 className="font-display text-3xl font-bold text-ink">{t('review.title')}</h1>
         <p className="text-muted">{t('review.intro')}</p>
       </header>
 
@@ -41,7 +42,7 @@ export function ReviewPage() {
               {due.length} due · {all.length} in the box
             </p>
             <Link to={`${playUrl(first!, rest)}${rest.length ? '&' : '?'}review=1`}>
-              <Button icon="▶️" data-testid="start-review">
+              <Button icon={<Icon name="play" size={18} filled />} data-testid="start-review">
                 {t('review.start', { n: due.length })}
               </Button>
             </Link>
@@ -52,12 +53,7 @@ export function ReviewPage() {
               return (
                 <li key={id}>
                   <Card className="flex items-center gap-3">
-                    <span
-                      aria-hidden="true"
-                      className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-soft text-2xl"
-                    >
-                      {GAME_TYPE_LABELS[a.gameType].emoji}
-                    </span>
+                    <GameTile type={a.gameType} size="md" />
                     <div>
                       <p className="font-extrabold text-ink">{a.title}</p>
                       <p className="text-sm text-muted">
