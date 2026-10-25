@@ -9,8 +9,9 @@ import b21 from '@/content/b2-1';
 import b22 from '@/content/b2-2';
 import c11 from '@/content/c1-1';
 import c22 from '@/content/c2-2';
-import { useProgressStore } from '@/store/progressStore';
-import { useSettingsStore } from '@/store/settingsStore';
+import { buildExport, parseImport } from '@/lib/progressTransfer';
+import { initialProgress, useProgressStore } from '@/store/progressStore';
+import { DEFAULT_SETTINGS, useSettingsStore } from '@/store/settingsStore';
 import { activityById, allActivities, playQuiz, renderApp, resetStores } from '@/test/app';
 
 beforeEach(resetStores);
@@ -636,6 +637,106 @@ describe('Settings', () => {
     );
     expect(useProgressStore.getState().xp).toBe(0);
     expect(await screen.findByText('Progress reset.')).toBeInTheDocument();
+  });
+});
+
+describe('Export and import', () => {
+  const play = () =>
+    useProgressStore
+      .getState()
+      .recordResult('a1-1-hallo-flash', { correct: 4, total: 4, played: ['a'], mistakes: [] });
+
+  const chooseFile = async (user: ReturnType<typeof renderApp>['user'], text: string) => {
+    const file = new File([text], 'progress.json', { type: 'application/json' });
+    await user.upload(await screen.findByTestId('import-file'), file);
+  };
+
+  it('exports settings and progress as a file', async () => {
+    play();
+    useSettingsStore.getState().set({ theme: 'dark' });
+    let blob: Blob | undefined;
+    const create = vi.fn((b: Blob) => ((blob = b), 'blob:x'));
+    Object.assign(URL, { createObjectURL: create, revokeObjectURL: vi.fn() });
+    const click = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => {});
+    const { user } = renderApp('/profile');
+    await user.click(await screen.findByRole('button', { name: 'Export progress' }));
+    expect(click).toHaveBeenCalledOnce();
+    const parsed = parseImport(await blob!.text());
+    expect(parsed.ok && parsed.file.progress.xp).toBe(useProgressStore.getState().xp);
+    expect(parsed.ok && parsed.file.settings.theme).toBe('dark');
+    expect(await screen.findByText('Progress file saved.')).toBeInTheDocument();
+    click.mockRestore();
+  });
+
+  it('asks before importing, merges progress and takes the settings from the file', async () => {
+    const source = buildExport(
+      { ...DEFAULT_SETTINGS, theme: 'dark', dailyGoal: 100 },
+      { ...initialProgress(), xp: 900, daily: { day: 1, xp: 0 } },
+    );
+    play();
+    const before = useProgressStore.getState().activities['a1-1-hallo-flash'];
+    const { user } = renderApp('/profile');
+    await chooseFile(user, JSON.stringify(source));
+    const dialog = await screen.findByRole('dialog', { name: 'Import this progress?' });
+    expect(dialog).toHaveTextContent('900 XP');
+    expect(within(dialog).getByLabelText(/^Merge/)).toBeChecked();
+    expect(useProgressStore.getState().xp).toBeLessThan(900);
+    await user.click(within(dialog).getByRole('button', { name: 'Cancel' }));
+    expect(useProgressStore.getState().xp).toBeLessThan(900);
+    expect(useSettingsStore.getState().theme).toBe('system');
+
+    await chooseFile(user, JSON.stringify(source));
+    await user.click(
+      within(await screen.findByRole('dialog')).getByRole('button', { name: 'Import' }),
+    );
+    expect(useProgressStore.getState().xp).toBe(900);
+    expect(useProgressStore.getState().activities['a1-1-hallo-flash']).toEqual(before);
+    expect(useSettingsStore.getState()).toMatchObject({ theme: 'dark', dailyGoal: 100 });
+    expect(await screen.findByText('Progress imported.')).toBeInTheDocument();
+  });
+
+  it('can replace this device with the file instead of merging', async () => {
+    const source = buildExport(
+      { ...DEFAULT_SETTINGS, dailyGoal: 20 },
+      { ...initialProgress(), xp: 15, daily: { day: 1, xp: 0 } },
+    );
+    play();
+    expect(useProgressStore.getState().xp).toBeGreaterThan(15);
+    const { user } = renderApp('/profile');
+    await chooseFile(user, JSON.stringify(source));
+    const dialog = await screen.findByRole('dialog', { name: 'Import this progress?' });
+    await user.click(within(dialog).getByLabelText(/^Replace/));
+    await user.click(within(dialog).getByRole('button', { name: 'Replace' }));
+    expect(useProgressStore.getState().xp).toBe(15);
+    expect(useProgressStore.getState().activities).toEqual({});
+    expect(useSettingsStore.getState().dailyGoal).toBe(20);
+    expect(await screen.findByText('Progress imported.')).toBeInTheDocument();
+
+    // the next file starts on Merge again
+    await chooseFile(user, JSON.stringify(source));
+    expect(
+      within(await screen.findByRole('dialog', { name: 'Import this progress?' })).getByLabelText(
+        /^Merge/,
+      ),
+    ).toBeChecked();
+  });
+
+  it('explains what is wrong with a bad file and changes nothing', async () => {
+    play();
+    const xp = useProgressStore.getState().xp;
+    const { user } = renderApp('/profile');
+    await chooseFile(user, 'hello');
+    const dialog = await screen.findByRole('dialog', { name: "Can't import this file" });
+    expect(dialog).toHaveTextContent('not a Lingoat progress file');
+    await user.click(within(dialog).getByRole('button', { name: 'Close' }));
+    await chooseFile(
+      user,
+      JSON.stringify({ ...buildExport(DEFAULT_SETTINGS, initialProgress()), schemaVersion: 99 }),
+    );
+    expect(await screen.findByRole('dialog', { name: "Can't import this file" })).toHaveTextContent(
+      'newer version',
+    );
+    expect(useProgressStore.getState().xp).toBe(xp);
   });
 });
 

@@ -1,24 +1,107 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
-import { ConfirmDialog } from '@/components/ui/Dialog';
+import { ChoiceCards } from '@/components/ui/ChoiceCards';
+import { ConfirmDialog, Dialog } from '@/components/ui/Dialog';
+import { Icon } from '@/components/ui/Icon';
 import { Mascot } from '@/components/ui/Mascot';
 import { Segment } from '@/components/ui/Segment';
 import { SpeakButton } from '@/components/ui/SpeakButton';
 import { Toast } from '@/components/ui/Toast';
 import { Toggle } from '@/components/ui/Toggle';
 import { t } from '@/i18n';
-import { useProgressStore } from '@/store/progressStore';
-import { useSettingsStore, type MotionSetting, type ThemeSetting } from '@/store/settingsStore';
+import {
+  applyImport,
+  buildExport,
+  exportFileName,
+  parseImport,
+  summarize,
+  TRANSFER_MAX_BYTES,
+  type ImportErrorCode,
+  type ImportMode,
+  type TransferFile,
+} from '@/lib/progressTransfer';
+import { useProgressStore, type ProgressData } from '@/store/progressStore';
+import {
+  DEFAULT_SETTINGS,
+  useSettingsStore,
+  type MotionSetting,
+  type SettingsData,
+  type ThemeSetting,
+} from '@/store/settingsStore';
 
 type DailyGoalOption = '20' | '50' | '100';
+
+const pickSettings = (s: SettingsData): SettingsData =>
+  Object.fromEntries(
+    Object.keys(DEFAULT_SETTINGS).map((key) => [key, s[key as keyof SettingsData]]),
+  ) as unknown as SettingsData;
+
+const pickProgress = (p: ProgressData): ProgressData => ({
+  xp: p.xp,
+  streak: p.streak,
+  activities: p.activities,
+  mistakes: p.mistakes,
+  lastActivityId: p.lastActivityId,
+  daily: p.daily,
+});
+
+function download(file: TransferFile) {
+  const url = URL.createObjectURL(
+    new Blob([JSON.stringify(file, null, 2)], { type: 'application/json' }),
+  );
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = exportFileName(new Date(file.exportedAt));
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
 
 export function SettingsPage() {
   const s = useSettingsStore();
   const reset = useProgressStore((p) => p.reset);
   const [confirming, setConfirming] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
+  const picker = useRef<HTMLInputElement>(null);
+  const [pending, setPending] = useState<TransferFile | null>(null);
+  const [importMode, setImportMode] = useState<ImportMode>('merge');
+  const [importError, setImportError] = useState<ImportErrorCode | null>(null);
+
+  const exportData = () => {
+    download(
+      buildExport(
+        pickSettings(useSettingsStore.getState()),
+        pickProgress(useProgressStore.getState()),
+        {
+          appVersion: __APP_VERSION__,
+        },
+      ),
+    );
+    setToast(t('data.exported'));
+  };
+
+  const chooseFile = async (file: File | undefined) => {
+    if (!file) return;
+    const text = file.size > TRANSFER_MAX_BYTES ? '' : await file.text();
+    const result = parseImport(text, file.size);
+    if (result.ok) {
+      setImportMode('merge');
+      setPending(result.file);
+    } else setImportError(result.error);
+  };
+
+  const applyImportNow = () => {
+    if (!pending) return;
+    useProgressStore.setState(
+      applyImport(pickProgress(useProgressStore.getState()), pending.progress, importMode),
+    );
+    s.set(pending.settings);
+    setPending(null);
+    setToast(t('data.imported'));
+  };
 
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-5">
@@ -102,10 +185,29 @@ export function SettingsPage() {
         </Card>
       </Link>
       <Card className="flex flex-col gap-3">
-        <h2 className="font-extrabold text-ink">Your data</h2>
-        <p className="text-sm text-muted">
-          Progress is stored only in this browser. Clearing site data removes it.
-        </p>
+        <h2 className="font-extrabold text-ink">{t('data.title')}</h2>
+        <p className="text-sm text-muted">{t('data.intro')}</p>
+        <Button variant="secondary" icon={<Icon name="download" />} onClick={exportData}>
+          {t('data.export')}
+        </Button>
+        <Button
+          variant="secondary"
+          icon={<Icon name="upload" />}
+          onClick={() => picker.current?.click()}
+        >
+          {t('data.import')}
+        </Button>
+        <input
+          ref={picker}
+          type="file"
+          accept="application/json,.json"
+          hidden
+          data-testid="import-file"
+          onChange={(e) => {
+            void chooseFile(e.target.files?.[0]);
+            e.target.value = '';
+          }}
+        />
         <Button variant="danger" onClick={() => setConfirming(true)}>
           {t('settings.reset')}
         </Button>
@@ -124,6 +226,75 @@ export function SettingsPage() {
           setToast(t('settings.resetDone'));
         }}
       />
+      <Dialog
+        open={pending !== null}
+        onClose={() => setPending(null)}
+        title={t('data.confirmTitle')}
+        actions={
+          <>
+            <Button variant="secondary" onClick={() => setPending(null)}>
+              {t('settings.cancel')}
+            </Button>
+            <Button
+              variant={importMode === 'replace' ? 'danger' : 'primary'}
+              onClick={applyImportNow}
+            >
+              {importMode === 'replace' ? t('data.confirmReplace') : t('data.confirm')}
+            </Button>
+          </>
+        }
+      >
+        {pending ? (
+          <div className="flex flex-col gap-4">
+            <p>
+              {t('data.confirmBody', {
+                date: new Date(summarize(pending).exportedAt).toLocaleDateString('en-GB', {
+                  day: 'numeric',
+                  month: 'short',
+                  year: 'numeric',
+                }),
+                xp: summarize(pending).xp.toLocaleString('en-US'),
+                games: summarize(pending).games,
+              })}
+            </p>
+            <ChoiceCards<ImportMode>
+              label={t('data.modeLabel')}
+              value={importMode}
+              onChange={setImportMode}
+              options={[
+                { value: 'merge', title: t('data.mergeTitle'), description: t('data.mergeHint') },
+                {
+                  value: 'replace',
+                  title: t('data.replaceTitle'),
+                  description: t('data.replaceHint'),
+                },
+              ]}
+            />
+          </div>
+        ) : null}
+      </Dialog>
+      <Dialog
+        open={importError !== null}
+        onClose={() => setImportError(null)}
+        title={t('data.errorTitle')}
+        actions={
+          <>
+            <Button variant="secondary" onClick={() => setImportError(null)}>
+              {t('data.errorClose')}
+            </Button>
+            <Button
+              onClick={() => {
+                setImportError(null);
+                picker.current?.click();
+              }}
+            >
+              {t('data.errorRetry')}
+            </Button>
+          </>
+        }
+      >
+        {importError ? t(`data.errors.${importError}`) : null}
+      </Dialog>
       <Toast message={toast} onDismiss={() => setToast(null)} />
     </div>
   );
