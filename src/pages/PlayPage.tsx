@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import { ConfirmDialog } from '@/components/ui/Dialog';
 import { GameTile } from '@/components/ui/GameTile';
+import { IconButton } from '@/components/ui/IconButton';
 import { useFocusOnMount } from '@/games/shared/useFocusOnMount';
 import { useContent } from '@/content/ContentProvider';
 import { getItems, withItems } from '@/content/items';
@@ -106,12 +107,11 @@ function PlayView({ activityId }: { activityId: string }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center justify-between">
-        <Button variant="ghost" size="sm" onClick={requestExit} aria-label="Exit game">
-          ✕ Exit
-        </Button>
-        <p className="text-sm font-bold text-muted">
-          {type.emoji} {type.label}
+      <div className="flex items-center gap-3">
+        <IconButton icon="close" onClick={requestExit} aria-label="Exit game" />
+        <GameTile type={activity.gameType} size="sm" />
+        <p className="text-sm font-bold uppercase tracking-wide text-muted">
+          {type.label}
           {queue.length > 0 ? ` · ${queue.length} more in queue` : ''}
         </p>
       </div>

@@ -19,6 +19,7 @@ import { Logo } from './Logo';
 import { StatCard } from './StatCard';
 import { StatPill } from './StatPill';
 import { FeedbackBanner } from './FeedbackBanner';
+import { FeedbackFooter } from '@/games/shared/GameFrame';
 import { ProgressBar } from './ProgressBar';
 import { SpeakButton } from './SpeakButton';
 import { Stars } from './Stars';
@@ -105,6 +106,17 @@ describe('ProgressBar / Stars / Confetti / FeedbackBanner', () => {
     expect(banner).toHaveAttribute('aria-live', 'polite');
     expect(banner).toHaveAttribute('data-kind', 'almost');
     expect(banner).toHaveTextContent('Check umlauts');
+  });
+  it('shows a verdict badge and colours the Continue button by verdict', () => {
+    const { rerender } = render(
+      <FeedbackFooter kind="correct" title="Correct!" isLast={false} onNext={() => {}} />,
+    );
+    expect(screen.getByTestId('feedback').querySelector('svg')).not.toBeNull();
+    expect(screen.getByTestId('continue').className).toContain('bg-success');
+    rerender(<FeedbackFooter kind="wrong" title="Not quite" isLast={false} onNext={() => {}} />);
+    expect(screen.getByTestId('continue').className).toContain('bg-danger');
+    rerender(<FeedbackFooter kind="almost" title="Almost" isLast onNext={() => {}} />);
+    expect(screen.getByTestId('continue').className).toContain('bg-primary');
   });
 });
 

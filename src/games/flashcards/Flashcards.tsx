@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
+import { Icon } from '@/components/ui/Icon';
 import { SpeakButton } from '@/components/ui/SpeakButton';
 import { useAutoSpeak } from '../shared/useAutoSpeak';
 import { useSequence } from '../shared/useSequence';
@@ -32,7 +33,7 @@ export function Flashcards({ config, seed, onFinish }: GameProps<'flashcards'>) 
             {card.emoji}
           </span>
         ) : null}
-        <span className="text-3xl font-extrabold text-ink" data-testid="card-text">
+        <span className="font-display text-4xl font-bold text-ink" data-testid="card-text">
           {flipped ? card.back : card.front}
         </span>
         {flipped && card.note ? <span className="text-base text-muted">{card.note}</span> : null}
@@ -50,10 +51,20 @@ export function Flashcards({ config, seed, onFinish }: GameProps<'flashcards'>) 
 
       {flipped ? (
         <div className="grid grid-cols-2 gap-3">
-          <Button variant="secondary" size="lg" icon="🔁" onClick={() => rate(false)}>
+          <Button
+            variant="secondary"
+            size="lg"
+            icon={<Icon name="refresh" size={18} />}
+            onClick={() => rate(false)}
+          >
             Again
           </Button>
-          <Button variant="success" size="lg" icon="✅" onClick={() => rate(true)}>
+          <Button
+            variant="success"
+            size="lg"
+            icon={<Icon name="check" size={18} />}
+            onClick={() => rate(true)}
+          >
             Got it
           </Button>
         </div>

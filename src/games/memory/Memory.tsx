@@ -1,3 +1,4 @@
+import { Icon } from '@/components/ui/Icon';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { GameResult } from '@/lib/scoring';
 import { useAnswerSound } from '../shared/useAnswerSound';
@@ -89,15 +90,16 @@ export function Memory({ config, seed, onFinish }: GameProps<'memory'>) {
               }
               aria-disabled={isMatched}
               onClick={() => flip(card.uid)}
-              className={`press flex min-h-24 items-center justify-center rounded-2xl border-2 p-2 text-center text-base font-extrabold shadow-[0_4px_0_var(--border)] ${
+              className={`press flex min-h-24 flex-col items-center justify-center gap-1 rounded-2xl border-2 p-2 text-center text-base font-bold ${
                 isMatched
-                  ? 'border-success bg-success-soft text-ink'
+                  ? 'border-success bg-success-soft text-on-success-soft shadow-[0_3px_0_var(--success-soft-border)]'
                   : faceUp
-                    ? 'border-primary bg-primary-soft text-ink'
-                    : 'border-line bg-primary text-on-primary'
+                    ? 'border-line bg-surface text-ink shadow-[0_4px_0_var(--border)]'
+                    : 'border-primary bg-primary text-on-primary shadow-[0_4px_0_var(--primary-edge)]'
               }`}
             >
-              {faceUp ? card.text : <span aria-hidden="true">❓</span>}
+              {isMatched ? <Icon name="check-circle" size={24} /> : null}
+              {faceUp ? card.text : <Icon name="lightbulb" size={28} />}
             </button>
           );
         })}
