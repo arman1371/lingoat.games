@@ -6,11 +6,22 @@
     "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    // only /img/* runs the Worker (photos from R2); every other request is a plain static asset
-    "run_worker_first": ["/img/*"],
+    // only /img/* (photos from R2) and /api/* (problem reports) run the Worker; every other request is a plain static asset
+    "run_worker_first": ["/img/*", "/api/*"],
   },
   // word photos, uploaded with `npm run images:upload` (docs/images.md)
   "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "lingoat-images" }],
   // previews (non-production branches) do not inherit bindings: repeat the bucket here
   "previews": { "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "lingoat-images" }] },
+  // "Report a problem" (docs/report-a-problem.md). Secrets, set in the Cloudflare dashboard (never in git):
+  //   GITHUB_TOKEN      fine-grained token, Issues: read and write on this one repository
+  //   TURNSTILE_SECRET  secret key of the Turnstile widget
+  "vars": { "GITHUB_REPO": "arman1371/lingoat.games" },
+  // one global instance decides whether a report may open an issue (duplicates, daily cap)
+  "durable_objects": { "bindings": [{ "name": "REPORT_GUARD", "class_name": "ReportGuard" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ReportGuard"] }],
+  // at most 3 reports per minute per visitor and data centre, checked before anything else
+  "ratelimits": [
+    { "name": "REPORT_LIMITER", "namespace_id": "1001", "simple": { "limit": 3, "period": 60 } },
+  ],
 }

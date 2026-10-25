@@ -109,7 +109,7 @@ src/
   i18n/         UI strings (English) + t()
   test/         shared test harnesses (content suite, playability solver)
 e2e/            Playwright specs (engines, levels, flows, a11y, keyboard, hints, sounds)
-docs/           architecture, adding content, coverage research, deployment, code quality
+docs/           architecture, adding content, coverage research, deployment, code quality, problem reports
 ```
 
 A few things worth knowing before you change code:

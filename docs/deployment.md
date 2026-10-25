@@ -35,6 +35,10 @@ isolates storage behind `src/store/repository.ts`, so a D1-backed implementation
 as `IMAGES` (create it once in the dashboard: R2 → Create bucket). Only `/img/*` runs the Worker, everything
 else is a static asset as before. See [docs/images.md](images.md).
 
+**Problem reports**: `/api/*` also runs the Worker (`/api/report` files a GitHub issue). It needs two secrets and one
+build variable, and declares a Durable Object and a rate limiter in `wrangler.jsonc`; see
+[report-a-problem.md](report-a-problem.md).
+
 `wrangler.jsonc` points Wrangler at `dist/` and sets `not_found_handling: "single-page-application"`, so deep links
 (`/levels/a1-1/units/a1-1-hallo`) serve `index.html`. Manual deploy from your machine: `npm run deploy`.
 

@@ -2,6 +2,7 @@ import { useCallback, useMemo, useRef, useState } from 'react';
 import { createRng, shuffle } from '@/lib/rng';
 import type { GameResult } from '@/lib/scoring';
 import { useAnswerSound } from './useAnswerSound';
+import { useReportItem } from './useReportItem';
 
 export type Phase = 'answering' | 'feedback';
 
@@ -28,6 +29,7 @@ export function useSequence<T extends { id: string }>(
 
   const item = order[Math.min(index, order.length - 1)] as T;
   const isLast = index >= order.length - 1;
+  useReportItem(item.id);
 
   const record = useCallback(
     (correct: boolean) => {
