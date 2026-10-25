@@ -668,6 +668,16 @@ describe('Routing', () => {
 });
 
 describe('Play flow – queues', () => {
+  it('keeps the play header to the exit button; progress lives in the game itself', async () => {
+    const first = activityById('a1-1-hallo-time-of-day');
+    const next = activityById('a1-1-hallo-feelings');
+    const { user } = renderApp(`/play/${first.id}?seed=1&q=${next.id}`);
+    await user.click(await screen.findByTestId('start'));
+    expect(await screen.findByRole('progressbar', { name: 'Progress' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Exit game' })).toBeInTheDocument();
+    expect(screen.queryByText(/more in queue/)).not.toBeInTheDocument();
+  });
+
   it('"Next up" starts a fresh intro for the next game instead of keeping the old result', async () => {
     const first = activityById('a1-1-hallo-time-of-day');
     const next = activityById('a1-1-hallo-feelings');
