@@ -57,7 +57,7 @@ const PAGES: [string, string, string][] = [
   ['unit C2.2', '/levels/c2-2/units/c2-2-kunst', 'Kunst & Ästhetik'],
   ['library', '/library', 'Game library'],
   ['library with level filter', '/library?lvl=a1-2', 'Game library'],
-  ['review', '/review', 'Fehlerkiste'],
+  ['review', '/review', 'Mistake box'],
   ['profile', '/profile', 'Profile'],
   ['progress', '/progress', 'Progress'],
   ['play intro', '/play/a1-1-hallo-time-of-day?seed=1', 'Greeting for the time of day'],

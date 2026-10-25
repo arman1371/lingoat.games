@@ -139,7 +139,7 @@ test.describe('progress and review', () => {
     ).toBeVisible();
   });
 
-  test('mistakes land in the Fehlerkiste and a review session clears them step by step', async ({
+  test('mistakes land in the mistake box and a review session clears them step by step', async ({
     page,
   }) => {
     const quiz = activity('a1-1-hallo-feelings');

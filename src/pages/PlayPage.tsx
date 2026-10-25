@@ -84,7 +84,7 @@ function PlayView({ activityId }: { activityId: string }) {
       ? `/levels/${unit.levelId}/units/${unit.id}`
       : '/library';
   const backLabel = review
-    ? 'Back to Fehlerkiste'
+    ? 'Back to mistake box'
     : unit
       ? t('result.backToUnit')
       : t('result.toLibrary');

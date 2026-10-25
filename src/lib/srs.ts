@@ -1,4 +1,4 @@
-/** Leitner-style "Fehlerkiste": wrong answers come back after growing intervals, then graduate. */
+/** Leitner-style "mistake box": wrong answers come back after growing intervals, then graduate. */
 export interface Mistake {
   key: string; // `${activityId}::${itemId}`
   activityId: string;
