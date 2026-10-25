@@ -31,7 +31,7 @@ jobs:
         # graphifyy 0.9.63: same version as the committed graph and the local install, so output stays reproducible.
         # The job can push to main, so every package (incl. transitive ones) is pinned by hash and only wheels
         # are installed (no build scripts run). Regenerate: see docs/graphify.md.
-        run: pip install --require-hashes --only-binary=:all: -r .github/graphify/requirements.txt
+        run: pip install --require-hashes --only-binary=':all:' -r .github/graphify/requirements.txt
       - name: graphify update .
         # CI always starts without cache/manifest, so force the write even when a commit deletes code
         # (Graphify otherwise refuses to replace graph.json with a smaller graph).
