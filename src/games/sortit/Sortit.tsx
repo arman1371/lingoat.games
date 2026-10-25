@@ -10,6 +10,7 @@ import {
 } from '@dnd-kit/core';
 import { Icon } from '@/components/ui/Icon';
 import { SpeakButton } from '@/components/ui/SpeakButton';
+import { WordImage } from '@/components/WordImage';
 import { useNumberKeys } from '../shared/useNumberKeys';
 import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
 import { useSequence } from '../shared/useSequence';
@@ -171,11 +172,7 @@ export function Sortit({ config, seed, onFinish }: GameProps<'sortit'>) {
           disabled={locked}
           aside={item.speak ? <SpeakButton text={item.speak} /> : null}
         >
-          {item.emoji ? (
-            <span aria-hidden="true" className="text-5xl">
-              {item.emoji}
-            </span>
-          ) : null}
+          <WordImage id={item.id} text={item.text} emoji={item.emoji} size="md" />
           <span className="font-display text-4xl font-bold text-ink" data-testid="prompt">
             {item.text}
           </span>

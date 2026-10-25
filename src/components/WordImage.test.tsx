@@ -1,6 +1,7 @@
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { ImageManifestContext } from '@/lib/useImageManifest';
-import { WordImage } from './WordImage';
+import { buildWordPhotoIndex } from '@/lib/wordPhotos';
+import { WordImage, WordPhotoIndexContext } from './WordImage';
 
 const manifest = {
   apfel: ['apples-red-1/', 'someone', 7],
@@ -70,5 +71,38 @@ describe('WordImage', () => {
       '/img/a1-1-einkaufen-apfel.webp',
     );
     await act(async () => {});
+  });
+
+  it('draws a smaller tile when asked', () => {
+    render(withManifest(<WordImage id="apfel" size="xs" />));
+    const img = screen.getByTestId('word-photo');
+    expect(img).toHaveAttribute('width', '40');
+    expect(img.parentElement).toHaveClass('size-10');
+  });
+
+  it('finds the photo of an item without a vocabulary id by its German spelling', () => {
+    const index = buildWordPhotoIndex([{ id: 'birne', de: 'Birne', en: 'pear', article: 'die' }]);
+    render(
+      withManifest(
+        <WordPhotoIndexContext value={index}>
+          <WordImage id="sh1" text="die Birne" emoji="🍐" size="md" />
+        </WordPhotoIndexContext>,
+      ),
+    );
+    expect(screen.getByTestId('word-photo')).toHaveAttribute('src', '/img/birne.webp');
+    expect(screen.getByTestId('emoji')).toHaveClass('opacity-0');
+  });
+
+  it('keeps the emoji for an item whose word has no photo', () => {
+    const index = buildWordPhotoIndex([{ id: 'haus', de: 'Haus', en: 'house', article: 'das' }]);
+    render(
+      withManifest(
+        <WordPhotoIndexContext value={index}>
+          <WordImage id="sh1" text="Haus" emoji="🏠" size="sm" />
+        </WordPhotoIndexContext>,
+      ),
+    );
+    expect(screen.queryByTestId('word-photo')).not.toBeInTheDocument();
+    expect(screen.getByTestId('emoji')).toHaveClass('opacity-100');
   });
 });

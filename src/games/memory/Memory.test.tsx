@@ -2,6 +2,7 @@ import { act, render, screen, within } from '@testing-library/react';
 import { ActivityLessonContext } from '../shared/hints';
 import { renderGame } from '@/test/render';
 import userEvent from '@testing-library/user-event';
+import { ImageManifestContext } from '@/lib/useImageManifest';
 import Memory from './Memory';
 import { buildColumns, isMatch } from './logic';
 
@@ -171,5 +172,58 @@ describe('Memory', () => {
     expect(screen.getByTestId('mini-lesson')).toHaveAttribute('data-lesson', 'dative');
     await user.click(all[0]!);
     expect(screen.queryByTestId('mistake-hint')).not.toBeInTheDocument();
+  });
+});
+
+describe('Memory photos', () => {
+  const photos = {
+    'photo-hund': ['dogs/', 'someone', 1],
+    'photo-apfel': ['apples/', 'someone', 2],
+  } as const;
+  const renderWithPhotos = (pairs: { id: string; a: string; b: string }[]) =>
+    render(
+      <ImageManifestContext.Provider value={photos}>
+        <Memory config={{ pairs }} seed={1} onFinish={vi.fn()} />
+      </ImageManifestContext.Provider>,
+    );
+
+  it('shows the photo of a word beside it, and nothing for a word without one', () => {
+    renderWithPhotos([
+      { id: 'photo-hund', a: 'Hund', b: 'dog' },
+      { id: 'katze', a: 'Katze', b: 'cat' },
+      { id: 'maus', a: 'Maus', b: 'mouse' },
+    ]);
+    const photoCards = screen
+      .getAllByTestId('memory-card')
+      .filter((c) => within(c).queryByTestId('word-photo'));
+    expect(photoCards).toHaveLength(1);
+    expect(photoCards[0]).toHaveTextContent('Hund');
+    expect(within(photoCards[0]!).getByTestId('word-photo')).toHaveAttribute(
+      'src',
+      '/img/photo-hund.webp',
+    );
+  });
+
+  it('swaps the emoji of a picture match for the photo and keeps the card named by the emoji', async () => {
+    const user = userEvent.setup();
+    renderWithPhotos([
+      { id: 'photo-apfel', a: 'der Apfel', b: '🍎' },
+      { id: 'katze', a: 'die Katze', b: '🐱' },
+      { id: 'hund', a: 'der Hund', b: '🐶' },
+    ]);
+    // the word keeps no photo of its own: the picture side shows it
+    const [apple] = screen.getAllByRole('button', { name: '🍎' });
+    expect(within(apple!).getByTestId('word-photo')).toHaveAttribute(
+      'src',
+      '/img/photo-apfel.webp',
+    );
+    expect(
+      within(screen.getByRole('button', { name: 'der Apfel' })).queryByTestId('word-photo'),
+    ).toBeNull();
+    // a picture without a photo is still the emoji
+    expect(screen.getByRole('button', { name: '🐱' })).toHaveTextContent('🐱');
+    await user.click(screen.getByRole('button', { name: 'der Apfel' }));
+    await user.click(apple!);
+    expect(apple).toHaveAccessibleName('🍎, matched');
   });
 });

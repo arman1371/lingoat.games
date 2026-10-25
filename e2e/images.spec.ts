@@ -25,6 +25,17 @@ async function servePhotos(page: Page, served: string[]) {
   });
 }
 
+/** Serve a photo for every word of the shopping unit. */
+const SHOPPING = /^a1-1-einkaufen-/;
+async function serveShoppingPhotos(page: Page) {
+  await page.route('**/img/*.webp', (route) => {
+    const id = new URL(route.request().url()).pathname.replace('/img/', '').replace('.webp', '');
+    return SHOPPING.test(id)
+      ? route.fulfill({ status: 200, contentType: 'image/webp', body: PHOTO })
+      : route.fulfill({ status: 404, body: 'not found' });
+  });
+}
+
 const FOOD_CARDS = '/play/a1-1-einkaufen-flash-food';
 
 test.describe('word photos', () => {
@@ -61,6 +72,62 @@ test.describe('word photos', () => {
     await expect(page.getByTestId('prompt')).toBeVisible();
     await expect(page.getByTestId('emoji')).toBeVisible();
   });
+});
+
+test.describe('word photos in the other games', () => {
+  test('the picture board shows a photo instead of the emoji, and the card keeps its name', async ({
+    page,
+  }) => {
+    await serveShoppingPhotos(page);
+    await page.goto(`/play/a1-1-einkaufen-memory-food?seed=${SEED}`);
+    await page.getByTestId('start').click();
+    const photos = page.getByTestId('memory-card').getByTestId('word-photo');
+    await expect(photos).toHaveCount(8);
+    await expect(photos.first()).toBeVisible();
+    await expect(page.getByRole('button', { name: '🍎' })).toBeVisible();
+  });
+
+  test('a word card shows its photo in sort it', async ({ page }) => {
+    await serveShoppingPhotos(page);
+    await page.goto(`/play/a1-1-einkaufen-sort-shops?seed=${SEED}`);
+    await page.getByTestId('start').click();
+    const photo = page.getByTestId('word-photo');
+    // the words come in a fixed order for a seed; every word of this activity has a photo or an emoji
+    await expect(page.getByTestId('prompt')).toBeVisible();
+    await expect(photo.or(page.getByTestId('emoji')).first()).toBeAttached();
+    for (let i = 0; i < 9 && !(await photo.count()); i++) {
+      await page.getByTestId('bucket-markt').click();
+      await page.getByTestId('continue').click();
+    }
+    await expect(photo).toBeVisible();
+    await expect(photo).toHaveAttribute('alt', '');
+  });
+
+  test('market products show their photo', async ({ page }) => {
+    await serveShoppingPhotos(page);
+    await page.goto(`/play/a1-1-einkaufen-market-bakery?seed=${SEED}`);
+    await page.getByTestId('start').click();
+    const products = page.getByRole('list', { name: 'Products' });
+    await expect(products.getByTestId('word-photo').first()).toBeVisible();
+    // Croissant and Brezel have no photo: they keep their emoji
+    await expect(products.getByTestId('word-photo')).toHaveCount(3);
+  });
+
+  for (const [name, id] of [
+    ['memory', 'a1-1-einkaufen-memory-food'],
+    ['market', 'a1-1-einkaufen-market-bakery'],
+  ] as const) {
+    test(`${name} with photos has no accessibility violations`, async ({ page }) => {
+      await serveShoppingPhotos(page);
+      await page.goto(`/play/${id}?seed=${SEED}`);
+      await page.getByTestId('start').click();
+      await expect(page.getByTestId('word-photo').first()).toBeVisible();
+      const results = await new AxeBuilder({ page })
+        .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+        .analyze();
+      expect(results.violations.map((v) => v.id)).toEqual([]);
+    });
+  }
 });
 
 test.describe('image credits', () => {

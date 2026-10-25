@@ -1,5 +1,6 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
+import { WordImage } from '@/components/WordImage';
 import type { GameResult } from '@/lib/scoring';
 import { t } from '@/i18n';
 import { mistakeWhy } from '../shared/hints';
@@ -7,6 +8,8 @@ import { MistakeHint } from '../shared/MistakeHint';
 import { useAnswerSound } from '../shared/useAnswerSound';
 import type { GameProps } from '../types';
 import { buildColumns, isMatch, type MemoryCard } from './logic';
+
+const PICTOGRAPH = /\p{Extended_Pictographic}/u;
 
 /** A wrong attempt stays on screen (with its hint) until the learner taps again. */
 interface Miss {
@@ -16,6 +19,11 @@ interface Miss {
 
 export function Memory({ config, seed, onFinish }: GameProps<'memory'>) {
   const columns = useMemo(() => buildColumns(config.pairs, seed), [config.pairs, seed]);
+  // pairs whose match is a picture (an emoji) by their German word: that picture becomes the photo
+  const pictured = useMemo(
+    () => new Map(config.pairs.filter((p) => PICTOGRAPH.test(p.b)).map((p) => [p.id, p.a])),
+    [config.pairs],
+  );
   const [selected, setSelected] = useState<MemoryCard | null>(null);
   const [matched, setMatched] = useState<ReadonlySet<string>>(new Set());
   const [miss, setMiss] = useState<Miss | null>(null);
@@ -93,6 +101,7 @@ export function Memory({ config, seed, onFinish }: GameProps<'memory'>) {
           selected={selected}
           matched={matched}
           miss={miss}
+          pictured={pictured}
           onPick={pick}
         />
         <Column
@@ -101,6 +110,7 @@ export function Memory({ config, seed, onFinish }: GameProps<'memory'>) {
           selected={selected}
           matched={matched}
           miss={miss}
+          pictured={pictured}
           onPick={pick}
         />
       </div>
@@ -115,10 +125,12 @@ interface ColumnProps {
   selected: MemoryCard | null;
   matched: ReadonlySet<string>;
   miss: Miss | null;
+  /** pair id → German word, for pairs whose match is a picture */
+  pictured: ReadonlyMap<string, string>;
   onPick: (card: MemoryCard) => void;
 }
 
-function Column({ title, cards, selected, matched, miss, onPick }: ColumnProps) {
+function Column({ title, cards, selected, matched, miss, pictured, onPick }: ColumnProps) {
   const headingId = useId();
   return (
     <div role="group" aria-labelledby={headingId} className="flex flex-col gap-3">
@@ -133,6 +145,10 @@ function Column({ title, cards, selected, matched, miss, onPick }: ColumnProps) 
         const isSelected = selected?.uid === card.uid;
         const isMiss = miss?.uids.includes(card.uid) ?? false;
         const state = isMatched ? 'matched' : isSelected ? 'selected' : isMiss ? 'wrong' : 'idle';
+        // a word gets the photo of its thing; a picture (emoji) match is swapped for that photo
+        const word = card.side === 'a' ? card.text : pictured.get(card.pairId);
+        const swapped = card.side === 'b' && word !== undefined;
+        const wordPhoto = card.side === 'a' && !pictured.has(card.pairId);
         return (
           <button
             key={card.uid}
@@ -141,6 +157,12 @@ function Column({ title, cards, selected, matched, miss, onPick }: ColumnProps) 
             data-state={state}
             aria-pressed={isMatched ? undefined : isSelected}
             aria-disabled={isMatched}
+            // the photo has no text of its own: the emoji it replaces names the card
+            aria-label={
+              swapped
+                ? `${card.text}${isMatched ? ', matched' : ''}${isMiss ? ', not a pair' : ''}`
+                : undefined
+            }
             onClick={() => onPick(card)}
             className={`press flex min-h-16 w-full items-center justify-center gap-2 rounded-2xl border-2 p-2 text-center text-base font-bold wrap-anywhere ${
               isMatched
@@ -154,9 +176,14 @@ function Column({ title, cards, selected, matched, miss, onPick }: ColumnProps) 
           >
             {isMatched ? <Icon name="check-circle" size={22} /> : null}
             {isMiss ? <Icon name="x-circle" size={22} /> : null}
-            <span>{card.text}</span>
-            {isMatched ? <span className="sr-only">, matched</span> : null}
-            {isMiss ? <span className="sr-only">, not a pair</span> : null}
+            {wordPhoto ? <WordImage id={card.pairId} text={card.text} size="xs" /> : null}
+            {swapped ? (
+              <WordImage id={card.pairId} text={word} emoji={card.text} size="sm" />
+            ) : (
+              <span>{card.text}</span>
+            )}
+            {isMatched && !swapped ? <span className="sr-only">, matched</span> : null}
+            {isMiss && !swapped ? <span className="sr-only">, not a pair</span> : null}
           </button>
         );
       })}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Mascot } from '@/components/ui/Mascot';
 import { SpeakButton } from '@/components/ui/SpeakButton';
+import { WordImage } from '@/components/WordImage';
 import { parsePriceToCents } from '@/lib/answer-check';
 import { formatPrice, priceToGerman } from '@/lib/german/numbers';
 import { t } from '@/i18n';
@@ -115,9 +116,7 @@ export function Market({ config, seed, onFinish }: GameProps<'market'>) {
                 key={p.id}
                 className={`flex flex-col items-center gap-1 rounded-2xl border-2 p-3 ${qty > 0 ? 'border-primary bg-primary-soft shadow-[0_3px_0_var(--primary-soft-border)]' : 'border-line bg-surface shadow-[0_3px_0_var(--border)]'}`}
               >
-                <span aria-hidden="true" className="text-4xl">
-                  {p.emoji}
-                </span>
+                <WordImage id={p.id} text={p.name} emoji={p.emoji} size="sm" />
                 <span className="font-extrabold text-ink">{p.name}</span>
                 <span className="text-sm text-muted">{formatPrice(p.priceCents)}</span>
                 <div className="flex items-center gap-2">
