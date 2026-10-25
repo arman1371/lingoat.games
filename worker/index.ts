@@ -12,7 +12,7 @@ export interface R2ObjectLike {
 }
 export interface Env {
   ASSETS: { fetch(request: Request): Promise<Response> };
-  IMAGES: { get(key: string): Promise<R2ObjectLike | null> };
+  IMAGES?: { get(key: string): Promise<R2ObjectLike | null> };
 }
 export interface CacheLike {
   match(request: Request): Promise<Response | undefined>;
@@ -38,7 +38,8 @@ export async function serveImage(
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
 
-  const object = await env.IMAGES.get(key);
+  // a missing binding or a failing bucket must not turn into a 500: the word just keeps its emoji
+  const object = await env.IMAGES?.get(key).catch(() => null);
   // a missing photo is normal (the word keeps its emoji): let the cache absorb repeat requests briefly
   if (!object) {
     return new Response('Not found', {

@@ -11,5 +11,6 @@
   },
   // word photos, uploaded with `npm run images:upload` (docs/images.md)
   "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "lingoat-images" }],
-  "previews": {},
+  // previews (non-production branches) do not inherit bindings: repeat the bucket here
+  "previews": { "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "lingoat-images" }] },
 }

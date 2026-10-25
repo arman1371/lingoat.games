@@ -62,6 +62,15 @@ describe('serveImage', () => {
   });
 });
 
+describe('serveImage without a working bucket', () => {
+  it('answers 404 instead of failing when the binding is missing or the bucket errors', async () => {
+    const missing = { ASSETS: { fetch: async () => new Response('asset') } };
+    expect((await run(req('/img/a.webp'), missing)).response.status).toBe(404);
+    const broken = { ...missing, IMAGES: { get: async () => Promise.reject(new Error('boom')) } };
+    expect((await run(req('/img/a.webp'), broken)).response.status).toBe(404);
+  });
+});
+
 describe('worker', () => {
   it('hands everything outside /img/ to the static assets', async () => {
     const response = await worker.fetch(req('/levels/a1-1'), env(), { waitUntil: () => {} });
