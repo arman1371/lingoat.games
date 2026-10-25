@@ -1,5 +1,8 @@
-import { screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { ImageManifestContext } from '@/lib/useImageManifest';
 import { renderGame } from '@/test/render';
+import { WordPhotoIndexContext } from '@/components/WordImage';
+import { buildWordPhotoIndex } from '@/lib/wordPhotos';
 import Market from './Market';
 
 const config = {
@@ -82,5 +85,22 @@ describe('Market', () => {
     await user.click(screen.getByRole('button', { name: 'Check' }));
     expect(screen.getByTestId('feedback')).toHaveAttribute('data-kind', 'wrong');
     expect(screen.getByText(/2,30 €/)).toBeInTheDocument();
+  });
+
+  it('shows the photo of a product found by its name, and the emoji of one without', async () => {
+    const index = buildWordPhotoIndex([
+      { id: 'a1-1-einkaufen-apfel', de: 'Apfel', en: 'apple', article: 'der' },
+    ]);
+    render(
+      <ImageManifestContext.Provider value={{ 'a1-1-einkaufen-apfel': ['apples/', 'someone', 1] }}>
+        <WordPhotoIndexContext value={index}>
+          <Market config={config} seed={1} onFinish={vi.fn()} />
+        </WordPhotoIndexContext>
+      </ImageManifestContext.Provider>,
+    );
+    const photos = await screen.findAllByTestId('word-photo');
+    expect(photos).toHaveLength(1);
+    expect(photos[0]).toHaveAttribute('src', '/img/a1-1-einkaufen-apfel.webp');
+    expect(screen.getAllByTestId('emoji').map((e) => e.textContent)).toEqual(['🍎', '🥛', '🧀']);
   });
 });

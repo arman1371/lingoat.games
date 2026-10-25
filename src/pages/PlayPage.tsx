@@ -1,5 +1,6 @@
 import { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
+import { WordPhotoIndexContext } from '@/components/WordImage';
 import { Button } from '@/components/ui/Button';
 import { ConfirmDialog } from '@/components/ui/Dialog';
 import { GameTile } from '@/components/ui/GameTile';
@@ -12,6 +13,7 @@ import { GAME_HELP, gameComponents } from '@/games/registry';
 import { ActivityLessonContext } from '@/games/shared/hints';
 import { NounIndexContext } from '@/games/shared/NounArticle';
 import { buildNounIndex } from '@/lib/german/nouns';
+import { buildWordPhotoIndex } from '@/lib/wordPhotos';
 import { lessonForTags } from '@/content/lessons';
 import { playUrl } from '@/app/path';
 import { GAME_TYPE_LABELS } from '@/lib/filters';
@@ -62,6 +64,7 @@ function PlayView({ activityId }: { activityId: string }) {
   useEffect(() => void preloadImageManifest(), []);
 
   const nounIndex = useMemo(() => buildNounIndex(content.vocab), [content.vocab]);
+  const photoIndex = useMemo(() => buildWordPhotoIndex(content.vocab), [content.vocab]);
   const base = content.activityById.get(activityId);
   const activity: Activity | undefined = useMemo(() => {
     if (!base) return undefined;
@@ -179,12 +182,14 @@ function PlayView({ activityId }: { activityId: string }) {
         >
           <ActivityLessonContext value={activity.lesson ?? lessonForTags(activity.tags)}>
             <NounIndexContext value={nounIndex}>
-              <Game
-                key={`${activity.id}-${run}`}
-                config={activity.config}
-                seed={seed}
-                onFinish={onFinish}
-              />
+              <WordPhotoIndexContext value={photoIndex}>
+                <Game
+                  key={`${activity.id}-${run}`}
+                  config={activity.config}
+                  seed={seed}
+                  onFinish={onFinish}
+                />
+              </WordPhotoIndexContext>
             </NounIndexContext>
           </ActivityLessonContext>
         </Suspense>

@@ -83,5 +83,12 @@ instead.
   lazily (own chunk) the first time a tile renders.
 - Photos are decorative (`alt=""`), like the emoji they replace: in "What is this?" an alt text would give the
   answer away.
-- Engines that show it: flashcards, quiz, spell (their item ids are vocabulary ids). Sort-it, market and
-  memory still show emoji only.
+- Engines that show it: flashcards, quiz and spell (large tile; their item ids are vocabulary ids), memory
+  (`xs` tile beside the German word; on a board that matches words with emoji the photo replaces the emoji, and
+  the card keeps the emoji as its accessible name), sort-it (`md` tile above the word) and market (`sm` tile
+  in the product row). Penpot: "Game / Memory C (photo)", "Game / Sort It E (photo)", "Game / Market C (photo)".
+- Items that are not vocabulary entries (sort-it, market, hand-written memory pairs) find the photo by their
+  German spelling: `PlayPage` provides `WordPhotoIndexContext` (`src/lib/wordPhotos.ts`), built from the loaded
+  vocabulary. A spelling that two entries mean differently (die Bank) gets no photo. No download is involved:
+  the same word reuses the photo already in the manifest and in R2.
+- Listen, blitz and the quiz directions that ask for the word do not show photos: the photo would be the answer.

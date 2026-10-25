@@ -1,5 +1,8 @@
-import { screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { ImageManifestContext } from '@/lib/useImageManifest';
 import { renderGame } from '@/test/render';
+import { WordPhotoIndexContext } from '@/components/WordImage';
+import { buildWordPhotoIndex } from '@/lib/wordPhotos';
 import Sortit from './Sortit';
 
 const config = {
@@ -72,5 +75,44 @@ describe('Sortit', () => {
     await user.keyboard(BUCKET[first] === 'hello' ? '1' : '2');
     expect(screen.getByTestId('feedback')).toHaveAttribute('data-kind', 'correct');
     expect(screen.getByTestId('continue')).toHaveFocus();
+  });
+
+  it('shows the photo of the word on the card, found by its spelling, and keeps the emoji otherwise', () => {
+    const index = buildWordPhotoIndex([
+      { id: 'u1-apfel', de: 'Apfel', en: 'apple', article: 'der' },
+    ]);
+    render(
+      <ImageManifestContext.Provider value={{ 'u1-apfel': ['apples/', 'someone', 1] }}>
+        <WordPhotoIndexContext value={index}>
+          <Sortit
+            config={{
+              buckets: config.buckets,
+              items: [{ id: 'f1', text: 'Apfel', bucket: 'hello', emoji: '🍎' }],
+            }}
+            seed={1}
+            onFinish={vi.fn()}
+          />
+        </WordPhotoIndexContext>
+      </ImageManifestContext.Provider>,
+    );
+    expect(screen.getByTestId('word-photo')).toHaveAttribute('src', '/img/u1-apfel.webp');
+    expect(screen.getByTestId('emoji')).toHaveClass('opacity-0');
+  });
+
+  it('shows the emoji of a word without a photo', () => {
+    render(
+      <ImageManifestContext.Provider value={{}}>
+        <Sortit
+          config={{
+            buckets: config.buckets,
+            items: [{ id: 'f1', text: 'Haus', bucket: 'hello', emoji: '🏠' }],
+          }}
+          seed={1}
+          onFinish={vi.fn()}
+        />
+      </ImageManifestContext.Provider>,
+    );
+    expect(screen.queryByTestId('word-photo')).not.toBeInTheDocument();
+    expect(screen.getByTestId('emoji')).toHaveTextContent('🏠');
   });
 });
