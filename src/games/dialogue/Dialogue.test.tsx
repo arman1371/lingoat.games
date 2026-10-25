@@ -58,6 +58,18 @@ describe('Dialogue', () => {
     expect(screen.getByRole('button', { name: 'Tschüss!' })).toBeInTheDocument();
   });
 
+  it('shows the mascot beside the partner’s lines only', async () => {
+    const { user } = renderGame(Dialogue, config);
+    expect(
+      screen.getByRole('list', { name: 'Conversation' }).querySelectorAll('[data-mood]'),
+    ).toHaveLength(1);
+    await user.click(screen.getByRole('button', { name: 'Hallo!' }));
+    // two partner lines, one player line
+    expect(
+      screen.getByRole('list', { name: 'Conversation' }).querySelectorAll('[data-mood]'),
+    ).toHaveLength(2);
+  });
+
   it('plays a perfect scene, then the next scene, and finishes', async () => {
     const { user, onFinish } = renderGame(Dialogue, config);
     await user.click(screen.getByRole('button', { name: 'Hallo!' }));

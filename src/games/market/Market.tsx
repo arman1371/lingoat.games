@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
+import { Mascot } from '@/components/ui/Mascot';
 import { SpeakButton } from '@/components/ui/SpeakButton';
 import { parsePriceToCents } from '@/lib/answer-check';
 import { formatPrice, priceToGerman } from '@/lib/german/numbers';
@@ -90,8 +91,11 @@ export function Market({ config, seed, onFinish }: GameProps<'market'>) {
         ) : null
       }
     >
-      <div className="rounded-3xl border-2 border-line bg-surface p-4 text-center shadow-[0_4px_0_var(--border)]">
-        <p className="text-sm font-bold text-muted">🧑‍🍳 Kunde</p>
+      <div className="rounded-3xl bg-surface-2 p-4 text-center">
+        <p className="flex items-center justify-center gap-2 text-sm font-bold text-muted">
+          <Mascot mood="happy" size={32} />
+          Kunde
+        </p>
         <p
           className="flex items-center justify-center gap-2 text-2xl font-extrabold text-ink"
           data-testid="prompt"
@@ -109,7 +113,7 @@ export function Market({ config, seed, onFinish }: GameProps<'market'>) {
             return (
               <li
                 key={p.id}
-                className={`flex flex-col items-center gap-1 rounded-2xl border-2 p-3 ${qty > 0 ? 'border-primary bg-primary-soft' : 'border-line bg-surface'}`}
+                className={`flex flex-col items-center gap-1 rounded-2xl border-2 p-3 ${qty > 0 ? 'border-primary bg-primary-soft shadow-[0_3px_0_var(--primary-soft-border)]' : 'border-line bg-surface shadow-[0_3px_0_var(--border)]'}`}
               >
                 <span aria-hidden="true" className="text-4xl">
                   {p.emoji}

@@ -100,7 +100,7 @@ export function Spell({ config, seed, onFinish }: GameProps<'spell'>) {
           <div
             aria-label="Your word"
             data-testid="answer-line"
-            className="flex min-h-16 w-full flex-wrap items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-line bg-surface-2 p-3"
+            className="flex min-h-16 w-full flex-wrap items-center justify-center gap-2 rounded-2xl bg-sunken p-3"
           >
             {picked.map((id) => {
               const tile = tiles.find((t) => t.id === id)!;
@@ -111,7 +111,7 @@ export function Spell({ config, seed, onFinish }: GameProps<'spell'>) {
                   disabled={verdict !== null}
                   aria-label={`Remove ${tile.ch}`}
                   onClick={() => setPicked((p) => p.filter((x) => x !== id))}
-                  className="press h-12 min-w-12 rounded-xl bg-primary px-3 text-xl font-extrabold text-on-primary shadow-[0_3px_0_var(--primary-edge)]"
+                  className="press h-12 min-w-12 rounded-xl px-3 font-display text-xl font-bold border-2 border-line bg-surface text-ink shadow-[0_3px_0_var(--border)]"
                 >
                   {tile.ch}
                 </button>
@@ -125,7 +125,7 @@ export function Spell({ config, seed, onFinish }: GameProps<'spell'>) {
                 type="button"
                 disabled={picked.includes(tile.id) || verdict !== null}
                 onClick={() => setPicked((p) => [...p, tile.id])}
-                className="press h-12 min-w-12 rounded-xl border-2 border-line bg-surface px-3 text-xl font-extrabold text-ink shadow-[0_3px_0_var(--border)] disabled:opacity-30"
+                className="press h-12 min-w-12 rounded-xl px-3 font-display text-xl font-bold border-2 border-line bg-surface text-ink shadow-[0_3px_0_var(--border)] disabled:opacity-30"
               >
                 {tile.ch}
               </button>

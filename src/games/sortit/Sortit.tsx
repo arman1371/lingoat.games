@@ -36,8 +36,8 @@ function BucketTarget({
       : state === 'wrong'
         ? 'border-danger bg-danger-soft'
         : isOver
-          ? 'border-primary bg-primary-soft'
-          : 'border-line bg-surface';
+          ? 'border-primary bg-primary-soft text-on-primary-soft'
+          : 'border-primary-soft-line bg-primary-soft text-on-primary-soft';
   return (
     <button
       ref={setNodeRef}
@@ -45,7 +45,7 @@ function BucketTarget({
       disabled={disabled}
       onClick={onChoose}
       data-testid={`bucket-${bucket.id}`}
-      className={`press flex min-h-24 flex-col items-center justify-center gap-1 rounded-2xl border-2 p-3 text-center text-lg font-extrabold text-ink shadow-[0_4px_0_var(--border)] ${tone}`}
+      className={`press flex min-h-24 flex-col items-center justify-center gap-1 rounded-2xl border-2 p-3 text-center font-display text-lg font-bold shadow-[0_3px_0_var(--primary-soft-border)] ${tone}`}
     >
       {bucket.emoji ? (
         <span aria-hidden="true" className="text-3xl">
@@ -86,7 +86,7 @@ function DraggableCard({
           transform: transform ? `translate3d(${transform.x}px, ${transform.y}px, 0)` : undefined,
           touchAction: 'none',
         }}
-        className={`relative z-10 flex min-h-32 cursor-grab flex-col items-center justify-center gap-2 rounded-3xl border-2 border-primary bg-primary-soft p-5 text-center shadow-[0_6px_0_var(--primary-edge)] ${isDragging ? 'opacity-90' : ''}`}
+        className={`relative z-10 flex min-h-32 cursor-grab flex-col items-center justify-center gap-2 rounded-3xl border-2 border-line bg-surface p-5 text-center shadow-[0_4px_0_var(--border)] ${isDragging ? 'opacity-90' : ''}`}
       >
         {children}
       </div>
@@ -166,7 +166,7 @@ export function Sortit({ config, seed, onFinish }: GameProps<'sortit'>) {
               {item.emoji}
             </span>
           ) : null}
-          <span className="text-3xl font-extrabold text-ink" data-testid="prompt">
+          <span className="font-display text-4xl font-bold text-ink" data-testid="prompt">
             {item.text}
           </span>
         </DraggableCard>
