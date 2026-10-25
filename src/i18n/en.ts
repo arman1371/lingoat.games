@@ -1,5 +1,5 @@
 export const en = {
-  appName: 'Deutsch Spielplatz',
+  appName: 'lingoat',
   tagline: 'Play your way through German',
   nav: {
     home: 'Learn',

@@ -88,7 +88,7 @@
 - graphify reference: GitHub clone and cross-repo merge
 - graphify reference: transcribe video and audio
 - extraction-spec.md
-- README (Deutsch Spielplatz)
+- README (lingoat)
 - Deployment doc
 - Button.tsx
 - B2.2 – syllabus research, coverage and overlap with A1.1–B2.1
@@ -459,7 +459,7 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 73 - "README (Deutsch Spielplatz)"
+### Community 73 - "README (lingoat)"
 Cohesion: 0.16
 Nodes (12): Adding content guide, Authoring helpers and german grammar generators, Grammar hints: mini lessons and why, Procedure: add a new game engine, Game engine contract (GameProps, useSequence, GameFrame), Answer sounds (sfx.ts), Leitner SRS review (srs.ts), Code quality: SonarQube Cloud (+4 more)
 
@@ -721,7 +721,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `react` to `Market.tsx`, `Toast.tsx`, `ui.test.tsx`, `playability.tsx`, `Conjugation.tsx`, `controls.test.tsx`, `Button.tsx`, `package.json`, `ContentProvider.tsx`, `@testing-library/react`, `AppLayout.tsx`, `sounds.test.tsx`, `PlayPage.tsx`, `Clock.tsx`, `IconButton.tsx`, `Icon.tsx`, `Tabs.tsx`, `Sentence.tsx`?**
   _High betweenness centrality (0.073) - this node is a cross-community bridge._
-- **Why does `README (Deutsch Spielplatz)` connect `README (Deutsch Spielplatz)` to `C1.1 – syllabus research, coverage and overlap with A1.1–B1.2`, `B1.1 coverage and research doc`, `Deployment doc`, `B2.2 – syllabus research, coverage and overlap with A1.1–B2.1`, `Architecture doc`, `Code graph (Graphify)`, `C1.2 – syllabus research, coverage and overlap with A1.1–B1.1`, `C2.2 – syllabus research, coverage and overlap with A1.1–C2.1`, `B1.2 – syllabus research, coverage and overlap with A1.1–B1.1`, `B2.1 – syllabus research, coverage and overlap with A1.1–B1.2`?**
+- **Why does `README (lingoat)` connect `README (lingoat)` to `C1.1 – syllabus research, coverage and overlap with A1.1–B1.2`, `B1.1 coverage and research doc`, `Deployment doc`, `B2.2 – syllabus research, coverage and overlap with A1.1–B2.1`, `Architecture doc`, `Code graph (Graphify)`, `C1.2 – syllabus research, coverage and overlap with A1.1–B1.1`, `C2.2 – syllabus research, coverage and overlap with A1.1–C2.1`, `B1.2 – syllabus research, coverage and overlap with A1.1–B1.1`, `B2.1 – syllabus research, coverage and overlap with A1.1–B1.2`?**
   _High betweenness centrality (0.059) - this node is a cross-community bridge._
 - **Why does `@testing-library/react` connect `@testing-library/react` to `Market.tsx`, `ui.test.tsx`, `playability.tsx`, `Conjugation.tsx`, `controls.test.tsx`, `package.json`, `ContentProvider.tsx`, `AppLayout.tsx`, `PlayPage.tsx`, `sounds.test.tsx`, `react`, `setup.ts`, `Clock.tsx`, `Sentence.tsx`?**
   _High betweenness centrality (0.054) - this node is a cross-community bridge._

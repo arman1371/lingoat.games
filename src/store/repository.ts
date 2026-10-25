@@ -7,11 +7,20 @@ import type { StateStorage } from 'zustand/middleware';
  */
 export type ProgressRepository = StateStorage;
 
+/** Keys used before the app was renamed to lingoat; read as a fallback so learners keep their progress. */
+const LEGACY_PREFIX = 'spielplatz.';
+const PREFIX = 'lingoat.';
+
+const legacyName = (name: string) =>
+  name.startsWith(PREFIX) ? LEGACY_PREFIX + name.slice(PREFIX.length) : null;
+
 /** localStorage that never throws (private mode, blocked storage, quota). */
 export const localRepository: ProgressRepository = {
   getItem: (name) => {
     try {
-      return localStorage.getItem(name);
+      const value = localStorage.getItem(name);
+      const legacy = legacyName(name);
+      return value ?? (legacy ? localStorage.getItem(legacy) : null);
     } catch {
       return null;
     }
@@ -19,6 +28,8 @@ export const localRepository: ProgressRepository = {
   setItem: (name, value) => {
     try {
       localStorage.setItem(name, value);
+      const legacy = legacyName(name);
+      if (legacy) localStorage.removeItem(legacy);
     } catch {
       /* ignore – progress just won't persist */
     }
@@ -26,6 +37,8 @@ export const localRepository: ProgressRepository = {
   removeItem: (name) => {
     try {
       localStorage.removeItem(name);
+      const legacy = legacyName(name);
+      if (legacy) localStorage.removeItem(legacy);
     } catch {
       /* ignore */
     }

@@ -76,7 +76,7 @@ describe('progressStore', () => {
 
   it('persists to localStorage and resets', () => {
     useProgressStore.getState().recordResult('act', res(), { today: 1 });
-    const raw = JSON.parse(localStorage.getItem('spielplatz.progress')!);
+    const raw = JSON.parse(localStorage.getItem('lingoat.progress')!);
     expect(raw.state.activities.act.stars).toBe(2);
     expect(raw.version).toBe(1);
     useProgressStore.getState().reset();
