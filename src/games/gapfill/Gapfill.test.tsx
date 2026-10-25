@@ -1,7 +1,10 @@
-import { screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { renderGame } from '@/test/render';
 import { stubSpeech } from '@/test/speech';
 import { DEFAULT_SETTINGS, useSettingsStore } from '@/store/settingsStore';
+import { buildNounIndex } from '@/lib/german/nouns';
+import { NounIndexContext } from '../shared/NounArticle';
 import Gapfill from './Gapfill';
 
 const chips = {
@@ -20,7 +23,41 @@ const typed = {
   items: [{ id: 'g2', text: 'Ich ___ Anna.', answer: 'heiße', alsoAccept: ['heisse'] }],
 };
 
+const nouns = buildNounIndex([{ de: 'Käse', article: 'der' }]);
+const cheese = {
+  items: [
+    {
+      id: 'g3',
+      text: 'Ich nehme ___ Käse.',
+      answer: 'den',
+      options: ['den', 'dem', 'der'],
+    },
+  ],
+};
+const renderWithNouns = (config: typeof cheese) =>
+  render(
+    <NounIndexContext value={nouns}>
+      <Gapfill config={config} seed={1} onFinish={vi.fn()} />
+    </NounIndexContext>,
+  );
+
 describe('Gapfill', () => {
+  it.each([
+    ['den', 'correct'],
+    ['dem', 'wrong'],
+  ])('shows the article of the noun after answering %s (%s)', async (pick, kind) => {
+    renderWithNouns(cheese);
+    await userEvent.click(screen.getByRole('button', { name: pick }));
+    expect(screen.getByTestId('feedback')).toHaveAttribute('data-kind', kind);
+    expect(screen.getByTestId('noun-article-noun')).toHaveTextContent('der Käse');
+  });
+
+  it('shows no noun row for gaps that do not depend on an article', async () => {
+    renderWithNouns(chips as unknown as typeof cheese);
+    await userEvent.click(screen.getByRole('button', { name: 'Nacht' }));
+    expect(screen.queryByTestId('noun-article')).not.toBeInTheDocument();
+  });
+
   it('answers with chips and shows the filled sentence and explanation', async () => {
     const { user, onFinish } = renderGame(Gapfill, chips);
     expect(screen.getByTestId('sentence')).toHaveTextContent('Guten …!');

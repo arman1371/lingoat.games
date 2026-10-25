@@ -7,6 +7,7 @@ import { ChoiceList } from '../shared/ChoiceList';
 import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
 import { shuffledOptions } from '../shared/choices';
 import { MistakeHint } from '../shared/MistakeHint';
+import { NounArticle } from '../shared/NounArticle';
 import { mistakeWhy } from '../shared/hints';
 import { useSpeakSentence } from '../shared/useSentenceSpeech';
 import { useSequence } from '../shared/useSequence';
@@ -59,6 +60,7 @@ export function Gapfill({ config, seed, onFinish }: GameProps<'gapfill'>) {
                   <strong>{item.answer}</strong>
                   {after}
                 </p>
+                <NounArticle text={item.text} answer={item.answer} />
                 {item.explanation ? <p>{item.explanation}</p> : null}
                 {verdict === 'wrong' ? (
                   <MistakeHint why={mistakeWhy(item, picked ?? typed)} lesson={item.lesson} />

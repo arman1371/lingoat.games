@@ -92,5 +92,11 @@ Order = guided path order (easy → hard). Aim for vocabulary → listening/spel
 - Sort it: every card needs an English meaning, shown with the verdict. It comes from a `translation` on
   the item, then `<level>/translations.ts` (German text → English, merged by `withSortitTranslations` in
   `index.ts`), then the vocabulary list (`Apfel` / `der Apfel`). The content suite fails for a card without one.
+- **Noun article in the feedback** (gap fill and quiz questions with a `___` blank): when the answer is an
+  article-like word (der/den/dem, ein/einen, mein-, zum/im, a relative pronoun) or an adjective ending behind
+  one, the feedback shows "The noun: der Käse" in the right and the wrong case. Nothing to author: the noun is
+  the first capitalised word of the clause (or the one before a relative clause) and its article comes from the
+  vocabulary (`findGapNoun` in `src/lib/german/nouns.ts`). It only shows for nouns that exist in the level
+  vocabulary with an `article`, so list the nouns you use in gaps in your `vocabList`.
 - Sentence builder: attach punctuation to the last word, keep capitalisation as in the sentence (grading
   ignores case/punctuation) and list other valid word orders in `alsoAccept`.

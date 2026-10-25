@@ -54,6 +54,10 @@ Memory is a two-column matching board: words on the left, matches on the right, 
 (`buildColumns`); tap one card on each side to pair them. A wrong pair stays marked (with the usual `MistakeHint`) until the next tap.
 Every item has a stable `id`; that id is what the mistake box stores.
 
+Noun article: gap fill and quiz gaps whose answer depends on a noun's article (`den`, `einem`, `zum`, an adjective
+ending, a relative pronoun) show a "The noun" row in the feedback (`NounArticle`, same sheet for right and wrong). PlayPage
+provides the vocabulary as a `NounIndexContext` (`buildNounIndex`); engines rendered without it show no row.
+
 Answer sounds: `useSequence` plays a tiny synthesized right/wrong cue (`src/lib/sfx.ts`, Web Audio, no asset
 files) for every verdict. Dialogue (a cue per reply), blitz and memory call `useAnswerSound()` themselves;
 dialogue and self-graded flashcards pass `sounds: false` to `useSequence`. The "Sound effects" setting mutes

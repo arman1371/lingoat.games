@@ -12,7 +12,7 @@ import b22 from '../src/content/b2-2';
 import c11 from '../src/content/c1-1';
 import c21 from '../src/content/c2-1';
 import c22 from '../src/content/c2-2';
-import type { Activity } from '../src/content/schema';
+import type { Activity, Vocab } from '../src/content/schema';
 import { parseTime, timeToGerman } from '../src/lib/german/time';
 import { totalCents } from '../src/games/market/logic';
 import { buildColumns } from '../src/games/memory/logic';
@@ -35,6 +35,22 @@ export const allActivities: Activity[] = [
   ...c21.activities,
   ...c22.activities,
 ];
+
+/** Every vocabulary entry of every available level. */
+export const allVocab: Vocab[] = [
+  a11,
+  a12,
+  a21,
+  a22,
+  b11,
+  c12,
+  b12,
+  b21,
+  b22,
+  c11,
+  c21,
+  c22,
+].flatMap((level) => level.vocab);
 
 export const activity = (id: string): Activity => {
   const a = allActivities.find((x) => x.id === id);
