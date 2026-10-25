@@ -34,13 +34,15 @@ export async function serveImage(
   cache: CacheLike,
   waitUntil: (work: Promise<unknown>) => void,
 ): Promise<Response> {
-  const key = IMAGE_PATH.exec(new URL(request.url).pathname)?.[1];
+  const url = new URL(request.url);
+  const key = IMAGE_PATH.exec(url.pathname)?.[1];
   if (!key) return new Response('Not found', { status: 404 });
   if (request.method !== 'GET' && request.method !== 'HEAD') {
     return new Response(null, { status: 405, headers: { Allow: 'GET, HEAD' } });
   }
 
-  const cacheKey = new Request(request.url); // one entry per photo, whatever the method or headers
+  // one entry per photo, whatever the method, headers or query string (`?1`, `?2`, … must not each miss the cache)
+  const cacheKey = new Request(url.origin + url.pathname);
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
 

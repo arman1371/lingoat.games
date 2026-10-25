@@ -46,6 +46,18 @@ describe('serveImage', () => {
     expect(await second.response.text()).toBe('x');
   });
 
+  it('ignores the query string: variants share one cache entry and one bucket read', async () => {
+    const e = env({ 'a.webp': 'x' });
+    const cache = memoryCache();
+    await run(req('/img/a.webp'), e, cache);
+    for (const query of ['?1', '?2', '?v=abc&x=y', '?']) {
+      const { response } = await run(req(`/img/a.webp${query}`), e, cache);
+      expect(await response.text()).toBe('x');
+    }
+    expect(e.get).toHaveBeenCalledTimes(1);
+    expect([...cache.entries.keys()]).toEqual(['https://lingoat.games/img/a.webp']);
+  });
+
   it('answers 404 (briefly cacheable) for a missing photo, so the word keeps its emoji', async () => {
     const { response, cache } = await run(req('/img/nope.webp'), env());
     expect(response.status).toBe(404);
