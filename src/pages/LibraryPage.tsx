@@ -3,6 +3,8 @@ import { Link, useSearchParams } from 'react-router';
 import { ActivityCard } from '@/components/ActivityCard';
 import { Button } from '@/components/ui/Button';
 import { Chip } from '@/components/ui/Chip';
+import { Icon } from '@/components/ui/Icon';
+import { StatePanel } from '@/components/ui/StatePanel';
 import { TextField } from '@/components/ui/TextField';
 import { useContent } from '@/content/ContentProvider';
 import { GAME_TYPES } from '@/content/gameTypes';
@@ -53,7 +55,7 @@ export function LibraryPage() {
 
   const tagFacet = (group: 'skill' | 'topic' | 'grammar', key: 'skills' | 'topics' | 'grammar') => (
     <fieldset className="flex flex-col gap-2">
-      <legend className="mb-1 text-sm font-extrabold uppercase tracking-wide text-muted">
+      <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
         {GROUP_LABELS[group]}
       </legend>
       <div className="flex flex-wrap gap-2">
@@ -73,7 +75,7 @@ export function LibraryPage() {
   return (
     <div className="flex flex-col gap-6">
       <header>
-        <h1 className="text-3xl font-extrabold text-ink">{t('library.title')}</h1>
+        <h1 className="font-display text-3xl font-bold text-ink">{t('library.title')}</h1>
         <p className="text-muted">
           Mix and match: filter by topic, grammar point, game type and more.
         </p>
@@ -94,14 +96,15 @@ export function LibraryPage() {
           onToggle={(e) => setPanelOpen(e.currentTarget.open)}
           data-testid="filters"
         >
-          <summary className="min-h-11 cursor-pointer select-none py-2 text-lg font-extrabold text-ink">
+          <summary className="flex min-h-11 cursor-pointer select-none items-center gap-2 py-2 text-lg font-bold text-ink">
+            <Icon name="filter" size={20} />
             {t('library.filters')}
             {count > 0 ? ` (${count})` : ''}
           </summary>
           <div className="mt-3 flex flex-col gap-5">
             {levelsWithUnits.length > 1 && (
               <fieldset className="flex flex-col gap-2">
-                <legend className="mb-1 text-sm font-extrabold uppercase tracking-wide text-muted">
+                <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
                   {t('library.level')}
                 </legend>
                 <div className="flex flex-wrap gap-2">
@@ -118,7 +121,7 @@ export function LibraryPage() {
               </fieldset>
             )}
             <fieldset className="flex flex-col gap-2">
-              <legend className="mb-1 text-sm font-extrabold uppercase tracking-wide text-muted">
+              <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
                 Unit
               </legend>
               <div className="flex flex-wrap gap-2">
@@ -137,7 +140,7 @@ export function LibraryPage() {
             {tagFacet('topic', 'topics')}
             {tagFacet('grammar', 'grammar')}
             <fieldset className="flex flex-col gap-2">
-              <legend className="mb-1 text-sm font-extrabold uppercase tracking-wide text-muted">
+              <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
                 Game type
               </legend>
               <div className="flex flex-wrap gap-2">
@@ -153,7 +156,7 @@ export function LibraryPage() {
               </div>
             </fieldset>
             <fieldset className="flex flex-col gap-2">
-              <legend className="mb-1 text-sm font-extrabold uppercase tracking-wide text-muted">
+              <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
                 Difficulty &amp; length
               </legend>
               <div className="flex flex-wrap gap-2">
@@ -204,7 +207,7 @@ export function LibraryPage() {
               )}
               data-testid="play-queue"
             >
-              <Button size="sm" icon="▶️">
+              <Button size="sm" icon={<Icon name="play" size={16} filled />}>
                 {t('library.playQueue')}
               </Button>
             </Link>
@@ -213,9 +216,7 @@ export function LibraryPage() {
       </div>
 
       {results.length === 0 ? (
-        <p className="rounded-2xl bg-surface-2 p-8 text-center text-lg font-bold text-muted">
-          {t('library.none')}
-        </p>
+        <StatePanel kind="empty" title={t('library.none')} />
       ) : (
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-label="Games">
           {results.map((a, i) => (
