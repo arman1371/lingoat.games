@@ -1,6 +1,7 @@
 import { DEFAULT_SETTINGS } from '@/store/settingsStore';
 import { initialProgress, type ProgressData } from '@/store/progressStore';
 import {
+  applyImport,
   buildExport,
   exportFileName,
   mergeProgress,
@@ -208,5 +209,26 @@ describe('mergeProgress', () => {
     expect(
       mergeProgress(progress({ ...base, lastActivityId: 'b' }), progress()).lastActivityId,
     ).toBe('b');
+  });
+});
+
+describe('applyImport', () => {
+  const mine = progress({
+    xp: 500,
+    activities: { a: { stars: 3, bestAccuracy: 1, plays: 9, lastPlayed: 30 } },
+  });
+  const theirs = progress({
+    xp: 200,
+    activities: { b: { stars: 1, bestAccuracy: 0.5, plays: 1, lastPlayed: 5 } },
+  });
+
+  it('merge keeps the best of both', () => {
+    const merged = applyImport(mine, theirs, 'merge');
+    expect(merged.xp).toBe(500);
+    expect(Object.keys(merged.activities).sort()).toEqual(['a', 'b']);
+  });
+
+  it('replace makes this device an exact copy of the file', () => {
+    expect(applyImport(mine, theirs, 'replace')).toEqual(theirs);
   });
 });

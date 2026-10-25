@@ -181,6 +181,15 @@ export function mergeProgress(local: ProgressData, incoming: ProgressData): Prog
   };
 }
 
+export type ImportMode = 'merge' | 'replace';
+
+/** Merge keeps the best of both; replace makes this device an exact copy of the file. */
+export const applyImport = (
+  local: ProgressData,
+  incoming: ProgressData,
+  mode: ImportMode,
+): ProgressData => (mode === 'replace' ? incoming : mergeProgress(local, incoming));
+
 export interface TransferSummary {
   exportedAt: string;
   xp: number;

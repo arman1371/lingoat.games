@@ -679,6 +679,7 @@ describe('Export and import', () => {
     await chooseFile(user, JSON.stringify(source));
     const dialog = await screen.findByRole('dialog', { name: 'Import this progress?' });
     expect(dialog).toHaveTextContent('900 XP');
+    expect(within(dialog).getByLabelText(/^Merge/)).toBeChecked();
     expect(useProgressStore.getState().xp).toBeLessThan(900);
     await user.click(within(dialog).getByRole('button', { name: 'Cancel' }));
     expect(useProgressStore.getState().xp).toBeLessThan(900);
@@ -692,6 +693,32 @@ describe('Export and import', () => {
     expect(useProgressStore.getState().activities['a1-1-hallo-flash']).toEqual(before);
     expect(useSettingsStore.getState()).toMatchObject({ theme: 'dark', dailyGoal: 100 });
     expect(await screen.findByText('Progress imported.')).toBeInTheDocument();
+  });
+
+  it('can replace this device with the file instead of merging', async () => {
+    const source = buildExport(
+      { ...DEFAULT_SETTINGS, dailyGoal: 20 },
+      { ...initialProgress(), xp: 15, daily: { day: 1, xp: 0 } },
+    );
+    play();
+    expect(useProgressStore.getState().xp).toBeGreaterThan(15);
+    const { user } = renderApp('/profile');
+    await chooseFile(user, JSON.stringify(source));
+    const dialog = await screen.findByRole('dialog', { name: 'Import this progress?' });
+    await user.click(within(dialog).getByLabelText(/^Replace/));
+    await user.click(within(dialog).getByRole('button', { name: 'Replace' }));
+    expect(useProgressStore.getState().xp).toBe(15);
+    expect(useProgressStore.getState().activities).toEqual({});
+    expect(useSettingsStore.getState().dailyGoal).toBe(20);
+    expect(await screen.findByText('Progress imported.')).toBeInTheDocument();
+
+    // the next file starts on Merge again
+    await chooseFile(user, JSON.stringify(source));
+    expect(
+      within(await screen.findByRole('dialog', { name: 'Import this progress?' })).getByLabelText(
+        /^Merge/,
+      ),
+    ).toBeChecked();
   });
 
   it('explains what is wrong with a bad file and changes nothing', async () => {

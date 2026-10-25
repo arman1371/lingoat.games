@@ -1,6 +1,7 @@
 import { act, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
+import { ChoiceCards } from './ChoiceCards';
 import { ConfirmDialog } from './Dialog';
 import { Mascot } from './Mascot';
 import { MASCOT_MOODS } from './mascotData';
@@ -28,6 +29,32 @@ describe('Toggle', () => {
     screen.getByRole('switch').focus();
     await user.keyboard(' ');
     expect(onChange).toHaveBeenLastCalledWith(false);
+  });
+});
+
+describe('ChoiceCards', () => {
+  it('is a labelled radio group with a title and explanation per option, usable by keyboard', async () => {
+    const onChange = vi.fn();
+    render(
+      <ChoiceCards
+        label="How to import"
+        value="a"
+        onChange={onChange}
+        options={[
+          { value: 'a', title: 'Merge', description: 'Keep both' },
+          { value: 'b', title: 'Replace', description: 'Use the file' },
+        ]}
+      />,
+    );
+    expect(screen.getByRole('group', { name: 'How to import' })).toBeInTheDocument();
+    expect(screen.getByLabelText(/^Merge/)).toBeChecked();
+    expect(screen.getByText('Use the file')).toBeInTheDocument();
+    const user = userEvent.setup();
+    await user.click(screen.getByLabelText(/^Replace/));
+    expect(onChange).toHaveBeenLastCalledWith('b');
+    screen.getByLabelText(/^Merge/).focus();
+    await user.keyboard('{ArrowDown}');
+    expect(onChange).toHaveBeenLastCalledWith('b');
   });
 });
 

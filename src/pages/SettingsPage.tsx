@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { ChoiceCards } from '@/components/ui/ChoiceCards';
 import { ConfirmDialog, Dialog } from '@/components/ui/Dialog';
 import { Icon } from '@/components/ui/Icon';
 import { Mascot } from '@/components/ui/Mascot';
@@ -11,13 +12,14 @@ import { Toast } from '@/components/ui/Toast';
 import { Toggle } from '@/components/ui/Toggle';
 import { t } from '@/i18n';
 import {
+  applyImport,
   buildExport,
   exportFileName,
-  mergeProgress,
   parseImport,
   summarize,
   TRANSFER_MAX_BYTES,
   type ImportErrorCode,
+  type ImportMode,
   type TransferFile,
 } from '@/lib/progressTransfer';
 import { useProgressStore, type ProgressData } from '@/store/progressStore';
@@ -65,6 +67,7 @@ export function SettingsPage() {
   const [toast, setToast] = useState<string | null>(null);
   const picker = useRef<HTMLInputElement>(null);
   const [pending, setPending] = useState<TransferFile | null>(null);
+  const [importMode, setImportMode] = useState<ImportMode>('merge');
   const [importError, setImportError] = useState<ImportErrorCode | null>(null);
 
   const exportData = () => {
@@ -84,14 +87,16 @@ export function SettingsPage() {
     if (!file) return;
     const text = file.size > TRANSFER_MAX_BYTES ? '' : await file.text();
     const result = parseImport(text, file.size);
-    if (result.ok) setPending(result.file);
-    else setImportError(result.error);
+    if (result.ok) {
+      setImportMode('merge');
+      setPending(result.file);
+    } else setImportError(result.error);
   };
 
-  const applyImport = () => {
+  const applyImportNow = () => {
     if (!pending) return;
     useProgressStore.setState(
-      mergeProgress(pickProgress(useProgressStore.getState()), pending.progress),
+      applyImport(pickProgress(useProgressStore.getState()), pending.progress, importMode),
     );
     s.set(pending.settings);
     setPending(null);
@@ -221,12 +226,28 @@ export function SettingsPage() {
           setToast(t('settings.resetDone'));
         }}
       />
-      <ConfirmDialog
+      <Dialog
         open={pending !== null}
+        onClose={() => setPending(null)}
         title={t('data.confirmTitle')}
-        body={
-          pending
-            ? t('data.confirmBody', {
+        actions={
+          <>
+            <Button variant="secondary" onClick={() => setPending(null)}>
+              {t('settings.cancel')}
+            </Button>
+            <Button
+              variant={importMode === 'replace' ? 'danger' : 'primary'}
+              onClick={applyImportNow}
+            >
+              {importMode === 'replace' ? t('data.confirmReplace') : t('data.confirm')}
+            </Button>
+          </>
+        }
+      >
+        {pending ? (
+          <div className="flex flex-col gap-4">
+            <p>
+              {t('data.confirmBody', {
                 date: new Date(summarize(pending).exportedAt).toLocaleDateString('en-GB', {
                   day: 'numeric',
                   month: 'short',
@@ -234,14 +255,24 @@ export function SettingsPage() {
                 }),
                 xp: summarize(pending).xp.toLocaleString('en-US'),
                 games: summarize(pending).games,
-              })
-            : null
-        }
-        confirmLabel={t('data.confirm')}
-        cancelLabel={t('settings.cancel')}
-        onCancel={() => setPending(null)}
-        onConfirm={applyImport}
-      />
+              })}
+            </p>
+            <ChoiceCards<ImportMode>
+              label={t('data.modeLabel')}
+              value={importMode}
+              onChange={setImportMode}
+              options={[
+                { value: 'merge', title: t('data.mergeTitle'), description: t('data.mergeHint') },
+                {
+                  value: 'replace',
+                  title: t('data.replaceTitle'),
+                  description: t('data.replaceHint'),
+                },
+              ]}
+            />
+          </div>
+        ) : null}
+      </Dialog>
       <Dialog
         open={importError !== null}
         onClose={() => setImportError(null)}

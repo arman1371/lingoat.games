@@ -70,3 +70,29 @@ test('a file that is not a progress file is refused and nothing changes', async 
   await expect(dialog).toBeHidden();
   expect(await stored()).toBe(before);
 });
+
+test('replace makes the device an exact copy of the file', async ({ page, browser }) => {
+  await playPerfectly(page, GAME);
+  await page.goto('/profile');
+  const [download] = await Promise.all([
+    page.waitForEvent('download'),
+    page.getByRole('button', { name: 'Export progress' }).click(),
+  ]);
+  const file = await download.path();
+
+  const other = await (await browser.newContext()).newPage();
+  await captureSpeech(other);
+  await playPerfectly(other, 'a1-1-hallo-time-of-day');
+  await other.goto('/profile');
+  await other.getByTestId('import-file').setInputFiles(file);
+  const dialog = other.getByRole('dialog', { name: 'Import this progress?' });
+  await expect(dialog.getByLabel(/^Merge/)).toBeChecked();
+  await dialog.getByLabel(/^Replace/).check({ force: true });
+  await dialog.getByRole('button', { name: 'Replace' }).click();
+  await expect(other.getByText('Progress imported.')).toBeVisible();
+
+  const games = await other.evaluate(() =>
+    Object.keys(JSON.parse(localStorage.getItem('lingoat.progress')!).state.activities),
+  );
+  expect(games).toEqual([GAME]);
+});
