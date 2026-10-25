@@ -74,7 +74,11 @@ To replace a photo, delete its object in the R2 dashboard (the Worker and browse
 same URL, so purge the cache) and upload again. The bucket must exist before `wrangler deploy`, otherwise the deploy
 fails on the `r2_buckets` binding: create it once with `npx wrangler r2 bucket create lingoat-images`.
 
-The Workers free plan allows 100,000 Worker requests a day; every photo view is one (cache hits included).
+The Workers free plan allows 100,000 Worker requests a day. Static files (the app itself) are free and unlimited;
+only the routes in `run_worker_first` (`/img/*` and `/api/*`) invoke the Worker and count, and a photo view counts even
+when the Worker answers it from the cache. Once the quota is used up, those routes answer 429 until it resets (the
+words show their emoji, "Report a problem" fails) while the static app keeps working. Query strings do not matter for
+the cache (`/img/a.webp?1` shares the entry of `/img/a.webp`), but every such request is still one invocation.
 At roughly 10 photos per game that is about 10,000 games a day. Beyond that, serve the bucket from a custom domain
 instead.
 
