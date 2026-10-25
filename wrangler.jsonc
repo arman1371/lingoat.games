@@ -9,5 +9,8 @@
     "run_worker_first": ["/img/*"],
   },
   "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "lingoat-images" }],
-  "previews": {},
+  // preview deployments (non-production branches) do not inherit bindings: they read the same bucket
+  "previews": {
+    "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "lingoat-images" }],
+  },
 }
