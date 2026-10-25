@@ -13,8 +13,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
-        name: 'lingoat',
-        short_name: 'lingoat',
+        name: 'Lingoat',
+        short_name: 'Lingoat',
         description: 'Play your way through German, level by level.',
         theme_color: '#1d4ed8',
         background_color: '#f8fafc',
