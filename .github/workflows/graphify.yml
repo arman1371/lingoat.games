@@ -18,18 +18,20 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           ref: main
           # A deploy key (or PAT) lets the push bypass branch rules you grant it and start workflows;
           # the default GITHUB_TOKEN starts none (see docs/graphify.md).
           ssh-key: ${{ secrets.GRAPHIFY_DEPLOY_KEY }}
           token: ${{ secrets.GRAPHIFY_TOKEN || github.token }}
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with: { python-version: '3.13' }
       - name: Install Graphify
-        # Same version as the committed graph and the local install, so output stays reproducible.
-        run: pip install graphifyy==0.9.63
+        # graphifyy 0.9.63: same version as the committed graph and the local install, so output stays reproducible.
+        # The job can push to main, so every package (incl. transitive ones) is pinned by hash and only wheels
+        # are installed (no build scripts run). Regenerate: see docs/graphify.md.
+        run: pip install --require-hashes --only-binary=:all: -r .github/graphify/requirements.txt
       - name: graphify update .
         # CI always starts without cache/manifest, so force the write even when a commit deletes code
         # (Graphify otherwise refuses to replace graph.json with a smaller graph).
