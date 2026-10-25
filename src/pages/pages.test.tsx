@@ -616,6 +616,9 @@ describe('Settings', () => {
     expect(useSettingsStore.getState().autoSpeak).toBe(false);
     await user.click(screen.getByLabelText('Sound effects'));
     expect(useSettingsStore.getState().sounds).toBe(false);
+    expect(screen.getByLabelText('Read sentences aloud')).toBeChecked();
+    await user.click(screen.getByLabelText('Read sentences aloud'));
+    expect(useSettingsStore.getState().speakSentences).toBe(false);
   });
 
   it('resets progress only after confirmation', async () => {

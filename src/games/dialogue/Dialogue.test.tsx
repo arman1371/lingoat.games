@@ -1,5 +1,7 @@
 import { screen, within } from '@testing-library/react';
 import { renderGame } from '@/test/render';
+import { stubSpeech } from '@/test/speech';
+import { DEFAULT_SETTINGS, useSettingsStore } from '@/store/settingsStore';
 import Dialogue from './Dialogue';
 
 const config = {
@@ -108,5 +110,31 @@ describe('Dialogue', () => {
   it('starts directly with a player turn when the scene has no opening NPC line', async () => {
     renderGame(Dialogue, { scenes: [config.scenes[1]!] });
     expect(screen.getByRole('button', { name: 'Tschüss!' })).toBeInTheDocument();
+  });
+});
+
+describe('Dialogue speech', () => {
+  let speech: ReturnType<typeof stubSpeech>;
+  beforeEach(() => {
+    speech = stubSpeech();
+  });
+  afterEach(() => {
+    speech.restore();
+    useSettingsStore.setState({ ...DEFAULT_SETTINGS });
+  });
+
+  it('speaks each new speaker line once, and nothing for a wrong reply', async () => {
+    const { user } = renderGame(Dialogue, config);
+    expect(speech.spoken()).toEqual(['Hallo!']);
+    await user.click(screen.getByRole('button', { name: 'Tschüss!' }));
+    expect(speech.spoken()).toEqual(['Hallo!']);
+    await user.click(screen.getByRole('button', { name: 'Hallo!' }));
+    expect(speech.spoken()).toEqual(['Hallo!', 'Wie geht’s?']);
+  });
+
+  it('stays silent when "Read sentences aloud" is off', () => {
+    useSettingsStore.setState({ speakSentences: false });
+    renderGame(Dialogue, config);
+    expect(speech.synth.speak).not.toHaveBeenCalled();
   });
 });

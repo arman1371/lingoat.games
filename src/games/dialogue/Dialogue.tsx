@@ -5,6 +5,7 @@ import { ChoiceList } from '../shared/ChoiceList';
 import { FeedbackFooter, GameFrame } from '../shared/GameFrame';
 import { shuffledOptions } from '../shared/choices';
 import { useAnswerSound } from '../shared/useAnswerSound';
+import { useSpeakSentence } from '../shared/useSentenceSpeech';
 import { useSequence } from '../shared/useSequence';
 import type { GameProps } from '../types';
 
@@ -37,6 +38,7 @@ function SceneView({
   const [hint, setHint] = useState<string | null>(null);
   const [lines, setLines] = useState<Line[]>(() => collectNpcLines(scene, 0).lines);
   const [pending, setPending] = useState(() => collectNpcLines(scene, 0).next);
+  useSpeakSentence(latestNpcText(lines));
   const done = pending >= scene.turns.length;
   const sceneCorrect = wrongPicks.length === 0;
 
@@ -140,6 +142,15 @@ function SceneView({
       ) : null}
     </GameFrame>
   );
+}
+
+/** The NPC lines after the player's last reply, as one text so a batch is never cut off by itself. */
+function latestNpcText(lines: readonly Line[]): string {
+  const lastYou = lines.findLastIndex((l) => l.who === 'you');
+  return lines
+    .slice(lastYou + 1)
+    .map((l) => l.text)
+    .join(' ');
 }
 
 /** Collect consecutive NPC turns starting at `from`; returns the index of the next player turn. */

@@ -70,6 +70,11 @@ export function SettingsPage() {
           checked={s.autoSpeak}
           onChange={(autoSpeak) => s.set({ autoSpeak })}
         />
+        <Toggle
+          label={t('settings.speakSentences')}
+          checked={s.speakSentences}
+          onChange={(speakSentences) => s.set({ speakSentences })}
+        />
         <div className="flex flex-col gap-2">
           <label htmlFor="rate" className="font-extrabold text-ink">
             {t('settings.ttsRate')}: {s.ttsRate.toFixed(1)}×

@@ -25,6 +25,12 @@ describe('settingsStore', () => {
     expect(JSON.parse(localStorage.getItem('lingoat.settings')!).state.dailyGoal).toBe(100);
   });
 
+  it('reads sentences aloud by default and persists the choice', () => {
+    expect(useSettingsStore.getState().speakSentences).toBe(true);
+    useSettingsStore.getState().set({ speakSentences: false });
+    expect(JSON.parse(localStorage.getItem('lingoat.settings')!).state.speakSentences).toBe(false);
+  });
+
   it('resolves theme and motion', () => {
     expect(resolveTheme('system', true)).toBe('dark');
     expect(resolveTheme('system', false)).toBe('light');

@@ -10,6 +10,8 @@ export interface SettingsState {
   motion: MotionSetting;
   sounds: boolean;
   autoSpeak: boolean;
+  /** Read the German sentence aloud in games that are not listening games. */
+  speakSentences: boolean;
   ttsRate: number;
   /** XP to earn per day. */
   dailyGoal: number;
@@ -21,6 +23,7 @@ export const DEFAULT_SETTINGS = {
   motion: 'system',
   sounds: true,
   autoSpeak: true,
+  speakSentences: true,
   ttsRate: 0.9,
   dailyGoal: 50,
 } satisfies Omit<SettingsState, 'set'>;
@@ -30,11 +33,12 @@ export const useSettingsStore = create<SettingsState>()(
     name: 'lingoat.settings',
     version: 1,
     storage: createJSONStorage(() => localRepository),
-    partialize: ({ theme, motion, sounds, autoSpeak, ttsRate, dailyGoal }) => ({
+    partialize: ({ theme, motion, sounds, autoSpeak, speakSentences, ttsRate, dailyGoal }) => ({
       theme,
       motion,
       sounds,
       autoSpeak,
+      speakSentences,
       ttsRate,
       dailyGoal,
     }),

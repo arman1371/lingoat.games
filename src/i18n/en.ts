@@ -88,6 +88,7 @@ export const en = {
     motion: 'Animations',
     sounds: 'Sound effects',
     autoSpeak: 'Speak German automatically',
+    speakSentences: 'Read sentences aloud',
     ttsRate: 'Speech speed',
     reset: 'Reset all progress',
     resetConfirm: 'This deletes your XP, stars and mistakes. Continue?',

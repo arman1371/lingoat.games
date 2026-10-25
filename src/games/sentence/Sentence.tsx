@@ -14,6 +14,7 @@ import { SpeakButton } from '@/components/ui/SpeakButton';
 import { t } from '@/i18n';
 import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
 import { MistakeHint } from '../shared/MistakeHint';
+import { useSentenceSpeech } from '../shared/useSentenceSpeech';
 import { useSequence } from '../shared/useSequence';
 import type { GameProps } from '../types';
 import { buildTiles, isCorrectSentence, moveItem, sentenceOf } from './logic';
@@ -58,6 +59,7 @@ export function Sentence({ config, seed, onFinish }: GameProps<'sentence'>) {
   const tiles = useMemo(() => buildTiles(item.words, item.extra, seed, item.id), [item, seed]);
   const [placed, setPlaced] = useState<string[]>([]);
   const [verdict, setVerdict] = useState<'correct' | 'wrong' | null>(null);
+  const say = useSentenceSpeech();
   const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 6 } }));
 
   const textOf = (id: string) => tiles.find((x) => x.id === id)!.text;
@@ -143,7 +145,10 @@ export function Sentence({ config, seed, onFinish }: GameProps<'sentence'>) {
             key={tile.id}
             type="button"
             disabled={locked}
-            onClick={() => setPlaced((p) => [...p, tile.id])}
+            onClick={() => {
+              say(tile.text);
+              setPlaced((p) => [...p, tile.id]);
+            }}
             className="press min-h-12 rounded-xl px-4 text-lg font-bold border-2 border-line bg-surface text-ink shadow-[0_3px_0_var(--border)]"
           >
             {tile.text}
