@@ -1,17 +1,17 @@
 # Graph Report - lingoat.games  (2026-10-25)
 
 ## Corpus Check
-- 463 files · ~482,093 words
+- 463 files · ~482,112 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 9 file(s) not represented in the graph (top: (none) 5, .ico 1, .properties 1)
 
 ## Summary
-- 2899 nodes · 8151 edges · 117 communities (108 shown, 9 thin omitted)
+- 2899 nodes · 8150 edges · 116 communities (107 shown, 9 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 111 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b4e7e02d`
+- Built from commit: `bd8a86cb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,7 +44,6 @@
 - a1-1/index.ts
 - b2-1/index.ts
 - compilerOptions
-- adjectives.ts
 - rng.ts
 - Memory.tsx
 - Sentence.tsx
@@ -162,7 +161,7 @@
 - **B1.1 research sources** — docs_b1_1_coverage_schritte, docs_b1_1_coverage_menschen, docs_b1_1_coverage_netzwerk, docs_b1_1_coverage_ziel, docs_b1_1_coverage_goethe_b1, docs_b1_1_coverage_cefr [EXTRACTED 1.00]
 - **Level authoring knowledge (procedure, coverage rules, level docs)** — docs_adding_content_new_level, docs_a2_2_coverage, docs_b1_1_coverage [INFERRED 0.85]
 
-## Communities (117 total, 9 thin omitted)
+## Communities (116 total, 9 thin omitted)
 
 ### Community 0 - "c1-1/index.ts"
 Cohesion: 0.07
@@ -275,10 +274,6 @@ Nodes (15): units, vocab, sortitTranslations, wissenschaft, unterwegs, klima, be
 ### Community 27 - "compilerOptions"
 Cohesion: 0.11
 Nodes (18): compilerOptions, allowImportingTsExtensions, lib, module, moduleDetection, moduleResolution, noEmit, noUncheckedIndexedAccess (+10 more)
-
-### Community 28 - "adjectives.ts"
-Cohesion: 0.36
-Nodes (8): adjectiveEnding(), DeclensionKind, declineAdjective(), ENDINGS, stemBeforeEnding(), GENDERS, row(), Case
 
 ### Community 29 - "rng.ts"
 Cohesion: 0.23
@@ -477,8 +472,8 @@ Cohesion: 0.20
 Nodes (9): B1.2 – syllabus research, coverage and overlap with A1.1–B1.1, Communication goals, Engines, Grammar, Grammar hints, How the units were chosen, Left out on purpose, Pronunciation (+1 more)
 
 ### Community 85 - "forms.ts"
-Cohesion: 0.17
-Nodes (14): adjectiveEndingWhy(), adjectiveRule(), AFTER, CASE_NAME, CASES, contrastForms(), DEFINITE, describeForm() (+6 more)
+Cohesion: 0.16
+Nodes (16): adjectiveEnding(), row(), adjectiveEndingWhy(), adjectiveRule(), AFTER, CASE_NAME, CASES, contrastForms() (+8 more)
 
 ### Community 86 - "B2.1 – syllabus research, coverage and overlap with A1.1–B1.2"
 Cohesion: 0.25
@@ -553,8 +548,8 @@ Cohesion: 0.40
 Nodes (3): freizeit, hobbies, vocab
 
 ### Community 104 - "articles.ts"
-Cohesion: 0.31
-Nodes (8): DEFINITE, definiteArticle(), genderOfArticle(), INDEFINITE, indefiniteArticle(), negativeArticle(), possessive(), PossessiveStem
+Cohesion: 0.18
+Nodes (14): DeclensionKind, declineAdjective(), ENDINGS, stemBeforeEnding(), GENDERS, Case, DEFINITE, definiteArticle() (+6 more)
 
 ### Community 105 - "UmlautKeyboard.tsx"
 Cohesion: 0.50
@@ -605,11 +600,11 @@ Nodes (57): tf(), you(), mishaps, reactions, vocab, unitB21(), alternatives, pro
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `react` to `playability.tsx`, `@testing-library/react`, `package.json`, `PlayPage.tsx`, `Clock.tsx`, `Memory.tsx`, `Sentence.tsx`, `Market.tsx`, `StatePanel.tsx`, `router.tsx`, `Icon.tsx`, `a1-1/types.ts`, `Spell.test.tsx`, `Gapfill.test.tsx`, `controls.test.tsx`, `Conjugation.tsx`, `Button.tsx`, `Tabs.tsx`, `ui.test.tsx`?**
-  _High betweenness centrality (0.097) - this node is a cross-community bridge._
+  _High betweenness centrality (0.095) - this node is a cross-community bridge._
 - **Why does `@testing-library/react` connect `@testing-library/react` to `Spell.test.tsx`, `Market.tsx`, `ui.test.tsx`, `playability.tsx`, `router.tsx`, `Gapfill.test.tsx`, `controls.test.tsx`, `package.json`, `PlayPage.tsx`, `Blitz.test.tsx`, `react`, `Conjugation.tsx`, `vitest`, `Clock.tsx`, `a1-1/types.ts`, `Memory.tsx`, `Sentence.tsx`?**
-  _High betweenness centrality (0.066) - this node is a cross-community bridge._
+  _High betweenness centrality (0.065) - this node is a cross-community bridge._
 - **Why does `page()` connect `e2e/helpers.ts` to `a1-1/index.ts`, `images/index.ts`, `router.tsx`?**
-  _High betweenness centrality (0.047) - this node is a cross-community bridge._
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
 - **What connects `singleQuote`, `semi`, `trailingComma` to the rest of the system?**
   _1494 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `c1-1/index.ts` be split into smaller, more focused modules?**
