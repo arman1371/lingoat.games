@@ -25,10 +25,10 @@ export function CreditsPage() {
     return Object.entries(manifest)
       .flatMap(([id, entry]) => {
         const v = byId.get(id);
-        return v ? [{ id, entry, word: label(v), en: v.en }] : [];
+        return v ? [{ id, entry, word: label(v), sortKey: v.de, en: v.en }] : [];
       })
       .filter((r) => !needle || `${r.word} ${r.en} ${r.entry[1]}`.toLowerCase().includes(needle))
-      .sort((a, b) => a.word.localeCompare(b.word, 'de'));
+      .sort((a, b) => a.sortKey.localeCompare(b.sortKey, 'de'));
   }, [manifest, vocab, query]);
 
   return (

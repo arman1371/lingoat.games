@@ -31,6 +31,10 @@ isolates storage behind `src/store/repository.ts`, so a D1-backed implementation
 5. Save and deploy. The production branch deploys to your `*.workers.dev` URL; other branches get preview URLs.
    Non-production branches run `npx wrangler preview`, which requires the (empty) `"previews": {}` block in `wrangler.jsonc`.
 
+**Word photos**: `wrangler.jsonc` also names the Worker `worker/index.ts` and binds the R2 bucket `lingoat-images`
+as `IMAGES` (create it once in the dashboard: R2 → Create bucket). Only `/img/*` runs the Worker, everything
+else is a static asset as before. See [docs/images.md](images.md).
+
 `wrangler.jsonc` points Wrangler at `dist/` and sets `not_found_handling: "single-page-application"`, so deep links
 (`/levels/a1-1/units/a1-1-hallo`) serve `index.html`. Manual deploy from your machine: `npm run deploy`.
 

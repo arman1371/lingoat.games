@@ -16,8 +16,10 @@ import { LEVELS } from '../../src/content/levels';
 import type { Vocab } from '../../src/content/schema';
 import type { ManifestEntry } from '../../src/content/images';
 import {
+  germanQuery,
   isCandidate,
   pickHit,
+  type Pick,
   queryFor,
   sortManifest,
   toEntry,
@@ -38,7 +40,8 @@ const { values: args } = parseArgs({
     level: { type: 'string' },
     unit: { type: 'string' },
     limit: { type: 'string' },
-    rpm: { type: 'string', default: '50' },
+    rpm: { type: 'string', default: '85' },
+    jobs: { type: 'string', default: '3' },
     'dry-run': { type: 'boolean', default: false },
     'retry-misses': { type: 'boolean', default: false },
   },
@@ -80,17 +83,29 @@ const exists = (path: string): Promise<boolean> =>
 
 // ---- Pixabay API (cached, rate limited) -------------------------------------------------------
 
-const gapMs = Math.ceil(60_000 / Number(args.rpm));
-let lastCall = 0;
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** Hands out turns at least `gapMs` apart, also to concurrent callers. */
+function limiter(gapMs: number): () => Promise<void> {
+  let next = 0;
+  return async () => {
+    const turn = Math.max(next, Date.now());
+    next = turn + gapMs;
+    await sleep(turn - Date.now());
+  };
+}
+
+// Pixabay allows 100 API requests per 60 s; we stay below `--rpm`. Downloads from the image CDN are
+// spaced the same way, so a run never exceeds `--rpm` photos per minute either.
+const apiTurn = limiter(Math.ceil(60_000 / Number(args.rpm)));
+const downloadTurn = limiter(Math.ceil(60_000 / Number(args.rpm)));
 let apiCalls = 0;
 let apiCached = 0;
 
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-
-async function search(query: string): Promise<PixabayHit[]> {
+async function search(query: string, lang: 'en' | 'de'): Promise<PixabayHit[]> {
   const params = new URLSearchParams({
     q: query,
-    lang: 'en',
+    lang,
     image_type: 'photo',
     safesearch: 'true',
     min_width: String(SIZE),
@@ -109,8 +124,7 @@ async function search(query: string): Promise<PixabayHit[]> {
     return cached;
   }
   for (let attempt = 0; ; attempt++) {
-    await sleep(Math.max(0, lastCall + gapMs - Date.now()));
-    lastCall = Date.now();
+    await apiTurn();
     apiCalls++;
     const res = await fetch(`https://pixabay.com/api/?${params}&key=${key}`);
     if (res.status === 429 && attempt < 5) {
@@ -127,13 +141,9 @@ async function search(query: string): Promise<PixabayHit[]> {
 }
 
 /** The image CDN throttles bursts too (HTTP 429): pause between downloads and back off on refusals. */
-const DOWNLOAD_GAP_MS = 1500;
-let lastDownload = 0;
-
 async function downloadWithRetry(hit: PixabayHit): Promise<Buffer> {
   for (let attempt = 1; ; attempt++) {
-    await sleep(Math.max(0, lastDownload + DOWNLOAD_GAP_MS - Date.now()));
-    lastDownload = Date.now();
+    await downloadTurn();
     const res = await fetch(hit.webformatURL);
     if (res.ok) return Buffer.from(await res.arrayBuffer());
     if (attempt === 6 || (res.status !== 429 && res.status < 500)) {
@@ -203,7 +213,19 @@ async function main() {
     sinceSave = 0;
   };
 
-  for (const [n, v] of todo.entries()) {
+  /** English meaning first; a word that finds nothing there is searched again by its German name. */
+  async function choose(v: Vocab, query: string): Promise<Pick> {
+    let picked = pickHit(await search(query, 'en'), query);
+    const de = germanQuery(v);
+    if ('reason' in picked && de && !overrides[v.id]?.query) {
+      const second = pickHit(await search(de, 'de'), de);
+      if ('hit' in second) picked = second;
+    }
+    return picked;
+  }
+
+  let done = 0;
+  const handle = async (v: Vocab) => {
     const query = queryFor(v, overrides);
     const miss = (reason: string) => {
       misses[v.id] = reason;
@@ -213,7 +235,7 @@ async function main() {
       if (!query) {
         miss('skipped');
       } else {
-        const picked = pickHit(await search(query), query);
+        const picked = await choose(v, query);
         if ('reason' in picked) {
           miss(picked.reason);
         } else {
@@ -233,8 +255,16 @@ async function main() {
       console.log(`  ${v.id}: ${e instanceof Error ? e.message : String(e)}`);
     }
     if (++sinceSave >= SAVE_EVERY) await save();
-    if ((n + 1) % 25 === 0) console.log(`  ${n + 1}/${todo.length}`);
-  }
+    if (++done % 50 === 0) console.log(`  ${done}/${todo.length}`);
+  };
+
+  // a few words in flight at once; the two limiters keep the request rate
+  const queue = [...todo];
+  await Promise.all(
+    Array.from({ length: Number(args.jobs) }, async () => {
+      for (let v = queue.shift(); v; v = queue.shift()) await handle(v);
+    }),
+  );
   await save();
 
   const seconds = Math.round((Date.now() - started) / 1000);

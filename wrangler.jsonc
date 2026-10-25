@@ -1,9 +1,15 @@
 {
   "name": "lingoat-games",
+  "main": "worker/index.ts",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
     "not_found_handling": "single-page-application",
+    // only /img/* runs the Worker (photos from R2); every other request is a plain static asset
+    "run_worker_first": ["/img/*"],
   },
+  // word photos, uploaded with `npm run images:upload` (docs/images.md)
+  "r2_buckets": [{ "binding": "IMAGES", "bucket_name": "lingoat-images" }],
   "previews": {},
 }

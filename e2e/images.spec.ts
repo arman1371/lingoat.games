@@ -69,6 +69,7 @@ test.describe('image credits', () => {
     await page.goto('/profile');
     await page.getByRole('link', { name: /Image credits/ }).click();
     await expect(page.getByRole('heading', { name: 'Image credits', level: 1 })).toBeVisible();
+    await page.getByRole('searchbox', { name: 'Search words' }).fill('apfel');
     const link = page.getByRole('link', { name: /der Apfel/ }).first();
     await expect(link).toHaveAttribute('href', /^https:\/\/pixabay\.com\/photos\//);
     await expect(link).toHaveAttribute('target', '_blank');

@@ -52,12 +52,24 @@ manifest entry, run the script again.
 
 ## Storage and delivery
 
-Not in git (about 20 KiB × the number of photos). The plan is a Cloudflare R2 bucket plus a small Worker in
-front of the static assets that serves `/img/*` from it with a one-year immutable cache header, so
-Cloudflare's cache answers repeat requests and each photo is downloaded from Pixabay exactly once. The Worker and the
-bucket setup come in a separate change (`docs/deployment.md`). Until then `/img/*` answers 404 in production
-and every word simply shows its emoji. The service worker keeps viewed photos for offline play
-(`word-photos` cache).
+Not in git (about 20 KiB per photo, roughly 40 MB for the catalogue). The photos are objects in the Cloudflare R2
+bucket `lingoat-images` (free tier: 10 GB, no egress fees). `worker/index.ts` is the Worker in front of the static
+assets: only `/img/*` runs it (`run_worker_first` in `wrangler.jsonc`), it answers from R2 with a one-year
+`immutable` cache header and stores the answer in Cloudflare's cache, so the bucket is read about once per photo
+and data centre. A photo that is not in the bucket answers 404 and the word keeps its emoji. The service worker keeps
+viewed photos for offline play (`word-photos` cache).
+
+Upload (after `images:fetch`, from the machine that holds `.image-cache/`):
+
+```bash
+# keys of an R2 API token with "Object Read & Write" on the bucket lingoat-images only
+export R2_ACCESS_KEY_ID=… R2_SECRET_ACCESS_KEY=… CLOUDFLARE_ACCOUNT_ID=…
+npm run images:upload             # skips what was uploaded before; --dir to upload from another folder
+```
+
+The Workers free plan allows 100,000 Worker requests a day; every photo view is one (cache hits included).
+At roughly 10 photos per game that is about 10,000 games a day. Beyond that, serve the bucket from a custom domain
+instead.
 
 ## In the app
 

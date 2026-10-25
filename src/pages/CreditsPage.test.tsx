@@ -15,7 +15,8 @@ describe('Image credits', () => {
   });
 
   it('lists the photo of a word with its author and a link to the Pixabay page', async () => {
-    renderApp('/credits');
+    const { user } = renderApp('/credits');
+    await user.type(await screen.findByRole('searchbox', { name: 'Search words' }), 'apfel');
     const link = await screen.findByRole('link', { name: /der Apfel/ });
     const [page, author] = manifest['a1-1-einkaufen-apfel'] as [string, string, number];
     expect(link).toHaveAttribute('href', `https://pixabay.com/photos/${page}`);
