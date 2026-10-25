@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Mascot } from '@/components/ui/Mascot';
 import { SpeakButton } from '@/components/ui/SpeakButton';
 import { ChoiceList } from '../shared/ChoiceList';
 import { FeedbackFooter, GameFrame } from '../shared/GameFrame';
@@ -100,12 +101,14 @@ function SceneView({
 
       <ol aria-label="Conversation" className="flex flex-col gap-3">
         {lines.map((line, i) => (
-          <li key={i} className={`flex ${line.who === 'you' ? 'justify-end' : 'justify-start'}`}>
+          <li
+            key={i}
+            className={`flex items-end gap-2 ${line.who === 'you' ? 'justify-end' : 'justify-start'}`}
+          >
+            {line.who === 'npc' ? <Mascot mood="happy" size={36} className="shrink-0" /> : null}
             <div
               className={`anim-pop max-w-[85%] rounded-3xl px-4 py-3 ${
-                line.who === 'you'
-                  ? 'bg-primary text-on-primary'
-                  : 'border-2 border-line bg-surface text-ink'
+                line.who === 'you' ? 'bg-primary text-on-primary' : 'bg-surface-2 text-ink'
               }`}
             >
               {line.who === 'npc' ? (

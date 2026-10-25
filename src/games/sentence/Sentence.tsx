@@ -43,7 +43,7 @@ function AnswerTile({
       aria-label={`Remove ${text}`}
       onClick={onRemove}
       style={{ transform: CSS.Transform.toString(transform), transition, touchAction: 'none' }}
-      className={`press min-h-12 rounded-xl bg-primary px-4 text-lg font-extrabold text-on-primary shadow-[0_3px_0_var(--primary-edge)] ${
+      className={`press min-h-12 rounded-xl px-4 text-lg font-bold border-2 border-line bg-surface text-ink shadow-[0_3px_0_var(--border)] ${
         isDragging ? 'z-10 opacity-80' : ''
       }`}
     >
@@ -121,7 +121,7 @@ export function Sentence({ config, seed, onFinish }: GameProps<'sentence'>) {
           <div
             data-testid="answer-line"
             aria-label="Your sentence"
-            className="flex min-h-20 flex-wrap items-center gap-2 rounded-2xl border-2 border-dashed border-line bg-surface-2 p-3"
+            className="flex min-h-20 flex-wrap items-center gap-2 rounded-2xl bg-sunken p-3"
           >
             {placed.length === 0 ? <span className="text-muted">Tap the words below…</span> : null}
             {placed.map((id) => (
@@ -144,7 +144,7 @@ export function Sentence({ config, seed, onFinish }: GameProps<'sentence'>) {
             type="button"
             disabled={locked}
             onClick={() => setPlaced((p) => [...p, tile.id])}
-            className="press min-h-12 rounded-xl border-2 border-line bg-surface px-4 text-lg font-extrabold text-ink shadow-[0_3px_0_var(--border)]"
+            className="press min-h-12 rounded-xl px-4 text-lg font-bold border-2 border-line bg-surface text-ink shadow-[0_3px_0_var(--border)]"
           >
             {tile.text}
           </button>

@@ -74,10 +74,13 @@ export function Gapfill({ config, seed, onFinish }: GameProps<'gapfill'>) {
     >
       <div className="text-center">
         <p className="text-sm font-bold uppercase tracking-wide text-muted">Fill in the gap</p>
-        <p className="mt-2 text-2xl font-extrabold leading-relaxed text-ink" data-testid="sentence">
+        <p
+          className="mt-2 font-display text-2xl font-bold leading-relaxed text-ink"
+          data-testid="sentence"
+        >
           {before}
           {options ? (
-            <span className="mx-1 inline-block min-w-16 border-b-4 border-primary px-2 text-primary">
+            <span className="mx-1 inline-block min-w-16 rounded-xl border-2 border-primary bg-primary-soft px-2 text-on-primary-soft">
               {shown}
             </span>
           ) : (
@@ -94,7 +97,7 @@ export function Gapfill({ config, seed, onFinish }: GameProps<'gapfill'>) {
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && typed.trim() && !verdict) grade(typed);
               }}
-              className="mx-1 w-36 rounded-xl border-2 border-primary bg-surface px-2 py-1 text-center text-2xl font-bold text-ink"
+              className="mx-1 w-36 rounded-xl border-2 border-primary bg-primary-soft px-2 py-1 text-center text-2xl font-bold text-on-primary-soft"
               style={{ width: `${Math.max(6, item.answer.length + 2)}ch` }}
             />
           )}
