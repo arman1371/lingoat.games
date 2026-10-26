@@ -6,20 +6,21 @@ export interface TopicGroup {
   topics: GrammarTopic[];
 }
 
-/** First two characters of the level id (`a1`, `b2` …): the families offered as filter chips. */
-export const levelFamilies = (topics: readonly GrammarTopic[]): string[] => [
-  ...new Set(topics.map((t) => t.level.slice(0, 2))),
-];
+/** The levels that have at least one topic, in level order: the filter chips of the grammar page. */
+export const levelsWithTopics = (
+  topics: readonly GrammarTopic[],
+  levels: readonly LevelMeta[],
+): LevelMeta[] => levels.filter((l) => topics.some((t) => t.level === l.id));
 
 /**
  * Topics grouped by the level that first teaches them, in level order. `q` matches title and tagline,
- * `family` (`a1`) limits the levels; levels without a match are dropped.
+ * `levelId` limits the result to one level; levels without a match are dropped.
  */
 export function groupTopics(
   topics: readonly GrammarTopic[],
   levels: readonly LevelMeta[],
   q = '',
-  family = '',
+  levelId = '',
 ): TopicGroup[] {
   const needle = q.trim().toLowerCase();
   return levels
@@ -28,7 +29,7 @@ export function groupTopics(
       topics: topics.filter(
         (t) =>
           t.level === level.id &&
-          (!family || level.id.startsWith(family)) &&
+          (!levelId || level.id === levelId) &&
           (!needle || `${t.title} ${t.tagline}`.toLowerCase().includes(needle)),
       ),
     }))

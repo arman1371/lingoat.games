@@ -82,7 +82,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['questions', 'separable-verbs', 'modal-verbs'],
     sources: [SOURCES.verbSecond],
-    reviewed: false,
   },
   {
     id: 'questions',
@@ -145,7 +144,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['word-order', 'verb-conjugation'],
     sources: [SOURCES.questions],
-    reviewed: false,
   },
   {
     id: 'pronouns',
@@ -200,7 +198,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['verb-conjugation', 'object-pronouns', 'polite-forms'],
     sources: [SOURCES.personalPronouns],
-    reviewed: false,
   },
   {
     id: 'verb-conjugation',
@@ -247,7 +244,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['pronouns', 'modal-verbs', 'word-order'],
     sources: [SOURCES.strongVerbs],
-    reviewed: false,
   },
   {
     id: 'articles',
@@ -315,7 +311,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['plurals', 'accusative', 'dative'],
     sources: [SOURCES.gender, SOURCES.article],
-    reviewed: false,
   },
   {
     id: 'negation',
@@ -378,7 +373,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['articles', 'accusative', 'possessives'],
     sources: [SOURCES.kein, SOURCES.nicht],
-    reviewed: false,
   },
   {
     id: 'plurals',
@@ -441,7 +435,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['articles', 'dative'],
     sources: [SOURCES.plural, SOURCES.dative],
-    reviewed: false,
   },
   {
     id: 'possessives',
@@ -495,7 +488,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['negation', 'articles', 'accusative'],
     sources: [SOURCES.possessives],
-    reviewed: false,
   },
   {
     id: 'prepositions-of-time',
@@ -541,7 +533,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['dative', 'perfekt'],
     sources: [SOURCES.um, SOURCES.seit, SOURCES.vor],
-    reviewed: false,
   },
   {
     id: 'separable-verbs',
@@ -601,7 +592,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['word-order', 'modal-verbs', 'perfekt'],
     sources: [SOURCES.separableVerbs, SOURCES.participle2],
-    reviewed: false,
   },
   {
     id: 'accusative',
@@ -666,7 +656,6 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['articles', 'dative', 'object-pronouns'],
     sources: [SOURCES.accusative, SOURCES.article],
-    reviewed: false,
   },
   {
     id: 'modal-verbs',
@@ -730,6 +719,5 @@ export const A11_TOPICS: GrammarTopic[] = [
     ],
     related: ['word-order', 'separable-verbs', 'verb-conjugation'],
     sources: [SOURCES.modalVerbs],
-    reviewed: false,
   },
 ];

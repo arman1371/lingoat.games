@@ -2,8 +2,7 @@
 
 The full grammar lessons (`src/content/grammar/`) are written in our own words. Every rule was checked against the
 pages below, which were fetched and read while writing; the same list is shown at the bottom of each lesson
-(`sources`). The German content has **not yet been reviewed by a native speaker**, so every topic keeps
-`reviewed: false` and shows a draft note.
+(`sources`). The German content has **not yet been reviewed by a native speaker**.
 
 Forms in tables are generated from `src/lib/german` where possible (articles, conjugation, Präteritum, Konjunktiv II,
 ordinals), so they are covered by the unit tests of those helpers.
@@ -42,4 +41,4 @@ ordinals), so they are covered by the unit tests of those helpers.
   dative and accusative pronouns, or the vowel change of the modal verbs) follow common textbook rules and the
   generated forms in `src/lib/german`.
 - A native speaker (or a second authoritative grammar such as the Duden Grammatik) should still review each topic
-  before `reviewed` is set to `true`.
+  before the lessons are treated as final.

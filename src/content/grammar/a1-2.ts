@@ -107,7 +107,6 @@ export const A12_TOPICS: GrammarTopic[] = [
     ],
     related: ['accusative', 'object-pronouns', 'two-way-prepositions', 'plurals'],
     sources: [SOURCES.dativeDuden, SOURCES.dative, SOURCES.dativeObject, SOURCES.prepositions],
-    reviewed: false,
   },
   {
     id: 'object-pronouns',
@@ -180,7 +179,6 @@ export const A12_TOPICS: GrammarTopic[] = [
     ],
     related: ['dative', 'accusative', 'pronouns'],
     sources: [SOURCES.personalPronouns, SOURCES.dativeObject],
-    reviewed: false,
   },
   {
     id: 'two-way-prepositions',
@@ -247,7 +245,6 @@ export const A12_TOPICS: GrammarTopic[] = [
     ],
     related: ['dative', 'accusative'],
     sources: [SOURCES.prepositions, SOURCES.vor],
-    reviewed: false,
   },
   {
     id: 'imperative',
@@ -308,7 +305,6 @@ export const A12_TOPICS: GrammarTopic[] = [
     ],
     related: ['separable-verbs', 'verb-conjugation', 'polite-forms'],
     sources: [SOURCES.imperative],
-    reviewed: false,
   },
   {
     id: 'past-tense',
@@ -373,7 +369,6 @@ export const A12_TOPICS: GrammarTopic[] = [
     ],
     related: ['perfekt', 'modal-verbs', 'verb-conjugation'],
     sources: [SOURCES.preterite],
-    reviewed: false,
   },
   {
     id: 'perfekt',
@@ -468,7 +463,6 @@ export const A12_TOPICS: GrammarTopic[] = [
     ],
     related: ['past-tense', 'separable-verbs', 'word-order'],
     sources: [SOURCES.perfect, SOURCES.participle2],
-    reviewed: false,
   },
   {
     id: 'comparison',
@@ -536,7 +530,6 @@ export const A12_TOPICS: GrammarTopic[] = [
     ],
     related: ['articles', 'conjunctions'],
     sources: [SOURCES.comparison],
-    reviewed: false,
   },
   {
     id: 'ordinal-numbers',
@@ -581,7 +574,6 @@ export const A12_TOPICS: GrammarTopic[] = [
     ],
     related: ['prepositions-of-time', 'articles'],
     sources: [SOURCES.numerals],
-    reviewed: false,
   },
   {
     id: 'conjunctions',
@@ -647,7 +639,6 @@ export const A12_TOPICS: GrammarTopic[] = [
     ],
     related: ['word-order', 'questions'],
     sources: [SOURCES.conjunctions],
-    reviewed: false,
   },
   {
     id: 'polite-forms',
@@ -704,6 +695,5 @@ export const A12_TOPICS: GrammarTopic[] = [
     ],
     related: ['modal-verbs', 'imperative', 'word-order'],
     sources: [SOURCES.subjunctive],
-    reviewed: false,
   },
 ];

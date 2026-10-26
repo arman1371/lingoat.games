@@ -71,11 +71,6 @@ describe('grammar topics', () => {
     }
   });
 
-  it('are shown as drafts until a native speaker has reviewed them', () => {
-    // flip a topic to `reviewed: true` only after a native speaker has checked it
-    expect(GRAMMAR_TOPICS.every((t) => t.reviewed === false)).toBe(true);
-  });
-
   it('use generated article tables', () => {
     const dative = articleTable('x', 'dat', 'dative-n');
     expect(dative).toMatchObject({

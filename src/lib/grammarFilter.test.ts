@@ -1,6 +1,6 @@
 import { GRAMMAR_TOPICS, type GrammarTopic } from '@/content/grammar';
 import { LEVELS } from '@/content/levels';
-import { groupTopics, levelFamilies } from './grammarFilter';
+import { groupTopics, levelsWithTopics } from './grammarFilter';
 
 const make = (id: string, level: string, title: string, tagline = ''): GrammarTopic =>
   ({ ...GRAMMAR_TOPICS[0]!, id: id as GrammarTopic['id'], level, title, tagline }) as GrammarTopic;
@@ -29,8 +29,9 @@ describe('groupTopics', () => {
     expect(groupTopics(topics, LEVELS, 'zzz')).toEqual([]);
   });
 
-  it('filters by level family', () => {
-    expect(groupTopics(topics, LEVELS, '', 'a2').map((g) => g.level.id)).toEqual(['a2-2']);
-    expect(levelFamilies(topics)).toEqual(['a1', 'a2', 'b1']);
+  it('filters by level and lists the levels that have topics', () => {
+    expect(groupTopics(topics, LEVELS, '', 'a2-2').map((g) => g.level.id)).toEqual(['a2-2']);
+    expect(groupTopics(topics, LEVELS, 'wem', 'a2-2')).toEqual([]);
+    expect(levelsWithTopics(topics, LEVELS).map((l) => l.id)).toEqual(['a1-2', 'a2-2', 'b1-1']);
   });
 });

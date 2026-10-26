@@ -10,7 +10,7 @@ import { practiceActivities } from '@/lib/grammarPractice';
 import { t } from '@/i18n';
 import { NotFoundPage } from './NotFoundPage';
 
-const BACK_FALLBACK = '/library?view=grammar';
+const BACK_FALLBACK = '/grammar';
 
 export function GrammarPage() {
   const { topicId = '' } = useParams();
@@ -54,7 +54,7 @@ export function GrammarPage() {
         </Link>
       )}
       <header className="flex flex-col gap-2">
-        <LessonMeta topic={topic} levelLabel={getLevelMeta(topic.level)?.title ?? topic.level} />
+        <LessonMeta levelLabel={getLevelMeta(topic.level)?.title ?? topic.level} />
         <h1 className="font-display text-4xl font-semibold leading-tight text-ink">
           {topic.title}
         </h1>

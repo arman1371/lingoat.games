@@ -74,8 +74,6 @@ export const GrammarTopicSchema = z.object({
   /** topics worth reading next */
   related: z.array(lessonId),
   sources: z.array(z.object({ title: text, url: z.url() })).min(1),
-  /** true once a native speaker has checked the page; until then the lesson shows a draft note */
-  reviewed: z.boolean(),
 });
 export type GrammarTopic = z.infer<typeof GrammarTopicSchema>;
 

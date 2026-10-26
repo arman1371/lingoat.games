@@ -5,17 +5,17 @@ import { Skeleton } from '@/components/ui/Skeleton';
 import { StatePanel } from '@/components/ui/StatePanel';
 import { TextField } from '@/components/ui/TextField';
 import { LEVELS } from '@/content/levels';
-import { levelFamilies, groupTopics } from '@/lib/grammarFilter';
+import { groupTopics, levelsWithTopics } from '@/lib/grammarFilter';
 import { t } from '@/i18n';
 import { GrammarRow } from './GrammarRow';
 import { useGrammar } from './useGrammar';
 
-/** Every written lesson, grouped by the level that first teaches it; `?gq=` searches, `?glvl=` filters. */
+/** Every written lesson, grouped by the level that first teaches it; `?q=` searches, `?level=` filters. */
 export function GrammarIndex() {
   const grammar = useGrammar();
   const [params, setParams] = useSearchParams();
-  const q = params.get('gq') ?? '';
-  const lvl = params.get('glvl') ?? '';
+  const q = params.get('q') ?? '';
+  const lvl = params.get('level') ?? '';
   const set = (key: string, value: string) => {
     const next = new URLSearchParams(params);
     if (value) next.set(key, value);
@@ -38,7 +38,7 @@ export function GrammarIndex() {
       </div>
     );
   }
-  const families = levelFamilies(grammar.GRAMMAR_TOPICS);
+  const levels = levelsWithTopics(grammar.GRAMMAR_TOPICS, LEVELS);
 
   return (
     <div className="flex flex-col gap-4" data-testid="grammar-index">
@@ -47,15 +47,22 @@ export function GrammarIndex() {
         hideLabel
         type="search"
         value={q}
-        onChange={(e) => set('gq', e.target.value)}
+        onChange={(e) => set('q', e.target.value)}
         placeholder={t('grammar.search')}
       />
-      {families.length > 1 ? (
+      {levels.length > 1 ? (
         <fieldset className="flex flex-wrap gap-2">
           <legend className="sr-only">{t('library.level')}</legend>
-          {families.map((f) => (
-            <Chip key={f} selected={lvl === f} onToggle={() => set('glvl', lvl === f ? '' : f)}>
-              {f.toUpperCase()}
+          <Chip selected={lvl === ''} onToggle={() => set('level', '')}>
+            {t('grammar.all')}
+          </Chip>
+          {levels.map((l) => (
+            <Chip
+              key={l.id}
+              selected={lvl === l.id}
+              onToggle={() => set('level', lvl === l.id ? '' : l.id)}
+            >
+              {l.title}
             </Chip>
           ))}
         </fieldset>

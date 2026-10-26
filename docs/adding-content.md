@@ -80,12 +80,11 @@ typical mistakes and examples. Full lessons are written once per topic and linke
   `src/lib/german`) over typing forms by hand. Strings may contain `**bold**`; first table column is the row header.
 - Write in English with German examples. Do **not** copy text: read the references first, write in your own words and
   list the pages you actually read in `sources` (reusable entries live in `sources.ts`, overview in
-  `docs/grammar-sources.md`). Keep `reviewed: false` until a native speaker has checked the page; the lesson shows a
-  draft note until then.
-- UI: the unit screen has a Grammar card, `/library/grammar/:topicId` is the lesson page, the Library has a
-  Games / Grammar switch (`?view=grammar`), the level page lists its topics and the wrong-answer hint opens the lesson in
-  a sheet (`FullLessonLink`). The lessons are a separate chunk (`src/content/grammar/load.ts`).
-- Tests: `src/content/grammar/grammar.test.ts` (schema, links, levels, draft flag), `src/pages/grammar.test.tsx`,
+  `docs/grammar-sources.md`).
+- UI: Grammar is its own main-menu item (below Games): `/grammar` lists every lesson by level (level chips and
+  search), `/grammar/:topicId` is the lesson page. The unit screen has a Grammar card with the unit's topics and the
+  wrong-answer hint opens the lesson in a sheet (`FullLessonLink`). The level page does not list grammar. The lessons are a separate chunk (`src/content/grammar/load.ts`).
+- Tests: `src/content/grammar/grammar.test.ts` (schema, links, levels), `src/pages/grammar.test.tsx`,
   `src/components/grammar/grammar.test.tsx`, `e2e/grammar.spec.ts` and the pages in `e2e/a11y.spec.ts`.
 
 ## A new game engine

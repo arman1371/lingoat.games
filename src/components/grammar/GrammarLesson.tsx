@@ -190,22 +190,13 @@ export function GrammarLesson({ topic, level = 2 }: Props) {
   );
 }
 
-/** Level chip and the draft note shown under a lesson title. */
-export function LessonMeta({ topic, levelLabel }: { topic: GrammarTopic; levelLabel: string }) {
+/** The level chip shown under a lesson title. */
+export function LessonMeta({ levelLabel }: { levelLabel: string }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
       <span className="rounded-full border-2 border-primary-soft-line bg-primary-soft px-2.5 py-0.5 text-xs font-extrabold text-on-primary-soft">
         {levelLabel}
       </span>
-      {topic.reviewed ? null : (
-        <span
-          data-testid="draft-note"
-          className="inline-flex items-center gap-1 rounded-full border-2 border-warning-soft-line bg-warning-soft py-0.5 pl-2 pr-2.5 text-xs font-bold text-on-warning-soft"
-        >
-          <Icon name="info" size={14} />
-          {t('grammar.draft')}
-        </span>
-      )}
     </div>
   );
 }

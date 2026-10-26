@@ -27,8 +27,8 @@ for (const scheme of ['light', 'dark'] as const) {
       await card.getByTestId('grammar-dative').click();
 
       await expect(page.getByRole('heading', { level: 1, name: 'Dative (Wem?)' })).toBeVisible();
-      await expect(page).toHaveURL(/\/library\/grammar\/dative$/);
-      await expect(page.getByTestId('draft-note')).toBeVisible();
+      await expect(page).toHaveURL(/\/grammar\/dative$/);
+      await expect(page.getByText(/native-reviewed/)).toHaveCount(0);
       const table = page.getByRole('table', {
         name: /definite article in three cases; the dative/,
       });
@@ -41,12 +41,20 @@ for (const scheme of ['light', 'dark'] as const) {
       await expect(page).toHaveURL(/\/play\//);
     });
 
-    test('the library has a grammar index with search', async ({ page }) => {
+    test('the Grammar menu item opens an index with level filter and search', async ({ page }) => {
       test.slow();
-      await page.goto('/library?view=grammar');
+      await page.goto('/');
+      await page
+        .getByRole('navigation', { name: 'Main' })
+        .getByRole('link', { name: 'Grammar' })
+        .click();
+      await expect(page).toHaveURL(/\/grammar$/);
       const index = page.getByTestId('grammar-index');
       await expect(index.getByRole('heading', { level: 2, name: /A1\.1/ })).toBeVisible();
       await expectNoViolations(page, 'grammar index');
+      await index.getByRole('button', { name: 'A1.2' }).click();
+      await expect(index.getByRole('heading', { level: 2, name: /A1\.1/ })).toHaveCount(0);
+      await index.getByRole('button', { name: 'All' }).click();
       await page.getByRole('searchbox', { name: 'Search grammar topics' }).fill('perfekt');
       await expect(index.getByTestId('grammar-perfekt')).toBeVisible();
       await expect(index.getByTestId('grammar-dative')).toHaveCount(0);

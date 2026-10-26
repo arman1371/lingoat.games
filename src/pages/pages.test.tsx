@@ -758,7 +758,7 @@ describe('Routing', () => {
       '#main',
     );
     expect(screen.getByLabelText('2 items to review')).toBeInTheDocument();
-    for (const name of ['Learn', 'Games', 'Review', 'Progress', 'Profile']) {
+    for (const name of ['Learn', 'Games', 'Grammar', 'Review', 'Progress', 'Profile']) {
       expect(
         within(screen.getByRole('navigation', { name: 'Main' })).getByRole('link', {
           name: new RegExp(name),

@@ -22,7 +22,7 @@ describe('unit page grammar card', () => {
     expect(within(card).getByText('stehen / stellen, liegen / legen')).toBeInTheDocument();
 
     await user.click(screen.getByTestId('grammar-dative'));
-    expect(router.state.location.pathname).toBe('/library/grammar/dative');
+    expect(router.state.location.pathname).toBe('/grammar/dative');
     expect(await screen.findByRole('heading', { level: 1, name: 'Dative (Wem?)' })).toBeVisible();
   });
 
@@ -35,10 +35,10 @@ describe('unit page grammar card', () => {
 });
 
 describe('grammar lesson page', () => {
-  it('shows the full dative lesson with accessible tables and a draft note', async () => {
-    renderApp('/library/grammar/dative');
+  it('shows the full dative lesson with accessible tables', async () => {
+    renderApp('/grammar/dative');
     expect(await screen.findByRole('heading', { level: 1, name: 'Dative (Wem?)' })).toBeVisible();
-    expect(screen.getByTestId('draft-note')).toHaveTextContent('not yet native-reviewed');
+    expect(screen.queryByText(/native-reviewed/)).not.toBeInTheDocument();
     expect(screen.getByText('A1.2')).toBeInTheDocument();
 
     const lesson = screen.getByTestId('grammar-lesson');
@@ -73,47 +73,78 @@ describe('grammar lesson page', () => {
   });
 
   it('links to related topics, the units that use the topic and a practice game', async () => {
-    const { user, router } = renderApp('/library/grammar/dative');
+    const { user, router } = renderApp('/grammar/dative');
     await screen.findByRole('heading', { level: 1, name: 'Dative (Wem?)' });
     const units = screen.getByRole('region', { hidden: false, name: /used in these units/i });
     expect(within(units).getAllByRole('link', { name: /A1\.2 · / }).length).toBeGreaterThan(0);
     expect(screen.getByRole('link', { name: 'Accusative (Wen? Was?)' })).toHaveAttribute(
       'href',
-      '/library/grammar/accusative',
+      '/grammar/accusative',
     );
     const practise = screen.getByTestId('practise-topic');
     expect(practise).toHaveAttribute('href', expect.stringContaining('/play/'));
     await user.click(screen.getByRole('link', { name: 'Accusative (Wen? Was?)' }));
-    expect(router.state.location.pathname).toBe('/library/grammar/accusative');
+    expect(router.state.location.pathname).toBe('/grammar/accusative');
   });
 
   it('goes back to the grammar index when it was the first page of the session', async () => {
-    renderApp('/library/grammar/perfekt');
-    const back = await screen.findByRole('link', { name: 'Grammar' });
-    expect(back).toHaveAttribute('href', '/library?view=grammar');
+    renderApp('/grammar/perfekt');
+    await screen.findByRole('heading', { level: 1, name: 'The Perfekt' });
+    const back = within(screen.getByRole('main')).getByRole('link', { name: 'Grammar' });
+    expect(back).toHaveAttribute('href', '/grammar');
   });
 
   it('shows not-found for a topic that does not exist', async () => {
-    renderApp('/library/grammar/does-not-exist');
+    renderApp('/grammar/does-not-exist');
     expect(await screen.findByRole('heading', { name: 'Page not found' })).toBeInTheDocument();
   });
 });
 
-describe('grammar index in the library', () => {
-  it('switches between games and grammar and groups topics by level', async () => {
-    const { user, router } = renderApp('/library');
-    await user.click(await screen.findByRole('tab', { name: /Grammar/ }));
-    expect(router.state.location.search).toBe('?view=grammar');
+describe('grammar menu item', () => {
+  it('is in the main navigation below Games and lists the topics by level', async () => {
+    const { user, router } = renderApp('/');
+    const nav = await screen.findByRole('navigation', { name: 'Main' });
+    const labels = within(nav)
+      .getAllByRole('link')
+      .map((l) => l.textContent);
+    expect(labels).toEqual(['Learn', 'Games', 'Grammar', 'Review', 'Progress', 'Profile']);
+    await user.click(within(nav).getByRole('link', { name: 'Grammar' }));
+    expect(router.state.location.pathname).toBe('/grammar');
     const index = await screen.findByTestId('grammar-index');
     expect(within(index).getByRole('heading', { level: 2, name: /A1\.1/ })).toBeInTheDocument();
     expect(within(index).getByRole('heading', { level: 2, name: /A1\.2/ })).toBeInTheDocument();
     expect(within(index).getByTestId('grammar-word-order')).toBeInTheDocument();
-    await user.click(screen.getByRole('tab', { name: /Games/ }));
-    expect(await screen.findByTestId('result-count')).toBeInTheDocument();
+  });
+
+  it('keeps the Grammar item current on a lesson page', async () => {
+    renderApp('/grammar/dative');
+    await screen.findByRole('heading', { level: 1, name: 'Dative (Wem?)' });
+    const nav = screen.getByRole('navigation', { name: 'Main' });
+    expect(within(nav).getByRole('link', { name: 'Grammar' })).toHaveAttribute(
+      'aria-current',
+      'page',
+    );
+  });
+
+  it('filters the topics by level', async () => {
+    const { user, router } = renderApp('/grammar');
+    const index = await screen.findByTestId('grammar-index');
+    const chips = within(index).getByRole('group', { name: 'Level' });
+    expect(
+      within(chips)
+        .getAllByRole('button')
+        .map((b) => b.textContent),
+    ).toEqual(['All', 'A1.1', 'A1.2']);
+    await user.click(within(chips).getByRole('button', { name: 'A1.2' }));
+    expect(router.state.location.search).toBe('?level=a1-2');
+    expect(within(index).getByTestId('grammar-dative')).toBeInTheDocument();
+    expect(within(index).queryByTestId('grammar-word-order')).not.toBeInTheDocument();
+    await user.click(within(chips).getByRole('button', { name: 'All' }));
+    expect(within(index).getByTestId('grammar-word-order')).toBeInTheDocument();
   });
 
   it('searches topics and shows an empty state', async () => {
-    const { user } = renderApp('/library?view=grammar');
+    const { user } = renderApp('/grammar');
     const search = await screen.findByRole('searchbox', { name: 'Search grammar topics' });
     await user.type(search, 'dativ');
     expect(await screen.findByTestId('grammar-dative')).toBeInTheDocument();
@@ -124,22 +155,10 @@ describe('grammar index in the library', () => {
   });
 });
 
-describe('level page grammar list', () => {
-  it('lists each topic of the level once', async () => {
+describe('level page', () => {
+  it('no longer lists grammar topics under the learning path', async () => {
     renderApp('/levels/a1-2');
-    const list = await screen.findByTestId('level-grammar');
-    expect(within(list).getByRole('heading', { name: 'Grammar in A1.2' })).toBeInTheDocument();
-    const ids = within(list)
-      .getAllByRole('link')
-      .map((l) => l.getAttribute('data-testid'));
-    expect(new Set(ids).size).toBe(ids.length);
-    expect(ids).toContain('grammar-dative');
-    expect(ids).toContain('grammar-perfekt');
-  });
-
-  it('shows nothing for a level without lessons', async () => {
-    renderApp('/levels/b1-1');
-    await screen.findByRole('heading', { level: 1, name: 'B1.1' });
-    expect(screen.queryByTestId('level-grammar')).not.toBeInTheDocument();
+    await screen.findByRole('heading', { level: 1, name: 'A1.2' });
+    expect(screen.queryByText('Grammar in A1.2')).not.toBeInTheDocument();
   });
 });

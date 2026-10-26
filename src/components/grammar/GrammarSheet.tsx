@@ -43,10 +43,7 @@ export function GrammarSheet({ topic, open, onClose }: Props) {
               <h2 id={titleId} className="font-display text-3xl font-semibold">
                 {topic.title}
               </h2>
-              <LessonMeta
-                topic={topic}
-                levelLabel={getLevelMeta(topic.level)?.title ?? topic.level}
-              />
+              <LessonMeta levelLabel={getLevelMeta(topic.level)?.title ?? topic.level} />
             </div>
             <IconButton
               icon="close"
