@@ -42,7 +42,6 @@ function Gate() {
 const NAV = [
   { to: '/', label: 'nav.home', icon: 'map', end: true },
   { to: '/library', label: 'nav.library', icon: 'grid', end: false },
-  { to: '/grammar', label: 'nav.grammar', icon: 'type', end: false },
   { to: '/review', label: 'nav.review', icon: 'book', end: false },
   { to: '/progress', label: 'nav.progress', icon: 'chart', end: false },
   { to: '/profile', label: 'nav.profile', icon: 'user', end: false },
@@ -52,7 +51,7 @@ function MainNav({ mistakeCount }: { mistakeCount: number }) {
   return (
     <nav
       aria-label="Main"
-      className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-6 border-t border-line bg-surface px-2 pb-[env(safe-area-inset-bottom)] md:static md:flex md:flex-col md:gap-1 md:border-0 md:bg-transparent md:p-0"
+      className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t border-line bg-surface px-2 pb-[env(safe-area-inset-bottom)] md:static md:flex md:flex-col md:gap-1 md:border-0 md:bg-transparent md:p-0"
     >
       {NAV.map((n) => (
         <NavLink

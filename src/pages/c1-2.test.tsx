@@ -27,7 +27,7 @@ describe('Level C1.2', () => {
   });
 
   it('filters the library by the C1.2 level and only offers its units', async () => {
-    renderApp('/library?lvl=c1-2');
+    renderApp('/library?view=games&lvl=c1-2');
     await waitFor(() =>
       expect(screen.getByTestId('result-count')).toHaveTextContent(
         `${c12.activities.length} games`,

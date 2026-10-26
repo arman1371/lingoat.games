@@ -36,8 +36,7 @@ const PAGES: [string, string, string][] = [
   ['level A1.2', '/levels/a1-2', 'A1.2'],
   ['unit A1.2', '/levels/a1-2/units/a1-2-stadt', 'In der Stadt'],
   ['unit A1.2 with grammar card', '/levels/a1-2/units/a1-2-wohnen', 'Wohnen'],
-  ['grammar index', '/grammar', 'Grammar'],
-  ['grammar lesson', '/grammar/two-way-prepositions', 'Wo? or Wohin?'],
+  ['grammar lesson', '/library/grammar/two-way-prepositions', 'Wo? or Wohin?'],
   ['level A2.1', '/levels/a2-1', 'A2.1'],
   ['unit A2.1', '/levels/a2-1/units/a2-1-online', 'Online & Apps'],
   ['level A2.2', '/levels/a2-2', 'A2.2'],
@@ -58,8 +57,9 @@ const PAGES: [string, string, string][] = [
   ['unit C2.1', '/levels/c2-1/units/c2-1-sprache', 'Sprache & Zwischentöne'],
   ['level C2.2', '/levels/c2-2', 'C2.2'],
   ['unit C2.2', '/levels/c2-2/units/c2-2-kunst', 'Kunst & Ästhetik'],
-  ['library', '/library', 'Game library'],
-  ['library with level filter', '/library?lvl=a1-2', 'Game library'],
+  ['library grammar tab', '/library', 'Library'],
+  ['library games tab', '/library?view=games', 'Library'],
+  ['library with level filter', '/library?view=games&lvl=a1-2', 'Library'],
   ['review', '/review', 'Mistake box'],
   ['profile', '/profile', 'Profile'],
   ['progress', '/progress', 'Progress'],
@@ -74,7 +74,7 @@ for (const scheme of ['light', 'dark'] as const) {
     for (const [name, url, heading] of PAGES) {
       test(`${name} has no WCAG A/AA violations`, async ({ page }) => {
         // The library renders every game card; axe needs longer as the catalogue grows.
-        if (url.startsWith('/library')) test.slow();
+        if (url.startsWith('/library?view=games')) test.slow();
         await page.goto(url);
         await expect(page.getByRole('heading', { name: heading }).first()).toBeVisible();
         await expectNoViolations(page, name);

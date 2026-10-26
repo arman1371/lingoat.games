@@ -3,8 +3,7 @@ export const en = {
   tagline: 'Play your way through German',
   nav: {
     home: 'Learn',
-    library: 'Games',
-    grammar: 'Grammar',
+    library: 'Library',
     review: 'Review',
     progress: 'Progress',
     profile: 'Profile',
@@ -64,7 +63,10 @@ export const en = {
     notFound: 'This grammar topic does not exist.',
   },
   library: {
-    title: 'Game library',
+    title: 'Library',
+    games: 'Games',
+    view: 'Library view',
+    gamesIntro: 'Mix and match: filter by topic, grammar point, game type and more.',
     search: 'Search games',
     clear: 'Clear filters',
     results: '{n} games',

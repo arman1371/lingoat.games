@@ -84,7 +84,7 @@ protected by Turnstile, a rate limit and a Durable Object guard; see [report-a-p
 
 Full grammar topics live in `src/content/grammar/` (data, zod-validated) and are loaded as their own chunk by
 `useGrammar()`. Topic id = grammar tag = mini-lesson id; `unitTopics.ts` links units to topics. The same
-`GrammarLesson` renders the lesson page (`/grammar/:topicId`, listed at `/grammar`, a main-menu item) and the sheet that opens from a wrong-answer
+`GrammarLesson` renders the lesson page (`/library/grammar/:topicId`, listed on the Grammar tab of the Library) and the sheet that opens from a wrong-answer
 hint. See `docs/adding-content.md` (Grammar lessons) and `docs/grammar-sources.md`.
 
 ## Tags and filters

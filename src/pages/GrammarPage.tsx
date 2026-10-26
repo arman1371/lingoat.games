@@ -10,7 +10,7 @@ import { practiceActivities } from '@/lib/grammarPractice';
 import { t } from '@/i18n';
 import { NotFoundPage } from './NotFoundPage';
 
-const BACK_FALLBACK = '/grammar';
+const BACK_FALLBACK = '/library';
 
 export function GrammarPage() {
   const { topicId = '' } = useParams();

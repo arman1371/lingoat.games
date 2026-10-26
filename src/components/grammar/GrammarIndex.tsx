@@ -10,12 +10,12 @@ import { t } from '@/i18n';
 import { GrammarRow } from './GrammarRow';
 import { useGrammar } from './useGrammar';
 
-/** Every written lesson, grouped by the level that first teaches it; `?q=` searches, `?level=` filters. */
+/** Every written lesson, grouped by the level that first teaches it; `?gq=` searches, `?glvl=` filters. */
 export function GrammarIndex() {
   const grammar = useGrammar();
   const [params, setParams] = useSearchParams();
-  const q = params.get('q') ?? '';
-  const lvl = params.get('level') ?? '';
+  const q = params.get('gq') ?? '';
+  const lvl = params.get('glvl') ?? '';
   const set = (key: string, value: string) => {
     const next = new URLSearchParams(params);
     if (value) next.set(key, value);
@@ -47,20 +47,20 @@ export function GrammarIndex() {
         hideLabel
         type="search"
         value={q}
-        onChange={(e) => set('q', e.target.value)}
+        onChange={(e) => set('gq', e.target.value)}
         placeholder={t('grammar.search')}
       />
       {levels.length > 1 ? (
         <fieldset className="flex flex-wrap gap-2">
           <legend className="sr-only">{t('library.level')}</legend>
-          <Chip selected={lvl === ''} onToggle={() => set('level', '')}>
+          <Chip selected={lvl === ''} onToggle={() => set('glvl', '')}>
             {t('grammar.all')}
           </Chip>
           {levels.map((l) => (
             <Chip
               key={l.id}
               selected={lvl === l.id}
-              onToggle={() => set('level', lvl === l.id ? '' : l.id)}
+              onToggle={() => set('glvl', lvl === l.id ? '' : l.id)}
             >
               {l.title}
             </Chip>

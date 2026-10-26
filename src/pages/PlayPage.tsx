@@ -93,7 +93,7 @@ function PlayView({ activityId }: { activityId: string }) {
     ? '/review'
     : unit
       ? `/levels/${unit.levelId}/units/${unit.id}`
-      : '/library';
+      : '/library?view=games';
   const backLabel = review
     ? 'Back to mistake box'
     : unit

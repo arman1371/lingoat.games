@@ -53,7 +53,7 @@ test.describe('C2.2 – level navigation', () => {
 
 test.describe('C2.2 – library', () => {
   test('the level facet filters to C2.2 and narrows the unit chips', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     await page.getByRole('button', { name: 'C2.2', exact: true }).click();
     await expect(page).toHaveURL(/lvl=c2-2/);
@@ -64,7 +64,7 @@ test.describe('C2.2 – library', () => {
   });
 
   test('new C2.2 grammar and topic tags filter the games', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     for (const [label, tag] of [
       [/Long participial attributes/, 'c22-participial-attributes'],
@@ -84,7 +84,7 @@ test.describe('C2.2 – library', () => {
   });
 
   test('a shared URL with level and skill filters plays as a queue', async ({ page }) => {
-    await page.goto('/library?lvl=c2-2&skill=spelling');
+    await page.goto('/library?view=games&lvl=c2-2&skill=spelling');
     const games = c22.activities.filter((a) => a.tags.includes('spelling'));
     expect(games.length).toBe(9);
     await expect(page.getByTestId('result-count')).toHaveText(`${games.length} games`);

@@ -27,7 +27,7 @@ for (const scheme of ['light', 'dark'] as const) {
       await card.getByTestId('grammar-dative').click();
 
       await expect(page.getByRole('heading', { level: 1, name: 'Dative (Wem?)' })).toBeVisible();
-      await expect(page).toHaveURL(/\/grammar\/dative$/);
+      await expect(page).toHaveURL(/\/library\/grammar\/dative$/);
       await expect(page.getByText(/native-reviewed/)).toHaveCount(0);
       const table = page.getByRole('table', {
         name: /definite article in three cases; the dative/,
@@ -41,17 +41,23 @@ for (const scheme of ['light', 'dark'] as const) {
       await expect(page).toHaveURL(/\/play\//);
     });
 
-    test('the Grammar menu item opens an index with level filter and search', async ({ page }) => {
+    test('the Library opens on grammar with a level filter and search, games are the second tab', async ({
+      page,
+    }) => {
       test.slow();
       await page.goto('/');
       await page
         .getByRole('navigation', { name: 'Main' })
-        .getByRole('link', { name: 'Grammar' })
+        .getByRole('link', { name: 'Library' })
         .click();
-      await expect(page).toHaveURL(/\/grammar$/);
+      await expect(page).toHaveURL(/\/library$/);
+      await expect(page.getByRole('tab', { name: 'Grammar' })).toHaveAttribute(
+        'aria-selected',
+        'true',
+      );
       const index = page.getByTestId('grammar-index');
       await expect(index.getByRole('heading', { level: 2, name: /A1\.1/ })).toBeVisible();
-      await expectNoViolations(page, 'grammar index');
+      await expectNoViolations(page, 'library grammar tab');
       await index.getByRole('button', { name: 'A1.2' }).click();
       await expect(index.getByRole('heading', { level: 2, name: /A1\.1/ })).toHaveCount(0);
       await index.getByRole('button', { name: 'All' }).click();
@@ -60,6 +66,11 @@ for (const scheme of ['light', 'dark'] as const) {
       await expect(index.getByTestId('grammar-dative')).toHaveCount(0);
       await index.getByTestId('grammar-perfekt').click();
       await expect(page.getByRole('heading', { level: 1, name: 'The Perfekt' })).toBeVisible();
+
+      await page.goto('/library');
+      await page.getByRole('tab', { name: 'Games' }).click();
+      await expect(page).toHaveURL(/\/library\?view=games$/);
+      await expect(page.getByTestId('result-count')).toBeVisible();
     });
 
     test('after a mistake the full lesson opens over the game and keeps the round', async ({

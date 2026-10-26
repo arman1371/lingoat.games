@@ -81,7 +81,7 @@ test.describe('game library and filters', () => {
   test('filters by game type, topic and difficulty and reflects them in the URL', async ({
     page,
   }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await expect(page.getByTestId('result-count')).toHaveText(`${allActivities.length} games`);
     await page.getByText(/^Filters/).click();
 
@@ -102,7 +102,7 @@ test.describe('game library and filters', () => {
   });
 
   test('filters from a shared URL, then plays the filtered games as a queue', async ({ page }) => {
-    await page.goto('/library?unit=a1-1-hallo&type=quiz');
+    await page.goto('/library?view=games&unit=a1-1-hallo&type=quiz');
     const quizzes = content.activities.filter(
       (a) => a.unitId === 'a1-1-hallo' && a.gameType === 'quiz',
     );
@@ -114,7 +114,7 @@ test.describe('game library and filters', () => {
   });
 
   test('searches by text', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByLabel('Search games').fill('bakery');
     await expect(page.getByTestId('activity-card').first()).toContainText('bakery', {
       ignoreCase: true,

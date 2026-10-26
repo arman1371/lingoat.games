@@ -18,7 +18,7 @@ test('design tokens are applied', async ({ page }) => {
 });
 
 test('headings use the display font', async ({ page }) => {
-  await page.goto('/library');
+  await page.goto('/library?view=games');
   const family = await page
     .getByRole('heading', { level: 1 })
     .first()

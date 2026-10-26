@@ -44,4 +44,4 @@ export function queueAfter(ids: readonly string[], activityId: string): string[]
 }
 
 /** Full grammar lesson page; lives under the Games tab so the tab stays highlighted. */
-export const grammarUrl = (topicId: string) => `/grammar/${topicId}`;
+export const grammarUrl = (topicId: string) => `/library/grammar/${topicId}`;

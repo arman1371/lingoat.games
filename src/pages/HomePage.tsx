@@ -92,7 +92,7 @@ export function HomePage() {
           {(['quiz', 'flashcards', 'memory', 'gapfill'] as const).map((type) => (
             <li key={type}>
               <Link
-                to={`/library?type=${type}`}
+                to={`/library?view=games&type=${type}`}
                 data-testid={`home-game-${type}`}
                 className="press flex flex-col items-center gap-2 rounded-2xl border border-line bg-surface p-3 text-center font-bold text-ink shadow-(--shadow-1) hover:bg-surface-2"
               >
