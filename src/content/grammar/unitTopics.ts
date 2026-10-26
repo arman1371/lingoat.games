@@ -87,4 +87,30 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'comparison' },
     { topic: 'conjunctions' },
   ],
+  // ---- C2.1 -----------------------------------------------------------------------------------
+  'c2-1-sprache': [{ topic: 'c21-word-formation' }],
+  'c2-1-arbeit': [{ topic: 'c21-noun-verb' }],
+  'c2-1-wirtschaft': [{ topic: 'c21-contrast-cause' }],
+  'c2-1-digital': [
+    { topic: 'c21-consecutive', note: 'derart … dass, folglich, somit' },
+    { topic: 'c21-futur-2' },
+  ],
+  'c2-1-ki': [{ topic: 'c21-reported-speech' }],
+  'c2-1-medizin': [{ topic: 'c21-nominal-style' }],
+  'c2-1-psyche': [{ topic: 'c21-unreal' }],
+  'c2-1-medien': [{ topic: 'c21-text-cohesion' }],
+  'c2-1-debatte': [{ topic: 'c21-concession' }],
+  // ---- C2.2 -----------------------------------------------------------------------------------
+  'c2-2-kunst': [{ topic: 'c22-participial-attributes' }],
+  'c2-2-literatur': [{ topic: 'c22-subjective-modals' }],
+  'c2-2-kulturerbe': [{ topic: 'c22-passive-forms' }],
+  'c2-2-recht': [{ topic: 'c22-gerundive' }],
+  'c2-2-staat': [{ topic: 'c22-formal-genitive' }],
+  'c2-2-engagement': [{ topic: 'c22-prefix-verbs' }],
+  'c2-2-klima': [{ topic: 'c22-passive-alternatives' }],
+  'c2-2-nuancen': [{ topic: 'c22-nuance-particles' }],
+  'c2-2-stellung': [
+    { topic: 'c21-concession', note: 'conceding and rebutting' },
+    { topic: 'c21-text-cohesion', note: 'linking and concluding an argument' },
+  ],
 };

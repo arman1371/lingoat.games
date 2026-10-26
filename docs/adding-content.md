@@ -69,7 +69,7 @@ Every grammar tag has a short mini lesson (`src/content/lessons.ts`, shown after
 **full lesson**: a topic page with what the rule is, when and why it is used, tables, a comparison with related cases,
 typical mistakes and examples. Full lessons are written once per topic and linked from every unit that teaches them.
 
-- `src/content/grammar/<level>.ts` exports the topics of one level (`A11_TOPICS`, `A12_TOPICS` …); `index.ts` collects them.
+- `src/content/grammar/<level>.ts` exports the topics of one level (`A11_TOPICS`, `A12_TOPICS`, `C21_TOPICS`, `C22_TOPICS` …); `index.ts` collects them.
   The topic `id` is the grammar tag / mini-lesson id, so no activity needs re-tagging. `level` is the first level that
   teaches the topic (the content test checks this against `unitTopics.ts`).
 - `src/content/grammar/unitTopics.ts` maps unit ids to the topics they teach (`{ topic, note? }`, the note says what

@@ -142,11 +142,11 @@ describe('library menu: grammar tab first, games second', () => {
     const { user, router } = renderApp('/library');
     const index = await screen.findByTestId('grammar-index');
     const chips = within(index).getByRole('group', { name: 'Level' });
-    expect(
-      within(chips)
-        .getAllByRole('button')
-        .map((b) => b.textContent),
-    ).toEqual(['All', 'A1.1', 'A1.2']);
+    const levels = within(chips)
+      .getAllByRole('button')
+      .map((b) => b.textContent);
+    expect(levels.slice(0, 3)).toEqual(['All', 'A1.1', 'A1.2']);
+    expect(levels).toEqual(expect.arrayContaining(['C2.1', 'C2.2']));
     await user.click(within(chips).getByRole('button', { name: 'A1.2' }));
     expect(router.state.location.search).toBe('?glvl=a1-2');
     expect(within(index).getByTestId('grammar-dative')).toBeInTheDocument();

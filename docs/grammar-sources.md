@@ -34,6 +34,39 @@ ordinals), so they are covered by the unit tests of those helpers.
 | und, oder, aber, denn, sondern | [Konjunktion (Wortart)](<https://de.wikipedia.org/wiki/Konjunktion_(Wortart)>)                                                                                                                                                    |
 | Polite requests                | [Konjunktiv im Deutschen](https://de.wikipedia.org/wiki/Konjunktiv_II)                                                                                                                                                            |
 
+## C2.1 and C2.2 (18 topics)
+
+Shared reference list for both levels: `src/content/grammar/sourcesC2.ts`. All pages below were fetched and read; where a
+page did not state a detail, the lesson follows common textbook rules and is marked in "Limits".
+
+| Topic                            | Pages read                                                                                                                                                                                                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Suffixes and prefixes (C2.1)     | [Wortbildung](https://de.wikipedia.org/wiki/Wortbildung), Wiktionary suffix entries -bar, -los, -sam, -haft, -mäßig, -keit, -nis, -schaft, -ung                                                                                 |
+| Noun-verb combinations           | [Funktionsverbgefüge](https://de.wikipedia.org/wiki/Funktionsverbgef%C3%BCge), [Nominalstil](https://de.wikipedia.org/wiki/Nominalstil)                                                                                         |
+| Contrast and cause clauses       | Wiktionary [wohingegen](https://de.wiktionary.org/wiki/wohingegen), [zumal](https://de.wiktionary.org/wiki/zumal), [nämlich](https://de.wiktionary.org/wiki/n%C3%A4mlich), [indes](https://de.wiktionary.org/wiki/indes)        |
+| Formal result clauses            | Wiktionary [derart](https://de.wiktionary.org/wiki/derart), [folglich](https://de.wiktionary.org/wiki/folglich), [infolgedessen](https://de.wiktionary.org/wiki/infolgedessen), [mithin](https://de.wiktionary.org/wiki/mithin) |
+| Futur II                         | [Futur II](https://de.wikipedia.org/wiki/Futur_II)                                                                                                                                                                              |
+| Konjunktiv I (reported speech)   | [Indirekte Rede](https://de.wikipedia.org/wiki/Indirekte_Rede), [Konjunktiv I](https://de.wikipedia.org/wiki/Konjunktiv_I)                                                                                                      |
+| Nominal style                    | [Nominalstil](https://de.wikipedia.org/wiki/Nominalstil), [Funktionsverbgefüge](https://de.wikipedia.org/wiki/Funktionsverbgef%C3%BCge), [Präposition](https://de.wikipedia.org/wiki/Pr%C3%A4position)                          |
+| Unreal comparisons and hindsight | [Konjunktiv II](https://de.wikipedia.org/wiki/Konjunktiv_II), [Konditionalsatz](https://de.wikipedia.org/wiki/Konditionalsatz)                                                                                                  |
+| Linking sentences                | [Pronominaladverb](https://de.wikipedia.org/wiki/Pronominaladverb), [Konnektor (Grammatik)](<https://de.wikipedia.org/wiki/Konnektor_(Grammatik)>), Wiktionary zudem, hingegen, daraufhin                                       |
+| Concession in writing            | [Konzessivsatz](https://de.wikipedia.org/wiki/Konzessivsatz), Wiktionary wenngleich, allerdings, freilich, indes                                                                                                                |
+| Participles before nouns (C2.2)  | [Partizip](https://de.wikipedia.org/wiki/Partizip)                                                                                                                                                                              |
+| Modal verbs that judge or report | Wiktionary epistemisch, sollen, wollen, scheinen, drohen                                                                                                                                                                        |
+| Passive in every tense           | [Passiv (Grammatik)](<https://de.wikipedia.org/wiki/Passiv_(Grammatik)>)                                                                                                                                                        |
+| zu + Partizip I                  | [Gerundiv](https://de.wikipedia.org/wiki/Gerundiv), [Partizip](https://de.wikipedia.org/wiki/Partizip), [Passiv (Grammatik)](<https://de.wikipedia.org/wiki/Passiv_(Grammatik)>)                                                |
+| Formal genitive prepositions     | [Präposition](https://de.wikipedia.org/wiki/Pr%C3%A4position), Wiktionary angesichts, hinsichtlich, aufgrund, seitens                                                                                                           |
+| Separable or inseparable?        | [Präfix- und Partikelverben im Deutschen](https://de.wikipedia.org/wiki/Pr%C3%A4fix-_und_Partikelverben_im_Deutschen)                                                                                                           |
+| Ways to avoid the passive        | [Passivumschreibung](https://de.wikipedia.org/wiki/Passivumschreibung), [Passiv (Grammatik)](<https://de.wikipedia.org/wiki/Passiv_(Grammatik)>)                                                                                |
+| Modal particles and adverbs      | [Abtönungspartikel](https://de.wikipedia.org/wiki/Abt%C3%B6nungspartikel)                                                                                                                                                       |
+
+C2.2 unit 9 (`c2-2-stellung`) has no grammar tag of its own; it links the C2.1 topics on concession and linking sentences.
+
+Not found or not stating the detail, so the lessons follow common textbook rules there: the -reich / -voll suffixes (the
+Wiktionary page could not be fetched), the shift of time and place words in reported speech, the epistemic meanings of
+müssen, dürfte and können and the modality verbs versprechen and pflegen, the dative with `von` after genitive
+prepositions without a visible genitive, and the -keit / -heit choice (the page gives tendencies, not a full rule).
+
 ## Limits of the research
 
 - The Deutsche Welle learner pages could not be fetched, and the Duden grammar pages are not freely readable, so the
