@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router';
+import { LevelGrammar } from '@/components/grammar/LevelGrammar';
 import { Icon } from '@/components/ui/Icon';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { useContent } from '@/content/ContentProvider';
@@ -95,6 +96,7 @@ export function LevelPage() {
           );
         })}
       </ol>
+      <LevelGrammar levelId={levelId} />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { Link, useParams, useSearchParams } from 'react-router';
 import { ActivityCard } from '@/components/ActivityCard';
+import { UnitGrammar } from '@/components/grammar/UnitGrammar';
 import { Card } from '@/components/ui/Card';
 import { Icon } from '@/components/ui/Icon';
 import { TabPanel, Tabs } from '@/components/ui/Tabs';
@@ -54,12 +55,8 @@ export function UnitPage() {
               <li key={g}>{g}</li>
             ))}
           </ul>
-          {unit.grammar.length ? (
-            <p className="mt-2 text-sm text-muted">
-              <strong>{t('unit.grammar')}:</strong> {unit.grammar.join(' · ')}
-            </p>
-          ) : null}
         </Card>
+        <UnitGrammar unit={unit} />
         <Tabs
           id="unit-view"
           label="View"

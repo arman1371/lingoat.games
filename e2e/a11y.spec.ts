@@ -35,6 +35,8 @@ const PAGES: [string, string, string][] = [
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],
   ['unit A1.2', '/levels/a1-2/units/a1-2-stadt', 'In der Stadt'],
+  ['unit A1.2 with grammar card', '/levels/a1-2/units/a1-2-wohnen', 'Wohnen'],
+  ['grammar lesson', '/library/grammar/two-way-prepositions', 'Wo? or Wohin?'],
   ['level A2.1', '/levels/a2-1', 'A2.1'],
   ['unit A2.1', '/levels/a2-1/units/a2-1-online', 'Online & Apps'],
   ['level A2.2', '/levels/a2-2', 'A2.2'],

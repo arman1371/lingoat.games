@@ -18,6 +18,7 @@ export const routes: RouteObject[] = [
       { path: 'levels/:levelId', ...page(() => import('@/pages/LevelPage')) },
       { path: 'levels/:levelId/units/:unitId', ...page(() => import('@/pages/UnitPage')) },
       { path: 'library', ...page(() => import('@/pages/LibraryPage')) },
+      { path: 'library/grammar/:topicId', ...page(() => import('@/pages/GrammarPage')) },
       { path: 'play/:activityId', ...page(() => import('@/pages/PlayPage')) },
       { path: 'review', ...page(() => import('@/pages/ReviewPage')) },
       { path: 'progress', ...page(() => import('@/pages/ProgressPage')) },

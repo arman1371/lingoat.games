@@ -2,9 +2,11 @@ import { useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { ActivityCard } from '@/components/ActivityCard';
 import { Button } from '@/components/ui/Button';
+import { GrammarIndex } from '@/components/grammar/GrammarIndex';
 import { Chip } from '@/components/ui/Chip';
 import { Icon } from '@/components/ui/Icon';
 import { StatePanel } from '@/components/ui/StatePanel';
+import { TabPanel, Tabs } from '@/components/ui/Tabs';
 import { TextField } from '@/components/ui/TextField';
 import { useContent } from '@/content/ContentProvider';
 import { GAME_TYPES } from '@/content/gameTypes';
@@ -72,168 +74,197 @@ export function LibraryPage() {
     </fieldset>
   );
 
+  const view = params.get('view') === 'grammar' ? 'grammar' : 'games';
+  const setView = (v: 'games' | 'grammar') =>
+    setParams(v === 'grammar' ? { view: v } : {}, { replace: true });
+
   return (
     <div className="flex flex-col gap-6">
       <header>
-        <h1 className="font-display text-3xl font-bold text-ink">{t('library.title')}</h1>
+        <h1 className="font-display text-3xl font-bold text-ink">
+          {view === 'grammar' ? t('grammar.title') : t('library.title')}
+        </h1>
         <p className="text-muted">
-          Mix and match: filter by topic, grammar point, game type and more.
+          {view === 'grammar'
+            ? t('grammar.intro')
+            : 'Mix and match: filter by topic, grammar point, game type and more.'}
         </p>
       </header>
-
-      <div className="flex flex-col gap-3">
-        <TextField
-          label={t('library.search')}
-          hideLabel
-          type="search"
-          value={filters.q}
-          onChange={(e) => update({ q: e.target.value })}
-          placeholder={t('library.search')}
-        />
-        <details
-          className="rounded-2xl border-2 border-line bg-surface p-3"
-          open={panelOpen}
-          onToggle={(e) => setPanelOpen(e.currentTarget.open)}
-          data-testid="filters"
-        >
-          <summary className="flex min-h-11 cursor-pointer select-none items-center gap-2 py-2 text-lg font-bold text-ink">
-            <Icon name="filter" size={20} />
-            {t('library.filters')}
-            {count > 0 ? ` (${count})` : ''}
-          </summary>
-          <div className="mt-3 flex flex-col gap-5">
-            {levelsWithUnits.length > 1 && (
-              <fieldset className="flex flex-col gap-2">
-                <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
-                  {t('library.level')}
-                </legend>
-                <div className="flex flex-wrap gap-2">
-                  {levelsWithUnits.map((l) => (
-                    <Chip
-                      key={l.id}
-                      selected={filters.levels.includes(l.id)}
-                      onToggle={() => update({ levels: toggle(filters.levels, l.id) })}
-                    >
-                      {l.title}
-                    </Chip>
-                  ))}
-                </div>
-              </fieldset>
-            )}
-            <fieldset className="flex flex-col gap-2">
-              <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
-                Unit
-              </legend>
-              <div className="flex flex-wrap gap-2">
-                {visibleUnits.map((u) => (
-                  <Chip
-                    key={u.id}
-                    selected={filters.units.includes(u.id)}
-                    onToggle={() => update({ units: toggle(filters.units, u.id) })}
-                  >
-                    {u.emoji} {u.title}
-                  </Chip>
-                ))}
-              </div>
-            </fieldset>
-            {tagFacet('skill', 'skills')}
-            {tagFacet('topic', 'topics')}
-            {tagFacet('grammar', 'grammar')}
-            <fieldset className="flex flex-col gap-2">
-              <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
-                Game type
-              </legend>
-              <div className="flex flex-wrap gap-2">
-                {GAME_TYPES.map((g) => (
-                  <Chip
-                    key={g}
-                    selected={filters.types.includes(g)}
-                    onToggle={() => update({ types: toggle(filters.types, g) })}
-                  >
-                    {GAME_TYPE_LABELS[g].emoji} {GAME_TYPE_LABELS[g].label}
-                  </Chip>
-                ))}
-              </div>
-            </fieldset>
-            <fieldset className="flex flex-col gap-2">
-              <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
-                Difficulty &amp; length
-              </legend>
-              <div className="flex flex-wrap gap-2">
-                {([1, 2, 3] as const).map((d) => (
-                  <Chip
-                    key={d}
-                    selected={filters.difficulty.includes(d)}
-                    onToggle={() => update({ difficulty: toggle(filters.difficulty, d) })}
-                  >
-                    {DIFFICULTY_LABELS[d]}
-                  </Chip>
-                ))}
-                {(Object.keys(DURATION_LABELS) as DurationBucket[]).map((d) => (
-                  <Chip
-                    key={d}
-                    selected={filters.duration.includes(d)}
-                    onToggle={() => update({ duration: toggle(filters.duration, d) })}
-                  >
-                    ⏱ {DURATION_LABELS[d]}
-                  </Chip>
-                ))}
-              </div>
-            </fieldset>
-          </div>
-        </details>
-      </div>
-
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p
-          role="status"
-          aria-live="polite"
-          className="font-bold text-ink"
-          data-testid="result-count"
-        >
-          {t('library.results', { n: results.length })}
-        </p>
-        <div className="flex gap-2">
-          {count > 0 ? (
-            <Button variant="ghost" size="sm" onClick={() => setParams({}, { replace: true })}>
-              {t('library.clear')}
-            </Button>
-          ) : null}
-          {results.length > 0 ? (
-            <Link
-              to={playUrl(
-                results[0]!.id,
-                results.slice(1).map((a) => a.id),
-              )}
-              data-testid="play-queue"
-            >
-              <Button size="sm" icon={<Icon name="play" size={16} filled />}>
-                {t('library.playQueue')}
-              </Button>
-            </Link>
-          ) : null}
-        </div>
-      </div>
-
-      {results.length === 0 ? (
-        <StatePanel kind="empty" title={t('library.none')} />
-      ) : (
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-label="Games">
-          {results.map((a, i) => (
-            <li key={a.id}>
-              <ActivityCard
-                activity={a}
-                to={playUrl(
-                  a.id,
-                  results.slice(i + 1).map((x) => x.id),
-                )}
-                stars={progress[a.id]?.stars}
-                unitTitle={unitTitle(a.unitId)}
+      <Tabs
+        id="library-view"
+        label={t('grammar.view')}
+        value={view}
+        onChange={setView}
+        tabs={[
+          { value: 'games', label: t('library.games'), icon: 'grid' },
+          { value: 'grammar', label: t('grammar.title'), icon: 'book' },
+        ]}
+      />
+      <TabPanel id="library-view" value={view}>
+        {view === 'grammar' ? (
+          <GrammarIndex />
+        ) : (
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-3">
+              <TextField
+                label={t('library.search')}
+                hideLabel
+                type="search"
+                value={filters.q}
+                onChange={(e) => update({ q: e.target.value })}
+                placeholder={t('library.search')}
               />
-            </li>
-          ))}
-        </ul>
-      )}
+              <details
+                className="rounded-2xl border-2 border-line bg-surface p-3"
+                open={panelOpen}
+                onToggle={(e) => setPanelOpen(e.currentTarget.open)}
+                data-testid="filters"
+              >
+                <summary className="flex min-h-11 cursor-pointer select-none items-center gap-2 py-2 text-lg font-bold text-ink">
+                  <Icon name="filter" size={20} />
+                  {t('library.filters')}
+                  {count > 0 ? ` (${count})` : ''}
+                </summary>
+                <div className="mt-3 flex flex-col gap-5">
+                  {levelsWithUnits.length > 1 && (
+                    <fieldset className="flex flex-col gap-2">
+                      <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
+                        {t('library.level')}
+                      </legend>
+                      <div className="flex flex-wrap gap-2">
+                        {levelsWithUnits.map((l) => (
+                          <Chip
+                            key={l.id}
+                            selected={filters.levels.includes(l.id)}
+                            onToggle={() => update({ levels: toggle(filters.levels, l.id) })}
+                          >
+                            {l.title}
+                          </Chip>
+                        ))}
+                      </div>
+                    </fieldset>
+                  )}
+                  <fieldset className="flex flex-col gap-2">
+                    <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
+                      Unit
+                    </legend>
+                    <div className="flex flex-wrap gap-2">
+                      {visibleUnits.map((u) => (
+                        <Chip
+                          key={u.id}
+                          selected={filters.units.includes(u.id)}
+                          onToggle={() => update({ units: toggle(filters.units, u.id) })}
+                        >
+                          {u.emoji} {u.title}
+                        </Chip>
+                      ))}
+                    </div>
+                  </fieldset>
+                  {tagFacet('skill', 'skills')}
+                  {tagFacet('topic', 'topics')}
+                  {tagFacet('grammar', 'grammar')}
+                  <fieldset className="flex flex-col gap-2">
+                    <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
+                      Game type
+                    </legend>
+                    <div className="flex flex-wrap gap-2">
+                      {GAME_TYPES.map((g) => (
+                        <Chip
+                          key={g}
+                          selected={filters.types.includes(g)}
+                          onToggle={() => update({ types: toggle(filters.types, g) })}
+                        >
+                          {GAME_TYPE_LABELS[g].emoji} {GAME_TYPE_LABELS[g].label}
+                        </Chip>
+                      ))}
+                    </div>
+                  </fieldset>
+                  <fieldset className="flex flex-col gap-2">
+                    <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
+                      Difficulty &amp; length
+                    </legend>
+                    <div className="flex flex-wrap gap-2">
+                      {([1, 2, 3] as const).map((d) => (
+                        <Chip
+                          key={d}
+                          selected={filters.difficulty.includes(d)}
+                          onToggle={() => update({ difficulty: toggle(filters.difficulty, d) })}
+                        >
+                          {DIFFICULTY_LABELS[d]}
+                        </Chip>
+                      ))}
+                      {(Object.keys(DURATION_LABELS) as DurationBucket[]).map((d) => (
+                        <Chip
+                          key={d}
+                          selected={filters.duration.includes(d)}
+                          onToggle={() => update({ duration: toggle(filters.duration, d) })}
+                        >
+                          ⏱ {DURATION_LABELS[d]}
+                        </Chip>
+                      ))}
+                    </div>
+                  </fieldset>
+                </div>
+              </details>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <p
+                role="status"
+                aria-live="polite"
+                className="font-bold text-ink"
+                data-testid="result-count"
+              >
+                {t('library.results', { n: results.length })}
+              </p>
+              <div className="flex gap-2">
+                {count > 0 ? (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setParams({}, { replace: true })}
+                  >
+                    {t('library.clear')}
+                  </Button>
+                ) : null}
+                {results.length > 0 ? (
+                  <Link
+                    to={playUrl(
+                      results[0]!.id,
+                      results.slice(1).map((a) => a.id),
+                    )}
+                    data-testid="play-queue"
+                  >
+                    <Button size="sm" icon={<Icon name="play" size={16} filled />}>
+                      {t('library.playQueue')}
+                    </Button>
+                  </Link>
+                ) : null}
+              </div>
+            </div>
+
+            {results.length === 0 ? (
+              <StatePanel kind="empty" title={t('library.none')} />
+            ) : (
+              <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-label="Games">
+                {results.map((a, i) => (
+                  <li key={a.id}>
+                    <ActivityCard
+                      activity={a}
+                      to={playUrl(
+                        a.id,
+                        results.slice(i + 1).map((x) => x.id),
+                      )}
+                      stars={progress[a.id]?.stars}
+                      unitTitle={unitTitle(a.unitId)}
+                    />
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
+      </TabPanel>
     </div>
   );
 }

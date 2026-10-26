@@ -42,3 +42,6 @@ export function queueAfter(ids: readonly string[], activityId: string): string[]
   const i = ids.indexOf(activityId);
   return i < 0 ? [] : ids.slice(i + 1);
 }
+
+/** Full grammar lesson page; lives under the Games tab so the tab stays highlighted. */
+export const grammarUrl = (topicId: string) => `/library/grammar/${topicId}`;

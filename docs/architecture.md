@@ -80,6 +80,13 @@ Report a problem: a flag button in the play header files a GitHub issue through 
 protected by Turnstile, a rate limit and a Durable Object guard; see [report-a-problem.md](report-a-problem.md).
 `useSequence` tells the play page which item is on screen (`useReportItem`).
 
+## Grammar lessons
+
+Full grammar topics live in `src/content/grammar/` (data, zod-validated) and are loaded as their own chunk by
+`useGrammar()`. Topic id = grammar tag = mini-lesson id; `unitTopics.ts` links units to topics. The same
+`GrammarLesson` renders the lesson page (`/library/grammar/:topicId`) and the sheet that opens from a wrong-answer
+hint. See `docs/adding-content.md` (Grammar lessons) and `docs/grammar-sources.md`.
+
 ## Tags and filters
 
 `src/content/tags.ts` is the single vocabulary (skill / topic / grammar). Filter facets: level, unit, skill,
