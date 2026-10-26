@@ -28,7 +28,7 @@ unit list was researched from): what is new, what extends an earlier topic and w
    - `playability.test.tsx` → `describePlayability(content)` (`src/test/playability.tsx`: every activity is
      completed perfectly through the real engine).
 4. Add new tags (topics/grammar points) to `src/content/tags.ts` first – filters pick them up automatically.
-   The Library has a **Level** facet (`?lvl=a2-2`) that appears as soon as more than one level has units.
+   The Library's Games tab has a **Level** facet (`?lvl=a2-2`) that appears as soon as more than one level has units.
 5. Add an e2e flow for the new level (`e2e/a1-2.spec.ts`, `e2e/a2-1.spec.ts` and `e2e/a2-2.spec.ts` play one
    activity per engine and touch every unit) and add its pages to `e2e/a11y.spec.ts`. `e2e/helpers.ts` (`allActivities`) and `src/test/app.tsx`
    need the new pack added to their lists.
@@ -62,6 +62,32 @@ activity(U, 'gap',   'gapfill',    meta, { items: [ … ] });      // hand-writt
 Rules enforced by tests: 10–16 activities per unit, at least 6 game types, first activity easy (difficulty 1),
 last one titled "… challenge", ids prefixed with the unit id, item ids unique inside an activity.
 Order = guided path order (easy → hard). Aim for vocabulary → listening/spelling → grammar → conversation → challenge.
+
+## Grammar lessons
+
+Every grammar tag has a short mini lesson (`src/content/lessons.ts`, shown after a wrong answer) and may also have a
+**full lesson**: a topic page with what the rule is, when and why it is used, tables, a comparison with related cases,
+typical mistakes and examples. Full lessons are written once per topic and linked from every unit that teaches them.
+
+- `src/content/grammar/<level>.ts` exports the topics of one level (`A11_TOPICS`, `A12_TOPICS` …); `index.ts` collects them.
+  The topic `id` is the grammar tag / mini-lesson id, so no activity needs re-tagging. `level` is the first level that
+  teaches the topic (the content test checks this against `unitTopics.ts`).
+- `src/content/grammar/unitTopics.ts` maps unit ids to the topics they teach (`{ topic, note? }`, the note says what
+  this unit adds). Every unit of a level that has lessons needs at least one entry; units without entries keep the
+  one-line grammar list on the unit screen.
+- Build blocks with the helpers in `build.ts` (`p`, `list`, `table`, `examples`, `compare`, `mistake`, `tip`,
+  `section`). Prefer the generated tables (`articleTable`, `indefiniteTable`, `conjugationTable`, forms from
+  `src/lib/german`) over typing forms by hand. Strings may contain `**bold**`; first table column is the row header.
+- Write in English with German examples. Do **not** copy text: read the references first, write in your own words and
+  list the pages you actually read in `sources` (reusable entries live in `sources.ts`, overview in
+  `docs/grammar-sources.md`).
+- UI: the main-menu item **Library** has two tabs, **Grammar** first (the default at `/library`) and **Games**
+  (`/library?view=games` plus the game filters). The Grammar tab lists every lesson by level (level chips `?glvl=`,
+  search `?gq=`); `/library/grammar/:topicId` is the lesson page. The unit screen has a Grammar card with the unit's
+  topics and the wrong-answer hint opens the lesson in a sheet (`FullLessonLink`). The level page does not list
+  grammar. The lessons are a separate chunk (`src/content/grammar/load.ts`).
+- Tests: `src/content/grammar/grammar.test.ts` (schema, links, levels), `src/pages/grammar.test.tsx`,
+  `src/components/grammar/grammar.test.tsx`, `e2e/grammar.spec.ts` and the pages in `e2e/a11y.spec.ts`.
 
 ## A new game engine
 

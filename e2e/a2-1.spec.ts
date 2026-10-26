@@ -55,7 +55,7 @@ test.describe('A2.1 – level navigation', () => {
 
 test.describe('A2.1 – library', () => {
   test('the level facet filters to A2.1 and narrows the unit chips', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     await page.getByRole('button', { name: 'A2.1', exact: true }).click();
     await expect(page).toHaveURL(/lvl=a2-1/);
@@ -66,7 +66,7 @@ test.describe('A2.1 – library', () => {
   });
 
   test('new A2.1 grammar tags filter the games', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     for (const [label, tag] of [
       [/Reflexive verbs/, 'reflexive-verbs'],
@@ -83,7 +83,7 @@ test.describe('A2.1 – library', () => {
   });
 
   test('a shared URL with level and topic filters plays as a queue', async ({ page }) => {
-    await page.goto('/library?lvl=a2-1&topic=weather&type=gapfill');
+    await page.goto('/library?view=games&lvl=a2-1&topic=weather&type=gapfill');
     const games = a21.activities.filter(
       (a) => a.tags.includes('weather') && a.gameType === 'gapfill',
     );

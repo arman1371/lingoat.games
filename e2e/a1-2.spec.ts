@@ -51,7 +51,7 @@ test.describe('A1.2 – library', () => {
   test('the level facet filters by level, is reflected in the URL and narrows the unit chips', async ({
     page,
   }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     await page.getByRole('button', { name: 'A1.2', exact: true }).click();
     await expect(page).toHaveURL(/lvl=a1-2/);
@@ -68,7 +68,7 @@ test.describe('A1.2 – library', () => {
   });
 
   test('new grammar tags filter the games (Dative, Perfekt, Wo? / Wohin?)', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     for (const [label, tag] of [
       [/Dative/, 'dative'],
@@ -85,7 +85,7 @@ test.describe('A1.2 – library', () => {
   });
 
   test('a shared URL with level and topic filters plays as a queue', async ({ page }) => {
-    await page.goto('/library?lvl=a1-2&topic=housing&type=sortit');
+    await page.goto('/library?view=games&lvl=a1-2&topic=housing&type=sortit');
     const games = a12.activities.filter(
       (a) => a.tags.includes('housing') && a.gameType === 'sortit',
     );

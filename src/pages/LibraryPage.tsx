@@ -2,9 +2,11 @@ import { useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { ActivityCard } from '@/components/ActivityCard';
 import { Button } from '@/components/ui/Button';
+import { GrammarIndex } from '@/components/grammar/GrammarIndex';
 import { Chip } from '@/components/ui/Chip';
 import { Icon } from '@/components/ui/Icon';
 import { StatePanel } from '@/components/ui/StatePanel';
+import { TabPanel, Tabs } from '@/components/ui/Tabs';
 import { TextField } from '@/components/ui/TextField';
 import { useContent } from '@/content/ContentProvider';
 import { GAME_TYPES } from '@/content/gameTypes';
@@ -25,17 +27,25 @@ import {
 import { t } from '@/i18n';
 import { useProgressStore } from '@/store/progressStore';
 
+type View = 'grammar' | 'games';
+
+/** `view` is the first key so URLs read `?view=games&lvl=…`. */
+function withView(params: URLSearchParams, view: View): URLSearchParams {
+  return new URLSearchParams([['view', view], ...params]);
+}
+
 function toggle<T>(list: readonly T[], value: T): T[] {
   return list.includes(value) ? list.filter((v) => v !== value) : [...list, value];
 }
 
-export function LibraryPage() {
+/** Every game, filterable; `?view=games` plus the filter params. */
+function GameLibrary() {
   const content = useContent();
   const progress = useProgressStore((s) => s.activities);
   const [params, setParams] = useSearchParams();
   const filters = useMemo(() => filtersFromParams(params), [params]);
   const update = (patch: Partial<FilterState>) =>
-    setParams(filtersToParams({ ...filters, ...patch }), { replace: true });
+    setParams(withView(filtersToParams({ ...filters, ...patch }), 'games'), { replace: true });
 
   const results = useMemo(
     () => filterActivities(content.activities, filters, content.units),
@@ -74,13 +84,6 @@ export function LibraryPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <header>
-        <h1 className="font-display text-3xl font-bold text-ink">{t('library.title')}</h1>
-        <p className="text-muted">
-          Mix and match: filter by topic, grammar point, game type and more.
-        </p>
-      </header>
-
       <div className="flex flex-col gap-3">
         <TextField
           label={t('library.search')}
@@ -195,7 +198,11 @@ export function LibraryPage() {
         </p>
         <div className="flex gap-2">
           {count > 0 ? (
-            <Button variant="ghost" size="sm" onClick={() => setParams({}, { replace: true })}>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setParams({ view: 'games' }, { replace: true })}
+            >
               {t('library.clear')}
             </Button>
           ) : null}
@@ -234,6 +241,35 @@ export function LibraryPage() {
           ))}
         </ul>
       )}
+    </div>
+  );
+}
+
+/** The Library menu: grammar lessons first, then the game catalogue. */
+export function LibraryPage() {
+  const [params, setParams] = useSearchParams();
+  const view: View = params.get('view') === 'games' ? 'games' : 'grammar';
+  return (
+    <div className="flex flex-col gap-6">
+      <header>
+        <h1 className="font-display text-3xl font-bold text-ink">{t('library.title')}</h1>
+        <p className="text-muted">
+          {view === 'games' ? t('library.gamesIntro') : t('grammar.intro')}
+        </p>
+      </header>
+      <Tabs
+        id="library-view"
+        label={t('library.view')}
+        value={view}
+        onChange={(v: View) => setParams(v === 'games' ? { view: v } : {}, { replace: true })}
+        tabs={[
+          { value: 'grammar', label: t('grammar.title'), icon: 'type' },
+          { value: 'games', label: t('library.games'), icon: 'grid' },
+        ]}
+      />
+      <TabPanel id="library-view" value={view}>
+        {view === 'games' ? <GameLibrary /> : <GrammarIndex />}
+      </TabPanel>
     </div>
   );
 }

@@ -55,7 +55,7 @@ test.describe('B1.2 – level navigation', () => {
 
 test.describe('B1.2 – library', () => {
   test('the level facet filters to B1.2 and narrows the unit chips', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     await page.getByRole('button', { name: 'B1.2', exact: true }).click();
     await expect(page).toHaveURL(/lvl=b1-2/);
@@ -65,7 +65,7 @@ test.describe('B1.2 – library', () => {
   });
 
   test('new B1.2 grammar and topic tags filter the games', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     for (const [label, tag] of [
       [/Passive: wurde/, 'passive-past'],
@@ -84,7 +84,7 @@ test.describe('B1.2 – library', () => {
   });
 
   test('a shared URL with level and skill filters plays as a queue', async ({ page }) => {
-    await page.goto('/library?lvl=b1-2&skill=pronunciation');
+    await page.goto('/library?view=games&lvl=b1-2&skill=pronunciation');
     const games = b12.activities.filter((a) => a.tags.includes('pronunciation'));
     expect(games.length).toBe(2);
     await expect(page.getByTestId('result-count')).toHaveText(`${games.length} games`);

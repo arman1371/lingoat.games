@@ -74,7 +74,13 @@ test.describe('mobile layout', () => {
     isMobile,
   }) => {
     test.skip(!isMobile, 'phone only');
-    for (const url of ['/', '/library', '/levels/a1-1/units/a1-1-hallo', '/progress', '/profile']) {
+    for (const url of [
+      '/',
+      '/library?view=games',
+      '/levels/a1-1/units/a1-1-hallo',
+      '/progress',
+      '/profile',
+    ]) {
       await page.goto(url);
       const nav = page.getByRole('navigation', { name: 'Main' });
       await expect(nav).toBeVisible();

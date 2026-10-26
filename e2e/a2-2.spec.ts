@@ -59,7 +59,7 @@ test.describe('A2.2 – level navigation', () => {
 
 test.describe('A2.2 – library', () => {
   test('the level facet filters to A2.2 and narrows the unit chips', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     await page.getByRole('button', { name: 'A2.2', exact: true }).click();
     await expect(page).toHaveURL(/lvl=a2-2/);
@@ -70,7 +70,7 @@ test.describe('A2.2 – library', () => {
   });
 
   test('new A2.2 grammar tags and the pronunciation skill filter the games', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     for (const [label, tag] of [
       [/Konjunktiv II/, 'konjunktiv-2'],
@@ -88,7 +88,7 @@ test.describe('A2.2 – library', () => {
   });
 
   test('a shared URL with level and skill filters plays as a queue', async ({ page }) => {
-    await page.goto('/library?lvl=a2-2&skill=pronunciation');
+    await page.goto('/library?view=games&lvl=a2-2&skill=pronunciation');
     const games = a22.activities.filter((a) => a.tags.includes('pronunciation'));
     expect(games.length).toBe(4);
     await expect(page.getByTestId('result-count')).toHaveText(`${games.length} games`);

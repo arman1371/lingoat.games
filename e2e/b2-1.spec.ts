@@ -57,7 +57,7 @@ test.describe('B2.1 – level navigation', () => {
 
 test.describe('B2.1 – library', () => {
   test('the level facet filters to B2.1 and narrows the unit chips', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     await page.getByRole('button', { name: 'B2.1', exact: true }).click();
     await expect(page).toHaveURL(/lvl=b2-1/);
@@ -67,7 +67,7 @@ test.describe('B2.1 – library', () => {
   });
 
   test('new B2.1 grammar and topic tags filter the games', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     for (const [label, tag] of [
       [/Reported speech/, 'konjunktiv-1'],
@@ -87,7 +87,7 @@ test.describe('B2.1 – library', () => {
   });
 
   test('a shared URL with level and grammar filters plays as a queue', async ({ page }) => {
-    await page.goto('/library?lvl=b2-1&grammar=konjunktiv-1');
+    await page.goto('/library?view=games&lvl=b2-1&grammar=konjunktiv-1');
     const games = b21.activities.filter((a) => a.tags.includes('konjunktiv-1'));
     expect(games.length).toBeGreaterThan(3);
     await expect(page.getByTestId('result-count')).toHaveText(`${games.length} games`);

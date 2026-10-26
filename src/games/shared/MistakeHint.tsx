@@ -1,4 +1,5 @@
 import { LESSONS, type LessonId } from '@/content/lessons';
+import { FullLessonLink } from '@/components/grammar/FullLessonLink';
 import { Icon } from '@/components/ui/Icon';
 import { t } from '@/i18n';
 import { useActivityLesson } from './hints';
@@ -46,6 +47,7 @@ export function MistakeHint({ why, lesson }: Props) {
               </li>
             ))}
           </ul>
+          {id ? <FullLessonLink lesson={id} /> : null}
         </div>
       ) : null}
     </div>

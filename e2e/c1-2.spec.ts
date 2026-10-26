@@ -55,7 +55,7 @@ test.describe('C1.2 – level navigation', () => {
 
 test.describe('C1.2 – library', () => {
   test('the level facet filters to C1.2 and narrows the unit chips', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     await page.getByRole('button', { name: 'C1.2', exact: true }).click();
     await expect(page).toHaveURL(/lvl=c1-2/);
@@ -65,7 +65,7 @@ test.describe('C1.2 – library', () => {
   });
 
   test('new C1.2 grammar tags filter the games', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     for (const [label, tag] of [
       [/Nominal style/, 'nominal-style'],

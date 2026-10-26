@@ -57,7 +57,7 @@ test.describe('C2.1 – level navigation', () => {
 
 test.describe('C2.1 – library', () => {
   test('the level facet filters to C2.1 and narrows the unit chips', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     await page.getByRole('button', { name: 'C2.1', exact: true }).click();
     await expect(page).toHaveURL(/lvl=c2-1/);
@@ -67,7 +67,7 @@ test.describe('C2.1 – library', () => {
   });
 
   test('new C2.1 grammar and topic tags filter the games', async ({ page }) => {
-    await page.goto('/library');
+    await page.goto('/library?view=games');
     await page.getByText(/^Filters/).click();
     for (const [label, tag] of [
       [/Futur II/, 'c21-futur-2'],

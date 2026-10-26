@@ -154,7 +154,7 @@ describe('Level A1.2', () => {
   });
 
   it('filters the library by level and only offers that level’s units', async () => {
-    const { user } = renderApp('/library?lvl=a1-2');
+    const { user } = renderApp('/library?view=games&lvl=a1-2');
     await waitFor(() =>
       expect(screen.getByTestId('result-count')).toHaveTextContent(
         `${a12.activities.length} games`,
@@ -173,7 +173,7 @@ describe('Level A1.2', () => {
   }, 30_000);
 
   it('finds the new grammar tags in the library', async () => {
-    const { user } = renderApp('/library');
+    const { user } = renderApp('/library?view=games');
     await user.click(await screen.findByText(/Filters/));
     await user.click(screen.getByRole('button', { name: /Dative/ }));
     const dative = allActivities.filter((a) => a.tags.includes('dative')).length;
@@ -198,7 +198,7 @@ describe('Level A2.1', () => {
   });
 
   it('filters the library by the A2.1 level and only offers its units', async () => {
-    renderApp('/library?lvl=a2-1');
+    renderApp('/library?view=games&lvl=a2-1');
     await waitFor(() =>
       expect(screen.getByTestId('result-count')).toHaveTextContent(
         `${a21.activities.length} games`,
@@ -228,7 +228,7 @@ describe('Level A2.2', () => {
   });
 
   it('filters the library by the A2.2 level and only offers its units', async () => {
-    renderApp('/library?lvl=a2-2');
+    renderApp('/library?view=games&lvl=a2-2');
     await waitFor(() =>
       expect(screen.getByTestId('result-count')).toHaveTextContent(
         `${a22.activities.length} games`,
@@ -240,7 +240,7 @@ describe('Level A2.2', () => {
   }, 30_000);
 
   it('finds the pronunciation games through the skill filter', async () => {
-    renderApp('/library?lvl=a2-2&skill=pronunciation');
+    renderApp('/library?view=games&lvl=a2-2&skill=pronunciation');
     const pronunciation = a22.activities.filter((a) => a.tags.includes('pronunciation')).length;
     expect(pronunciation).toBeGreaterThan(0);
     await waitFor(() =>
@@ -265,7 +265,7 @@ describe('Level B1.1', () => {
   });
 
   it('filters the library by the B1.1 level and only offers its units', async () => {
-    renderApp('/library?lvl=b1-1');
+    renderApp('/library?view=games&lvl=b1-1');
     await waitFor(() =>
       expect(screen.getByTestId('result-count')).toHaveTextContent(
         `${b11.activities.length} games`,
@@ -293,7 +293,7 @@ describe('Level B1.2', () => {
   });
 
   it('filters the library by the B1.2 level and only offers its units', async () => {
-    renderApp('/library?lvl=b1-2');
+    renderApp('/library?view=games&lvl=b1-2');
     await waitFor(() =>
       expect(screen.getByTestId('result-count')).toHaveTextContent(
         `${b12.activities.length} games`,
@@ -325,7 +325,7 @@ describe('Level B2.1', () => {
   });
 
   it('filters the library by the B2.1 level and only offers its units', async () => {
-    renderApp('/library?lvl=b2-1');
+    renderApp('/library?view=games&lvl=b2-1');
     await waitFor(() =>
       expect(screen.getByTestId('result-count')).toHaveTextContent(
         `${b21.activities.length} games`,
@@ -359,7 +359,7 @@ describe('Level B2.2', () => {
   });
 
   it('filters the library by the B2.2 level and only offers its units', async () => {
-    renderApp('/library?lvl=b2-2');
+    renderApp('/library?view=games&lvl=b2-2');
     await waitFor(() =>
       expect(screen.getByTestId('result-count')).toHaveTextContent(
         `${b22.activities.length} games`,
@@ -387,7 +387,7 @@ describe('Level C1.1', () => {
   });
 
   it('filters the library by the C1.1 level and only offers its units', async () => {
-    renderApp('/library?lvl=c1-1');
+    renderApp('/library?view=games&lvl=c1-1');
     await waitFor(() =>
       expect(screen.getByTestId('result-count')).toHaveTextContent(
         `${c11.activities.length} games`,
@@ -415,7 +415,7 @@ describe('Level C2.2', () => {
   });
 
   it('filters the library by the C2.2 level and only offers its units', async () => {
-    renderApp('/library?lvl=c2-2');
+    renderApp('/library?view=games&lvl=c2-2');
     await waitFor(() =>
       expect(screen.getByTestId('result-count')).toHaveTextContent(
         `${c22.activities.length} games`,
@@ -429,7 +429,7 @@ describe('Level C2.2', () => {
 
 describe('Library', () => {
   it('lists every game and filters by game type, topic and unit', async () => {
-    const { user } = renderApp('/library');
+    const { user } = renderApp('/library?view=games');
     const total = allActivities.length;
     await waitFor(
       () => expect(screen.getByTestId('result-count')).toHaveTextContent(`${total} games`),
@@ -455,7 +455,7 @@ describe('Library', () => {
   }, 90_000);
 
   it('searches by text and shows an empty state', async () => {
-    const { user } = renderApp('/library');
+    const { user } = renderApp('/library?view=games');
     await screen.findByLabelText('Search games');
     await user.type(screen.getByLabelText('Search games'), 'zzzzzz');
     expect(screen.getByText('No games match these filters.')).toBeInTheDocument();
@@ -463,14 +463,14 @@ describe('Library', () => {
   }, 30_000);
 
   it('restores filters from the URL and builds a play queue in the shown order', async () => {
-    renderApp('/library?type=blitz&unit=a1-1-hallo');
+    renderApp('/library?view=games&type=blitz&unit=a1-1-hallo');
     await waitFor(() => expect(screen.getByTestId('result-count')).toHaveTextContent('1 games'));
     expect(screen.getByRole('button', { name: /Blitz/ })).toHaveAttribute('aria-pressed', 'true');
     expect(screen.getByTestId('play-queue')).toHaveAttribute('href', '/play/a1-1-hallo-blitz');
   }, 30_000);
 
   it('puts the rest of the results into the queue', async () => {
-    renderApp('/library?unit=a1-1-hallo&type=quiz');
+    renderApp('/library?view=games&unit=a1-1-hallo&type=quiz');
     const quizzes = content.activities.filter(
       (a) => a.unitId === 'a1-1-hallo' && a.gameType === 'quiz',
     );
@@ -758,7 +758,7 @@ describe('Routing', () => {
       '#main',
     );
     expect(screen.getByLabelText('2 items to review')).toBeInTheDocument();
-    for (const name of ['Learn', 'Games', 'Review', 'Progress', 'Profile']) {
+    for (const name of ['Learn', 'Library', 'Review', 'Progress', 'Profile']) {
       expect(
         within(screen.getByRole('navigation', { name: 'Main' })).getByRole('link', {
           name: new RegExp(name),
@@ -795,7 +795,7 @@ describe('Play flow – queues', () => {
 
 describe('Library – filter panel', () => {
   it('stays open when filters are cleared and starts open when the URL has filters', async () => {
-    const { user } = renderApp('/library?type=market');
+    const { user } = renderApp('/library?view=games&type=market');
     const panel = await screen.findByTestId('filters', {}, { timeout: 20_000 });
     expect(panel).toHaveAttribute('open');
     await user.click(screen.getByRole('button', { name: 'Clear filters' }));
@@ -868,6 +868,6 @@ describe('Daily goal', () => {
   it('links the home game shortcuts to the library filter', async () => {
     const { user, router } = renderApp('/');
     await user.click(await screen.findByTestId('home-game-quiz'));
-    expect(router.state.location.search).toBe('?type=quiz');
+    expect(router.state.location.search).toBe('?view=games&type=quiz');
   });
 });
