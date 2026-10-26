@@ -1,9 +1,10 @@
 import { configure, screen, within } from '@testing-library/react';
 import { renderApp, resetStores } from '@/test/app';
 
-// the first render of a file loads every level, which can take longer than the default second
-configure({ asyncUtilTimeout: 5000 });
-vi.setConfig({ testTimeout: 15000 });
+// every render loads all levels and the library queries a large DOM; CI runs ~100 test files in
+// parallel, so the default second (and even five) is too tight there
+configure({ asyncUtilTimeout: 30_000 });
+vi.setConfig({ testTimeout: 60_000 });
 
 beforeEach(resetStores);
 
