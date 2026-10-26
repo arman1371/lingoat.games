@@ -1,8 +1,8 @@
 # Grammar lesson sources
 
 The full grammar lessons (`src/content/grammar/`) are written in our own words. Every rule was checked against the
-pages below, which were fetched and read while writing; the same list is shown at the bottom of each lesson
-(`sources`). The German content has **not yet been reviewed by a native speaker**.
+pages below, which were fetched and read while writing; the same list is kept with each topic (`sources`, not shown
+on the lesson page). The German content has **not yet been reviewed by a native speaker**.
 
 Forms in tables are generated from `src/lib/german` where possible (articles, conjugation, Präteritum, Konjunktiv II,
 ordinals), so they are covered by the unit tests of those helpers.

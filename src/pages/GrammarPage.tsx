@@ -119,21 +119,6 @@ export function GrammarPage() {
           {t('grammar.practise')}
         </Link>
       ) : null}
-
-      <section aria-labelledby="grammar-sources" className="flex flex-col gap-1 text-sm text-muted">
-        <h2 id="grammar-sources" className="text-xs font-extrabold uppercase tracking-wide">
-          {t('grammar.sources')}
-        </h2>
-        <ul className="list-disc pl-5">
-          {topic.sources.map((s) => (
-            <li key={s.url}>
-              <a href={s.url} target="_blank" rel="noreferrer" className="underline">
-                {s.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
     </article>
   );
 }

@@ -55,7 +55,6 @@ export const en = {
     related: 'See also',
     usedIn: 'Used in these units',
     practise: 'Practise this topic',
-    sources: 'Sources',
     fullLesson: 'Full lesson: {title}',
     sheetClose: 'Close lesson',
     search: 'Search grammar topics',

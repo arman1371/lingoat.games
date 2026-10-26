@@ -66,10 +66,8 @@ describe('grammar lesson page', () => {
       within(lesson).getAllByTestId('example')[0]!.querySelector('[lang="de"]'),
     ).not.toBeNull();
     expect(within(lesson).getByTestId('compare')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Wikipedia (German): Dativ' })).toHaveAttribute(
-      'href',
-      'https://de.wikipedia.org/wiki/Dativ',
-    );
+    // the references live in the data and docs/grammar-sources.md, not on the page
+    expect(screen.queryByRole('heading', { name: 'Sources' })).not.toBeInTheDocument();
   });
 
   it('links to related topics, the units that use the topic and a practice game', async () => {
