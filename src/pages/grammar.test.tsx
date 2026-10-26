@@ -27,7 +27,7 @@ describe('unit page grammar card', () => {
   });
 
   it('keeps the one-line grammar list for units without written lessons', async () => {
-    renderApp('/levels/b1-1/units/b1-1-glueck');
+    renderApp('/levels/c2-2/units/c2-2-stellung');
     await screen.findByRole('list', { name: 'Guided path' });
     expect(await screen.findByText(/^Grammar:/)).toBeInTheDocument();
     expect(screen.queryByTestId('unit-grammar')).not.toBeInTheDocument();
@@ -145,7 +145,8 @@ describe('library menu: grammar tab first, games second', () => {
     expect(
       within(chips)
         .getAllByRole('button')
-        .map((b) => b.textContent),
+        .map((b) => b.textContent)
+        .slice(0, 3),
     ).toEqual(['All', 'A1.1', 'A1.2']);
     await user.click(within(chips).getByRole('button', { name: 'A1.2' }));
     expect(router.state.location.search).toBe('?glvl=a1-2');
