@@ -1,5 +1,7 @@
 import { A11_TOPICS } from './a1-1';
 import { A12_TOPICS } from './a1-2';
+import { C11_TOPICS } from './c1-1';
+import { C12_TOPICS } from './c1-2';
 import type { GrammarTopic, UnitTopicRef } from './schema';
 import { UNIT_TOPICS } from './unitTopics';
 
@@ -7,7 +9,12 @@ export type { Block, GrammarTopic, Section, UnitTopicRef } from './schema';
 export { UNIT_TOPICS };
 
 /** Every written lesson, in teaching order. Topics are added level by level. */
-export const GRAMMAR_TOPICS: readonly GrammarTopic[] = [...A11_TOPICS, ...A12_TOPICS];
+export const GRAMMAR_TOPICS: readonly GrammarTopic[] = [
+  ...A11_TOPICS,
+  ...A12_TOPICS,
+  ...C11_TOPICS,
+  ...C12_TOPICS,
+];
 
 export const GRAMMAR_TOPIC_BY_ID: ReadonlyMap<string, GrammarTopic> = new Map(
   GRAMMAR_TOPICS.map((t) => [t.id, t]),
