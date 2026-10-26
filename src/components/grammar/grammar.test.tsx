@@ -2,6 +2,7 @@ import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router';
 import { GRAMMAR_TOPIC_BY_ID } from '@/content/grammar';
+import { LESSON_IDS } from '@/content/lessons';
 import { ActivityLessonContext } from '@/games/shared/hints';
 import { MistakeHint } from '@/games/shared/MistakeHint';
 import { GrammarLesson } from './GrammarLesson';
@@ -88,9 +89,11 @@ describe('Full lesson link in the mistake hint', () => {
   });
 
   it('shows no link for a lesson that has no full version yet', async () => {
+    const unwritten = LESSON_IDS.find((id) => !GRAMMAR_TOPIC_BY_ID.has(id));
+    if (!unwritten) return; // every mini lesson has a full lesson now
     render(
       <MemoryRouter>
-        <ActivityLessonContext value="konjunktiv-2">
+        <ActivityLessonContext value={unwritten}>
           <MistakeHint why="Because." />
         </ActivityLessonContext>
       </MemoryRouter>,
