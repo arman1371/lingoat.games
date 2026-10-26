@@ -34,6 +34,34 @@ ordinals), so they are covered by the unit tests of those helpers.
 | und, oder, aber, denn, sondern | [Konjunktion (Wortart)](<https://de.wikipedia.org/wiki/Konjunktion_(Wortart)>)                                                                                                                                                    |
 | Polite requests                | [Konjunktiv im Deutschen](https://de.wikipedia.org/wiki/Konjunktiv_II)                                                                                                                                                            |
 
+## A2.1 and A2.2 (19 topics)
+
+| Topic                             | Pages read                                                                                                                                                                                                          |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| weil, wenn, dass: verb at the end | [Nebensatz](https://de.wikipedia.org/wiki/Nebensatz), Wiktionary [wenn](https://de.wiktionary.org/wiki/wenn), [Konjunktion (Wortart)](<https://de.wikipedia.org/wiki/Konjunktion_(Wortart)>)                        |
+| deshalb, trotzdem, dann           | [Konjunktionaladverb](https://de.wikipedia.org/wiki/Konjunktionaladverb), Wiktionary [deshalb](https://de.wiktionary.org/wiki/deshalb), [trotzdem](https://de.wiktionary.org/wiki/trotzdem)                         |
+| Reflexive verbs                   | [Reflexives Verb](https://de.wikipedia.org/wiki/Reflexives_Verb), [Personalpronomen](https://de.wikipedia.org/wiki/Personalpronomen), [Präpositionalobjekt](https://de.wikipedia.org/wiki/Pr%C3%A4positionalobjekt) |
+| man, jemand, einer, welche        | [Indefinitpronomen](https://de.wikipedia.org/wiki/Indefinitpronomen), Wiktionary [man](https://de.wiktionary.org/wiki/man), [niemand](https://de.wiktionary.org/wiki/niemand)                                       |
+| The superlative                   | [Komparation](https://de.wikipedia.org/wiki/Komparation), [Adjektiv](https://de.wikipedia.org/wiki/Adjektiv)                                                                                                        |
+| mit, von, zu, seit … + dative     | [Präposition](https://de.wikipedia.org/wiki/Pr%C3%A4position), [Dativ](https://de.wikipedia.org/wiki/Dativ), [Duden: Dativ](https://www.duden.de/rechtschreibung/Dativ)                                             |
+| Genitive                          | [Genitiv](https://de.wikipedia.org/wiki/Genitiv), [Artikel (Wortart)](<https://de.wikipedia.org/wiki/Artikel_(Wortart)>)                                                                                            |
+| Konjunktiv II                     | [Konjunktiv II](https://de.wikipedia.org/wiki/Konjunktiv_II), [Modalverb](https://de.wikipedia.org/wiki/Modalverb), [Nebensatz](https://de.wikipedia.org/wiki/Nebensatz)                                            |
+| um … zu or damit?                 | [Finalsatz](https://de.wikipedia.org/wiki/Finalsatz), [Trennbares Verb](https://de.wikipedia.org/wiki/Trennbares_Verb), Wiktionary [ohne](https://de.wiktionary.org/wiki/ohne)                                      |
+| als, wenn, bis, seitdem           | [Temporalsatz](https://de.wikipedia.org/wiki/Temporalsatz), Wiktionary [als](https://de.wiktionary.org/wiki/als), [wenn](https://de.wiktionary.org/wiki/wenn), [seitdem](https://de.wiktionary.org/wiki/seitdem)    |
+| Relative clauses                  | [Relativsatz](https://de.wikipedia.org/wiki/Relativsatz), [Nebensatz](https://de.wikipedia.org/wiki/Nebensatz), [Artikel (Wortart)](<https://de.wikipedia.org/wiki/Artikel_(Wortart)>)                              |
+| The passive                       | [Passiv (Grammatik)](<https://de.wikipedia.org/wiki/Passiv_(Grammatik)>), [Partizip II](https://de.wikipedia.org/wiki/Partizip_II)                                                                                  |
+| Verbs with fixed prepositions     | [Präpositionalobjekt](https://de.wikipedia.org/wiki/Pr%C3%A4positionalobjekt), [Pronominaladverb](https://de.wikipedia.org/wiki/Pronominaladverb), [Präposition](https://de.wikipedia.org/wiki/Pr%C3%A4position)    |
+| lassen                            | Wiktionary [lassen](https://de.wiktionary.org/wiki/lassen)                                                                                                                                                          |
+| Adjective endings                 | [Adjektiv](https://de.wikipedia.org/wiki/Adjektiv), [Artikel (Wortart)](<https://de.wikipedia.org/wiki/Artikel_(Wortart)>); the endings tables are generated from `src/lib/german/adjectives.ts`                    |
+| n-Deklination                     | Wiktionary [Kollege](https://de.wiktionary.org/wiki/Kollege), [Herr](https://de.wiktionary.org/wiki/Herr), [Plural](https://de.wikipedia.org/wiki/Plural)                                                           |
+| Indirect questions                | [Fragesatz](https://de.wikipedia.org/wiki/Fragesatz), [Nebensatz](https://de.wikipedia.org/wiki/Nebensatz)                                                                                                          |
+| Building words                    | [Wortbildung](https://de.wikipedia.org/wiki/Wortbildung), [Genus](https://de.wikipedia.org/wiki/Genus)                                                                                                              |
+| durch, entlang, vorbei, bis zu    | Wiktionary [durch](https://de.wiktionary.org/wiki/durch), [entlang](https://de.wiktionary.org/wiki/entlang), [vorbei](https://de.wiktionary.org/wiki/vorbei), [ohne](https://de.wiktionary.org/wiki/ohne)           |
+
+Several of these pages state little about the rules themselves (the Relativsatz page gives no agreement rule, Wortbildung
+says nothing on suffix gender or `-chen`, Adjektiv lists no endings). Those rules follow common textbook grammar and the
+generated forms in `src/lib/german`.
+
 ## Limits of the research
 
 - The Deutsche Welle learner pages could not be fetched, and the Duden grammar pages are not freely readable, so the

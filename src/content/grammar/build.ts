@@ -38,6 +38,10 @@ export const section = (id: string, heading: string, ...blocks: Block[]): Sectio
   blocks,
 });
 
+/** Dative plural nouns end in -n unless the plural already does: Lieder → Liedern, Autos stays. */
+export const datPlural = (noun: string, gender: Gender, c: Case): string =>
+  c === 'dat' && gender === 'pl' && !/[ns]$/.test(noun) ? `${noun}n` : noun;
+
 const GENDERS: Gender[] = ['m', 'f', 'n', 'pl'];
 const CASES: [Case, string][] = [
   ['nom', 'Nominative'],
