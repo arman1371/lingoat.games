@@ -310,4 +310,171 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'consecutive-clauses' },
     { topic: 'two-part-conjunctions', note: 'einerseits … andererseits' },
   ],
+  // ---- B2.1 -----------------------------------------------------------------------------------
+  'b2-1-beziehungen': [
+    { topic: 'nouns-with-prepositions', note: 'Angst vor, Interesse an, stolz auf' },
+    { topic: 'middle-field' },
+  ],
+  'b2-1-besitz': [
+    { topic: 'konjunktiv-1', note: 'er sei, sie habe, with Konjunktiv II as a replacement' },
+  ],
+  'b2-1-wohlbefinden': [
+    { topic: 'causal-expressions', note: 'aufgrund, infolge, angesichts, dank, aus, vor' },
+  ],
+  'b2-1-kommunikation': [
+    { topic: 'assumptions', note: 'Futur I and Futur II, wohl, vermutlich' },
+    { topic: 'es-dass', note: 'es, darauf / darüber, dass and zu + infinitive' },
+  ],
+  'b2-1-teamgeist': [
+    { topic: 'state-passive', note: 'ist unterschrieben vs. wird unterschrieben; von and durch' },
+  ],
+  'b2-1-lebenswege': [
+    { topic: 'temporal-connectors', note: 'solange, sobald, ehe, seitdem, sooft, bis' },
+  ],
+  'b2-1-gesellschaft': [
+    { topic: 'noun-verb-phrases', note: 'eine Entscheidung treffen, in Anspruch nehmen' },
+    { topic: 'passive', note: 'review: Petitionen werden unterschrieben, wurden eingereicht' },
+  ],
+  'b2-1-wohnen': [
+    { topic: 'relative-wer', note: 'wer / wen / wem for rules and notices' },
+    { topic: 'conditional-b2', note: 'falls, sofern, Hätte ich …, andernfalls' },
+  ],
+  'b2-1-medien': [{ topic: 'text-cohesion', note: 'dadurch, damit, dafür, darüber, daran, dabei' }],
+  'b2-1-wissenschaft': [
+    { topic: 'passive-alternatives', note: 'sich lassen, sein + zu, -bar' },
+    { topic: 'passive', note: 'review: wird gemessen, wurde bewiesen' },
+  ],
+  'b2-1-unterwegs': [
+    { topic: 'auch-wenn', note: 'auch wenn, selbst wenn, zwar … aber, dennoch' },
+    { topic: 'konjunktiv-2', note: 'review: Selbst wenn ich Zeit hätte, würde ich …' },
+  ],
+  'b2-1-klima': [
+    { topic: 'nominalisation', note: '-ung, -keit, -heit, der Anstieg der Preise' },
+    { topic: 'adversative', note: 'während, dagegen, hingegen, jedoch' },
+  ],
+  // ---- B2.2 -----------------------------------------------------------------------------------
+  'b2-2-beziehungen': [
+    { topic: 'noun-prepositions', note: 'Angst vor / um, Streit um / mit, Vorurteile gegen' },
+    { topic: 'comparative-clauses', note: 'genauso … wie, anders als, je nachdem, ob' },
+  ],
+  'b2-2-ernaehrung': [
+    { topic: 'modal-hearsay', note: 'sollen and wollen with infinitive Perfekt' },
+    { topic: 'nominalisation', note: 'weil … → wegen …, verzichten → der Verzicht' },
+  ],
+  'b2-2-studium': [
+    { topic: 'consecutive-connectors', note: 'folglich, infolgedessen, somit, zu … als dass' },
+    { topic: 'noun-verb-phrases', note: 'in Anspruch nehmen, zur Verfügung stellen' },
+    { topic: 'word-formation', note: 'negation with un-, in- / il- / ir- and -los' },
+  ],
+  'b2-2-service': [
+    {
+      topic: 'passive-alternatives',
+      note: 'man, sich lassen, sein + zu, -bar and the passive without a subject',
+    },
+  ],
+  'b2-2-gesundheit': [
+    { topic: 'irgend-pronouns', note: 'irgendjemand, einige, manche, mehrere, sämtliche' },
+    { topic: 'modal-clauses', note: 'indem, dadurch dass, mithilfe, ohne dass' },
+    { topic: 'purpose-clauses', note: 'damit and um … zu for the aim' },
+  ],
+  'b2-2-sprache': [
+    { topic: 'extended-participle', note: 'das vom Kunden bestellte Produkt' },
+    {
+      topic: 'adversative-connectors',
+      note: 'wohingegen, im Gegensatz zu, einerseits … andererseits',
+    },
+  ],
+  'b2-2-wirtschaft': [
+    { topic: 'concessive-advanced', note: 'obgleich, wenngleich, dennoch, trotz, ungeachtet' },
+  ],
+  'b2-2-kunst': [
+    { topic: 'relative-wer', note: 'wer, wen, wem, wessen and was in general statements' },
+    { topic: 'state-passive', note: 'wird restauriert vs. ist restauriert' },
+  ],
+  'b2-2-geschichte': [
+    {
+      topic: 'perfekt-double-infinitive',
+      note: 'Ich habe ihn kommen hören; … dass er hat gehen müssen',
+    },
+    { topic: 'perfekt', note: 'narrating the past' },
+    { topic: 'past-tense', note: 'Präteritum for narration' },
+    { topic: 'passive', note: 'Passiv Präteritum: wurde … gebaut' },
+    { topic: 'temporal-clauses', note: 'nachdem, bevor' },
+  ],
+  'b2-2-stadt': [
+    { topic: 'adjective-prepositions', note: 'stolz auf, zufrieden mit, abhängig von' },
+    { topic: 'verbs-with-prepositions', note: 'review: sich interessieren für, abhängen von' },
+  ],
+  'b2-2-druck': [
+    { topic: 'konjunktiv-1', note: 'the past with habe / sei and the Konjunktiv II replacement' },
+  ],
+  'b2-2-netz': [
+    { topic: 'modal-assumption', note: 'muss, dürfte, könnte, kann nicht + infinitive Perfekt' },
+  ],
+
+  // ---- C1.1 -----------------------------------------------------------------------------------
+  'c1-1-zeit': [
+    {
+      topic: 'formal-connectors',
+      note: 'andernfalls, folglich, hingegen; außer wenn vs. es sei denn',
+    },
+    { topic: 'word-order', note: 'the verb after an adverb connector' },
+    { topic: 'word-formation', note: 'ent-, miss-, zer-' },
+  ],
+  'c1-1-digital': [
+    { topic: 'subjective-modals', note: 'sollen, wollen, müssen, dürfte, könnte' },
+    { topic: 'modal-verbs', note: 'the objective meanings you already know' },
+  ],
+  'c1-1-sprache': [
+    { topic: 'konjunktiv-1', note: 'reported speech: er sagt, er habe …' },
+    { topic: 'verb-conjugation', note: 'the stem and endings that Konjunktiv I is built on' },
+  ],
+  'c1-1-manieren': [
+    { topic: 'noun-verb-phrases', note: 'in Betracht ziehen, Rücksicht nehmen, Kritik üben' },
+    { topic: 'nominal-style', note: 'the same phrases as a feature of formal writing' },
+  ],
+  'c1-1-tourismus': [
+    { topic: 'concessive-restrictive', note: 'wenngleich, so sehr … auch, es sei denn, nur dass' },
+  ],
+  'c1-1-arbeit': [
+    { topic: 'es-functions' },
+    { topic: 'intensifiers', note: 'ziemlich, äußerst, höchst, zu' },
+    { topic: 'comparison', note: 'graduating with comparatives: viel, weit, deutlich' },
+  ],
+  'c1-1-lebenswege': [{ topic: 'unreal-consecutive' }],
+  'c1-1-studium': [{ topic: 'participial-attributes' }],
+  'c1-1-konsum': [{ topic: 'prefix-verbs', note: 'miss-, zer-, ent-, ver-, be-' }],
+  'c1-1-wirtschaft': [
+    { topic: 'nominal-style', note: 'clauses as noun phrases: wegen, trotz, durch' },
+  ],
+  'c1-1-gesellschaft': [
+    { topic: 'modal-alternatives' },
+    { topic: 'lassen', note: 'sich lassen = can be done' },
+  ],
+  // ---- C1.2 -----------------------------------------------------------------------------------
+  'c1-2-finanzen': [{ topic: 'nominal-style' }, { topic: 'written-prepositions' }],
+  'c1-2-gesundheit': [{ topic: 'infinitive-perfect' }, { topic: 'nominal-style' }],
+  'c1-2-recht': [
+    { topic: 'passive', note: 'the forms to replace' },
+    { topic: 'passive-substitutes' },
+  ],
+  'c1-2-psychologie': [
+    { topic: 'subjective-modals', note: 'hearsay and doubt: soll, will, dürfte' },
+    { topic: 'word-formation' },
+  ],
+  'c1-2-stadt': [{ topic: 'advanced-connectors' }, { topic: 'adjective-complements' }],
+  'c1-2-literatur': [
+    { topic: 'advanced-connectors', note: 'linking arguments in a review' },
+    { topic: 'word-order', note: 'position 1 and the verb' },
+    { topic: 'word-formation' },
+  ],
+  'c1-2-kino': [{ topic: 'advanced-connectors' }, { topic: 'nominal-style' }],
+  'c1-2-geschaeft': [
+    { topic: 'advanced-connectors' },
+    { topic: 'comparison', note: 'doppelt so … wie, im Vergleich zu' },
+  ],
+  'c1-2-forschung': [{ topic: 'participial-clauses' }, { topic: 'written-prepositions' }],
+  'c1-2-team': [{ topic: 'conditional-clauses' }, { topic: 'modality-verbs' }],
+  'c1-2-nachhaltigkeit': [{ topic: 'participial-clauses' }, { topic: 'quantities-graphs' }],
+  'c1-2-vortrag': [{ topic: 'advanced-connectors' }, { topic: 'nominal-style' }],
 };

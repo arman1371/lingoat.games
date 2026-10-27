@@ -4,6 +4,10 @@ import a21 from '../a2-1';
 import a22 from '../a2-2';
 import b11 from '../b1-1';
 import b12 from '../b1-2';
+import b21 from '../b2-1';
+import b22 from '../b2-2';
+import c11 from '../c1-1';
+import c12 from '../c1-2';
 import { LESSONS } from '../lessons';
 import { articleTable, datPlural } from './build';
 import {
@@ -15,7 +19,18 @@ import {
 } from './index';
 import { GrammarTopicSchema, UnitTopicRefSchema, type Block } from './schema';
 
-const units = [...a11.units, ...a12.units, ...a21.units, ...a22.units, ...b11.units, ...b12.units];
+const units = [
+  ...a11.units,
+  ...a12.units,
+  ...a21.units,
+  ...a22.units,
+  ...b11.units,
+  ...b12.units,
+  ...b21.units,
+  ...b22.units,
+  ...c11.units,
+  ...c12.units,
+];
 const unitIds = new Set(units.map((u) => u.id));
 
 const strings = (b: Block): string[] => {
