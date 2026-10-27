@@ -1,4 +1,11 @@
-import { bareNoun, buildNounIndex, findGapNoun, isDeterminer } from './nouns';
+import {
+  bareNoun,
+  buildNounIndex,
+  drillsCase,
+  findGapNoun,
+  isDeterminer,
+  sentenceNouns,
+} from './nouns';
 
 const index = buildNounIndex([
   { de: 'Käse', article: 'der' },
@@ -110,5 +117,52 @@ describe('findGapNoun', () => {
 
   it('needs a blank', () => {
     expect(findGapNoun('Der Käse', 'der', index)).toBeNull();
+  });
+});
+
+describe('drillsCase', () => {
+  it('is true for a case or case-ending grammar tag', () => {
+    expect(drillsCase(['grammar', 'accusative'])).toBe(true);
+    expect(drillsCase(['dative-prepositions'])).toBe(true);
+    expect(drillsCase(['adjective-endings', 'food-drinks'])).toBe(true);
+  });
+
+  it('is false when the article itself is practised or no case is', () => {
+    expect(drillsCase(['accusative', 'articles'])).toBe(false);
+    expect(drillsCase(['articles'])).toBe(false);
+    expect(drillsCase(['perfekt', 'food-drinks'])).toBe(false);
+  });
+});
+
+describe('sentenceNouns', () => {
+  it('lists every known noun of the sentence once, in reading order', () => {
+    expect(sentenceNouns('Ich gebe dem Mann einen Käse für die Frau von dem Mann.', index)).toEqual(
+      [
+        { noun: 'Mann', article: 'der', gender: 'm' },
+        { noun: 'Käse', article: 'der', gender: 'm' },
+      ],
+    );
+  });
+
+  it('ignores the blank, unknown words and ambiguous spellings', () => {
+    expect(sentenceNouns('Ich gebe ___ Lehrer am See ein Geschenk.', index)).toEqual([
+      { noun: 'Lehrer', article: 'der', gender: 'm' },
+    ]);
+  });
+
+  it('skips a noun whose dictionary article already stands in front of it', () => {
+    expect(sentenceNouns('Ich sehe die Frau und dem Mann.', index)).toEqual([
+      { noun: 'Mann', article: 'der', gender: 'm' },
+    ]);
+  });
+
+  it('skips a bracketed hint', () => {
+    expect(sentenceNouns('Ich nehme ___ Käse. (der Käse)', index)).toEqual([
+      { noun: 'Käse', article: 'der', gender: 'm' },
+    ]);
+  });
+
+  it('returns nothing for a sentence without known nouns', () => {
+    expect(sentenceNouns('Wie geht es dir?', index)).toEqual([]);
   });
 });

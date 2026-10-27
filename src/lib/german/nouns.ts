@@ -109,3 +109,48 @@ export function findGapNoun(text: string, answer: string, index: NounIndex): Gap
   }
   return null;
 }
+
+/** Grammar tags of activities where the case of a noun phrase is the point of the question. */
+const CASE_TAGS: ReadonlySet<string> = new Set([
+  'accusative',
+  'dative',
+  'genitive',
+  'two-way-prepositions',
+  'dative-prepositions',
+  'genitive-prepositions',
+  'route-prepositions',
+  'written-prepositions',
+  'adjective-endings',
+  'relative-clauses',
+  'n-declension',
+  'possessives',
+]);
+
+/**
+ * True for an activity that drills a case (accusative, dative, …) rather than the article itself:
+ * its sentences list the dictionary article of their nouns so a missing article is never the reason
+ * for a wrong answer. An "articles" activity is the opposite (the article is the answer), so it
+ * never lists them.
+ */
+export const drillsCase = (tags: readonly string[]): boolean =>
+  !tags.includes('articles') && tags.some((t) => CASE_TAGS.has(t));
+
+/**
+ * Every noun of the sentence that the vocabulary knows, in reading order, once each, with its
+ * dictionary article. A noun is left out when the sentence already shows that very article in
+ * front of it ("das Haus"), and so is a bracketed hint such as "(der Käse)": both would repeat
+ * what is on screen.
+ */
+export function sentenceNouns(text: string, index: NounIndex): GapNoun[] {
+  const found: GapNoun[] = [];
+  const seen = new Set<string>();
+  const tokens = words(text.replace(/\([^)]*\)/g, ' ').replace(/___/g, ' '));
+  tokens.forEach((w, i) => {
+    const noun = isCapitalised(w) && !seen.has(w) ? lookup(w, index) : null;
+    if (!noun) return;
+    seen.add(w);
+    if (tokens[i - 1]?.toLowerCase() === noun.article) return;
+    found.push(noun);
+  });
+  return found;
+}
