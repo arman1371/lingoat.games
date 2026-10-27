@@ -17,6 +17,7 @@ import { CaseDrillContext } from '@/games/shared/SentenceNouns';
 import { ReportItemContext } from '@/games/shared/useReportItem';
 import { buildNounIndex, drillsCase } from '@/lib/german/nouns';
 import { buildWordPhotoIndex } from '@/lib/wordPhotos';
+import { FullLessonLink } from '@/components/grammar/FullLessonLink';
 import { lessonForTags } from '@/content/lessons';
 import { playUrl } from '@/app/path';
 import { parseSeed, randomSeed } from '@/lib/rng';
@@ -112,6 +113,7 @@ function PlayView({ activityId }: { activityId: string }) {
     ? `${playUrl(nextId, restQueue)}${review ? `${restQueue.length ? '&' : '?'}review=1` : ''}`
     : undefined;
 
+  const lesson = activity.lesson ?? lessonForTags(activity.tags);
   const exit = () => navigate(backTo);
   // Leaving mid-round loses its progress, so ask first; the intro and result screens leave at once.
   const requestExit = () => (started && !done ? setConfirmExit(true) : exit());
@@ -171,6 +173,7 @@ function PlayView({ activityId }: { activityId: string }) {
             {getItems(activity).length} {review ? 'items to review' : 'rounds'} · ~
             {activity.estMinutes} min
           </p>
+          {lesson ? <FullLessonLink lesson={lesson} intro /> : null}
           <Button ref={startRef} size="lg" onClick={() => setStarted(true)} data-testid="start">
             {review ? 'Start review' : t('common.start')}
           </Button>
@@ -186,7 +189,7 @@ function PlayView({ activityId }: { activityId: string }) {
             </p>
           }
         >
-          <ActivityLessonContext value={activity.lesson ?? lessonForTags(activity.tags)}>
+          <ActivityLessonContext value={lesson}>
             <NounIndexContext value={nounIndex}>
               <CaseDrillContext value={drillsCase(activity.tags)}>
                 <WordPhotoIndexContext value={photoIndex}>

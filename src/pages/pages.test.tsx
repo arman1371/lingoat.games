@@ -779,6 +779,21 @@ describe('Play flow – queues', () => {
     expect(screen.queryByText(/more in queue/)).not.toBeInTheDocument();
   });
 
+  it('offers the full grammar lesson on the intro of a grammar game, and not on a vocabulary game', async () => {
+    const grammar = activityById('a1-2-wohnen-gap-wo');
+    const { user } = renderApp(`/play/${grammar.id}?seed=1`);
+    const link = await screen.findByTestId('full-lesson');
+    expect(link).toHaveTextContent('Read first: Wo? or Wohin?');
+    await user.click(link);
+    expect(await screen.findByRole('dialog', { name: 'Wo? or Wohin?' })).toBeInTheDocument();
+  });
+
+  it('shows no lesson link on the intro of a vocabulary game', async () => {
+    renderApp(`/play/${activityById('a1-1-hallo-time-of-day').id}?seed=1`);
+    expect(await screen.findByTestId('start')).toBeInTheDocument();
+    expect(screen.queryByTestId('full-lesson')).not.toBeInTheDocument();
+  });
+
   it('"Next up" starts a fresh intro for the next game instead of keeping the old result', async () => {
     const first = activityById('a1-1-hallo-time-of-day');
     const next = activityById('a1-1-hallo-feelings');
