@@ -63,6 +63,13 @@ Noun article: gap fill and quiz gaps whose answer depends on a noun's article (`
 ending, a relative pronoun) show a "The noun" row in the feedback (`NounArticle`, same sheet for right and wrong). PlayPage
 provides the vocabulary as a `NounIndexContext` (`buildNounIndex`); engines rendered without it show no row.
 
+Noun articles up front: in case drills (activities tagged accusative, dative, genitive, two-way/dative/genitive
+prepositions, adjective endings, relative clauses, n-declension or possessives; `drillsCase`) gap fill, quiz and blitz
+show a non-interactive "Nouns" row (`SentenceNouns`) under the sentence with the dictionary article of every noun in it
+(`sentenceNouns`), before the player answers, so a missing article is never the reason for a wrong answer. PlayPage
+provides `CaseDrillContext` from the activity tags; an activity tagged only "articles" never shows it. Design: Penpot
+component "Noun Articles", screens "Gap Fill C" and "Blitz C".
+
 Answer sounds: `useSequence` plays a tiny synthesized right/wrong cue (`src/lib/sfx.ts`, Web Audio, no asset
 files) for every verdict. Dialogue (a cue per reply), blitz and memory call `useAnswerSound()` themselves;
 dialogue and self-graded flashcards pass `sounds: false` to `useSequence`. The "Sound effects" setting mutes

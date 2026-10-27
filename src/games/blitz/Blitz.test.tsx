@@ -1,5 +1,8 @@
 import { act, screen } from '@testing-library/react';
+import { buildNounIndex } from '@/lib/german/nouns';
 import { renderGame } from '@/test/render';
+import { NounIndexContext } from '../shared/NounArticle';
+import { CaseDrillContext } from '../shared/SentenceNouns';
 import Blitz from './Blitz';
 
 const statements = [
@@ -77,5 +80,28 @@ describe('Blitz', () => {
     expect(screen.getByTestId('timer')).toHaveTextContent('∞');
     for (let i = 0; i < 20; i++) act(() => void vi.advanceTimersByTime(1000));
     expect(onFinish).not.toHaveBeenCalled();
+  });
+
+  it('lists the nouns of the statement in a case drill, inside the card', async () => {
+    const dative = {
+      seconds: 30,
+      statements: [
+        { id: 'd1', text: 'Ich helfe dem Mann.', isTrue: true },
+        { id: 'd2', text: 'Ich helfe den Mann.', isTrue: false },
+        { id: 'd3', text: 'Er dankt dem Mann.', isTrue: true },
+        { id: 'd4', text: 'Er dankt den Mann.', isTrue: false },
+      ],
+    };
+    const nouns = buildNounIndex([{ de: 'Mann', article: 'der', plural: 'Männer' }]);
+    const { user } = renderGame(Blitz, dative, 1, {
+      advanceTimers: vi.advanceTimersByTime,
+      wrapper: ({ children }) => (
+        <NounIndexContext value={nouns}>
+          <CaseDrillContext value>{children}</CaseDrillContext>
+        </NounIndexContext>
+      ),
+    });
+    await user.click(screen.getByTestId('blitz-start'));
+    expect(screen.getByTestId('sentence-noun')).toHaveTextContent('der Mann');
   });
 });

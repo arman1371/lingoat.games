@@ -127,13 +127,11 @@ const CASE_TAGS: ReadonlySet<string> = new Set([
 ]);
 
 /**
- * True for an activity that drills a case (accusative, dative, …) rather than the article itself:
- * its sentences list the dictionary article of their nouns so a missing article is never the reason
- * for a wrong answer. An "articles" activity is the opposite (the article is the answer), so it
- * never lists them.
+ * True for an activity that drills a case (accusative, dative, …): its sentences list the dictionary
+ * article of their nouns so a missing article is never the reason for a wrong answer. An activity
+ * tagged only "articles" practises the article itself (it is the answer), so it never lists them.
  */
-export const drillsCase = (tags: readonly string[]): boolean =>
-  !tags.includes('articles') && tags.some((t) => CASE_TAGS.has(t));
+export const drillsCase = (tags: readonly string[]): boolean => tags.some((t) => CASE_TAGS.has(t));
 
 /**
  * Every noun of the sentence that the vocabulary knows, in reading order, once each, with its

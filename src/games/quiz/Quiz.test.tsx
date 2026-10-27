@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { buildNounIndex } from '@/lib/german/nouns';
 import { renderGame } from '@/test/render';
 import { NounIndexContext } from '../shared/NounArticle';
+import { CaseDrillContext } from '../shared/SentenceNouns';
 import Quiz from './Quiz';
 
 const config = {
@@ -51,6 +52,20 @@ describe('Quiz noun article', () => {
     renderGap();
     await userEvent.click(screen.getByRole('button', { name: pick }));
     expect(screen.getByTestId('noun-article-noun')).toHaveTextContent('der Käse');
+  });
+
+  it('lists the nouns of the prompt up front in a case drill only', () => {
+    const { unmount } = render(
+      <NounIndexContext value={buildNounIndex([{ de: 'Käse', article: 'der' }])}>
+        <CaseDrillContext value>
+          <Quiz config={gap} seed={1} onFinish={vi.fn()} />
+        </CaseDrillContext>
+      </NounIndexContext>,
+    );
+    expect(screen.getByTestId('sentence-noun')).toHaveTextContent('der Käse');
+    unmount();
+    renderGap();
+    expect(screen.queryByTestId('sentence-nouns')).not.toBeInTheDocument();
   });
 
   it('shows no noun row for a plain vocabulary question', async () => {

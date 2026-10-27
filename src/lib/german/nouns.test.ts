@@ -125,10 +125,10 @@ describe('drillsCase', () => {
     expect(drillsCase(['grammar', 'accusative'])).toBe(true);
     expect(drillsCase(['dative-prepositions'])).toBe(true);
     expect(drillsCase(['adjective-endings', 'food-drinks'])).toBe(true);
+    expect(drillsCase(['accusative', 'articles'])).toBe(true);
   });
 
-  it('is false when the article itself is practised or no case is', () => {
-    expect(drillsCase(['accusative', 'articles'])).toBe(false);
+  it('is false when only the article itself is practised or no case is', () => {
     expect(drillsCase(['articles'])).toBe(false);
     expect(drillsCase(['perfekt', 'food-drinks'])).toBe(false);
   });

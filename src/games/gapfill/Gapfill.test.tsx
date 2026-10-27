@@ -5,6 +5,7 @@ import { stubSpeech } from '@/test/speech';
 import { DEFAULT_SETTINGS, useSettingsStore } from '@/store/settingsStore';
 import { buildNounIndex } from '@/lib/german/nouns';
 import { NounIndexContext } from '../shared/NounArticle';
+import { CaseDrillContext } from '../shared/SentenceNouns';
 import Gapfill from './Gapfill';
 
 const chips = {
@@ -42,6 +43,23 @@ const renderWithNouns = (config: typeof cheese) =>
   );
 
 describe('Gapfill', () => {
+  it('lists the nouns of the sentence before answering in a case drill', () => {
+    render(
+      <NounIndexContext value={nouns}>
+        <CaseDrillContext value>
+          <Gapfill config={cheese} seed={1} onFinish={vi.fn()} />
+        </CaseDrillContext>
+      </NounIndexContext>,
+    );
+    expect(screen.getByTestId('sentence-noun')).toHaveTextContent('der Käse');
+    expect(screen.queryByTestId('feedback')).not.toBeInTheDocument();
+  });
+
+  it('lists no nouns up front outside a case drill', () => {
+    renderWithNouns(cheese);
+    expect(screen.queryByTestId('sentence-nouns')).not.toBeInTheDocument();
+  });
+
   it.each([
     ['den', 'correct'],
     ['dem', 'wrong'],

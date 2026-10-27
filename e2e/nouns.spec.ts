@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
-import { buildNounIndex, findGapNoun } from '../src/lib/german/nouns';
+import { buildNounIndex, findGapNoun, sentenceNouns } from '../src/lib/german/nouns';
 import { activity, allVocab, SEED } from './helpers';
 
 const nouns = buildNounIndex(allVocab);
@@ -62,6 +62,52 @@ test.describe('noun article in the answer feedback', () => {
         .getByRole('button', { name: item.options!.find((o) => o !== item.answer)!, exact: true })
         .click();
       await expect(page.getByTestId('noun-article')).toBeVisible();
+      await page.evaluate(() =>
+        Promise.allSettled(document.getAnimations().map((anim) => anim.finished)),
+      );
+      const results = await new AxeBuilder({ page })
+        .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+        .analyze();
+      expect(results.violations.map((v) => v.id)).toEqual([]);
+    });
+  }
+});
+
+test.describe('noun articles up front in a case drill', () => {
+  const CASE_DRILL = 'a2-1-wohnung-gap-wohin';
+
+  test('lists the articles of the sentence before the player answers', async ({ page }) => {
+    const a = activity(CASE_DRILL);
+    if (a.gameType !== 'gapfill') throw new Error('expected a gap fill');
+    await page.goto(`/play/${CASE_DRILL}?seed=${SEED}`);
+    await page.getByTestId('start').click();
+    for (let round = 0; round < a.config.items.length; round++) {
+      const shown = squash(await page.getByTestId('sentence').innerText());
+      const item = a.config.items.find((i) => squash(i.text.replace('___', '…')) === shown)!;
+      const expected = sentenceNouns(item.text, nouns).map((n) => `${n.article} ${n.noun}`);
+      if (expected.length) {
+        await expect(page.getByTestId('sentence-noun')).toHaveText(expected);
+      } else {
+        await expect(page.getByTestId('sentence-nouns')).toHaveCount(0);
+      }
+      await page.getByRole('button', { name: item.answer, exact: true }).click();
+      await page.getByTestId('continue').click();
+    }
+  });
+
+  test('stays out of a game that practises the article itself', async ({ page }) => {
+    await page.goto(`/play/a1-1-einkaufen-gap-articles?seed=${SEED}`);
+    await page.getByTestId('start').click();
+    await expect(page.getByTestId('sentence')).toBeVisible();
+    await expect(page.getByTestId('sentence-nouns')).toHaveCount(0);
+  });
+
+  for (const scheme of ['light', 'dark'] as const) {
+    test(`the noun row passes axe (${scheme})`, async ({ page }) => {
+      await page.emulateMedia({ colorScheme: scheme });
+      await page.goto(`/play/${CASE_DRILL}?seed=${SEED}`);
+      await page.getByTestId('start').click();
+      await expect(page.getByTestId('sentence-nouns')).toBeVisible();
       await page.evaluate(() =>
         Promise.allSettled(document.getAnimations().map((anim) => anim.finished)),
       );

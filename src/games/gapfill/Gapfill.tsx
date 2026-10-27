@@ -8,6 +8,7 @@ import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
 import { shuffledOptions } from '../shared/choices';
 import { MistakeHint } from '../shared/MistakeHint';
 import { NounArticle } from '../shared/NounArticle';
+import { SentenceNouns } from '../shared/SentenceNouns';
 import { mistakeWhy } from '../shared/hints';
 import { useSpeakSentence } from '../shared/useSentenceSpeech';
 import { useSequence } from '../shared/useSequence';
@@ -110,6 +111,7 @@ export function Gapfill({ config, seed, onFinish }: GameProps<'gapfill'>) {
         </p>
         {item.translation ? <p className="mt-2 text-muted">{item.translation}</p> : null}
       </div>
+      <SentenceNouns text={item.text} />
       {options ? (
         <ChoiceList
           options={options}
