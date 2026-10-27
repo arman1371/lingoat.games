@@ -92,6 +92,24 @@ for (const scheme of ['light', 'dark'] as const) {
       await expect(page.getByTestId('result-count')).toBeVisible();
     });
 
+    test('the intro of a grammar game links the lesson to read before starting', async ({
+      page,
+    }) => {
+      const id = 'a1-2-wohnen-gap-wo';
+      await page.goto(`/play/${id}?seed=${SEED}`);
+      const open = page.getByTestId('full-lesson');
+      await expect(open).toContainText('Read first: Wo? or Wohin?');
+      await expectNoViolations(page, 'game intro with lesson link');
+      await open.click();
+      const sheet = page.getByRole('dialog', { name: 'Wo? or Wohin?' });
+      await expect(sheet).toBeVisible();
+      await page.keyboard.press('Escape');
+      await expect(sheet).toBeHidden();
+      await expect(open).toBeFocused();
+      await page.getByTestId('start').click();
+      await expect(page.getByTestId('sentence')).toBeVisible();
+    });
+
     test('after a mistake the full lesson opens over the game and keeps the round', async ({
       page,
     }) => {
