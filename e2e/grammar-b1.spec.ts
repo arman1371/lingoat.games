@@ -22,7 +22,7 @@ for (const scheme of ['light', 'dark'] as const) {
       await page.goto('/levels/b1-1/units/b1-1-glueck');
       const card = page.getByTestId('unit-grammar');
       await expect(card).toBeVisible();
-      await expect(card.getByRole('link')).toHaveCount(2);
+      await expect(card.getByRole('link')).toHaveCount(3);
       await card.getByTestId('grammar-plusquamperfekt').click();
 
       await expect(
