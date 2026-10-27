@@ -27,7 +27,7 @@ describe('unit page grammar card', () => {
   });
 
   it('keeps the one-line grammar list for units without written lessons', async () => {
-    renderApp('/levels/b1-1/units/b1-1-glueck');
+    renderApp('/levels/c2-2/units/c2-2-stellung');
     await screen.findByRole('list', { name: 'Guided path' });
     expect(await screen.findByText(/^Grammar:/)).toBeInTheDocument();
     expect(screen.queryByTestId('unit-grammar')).not.toBeInTheDocument();

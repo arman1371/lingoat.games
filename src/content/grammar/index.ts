@@ -2,6 +2,8 @@ import { A11_TOPICS } from './a1-1';
 import { A12_TOPICS } from './a1-2';
 import { A21_TOPICS } from './a2-1';
 import { A22_TOPICS } from './a2-2';
+import { B11_TOPICS } from './b1-1';
+import { B12_TOPICS } from './b1-2';
 import { B21_TOPICS } from './b2-1';
 import { B22_TOPICS } from './b2-2';
 import { C11_TOPICS } from './c1-1';
@@ -18,6 +20,8 @@ export const GRAMMAR_TOPICS: readonly GrammarTopic[] = [
   ...A12_TOPICS,
   ...A21_TOPICS,
   ...A22_TOPICS,
+  ...B11_TOPICS,
+  ...B12_TOPICS,
   ...B21_TOPICS,
   ...B22_TOPICS,
   ...C11_TOPICS,

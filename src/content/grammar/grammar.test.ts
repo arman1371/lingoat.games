@@ -2,6 +2,8 @@ import a11 from '../a1-1';
 import a12 from '../a1-2';
 import a21 from '../a2-1';
 import a22 from '../a2-2';
+import b11 from '../b1-1';
+import b12 from '../b1-2';
 import b21 from '../b2-1';
 import b22 from '../b2-2';
 import c11 from '../c1-1';
@@ -22,6 +24,8 @@ const units = [
   ...a12.units,
   ...a21.units,
   ...a22.units,
+  ...b11.units,
+  ...b12.units,
   ...b21.units,
   ...b22.units,
   ...c11.units,

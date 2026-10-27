@@ -202,6 +202,114 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'reflexive-verbs', note: 'dative reflexive pronouns' },
     { topic: 'passive', note: 'review' },
   ],
+  // ---- B1.1 -----------------------------------------------------------------------------------
+  'b1-1-glueck': [
+    { topic: 'past-tense', note: 'mixed verbs: brachte, dachte, wusste, kannte' },
+    { topic: 'plusquamperfekt', note: 'including nachdem' },
+    { topic: 'temporal-clauses', note: 'als and nachdem' },
+  ],
+  'b1-1-unterhaltung': [
+    { topic: 'concessive-clauses', note: 'obwohl versus trotzdem' },
+    { topic: 'relative-clauses', note: 'in the dative and with prepositions' },
+  ],
+  'b1-1-gesundheit': [
+    { topic: 'modal-verbs', note: 'with the passive: Der Blutdruck muss gemessen werden' },
+    { topic: 'genitive-prepositions', note: 'the genitive: die Praxis des Arztes' },
+    { topic: 'passive', note: 'with modal verbs' },
+    { topic: 'genitive' },
+  ],
+  'b1-1-sprachen': [
+    { topic: 'genitive-prepositions', note: 'wegen' },
+    { topic: 'polite-forms', note: 'Ich müsste eigentlich …' },
+    { topic: 'konjunktiv-2', note: 'unreal situations and polite refusals' },
+    { topic: 'connectors', note: 'darum, deswegen, daher' },
+  ],
+  'b1-1-beruf': [
+    { topic: 'infinitive-zu' },
+    { topic: 'separable-verbs', note: 'zu between prefix and verb: anzurufen' },
+    { topic: 'genitive-prepositions', note: 'während, innerhalb, außerhalb' },
+    { topic: 'temporal-clauses', note: 'bevor and während' },
+  ],
+  'b1-1-service': [
+    { topic: 'infinitive-zu', note: 'statt … zu, ohne … zu, um … zu' },
+    { topic: 'purpose-clauses', note: 'um … zu versus damit' },
+  ],
+  'b1-1-wohnen': [
+    { topic: 'two-part-conjunctions' },
+    { topic: 'genitive-prepositions', note: 'trotz' },
+    { topic: 'polite-forms', note: 'Es wäre nett, wenn Sie …' },
+    { topic: 'konjunktiv-2', note: 'polite criticism' },
+  ],
+  'b1-1-freundschaft': [
+    { topic: 'adjectives-as-nouns' },
+    { topic: 'adjective-endings' },
+    { topic: 'n-declension', note: 'review' },
+  ],
+  'b1-1-zukunft': [
+    { topic: 'futur-1', note: 'also assumptions with wohl' },
+    { topic: 'passive', note: 'werden as the passive next to Futur I' },
+  ],
+  'b1-1-feiern': [
+    { topic: 'genitive-prepositions', note: 'anlässlich, während, wegen, trotz' },
+    { topic: 'polite-forms', note: 'Ich würde gern kommen, aber …' },
+    { topic: 'subordinate-clauses', note: 'falls' },
+  ],
+  'b1-1-umwelt': [
+    { topic: 'modal-verbs', note: 'sollte + passive: Plastik sollte vermieden werden' },
+    { topic: 'subordinate-clauses', note: 'da (causal)' },
+    { topic: 'dative-prepositions', note: 'aus + material' },
+    { topic: 'passive', note: 'with sollte' },
+  ],
+  'b1-1-pannen': [
+    { topic: 'konjunktiv-2-past' },
+    { topic: 'perfekt', note: 'hätte / wäre follow the same choice as in the Perfekt' },
+    { topic: 'konjunktiv-2', note: 'the present forms this unit builds on' },
+  ],
+  // ---- B1.2 -----------------------------------------------------------------------------------
+  'b1-2-kollegen': [
+    { topic: 'je-desto' },
+    { topic: 'comparison', note: 'mehr, weniger, besser, lieber' },
+  ],
+  'b1-2-digital': [
+    { topic: 'als-ob' },
+    { topic: 'polite-forms', note: 'Ich würde eine Sicherungskopie machen' },
+    { topic: 'konjunktiv-2', note: 'würde / sollte for advice' },
+  ],
+  'b1-2-konsum': [
+    { topic: 'participles-as-adjectives', note: 'Partizip I and Partizip II' },
+    { topic: 'adjective-endings' },
+  ],
+  'b1-2-weiterbildung': [
+    { topic: 'participles-as-adjectives', note: 'Partizip II as an adjective' },
+    { topic: 'adjective-endings' },
+  ],
+  'b1-2-regeln': [{ topic: 'modal-particles' }, { topic: 'passive', note: 'with modal verbs' }],
+  'b1-2-engagement': [
+    { topic: 'indem-ohne-dass' },
+    { topic: 'infinitive-zu', note: 'ohne … zu, statt … zu' },
+  ],
+  'b1-2-politik': [
+    {
+      topic: 'comparison',
+      note: 'before a noun and with je: die beste Idee, die ich je gehört habe',
+    },
+    { topic: 'adjective-endings' },
+    { topic: 'superlative' },
+  ],
+  'b1-2-geschichte': [
+    { topic: 'passive-past' },
+    { topic: 'passive', note: 'Präsens and Präteritum first' },
+  ],
+  'b1-2-stadt-land': [{ topic: 'relative-wo-was' }],
+  'b1-2-heimat': [
+    { topic: 'articles', note: 'compound nouns take the article of the last part' },
+    { topic: 'word-formation', note: 'compound nouns and verbs as nouns' },
+  ],
+  'b1-2-kunst': [{ topic: 'nicht-position' }, { topic: 'negation', note: 'nicht or kein' }],
+  'b1-2-diskussion': [
+    { topic: 'consecutive-clauses' },
+    { topic: 'two-part-conjunctions', note: 'einerseits … andererseits' },
+  ],
   // ---- B2.1 -----------------------------------------------------------------------------------
   'b2-1-beziehungen': [
     { topic: 'nouns-with-prepositions', note: 'Angst vor, Interesse an, stolz auf' },
