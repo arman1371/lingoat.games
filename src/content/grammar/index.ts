@@ -8,6 +8,8 @@ import { B21_TOPICS } from './b2-1';
 import { B22_TOPICS } from './b2-2';
 import { C11_TOPICS } from './c1-1';
 import { C12_TOPICS } from './c1-2';
+import { C21_TOPICS } from './c2-1';
+import { C22_TOPICS } from './c2-2';
 import type { GrammarTopic, UnitTopicRef } from './schema';
 import { UNIT_TOPICS } from './unitTopics';
 
@@ -26,6 +28,8 @@ export const GRAMMAR_TOPICS: readonly GrammarTopic[] = [
   ...B22_TOPICS,
   ...C11_TOPICS,
   ...C12_TOPICS,
+  ...C21_TOPICS,
+  ...C22_TOPICS,
 ];
 
 export const GRAMMAR_TOPIC_BY_ID: ReadonlyMap<string, GrammarTopic> = new Map(

@@ -8,6 +8,8 @@ import b21 from '../b2-1';
 import b22 from '../b2-2';
 import c11 from '../c1-1';
 import c12 from '../c1-2';
+import c21 from '../c2-1';
+import c22 from '../c2-2';
 import { LESSONS } from '../lessons';
 import { articleTable, datPlural } from './build';
 import {
@@ -30,6 +32,8 @@ const units = [
   ...b22.units,
   ...c11.units,
   ...c12.units,
+  ...c21.units,
+  ...c22.units,
 ];
 const unitIds = new Set(units.map((u) => u.id));
 

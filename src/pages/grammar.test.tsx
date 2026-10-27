@@ -26,11 +26,15 @@ describe('unit page grammar card', () => {
     expect(await screen.findByRole('heading', { level: 1, name: 'Dative (Wem?)' })).toBeVisible();
   });
 
-  it('keeps the one-line grammar list for units without written lessons', async () => {
+  it('lists the topics of a C2 unit, also when a unit reuses a topic of the earlier half', async () => {
     renderApp('/levels/c2-2/units/c2-2-stellung');
     await screen.findByRole('list', { name: 'Guided path' });
-    expect(await screen.findByText(/^Grammar:/)).toBeInTheDocument();
-    expect(screen.queryByTestId('unit-grammar')).not.toBeInTheDocument();
+    const card = await screen.findByTestId('unit-grammar');
+    expect(
+      within(card)
+        .getAllByRole('link')
+        .map((r) => r.getAttribute('data-testid')),
+    ).toEqual(['grammar-c21-concession', 'grammar-c21-text-cohesion']);
   });
 });
 
@@ -153,7 +157,7 @@ describe('library menu: grammar tab first, games second', () => {
       within(chips)
         .getAllByRole('button')
         .map((b) => b.textContent),
-    ).toEqual(expect.arrayContaining(['B2.1', 'B2.2']));
+    ).toEqual(expect.arrayContaining(['B2.1', 'B2.2', 'C2.1', 'C2.2']));
     await user.click(within(chips).getByRole('button', { name: 'A1.2' }));
     expect(router.state.location.search).toBe('?glvl=a1-2');
     expect(within(index).getByTestId('grammar-dative')).toBeInTheDocument();
