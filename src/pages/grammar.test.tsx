@@ -145,8 +145,9 @@ describe('library menu: grammar tab first, games second', () => {
     expect(
       within(chips)
         .getAllByRole('button')
-        .map((b) => b.textContent),
-    ).toEqual(['All', 'A1.1', 'A1.2']);
+        .map((b) => b.textContent)
+        .slice(0, 5),
+    ).toEqual(['All', 'A1.1', 'A1.2', 'A2.1', 'A2.2']);
     await user.click(within(chips).getByRole('button', { name: 'A1.2' }));
     expect(router.state.location.search).toBe('?glvl=a1-2');
     expect(within(index).getByTestId('grammar-dative')).toBeInTheDocument();
