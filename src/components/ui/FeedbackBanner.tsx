@@ -37,18 +37,18 @@ export function FeedbackBanner({ kind, title, children }: Props) {
       aria-live="polite"
       data-testid="feedback"
       data-kind={kind}
-      className={`anim-pop flex items-start gap-3 rounded-3xl border-2 p-4 ${s.sheet} ${kind === 'wrong' ? 'anim-shake' : ''}`}
+      className={`anim-pop flex flex-col gap-3 rounded-3xl border-2 p-4 ${s.sheet} ${kind === 'wrong' ? 'anim-shake' : ''}`}
     >
-      <span
-        aria-hidden="true"
-        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${s.badge}`}
-      >
-        <Icon name={s.icon} size={22} />
-      </span>
-      <div className="min-w-0 flex-1">
-        <p className="font-display text-xl font-bold">{title}</p>
-        {children ? <div className="mt-1 text-ink">{children}</div> : null}
+      <div className="flex items-center gap-3">
+        <span
+          aria-hidden="true"
+          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${s.badge}`}
+        >
+          <Icon name={s.icon} size={22} />
+        </span>
+        <p className="min-w-0 flex-1 font-display text-xl font-bold">{title}</p>
       </div>
+      {children ? <div className="min-w-0 text-ink">{children}</div> : null}
     </div>
   );
 }

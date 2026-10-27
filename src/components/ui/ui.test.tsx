@@ -107,6 +107,19 @@ describe('ProgressBar / Stars / Confetti / FeedbackBanner', () => {
     expect(banner).toHaveAttribute('data-kind', 'almost');
     expect(banner).toHaveTextContent('Check umlauts');
   });
+  it('puts the detail under the badge row so it spans the full card width', () => {
+    render(
+      <FeedbackBanner kind="wrong" title="Not quite.">
+        <p>Detail text</p>
+      </FeedbackBanner>,
+    );
+    const title = screen.getByText('Not quite.');
+    const detail = screen.getByText('Detail text');
+    const header = title.parentElement as HTMLElement;
+    expect(header.querySelector('svg')).not.toBeNull();
+    expect(header.contains(detail)).toBe(false);
+    expect(detail.parentElement?.parentElement).toBe(header.parentElement);
+  });
   it('shows a verdict badge and colours the Continue button by verdict', () => {
     const { rerender } = render(
       <FeedbackFooter kind="correct" title="Correct!" isLast={false} onNext={() => {}} />,
