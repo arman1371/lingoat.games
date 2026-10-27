@@ -1697,7 +1697,7 @@
       "file_type": "code",
       "norm_label": "strings",
       "source_file": "src/i18n/en.ts",
-      "source_location": "L220"
+      "source_location": "L221"
     },
     {
       "id": "src_i18n_index_leaves",
@@ -3740,7 +3740,7 @@
       "file_type": "code",
       "norm_label": "fulllessonlink()",
       "source_file": "src/components/grammar/FullLessonLink.tsx",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "src_components_grammar_grammarindex_grammarindex",
@@ -3908,7 +3908,7 @@
       "file_type": "code",
       "norm_label": "duemistakeids()",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "src_pages_playpage_playview",
@@ -3920,7 +3920,7 @@
       "file_type": "code",
       "norm_label": "playview()",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L46"
+      "source_location": "L47"
     },
     {
       "id": "src_pages_progresspage_progresspage",
@@ -8048,7 +8048,7 @@
       "file_type": "code",
       "norm_label": "playpage()",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L40"
+      "source_location": "L41"
     },
     {
       "id": "src_content_a2_1_u10_beruf_year",
@@ -36060,6 +36060,18 @@
       "type": "external"
     },
     {
+      "id": "ref_components_grammar_fulllessonlink",
+      "label": "ref_components_grammar_fulllessonlink",
+      "_origin": "semantic",
+      "community": 15,
+      "community_name": "ref_i18n",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_grammar_fulllessonlink",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_components_grammar_grammarindex",
       "label": "ref_components_grammar_grammarindex",
       "_origin": "semantic",
@@ -36476,18 +36488,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_lib_german_forms",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_grammar_fulllessonlink",
-      "label": "ref_components_grammar_fulllessonlink",
-      "_origin": "semantic",
-      "community": 17,
-      "community_name": "react",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_grammar_fulllessonlink",
       "source_file": "",
       "type": "external"
     },
@@ -37870,7 +37870,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/grammar/FullLessonLink.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -41098,7 +41098,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L75",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -88788,7 +88788,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -88800,7 +88800,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -109874,7 +109874,7 @@
     },
     {
       "source": "src_pages_playpage",
-      "target": "ref_content_lessons",
+      "target": "ref_components_grammar_fulllessonlink",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -109886,7 +109886,7 @@
     },
     {
       "source": "src_pages_playpage",
-      "target": "ref_app_path",
+      "target": "ref_content_lessons",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -109898,7 +109898,7 @@
     },
     {
       "source": "src_pages_playpage",
-      "target": "ref_lib_rng",
+      "target": "ref_app_path",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -109910,7 +109910,7 @@
     },
     {
       "source": "src_pages_playpage",
-      "target": "ref_lib_scoring",
+      "target": "ref_lib_rng",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -109918,6 +109918,18 @@
       "context": "import",
       "source_file": "src/pages/PlayPage.tsx",
       "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_playpage",
+      "target": "ref_lib_scoring",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/pages/PlayPage.tsx",
+      "source_location": "L24",
       "type_only": true,
       "weight": 1.0
     },
@@ -109930,7 +109942,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -109942,7 +109954,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -109954,7 +109966,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -109966,7 +109978,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -109978,7 +109990,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -117748,7 +117760,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/grammar/FullLessonLink.tsx",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -136558,7 +136570,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/i18n/en.ts",
-      "source_location": "L220",
+      "source_location": "L221",
       "weight": 1.0
     },
     {
@@ -139088,7 +139100,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -139099,7 +139111,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -139110,7 +139122,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/PlayPage.tsx",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -142481,7 +142493,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "src/pages/pages.test.tsx",
-      "source_location": "L865",
+      "source_location": "L880",
       "weight": 1.0
     },
     {
@@ -143697,5 +143709,5 @@
       "source_file": "docs/adding-content.md"
     }
   ],
-  "built_at_commit": "cdff17e20f5a36b7ff611cc0f18da2ec75c7d9e4"
+  "built_at_commit": "51d884669213c22240a373086e382faa5f2cfbf1"
 }

@@ -1,17 +1,17 @@
 # Graph Report - lingoat.games  (2026-10-27)
 
 ## Corpus Check
-- 529 files · ~568,952 words
+- 529 files · ~569,144 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 10 file(s) not represented in the graph (top: (none) 5, .in 1, .ico 1)
 
 ## Summary
-- 3250 nodes · 9055 edges · 122 communities (112 shown, 10 thin omitted)
+- 3250 nodes · 9056 edges · 122 communities (112 shown, 10 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 149 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cdff17e2`
+- Built from commit: `51d88466`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -232,7 +232,7 @@ Nodes (29): devDependencies, aws4fetch, @axe-core/playwright, eslint, @eslint/js
 
 ### Community 15 - "ref_i18n"
 Cohesion: 0.05
-Nodes (57): ref_app_path, ref_components_activitycard, ref_components_dailygoalcard, ref_components_grammar_grammarindex, ref_components_grammar_grammarlesson, ref_components_grammar_unitgrammar, ref_components_grammar_usegrammar, ref_components_reportbutton (+49 more)
+Nodes (58): ref_app_path, ref_components_activitycard, ref_components_dailygoalcard, ref_components_grammar_fulllessonlink, ref_components_grammar_grammarindex, ref_components_grammar_grammarlesson, ref_components_grammar_unitgrammar, ref_components_grammar_usegrammar (+50 more)
 
 ### Community 16 - "ref_lib_german_conjugation"
 Cohesion: 0.11
@@ -240,7 +240,7 @@ Nodes (24): ref_lib_german_adjectives, ref_lib_german_conjugation, ref_lib_germa
 
 ### Community 17 - "react"
 Cohesion: 0.06
-Nodes (64): What the issue contains, ref_components_grammar_fulllessonlink, ref_components_ui_feedbackbanner, ref_components_ui_speakbutton, ref_components_wordimage, ref_content_lessons, ref_lib_answer_check, ref_lib_scoring (+56 more)
+Nodes (63): What the issue contains, ref_components_ui_feedbackbanner, ref_components_ui_speakbutton, ref_components_wordimage, ref_content_lessons, ref_lib_answer_check, ref_lib_scoring, ref_lib_sfx (+55 more)
 
 ### Community 18 - "build.ts"
 Cohesion: 0.24
@@ -620,7 +620,7 @@ Nodes (8): A1.1 and A1.2 (22 topics), A2.1 and A2.2 (19 topics), B1.1 and B1.2 (
 
 ## Knowledge Gaps
 - **1574 isolated node(s):** `singleQuote`, `semi`, `trailingComma`, `printWidth`, `PLAYED` (+1569 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1788 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1787 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
