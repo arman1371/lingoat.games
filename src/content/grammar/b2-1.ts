@@ -318,7 +318,7 @@ export const B21_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['perfekt', 'polite-forms', 'conjunctions'],
+    related: ['konjunktiv-2', 'perfekt', 'conjunctions'],
     sources: [S.indirectSpeech, S.subjunctive],
   },
   {
@@ -686,7 +686,7 @@ export const B21_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['perfekt', 'past-tense', 'passive-alternatives'],
+    related: ['passive', 'passive-alternatives', 'perfekt'],
     sources: [S.statePassive, S.passive],
   },
   {
@@ -760,7 +760,7 @@ export const B21_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['prepositions-of-time', 'conjunctions', 'separable-verbs'],
+    related: ['temporal-clauses', 'prepositions-of-time', 'conjunctions'],
     sources: [S.temporalClause, S.solange, S.sobald, S.ehe, S.seitdem, S.sooft, S.bis],
   },
   {
@@ -908,7 +908,7 @@ export const B21_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['dative', 'accusative', 'word-order'],
+    related: ['relative-clauses', 'dative', 'accusative'],
     sources: [S.relativeClause],
   },
   {
@@ -1164,7 +1164,7 @@ export const B21_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['state-passive', 'noun-verb-phrases', 'modal-verbs'],
+    related: ['passive', 'lassen', 'state-passive'],
     sources: [S.passive, S.lassen, S.bar],
   },
   {

@@ -1,9 +1,11 @@
 import a11 from '../a1-1';
 import a12 from '../a1-2';
+import a21 from '../a2-1';
+import a22 from '../a2-2';
 import b21 from '../b2-1';
 import b22 from '../b2-2';
 import { LESSONS } from '../lessons';
-import { articleTable } from './build';
+import { articleTable, datPlural } from './build';
 import {
   GRAMMAR_TOPICS,
   GRAMMAR_TOPIC_BY_ID,
@@ -13,7 +15,7 @@ import {
 } from './index';
 import { GrammarTopicSchema, UnitTopicRefSchema, type Block } from './schema';
 
-const units = [...a11.units, ...a12.units, ...b21.units, ...b22.units];
+const units = [...a11.units, ...a12.units, ...a21.units, ...a22.units, ...b21.units, ...b22.units];
 const unitIds = new Set(units.map((u) => u.id));
 
 const strings = (b: Block): string[] => {
@@ -84,6 +86,16 @@ describe('grammar topics', () => {
         ['Dative', 'dem', 'der', 'dem', 'den + -n'],
       ],
     });
+  });
+});
+
+describe('datPlural', () => {
+  it('adds -n only to dative plurals that do not end in -n or -s', () => {
+    expect(datPlural('Lieder', 'pl', 'dat')).toBe('Liedern');
+    expect(datPlural('Brötchen', 'pl', 'dat')).toBe('Brötchen');
+    expect(datPlural('Autos', 'pl', 'dat')).toBe('Autos');
+    expect(datPlural('Lieder', 'pl', 'acc')).toBe('Lieder');
+    expect(datPlural('Film', 'm', 'dat')).toBe('Film');
   });
 });
 

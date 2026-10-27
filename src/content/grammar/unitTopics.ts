@@ -87,6 +87,121 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'comparison' },
     { topic: 'conjunctions' },
   ],
+  // ---- A2.1 -----------------------------------------------------------------------------------
+  'a2-1-online': [
+    { topic: 'separable-verbs', note: 'herunterladen, ausdrucken, einloggen' },
+    { topic: 'perfekt', note: 'separable verbs and verbs without ge-' },
+  ],
+  'a2-1-freizeit': [
+    { topic: 'connectors', note: 'zuerst, dann, danach' },
+    { topic: 'prepositions-of-time', note: 'bis, ab, für' },
+    { topic: 'indefinite-pronouns', note: 'alles, etwas, nichts' },
+    { topic: 'separable-verbs', note: 'einladen, stattfinden, mitkommen' },
+  ],
+  'a2-1-wetter': [
+    { topic: 'subordinate-clauses', note: 'wenn-clauses' },
+    { topic: 'comparison', note: 'wärmer als, so warm wie' },
+    { topic: 'superlative', note: 'am kältesten, am liebsten' },
+  ],
+  'a2-1-bahn': [
+    { topic: 'comparison', note: 'schneller als' },
+    { topic: 'superlative', note: 'am billigsten, der schnellste Zug' },
+    { topic: 'dative-prepositions', note: 'mit, nach, von, zu, bei' },
+    { topic: 'separable-verbs', note: 'abfahren, ankommen, umsteigen' },
+  ],
+  'a2-1-wohnung': [
+    { topic: 'two-way-prepositions', note: 'stellen / stehen, legen / liegen, hängen' },
+    { topic: 'accusative', note: 'Wohin?' },
+    { topic: 'dative', note: 'Wo?' },
+  ],
+  'a2-1-aemter': [
+    { topic: 'indefinite-pronouns', note: 'man, einen / keinen / eins / welche' },
+    { topic: 'separable-verbs', note: 'ausfüllen, abgeben' },
+  ],
+  'a2-1-familie': [
+    { topic: 'genitive', note: 'Annas Bruder, Peters Frau' },
+    { topic: 'object-pronouns', note: 'mich / mir, ihn / ihm …' },
+    { topic: 'dative', note: 'geben, schenken, zeigen, helfen, gehören' },
+  ],
+  'a2-1-schule': [
+    { topic: 'prepositions-of-time', note: 'seit and vor + dative' },
+    { topic: 'subordinate-clauses', note: 'weil' },
+    { topic: 'conjunctions', note: 'denn' },
+    { topic: 'perfekt', note: 'verbs without ge-: studiert, bestanden' },
+  ],
+  'a2-1-jobsuche': [
+    { topic: 'reflexive-verbs', note: 'sich bewerben um, sich interessieren für' },
+    { topic: 'connectors', note: 'deshalb' },
+    { topic: 'subordinate-clauses', note: 'weil' },
+  ],
+  'a2-1-beruf': [
+    { topic: 'perfekt', note: 'regular and irregular verbs, sein and haben' },
+    { topic: 'prepositions-of-time', note: 'von … bis, seit, vor, ab' },
+    { topic: 'subordinate-clauses', note: 'weil' },
+    { topic: 'connectors', note: 'deshalb' },
+  ],
+  // ---- A2.2 -----------------------------------------------------------------------------------
+  'a2-2-lernen': [
+    { topic: 'konjunktiv-2', note: 'advice with sollte' },
+    { topic: 'connectors', note: 'deshalb and trotzdem' },
+    { topic: 'subordinate-clauses', note: 'weil' },
+    { topic: 'word-formation', note: '-ung, -er, -in' },
+  ],
+  'a2-2-sport': [
+    { topic: 'verbs-with-prepositions', note: 'warten auf, denken an, träumen von' },
+    { topic: 'konjunktiv-2', note: 'Wie wäre es mit …?' },
+  ],
+  'a2-2-nachbarn': [
+    { topic: 'lassen' },
+    { topic: 'polite-forms', note: 'Könnten Sie …? Würden Sie …?' },
+    { topic: 'reflexive-verbs', note: 'sich beschweren über, sich entschuldigen für' },
+    { topic: 'verbs-with-prepositions' },
+  ],
+  'a2-2-kunst': [
+    { topic: 'adjective-endings', note: 'after der / die / das' },
+    { topic: 'questions', note: 'Was für ein …?' },
+  ],
+  'a2-2-wuensche': [
+    { topic: 'konjunktiv-2', note: 'wishes and unreal wenn-clauses' },
+    { topic: 'temporal-clauses', note: 'bis and seitdem' },
+    { topic: 'prepositions-of-time', note: 'über, von … an, ab' },
+    { topic: 'conjunctions', note: 'aber, sondern' },
+  ],
+  'a2-2-feste': [
+    { topic: 'indefinite-pronouns', note: 'jemand, niemand' },
+    { topic: 'n-declension' },
+    { topic: 'polite-forms', note: 'du and Sie' },
+  ],
+  'a2-2-post': [
+    { topic: 'passive', note: 'present tense' },
+    { topic: 'indirect-questions' },
+    { topic: 'object-pronouns', note: 'two objects: Ich schicke es dir.' },
+  ],
+  'a2-2-werbung': [
+    { topic: 'adjective-endings', note: 'after ein / kein / mein and without an article' },
+    { topic: 'comparison', note: 'before a noun: das günstigere Angebot' },
+    { topic: 'word-formation', note: 'un-, -los, -bar, -ig, -isch' },
+    { topic: 'subordinate-clauses', note: 'dass' },
+  ],
+  'a2-2-reisen': [
+    { topic: 'route-prepositions' },
+    { topic: 'two-way-prepositions', note: 'Wo? Wohin? Woher?' },
+    { topic: 'word-formation', note: 'compound nouns and -chen' },
+  ],
+  'a2-2-bank': [
+    { topic: 'purpose-clauses', note: 'um … zu, damit, zum' },
+    { topic: 'questions', note: 'Wozu? Wofür?' },
+  ],
+  'a2-2-leben': [
+    { topic: 'past-tense', note: 'regular and irregular verbs' },
+    { topic: 'perfekt', note: 'speaking versus writing' },
+    { topic: 'temporal-clauses', note: 'als and wenn' },
+  ],
+  'a2-2-arbeit': [
+    { topic: 'relative-clauses', note: 'nominative and accusative' },
+    { topic: 'reflexive-verbs', note: 'dative reflexive pronouns' },
+    { topic: 'passive', note: 'review' },
+  ],
   // ---- B2.1 -----------------------------------------------------------------------------------
   'b2-1-beziehungen': [
     { topic: 'nouns-with-prepositions', note: 'Angst vor, Interesse an, stolz auf' },
@@ -110,14 +225,21 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   ],
   'b2-1-gesellschaft': [
     { topic: 'noun-verb-phrases', note: 'eine Entscheidung treffen, in Anspruch nehmen' },
+    { topic: 'passive', note: 'review: Petitionen werden unterschrieben, wurden eingereicht' },
   ],
   'b2-1-wohnen': [
     { topic: 'relative-wer', note: 'wer / wen / wem for rules and notices' },
     { topic: 'conditional-b2', note: 'falls, sofern, Hätte ich …, andernfalls' },
   ],
   'b2-1-medien': [{ topic: 'text-cohesion', note: 'dadurch, damit, dafür, darüber, daran, dabei' }],
-  'b2-1-wissenschaft': [{ topic: 'passive-alternatives', note: 'sich lassen, sein + zu, -bar' }],
-  'b2-1-unterwegs': [{ topic: 'auch-wenn', note: 'auch wenn, selbst wenn, zwar … aber, dennoch' }],
+  'b2-1-wissenschaft': [
+    { topic: 'passive-alternatives', note: 'sich lassen, sein + zu, -bar' },
+    { topic: 'passive', note: 'review: wird gemessen, wurde bewiesen' },
+  ],
+  'b2-1-unterwegs': [
+    { topic: 'auch-wenn', note: 'auch wenn, selbst wenn, zwar … aber, dennoch' },
+    { topic: 'konjunktiv-2', note: 'review: Selbst wenn ich Zeit hätte, würde ich …' },
+  ],
   'b2-1-klima': [
     { topic: 'nominalisation', note: '-ung, -keit, -heit, der Anstieg der Preise' },
     { topic: 'adversative', note: 'während, dagegen, hingegen, jedoch' },
@@ -134,6 +256,7 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'b2-2-studium': [
     { topic: 'consecutive-connectors', note: 'folglich, infolgedessen, somit, zu … als dass' },
     { topic: 'noun-verb-phrases', note: 'in Anspruch nehmen, zur Verfügung stellen' },
+    { topic: 'word-formation', note: 'negation with un-, in- / il- / ir- and -los' },
   ],
   'b2-2-service': [
     {
@@ -144,6 +267,7 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'b2-2-gesundheit': [
     { topic: 'irgend-pronouns', note: 'irgendjemand, einige, manche, mehrere, sämtliche' },
     { topic: 'modal-clauses', note: 'indem, dadurch dass, mithilfe, ohne dass' },
+    { topic: 'purpose-clauses', note: 'damit and um … zu for the aim' },
   ],
   'b2-2-sprache': [
     { topic: 'extended-participle', note: 'das vom Kunden bestellte Produkt' },
@@ -166,9 +290,12 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     },
     { topic: 'perfekt', note: 'narrating the past' },
     { topic: 'past-tense', note: 'Präteritum for narration' },
+    { topic: 'passive', note: 'Passiv Präteritum: wurde … gebaut' },
+    { topic: 'temporal-clauses', note: 'nachdem, bevor' },
   ],
   'b2-2-stadt': [
     { topic: 'adjective-prepositions', note: 'stolz auf, zufrieden mit, abhängig von' },
+    { topic: 'verbs-with-prepositions', note: 'review: sich interessieren für, abhängen von' },
   ],
   'b2-2-druck': [
     { topic: 'konjunktiv-1', note: 'the past with habe / sei and the Konjunktiv II replacement' },
