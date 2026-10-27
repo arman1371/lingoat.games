@@ -202,4 +202,105 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'reflexive-verbs', note: 'dative reflexive pronouns' },
     { topic: 'passive', note: 'review' },
   ],
+  // ---- B2.1 -----------------------------------------------------------------------------------
+  'b2-1-beziehungen': [
+    { topic: 'nouns-with-prepositions', note: 'Angst vor, Interesse an, stolz auf' },
+    { topic: 'middle-field' },
+  ],
+  'b2-1-besitz': [
+    { topic: 'konjunktiv-1', note: 'er sei, sie habe, with Konjunktiv II as a replacement' },
+  ],
+  'b2-1-wohlbefinden': [
+    { topic: 'causal-expressions', note: 'aufgrund, infolge, angesichts, dank, aus, vor' },
+  ],
+  'b2-1-kommunikation': [
+    { topic: 'assumptions', note: 'Futur I and Futur II, wohl, vermutlich' },
+    { topic: 'es-dass', note: 'es, darauf / darüber, dass and zu + infinitive' },
+  ],
+  'b2-1-teamgeist': [
+    { topic: 'state-passive', note: 'ist unterschrieben vs. wird unterschrieben; von and durch' },
+  ],
+  'b2-1-lebenswege': [
+    { topic: 'temporal-connectors', note: 'solange, sobald, ehe, seitdem, sooft, bis' },
+  ],
+  'b2-1-gesellschaft': [
+    { topic: 'noun-verb-phrases', note: 'eine Entscheidung treffen, in Anspruch nehmen' },
+    { topic: 'passive', note: 'review: Petitionen werden unterschrieben, wurden eingereicht' },
+  ],
+  'b2-1-wohnen': [
+    { topic: 'relative-wer', note: 'wer / wen / wem for rules and notices' },
+    { topic: 'conditional-b2', note: 'falls, sofern, Hätte ich …, andernfalls' },
+  ],
+  'b2-1-medien': [{ topic: 'text-cohesion', note: 'dadurch, damit, dafür, darüber, daran, dabei' }],
+  'b2-1-wissenschaft': [
+    { topic: 'passive-alternatives', note: 'sich lassen, sein + zu, -bar' },
+    { topic: 'passive', note: 'review: wird gemessen, wurde bewiesen' },
+  ],
+  'b2-1-unterwegs': [
+    { topic: 'auch-wenn', note: 'auch wenn, selbst wenn, zwar … aber, dennoch' },
+    { topic: 'konjunktiv-2', note: 'review: Selbst wenn ich Zeit hätte, würde ich …' },
+  ],
+  'b2-1-klima': [
+    { topic: 'nominalisation', note: '-ung, -keit, -heit, der Anstieg der Preise' },
+    { topic: 'adversative', note: 'während, dagegen, hingegen, jedoch' },
+  ],
+  // ---- B2.2 -----------------------------------------------------------------------------------
+  'b2-2-beziehungen': [
+    { topic: 'noun-prepositions', note: 'Angst vor / um, Streit um / mit, Vorurteile gegen' },
+    { topic: 'comparative-clauses', note: 'genauso … wie, anders als, je nachdem, ob' },
+  ],
+  'b2-2-ernaehrung': [
+    { topic: 'modal-hearsay', note: 'sollen and wollen with infinitive Perfekt' },
+    { topic: 'nominalisation', note: 'weil … → wegen …, verzichten → der Verzicht' },
+  ],
+  'b2-2-studium': [
+    { topic: 'consecutive-connectors', note: 'folglich, infolgedessen, somit, zu … als dass' },
+    { topic: 'noun-verb-phrases', note: 'in Anspruch nehmen, zur Verfügung stellen' },
+    { topic: 'word-formation', note: 'negation with un-, in- / il- / ir- and -los' },
+  ],
+  'b2-2-service': [
+    {
+      topic: 'passive-alternatives',
+      note: 'man, sich lassen, sein + zu, -bar and the passive without a subject',
+    },
+  ],
+  'b2-2-gesundheit': [
+    { topic: 'irgend-pronouns', note: 'irgendjemand, einige, manche, mehrere, sämtliche' },
+    { topic: 'modal-clauses', note: 'indem, dadurch dass, mithilfe, ohne dass' },
+    { topic: 'purpose-clauses', note: 'damit and um … zu for the aim' },
+  ],
+  'b2-2-sprache': [
+    { topic: 'extended-participle', note: 'das vom Kunden bestellte Produkt' },
+    {
+      topic: 'adversative-connectors',
+      note: 'wohingegen, im Gegensatz zu, einerseits … andererseits',
+    },
+  ],
+  'b2-2-wirtschaft': [
+    { topic: 'concessive-advanced', note: 'obgleich, wenngleich, dennoch, trotz, ungeachtet' },
+  ],
+  'b2-2-kunst': [
+    { topic: 'relative-wer', note: 'wer, wen, wem, wessen and was in general statements' },
+    { topic: 'state-passive', note: 'wird restauriert vs. ist restauriert' },
+  ],
+  'b2-2-geschichte': [
+    {
+      topic: 'perfekt-double-infinitive',
+      note: 'Ich habe ihn kommen hören; … dass er hat gehen müssen',
+    },
+    { topic: 'perfekt', note: 'narrating the past' },
+    { topic: 'past-tense', note: 'Präteritum for narration' },
+    { topic: 'passive', note: 'Passiv Präteritum: wurde … gebaut' },
+    { topic: 'temporal-clauses', note: 'nachdem, bevor' },
+  ],
+  'b2-2-stadt': [
+    { topic: 'adjective-prepositions', note: 'stolz auf, zufrieden mit, abhängig von' },
+    { topic: 'verbs-with-prepositions', note: 'review: sich interessieren für, abhängen von' },
+  ],
+  'b2-2-druck': [
+    { topic: 'konjunktiv-1', note: 'the past with habe / sei and the Konjunktiv II replacement' },
+  ],
+  'b2-2-netz': [
+    { topic: 'modal-assumption', note: 'muss, dürfte, könnte, kann nicht + infinitive Perfekt' },
+  ],
 };

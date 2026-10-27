@@ -2,6 +2,8 @@ import a11 from '../a1-1';
 import a12 from '../a1-2';
 import a21 from '../a2-1';
 import a22 from '../a2-2';
+import b21 from '../b2-1';
+import b22 from '../b2-2';
 import { LESSONS } from '../lessons';
 import { articleTable, datPlural } from './build';
 import {
@@ -13,7 +15,7 @@ import {
 } from './index';
 import { GrammarTopicSchema, UnitTopicRefSchema, type Block } from './schema';
 
-const units = [...a11.units, ...a12.units, ...a21.units, ...a22.units];
+const units = [...a11.units, ...a12.units, ...a21.units, ...a22.units, ...b21.units, ...b22.units];
 const unitIds = new Set(units.map((u) => u.id));
 
 const strings = (b: Block): string[] => {
