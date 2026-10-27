@@ -22,7 +22,7 @@ for (const scheme of ['light', 'dark'] as const) {
       await page.goto('/levels/c1-1/units/c1-1-zeit');
       const card = page.getByTestId('unit-grammar');
       await expect(card).toBeVisible();
-      await expect(card.getByRole('link')).toHaveCount(2);
+      await expect(card.getByRole('link')).toHaveCount(3);
       await card.getByTestId('grammar-formal-connectors').click();
 
       await expect(

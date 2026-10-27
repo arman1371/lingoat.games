@@ -41,6 +41,25 @@ for (const scheme of ['light', 'dark'] as const) {
       await expect(page).toHaveURL(/\/play\//);
     });
 
+    test('A2 units link to their lessons, which render generated tables', async ({ page }) => {
+      await page.goto('/levels/a2-2/units/a2-2-kunst');
+      const card = page.getByTestId('unit-grammar');
+      await expect(card.getByRole('link')).toHaveCount(2);
+      await card.getByTestId('grammar-adjective-endings').click();
+      await expect(
+        page.getByRole('heading', { level: 1, name: 'Adjective endings' }),
+      ).toBeVisible();
+      const table = page.getByRole('table', { name: /Adjective endings after der, die, das/ });
+      await expect(table.getByRole('row', { name: /Accusative/ })).toContainText('den neuen Film');
+      await expect(table.getByRole('row', { name: /Dative/ })).toContainText('den neuen Liedern');
+      await expectNoViolations(page, 'adjective endings lesson');
+
+      await page.goto('/levels/a2-1/units/a2-1-wetter');
+      await page.getByTestId('unit-grammar').getByTestId('grammar-superlative').click();
+      await expect(page.getByRole('heading', { level: 1, name: 'The superlative' })).toBeVisible();
+      await expectNoViolations(page, 'superlative lesson');
+    });
+
     test('the Library opens on grammar with a level filter and search, games are the second tab', async ({
       page,
     }) => {
