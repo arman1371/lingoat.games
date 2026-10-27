@@ -303,4 +303,70 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'b2-2-netz': [
     { topic: 'modal-assumption', note: 'muss, dürfte, könnte, kann nicht + infinitive Perfekt' },
   ],
+
+  // ---- C1.1 -----------------------------------------------------------------------------------
+  'c1-1-zeit': [
+    {
+      topic: 'formal-connectors',
+      note: 'andernfalls, folglich, hingegen; außer wenn vs. es sei denn',
+    },
+    { topic: 'word-order', note: 'the verb after an adverb connector' },
+    { topic: 'word-formation', note: 'ent-, miss-, zer-' },
+  ],
+  'c1-1-digital': [
+    { topic: 'subjective-modals', note: 'sollen, wollen, müssen, dürfte, könnte' },
+    { topic: 'modal-verbs', note: 'the objective meanings you already know' },
+  ],
+  'c1-1-sprache': [
+    { topic: 'konjunktiv-1', note: 'reported speech: er sagt, er habe …' },
+    { topic: 'verb-conjugation', note: 'the stem and endings that Konjunktiv I is built on' },
+  ],
+  'c1-1-manieren': [
+    { topic: 'noun-verb-phrases', note: 'in Betracht ziehen, Rücksicht nehmen, Kritik üben' },
+    { topic: 'nominal-style', note: 'the same phrases as a feature of formal writing' },
+  ],
+  'c1-1-tourismus': [
+    { topic: 'concessive-restrictive', note: 'wenngleich, so sehr … auch, es sei denn, nur dass' },
+  ],
+  'c1-1-arbeit': [
+    { topic: 'es-functions' },
+    { topic: 'intensifiers', note: 'ziemlich, äußerst, höchst, zu' },
+    { topic: 'comparison', note: 'graduating with comparatives: viel, weit, deutlich' },
+  ],
+  'c1-1-lebenswege': [{ topic: 'unreal-consecutive' }],
+  'c1-1-studium': [{ topic: 'participial-attributes' }],
+  'c1-1-konsum': [{ topic: 'prefix-verbs', note: 'miss-, zer-, ent-, ver-, be-' }],
+  'c1-1-wirtschaft': [
+    { topic: 'nominal-style', note: 'clauses as noun phrases: wegen, trotz, durch' },
+  ],
+  'c1-1-gesellschaft': [
+    { topic: 'modal-alternatives' },
+    { topic: 'lassen', note: 'sich lassen = can be done' },
+  ],
+  // ---- C1.2 -----------------------------------------------------------------------------------
+  'c1-2-finanzen': [{ topic: 'nominal-style' }, { topic: 'written-prepositions' }],
+  'c1-2-gesundheit': [{ topic: 'infinitive-perfect' }, { topic: 'nominal-style' }],
+  'c1-2-recht': [
+    { topic: 'passive', note: 'the forms to replace' },
+    { topic: 'passive-substitutes' },
+  ],
+  'c1-2-psychologie': [
+    { topic: 'subjective-modals', note: 'hearsay and doubt: soll, will, dürfte' },
+    { topic: 'word-formation' },
+  ],
+  'c1-2-stadt': [{ topic: 'advanced-connectors' }, { topic: 'adjective-complements' }],
+  'c1-2-literatur': [
+    { topic: 'advanced-connectors', note: 'linking arguments in a review' },
+    { topic: 'word-order', note: 'position 1 and the verb' },
+    { topic: 'word-formation' },
+  ],
+  'c1-2-kino': [{ topic: 'advanced-connectors' }, { topic: 'nominal-style' }],
+  'c1-2-geschaeft': [
+    { topic: 'advanced-connectors' },
+    { topic: 'comparison', note: 'doppelt so … wie, im Vergleich zu' },
+  ],
+  'c1-2-forschung': [{ topic: 'participial-clauses' }, { topic: 'written-prepositions' }],
+  'c1-2-team': [{ topic: 'conditional-clauses' }, { topic: 'modality-verbs' }],
+  'c1-2-nachhaltigkeit': [{ topic: 'participial-clauses' }, { topic: 'quantities-graphs' }],
+  'c1-2-vortrag': [{ topic: 'advanced-connectors' }, { topic: 'nominal-style' }],
 };

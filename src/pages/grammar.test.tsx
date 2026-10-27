@@ -142,6 +142,7 @@ describe('library menu: grammar tab first, games second', () => {
     const { user, router } = renderApp('/library');
     const index = await screen.findByTestId('grammar-index');
     const chips = within(index).getByRole('group', { name: 'Level' });
+    // one chip per level that has lessons; more levels are added as their lessons are written
     expect(
       within(chips)
         .getAllByRole('button')
