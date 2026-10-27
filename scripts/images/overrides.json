@@ -1,3 +1,17 @@
 {
-  "a1-1-einkaufen-orange": { "photo": 1995079 }
+  "a1-1-einkaufen-butter": { "photo": 3411126 },
+  "a1-1-einkaufen-das-stueck": { "photo": 4800363 },
+  "a1-1-einkaufen-nudeln": { "photo": 2931846 },
+  "a1-1-einkaufen-orange": { "photo": 1995079 },
+  "a1-1-einkaufen-reis": { "photo": 7228834 },
+  "a1-2-wohnen-aufzug": { "photo": 8003030 },
+  "a1-2-wohnen-dusche": { "photo": 5724716 },
+  "a1-2-wohnen-keller": { "photo": 1097154 },
+  "a1-2-wohnen-lampe": { "photo": 465350 },
+  "a1-2-wohnen-teppich": { "photo": 316645 },
+  "a1-2-wohnen-toilette": { "photo": 5871016 },
+  "a2-1-wohnung-aufzug": { "photo": 8003030 },
+  "a2-1-wohnung-keller": { "photo": 1097154 },
+  "a2-1-wohnung-lampe": { "photo": 465350 },
+  "a2-1-wohnung-teppich": { "photo": 316645 }
 }
