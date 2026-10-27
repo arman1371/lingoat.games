@@ -1,7 +1,7 @@
 # Graph Report - lingoat.games  (2026-10-27)
 
 ## Corpus Check
-- 529 files · ~568,903 words
+- 529 files · ~568,952 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 10 file(s) not represented in the graph (top: (none) 5, .in 1, .ico 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d0986415`
+- Built from commit: `cdff17e2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
