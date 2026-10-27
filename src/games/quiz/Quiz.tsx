@@ -6,6 +6,7 @@ import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
 import { shuffledOptions } from '../shared/choices';
 import { MistakeHint } from '../shared/MistakeHint';
 import { NounArticle } from '../shared/NounArticle';
+import { SentenceNouns } from '../shared/SentenceNouns';
 import { mistakeWhy } from '../shared/hints';
 import { useSequence } from '../shared/useSequence';
 import type { GameProps } from '../types';
@@ -63,6 +64,7 @@ export function Quiz({ config, seed, onFinish }: GameProps<'quiz'>) {
           {q.prompt}
         </h2>
         {q.speak ? <SpeakButton text={q.speak} /> : null}
+        <SentenceNouns text={q.prompt} />
       </div>
       <ChoiceList
         options={options}

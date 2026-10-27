@@ -13,8 +13,9 @@ import type { Activity } from '@/content/schema';
 import { GAME_HELP, gameComponents } from '@/games/registry';
 import { ActivityLessonContext } from '@/games/shared/hints';
 import { NounIndexContext } from '@/games/shared/NounArticle';
+import { CaseDrillContext } from '@/games/shared/SentenceNouns';
 import { ReportItemContext } from '@/games/shared/useReportItem';
-import { buildNounIndex } from '@/lib/german/nouns';
+import { buildNounIndex, drillsCase } from '@/lib/german/nouns';
 import { buildWordPhotoIndex } from '@/lib/wordPhotos';
 import { lessonForTags } from '@/content/lessons';
 import { playUrl } from '@/app/path';
@@ -187,16 +188,18 @@ function PlayView({ activityId }: { activityId: string }) {
         >
           <ActivityLessonContext value={activity.lesson ?? lessonForTags(activity.tags)}>
             <NounIndexContext value={nounIndex}>
-              <WordPhotoIndexContext value={photoIndex}>
-                <ReportItemContext value={setReportItem}>
-                  <Game
-                    key={`${activity.id}-${run}`}
-                    config={activity.config}
-                    seed={seed}
-                    onFinish={onFinish}
-                  />
-                </ReportItemContext>
-              </WordPhotoIndexContext>
+              <CaseDrillContext value={drillsCase(activity.tags)}>
+                <WordPhotoIndexContext value={photoIndex}>
+                  <ReportItemContext value={setReportItem}>
+                    <Game
+                      key={`${activity.id}-${run}`}
+                      config={activity.config}
+                      seed={seed}
+                      onFinish={onFinish}
+                    />
+                  </ReportItemContext>
+                </WordPhotoIndexContext>
+              </CaseDrillContext>
             </NounIndexContext>
           </ActivityLessonContext>
         </Suspense>

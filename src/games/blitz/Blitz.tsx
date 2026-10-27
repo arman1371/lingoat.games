@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { createRng, shuffle } from '@/lib/rng';
+import { SentenceNouns } from '../shared/SentenceNouns';
 import { useAnswerSound } from '../shared/useAnswerSound';
 import type { GameProps } from '../types';
 
@@ -104,10 +105,11 @@ export function Blitz({ config, seed, onFinish }: GameProps<'blitz'>) {
           {index + 1} / {order.length}
         </span>
       </div>
-      <div className="flex min-h-48 items-center justify-center rounded-3xl border-2 border-line bg-surface p-6 text-center shadow-[0_6px_0_var(--border)]">
+      <div className="flex min-h-48 flex-col items-center justify-center gap-3 rounded-3xl border-2 border-line bg-surface p-6 text-center shadow-[0_6px_0_var(--border)]">
         <p className="text-3xl font-extrabold text-ink" data-testid="prompt">
           {statement.text}
         </p>
+        <SentenceNouns text={statement.text} />
       </div>
       <div className="grid grid-cols-2 gap-3">
         <Button variant="danger" size="lg" icon="✗" onClick={() => answer(false)}>
