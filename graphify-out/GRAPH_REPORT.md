@@ -1,7 +1,7 @@
 # Graph Report - lingoat.games  (2026-10-27)
 
 ## Corpus Check
-- 529 files · ~568,831 words
+- 529 files · ~568,903 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 10 file(s) not represented in the graph (top: (none) 5, .in 1, .ico 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `49fbca44`
+- Built from commit: `d0986415`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -627,7 +627,7 @@ Nodes (8): A1.1 and A1.2 (22 topics), A2.1 and A2.2 (19 topics), B1.1 and B1.2 (
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `react` to `Gapfill.test.tsx`, `content/schema.ts`, `@testing-library/react`, `SettingsPage.tsx`, `package.json`, `ref_i18n`, `Clock.tsx`, `Sentence.tsx`, `Market.tsx`, `grammar/grammar.test.tsx`, `router.tsx`, `Icon.tsx`, `ActivityCard.tsx`, `ref_test_render`, `controls.test.tsx`, `Conjugation.tsx`, `Button.tsx`, `Tabs.tsx`, `Toast.tsx`, `ui.test.tsx`?**
-  _High betweenness centrality (0.117) - this node is a cross-community bridge._
+  _High betweenness centrality (0.122) - this node is a cross-community bridge._
 - **Why does `zod` connect `@testing-library/react` to `content/schema.ts`, `package.json`, `grammar/index.ts`, `progressTransfer.ts`?**
   _High betweenness centrality (0.062) - this node is a cross-community bridge._
 - **Why does `vitest` connect `vitest` to `lib.ts`, `package.json`, `guard.ts`, `worker/index.ts`, `worker/report.ts`, `upload.ts`?**
