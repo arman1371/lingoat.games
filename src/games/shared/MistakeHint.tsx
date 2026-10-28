@@ -49,7 +49,10 @@ export function MistakeHint({ why, lesson }: Props) {
       <dialog
         ref={ref}
         aria-label={t('hint.why')}
-        onClose={() => setOpen(false)}
+        // the full lesson's own sheet sits inside this one and its `close` bubbles through React
+        onClose={(e) => {
+          if (e.target === e.currentTarget) setOpen(false);
+        }}
         data-testid="why-sheet"
         className="mx-auto mb-0 mt-auto max-h-[88dvh] w-full max-w-2xl overflow-y-auto rounded-b-none rounded-t-3xl border-2 border-b-0 border-line bg-bg p-0 text-ink shadow-(--shadow-4) backdrop:bg-overlay"
       >

@@ -125,6 +125,8 @@ for (const scheme of ['light', 'dark'] as const) {
       await page.getByRole('button', { name: wrong, exact: true }).click();
       await expect(page.getByTestId('feedback')).toHaveAttribute('data-kind', 'wrong');
 
+      // the mini lesson sits behind the Why? button; the full lesson opens from there
+      await page.getByTestId('why').click();
       const open = page.getByTestId('full-lesson');
       await expect(open).toContainText('Full lesson: Wo? or Wohin?');
       await open.click();
@@ -136,6 +138,8 @@ for (const scheme of ['light', 'dark'] as const) {
       await page.keyboard.press('Escape');
       await expect(sheet).toBeHidden();
       await expect(open).toBeFocused();
+      await page.getByRole('button', { name: 'Got it' }).click();
+      await expect(page.getByTestId('why')).toBeFocused();
       // still on the same question, feedback intact
       await expect(page.getByTestId('feedback')).toHaveAttribute('data-kind', 'wrong');
       await expect(page).toHaveURL(new RegExp(`/play/${id}`));

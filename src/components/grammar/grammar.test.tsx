@@ -87,6 +87,8 @@ describe('Full lesson link in the mistake hint', () => {
     expect(within(sheet).getByTestId('grammar-lesson')).toBeInTheDocument();
     await user.click(within(sheet).getAllByRole('button', { name: 'Close lesson' })[0]!);
     await waitFor(() => expect(screen.queryByTestId('grammar-lesson')).not.toBeInTheDocument());
+    // the mini lesson it was opened from stays open
+    expect(screen.getByTestId('mini-lesson')).toBeInTheDocument();
   });
 
   it('shows no link for a lesson that has no full version yet', async () => {
