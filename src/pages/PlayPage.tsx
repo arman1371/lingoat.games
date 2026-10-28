@@ -180,7 +180,13 @@ function PlayView({ activityId }: { activityId: string }) {
             {activity.estMinutes} min
           </p>
           {lesson ? <FullLessonLink lesson={lesson} intro /> : null}
-          <Button ref={startRef} size="lg" onClick={() => setStarted(true)} data-testid="start">
+          <Button
+            ref={startRef}
+            size="lg"
+            block
+            onClick={() => setStarted(true)}
+            data-testid="start"
+          >
             {review ? 'Start review' : t('common.start')}
           </Button>
           <Link to={backTo} className="text-sm font-bold text-primary">

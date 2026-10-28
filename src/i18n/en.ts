@@ -55,7 +55,7 @@ export const en = {
     usedIn: 'Used in these units',
     practise: 'Practise this topic',
     fullLesson: 'Full lesson: {title}',
-    readFirst: 'Read first: {title}',
+    readFirstLabel: 'Read first',
     sheetClose: 'Close lesson',
     search: 'Search grammar topics',
     all: 'All',
