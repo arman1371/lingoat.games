@@ -635,6 +635,15 @@ describe('Settings', () => {
     expect(useSettingsStore.getState().speakSentences).toBe(false);
   });
 
+  it('links to the GitHub repo in a new tab without leaking the opener', async () => {
+    renderApp('/settings');
+    const link = await screen.findByRole('link', { name: /Star Lingoat on GitHub/ });
+    expect(link).toHaveAttribute('href', 'https://github.com/arman1371/lingoat.games');
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(link).toHaveTextContent('(opens GitHub in a new tab)');
+  });
+
   it('resets progress only after confirmation', async () => {
     useProgressStore
       .getState()

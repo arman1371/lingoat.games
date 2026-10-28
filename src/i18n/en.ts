@@ -106,6 +106,11 @@ export const en = {
     more: 'Show more',
     back: 'Back to profile',
   },
+  github: {
+    link: 'Star Lingoat on GitHub',
+    linkHint: 'Like it? A star helps others find it',
+    opens: '(opens GitHub in a new tab)',
+  },
   progressPage: {
     title: 'Progress',
     intro: 'Your journey so far.',

@@ -216,7 +216,7 @@ describe('Icon and IconButton', () => {
   });
   it('every icon path set is non-empty', () => {
     const names = Object.keys(ICON_PATHS) as IconName[];
-    expect(names).toHaveLength(61);
+    expect(names).toHaveLength(62);
     for (const n of names) expect(ICON_PATHS[n].length).toBeGreaterThan(5);
   });
   it('IconButton is named by aria-label and fires clicks', async () => {
