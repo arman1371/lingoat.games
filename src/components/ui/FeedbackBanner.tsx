@@ -38,7 +38,7 @@ interface Props {
 }
 
 /** Announced politely to screen readers; sits at the bottom of a game after each answer. */
-export function FeedbackBanner({ kind, title, children, flat = false }: Props) {
+export function FeedbackBanner({ kind, title, children, flat = false }: Readonly<Props>) {
   const s = STYLE[kind];
   return (
     <div
