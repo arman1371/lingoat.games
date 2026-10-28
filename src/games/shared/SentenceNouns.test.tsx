@@ -33,6 +33,13 @@ describe('SentenceNouns', () => {
     expect(screen.getByTestId('sentence-noun')).toHaveTextContent('der Hund');
   });
 
+  it('draws the article as its own badge inside each pill, under the "Nouns" label', () => {
+    renderRow('Ich gebe dem Hund eine Lampe.');
+    const pill = screen.getAllByTestId('sentence-noun')[0]!;
+    expect(pill.querySelector('span')).toHaveTextContent('der');
+    expect(screen.getByTestId('sentence-nouns')).toHaveTextContent(/^Nouns/);
+  });
+
   it('is not interactive', () => {
     renderRow('Ich sehe ___ Hund.');
     expect(screen.queryByRole('button')).not.toBeInTheDocument();

@@ -4,6 +4,7 @@ import { MemoryRouter } from 'react-router';
 import { GRAMMAR_TOPIC_BY_ID } from '@/content/grammar';
 import { LESSON_IDS } from '@/content/lessons';
 import { ActivityLessonContext } from '@/games/shared/hints';
+import { FullLessonLink } from './FullLessonLink';
 import { MistakeHint } from '@/games/shared/MistakeHint';
 import { GrammarLesson } from './GrammarLesson';
 import { GrammarSheet } from './GrammarSheet';
@@ -106,5 +107,21 @@ describe('Full lesson link in the mistake hint', () => {
     expect(await screen.findByTestId('mini-lesson')).toBeInTheDocument();
     await new Promise((r) => setTimeout(r, 50));
     expect(screen.queryByTestId('full-lesson')).not.toBeInTheDocument();
+  });
+});
+
+describe('Full lesson link on a game intro', () => {
+  it('is a card with a "Read first" caption, the topic title and an accessible name that reads as one phrase', async () => {
+    const user = userEvent.setup();
+    render(
+      <MemoryRouter>
+        <FullLessonLink lesson="dative" intro />
+      </MemoryRouter>,
+    );
+    const card = await screen.findByRole('button', { name: /^Read first\W+Dative \(Wem\?\)$/ });
+    expect(card).toHaveAttribute('data-testid', 'full-lesson');
+    expect(within(card).getByText('Dative (Wem?)')).toBeInTheDocument();
+    await user.click(card);
+    expect(await screen.findByRole('dialog', { name: 'Dative (Wem?)' })).toBeInTheDocument();
   });
 });
