@@ -28,7 +28,10 @@ export function NounArticle({ text, answer }: Props) {
   );
   if (!found) return null;
   return (
-    <div className="mt-2 rounded-xl bg-surface px-4 py-3" data-testid="noun-article">
+    <div
+      className="mt-2 flex flex-wrap items-baseline gap-x-3 rounded-xl bg-surface px-3 py-2"
+      data-testid="noun-article"
+    >
       <p className="text-[11px] font-extrabold uppercase tracking-wider text-muted">
         {t('noun.label')}
       </p>

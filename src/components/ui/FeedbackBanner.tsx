@@ -22,14 +22,23 @@ const STYLE: Record<FeedbackKind, { sheet: string; badge: string; icon: IconName
   },
 };
 
+/** The tinted surface alone, for a panel that holds the banner and its Continue button. */
+export const FEEDBACK_TINT: Record<FeedbackKind, string> = {
+  correct: 'bg-success-soft text-on-success-soft',
+  almost: 'bg-warning-soft text-on-warning-soft',
+  wrong: 'bg-danger-soft text-on-danger-soft',
+};
+
 interface Props {
   kind: FeedbackKind;
   title: string;
   children?: ReactNode;
+  /** no card of its own: the parent supplies the tinted surface */
+  flat?: boolean;
 }
 
 /** Announced politely to screen readers; sits at the bottom of a game after each answer. */
-export function FeedbackBanner({ kind, title, children }: Props) {
+export function FeedbackBanner({ kind, title, children, flat = false }: Readonly<Props>) {
   const s = STYLE[kind];
   return (
     <div
@@ -37,7 +46,9 @@ export function FeedbackBanner({ kind, title, children }: Props) {
       aria-live="polite"
       data-testid="feedback"
       data-kind={kind}
-      className={`anim-pop flex flex-col gap-3 rounded-3xl border-2 p-4 ${s.sheet} ${kind === 'wrong' ? 'anim-shake' : ''}`}
+      className={`anim-pop flex flex-col gap-2 ${
+        flat ? '' : `rounded-3xl border-2 p-3 ${s.sheet}`
+      } ${kind === 'wrong' ? 'anim-shake' : ''}`}
     >
       <div className="flex items-center gap-3">
         <span

@@ -130,6 +130,7 @@ describe('Gapfill grammar hints', () => {
       ],
     });
     await user.type(screen.getByLabelText('Missing word'), 'Gespielen{Enter}');
+    await user.click(screen.getByTestId('why'));
     expect(screen.getByTestId('mistake-why')).toHaveTextContent('spielen is regular');
     expect(screen.getByTestId('mini-lesson')).toHaveAttribute('data-lesson', 'perfekt');
   });

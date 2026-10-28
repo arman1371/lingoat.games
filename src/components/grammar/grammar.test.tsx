@@ -79,6 +79,7 @@ describe('Full lesson link in the mistake hint', () => {
         </ActivityLessonContext>
       </MemoryRouter>,
     );
+    await user.click(screen.getByTestId('why'));
     const link = await screen.findByTestId('full-lesson');
     expect(link).toHaveTextContent('Full lesson: Dative (Wem?)');
     await user.click(link);
@@ -86,9 +87,12 @@ describe('Full lesson link in the mistake hint', () => {
     expect(within(sheet).getByTestId('grammar-lesson')).toBeInTheDocument();
     await user.click(within(sheet).getAllByRole('button', { name: 'Close lesson' })[0]!);
     await waitFor(() => expect(screen.queryByTestId('grammar-lesson')).not.toBeInTheDocument());
+    // the mini lesson it was opened from stays open
+    expect(screen.getByTestId('mini-lesson')).toBeInTheDocument();
   });
 
   it('shows no link for a lesson that has no full version yet', async () => {
+    const user = userEvent.setup();
     const unwritten = LESSON_IDS.find((id) => !GRAMMAR_TOPIC_BY_ID.has(id));
     if (!unwritten) return; // every mini lesson has a full lesson now
     render(
@@ -98,6 +102,7 @@ describe('Full lesson link in the mistake hint', () => {
         </ActivityLessonContext>
       </MemoryRouter>,
     );
+    await user.click(screen.getByTestId('why'));
     expect(await screen.findByTestId('mini-lesson')).toBeInTheDocument();
     await new Promise((r) => setTimeout(r, 50));
     expect(screen.queryByTestId('full-lesson')).not.toBeInTheDocument();

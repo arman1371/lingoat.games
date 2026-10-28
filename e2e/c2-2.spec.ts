@@ -106,6 +106,7 @@ test.describe('C2.2 – grammar hints', () => {
     const wrong = item.options!.find((o) => o !== item.answer)!;
     await page.getByRole('button', { name: wrong, exact: true }).click();
     await expect(page.getByTestId('feedback')).toHaveAttribute('data-kind', 'wrong');
+    await page.getByTestId('why').click();
     await expect(page.getByTestId('mistake-why')).toContainText(item.why![wrong]!);
     await expect(page.getByTestId('mini-lesson')).toContainText('Modal particles and adverbs');
   });

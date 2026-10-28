@@ -127,6 +127,7 @@ test.describe('game library and filters', () => {
 test.describe('progress and review', () => {
   test('progress, XP and stars persist after a reload', async ({ page }) => {
     await playPerfectly(page, 'a1-1-hallo-time-of-day');
+    await page.goto('/'); // the stats header is hidden on game pages
     const xp = await page.getByTestId('xp').innerText();
     expect(xp).not.toContain('⭐ 0');
     await page.reload();

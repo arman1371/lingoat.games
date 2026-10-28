@@ -524,7 +524,20 @@ describe('Play flow', () => {
     const progress = useProgressStore.getState();
     expect(progress.activities[quiz.id]).toMatchObject({ stars: 3, plays: 1 });
     expect(progress.xp).toBeGreaterThan(0);
-    expect(screen.getByTestId('xp')).toHaveTextContent(String(progress.xp));
+    expect(screen.getByTestId('xp-gained')).toBeInTheDocument();
+  });
+
+  it('shows a clean game page without the stats header', async () => {
+    const { user } = renderApp(`/play/${quiz.id}?seed=1`);
+    await user.click(await screen.findByTestId('start'));
+    expect(await screen.findByTestId('prompt')).toBeInTheDocument();
+    expect(screen.queryByTestId('xp')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('streak')).not.toBeInTheDocument();
+    // the progress bar sits in the page's top row, beside the close button
+    const bar = screen.getByRole('progressbar', { name: 'Progress' });
+    expect(bar.parentElement).toBe(
+      screen.getByRole('button', { name: 'Exit game' }).nextElementSibling,
+    );
   });
 
   it('collects mistakes in the mistake box and lets you play again', async () => {

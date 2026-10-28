@@ -25,10 +25,13 @@ test.describe('grammar hints after a mistake', () => {
       await page.getByTestId('start').click();
       const { item, wrong } = await answerGapWrongly(page, id);
       await expect(page.getByTestId('feedback')).toHaveAttribute('data-kind', 'wrong');
-      await expect(page.getByTestId('mistake-why')).toContainText(item.why![wrong]!);
-      await expect(page.getByTestId('mini-lesson')).toContainText('Adjective endings');
       // Enter still continues: the Continue button keeps the focus
       await expect(page.getByTestId('continue')).toBeFocused();
+      // the explanation stays out of the way until the learner asks for it
+      await expect(page.getByTestId('mistake-why')).toHaveCount(0);
+      await page.getByTestId('why').click();
+      await expect(page.getByTestId('mistake-why')).toContainText(item.why![wrong]!);
+      await expect(page.getByTestId('mini-lesson')).toContainText('Adjective endings');
 
       await page.evaluate(() =>
         Promise.allSettled(document.getAnimations().map((anim) => anim.finished)),
@@ -53,9 +56,16 @@ test.describe('grammar hints after a mistake', () => {
       const wrong = q.options.find((o) => o !== q.answer)!;
       await page.getByRole('button', { name: wrong, exact: true }).click();
       const lesson = page.getByTestId('mini-lesson');
-      if (q.lesson) await expect(lesson).toHaveAttribute('data-lesson', q.lesson);
-      else await expect(lesson).toHaveCount(0);
-      if (q.why?.[wrong]) await expect(page.getByTestId('mistake-why')).toContainText(q.why[wrong]);
+      if (q.lesson || q.why?.[wrong]) {
+        await page.getByTestId('why').click();
+        if (q.lesson) await expect(lesson).toHaveAttribute('data-lesson', q.lesson);
+        if (q.why?.[wrong]) {
+          await expect(page.getByTestId('mistake-why')).toContainText(q.why[wrong]);
+        }
+        await page.getByRole('button', { name: 'Got it' }).click();
+      } else {
+        await expect(lesson).toHaveCount(0);
+      }
       await page.getByTestId('continue').click();
     }
     await expect(page.getByRole('heading', { name: 'Well done!' })).toBeVisible();

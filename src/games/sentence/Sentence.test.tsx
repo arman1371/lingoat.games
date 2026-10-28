@@ -92,6 +92,7 @@ describe('Sentence grammar hints', () => {
     const { user } = renderGame(Sentence, one);
     await place(user, ['heißt', 'Wie', 'du?']);
     await user.click(screen.getByRole('button', { name: 'Check' }));
+    await user.click(screen.getByTestId('why'));
     expect(screen.getByTestId('mini-lesson')).toHaveTextContent('Asking questions');
   });
 });
