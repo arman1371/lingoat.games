@@ -31,6 +31,8 @@ import {
   type ThemeSetting,
 } from '@/store/settingsStore';
 
+const GITHUB_REPO_URL = 'https://github.com/arman1371/lingoat.games';
+
 type DailyGoalOption = '20' | '50' | '100';
 
 const pickSettings = (s: SettingsData): SettingsData =>
@@ -212,6 +214,17 @@ export function SettingsPage() {
           {t('settings.reset')}
         </Button>
       </Card>
+      <a href={GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer" className="block">
+        <Card interactive className="flex items-center gap-3">
+          <Icon name="star" className="shrink-0 text-primary" />
+          <span className="flex min-w-0 flex-1 flex-col">
+            <span className="font-semibold text-ink">{t('github.link')}</span>
+            <span className="text-sm text-muted">{t('github.linkHint')}</span>
+          </span>
+          <Icon name="external-link" size={20} className="shrink-0 text-muted" />
+          <span className="sr-only">{t('github.opens')}</span>
+        </Card>
+      </a>
       <ConfirmDialog
         open={confirming}
         title={t('settings.resetTitle')}
