@@ -31,7 +31,7 @@ test.describe('game screen', () => {
     await expect(page.getByTestId('feedback')).toHaveAttribute('data-kind', 'correct');
     await settle(page);
 
-    // the green Continue button sits on the bottom edge and the page still does not scroll
+    // a short game keeps its green Continue button on the bottom edge and the page does not scroll
     const box = await page.getByTestId('continue').boundingBox();
     expect(box!.y + box!.height).toBeLessThanOrEqual(PHONE.height);
     expect(box!.y + box!.height).toBeGreaterThan(PHONE.height - 40);

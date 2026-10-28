@@ -37,7 +37,7 @@ export function Button({
   return (
     <button
       type={type}
-      className={`press inline-flex items-center justify-center gap-2 font-bold disabled:cursor-not-allowed disabled:border-transparent disabled:bg-sunken disabled:text-muted disabled:shadow-none ${VARIANTS[variant]} ${SIZES[size]} ${block ? 'w-full' : ''} ${className}`}
+      className={`press inline-flex items-center justify-center gap-2 font-bold disabled:cursor-not-allowed disabled:border-2 disabled:border-line disabled:bg-surface-2 disabled:text-muted disabled:shadow-none ${VARIANTS[variant]} ${SIZES[size]} ${block ? 'w-full' : ''} ${className}`}
       {...rest}
     >
       {icon ? <span aria-hidden="true">{icon}</span> : null}

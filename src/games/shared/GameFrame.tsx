@@ -2,7 +2,7 @@ import { useContext, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { Button } from '@/components/ui/Button';
-import { FeedbackBanner, type FeedbackKind } from '@/components/ui/FeedbackBanner';
+import { FEEDBACK_TINT, FeedbackBanner, type FeedbackKind } from '@/components/ui/FeedbackBanner';
 import { t } from '@/i18n';
 import { useFocusOnMount } from './useFocusOnMount';
 import { ProgressSlotContext } from './progressSlot';
@@ -17,8 +17,10 @@ interface FrameProps {
 
 /**
  * Common chrome for sequential games: progress bar (in the page's top row when it has a slot),
- * content that fills the screen, and a footer pinned to the bottom edge. The "3 / 8" counter is
- * only for screen readers; sighted learners see the bar.
+ * content that fills the screen, and a footer under it. While the round fits the screen the
+ * footer sits on the bottom edge; a long round (a conversation, a table) simply scrolls and the
+ * footer follows at its end, so only short games keep their button in view. The "3 / 8" counter
+ * is only for screen readers; sighted learners see the bar.
  */
 export function GameFrame({ index, total, title, children, footer }: FrameProps) {
   const slot = useContext(ProgressSlotContext);
@@ -34,10 +36,9 @@ export function GameFrame({ index, total, title, children, footer }: FrameProps)
     <section className="mx-auto flex w-full max-w-2xl flex-1 flex-col" aria-label={title ?? 'Game'}>
       {slot ? createPortal(bar, slot) : <div className="pb-2">{bar}</div>}
       <div className="flex flex-1 flex-col gap-4 pb-4 pt-2">{children}</div>
+      {/* a feedback panel in here pulls this padding back so its tint reaches the screen edges */}
       {footer ? (
-        <div className="sticky bottom-0 z-10 -mx-4 border-t border-line bg-bg px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-3">
-          {footer}
-        </div>
+        <div className="pb-[max(1rem,env(safe-area-inset-bottom))] pt-3">{footer}</div>
       ) : null}
     </section>
   );
@@ -51,12 +52,17 @@ interface FooterProps {
   onNext: () => void;
 }
 
-/** Feedback + Continue button. The button grabs focus so Enter continues. */
+/**
+ * Feedback panel + Continue button, one tinted surface across the bottom of the screen. The button
+ * grabs focus so Enter continues.
+ */
 export function FeedbackFooter({ kind, title, detail, isLast, onNext }: FooterProps) {
   const nextRef = useFocusOnMount<HTMLButtonElement>();
   return (
-    <div className="flex flex-col gap-2">
-      <FeedbackBanner kind={kind} title={title}>
+    <div
+      className={`-mx-4 -mb-[max(1rem,env(safe-area-inset-bottom))] -mt-3 flex flex-col gap-3 rounded-t-3xl px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4 ${FEEDBACK_TINT[kind]}`}
+    >
+      <FeedbackBanner flat kind={kind} title={title}>
         {detail}
       </FeedbackBanner>
       <Button
