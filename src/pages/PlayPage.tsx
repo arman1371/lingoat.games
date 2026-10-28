@@ -14,6 +14,7 @@ import { GAME_HELP, gameComponents } from '@/games/registry';
 import { ActivityLessonContext } from '@/games/shared/hints';
 import { NounIndexContext } from '@/games/shared/NounArticle';
 import { CaseDrillContext } from '@/games/shared/SentenceNouns';
+import { ProgressSlotContext } from '@/games/shared/progressSlot';
 import { ReportItemContext } from '@/games/shared/useReportItem';
 import { buildNounIndex, drillsCase } from '@/lib/german/nouns';
 import { buildWordPhotoIndex } from '@/lib/wordPhotos';
@@ -62,6 +63,7 @@ function PlayView({ activityId }: { activityId: string }) {
   const [started, setStarted] = useState(false);
   const [confirmExit, setConfirmExit] = useState(false);
   const [reportItem, setReportItem] = useState<string>();
+  const [progressSlot, setProgressSlot] = useState<HTMLElement | null>(null);
   const [done, setDone] = useState<{ result: GameResult; outcome: RecordOutcome } | null>(null);
   const startRef = useFocusOnMount<HTMLButtonElement>();
   // ready before the first card, so a word with a photo never shows its emoji first
@@ -119,17 +121,21 @@ function PlayView({ activityId }: { activityId: string }) {
   const requestExit = () => (started && !done ? setConfirmExit(true) : exit());
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex items-center justify-between">
+    <div className="flex flex-1 flex-col gap-3">
+      <div className="flex items-center gap-3">
         <IconButton icon="close" onClick={requestExit} aria-label="Exit game" />
         {started && !done ? (
-          <ReportButton
-            activityId={activity.id}
-            levelId={unit?.levelId}
-            unitId={activity.unitId}
-            gameType={activity.gameType}
-            itemId={reportItem}
-          />
+          <>
+            {/* the running game draws its progress bar here (see ProgressSlotContext) */}
+            <div ref={setProgressSlot} className="min-w-0 flex-1" />
+            <ReportButton
+              activityId={activity.id}
+              levelId={unit?.levelId}
+              unitId={activity.unitId}
+              gameType={activity.gameType}
+              itemId={reportItem}
+            />
+          </>
         ) : null}
       </div>
 
@@ -194,12 +200,14 @@ function PlayView({ activityId }: { activityId: string }) {
               <CaseDrillContext value={drillsCase(activity.tags)}>
                 <WordPhotoIndexContext value={photoIndex}>
                   <ReportItemContext value={setReportItem}>
-                    <Game
-                      key={`${activity.id}-${run}`}
-                      config={activity.config}
-                      seed={seed}
-                      onFinish={onFinish}
-                    />
+                    <ProgressSlotContext value={progressSlot}>
+                      <Game
+                        key={`${activity.id}-${run}`}
+                        config={activity.config}
+                        seed={seed}
+                        onFinish={onFinish}
+                      />
+                    </ProgressSlotContext>
                   </ReportItemContext>
                 </WordPhotoIndexContext>
               </CaseDrillContext>

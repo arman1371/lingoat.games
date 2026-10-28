@@ -105,7 +105,9 @@ function Shell() {
   }, [pathname]);
 
   return (
-    <div className={`min-h-dvh ${playing ? '' : 'md:grid md:grid-cols-[16.5rem_minmax(0,1fr)]'}`}>
+    <div
+      className={`min-h-dvh ${playing ? 'flex flex-col' : 'md:grid md:grid-cols-[16.5rem_minmax(0,1fr)]'}`}
+    >
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-on-primary"
@@ -120,38 +122,39 @@ function Shell() {
           <MainNav mistakeCount={mistakeCount} />
         </div>
       ) : null}
-      <div className="flex min-w-0 flex-col">
-        <header className="bg-bg">
-          <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3 md:justify-end">
-            <Link
-              to="/"
-
-              className={`inline-flex ${playing ? '' : 'md:hidden'}`}
-            >
-              <Logo />
-            </Link>
-            <div className="ml-auto flex items-center gap-2 md:ml-0">
-              <StatPill
-                icon="flame"
-                tone="streak"
-                value={streak}
-                label={t('home.streak', { n: streak })}
-                data-testid="streak"
-              />
-              <StatPill
-                icon="zap"
-                tone="xp"
-                value={xp}
-                label={t('home.xp', { n: xp })}
-                data-testid="xp"
-              />
+      <div className="flex min-w-0 flex-1 flex-col">
+        {playing ? null : (
+          <header className="bg-bg">
+            <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3 md:justify-end">
+              <Link to="/" className="inline-flex md:hidden">
+                <Logo />
+              </Link>
+              <div className="ml-auto flex items-center gap-2 md:ml-0">
+                <StatPill
+                  icon="flame"
+                  tone="streak"
+                  value={streak}
+                  label={t('home.streak', { n: streak })}
+                  data-testid="streak"
+                />
+                <StatPill
+                  icon="zap"
+                  tone="xp"
+                  value={xp}
+                  label={t('home.xp', { n: xp })}
+                  data-testid="xp"
+                />
+              </div>
             </div>
-          </div>
-        </header>
+          </header>
+        )}
+        {/* a game owns the whole screen: no tab bar below it, so no bottom padding either */}
         <main
           id="main"
           tabIndex={-1}
-          className="mx-auto w-full max-w-5xl flex-1 px-4 pb-28 pt-2 md:pb-10"
+          className={`mx-auto w-full max-w-5xl flex-1 px-4 ${
+            playing ? 'flex flex-col pt-3' : 'pb-28 pt-2 md:pb-10'
+          }`}
         >
           <Gate />
         </main>

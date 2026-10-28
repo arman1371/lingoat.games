@@ -213,7 +213,7 @@ export const en = {
     words: 'Word',
     matches: 'Match',
   },
-  hint: { why: 'Why not?', lesson: 'Mini lesson' },
+  hint: { why: 'Why not?', lesson: 'Mini lesson', button: 'Why?', close: 'Got it' },
   noun: { label: 'The noun', listLabel: 'Nouns', m: 'masculine', f: 'feminine', n: 'neuter' },
   notFound: { title: 'Page not found', body: 'That page does not exist.', home: 'Back to home' },
 } as const;

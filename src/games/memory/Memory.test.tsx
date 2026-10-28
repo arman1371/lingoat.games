@@ -168,6 +168,7 @@ describe('Memory', () => {
     const all = screen.getAllByTestId('memory-card');
     await user.click(all[cols.left.findIndex((c) => c.pairId === 'f1')]!);
     await user.click(all[3 + cols.right.findIndex((c) => c.pairId === 'f2')]!);
+    await user.click(screen.getByTestId('why'));
     expect(screen.getByTestId('mistake-why')).toHaveTextContent('“dem” is');
     expect(screen.getByTestId('mini-lesson')).toHaveAttribute('data-lesson', 'dative');
     await user.click(all[0]!);

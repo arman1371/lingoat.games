@@ -100,6 +100,7 @@ describe('conjugationWhy', () => {
     });
     await user.type(screen.getByLabelText('ich'), 'ist');
     await user.type(screen.getByLabelText('du'), 'bist{Enter}');
+    await user.click(screen.getByTestId('why'));
     expect(screen.getByTestId('mistake-why')).toHaveTextContent('“ist” is the er/sie/es form');
     expect(screen.getByTestId('mini-lesson')).toBeInTheDocument();
   });

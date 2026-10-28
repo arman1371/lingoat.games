@@ -106,6 +106,7 @@ test.describe('B2.2 – grammar hints', () => {
     const item = a.config.items.find((i) => squash(i.text.replace('___', '…')) === shown)!;
     const wrong = item.options!.find((o) => o !== item.answer)!;
     await page.getByRole('button', { name: wrong, exact: true }).click();
+    await page.getByTestId('why').click();
     await expect(page.getByTestId('mistake-why')).toContainText(item.why![wrong]!);
     await expect(page.getByTestId('mini-lesson')).toHaveAttribute('data-lesson', 'state-passive');
   });

@@ -128,6 +128,7 @@ describe('Quiz grammar hints', () => {
   it('explains a wrong grammar pick with its why and a mini lesson', async () => {
     const { user } = renderGame(Quiz, grammar);
     await user.click(screen.getByRole('button', { name: 'der' }));
+    await user.click(screen.getByTestId('why'));
     expect(screen.getByTestId('mistake-why')).toHaveTextContent('der is the subject form.');
     expect(screen.getByTestId('mini-lesson')).toHaveTextContent('Accusative (Wen? Was?)');
   });
@@ -135,6 +136,7 @@ describe('Quiz grammar hints', () => {
   it('falls back to a generated contrast between grammar words', async () => {
     const { user } = renderGame(Quiz, grammar);
     await user.click(screen.getByRole('button', { name: 'dem' }));
+    await user.click(screen.getByTestId('why'));
     expect(screen.getByTestId('mistake-why')).toHaveTextContent('“dem” is masculine/neuter dative');
   });
 

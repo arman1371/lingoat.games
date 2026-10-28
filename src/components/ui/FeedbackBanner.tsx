@@ -37,7 +37,7 @@ export function FeedbackBanner({ kind, title, children }: Props) {
       aria-live="polite"
       data-testid="feedback"
       data-kind={kind}
-      className={`anim-pop flex flex-col gap-3 rounded-3xl border-2 p-4 ${s.sheet} ${kind === 'wrong' ? 'anim-shake' : ''}`}
+      className={`anim-pop flex flex-col gap-2 rounded-3xl border-2 p-3 ${s.sheet} ${kind === 'wrong' ? 'anim-shake' : ''}`}
     >
       <div className="flex items-center gap-3">
         <span
