@@ -1,17 +1,17 @@
 # Graph Report - lingoat.games  (2026-10-28)
 
 ## Corpus Check
-- 531 files · ~570,141 words
+- 531 files · ~570,378 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 10 file(s) not represented in the graph (top: (none) 5, .in 1, .ico 1)
 
 ## Summary
-- 3258 nodes · 9075 edges · 119 communities (109 shown, 10 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 151 edges (avg confidence: 0.86)
+- 3258 nodes · 9078 edges · 119 communities (109 shown, 10 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 152 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f2524aa0`
+- Built from commit: `d44cf525`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,12 +26,12 @@
 - numbers.ts
 - content/schema.ts
 - app.tsx
-- ReportButton.tsx
+- PlayPage.tsx
 - package.json
 - progressStore.ts
 - builders.ts
 - devDependencies
-- PlayPage.tsx
+- ref_i18n
 - ref_lib_german_conjugation
 - react
 - build.ts
@@ -204,12 +204,12 @@ Cohesion: 0.05
 Nodes (49): VocabList, ContentContext, ContentProvider(), Props, State, Probe(), Strict(), useContent() (+41 more)
 
 ### Community 9 - "app.tsx"
-Cohesion: 0.07
-Nodes (29): ref_app_router, ref_components_ui_choicecards, ref_components_ui_segment, ref_components_ui_toast, ref_components_ui_toggle, ref_content_a1_1, ref_content_a1_2, ref_content_a2_1 (+21 more)
+Cohesion: 0.09
+Nodes (25): ref_app_router, ref_components_ui_choicecards, ref_components_ui_segment, ref_components_ui_toast, ref_components_ui_toggle, ref_content_a1_1, ref_content_a1_2, ref_content_a2_1 (+17 more)
 
-### Community 10 - "ReportButton.tsx"
-Cohesion: 0.14
-Nodes (11): What the player sees, ref_components_ui_dialog, ref_components_ui_iconbutton, ref_lib_report, ref_lib_turnstile, ReportButton(), ReportContext, ReportDialog() (+3 more)
+### Community 10 - "PlayPage.tsx"
+Cohesion: 0.06
+Nodes (26): What the player sees, ref_components_grammar_fulllessonlink, ref_components_reportbutton, ref_components_ui_dialog, ref_components_ui_iconbutton, ref_content_items, ref_content_schema, ref_content_tags (+18 more)
 
 ### Community 11 - "package.json"
 Cohesion: 0.08
@@ -227,9 +227,9 @@ Nodes (88): byes, feelings, hallo, hellos, polite, vocab, people, phrases (+80 m
 Cohesion: 0.07
 Nodes (29): devDependencies, aws4fetch, @axe-core/playwright, eslint, @eslint/js, eslint-plugin-jsx-a11y, eslint-plugin-react-hooks, globals (+21 more)
 
-### Community 15 - "PlayPage.tsx"
-Cohesion: 0.05
-Nodes (60): ref_app_path, ref_components_activitycard, ref_components_dailygoalcard, ref_components_grammar_fulllessonlink, ref_components_grammar_grammarindex, ref_components_grammar_grammarlesson, ref_components_grammar_unitgrammar, ref_components_grammar_usegrammar (+52 more)
+### Community 15 - "ref_i18n"
+Cohesion: 0.06
+Nodes (49): ref_app_path, ref_components_activitycard, ref_components_dailygoalcard, ref_components_grammar_grammarindex, ref_components_grammar_grammarlesson, ref_components_grammar_unitgrammar, ref_components_grammar_usegrammar, ref_components_ui_button (+41 more)
 
 ### Community 16 - "ref_lib_german_conjugation"
 Cohesion: 0.12
@@ -611,10 +611,10 @@ Nodes (8): A1.1 and A1.2 (22 topics), A2.1 and A2.2 (19 topics), B1.1 and B1.2 (
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `react` to `@testing-library/react`, `content/schema.ts`, `app.tsx`, `ReportButton.tsx`, `package.json`, `PlayPage.tsx`, `Clock.tsx`, `Sentence.tsx`, `Memory.tsx`, `Market.tsx`, `grammar/grammar.test.tsx`, `router.tsx`, `Icon.tsx`, `StatePanel.tsx`, `WordImage.tsx`, `controls.test.tsx`, `Conjugation.tsx`, `Button.tsx`, `Tabs.tsx`, `FeedbackBanner.tsx`, `ui.test.tsx`?**
-  _High betweenness centrality (0.117) - this node is a cross-community bridge._
-- **Why does `@testing-library/react` connect `@testing-library/react` to `WordImage.tsx`, `Memory.tsx`, `ui.test.tsx`, `Market.tsx`, `grammar/grammar.test.tsx`, `router.tsx`, `ReportButton.tsx`, `package.json`, `controls.test.tsx`, `content/schema.ts`, `app.tsx`, `PlayPage.tsx`, `react`, `Conjugation.tsx`, `vitest`, `Clock.tsx`, `fetch.ts`, `Sentence.tsx`?**
-  _High betweenness centrality (0.063) - this node is a cross-community bridge._
+- **Why does `react` connect `react` to `@testing-library/react`, `content/schema.ts`, `app.tsx`, `PlayPage.tsx`, `package.json`, `ref_i18n`, `Clock.tsx`, `Sentence.tsx`, `Memory.tsx`, `Market.tsx`, `grammar/grammar.test.tsx`, `router.tsx`, `Icon.tsx`, `StatePanel.tsx`, `WordImage.tsx`, `controls.test.tsx`, `Conjugation.tsx`, `Button.tsx`, `Tabs.tsx`, `FeedbackBanner.tsx`, `ui.test.tsx`?**
+  _High betweenness centrality (0.109) - this node is a cross-community bridge._
+- **Why does `@testing-library/react` connect `@testing-library/react` to `WordImage.tsx`, `Memory.tsx`, `ui.test.tsx`, `Market.tsx`, `grammar/grammar.test.tsx`, `router.tsx`, `PlayPage.tsx`, `package.json`, `controls.test.tsx`, `content/schema.ts`, `app.tsx`, `ref_i18n`, `react`, `Conjugation.tsx`, `vitest`, `Clock.tsx`, `fetch.ts`, `Sentence.tsx`?**
+  _High betweenness centrality (0.065) - this node is a cross-community bridge._
 - **Why does `zod` connect `progressTransfer.ts` to `content/schema.ts`, `@testing-library/react`, `package.json`, `grammar/index.ts`?**
   _High betweenness centrality (0.051) - this node is a cross-community bridge._
 - **What connects `singleQuote`, `semi`, `trailingComma` to the rest of the system?**
