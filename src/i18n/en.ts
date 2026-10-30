@@ -1,6 +1,6 @@
 export const en = {
   appName: 'Lingoat',
-  tagline: 'Play your way through German',
+  tagline: 'Play your way through {language}',
   nav: {
     home: 'Learn',
     library: 'Library',
@@ -36,6 +36,20 @@ export const en = {
     levels: 'Levels',
     gamesForYou: 'Games for you',
     reviewCard: '{n} items waiting in your mistake box',
+    noGames: 'The first {language} games are coming soon.',
+    levelNotStarted: 'Not started',
+  },
+  language: {
+    label: 'Learning language',
+    change: ', change language',
+    sheetTitle: 'Learning language',
+    notStarted: 'Not started',
+    status: '{level} · {xp} XP',
+    note: 'XP, streak, stars and mistakes are kept for each language. Theme, sound and speech settings are shared.',
+    close: 'Close',
+    welcomeTitle: 'Starting {language}',
+    welcomeBody:
+      'Games work the same way in every language, and your {language} progress is kept apart from your other languages.',
   },
   unit: {
     path: 'Step by step',
@@ -128,12 +142,13 @@ export const en = {
     theme: 'Theme',
     motion: 'Animations',
     sounds: 'Sound effects',
-    autoSpeak: 'Speak German automatically',
+    autoSpeak: 'Speak {language} automatically',
     speakSentences: 'Read sentences aloud',
     ttsRate: 'Speech speed',
-    reset: 'Reset all progress',
-    resetConfirm: 'This deletes your XP, stars and mistakes. Continue?',
-    resetTitle: 'Reset all progress?',
+    reset: 'Reset {language} progress',
+    resetConfirm:
+      'This deletes your {language} XP, stars and mistakes. Your other languages are not changed. Continue?',
+    resetTitle: 'Reset {language} progress?',
     resetDone: 'Progress reset.',
     cancel: 'Cancel',
   },
@@ -141,12 +156,15 @@ export const en = {
     title: 'Your data',
     intro:
       'Progress is stored only in this browser. Save it to a file to move it to another device or keep a backup.',
+    introLanguages:
+      'One file holds every language. Importing never changes a language that is not in the file.',
     export: 'Export progress',
     import: 'Import progress',
     exported: 'Progress file saved.',
     imported: 'Progress imported.',
     confirmTitle: 'Import this progress?',
-    confirmBody: 'Saved {date}: {xp} XP, {games} games. How should it be added to this device?',
+    confirmBody: 'Saved {date}. How should it be added to this device?',
+    languageLine: '{language}: {xp} XP, {games} games',
     modeLabel: 'How to import',
     mergeTitle: 'Merge',
     mergeHint: 'Keep the best of both. Nothing you earned is lost.',

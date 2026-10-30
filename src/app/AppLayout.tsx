@@ -1,6 +1,7 @@
 import { Suspense, useEffect } from 'react';
 import { NavLink, Outlet, useLocation, Link } from 'react-router';
 import { ContentProvider, useContentState } from '@/content/ContentProvider';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { Icon } from '@/components/ui/Icon';
 import { Logo } from '@/components/ui/Logo';
 import { Skeleton } from '@/components/ui/Skeleton';
@@ -124,6 +125,9 @@ function Shell() {
             <Logo />
           </Link>
           <MainNav mistakeCount={mistakeCount} />
+          <div className="hidden md:mt-auto md:block">
+            <LanguageSwitcher variant="sidebar" />
+          </div>
         </div>
       ) : null}
       <div className="flex min-w-0 flex-1 flex-col">

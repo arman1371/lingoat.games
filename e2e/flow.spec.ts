@@ -190,10 +190,10 @@ test.describe('progress and review', () => {
     await page.getByLabel('Reduced').check({ force: true });
     await expect(page.locator('html')).toHaveAttribute('data-reduced-motion', 'true');
 
-    await page.getByRole('button', { name: 'Reset all progress' }).click();
+    await page.getByRole('button', { name: 'Reset German progress' }).click();
     await page
-      .getByRole('dialog', { name: 'Reset all progress?' })
-      .getByRole('button', { name: 'Reset all progress' })
+      .getByRole('dialog', { name: 'Reset German progress?' })
+      .getByRole('button', { name: 'Reset German progress' })
       .click();
     await expect(page.getByTestId('xp')).toHaveText('0');
     await expect(page.getByText('Progress reset.')).toBeVisible();

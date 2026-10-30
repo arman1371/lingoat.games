@@ -1,6 +1,28 @@
 import { DEFAULT_LANGUAGE, type LanguageId } from './languages';
 import type { LevelMeta } from './schema';
 
+/** French is on its way: every CEFR half-level is listed, none has content yet. */
+const FRENCH_LEVELS: LevelMeta[] = [
+  ['a1-1', 'A1.1', 'First steps in French'],
+  ['a1-2', 'A1.2', 'Breakthrough, second half'],
+  ['a2-1', 'A2.1', 'Waystage, first half'],
+  ['a2-2', 'A2.2', 'Waystage, second half'],
+  ['b1-1', 'B1.1', 'Threshold, first half'],
+  ['b1-2', 'B1.2', 'Threshold, second half'],
+  ['b2-1', 'B2.1', 'Vantage, first half'],
+  ['b2-2', 'B2.2', 'Vantage, second half'],
+  ['c1-1', 'C1.1', 'Effective proficiency, first half'],
+  ['c1-2', 'C1.2', 'Effective proficiency, second half'],
+  ['c2-1', 'C2.1', 'Mastery, first half'],
+  ['c2-2', 'C2.2', 'Mastery, second half'],
+].map(([id, title, subtitle]) => ({
+  language: 'fr',
+  id: `fr-${id}`,
+  title: title!,
+  subtitle: subtitle!,
+  status: 'coming-soon',
+}));
+
 /**
  * Level catalogue. To add a level: create `src/content/<level-id>/index.ts` that default-exports a
  * `LevelContent`, then flip the entry below to `available` and point `load` at it.
@@ -111,6 +133,7 @@ export const LEVELS: LevelMeta[] = [
     status: 'available',
     load: () => import('./c2-2'),
   },
+  ...FRENCH_LEVELS,
 ];
 
 const levelsByLanguage = new Map<LanguageId, LevelMeta[]>();
@@ -123,6 +146,14 @@ export function levelsOf(language: LanguageId = DEFAULT_LANGUAGE): LevelMeta[] {
     levelsByLanguage.set(language, levels);
   }
   return levels;
+}
+
+/**
+ * The level an activity belongs to. Activity ids start with their level id (`a1-2-…`, `fr-a1-1-…`), so
+ * this works for languages whose content is not loaded.
+ */
+export function levelOfActivityId(activityId: string): LevelMeta | undefined {
+  return LEVELS.find((l) => activityId.startsWith(`${l.id}-`));
 }
 
 export function getLevelMeta(id: string): LevelMeta | undefined {

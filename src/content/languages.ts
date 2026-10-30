@@ -19,6 +19,8 @@ export interface LanguageMeta {
   bcp47: string;
   /** Route prefix: '' for the default language, '/fr' for French. */
   routePrefix: string;
+  /** A sentence to try the voice with in Profile. */
+  sampleSentence: string;
 }
 
 export const LANGUAGES: Record<LanguageId, LanguageMeta> = {
@@ -29,6 +31,7 @@ export const LANGUAGES: Record<LanguageId, LanguageMeta> = {
     flag: '🇩🇪',
     bcp47: 'de-DE',
     routePrefix: '',
+    sampleSentence: 'Guten Tag! Wie geht es Ihnen?',
   },
   fr: {
     id: 'fr',
@@ -37,6 +40,7 @@ export const LANGUAGES: Record<LanguageId, LanguageMeta> = {
     flag: '🇫🇷',
     bcp47: 'fr-FR',
     routePrefix: '/fr',
+    sampleSentence: 'Bonjour ! Comment allez-vous ?',
   },
 };
 

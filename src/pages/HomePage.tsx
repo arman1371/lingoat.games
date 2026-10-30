@@ -1,6 +1,10 @@
 import { useLanguage, useProgress } from '@/app/language';
 import { Link } from 'react-router';
 import { DailyGoalCard } from '@/components/DailyGoalCard';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { Mascot } from '@/components/ui/Mascot';
+import { Tag } from '@/components/ui/Chip';
+import { DEFAULT_LANGUAGE, LANGUAGES } from '@/content/languages';
 import { Card } from '@/components/ui/Card';
 import { GameTile } from '@/components/ui/GameTile';
 import { StatCard } from '@/components/ui/StatCard';
@@ -30,15 +34,34 @@ export function HomePage() {
   const unit = next ? content.unitById.get(next.unitId) : undefined;
   const hasStarted = Object.keys(progress).length > 0;
 
+  const { name: languageName } = LANGUAGES[language];
+  const hasGames = content.activities.length > 0;
+
   return (
     <div className="flex flex-col gap-6">
+      <div className="md:hidden">
+        <LanguageSwitcher variant="chip" />
+      </div>
+      {language !== DEFAULT_LANGUAGE && !hasStarted ? (
+        <Card className="flex items-center gap-4" data-testid="language-welcome">
+          <Mascot mood="happy" size={64} />
+          <div>
+            <h2 className="text-xl font-semibold text-ink">
+              {t('language.welcomeTitle', { language: languageName })}
+            </h2>
+            <p className="text-muted">{t('language.welcomeBody', { language: languageName })}</p>
+          </div>
+        </Card>
+      ) : null}
       <DailyGoalCard xp={todayXp} goal={goal} />
 
       <section
         className="rounded-3xl bg-primary p-6 text-on-primary shadow-[0_6px_0_var(--primary-edge)] md:p-8"
         aria-labelledby="hero-title"
       >
-        <p className="text-xs font-extrabold uppercase tracking-wider opacity-90">{t('tagline')}</p>
+        <p className="text-xs font-extrabold uppercase tracking-wider opacity-90">
+          {t('tagline', { language: languageName })}
+        </p>
         <h1 id="hero-title" className="mt-1 text-3xl font-semibold md:text-4xl">
           {hasStarted ? t('home.continueTitle') : t('home.startTitle')}
         </h1>
@@ -68,7 +91,9 @@ export function HomePage() {
           </div>
         ) : (
           <p className="mt-3 text-lg">
-            You finished every game – replay your favourites from the library!
+            {hasGames
+              ? 'You finished every game – replay your favourites from the library!'
+              : t('home.noGames', { language: languageName })}
           </p>
         )}
       </section>
@@ -121,6 +146,7 @@ export function HomePage() {
               <Card className={`flex h-full flex-col gap-2 ${available ? '' : 'opacity-60'}`}>
                 <div className="flex items-center justify-between">
                   <h3 className="font-display text-2xl font-semibold text-ink">{level.title}</h3>
+                  {available && done === 0 ? <Tag>{t('home.levelNotStarted')}</Tag> : null}
                   {!available ? (
                     <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-bold text-muted">
                       {t('common.comingSoon')}
