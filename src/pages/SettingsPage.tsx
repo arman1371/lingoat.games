@@ -22,8 +22,10 @@ import {
   type ImportMode,
   type TransferFile,
 } from '@/lib/progressTransfer';
-import { LANGUAGE_IDS, type LanguageId } from '@/content/languages';
-import { progressStores, useProgressStore, type ProgressData } from '@/store/progressStore';
+import { useLanguage, useProgress } from '@/app/language';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { LANGUAGE_IDS, LANGUAGES, type LanguageId } from '@/content/languages';
+import { progressStores, type ProgressData } from '@/store/progressStore';
 import {
   DEFAULT_SETTINGS,
   useSettingsStore,
@@ -70,7 +72,9 @@ function download(file: TransferFile) {
 
 export function SettingsPage() {
   const s = useSettingsStore();
-  const reset = useProgressStore((p) => p.reset);
+  const language = useLanguage();
+  const languageMeta = LANGUAGES[language];
+  const reset = useProgress((p) => p.reset);
   const [confirming, setConfirming] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const picker = useRef<HTMLInputElement>(null);
@@ -120,6 +124,7 @@ export function SettingsPage() {
       </header>
       <Card className="flex flex-col gap-5">
         <h2 className="text-xl font-semibold text-ink">{t('settings.title')}</h2>
+        <LanguageSwitcher variant="row" />
         <Segment<DailyGoalOption>
           label={t('dailyGoal.setting')}
           value={String(s.dailyGoal) as DailyGoalOption}
@@ -156,7 +161,7 @@ export function SettingsPage() {
           onChange={(sounds) => s.set({ sounds })}
         />
         <Toggle
-          label={t('settings.autoSpeak')}
+          label={t('settings.autoSpeak', { language: languageMeta.name })}
           checked={s.autoSpeak}
           onChange={(autoSpeak) => s.set({ autoSpeak })}
         />
@@ -180,7 +185,7 @@ export function SettingsPage() {
               onChange={(e) => s.set({ ttsRate: Number(e.target.value) })}
               className="h-11 flex-1"
             />
-            <SpeakButton text="Guten Tag! Wie geht es Ihnen?" />
+            <SpeakButton text={languageMeta.sampleSentence} />
           </div>
         </div>
       </Card>
@@ -193,6 +198,7 @@ export function SettingsPage() {
       <Card className="flex flex-col gap-3">
         <h2 className="font-extrabold text-ink">{t('data.title')}</h2>
         <p className="text-sm text-muted">{t('data.intro')}</p>
+        <p className="text-sm text-muted">{t('data.introLanguages')}</p>
         <Button variant="secondary" icon={<Icon name="download" />} onClick={exportData}>
           {t('data.export')}
         </Button>
@@ -215,7 +221,7 @@ export function SettingsPage() {
           }}
         />
         <Button variant="danger" onClick={() => setConfirming(true)}>
-          {t('settings.reset')}
+          {t('settings.reset', { language: languageMeta.name })}
         </Button>
       </Card>
       <a href={GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer" className="block">
@@ -231,9 +237,9 @@ export function SettingsPage() {
       </a>
       <ConfirmDialog
         open={confirming}
-        title={t('settings.resetTitle')}
-        body={t('settings.resetConfirm')}
-        confirmLabel={t('settings.reset')}
+        title={t('settings.resetTitle', { language: languageMeta.name })}
+        body={t('settings.resetConfirm', { language: languageMeta.name })}
+        confirmLabel={t('settings.reset', { language: languageMeta.name })}
         cancelLabel={t('settings.cancel')}
         tone="danger"
         onCancel={() => setConfirming(false)}
@@ -265,15 +271,24 @@ export function SettingsPage() {
           <div className="flex flex-col gap-4">
             <p>
               {t('data.confirmBody', {
-                date: new Date(summarize(pending).exportedAt).toLocaleDateString('en-GB', {
+                date: new Date(pending.exportedAt).toLocaleDateString('en-GB', {
                   day: 'numeric',
                   month: 'short',
                   year: 'numeric',
                 }),
-                xp: summarize(pending).xp.toLocaleString('en-US'),
-                games: summarize(pending).games,
               })}
             </p>
+            <ul className="flex flex-col gap-1 font-semibold text-ink">
+              {summarize(pending).languages.map((l) => (
+                <li key={l.language}>
+                  {t('data.languageLine', {
+                    language: LANGUAGES[l.language].name,
+                    xp: l.xp.toLocaleString('en-US'),
+                    games: l.games,
+                  })}
+                </li>
+              ))}
+            </ul>
             <ChoiceCards<ImportMode>
               label={t('data.modeLabel')}
               value={importMode}

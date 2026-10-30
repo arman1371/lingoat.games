@@ -31,6 +31,7 @@ async function settle(page: Page) {
 
 const PAGES: [string, string, string][] = [
   ['home', '/', 'Start your first game'],
+  ['home in French', '/fr', 'Starting French'],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],
@@ -86,6 +87,14 @@ for (const scheme of ['light', 'dark'] as const) {
         await expectNoViolations(page, name);
       });
     }
+
+    test('the language sheet has no violations', async ({ page }) => {
+      await page.goto('/profile');
+      await page.getByTestId('language-row').click();
+      await expect(page.getByRole('dialog', { name: 'Learning language' })).toBeVisible();
+      await settle(page);
+      await expectNoViolations(page, 'language sheet');
+    });
 
     test('an open game, feedback state and result screen have no violations', async ({ page }) => {
       await page.goto('/play/a1-1-hallo-time-of-day?seed=1');

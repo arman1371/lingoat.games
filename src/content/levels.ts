@@ -111,6 +111,90 @@ export const LEVELS: LevelMeta[] = [
     status: 'available',
     load: () => import('./c2-2'),
   },
+  {
+    language: 'fr',
+    id: 'fr-a1-1',
+    title: 'A1.1',
+    subtitle: 'First steps in French',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-a1-2',
+    title: 'A1.2',
+    subtitle: 'Breakthrough, second half',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-a2-1',
+    title: 'A2.1',
+    subtitle: 'Waystage, first half',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-a2-2',
+    title: 'A2.2',
+    subtitle: 'Waystage, second half',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-b1-1',
+    title: 'B1.1',
+    subtitle: 'Threshold, first half',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-b1-2',
+    title: 'B1.2',
+    subtitle: 'Threshold, second half',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-b2-1',
+    title: 'B2.1',
+    subtitle: 'Vantage, first half',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-b2-2',
+    title: 'B2.2',
+    subtitle: 'Vantage, second half',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-c1-1',
+    title: 'C1.1',
+    subtitle: 'Effective proficiency, first half',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-c1-2',
+    title: 'C1.2',
+    subtitle: 'Effective proficiency, second half',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-c2-1',
+    title: 'C2.1',
+    subtitle: 'Mastery, first half',
+    status: 'coming-soon',
+  },
+  {
+    language: 'fr',
+    id: 'fr-c2-2',
+    title: 'C2.2',
+    subtitle: 'Mastery, second half',
+    status: 'coming-soon',
+  },
 ];
 
 const levelsByLanguage = new Map<LanguageId, LevelMeta[]>();
@@ -123,6 +207,14 @@ export function levelsOf(language: LanguageId = DEFAULT_LANGUAGE): LevelMeta[] {
     levelsByLanguage.set(language, levels);
   }
   return levels;
+}
+
+/**
+ * The level an activity belongs to. Activity ids start with their level id (`a1-2-…`, `fr-a1-1-…`), so
+ * this works for languages whose content is not loaded.
+ */
+export function levelOfActivityId(activityId: string): LevelMeta | undefined {
+  return LEVELS.find((l) => activityId.startsWith(`${l.id}-`));
 }
 
 export function getLevelMeta(id: string): LevelMeta | undefined {

@@ -1,9 +1,9 @@
-import { useId } from 'react';
+import { useId, type ReactNode } from 'react';
 
 interface Props<T extends string> {
   label: string;
   value: T;
-  options: { value: T; title: string; description: string }[];
+  options: { value: T; title: ReactNode; description: ReactNode }[];
   onChange: (v: T) => void;
 }
 

@@ -649,13 +649,15 @@ describe('Settings', () => {
       .getState()
       .recordResult('x', { correct: 1, total: 1, played: [], mistakes: [] });
     const { user } = renderApp('/settings');
-    await user.click(await screen.findByRole('button', { name: 'Reset all progress' }));
-    const dialog = await screen.findByRole('dialog', { name: 'Reset all progress?' });
+    await user.click(await screen.findByRole('button', { name: 'Reset German progress' }));
+    const dialog = await screen.findByRole('dialog', { name: 'Reset German progress?' });
     await user.click(within(dialog).getByRole('button', { name: 'Cancel' }));
     expect(useProgressStore.getState().xp).toBeGreaterThan(0);
-    await user.click(screen.getByRole('button', { name: 'Reset all progress' }));
+    await user.click(screen.getByRole('button', { name: 'Reset German progress' }));
     await user.click(
-      within(await screen.findByRole('dialog')).getByRole('button', { name: 'Reset all progress' }),
+      within(await screen.findByRole('dialog')).getByRole('button', {
+        name: 'Reset German progress',
+      }),
     );
     expect(useProgressStore.getState().xp).toBe(0);
     expect(await screen.findByText('Progress reset.')).toBeInTheDocument();
