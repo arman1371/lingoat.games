@@ -25,8 +25,8 @@ test('progress and settings move to another device through an exported file', as
   await expect(page.getByText('Progress file saved.')).toBeVisible();
   const file = await download.path();
   const saved = JSON.parse(await readFile(file, 'utf8'));
-  expect(saved).toMatchObject({ format: 'lingoat-progress', schemaVersion: 1 });
-  expect(saved.progress.activities[GAME]).toBeTruthy();
+  expect(saved).toMatchObject({ format: 'lingoat-progress', schemaVersion: 2 });
+  expect(saved.progress.de.activities[GAME]).toBeTruthy();
 
   // a second, empty browser profile = the other device
   const other = await (await browser.newContext()).newPage();
@@ -34,7 +34,7 @@ test('progress and settings move to another device through an exported file', as
   await other.goto('/profile');
   await other.getByTestId('import-file').setInputFiles(file);
   const dialog = other.getByRole('dialog', { name: 'Import this progress?' });
-  await expect(dialog).toContainText(`${saved.progress.xp} XP`);
+  await expect(dialog).toContainText(`${saved.progress.de.xp} XP`);
   await dialog.getByRole('button', { name: 'Cancel' }).click();
   await expect(other.getByLabel('Dark', { exact: true })).not.toBeChecked();
 
@@ -48,7 +48,7 @@ test('progress and settings move to another device through an exported file', as
   await expect(other.getByLabel('100', { exact: true })).toBeChecked();
 
   await other.goto('/progress');
-  await expect(other.getByText(`${saved.progress.xp}`).first()).toBeVisible();
+  await expect(other.getByText(`${saved.progress.de.xp}`).first()).toBeVisible();
   await other.goto('/profile');
   await expect(other.getByLabel('Dark', { exact: true })).toBeChecked();
 });
