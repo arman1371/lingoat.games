@@ -113,8 +113,17 @@ export const LEVELS: LevelMeta[] = [
   },
 ];
 
-export const levelsOf = (language: LanguageId = DEFAULT_LANGUAGE): LevelMeta[] =>
-  LEVELS.filter((l) => l.language === language);
+const levelsByLanguage = new Map<LanguageId, LevelMeta[]>();
+
+/** Levels of one language. The array is stable per language, so it is safe as a hook dependency. */
+export function levelsOf(language: LanguageId = DEFAULT_LANGUAGE): LevelMeta[] {
+  let levels = levelsByLanguage.get(language);
+  if (!levels) {
+    levels = LEVELS.filter((l) => l.language === language);
+    levelsByLanguage.set(language, levels);
+  }
+  return levels;
+}
 
 export function getLevelMeta(id: string): LevelMeta | undefined {
   return LEVELS.find((l) => l.id === id);

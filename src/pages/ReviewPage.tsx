@@ -1,3 +1,4 @@
+import { useProgress } from '@/app/language';
 import { Link } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -8,11 +9,10 @@ import { useContent } from '@/content/ContentProvider';
 import { playUrl } from '@/app/path';
 import { dayNumber, isDue } from '@/lib/srs';
 import { t } from '@/i18n';
-import { useProgressStore } from '@/store/progressStore';
 
 export function ReviewPage() {
   const content = useContent();
-  const mistakes = useProgressStore((s) => s.mistakes);
+  const mistakes = useProgress((s) => s.mistakes);
   const today = dayNumber();
   const all = Object.values(mistakes).filter((m) => content.activityById.has(m.activityId));
   const due = all.filter((m) => isDue(m, today));

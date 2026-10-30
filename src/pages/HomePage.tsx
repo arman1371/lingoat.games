@@ -1,3 +1,4 @@
+import { useLanguage, useProgress } from '@/app/language';
 import { Link } from 'react-router';
 import { DailyGoalCard } from '@/components/DailyGoalCard';
 import { Card } from '@/components/ui/Card';
@@ -6,21 +7,22 @@ import { StatCard } from '@/components/ui/StatCard';
 import { Button } from '@/components/ui/Button';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { useContent } from '@/content/ContentProvider';
-import { LEVELS } from '@/content/levels';
+import { levelsOf } from '@/content/levels';
 import { nextActivity, playUrl, queueAfter } from '@/app/path';
 import { GAME_TYPE_LABELS } from '@/lib/filters';
 import { dayNumber } from '@/lib/srs';
 import { t } from '@/i18n';
-import { dailyXp, useProgressStore, visibleStreak } from '@/store/progressStore';
+import { dailyXp, visibleStreak } from '@/store/progressStore';
 import { useSettingsStore } from '@/store/settingsStore';
 
 export function HomePage() {
   const content = useContent();
-  const progress = useProgressStore((s) => s.activities);
-  const xp = useProgressStore((s) => s.xp);
-  const streak = useProgressStore((s) => visibleStreak(s.streak, dayNumber()));
-  const mistakes = useProgressStore((s) => Object.keys(s.mistakes).length);
-  const todayXp = useProgressStore((s) => dailyXp(s.daily, dayNumber()));
+  const progress = useProgress((s) => s.activities);
+  const language = useLanguage();
+  const xp = useProgress((s) => s.xp);
+  const streak = useProgress((s) => visibleStreak(s.streak, dayNumber()));
+  const mistakes = useProgress((s) => Object.keys(s.mistakes).length);
+  const todayXp = useProgress((s) => dailyXp(s.daily, dayNumber()));
   const goal = useSettingsStore((s) => s.dailyGoal);
 
   const next = nextActivity(content.fullPath, progress);
@@ -109,7 +111,7 @@ export function HomePage() {
           {t('home.levels')}
         </h2>
         <ul className="grid gap-4 sm:grid-cols-2">
-          {LEVELS.map((level) => {
+          {levelsOf(language).map((level) => {
             const available = level.status === 'available';
             const activities = content.activities.filter(
               (a) => content.unitById.get(a.unitId)?.levelId === level.id,

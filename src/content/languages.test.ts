@@ -51,6 +51,6 @@ describe('languages', () => {
       }
     }
     expect(levelsOf('de')).toHaveLength(12);
-    expect(levelsOf()).toEqual(levelsOf('de'));
+    expect(levelsOf()).toBe(levelsOf('de'));
   });
 });

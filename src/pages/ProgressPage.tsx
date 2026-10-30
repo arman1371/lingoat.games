@@ -1,20 +1,22 @@
+import { useLanguage, useProgress } from '@/app/language';
 import { Link } from 'react-router';
 import { Card } from '@/components/ui/Card';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { StatCard } from '@/components/ui/StatCard';
 import { Stars } from '@/components/ui/Stars';
 import { useContent } from '@/content/ContentProvider';
-import { LEVELS } from '@/content/levels';
+import { levelsOf } from '@/content/levels';
 import { dayNumber } from '@/lib/srs';
 import { t } from '@/i18n';
-import { useProgressStore, visibleStreak } from '@/store/progressStore';
+import { visibleStreak } from '@/store/progressStore';
 
 export function ProgressPage() {
   const content = useContent();
-  const xp = useProgressStore((s) => s.xp);
-  const streak = useProgressStore((s) => s.streak);
-  const activities = useProgressStore((s) => s.activities);
-  const mistakes = useProgressStore((s) => Object.keys(s.mistakes).length);
+  const language = useLanguage();
+  const xp = useProgress((s) => s.xp);
+  const streak = useProgress((s) => s.streak);
+  const activities = useProgress((s) => s.activities);
+  const mistakes = useProgress((s) => Object.keys(s.mistakes).length);
 
   const current = visibleStreak(streak, dayNumber());
   const played = Object.values(activities);
@@ -55,36 +57,40 @@ export function ProgressPage() {
           {t('progressPage.levels')}
         </h2>
         <ul className="grid gap-3 md:grid-cols-2">
-          {LEVELS.filter((l) => l.status === 'available').map((level) => {
-            const all = content.activities.filter(
-              (a) => content.unitById.get(a.unitId)?.levelId === level.id,
-            );
-            const done = all.filter((a) => activities[a.id]);
-            const levelStars = done.reduce((sum, a) => sum + (activities[a.id]?.stars ?? 0), 0);
-            return (
-              <li key={level.id}>
-                <Link to={`/levels/${level.id}`} className="block h-full">
-                  <Card interactive className="flex h-full flex-col gap-2">
-                    <div className="flex items-center justify-between gap-3">
-                      <h3 className="font-display text-xl font-semibold text-ink">{level.title}</h3>
-                      <Stars
-                        count={all.length ? Math.round((levelStars / (all.length * 3)) * 3) : 0}
-                        size="sm"
+          {levelsOf(language)
+            .filter((l) => l.status === 'available')
+            .map((level) => {
+              const all = content.activities.filter(
+                (a) => content.unitById.get(a.unitId)?.levelId === level.id,
+              );
+              const done = all.filter((a) => activities[a.id]);
+              const levelStars = done.reduce((sum, a) => sum + (activities[a.id]?.stars ?? 0), 0);
+              return (
+                <li key={level.id}>
+                  <Link to={`/levels/${level.id}`} className="block h-full">
+                    <Card interactive className="flex h-full flex-col gap-2">
+                      <div className="flex items-center justify-between gap-3">
+                        <h3 className="font-display text-xl font-semibold text-ink">
+                          {level.title}
+                        </h3>
+                        <Stars
+                          count={all.length ? Math.round((levelStars / (all.length * 3)) * 3) : 0}
+                          size="sm"
+                        />
+                      </div>
+                      <ProgressBar
+                        value={all.length ? done.length / all.length : 0}
+                        label={`${level.title} progress`}
+                        tone="success"
                       />
-                    </div>
-                    <ProgressBar
-                      value={all.length ? done.length / all.length : 0}
-                      label={`${level.title} progress`}
-                      tone="success"
-                    />
-                    <p className="text-sm font-bold text-muted">
-                      {done.length} / {all.length} games
-                    </p>
-                  </Card>
-                </Link>
-              </li>
-            );
-          })}
+                      <p className="text-sm font-bold text-muted">
+                        {done.length} / {all.length} games
+                      </p>
+                    </Card>
+                  </Link>
+                </li>
+              );
+            })}
         </ul>
       </section>
 

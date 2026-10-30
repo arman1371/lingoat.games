@@ -1,4 +1,11 @@
-import { pickGermanVoice, speak, stopSpeaking, ttsSupported } from './tts';
+import {
+  pickGermanVoice,
+  pickVoice,
+  setSpeechLanguage,
+  speak,
+  stopSpeaking,
+  ttsSupported,
+} from './tts';
 
 const voice = (lang: string, name = lang) => ({ lang, name }) as SpeechSynthesisVoice;
 
@@ -48,5 +55,36 @@ describe('tts', () => {
     expect(onEnd).toHaveBeenCalled();
     stopSpeaking();
     expect(synth.cancel).toHaveBeenCalledTimes(2);
+  });
+
+  it('picks a voice by exact locale, then by language', () => {
+    expect(pickVoice([voice('en-US'), voice('fr-CA'), voice('fr-FR')], 'fr-FR')?.lang).toBe(
+      'fr-FR',
+    );
+    expect(pickVoice([voice('en-US'), voice('fr-CA')], 'fr-FR')?.lang).toBe('fr-CA');
+    expect(pickVoice([voice('de-DE')], 'fr-FR')).toBeUndefined();
+  });
+
+  it('speaks in the language the app is set to', () => {
+    const synth = {
+      cancel: vi.fn(),
+      speak: vi.fn(),
+      getVoices: () => [voice('de-DE'), voice('fr-FR')],
+    };
+    class Utterance {
+      lang = '';
+      voice: unknown;
+      constructor(public text: string) {}
+    }
+    Object.assign(window, { speechSynthesis: synth, SpeechSynthesisUtterance: Utterance });
+    setSpeechLanguage('fr-FR');
+    try {
+      speak('Bonjour');
+      const u = synth.speak.mock.calls[0]![0] as Utterance;
+      expect(u).toMatchObject({ text: 'Bonjour', lang: 'fr-FR' });
+      expect(u.voice).toMatchObject({ lang: 'fr-FR' });
+    } finally {
+      setSpeechLanguage('de-DE');
+    }
   });
 });

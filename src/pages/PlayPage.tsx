@@ -1,3 +1,4 @@
+import { useProgress } from '@/app/language';
 import { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import { ReportButton } from '@/components/ReportButton';
@@ -25,7 +26,7 @@ import { parseSeed, randomSeed } from '@/lib/rng';
 import type { GameResult } from '@/lib/scoring';
 import { t } from '@/i18n';
 import { preloadImageManifest } from '@/lib/useImageManifest';
-import { useProgressStore, type RecordOutcome } from '@/store/progressStore';
+import { type RecordOutcome } from '@/store/progressStore';
 import { NotFoundPage } from './NotFoundPage';
 import { ResultScreen } from './ResultScreen';
 
@@ -49,8 +50,8 @@ function PlayView({ activityId }: { activityId: string }) {
   const [params] = useSearchParams();
   const navigate = useNavigate();
   const content = useContent();
-  const recordResult = useProgressStore((s) => s.recordResult);
-  const mistakes = useProgressStore((s) => s.mistakes);
+  const recordResult = useProgress((s) => s.recordResult);
+  const mistakes = useProgress((s) => s.mistakes);
 
   const review = params.get('review') === '1';
   const queue = useMemo(

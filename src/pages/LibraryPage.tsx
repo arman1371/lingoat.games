@@ -1,3 +1,4 @@
+import { useProgress } from '@/app/language';
 import { useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { ActivityCard } from '@/components/ActivityCard';
@@ -25,7 +26,6 @@ import {
   type FilterState,
 } from '@/lib/filters';
 import { t } from '@/i18n';
-import { useProgressStore } from '@/store/progressStore';
 
 type View = 'grammar' | 'games';
 
@@ -41,7 +41,7 @@ function toggle<T>(list: readonly T[], value: T): T[] {
 /** Every game, filterable; `?view=games` plus the filter params. */
 function GameLibrary() {
   const content = useContent();
-  const progress = useProgressStore((s) => s.activities);
+  const progress = useProgress((s) => s.activities);
   const [params, setParams] = useSearchParams();
   const filters = useMemo(() => filtersFromParams(params), [params]);
   const update = (patch: Partial<FilterState>) =>
