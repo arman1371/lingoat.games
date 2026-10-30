@@ -41,7 +41,7 @@ export const en = {
   },
   language: {
     label: 'Learning language',
-    change: 'Learning language: {language}. Change',
+    change: ', change language',
     sheetTitle: 'Learning language',
     notStarted: 'Not started',
     status: '{level} · {xp} XP',

@@ -22,8 +22,9 @@ async function openSheet(path: string) {
 describe('LanguageSwitcher', () => {
   it('shows the language being studied on the chip', async () => {
     renderApp('/');
+    // the name comes from the visible text, so it always contains what a voice-control user says
     expect(await screen.findByTestId('language-chip')).toHaveAccessibleName(
-      'Learning language: German. Change',
+      'German, change language',
     );
   });
 

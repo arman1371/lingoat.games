@@ -105,7 +105,6 @@ export function LanguageSwitcher({ variant }: { variant: Variant }) {
       <button
         type="button"
         data-testid={`language-${variant}`}
-        aria-label={t('language.change', { language: language.name })}
         aria-haspopup="dialog"
         onClick={() => setOpen(true)}
         className={TRIGGER[variant]}
@@ -119,6 +118,7 @@ export function LanguageSwitcher({ variant }: { variant: Variant }) {
         ) : (
           <span className={variant === 'sidebar' ? 'flex-1 text-left' : ''}>{language.name}</span>
         )}
+        <span className="sr-only">{t('language.change')}</span>
         <Icon name="chevron-down" size={16} aria-hidden="true" />
       </button>
       <LanguageSheet open={open} onClose={() => setOpen(false)} />
