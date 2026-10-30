@@ -54,7 +54,7 @@ describe('ReportButton', () => {
       'Choose a type…',
       'Wrong image',
       'Wrong or unclear translation',
-      'German mistake',
+      'Language mistake',
       'Audio or pronunciation',
       'Game bug',
       'Something else',

@@ -1,9 +1,8 @@
 import { DEFAULT_LANGUAGE, type LanguageId } from './languages';
 import type { LevelMeta } from './schema';
 
-/** French is on its way: every CEFR half-level is listed, none has content yet. */
-const FRENCH_LEVELS: LevelMeta[] = [
-  ['a1-1', 'A1.1', 'First steps in French'],
+/** French is on its way: A1.1 is the pilot, the other CEFR half-levels are listed without content. */
+const FRENCH_COMING_SOON: LevelMeta[] = [
   ['a1-2', 'A1.2', 'Breakthrough, second half'],
   ['a2-1', 'A2.1', 'Waystage, first half'],
   ['a2-2', 'A2.2', 'Waystage, second half'],
@@ -22,6 +21,19 @@ const FRENCH_LEVELS: LevelMeta[] = [
   subtitle: subtitle!,
   status: 'coming-soon',
 }));
+
+const FRENCH_LEVELS: LevelMeta[] = [
+  {
+    language: 'fr',
+    id: 'fr-a1-1',
+    title: 'A1.1',
+    subtitle:
+      'First steps: greetings, introductions, numbers, family, hobbies, food, town and time',
+    status: 'available',
+    load: () => import('./fr-a1-1'),
+  },
+  ...FRENCH_COMING_SOON,
+];
 
 /**
  * Level catalogue. To add a level: create `src/content/<level-id>/index.ts` that default-exports a

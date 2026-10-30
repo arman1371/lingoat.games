@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useLanguageMeta } from '@/app/language';
 import { Button } from '@/components/ui/Button';
 import { createRng, shuffle } from '@/lib/rng';
 import { SentenceNouns } from '../shared/SentenceNouns';
@@ -10,6 +11,7 @@ export function Blitz({ config, seed, onFinish }: GameProps<'blitz'>) {
     () => shuffle(config.statements, createRng(seed)),
     [config.statements, seed],
   );
+  const language = useLanguageMeta();
   const [started, setStarted] = useState(false);
   const [relaxed, setRelaxed] = useState(false);
   const [index, setIndex] = useState(0);
@@ -56,8 +58,8 @@ export function Blitz({ config, seed, onFinish }: GameProps<'blitz'>) {
         </span>
         <h2 className="text-3xl font-extrabold text-ink">Ready for a speed round?</h2>
         <p className="text-muted">
-          Is the German sentence correct? Answer as many as you can in {config.seconds} seconds.
-          Keep a combo going for bonus XP!
+          Is the {language.name} sentence correct? Answer as many as you can in {config.seconds}{' '}
+          seconds. Keep a combo going for bonus XP!
         </p>
         <label className="flex min-h-11 items-center gap-3 font-bold text-ink">
           <input

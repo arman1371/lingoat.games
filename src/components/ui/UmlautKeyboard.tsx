@@ -1,13 +1,15 @@
-const KEYS = ['ä', 'ö', 'ü', 'ß'] as const;
+import { useLanguageMeta } from '@/app/language';
 
 interface Props {
   onInsert: (char: string) => void;
 }
 
+/** The letters an English keyboard lacks in the language being studied (ä ö ü ß, é è ç …). */
 export function UmlautKeyboard({ onInsert }: Props) {
+  const { specialChars } = useLanguageMeta();
   return (
-    <div role="group" aria-label="Special characters" className="flex gap-2">
-      {KEYS.map((k) => (
+    <div role="group" aria-label="Special characters" className="flex flex-wrap gap-2">
+      {specialChars.map((k) => (
         <button
           key={k}
           type="button"

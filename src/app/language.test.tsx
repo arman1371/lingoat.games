@@ -35,10 +35,24 @@ describe('language routing', () => {
 });
 
 describe('French first visit and per-language data', () => {
-  it('welcomes a new French learner and says the first games are coming', async () => {
+  it('welcomes a new French learner and offers the first game', async () => {
     renderApp('/fr');
     expect(await screen.findByTestId('language-welcome')).toHaveTextContent('Starting French');
-    expect(screen.getByText('The first French games are coming soon.')).toBeInTheDocument();
+    expect(await screen.findByTestId('continue-cta')).toBeInTheDocument();
+    expect(screen.queryByText(/coming soon/)).not.toBeInTheDocument();
+  });
+
+  it('lists only the French level on the French home page', async () => {
+    renderApp('/fr');
+    expect(await screen.findByTestId('level-fr-a1-1')).toHaveTextContent('A1.1');
+    expect(screen.queryByTestId('level-a1-1')).not.toBeInTheDocument();
+  });
+
+  it('keeps German grammar points out of the French library', async () => {
+    const { user } = renderApp('/fr/library?view=games');
+    await user.click(await screen.findByText(/^Filters/));
+    expect(await screen.findByRole('button', { name: /tu or vous/ })).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: /Verb conjugation/ })).not.toBeInTheDocument();
   });
 
   it('shows no welcome card in German', async () => {

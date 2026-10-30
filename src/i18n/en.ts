@@ -199,7 +199,7 @@ export const en = {
     types: {
       image: 'Wrong image',
       translation: 'Wrong or unclear translation',
-      german: 'German mistake',
+      german: 'Language mistake',
       audio: 'Audio or pronunciation',
       bug: 'Game bug',
       other: 'Something else',

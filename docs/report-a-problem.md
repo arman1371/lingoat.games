@@ -1,6 +1,6 @@
 # Report a problem
 
-A flag button in the play header lets a player report a wrong image, a wrong translation, a German mistake,
+A flag button in the play header lets a player report a wrong image, a wrong translation, a language mistake,
 bad audio, a game bug or anything else. The report becomes a GitHub issue automatically. The player needs no
 GitHub account, is never sent to GitHub, and sees a thank-you in the app.
 
@@ -22,7 +22,7 @@ Design: Penpot file "LingoatGames", page **Screens**, bottom row (`Game / Report
 | ---------------------------- | ------------- | --------------- | ----------------------------------- |
 | Wrong image                  | `image`       | `[Image]`       | `user-report`, `report:image`       |
 | Wrong or unclear translation | `translation` | `[Translation]` | `user-report`, `report:translation` |
-| German mistake               | `german`      | `[German]`      | `user-report`, `report:german`      |
+| Language mistake             | `german`      | `[Language]`    | `user-report`, `report:german`      |
 | Audio or pronunciation       | `audio`       | `[Audio]`       | `user-report`, `report:audio`       |
 | Game bug                     | `bug`         | `[Bug]`         | `user-report`, `report:bug`         |
 | Something else               | `other`       | `[Other]`       | `user-report`, `report:other`       |

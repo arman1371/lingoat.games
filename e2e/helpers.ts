@@ -12,6 +12,8 @@ import b22 from '../src/content/b2-2';
 import c11 from '../src/content/c1-1';
 import c21 from '../src/content/c2-1';
 import c22 from '../src/content/c2-2';
+import fr11 from '../src/content/fr-a1-1';
+import { pathInLanguage } from '../src/content/languages';
 import type { Activity, Vocab } from '../src/content/schema';
 import { parseTime, timeToGerman } from '../src/lib/german/time';
 import { totalCents } from '../src/games/market/logic';
@@ -36,7 +38,10 @@ export const allActivities: Activity[] = [
   ...c22.activities,
 ];
 
-/** Every vocabulary entry of every available level. */
+/** Every activity of the French levels; kept apart because the German library counts must not change. */
+export const frenchActivities: Activity[] = [...fr11.activities];
+
+/** Every vocabulary entry of every available German level. */
 export const allVocab: Vocab[] = [
   a11,
   a12,
@@ -53,7 +58,7 @@ export const allVocab: Vocab[] = [
 ].flatMap((level) => level.vocab);
 
 export const activity = (id: string): Activity => {
-  const a = allActivities.find((x) => x.id === id);
+  const a = [...allActivities, ...frenchActivities].find((x) => x.id === id);
   if (!a) throw new Error(`Unknown activity ${id}`);
   return a;
 };
@@ -324,7 +329,9 @@ const solvers: Record<Activity['gameType'], Solver> = {
 /** Open an activity, press Start, solve it perfectly and wait for the result screen. */
 export async function playPerfectly(page: Page, id: string, extraQuery = '') {
   const a = activity(id);
-  await page.goto(`/play/${id}?seed=${SEED}${extraQuery}`);
+  // French activity ids start with the language id and live under /fr
+  const path = pathInLanguage(id.startsWith('fr-') ? 'fr' : 'de', `/play/${id}`);
+  await page.goto(`${path}?seed=${SEED}${extraQuery}`);
   await expect(page.getByRole('heading', { name: a.title, level: 1 })).toBeVisible();
   await page.getByTestId('start').click();
   await solvers[a.gameType](page, a.config);
