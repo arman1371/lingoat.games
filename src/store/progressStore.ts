@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 import { accuracy, starsFor, xpFor, type GameResult } from '@/lib/scoring';
 import { addMistake, dayNumber, mistakeKey, reviewMistake, type Mistake } from '@/lib/srs';
+import { DEFAULT_LANGUAGE, LANGUAGE_IDS, type LanguageId } from '@/content/languages';
 import { localRepository } from './repository';
 
 export interface ActivityProgress {
@@ -75,73 +76,91 @@ export function visibleStreak(streak: Streak, today: number): number {
   return today - streak.lastDay <= 1 ? streak.current : 0;
 }
 
-export const useProgressStore = create<ProgressState>()(
-  persist(
-    (set, get) => ({
-      ...initialProgress(),
-      recordResult: (activityId, result, options = {}) => {
-        const mode = options.mode ?? 'play';
-        const today = options.today ?? dayNumber();
-        const state = get();
-        const acc = accuracy(result);
-        const stars = starsFor(acc);
-        const xpGained = xpFor(result);
+const createProgressStore = (storageKey: string) =>
+  create<ProgressState>()(
+    persist(
+      (set, get) => ({
+        ...initialProgress(),
+        recordResult: (activityId, result, options = {}) => {
+          const mode = options.mode ?? 'play';
+          const today = options.today ?? dayNumber();
+          const state = get();
+          const acc = accuracy(result);
+          const stars = starsFor(acc);
+          const xpGained = xpFor(result);
 
-        const mistakes = { ...state.mistakes };
-        for (const itemId of result.played) {
-          const key = mistakeKey(activityId, itemId);
-          const wrong = result.mistakes.includes(itemId);
-          const existing = mistakes[key];
-          if (existing) {
-            const updated = reviewMistake(existing, !wrong, today);
-            if (updated) mistakes[key] = updated;
-            else delete mistakes[key];
-          } else if (wrong) {
-            mistakes[key] = addMistake(undefined, activityId, itemId, today);
+          const mistakes = { ...state.mistakes };
+          for (const itemId of result.played) {
+            const key = mistakeKey(activityId, itemId);
+            const wrong = result.mistakes.includes(itemId);
+            const existing = mistakes[key];
+            if (existing) {
+              const updated = reviewMistake(existing, !wrong, today);
+              if (updated) mistakes[key] = updated;
+              else delete mistakes[key];
+            } else if (wrong) {
+              mistakes[key] = addMistake(undefined, activityId, itemId, today);
+            }
           }
-        }
 
-        const prev = state.activities[activityId];
-        const activities = { ...state.activities };
-        let newBest = false;
-        if (mode === 'play') {
-          newBest = !prev || acc > prev.bestAccuracy;
-          activities[activityId] = {
-            stars: prev ? (Math.max(prev.stars, stars) as 1 | 2 | 3) : stars,
-            bestAccuracy: prev ? Math.max(prev.bestAccuracy, acc) : acc,
-            plays: (prev?.plays ?? 0) + 1,
-            lastPlayed: today,
-          };
-        }
+          const prev = state.activities[activityId];
+          const activities = { ...state.activities };
+          let newBest = false;
+          if (mode === 'play') {
+            newBest = !prev || acc > prev.bestAccuracy;
+            activities[activityId] = {
+              stars: prev ? (Math.max(prev.stars, stars) as 1 | 2 | 3) : stars,
+              bestAccuracy: prev ? Math.max(prev.bestAccuracy, acc) : acc,
+              plays: (prev?.plays ?? 0) + 1,
+              lastPlayed: today,
+            };
+          }
 
-        set({
-          xp: state.xp + xpGained,
-          daily: { day: today, xp: dailyXp(state.daily, today) + xpGained },
-          streak: nextStreak(state.streak, today),
+          set({
+            xp: state.xp + xpGained,
+            daily: { day: today, xp: dailyXp(state.daily, today) + xpGained },
+            streak: nextStreak(state.streak, today),
+            activities,
+            mistakes,
+            lastActivityId: mode === 'play' ? activityId : state.lastActivityId,
+          });
+          return { xpGained, stars, firstCompletion: mode === 'play' && !prev, newBest };
+        },
+        reset: () => set(initialProgress()),
+      }),
+      {
+        name: storageKey,
+        version: 1,
+        storage: createJSONStorage(() => localRepository),
+        partialize: ({ xp, streak, activities, mistakes, lastActivityId, daily }) => ({
+          xp,
+          streak,
           activities,
           mistakes,
-          lastActivityId: mode === 'play' ? activityId : state.lastActivityId,
-        });
-        return { xpGained, stars, firstCompletion: mode === 'play' && !prev, newBest };
+          lastActivityId,
+          daily,
+        }),
+        migrate: (persisted) => ({ ...initialProgress(), ...(persisted as Partial<ProgressData>) }),
       },
-      reset: () => set(initialProgress()),
-    }),
-    {
-      name: 'lingoat.progress',
-      version: 1,
-      storage: createJSONStorage(() => localRepository),
-      partialize: ({ xp, streak, activities, mistakes, lastActivityId, daily }) => ({
-        xp,
-        streak,
-        activities,
-        mistakes,
-        lastActivityId,
-        daily,
-      }),
-      migrate: (persisted) => ({ ...initialProgress(), ...(persisted as Partial<ProgressData>) }),
-    },
-  ),
-);
+    ),
+  );
+
+/**
+ * German keeps the storage key it always had (`lingoat.progress`), so existing learners keep their data
+ * without a migration. Every other language gets its own key and its own store: XP, streak, daily XP,
+ * stars and the mistake box never mix between languages.
+ */
+export const progressStorageKey = (language: LanguageId) =>
+  language === DEFAULT_LANGUAGE ? 'lingoat.progress' : `lingoat.progress.${language}`;
+
+export const progressStores = Object.fromEntries(
+  LANGUAGE_IDS.map((id) => [id, createProgressStore(progressStorageKey(id))]),
+) as Record<LanguageId, ReturnType<typeof createProgressStore>>;
+
+/** The German store; kept as the default so code that is not language-aware yet keeps working. */
+export const useProgressStore = progressStores[DEFAULT_LANGUAGE];
+
+export const getProgressStore = (language: LanguageId) => progressStores[language];
 
 export const completedIds = (activities: ProgressData['activities']) =>
   new Set(Object.keys(activities));

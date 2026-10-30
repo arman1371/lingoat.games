@@ -1,3 +1,4 @@
+import { DEFAULT_LANGUAGE, type LanguageId } from './languages';
 import type { LevelMeta } from './schema';
 
 /**
@@ -6,6 +7,7 @@ import type { LevelMeta } from './schema';
  */
 export const LEVELS: LevelMeta[] = [
   {
+    language: 'de',
     id: 'a1-1',
     title: 'A1.1',
     subtitle: 'First steps: greetings, family, hobbies, time and shopping',
@@ -13,6 +15,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./a1-1'),
   },
   {
+    language: 'de',
     id: 'a1-2',
     title: 'A1.2',
     subtitle: 'Everyday life: town, home, work, health, travel and services',
@@ -20,6 +23,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./a1-2'),
   },
   {
+    language: 'de',
     id: 'a2-1',
     title: 'A2.1',
     subtitle: 'Online life, plans, travel, flat hunting, offices, school and job search',
@@ -27,6 +31,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./a2-1'),
   },
   {
+    language: 'de',
     id: 'a2-2',
     title: 'A2.2',
     subtitle:
@@ -35,6 +40,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./a2-2'),
   },
   {
+    language: 'de',
     id: 'b1-1',
     title: 'B1.1',
     subtitle:
@@ -43,6 +49,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./b1-1'),
   },
   {
+    language: 'de',
     id: 'b1-2',
     title: 'B1.2',
     subtitle:
@@ -51,6 +58,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./b1-2'),
   },
   {
+    language: 'de',
     id: 'b2-1',
     title: 'B2.1',
     subtitle:
@@ -59,6 +67,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./b2-1'),
   },
   {
+    language: 'de',
     id: 'b2-2',
     title: 'B2.2',
     subtitle:
@@ -67,6 +76,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./b2-2'),
   },
   {
+    language: 'de',
     id: 'c1-1',
     title: 'C1.1',
     subtitle:
@@ -75,6 +85,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./c1-1'),
   },
   {
+    language: 'de',
     id: 'c1-2',
     title: 'C1.2',
     subtitle:
@@ -83,6 +94,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./c1-2'),
   },
   {
+    language: 'de',
     id: 'c2-1',
     title: 'C2.1',
     subtitle:
@@ -91,6 +103,7 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./c2-1'),
   },
   {
+    language: 'de',
     id: 'c2-2',
     title: 'C2.2',
     subtitle:
@@ -99,6 +112,9 @@ export const LEVELS: LevelMeta[] = [
     load: () => import('./c2-2'),
   },
 ];
+
+export const levelsOf = (language: LanguageId = DEFAULT_LANGUAGE): LevelMeta[] =>
+  LEVELS.filter((l) => l.language === language);
 
 export function getLevelMeta(id: string): LevelMeta | undefined {
   return LEVELS.find((l) => l.id === id);

@@ -33,13 +33,14 @@ describe('ContentProvider', () => {
   it('loads available levels lazily and skips coming-soon ones', async () => {
     const levels: LevelMeta[] = [
       {
+        language: 'de',
         id: 'a1-1',
         title: 'A1.1',
         subtitle: '',
         status: 'available',
         load: async () => ({ default: levelFixture() }),
       },
-      { id: 'a2-1', title: 'A2.1', subtitle: '', status: 'coming-soon' },
+      { language: 'de', id: 'a2-1', title: 'A2.1', subtitle: '', status: 'coming-soon' },
     ];
     render(
       <ContentProvider levels={levels}>
@@ -53,6 +54,7 @@ describe('ContentProvider', () => {
   it('exposes load failures', async () => {
     const levels: LevelMeta[] = [
       {
+        language: 'de',
         id: 'x',
         title: 'X',
         subtitle: '',
