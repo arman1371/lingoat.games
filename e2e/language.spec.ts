@@ -15,7 +15,8 @@ test.describe('language switcher', () => {
     await page.getByTestId('language-row').click();
     const sheet = page.getByRole('dialog', { name: 'Learning language' });
     await expect(sheet).toContainText('Not started');
-    await sheet.getByRole('radio', { name: /French/ }).check({ force: true });
+    // click, not check: choosing a language navigates, so there is no page left to verify the state on
+    await sheet.getByRole('radio', { name: /French/ }).click({ force: true });
 
     // French is its own space: new URL prefix, welcome card, empty counters
     await expect(page).toHaveURL(/\/fr\/?$/);
@@ -29,7 +30,7 @@ test.describe('language switcher', () => {
     await page.getByTestId('language-row').click();
     const back = page.getByRole('dialog', { name: 'Learning language' });
     await expect(back).toContainText('XP');
-    await back.getByRole('radio', { name: /German/ }).check({ force: true });
+    await back.getByRole('radio', { name: /German/ }).click({ force: true });
 
     await expect(page).toHaveURL(/\/$/);
     await expect(page.getByTestId('xp')).toHaveText(germanXp);
