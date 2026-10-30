@@ -1,7 +1,8 @@
 import type { LevelContent } from '../schema';
 import { bonjour } from './u1-bonjour';
+import { presenter } from './u2-presenter';
 
-const units = [bonjour];
+const units = [bonjour, presenter];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

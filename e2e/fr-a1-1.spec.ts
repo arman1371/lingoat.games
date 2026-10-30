@@ -30,7 +30,9 @@ test.describe('French A1.1 – level navigation', () => {
     await expect(page).toHaveURL(/\/fr\/levels\/fr-a1-1\/units\/fr-a1-1-bonjour$/);
     await expect(page.getByRole('heading', { name: 'Bonjour !', level: 1 })).toBeVisible();
     const steps = page.getByRole('list', { name: 'Guided path' }).getByRole('listitem');
-    await expect(steps).toHaveCount(fr11.activities.length);
+    await expect(steps).toHaveCount(
+      fr11.activities.filter((x) => x.unitId === 'fr-a1-1-bonjour').length,
+    );
     await expect(steps.first()).toHaveAttribute('data-state', 'current');
   });
 
@@ -100,6 +102,18 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sort it (tu or vous)', 'fr-a1-1-bonjour-sort-tu-vous'],
   ['blitz', 'fr-a1-1-bonjour-blitz'],
   ['dialogue (three scenes)', 'fr-a1-1-bonjour-dialogues'],
+  ['flashcards (countries)', 'fr-a1-1-presenter-flash-countries'],
+  ['quiz (flags)', 'fr-a1-1-presenter-quiz-flags'],
+  ['memory (country and nationality)', 'fr-a1-1-presenter-memory-nationalities'],
+  ['listen (jobs and nationalities)', 'fr-a1-1-presenter-listen-people'],
+  ['sort it (masculine or feminine)', 'fr-a1-1-presenter-sort-gender'],
+  ['conjugation (être and avoir, j’ai)', 'fr-a1-1-presenter-conj-etre-avoir'],
+  ['conjugation (-er verbs and s’appeler)', 'fr-a1-1-presenter-conj-er'],
+  ['gap fill (verbs, articles, gender)', 'fr-a1-1-presenter-gap-introductions'],
+  ['sentence builder', 'fr-a1-1-presenter-sentences'],
+  ['spell (accented letters)', 'fr-a1-1-presenter-spell-people'],
+  ['dialogue (three scenes)', 'fr-a1-1-presenter-dialogues'],
+  ['blitz', 'fr-a1-1-presenter-blitz'],
 ];
 
 test.describe('French A1.1 – playing the games', () => {

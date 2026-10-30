@@ -1,4 +1,5 @@
 import { screen } from '@testing-library/react';
+import { conjugateFr } from '@/lib/french/conjugation';
 import { conjugate } from '@/lib/german/conjugation';
 import { renderGame } from '@/test/render';
 import Conjugation from './Conjugation';
@@ -103,5 +104,44 @@ describe('conjugationWhy', () => {
     await user.click(screen.getByTestId('why'));
     expect(screen.getByTestId('mistake-why')).toHaveTextContent('“ist” is the er/sie/es form');
     expect(screen.getByTestId('mini-lesson')).toBeInTheDocument();
+  });
+});
+
+describe('Conjugation in French', () => {
+  const fr = conjugateFr('avoir');
+  const frConfig = {
+    tables: [
+      {
+        id: 'avoir',
+        verb: 'avoir',
+        meaning: 'to have',
+        forms: fr,
+        blanks: ['je', 'tu'] as ('je' | 'tu')[],
+      },
+    ],
+  };
+
+  it('lists the six French persons and elides je before a vowel', () => {
+    renderGame(Conjugation, frConfig);
+    expect(screen.getByLabelText('j’')).toBeInTheDocument();
+    expect(screen.getByLabelText('tu')).toBeInTheDocument();
+    expect(screen.getByText('avons')).toBeInTheDocument(); // nous is given
+    expect(screen.queryByLabelText('ich')).not.toBeInTheDocument();
+  });
+
+  it('accepts the right forms and names the person whose form was typed', async () => {
+    const { user } = renderGame(Conjugation, frConfig);
+    await user.type(screen.getByLabelText('j’'), 'ai');
+    await user.type(screen.getByLabelText('tu'), 'ai');
+    await user.click(screen.getByRole('button', { name: 'Check' }));
+    expect(screen.getByTestId('feedback')).toHaveAttribute('data-kind', 'wrong');
+    expect(conjugationWhy(fr, { tu: 'wrong' }, { tu: 'ai' })).toBe(
+      '“ai” is the je form – for tu it is “as”.',
+    );
+  });
+
+  it('treats a missing accent as almost', () => {
+    const forms = conjugateFr('être');
+    expect(gradeTable(forms, ['vous'], { vous: 'etes' }).overall).toBe('almost');
   });
 });

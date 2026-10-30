@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { UmlautKeyboard } from '@/components/ui/UmlautKeyboard';
 import { t } from '@/i18n';
-import type { Pronoun } from '@/lib/german/conjugation';
+import { personLabel, type Person } from '@/lib/persons';
 import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
 import { MistakeHint } from '../shared/MistakeHint';
 import { useSequence } from '../shared/useSequence';
@@ -12,7 +12,7 @@ import { conjugationWhy, gradeTable, pronounOrder, type CellVerdicts } from './l
 export function Conjugation({ config, seed, onFinish }: GameProps<'conjugation'>) {
   const seq = useSequence(config.tables, seed, onFinish);
   const table = seq.item;
-  const [values, setValues] = useState<Partial<Record<Pronoun, string>>>({});
+  const [values, setValues] = useState<Partial<Record<Person, string>>>({});
   const [cells, setCells] = useState<CellVerdicts | null>(null);
   const [overall, setOverall] = useState<'correct' | 'almost' | 'wrong' | null>(null);
   const focused = useRef<HTMLInputElement | null>(null);
@@ -80,7 +80,7 @@ export function Conjugation({ config, seed, onFinish }: GameProps<'conjugation'>
           if (complete && !overall) check();
         }}
       >
-        {pronounOrder.map((p) => {
+        {pronounOrder(table.forms).map((p) => {
           const isBlank = table.blanks.includes(p);
           const v = cells?.[p];
           return (
@@ -89,7 +89,7 @@ export function Conjugation({ config, seed, onFinish }: GameProps<'conjugation'>
               className="grid grid-cols-[7rem_1fr] items-center gap-3 rounded-2xl border-2 border-line bg-surface p-2"
             >
               <label htmlFor={`cell-${p}`} className="pl-2 text-lg font-extrabold text-muted">
-                {p}
+                {personLabel(p, table.forms[p] ?? '')}
               </label>
               {isBlank ? (
                 <div className="flex items-center gap-2">
@@ -132,7 +132,7 @@ export function Conjugation({ config, seed, onFinish }: GameProps<'conjugation'>
         <UmlautKeyboard
           onInsert={(c) => {
             const el = focused.current;
-            const p = el?.id.replace('cell-', '') as Pronoun | undefined;
+            const p = el?.id.replace('cell-', '') as Person | undefined;
             if (p) setValues((s) => ({ ...s, [p]: (s[p] ?? '') + c }));
             el?.focus();
           }}
