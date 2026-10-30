@@ -1,0 +1,118 @@
+import { expect, test } from '@playwright/test';
+import fr11 from '../src/content/fr-a1-1';
+import a11 from '../src/content/a1-1';
+import { activity, captureSpeech, playPerfectly, SEED } from './helpers';
+
+test.beforeEach(async ({ page }) => {
+  await captureSpeech(page);
+});
+
+test.describe('French A1.1 – level navigation', () => {
+  test('French Home lists A1.1 as available and no other French level has games', async ({
+    page,
+  }) => {
+    await page.goto('/fr');
+    const card = page.getByTestId('level-fr-a1-1');
+    await expect(card).toContainText('A1.1');
+    await expect(card).toContainText(`0 / ${fr11.activities.length} games`);
+    // the German levels are not part of the French home
+    await expect(page.getByTestId('level-a1-1')).toHaveCount(0);
+  });
+
+  test('Home → A1.1 → unit shows the unit and a guided path, all inside /fr', async ({ page }) => {
+    await page.goto('/fr');
+    await page.getByTestId('level-fr-a1-1').click();
+    await expect(page).toHaveURL(/\/fr\/levels\/fr-a1-1$/);
+    await expect(page.getByRole('heading', { name: 'A1.1', level: 1 })).toBeVisible();
+    const units = page.getByRole('list', { name: 'Units' }).getByRole('listitem');
+    await expect(units).toHaveCount(fr11.units.length);
+    await page.getByTestId('unit-fr-a1-1-bonjour').click();
+    await expect(page).toHaveURL(/\/fr\/levels\/fr-a1-1\/units\/fr-a1-1-bonjour$/);
+    await expect(page.getByRole('heading', { name: 'Bonjour !', level: 1 })).toBeVisible();
+    const steps = page.getByRole('list', { name: 'Guided path' }).getByRole('listitem');
+    await expect(steps).toHaveCount(fr11.activities.length);
+    await expect(steps.first()).toHaveAttribute('data-state', 'current');
+  });
+
+  test('progress in French stays out of German and the other way round', async ({ page }) => {
+    await playPerfectly(page, 'fr-a1-1-bonjour-flash');
+    await page.goto('/fr');
+    await expect(page.getByTestId('level-fr-a1-1')).toContainText(
+      `1 / ${fr11.activities.length} games`,
+    );
+    await page.goto('/');
+    await expect(page.getByTestId('level-a1-1')).toContainText(
+      `0 / ${a11.activities.length} games`,
+    );
+  });
+});
+
+test.describe('French A1.1 – library', () => {
+  test('lists only the French games and no German grammar points', async ({ page }) => {
+    await page.goto('/fr/library?view=games');
+    await expect(page.getByTestId('result-count')).toHaveText(`${fr11.activities.length} games`);
+    await page.getByText(/^Filters/).click();
+    await expect(page.getByRole('button', { name: /tu or vous/ })).toBeVisible();
+    await expect(page.getByRole('button', { name: /Verb conjugation/ })).toHaveCount(0);
+    await page.getByRole('button', { name: /tu or vous/ }).click();
+    const n = fr11.activities.filter((a) => a.tags.includes('fr-tu-vous' as never)).length;
+    expect(n).toBeGreaterThan(1);
+    await expect(page.getByTestId('result-count')).toHaveText(`${n} games`);
+  });
+
+  test('the Grammar tab shows no German lessons while studying French', async ({ page }) => {
+    await page.goto('/fr/library');
+    await expect(page.getByTestId('grammar-index')).toBeVisible();
+    await expect(page.getByText('Verb in position 2')).toHaveCount(0);
+  });
+});
+
+test.describe('French A1.1 – grammar hints', () => {
+  test('a wrong verb form explains why and shows the French mini lesson', async ({ page }) => {
+    const a = activity('fr-a1-1-bonjour-gap-greetings');
+    if (a.gameType !== 'gapfill') throw new Error('expected a gap fill');
+    await page.goto(`/fr/play/${a.id}?seed=${SEED}`);
+    await page.getByTestId('start').click();
+    const squash = (t: string) => t.replace(/\s+/g, ' ').trim();
+    const shown = squash(await page.getByTestId('sentence').innerText());
+    const item = a.config.items.find((i) => squash(i.text.replace('___', '…')) === shown)!;
+    const wrong = item.options!.find((o) => o !== item.answer)!;
+    await page.getByRole('button', { name: wrong, exact: true }).click();
+    await page.getByTestId('why').click();
+    const lesson = page.getByTestId('mini-lesson');
+    await expect(lesson).toHaveAttribute('data-lesson', item.lesson ?? 'fr-questions');
+    await expect(lesson.locator('li').first()).toHaveAttribute('lang', 'fr');
+  });
+});
+
+/**
+ * Every game engine that unit 1 uses is exercised through the real UI. (All activities are completed
+ * through the real engines in the Vitest playability suite.)
+ */
+const PLAYED: [engine: string, activityId: string][] = [
+  ['flashcards', 'fr-a1-1-bonjour-flash'],
+  ['quiz', 'fr-a1-1-bonjour-quiz-meaning'],
+  ['memory', 'fr-a1-1-bonjour-memory-greetings'],
+  ['listen', 'fr-a1-1-bonjour-listen-greetings'],
+  ['spell (unscramble and type, with an accent)', 'fr-a1-1-bonjour-spell-polite'],
+  ['sentence builder', 'fr-a1-1-bonjour-sentences'],
+  ['gap fill', 'fr-a1-1-bonjour-gap-greetings'],
+  ['sort it (tu or vous)', 'fr-a1-1-bonjour-sort-tu-vous'],
+  ['blitz', 'fr-a1-1-bonjour-blitz'],
+  ['dialogue (three scenes)', 'fr-a1-1-bonjour-dialogues'],
+];
+
+test.describe('French A1.1 – playing the games', () => {
+  for (const [engine, id] of PLAYED) {
+    test(`${engine}: ${id} can be played perfectly`, async ({ page }) => {
+      await playPerfectly(page, id);
+      await expect(page.getByRole('img', { name: '3 of 3 stars' })).toBeVisible();
+      await expect(page.getByTestId('mistakes-note')).toHaveCount(0);
+    });
+  }
+
+  test('the units covered above include every French A1.1 unit', () => {
+    const covered = new Set(PLAYED.map(([, id]) => activity(id).unitId));
+    expect([...covered].sort()).toEqual(fr11.units.map((u) => u.id).sort());
+  });
+});

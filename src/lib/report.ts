@@ -10,7 +10,7 @@ export type ReportType = (typeof REPORT_TYPES)[number];
 export const REPORT_TYPE_META: Record<ReportType, { prefix: string; label: string }> = {
   image: { prefix: 'Image', label: 'report:image' },
   translation: { prefix: 'Translation', label: 'report:translation' },
-  german: { prefix: 'German', label: 'report:german' },
+  german: { prefix: 'Language', label: 'report:german' },
   audio: { prefix: 'Audio', label: 'report:audio' },
   bug: { prefix: 'Bug', label: 'report:bug' },
   other: { prefix: 'Other', label: 'report:other' },

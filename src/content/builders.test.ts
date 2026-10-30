@@ -98,6 +98,22 @@ describe('builders', () => {
     expect(configs.flashcards.cards[0]?.note).toBe('Plural: die Äpfel');
   });
 
+  it('gives French vocabulary ascii ids and plain plural notes', () => {
+    const rows = vocabList('fr-a1-1-x', 'Test', [
+      ['À tout à l’heure', 'see you later', '🕓'],
+      ['S’il vous plaît', 'please'],
+      ['le cœur', 'the heart', '❤️', undefined, 'les cœurs'],
+    ]);
+    expect(rows.map((v) => v.id)).toEqual([
+      'fr-a1-1-x-a-tout-a-l-heure',
+      'fr-a1-1-x-s-il-vous-plait',
+      'fr-a1-1-x-le-coeur',
+    ]);
+    expect(flashcards(rows).cards[2]?.note).toBe('Plural: les cœurs');
+    // German ids keep their accents untouched, so saved progress stays valid
+    expect(vocabList('a1-2-x', 'Test', [['Café', 'cafe']])[0]?.id).toBe('a1-2-x-caf');
+  });
+
   it('never repeats an option and always includes the answer', () => {
     for (const q of quizDeEn(vocab).questions) {
       expect(new Set(q.options).size).toBe(q.options.length);

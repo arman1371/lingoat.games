@@ -5,7 +5,7 @@ export function normalize(input: string): string {
   return input
     .normalize('NFC')
     .toLowerCase()
-    .replace(/[.,!?;:"“”„']/g, '')
+    .replace(/[.,!?;:"“”„'’]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -20,9 +20,19 @@ export function stripUmlauts(input: string): string {
   return input.replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/ü/g, 'u').replace(/ß/g, 'ss');
 }
 
+/** Drop every accent: "élève" → "eleve", "cœur" → "coeur" (typing French on an English keyboard). */
+export function stripAccents(input: string): string {
+  return input
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/œ/g, 'oe')
+    .replace(/æ/g, 'ae')
+    .replace(/ß/g, 'ss');
+}
+
 /**
  * - correct: identical after normalising case/spaces/punctuation
- * - almost: only differs by umlaut/ß spelling (ae or a instead of ä)
+ * - almost: only differs by umlaut/ß or accent spelling (ae or a instead of ä, e instead of é)
  * - wrong: anything else
  */
 export function checkAnswer(given: string, accepted: string | readonly string[]): AnswerVerdict {
@@ -36,6 +46,8 @@ export function checkAnswer(given: string, accepted: string | readonly string[])
   if (list.some((a) => stripUmlauts(normalize(a)) === gs || foldUmlauts(normalize(a)) === gs)) {
     return 'almost';
   }
+  const ga = stripAccents(g);
+  if (list.some((a) => stripAccents(normalize(a)) === ga)) return 'almost';
   return 'wrong';
 }
 

@@ -21,6 +21,8 @@ export interface LanguageMeta {
   routePrefix: string;
   /** A sentence to try the voice with in Profile. */
   sampleSentence: string;
+  /** Letters missing from an English keyboard: the keys under text fields. */
+  specialChars: readonly string[];
 }
 
 export const LANGUAGES: Record<LanguageId, LanguageMeta> = {
@@ -32,6 +34,7 @@ export const LANGUAGES: Record<LanguageId, LanguageMeta> = {
     bcp47: 'de-DE',
     routePrefix: '',
     sampleSentence: 'Guten Tag! Wie geht es Ihnen?',
+    specialChars: ['ä', 'ö', 'ü', 'ß'],
   },
   fr: {
     id: 'fr',
@@ -41,6 +44,7 @@ export const LANGUAGES: Record<LanguageId, LanguageMeta> = {
     bcp47: 'fr-FR',
     routePrefix: '/fr',
     sampleSentence: 'Bonjour ! Comment allez-vous ?',
+    specialChars: ['é', 'è', 'ê', 'à', 'â', 'ç', 'ô', 'î', 'ï', 'ù', 'û', 'œ'],
   },
 };
 

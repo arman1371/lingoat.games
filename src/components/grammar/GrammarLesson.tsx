@@ -1,3 +1,4 @@
+import { useLanguage } from '@/app/language';
 import { useId, type ElementType } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import type { Block, GrammarTopic } from '@/content/grammar';
@@ -62,6 +63,7 @@ function LessonTable({ block }: { block: Extract<Block, { type: 'table' }> }) {
 }
 
 function BlockView({ block, sub: Sub }: { block: Block; sub: ElementType }) {
+  const language = useLanguage();
   switch (block.type) {
     case 'p':
       return (
@@ -90,7 +92,7 @@ function BlockView({ block, sub: Sub }: { block: Block; sub: ElementType }) {
               className="rounded-xl border-2 border-line bg-surface px-3 py-2"
               data-testid="example"
             >
-              <span lang="de" className="block font-bold text-ink">
+              <span lang={language} className="block font-bold text-ink">
                 {ex.de}
               </span>
               <span className="block text-sm text-muted">{ex.en}</span>
@@ -112,7 +114,7 @@ function BlockView({ block, sub: Sub }: { block: Block; sub: ElementType }) {
             >
               <Sub className="font-extrabold">{item.title}</Sub>
               <p className="text-xs font-bold">{item.question}</p>
-              <p lang="de" className="mt-1 font-bold">
+              <p lang={language} className="mt-1 font-bold">
                 {item.example}
               </p>
             </div>
@@ -136,7 +138,7 @@ function BlockView({ block, sub: Sub }: { block: Block; sub: ElementType }) {
           </p>
           <ul className="mt-1 space-y-1 font-bold">
             {block.items.map((item) => (
-              <li key={item} lang="de">
+              <li key={item} lang={language}>
                 {item}
               </li>
             ))}

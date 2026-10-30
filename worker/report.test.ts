@@ -274,7 +274,7 @@ describe('issue text', () => {
   const base = { type: 'bug', activityId: 'a1-1-x', appVersion: '1.0.0' } as const;
   it('titles carry the type prefix, with the item only when known', () => {
     expect(issueTitle(base)).toBe('[Bug] a1-1-x');
-    expect(issueTitle({ ...base, type: 'german', itemId: 'q-3' })).toBe('[German] a1-1-x · q-3');
+    expect(issueTitle({ ...base, type: 'german', itemId: 'q-3' })).toBe('[Language] a1-1-x · q-3');
   });
   it('omits unknown rows and the note section', () => {
     const body = issueBody(base, 'https://lingoat.games');

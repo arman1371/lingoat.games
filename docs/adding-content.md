@@ -46,6 +46,23 @@ answer first), `sent`, `tf` (blitz), `say`/`you` (dialogue turns), `heard`/`dict
 years (`yearToGerman`) in `numbers.ts`, clock time in `time.ts`) – generate forms from them
 instead of typing them twice.
 
+## A new language level (French)
+
+`src/content/fr-a1-1/` is the worked example: `index.ts` (a `LevelContent`), one file per unit (`u1-bonjour.ts`) and the
+two shared test harnesses (`content.test.ts`, `playability.test.tsx`), plus French-specific checks. Differences from German:
+
+- Level ids start with the language id (`fr-a1-1`), unit and activity ids with the level id, and the `levels.ts` entry has
+  `language: 'fr'`. The pack is served under `/fr`; German URLs and ids never change.
+- Write the word in the `de` field ("Bonjour") and keep French nouns with their article ("le pain", "l’eau"); do not use the
+  `article` column. Ids are made ascii by `vocabList`.
+- Grammar tags and their mini lessons are French only (`fr-…` in `tags.ts` / `lessons.ts`). Never tag a French grammar
+  activity with a German grammar point: the wrong-answer hint would explain German.
+- Sort it cards carry their own English `translation`; there is no `translations.ts` overlay yet.
+- Engines that depend on German helpers (clock, market, conjugation pronouns) need a French counterpart before a unit
+  can use them; unit 1 only uses engines that do not.
+- e2e: add the pack to `frenchActivities` in `e2e/helpers.ts` (kept apart from `allActivities`, which counts German library
+  games) and follow `e2e/fr-a1-1.spec.ts`.
+
 ## A new unit
 
 A unit file exports `{ unit, vocab, activities }` (`UnitContent`). Use the helpers in

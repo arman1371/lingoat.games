@@ -5,6 +5,7 @@ import {
   normalize,
   normalizeDigits,
   parsePriceToCents,
+  stripAccents,
   stripUmlauts,
 } from './answer-check';
 
@@ -24,6 +25,19 @@ describe('answer-check', () => {
     expect(checkAnswer('Madchen', 'Mädchen')).toBe('almost');
     expect(checkAnswer('Schoen', 'schön')).toBe('almost');
     expect(checkAnswer('Maedchen', 'Mädchen')).toBe('almost');
+  });
+
+  it('flags missing accents as almost and ignores apostrophe styles', () => {
+    expect(checkAnswer('a demain', 'À demain')).toBe('almost');
+    expect(checkAnswer('ca va', 'Ça va ?')).toBe('almost');
+    expect(checkAnswer('coeur', 'cœur')).toBe('almost');
+    expect(checkAnswer('À demain', 'À demain')).toBe('correct');
+    expect(checkAnswer("S'il vous plait", 'S’il vous plaît')).toBe('almost');
+    expect(checkAnswer("l'eau", 'l’eau')).toBe('correct');
+  });
+
+  it('strips accents', () => {
+    expect(stripAccents('élève à Noël, cœur, garçon')).toBe('eleve a Noel, coeur, garcon');
   });
 
   it('rejects wrong or empty input', () => {

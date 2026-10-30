@@ -24,6 +24,7 @@ import { ProgressBar } from './ProgressBar';
 import { SpeakButton } from './SpeakButton';
 import { Stars } from './Stars';
 import { UmlautKeyboard } from './UmlautKeyboard';
+import { LanguageContext } from '@/app/language';
 
 describe('Button', () => {
   it('renders variants, icon and fires clicks unless disabled', async () => {
@@ -141,6 +142,22 @@ describe('UmlautKeyboard', () => {
     for (const ch of ['ä', 'ö', 'ü', 'ß'])
       await user.click(screen.getByRole('button', { name: ch }));
     expect(onInsert.mock.calls.map((c) => c[0])).toEqual(['ä', 'ö', 'ü', 'ß']);
+  });
+});
+
+describe('UmlautKeyboard in French', () => {
+  it('offers the French letters instead of the German ones', async () => {
+    const onInsert = vi.fn();
+    render(
+      <LanguageContext.Provider value="fr">
+        <UmlautKeyboard onInsert={onInsert} />
+      </LanguageContext.Provider>,
+    );
+    const user = userEvent.setup();
+    expect(screen.queryByRole('button', { name: 'ä' })).not.toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'é' }));
+    await user.click(screen.getByRole('button', { name: 'ç' }));
+    expect(onInsert.mock.calls.map((c) => c[0])).toEqual(['é', 'ç']);
   });
 });
 

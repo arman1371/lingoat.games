@@ -1060,6 +1060,21 @@ export const LESSONS = {
     rule: 'Particles colour a sentence without changing what it says: doch (contrary to expectation), ja (as you know), eben / halt (it cannot be changed), wohl (probably), eigentlich (actually), schon (admittedly), immerhin (at least). They are unstressed, never stand first and cannot be negated.',
     examples: ['Das ist ja interessant!', 'Das ist eben so.', 'Du hast es doch versprochen!'],
   },
+  // ---- French A1.1 -------------------------------------------------------------------------
+  'fr-tu-vous': {
+    title: 'tu or vous?',
+    rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',
+    examples: [
+      'Salut, Léa ! Tu vas bien ? → friend',
+      'Bonjour, madame. Vous allez bien ? → a stranger',
+      'Bonjour à tous. Vous êtes prêts ? → several people',
+    ],
+  },
+  'fr-questions': {
+    title: 'Asking how someone is',
+    rule: 'Comment asks about the manner. With tu the question is Comment vas-tu ?, with vous it is Comment allez-vous ? (verb first, joined to the pronoun by a hyphen). Among friends the voice is enough: Ça va ? goes up at the end.',
+    examples: ['Comment vas-tu ?', 'Comment allez-vous ?', 'Ça va ? – Oui, ça va bien.'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

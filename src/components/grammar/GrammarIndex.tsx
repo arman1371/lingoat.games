@@ -4,7 +4,8 @@ import { Chip } from '@/components/ui/Chip';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { StatePanel } from '@/components/ui/StatePanel';
 import { TextField } from '@/components/ui/TextField';
-import { LEVELS } from '@/content/levels';
+import { useLanguage } from '@/app/language';
+import { levelsOf } from '@/content/levels';
 import { groupTopics, levelsWithTopics } from '@/lib/grammarFilter';
 import { t } from '@/i18n';
 import { GrammarRow } from './GrammarRow';
@@ -13,6 +14,7 @@ import { useGrammar } from './useGrammar';
 /** Every written lesson, grouped by the level that first teaches it; `?gq=` searches, `?glvl=` filters. */
 export function GrammarIndex() {
   const grammar = useGrammar();
+  const levelList = levelsOf(useLanguage());
   const [params, setParams] = useSearchParams();
   const q = params.get('gq') ?? '';
   const lvl = params.get('glvl') ?? '';
@@ -24,8 +26,8 @@ export function GrammarIndex() {
   };
 
   const groups = useMemo(
-    () => (grammar ? groupTopics(grammar.GRAMMAR_TOPICS, LEVELS, q, lvl) : []),
-    [grammar, q, lvl],
+    () => (grammar ? groupTopics(grammar.GRAMMAR_TOPICS, levelList, q, lvl) : []),
+    [grammar, levelList, q, lvl],
   );
 
   if (!grammar) {
@@ -38,7 +40,7 @@ export function GrammarIndex() {
       </div>
     );
   }
-  const levels = levelsWithTopics(grammar.GRAMMAR_TOPICS, LEVELS);
+  const levels = levelsWithTopics(grammar.GRAMMAR_TOPICS, levelList);
 
   return (
     <div className="flex flex-col gap-4" data-testid="grammar-index">

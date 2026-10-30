@@ -32,6 +32,8 @@ async function settle(page: Page) {
 const PAGES: [string, string, string][] = [
   ['home', '/', 'Start your first game'],
   ['home in French', '/fr', 'Starting French'],
+  ['level in French', '/fr/levels/fr-a1-1', 'A1.1'],
+  ['unit in French', '/fr/levels/fr-a1-1/units/fr-a1-1-bonjour', 'Bonjour !'],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],

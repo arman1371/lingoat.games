@@ -2,8 +2,13 @@ import type { Activity, ConfigOf, GameType, Unit, Vocab } from './schema';
 import type { TagId } from './tags';
 import type { LessonId } from './lessons';
 import { createRng, hashString, pickMany, shuffle } from '@/lib/rng';
+import { DEFAULT_LANGUAGE, LANGUAGE_IDS } from './languages';
 
-/** [german, english, emoji, article?, plural?] – compact way to author vocabulary. */
+/**
+ * [word, english, emoji, article?, plural?] – compact way to author vocabulary. The word is in the
+ * language being learned (the field is called `de` for historical reasons). French nouns carry their
+ * article inside the word ("le pain"), so only German rows use `article`.
+ */
 export type VocabRow = readonly [
   de: string,
   en: string,
@@ -23,12 +28,27 @@ export function slug(input: string): string {
     .replace(/^-|-$/g, '');
 }
 
+/** "À bientôt" → "a-bientot": ids of languages other than German drop accents (German ids keep theirs). */
+export function slugAscii(input: string): string {
+  return slug(
+    input
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/œ/g, 'oe'),
+  );
+}
+
+/** Unit ids start with their level id, which starts with the language id for every language but German. */
+const inOtherLanguage = (unitId: string): boolean =>
+  LANGUAGE_IDS.some((id) => id !== DEFAULT_LANGUAGE && unitId.startsWith(`${id}-`));
+
 export function vocabList(unitId: string, field: string, rows: readonly VocabRow[]): Vocab[] {
   const used = new Set<string>();
+  const toSlug = inOtherLanguage(unitId) ? slugAscii : slug;
   return rows.map(([de, en, emoji, article, plural]) => {
     // "sie" and "Sie" slug to the same id – suffix repeats so ids stay unique
-    let id = `${unitId}-${slug(de)}`;
-    for (let n = 2; used.has(id); n++) id = `${unitId}-${slug(de)}-${n}`;
+    let id = `${unitId}-${toSlug(de)}`;
+    for (let n = 2; used.has(id); n++) id = `${unitId}-${toSlug(de)}-${n}`;
     used.add(id);
     return {
       id,
@@ -102,7 +122,7 @@ export function flashcards(
       back: front === 'de' ? v.en : label(v),
       ...(v.emoji ? { emoji: v.emoji } : {}),
       speak: label(v),
-      ...(v.plural ? { note: `Plural: die ${v.plural}` } : {}),
+      ...(v.plural ? { note: `Plural: ${inOtherLanguage(v.id) ? '' : 'die '}${v.plural}` } : {}),
     })),
   };
 }

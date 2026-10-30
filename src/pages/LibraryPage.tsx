@@ -63,21 +63,25 @@ function GameLibrary() {
     (u) => filters.levels.length === 0 || filters.levels.includes(u.levelId),
   );
 
+  // only the tags the loaded language uses: German grammar points never show up while studying French
+  const usedTags = new Set<string>(content.activities.flatMap((a) => a.tags));
   const tagFacet = (group: 'skill' | 'topic' | 'grammar', key: 'skills' | 'topics' | 'grammar') => (
     <fieldset className="flex flex-col gap-2">
       <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
         {GROUP_LABELS[group]}
       </legend>
       <div className="flex flex-wrap gap-2">
-        {tagsInGroup(group).map((id) => (
-          <Chip
-            key={id}
-            selected={filters[key].includes(id)}
-            onToggle={() => update({ [key]: toggle<TagId>(filters[key], id) })}
-          >
-            {TAGS[id].emoji} {TAGS[id].label}
-          </Chip>
-        ))}
+        {tagsInGroup(group)
+          .filter((id) => usedTags.has(id))
+          .map((id) => (
+            <Chip
+              key={id}
+              selected={filters[key].includes(id)}
+              onToggle={() => update({ [key]: toggle<TagId>(filters[key], id) })}
+            >
+              {TAGS[id].emoji} {TAGS[id].label}
+            </Chip>
+          ))}
       </div>
     </fieldset>
   );

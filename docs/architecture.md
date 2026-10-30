@@ -26,6 +26,16 @@
    box never mix. Theme, sound, speech and the daily-goal target are shared settings. Export files (`schemaVersion` 2)
    carry one progress block per language; version 1 files import as German, and importing never touches a language
    that is not in the file.
+
+   Content in another language follows the same contracts as German, with a few conventions: the vocabulary field that holds
+   the learned word is still called `de`; French nouns carry their article inside the word ("le pain"), so `article` stays
+   German-only; ids are ascii (`slugAscii`); grammar tags and mini lessons are prefixed (`fr-tu-vous`), because an
+   unprefixed German tag would pull a German explanation into a French activity (the French content test checks this).
+   Language-dependent UI is read from the language registry: the special-character keys under text fields
+   (`specialChars`), the `lang` attribute of lessons, and the "almost" verdict of the answer check, which accepts a
+   missing accent (`stripAccents`) as it accepts `ae` for `ä`. The Library only offers tags the loaded language uses and the
+   Grammar tab only lists the levels of the language.
+
 6. **Accessible by default.** Real buttons/inputs, labelled groups, live regions for feedback,
    number-key shortcuts, 44 px targets, visible focus, no nested interactive controls, axe in CI.
 

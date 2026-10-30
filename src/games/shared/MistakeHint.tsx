@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useLanguage } from '@/app/language';
 import { LESSONS, type LessonId } from '@/content/lessons';
 import { FullLessonLink } from '@/components/grammar/FullLessonLink';
 import { Button } from '@/components/ui/Button';
@@ -20,6 +21,7 @@ interface Props {
  * Escape closes it and focus returns to the button.
  */
 export function MistakeHint({ why, lesson }: Props) {
+  const language = useLanguage();
   const fallback = useActivityLesson();
   const id = lesson ?? fallback;
   const l = id ? LESSONS[id] : undefined;
@@ -78,7 +80,7 @@ export function MistakeHint({ why, lesson }: Props) {
                 <p className="mt-1">{l.rule}</p>
                 <ul className="mt-1 list-disc pl-5 font-bold">
                   {l.examples.map((ex) => (
-                    <li key={ex} lang="de">
+                    <li key={ex} lang={language}>
                       {ex}
                     </li>
                   ))}
