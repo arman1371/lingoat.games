@@ -1,9 +1,9 @@
+import { useProgress } from '@/app/language';
 import { Link, useParams } from 'react-router';
 import { Icon } from '@/components/ui/Icon';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { useContent } from '@/content/ContentProvider';
 import { getLevelMeta } from '@/content/levels';
-import { useProgressStore } from '@/store/progressStore';
 import { NotFoundPage } from './NotFoundPage';
 
 type NodeState = 'done' | 'current' | 'open';
@@ -20,7 +20,7 @@ const NODE: Record<NodeState, string> = {
 export function LevelPage() {
   const { levelId = '' } = useParams();
   const content = useContent();
-  const progress = useProgressStore((s) => s.activities);
+  const progress = useProgress((s) => s.activities);
   const level = getLevelMeta(levelId);
   const units = content.units.filter((u) => u.levelId === levelId);
   if (!level || level.status !== 'available' || units.length === 0) return <NotFoundPage />;

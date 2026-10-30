@@ -684,7 +684,7 @@ describe('Export and import', () => {
     await user.click(await screen.findByRole('button', { name: 'Export progress' }));
     expect(click).toHaveBeenCalledOnce();
     const parsed = parseImport(await blob!.text());
-    expect(parsed.ok && parsed.file.progress.xp).toBe(useProgressStore.getState().xp);
+    expect(parsed.ok && parsed.file.progress.de?.xp).toBe(useProgressStore.getState().xp);
     expect(parsed.ok && parsed.file.settings.theme).toBe('dark');
     expect(await screen.findByText('Progress file saved.')).toBeInTheDocument();
     click.mockRestore();
@@ -693,7 +693,7 @@ describe('Export and import', () => {
   it('asks before importing, merges progress and takes the settings from the file', async () => {
     const source = buildExport(
       { ...DEFAULT_SETTINGS, theme: 'dark', dailyGoal: 100 },
-      { ...initialProgress(), xp: 900, daily: { day: 1, xp: 0 } },
+      { de: { ...initialProgress(), xp: 900, daily: { day: 1, xp: 0 } } },
     );
     play();
     const before = useProgressStore.getState().activities['a1-1-hallo-flash'];
@@ -720,7 +720,7 @@ describe('Export and import', () => {
   it('can replace this device with the file instead of merging', async () => {
     const source = buildExport(
       { ...DEFAULT_SETTINGS, dailyGoal: 20 },
-      { ...initialProgress(), xp: 15, daily: { day: 1, xp: 0 } },
+      { de: { ...initialProgress(), xp: 15, daily: { day: 1, xp: 0 } } },
     );
     play();
     expect(useProgressStore.getState().xp).toBeGreaterThan(15);
@@ -753,7 +753,10 @@ describe('Export and import', () => {
     await user.click(within(dialog).getByRole('button', { name: 'Close' }));
     await chooseFile(
       user,
-      JSON.stringify({ ...buildExport(DEFAULT_SETTINGS, initialProgress()), schemaVersion: 99 }),
+      JSON.stringify({
+        ...buildExport(DEFAULT_SETTINGS, { de: initialProgress() }),
+        schemaVersion: 99,
+      }),
     );
     expect(await screen.findByRole('dialog', { name: "Can't import this file" })).toHaveTextContent(
       'newer version',

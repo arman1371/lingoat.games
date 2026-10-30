@@ -2,6 +2,7 @@ import { DEFAULT_SETTINGS } from '@/store/settingsStore';
 import { initialProgress, type ProgressData } from '@/store/progressStore';
 import {
   applyImport,
+  applyImportAll,
   buildExport,
   exportFileName,
   mergeProgress,
@@ -28,10 +29,14 @@ const mistake = (activityId: string, itemId: string, over = {}) => ({
 });
 
 const exported = (over: Partial<ProgressData> = {}) =>
-  buildExport(DEFAULT_SETTINGS, progress(over), {
-    appVersion: '1.2.3',
-    now: new Date('2026-10-25T10:00:00Z'),
-  });
+  buildExport(
+    DEFAULT_SETTINGS,
+    { de: progress(over) },
+    {
+      appVersion: '1.2.3',
+      now: new Date('2026-10-25T10:00:00Z'),
+    },
+  );
 
 describe('buildExport / parseImport', () => {
   it('writes a versioned file that reads back unchanged', () => {
@@ -63,14 +68,15 @@ describe('buildExport / parseImport', () => {
     ['another json file', '{"hello":"world"}', 'wrong-format'],
     ['a newer schema', JSON.stringify({ ...exported(), schemaVersion: 99 }), 'newer-version'],
     ['missing progress', JSON.stringify({ ...exported(), progress: undefined }), 'invalid'],
+    ['progress without any language', JSON.stringify({ ...exported(), progress: {} }), 'invalid'],
     [
       'a wrong type',
-      JSON.stringify({ ...exported(), progress: { ...progress(), xp: 'lots' } }),
+      JSON.stringify({ ...exported(), progress: { de: { ...progress(), xp: 'lots' } } }),
       'invalid',
     ],
     [
       'negative xp',
-      JSON.stringify({ ...exported(), progress: { ...progress(), xp: -5 } }),
+      JSON.stringify({ ...exported(), progress: { de: { ...progress(), xp: -5 } } }),
       'invalid',
     ],
     [
@@ -106,7 +112,29 @@ describe('buildExport / parseImport', () => {
       xp: 40,
       games: 1,
       mistakes: 1,
+      languages: [{ language: 'de', xp: 40, games: 1, mistakes: 1 }],
     });
+  });
+
+  it('keeps one progress block per language and totals them in the summary', () => {
+    const file = buildExport(DEFAULT_SETTINGS, {
+      de: progress({ xp: 40 }),
+      fr: progress({ xp: 10, mistakes: { 'fr-a::x': mistake('fr-a', 'x') } }),
+    });
+    const parsed = parseImport(JSON.stringify(file));
+    expect(parsed).toEqual({ ok: true, file });
+    expect(summarize(file)).toMatchObject({ xp: 50, mistakes: 1 });
+    expect(summarize(file).languages.map((l) => l.language)).toEqual(['de', 'fr']);
+  });
+
+  it('reads a version 1 file (German only) as the German block', () => {
+    const v1 = {
+      ...exported({ xp: 77 }),
+      schemaVersion: 1,
+      progress: progress({ xp: 77 }),
+    };
+    const parsed = parseImport(JSON.stringify(v1));
+    expect(parsed.ok && parsed.file.progress).toEqual({ de: progress({ xp: 77 }) });
   });
 });
 
@@ -209,6 +237,26 @@ describe('mergeProgress', () => {
     expect(
       mergeProgress(progress({ ...base, lastActivityId: 'b' }), progress()).lastActivityId,
     ).toBe('b');
+  });
+});
+
+describe('applyImportAll', () => {
+  const local = { de: progress({ xp: 100 }), fr: progress({ xp: 30 }) };
+
+  it('replaces only the languages that are in the file', () => {
+    expect(applyImportAll(local, { de: progress({ xp: 5 }) }, 'replace')).toEqual({
+      de: progress({ xp: 5 }),
+    });
+  });
+
+  it('merges each language on its own', () => {
+    const out = applyImportAll(
+      local,
+      { de: progress({ xp: 5 }), fr: progress({ xp: 90 }) },
+      'merge',
+    );
+    expect(out.de?.xp).toBe(100);
+    expect(out.fr?.xp).toBe(90);
   });
 });
 

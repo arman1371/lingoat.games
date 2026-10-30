@@ -1,3 +1,4 @@
+import { useProgress } from '@/app/language';
 import { Link, useParams, useSearchParams } from 'react-router';
 import { ActivityCard } from '@/components/ActivityCard';
 import { UnitGrammar } from '@/components/grammar/UnitGrammar';
@@ -8,14 +9,13 @@ import { useContent } from '@/content/ContentProvider';
 import { pathStates, playUrl } from '@/app/path';
 import { GAME_TYPE_LABELS } from '@/lib/filters';
 import { t } from '@/i18n';
-import { useProgressStore } from '@/store/progressStore';
 import { NotFoundPage } from './NotFoundPage';
 
 export function UnitPage() {
   const { levelId = '', unitId = '' } = useParams();
   const [params, setParams] = useSearchParams();
   const content = useContent();
-  const progress = useProgressStore((s) => s.activities);
+  const progress = useProgress((s) => s.activities);
   const unit = content.unitById.get(unitId);
   if (!unit || unit.levelId !== levelId) return <NotFoundPage />;
 

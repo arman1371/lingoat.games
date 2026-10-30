@@ -8,7 +8,11 @@ import { StatPill } from '@/components/ui/StatPill';
 import { StatePanel } from '@/components/ui/StatePanel';
 import { t } from '@/i18n';
 import { dayNumber } from '@/lib/srs';
-import { useProgressStore, visibleStreak } from '@/store/progressStore';
+import { getLanguage, type LanguageId } from '@/content/languages';
+import { levelsOf } from '@/content/levels';
+import { setSpeechLanguage } from '@/lib/tts';
+import { visibleStreak } from '@/store/progressStore';
+import { LanguageContext, useProgress } from './language';
 import { useApplySettings } from './theme';
 
 function Loading() {
@@ -96,9 +100,9 @@ function Shell() {
   useApplySettings();
   const { pathname } = useLocation();
   const playing = pathname.startsWith('/play');
-  const xp = useProgressStore((s) => s.xp);
-  const streak = useProgressStore((s) => visibleStreak(s.streak, dayNumber()));
-  const mistakeCount = useProgressStore((s) => Object.keys(s.mistakes).length);
+  const xp = useProgress((s) => s.xp);
+  const streak = useProgress((s) => visibleStreak(s.streak, dayNumber()));
+  const mistakeCount = useProgress((s) => Object.keys(s.mistakes).length);
 
   useEffect(() => {
     window.scrollTo?.(0, 0);
@@ -163,10 +167,14 @@ function Shell() {
   );
 }
 
-export function AppLayout() {
+export function AppLayout({ language }: { language: LanguageId }) {
+  // speech is a module-level voice setting, so it must follow the language before any game renders
+  setSpeechLanguage(getLanguage(language).bcp47);
   return (
-    <ContentProvider>
-      <Shell />
-    </ContentProvider>
+    <LanguageContext.Provider value={language}>
+      <ContentProvider levels={levelsOf(language)}>
+        <Shell />
+      </ContentProvider>
+    </LanguageContext.Provider>
   );
 }

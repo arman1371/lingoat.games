@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import type { LanguageId } from './languages';
 import { PRONOUNS } from '@/lib/german/conjugation';
 import { TAG_IDS, type TagId } from './tags';
 import { LESSON_IDS, type LessonId } from './lessons';
@@ -335,6 +336,8 @@ export type LevelContent = z.infer<typeof LevelContentSchema>;
 
 export interface LevelMeta {
   id: string;
+  /** Language the level teaches. */
+  language: LanguageId;
   title: string;
   subtitle: string;
   status: 'available' | 'coming-soon';

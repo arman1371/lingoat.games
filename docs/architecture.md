@@ -16,7 +16,17 @@
    XP, stars, accuracy and plays never go down; the default) or Replace (exact copy of the file).
    Settings always come from the file. Bump
    `TRANSFER_VERSION` when the file shape changes.
-5. **Accessible by default.** Real buttons/inputs, labelled groups, live regions for feedback,
+5. **One language per page.** `src/content/languages.ts` lists the languages (`de`, `fr`). German is the default and
+   keeps its URLs, level ids and storage key; every other language lives under a route prefix (`/fr/...`) with level ids
+   prefixed by its id (`fr-a1-1`). The prefix is the router's `basename` (`createAppRouter`), so links and routes are
+   identical in every language and switching language is a normal page navigation. `AppLayout` receives the language,
+   provides it through `useLanguage()`, loads only that language's levels (`levelsOf`) and sets the speech voice
+   (`setSpeechLanguage`). Progress is one zustand store per language (`progressStores`, key `lingoat.progress` for
+   German, `lingoat.progress.<id>` otherwise), read through `useProgress()`: XP, streak, daily XP, stars and the mistake
+   box never mix. Theme, sound, speech and the daily-goal target are shared settings. Export files (`schemaVersion` 2)
+   carry one progress block per language; version 1 files import as German, and importing never touches a language
+   that is not in the file.
+6. **Accessible by default.** Real buttons/inputs, labelled groups, live regions for feedback,
    number-key shortcuts, 44 px targets, visible focus, no nested interactive controls, axe in CI.
 
 ## Data flow

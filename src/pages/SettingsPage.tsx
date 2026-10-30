@@ -12,7 +12,7 @@ import { Toast } from '@/components/ui/Toast';
 import { Toggle } from '@/components/ui/Toggle';
 import { t } from '@/i18n';
 import {
-  applyImport,
+  applyImportAll,
   buildExport,
   exportFileName,
   parseImport,
@@ -22,7 +22,8 @@ import {
   type ImportMode,
   type TransferFile,
 } from '@/lib/progressTransfer';
-import { useProgressStore, type ProgressData } from '@/store/progressStore';
+import { LANGUAGE_IDS, type LanguageId } from '@/content/languages';
+import { progressStores, useProgressStore, type ProgressData } from '@/store/progressStore';
 import {
   DEFAULT_SETTINGS,
   useSettingsStore,
@@ -49,6 +50,11 @@ const pickProgress = (p: ProgressData): ProgressData => ({
   daily: p.daily,
 });
 
+const allProgress = () =>
+  Object.fromEntries(
+    LANGUAGE_IDS.map((id) => [id, pickProgress(progressStores[id].getState())]),
+  ) as Record<LanguageId, ProgressData>;
+
 function download(file: TransferFile) {
   const url = URL.createObjectURL(
     new Blob([JSON.stringify(file, null, 2)], { type: 'application/json' }),
@@ -74,13 +80,9 @@ export function SettingsPage() {
 
   const exportData = () => {
     download(
-      buildExport(
-        pickSettings(useSettingsStore.getState()),
-        pickProgress(useProgressStore.getState()),
-        {
-          appVersion: __APP_VERSION__,
-        },
-      ),
+      buildExport(pickSettings(useSettingsStore.getState()), allProgress(), {
+        appVersion: __APP_VERSION__,
+      }),
     );
     setToast(t('data.exported'));
   };
@@ -97,9 +99,11 @@ export function SettingsPage() {
 
   const applyImportNow = () => {
     if (!pending) return;
-    useProgressStore.setState(
-      applyImport(pickProgress(useProgressStore.getState()), pending.progress, importMode),
-    );
+    const imported = applyImportAll(allProgress(), pending.progress, importMode);
+    for (const id of LANGUAGE_IDS) {
+      const next = imported[id];
+      if (next) progressStores[id].setState(next);
+    }
     s.set(pending.settings);
     setPending(null);
     setToast(t('data.imported'));

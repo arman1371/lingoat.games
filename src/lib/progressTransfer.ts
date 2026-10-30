@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { DEFAULT_LANGUAGE, LANGUAGE_IDS, type LanguageId } from '@/content/languages';
 import type { ProgressData } from '@/store/progressStore';
 import type { SettingsData } from '@/store/settingsStore';
 
@@ -8,7 +9,8 @@ import type { SettingsData } from '@/store/settingsStore';
  */
 
 export const TRANSFER_FORMAT = 'lingoat-progress';
-export const TRANSFER_VERSION = 1;
+/** 2: progress is kept per language (`progress.de`, `progress.fr`). Version 1 files hold German only. */
+export const TRANSFER_VERSION = 2;
 /** Real exports are a few hundred KB at most; anything bigger is not ours. */
 export const TRANSFER_MAX_BYTES = 5 * 1024 * 1024;
 
@@ -50,13 +52,18 @@ const progressSchema = z.object({
   daily: z.object({ day, xp: count }),
 });
 
+/** One optional block per language; a file must carry at least one. */
+const progressByLanguageSchema = z
+  .object(Object.fromEntries(LANGUAGE_IDS.map((id) => [id, progressSchema.optional()])))
+  .refine((p) => Object.values(p).some(Boolean));
+
 const transferSchema = z.object({
   format: z.literal(TRANSFER_FORMAT),
   schemaVersion: z.number().int().min(1),
   appVersion: z.string().max(64).optional(),
   exportedAt: z.string().max(40),
   settings: settingsSchema,
-  progress: progressSchema,
+  progress: progressByLanguageSchema,
 });
 
 export interface TransferFile {
@@ -66,8 +73,11 @@ export interface TransferFile {
   /** ISO timestamp. */
   exportedAt: string;
   settings: SettingsData;
-  progress: ProgressData;
+  /** Only the languages the file knows about; importing leaves the others alone. */
+  progress: ProgressByLanguage;
 }
+
+export type ProgressByLanguage = Partial<Record<LanguageId, ProgressData>>;
 
 export type ImportErrorCode =
   'too-large' | 'not-json' | 'wrong-format' | 'newer-version' | 'invalid';
@@ -76,7 +86,7 @@ export type ParseResult = { ok: true; file: TransferFile } | { ok: false; error:
 
 export function buildExport(
   settings: SettingsData,
-  progress: ProgressData,
+  progress: ProgressByLanguage,
   options: { appVersion?: string; now?: Date } = {},
 ): TransferFile {
   return {
@@ -91,6 +101,12 @@ export function buildExport(
 
 export const exportFileName = (now: Date = new Date()) =>
   `lingoat-progress-${now.toISOString().slice(0, 10)}.json`;
+
+/** Version 1 had one `progress` object, which was always German. */
+function upgradeV1(raw: object): unknown {
+  const progress = (raw as { progress?: unknown }).progress;
+  return { ...raw, progress: { [DEFAULT_LANGUAGE]: progress } };
+}
 
 /** Checks size, JSON, format marker, version and shape – in that order, so the error says what is wrong. */
 export function parseImport(text: string, size: number = text.length): ParseResult {
@@ -112,9 +128,9 @@ export function parseImport(text: string, size: number = text.length): ParseResu
   if (typeof version === 'number' && version > TRANSFER_VERSION) {
     return { ok: false, error: 'newer-version' };
   }
-  const parsed = transferSchema.safeParse(raw);
+  const parsed = transferSchema.safeParse(version === 1 ? upgradeV1(raw) : raw);
   if (!parsed.success) return { ok: false, error: 'invalid' };
-  return { ok: true, file: parsed.data };
+  return { ok: true, file: parsed.data as TransferFile };
 }
 
 const later = <T extends { lastDay: number | null }>(a: T, b: T): T => {
@@ -190,16 +206,59 @@ export const applyImport = (
   mode: ImportMode,
 ): ProgressData => (mode === 'replace' ? incoming : mergeProgress(local, incoming));
 
-export interface TransferSummary {
-  exportedAt: string;
+/**
+ * Applies a file to this device language by language. Languages that are not in the file keep their
+ * local progress, even in replace mode, so a German-only file never wipes French.
+ */
+export function applyImportAll(
+  local: Record<LanguageId, ProgressData>,
+  incoming: ProgressByLanguage,
+  mode: ImportMode,
+): Partial<Record<LanguageId, ProgressData>> {
+  const result: Partial<Record<LanguageId, ProgressData>> = {};
+  for (const id of LANGUAGE_IDS) {
+    const theirs = incoming[id];
+    if (theirs) result[id] = applyImport(local[id], theirs, mode);
+  }
+  return result;
+}
+
+export interface LanguageSummary {
+  language: LanguageId;
   xp: number;
   games: number;
   mistakes: number;
 }
 
-export const summarize = (file: TransferFile): TransferSummary => ({
-  exportedAt: file.exportedAt,
-  xp: file.progress.xp,
-  games: Object.keys(file.progress.activities).length,
-  mistakes: Object.keys(file.progress.mistakes).length,
-});
+export interface TransferSummary {
+  exportedAt: string;
+  /** Totals over every language in the file. */
+  xp: number;
+  games: number;
+  mistakes: number;
+  languages: LanguageSummary[];
+}
+
+export function summarize(file: TransferFile): TransferSummary {
+  const languages = LANGUAGE_IDS.flatMap((language) => {
+    const p = file.progress[language];
+    return p
+      ? [
+          {
+            language,
+            xp: p.xp,
+            games: Object.keys(p.activities).length,
+            mistakes: Object.keys(p.mistakes).length,
+          },
+        ]
+      : [];
+  });
+  const sum = (key: 'xp' | 'games' | 'mistakes') => languages.reduce((n, l) => n + l[key], 0);
+  return {
+    exportedAt: file.exportedAt,
+    xp: sum('xp'),
+    games: sum('games'),
+    mistakes: sum('mistakes'),
+    languages,
+  };
+}

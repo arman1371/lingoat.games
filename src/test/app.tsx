@@ -17,10 +17,10 @@ import c21 from '@/content/c2-1';
 import c22 from '@/content/c2-2';
 import type { Activity } from '@/content/schema';
 import { DEFAULT_SETTINGS, useSettingsStore } from '@/store/settingsStore';
-import { useProgressStore } from '@/store/progressStore';
+import { progressStores } from '@/store/progressStore';
 
 export function resetStores() {
-  useProgressStore.getState().reset();
+  for (const store of Object.values(progressStores)) store.getState().reset();
   useSettingsStore.setState({ ...DEFAULT_SETTINGS });
 }
 

@@ -1,7 +1,9 @@
 import {
   dailyXp,
   initialProgress,
+  getProgressStore,
   nextStreak,
+  progressStorageKey,
   useProgressStore,
   visibleStreak,
 } from './progressStore';
@@ -15,7 +17,10 @@ const res = (over: Partial<GameResult> = {}): GameResult => ({
   ...over,
 });
 
-beforeEach(() => useProgressStore.getState().reset());
+beforeEach(() => {
+  useProgressStore.getState().reset();
+  getProgressStore('fr').getState().reset();
+});
 
 describe('progressStore', () => {
   it('records a first completion with stars, xp and a mistake', () => {
@@ -101,5 +106,29 @@ describe('daily XP', () => {
     useProgressStore.getState().recordResult('act', res(), { today: 5 });
     useProgressStore.getState().reset();
     expect(useProgressStore.getState().daily).toEqual({ day: 0, xp: 0 });
+  });
+});
+
+describe('progress per language', () => {
+  it('keeps the German storage key and gives French its own', () => {
+    expect(progressStorageKey('de')).toBe('lingoat.progress');
+    expect(progressStorageKey('fr')).toBe('lingoat.progress.fr');
+    expect(useProgressStore).toBe(getProgressStore('de'));
+  });
+
+  it('never mixes xp, streak, stars or mistakes between languages', () => {
+    getProgressStore('fr').getState().recordResult('fr-a1-1-x', res(), { today: 100 });
+    const fr = getProgressStore('fr').getState();
+    expect(fr.xp).toBeGreaterThan(0);
+    expect(Object.keys(fr.mistakes)).toEqual(['fr-a1-1-x::d']);
+    const de = useProgressStore.getState();
+    expect(de).toMatchObject({ xp: 0, activities: {}, mistakes: {}, lastActivityId: null });
+    expect(de.streak.current).toBe(0);
+  });
+
+  it('persists each language under its own key', () => {
+    getProgressStore('fr').getState().recordResult('fr-a1-1-x', res(), { today: 100 });
+    expect(localStorage.getItem('lingoat.progress.fr')).toContain('fr-a1-1-x');
+    expect(localStorage.getItem('lingoat.progress') ?? '').not.toContain('fr-a1-1-x');
   });
 });
