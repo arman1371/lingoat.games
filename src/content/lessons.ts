@@ -1140,6 +1140,21 @@ export const LESSONS = {
     rule: 'Most nouns add a silent -s in the plural, so you hear the plural only in the article: le, la and l’ become les, and un and une become des. Nouns in -eau and -al change differently: un bateau, des bateaux; un animal, des animaux.',
     examples: ['un frère, des frères', 'la sœur, les sœurs', 'un enfant, des enfants'],
   },
+  'fr-likes': {
+    title: 'J’aime, je déteste …',
+    rule: 'Aimer, adorer and détester are regular -er verbs. Before a noun use the definite article, even for things in general: j’aime le café, elle adore les chats. Before an activity use the infinitive: j’aime danser. Add beaucoup for more: j’aime beaucoup la musique.',
+    examples: ['J’aime le chocolat.', 'Elle adore les chats.', 'Nous détestons cuisiner.'],
+  },
+  'fr-negation': {
+    title: 'ne … pas',
+    rule: 'Put ne before the verb and pas after it: je ne parle pas. Before a vowel ne becomes n’: je n’aime pas. After pas, un, une and des turn into de: j’ai un frère, but je n’ai pas de frère. Moi non plus answers a negative sentence.',
+    examples: ['Je ne joue pas au tennis.', 'Elle n’aime pas danser.', 'Je n’ai pas de sœur.'],
+  },
+  'fr-jouer-faire': {
+    title: 'jouer à, jouer de, faire de',
+    rule: 'Games and sports take jouer à: jouer au football. Instruments take jouer de: jouer du piano. Other activities take faire de: faire du sport, faire de la natation. Faire is irregular: je fais, tu fais, il fait, nous faisons, vous faites, ils font.',
+    examples: ['Je joue au football.', 'Il joue de la guitare.', 'Nous faisons du sport.'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
