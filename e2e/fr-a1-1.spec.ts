@@ -114,6 +114,20 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['spell (accented letters)', 'fr-a1-1-presenter-spell-people'],
   ['dialogue (three scenes)', 'fr-a1-1-presenter-dialogues'],
   ['blitz', 'fr-a1-1-presenter-blitz'],
+  ['flashcards (numbers)', 'fr-a1-1-nombres-flash-numbers'],
+  ['quiz (digits to words)', 'fr-a1-1-nombres-quiz-digits'],
+  ['memory (the tens)', 'fr-a1-1-nombres-memory-tens'],
+  ['sort it (70s, 80s, 90s)', 'fr-a1-1-nombres-sort-seventies'],
+  ['listen (numbers)', 'fr-a1-1-nombres-listen-numbers'],
+  ['spell (hyphenated numbers)', 'fr-a1-1-nombres-spell-numbers'],
+  ['gap fill (sums)', 'fr-a1-1-nombres-gap-math'],
+  ['dictation (phone numbers in pairs)', 'fr-a1-1-nombres-dictation-phone'],
+  ['quiz (alphabet)', 'fr-a1-1-nombres-alphabet'],
+  ['dictation (a spelled name)', 'fr-a1-1-nombres-dictation-names'],
+  ['gap fill (avoir for the age)', 'fr-a1-1-nombres-gap-age'],
+  ['sentence builder', 'fr-a1-1-nombres-sentences'],
+  ['dialogue (three scenes)', 'fr-a1-1-nombres-dialogues'],
+  ['blitz', 'fr-a1-1-nombres-blitz'],
 ];
 
 test.describe('French A1.1 – playing the games', () => {
