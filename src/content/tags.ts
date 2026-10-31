@@ -387,6 +387,10 @@ export const TAGS = {
   'fr-place-prepositions': { label: 'dans, sur, devant, près de …', group: 'grammar', emoji: '📍' },
   'fr-aller': { label: 'aller', group: 'grammar', emoji: '🚶' },
   'fr-imperative': { label: 'The imperative', group: 'grammar', emoji: '📣' },
+  // grammar points – French A1.1, unit 8
+  'fr-demonstratives': { label: 'ce, cet, cette, ces', group: 'grammar', emoji: '👉' },
+  'fr-futur-proche': { label: 'aller + infinitive', group: 'grammar', emoji: '🔮' },
+  'fr-adjective-position': { label: 'un petit pull rouge', group: 'grammar', emoji: '↔️' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

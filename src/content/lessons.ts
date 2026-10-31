@@ -1199,6 +1199,25 @@ export const LESSONS = {
     rule: 'To give directions, use the verb without a pronoun. The vous form is the same as in the present: tournez, allez, prenez. The tu form of -er verbs loses its -s: tourne, traverse. Aller is va for tu. Add s’il vous plaît to be polite.',
     examples: ['Tournez à gauche.', 'Traverse la rue.', 'Va tout droit.'],
   },
+  'fr-demonstratives': {
+    title: 'ce, cet, cette, ces',
+    rule: 'Use ce before a masculine noun (ce pull), cet before a masculine noun that starts with a vowel sound (cet hiver), cette before a feminine noun (cette robe) and ces before a plural (ces chaussures). The same word means this and that.',
+    examples: ['Ce pull est noir.', 'Cet hiver, il neige.', 'J’aime cette robe.'],
+  },
+  'fr-futur-proche': {
+    title: 'The near future: aller + infinitive',
+    rule: 'To say what is going to happen, use aller in the present plus an infinitive: je vais jouer, nous allons voyager, il va pleuvoir. In the negative ne … pas goes around aller: je ne vais pas sortir.',
+    examples: [
+      'Demain, je vais jouer au tennis.',
+      'Nous allons voyager en été.',
+      'Il va pleuvoir.',
+    ],
+  },
+  'fr-adjective-position': {
+    title: 'Where does the adjective go?',
+    rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
+    examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
