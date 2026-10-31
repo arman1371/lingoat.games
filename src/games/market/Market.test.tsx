@@ -3,6 +3,7 @@ import { ImageManifestContext } from '@/lib/useImageManifest';
 import { renderGame } from '@/test/render';
 import { WordPhotoIndexContext } from '@/components/WordImage';
 import { buildWordPhotoIndex } from '@/lib/wordPhotos';
+import { LanguageContext } from '@/app/language';
 import Market from './Market';
 
 const config = {
@@ -102,5 +103,44 @@ describe('Market', () => {
     expect(photos).toHaveLength(1);
     expect(photos[0]).toHaveAttribute('src', '/img/a1-1-einkaufen-apfel.webp');
     expect(screen.getAllByTestId('emoji').map((e) => e.textContent)).toEqual(['🍎', '🥛', '🧀']);
+  });
+});
+
+describe('Market in French', () => {
+  const frenchConfig = {
+    products: [
+      { id: 'pomme', name: 'pomme', emoji: '🍎', priceCents: 60 },
+      { id: 'lait', name: 'lait', emoji: '🥛', priceCents: 110 },
+      { id: 'fromage', name: 'fromage', emoji: '🧀', priceCents: 250 },
+    ],
+    orders: [
+      {
+        id: 'o1',
+        request: 'Je prends deux pommes et un lait.',
+        items: [
+          { product: 'pomme', qty: 2 },
+          { product: 'lait', qty: 1 },
+        ],
+      },
+    ],
+  };
+
+  it('asks for the total in French and says the price in French', async () => {
+    const { user, onFinish } = renderGame(Market, frenchConfig, 1, {
+      wrapper: ({ children }) => (
+        <LanguageContext.Provider value="fr">{children}</LanguageContext.Provider>
+      ),
+    });
+    expect(screen.getByText('Client')).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Add pomme' }));
+    await user.click(screen.getByRole('button', { name: 'Add pomme' }));
+    await user.click(screen.getByRole('button', { name: 'Add lait' }));
+    await user.click(screen.getByRole('button', { name: 'Check basket' }));
+    await user.type(screen.getByLabelText(/Ça fait combien en tout/), '2,30{Enter}');
+    expect(screen.getByTestId('feedback')).toHaveAttribute('data-kind', 'correct');
+    expect(screen.getByText('deux euros trente', { selector: 'strong' })).toBeInTheDocument();
+    expect(screen.getByText(/Ça fait/, { selector: 'p' })).toBeInTheDocument();
+    await user.click(screen.getByTestId('continue'));
+    expect(onFinish).toHaveBeenCalledWith(expect.objectContaining({ correct: 1, total: 1 }));
   });
 });

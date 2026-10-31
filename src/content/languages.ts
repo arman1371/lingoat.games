@@ -23,6 +23,13 @@ export interface LanguageMeta {
   sampleSentence: string;
   /** Letters missing from an English keyboard: the keys under text fields. */
   specialChars: readonly string[];
+  /** Words the Clock master and Market stand speak to the learner: learning content, not UI chrome. */
+  gameStrings: {
+    timeQuestion: string;
+    customer: string;
+    priceLead: string;
+    totalQuestion: string;
+  };
 }
 
 export const LANGUAGES: Record<LanguageId, LanguageMeta> = {
@@ -35,6 +42,12 @@ export const LANGUAGES: Record<LanguageId, LanguageMeta> = {
     routePrefix: '',
     sampleSentence: 'Guten Tag! Wie geht es Ihnen?',
     specialChars: ['ä', 'ö', 'ü', 'ß'],
+    gameStrings: {
+      timeQuestion: 'Wie spät ist es?',
+      customer: 'Kunde',
+      priceLead: 'Das macht',
+      totalQuestion: 'Was kostet das zusammen? (in €)',
+    },
   },
   fr: {
     id: 'fr',
@@ -45,6 +58,12 @@ export const LANGUAGES: Record<LanguageId, LanguageMeta> = {
     routePrefix: '/fr',
     sampleSentence: 'Bonjour ! Comment allez-vous ?',
     specialChars: ['é', 'è', 'ê', 'à', 'â', 'ç', 'ô', 'î', 'ï', 'ù', 'û', 'œ'],
+    gameStrings: {
+      timeQuestion: 'Quelle heure est-il ?',
+      customer: 'Client',
+      priceLead: 'Ça fait',
+      totalQuestion: 'Ça fait combien en tout ? (en €)',
+    },
   },
 };
 

@@ -13,12 +13,12 @@ import c11 from '../src/content/c1-1';
 import c21 from '../src/content/c2-1';
 import c22 from '../src/content/c2-2';
 import fr11 from '../src/content/fr-a1-1';
-import { pathInLanguage } from '../src/content/languages';
+import { LANGUAGES, pathInLanguage, type LanguageId } from '../src/content/languages';
 import type { Activity, Vocab } from '../src/content/schema';
-import { parseTime, timeToGerman } from '../src/lib/german/time';
+import { parseTime } from '../src/lib/german/time';
+import { priceToWords, timeToWords } from '../src/lib/spoken';
 import { totalCents } from '../src/games/market/logic';
 import { buildColumns } from '../src/games/memory/logic';
-import { priceToGerman } from '../src/lib/german/numbers';
 
 export const SEED = 1;
 
@@ -97,7 +97,7 @@ async function waitForRound(page: Page, index: number, total: number) {
   await expect(page.getByTestId('counter')).toHaveText(`${index + 1} / ${total}`);
 }
 
-type Solver = (page: Page, config: any) => Promise<void>;
+type Solver = (page: Page, config: any, language: LanguageId) => Promise<void>;
 
 const solvers: Record<Activity['gameType'], Solver> = {
   async flashcards(page, c) {
@@ -271,7 +271,7 @@ const solvers: Record<Activity['gameType'], Solver> = {
     }
   },
 
-  async clock(page, c) {
+  async clock(page, c, language) {
     for (let i = 0; i < c.rounds.length; i++) {
       await waitForRound(page, i, c.rounds.length);
       const isSet = (await page.getByTestId('digital').count()) > 0;
@@ -284,12 +284,16 @@ const solvers: Record<Activity['gameType'], Solver> = {
           (r: any) => r.mode === 'read' && r.time.padStart(5, '0') === label,
         );
         await page
-          .getByRole('button', { name: timeToGerman(parseTime(label), round.style), exact: true })
+          .getByRole('button', {
+            name: timeToWords(parseTime(label), round.style, language),
+            exact: true,
+          })
           .click();
       } else {
         const phrase = (await prompt(page)).replace('🔊', '').trim();
         const round = c.rounds.find(
-          (r: any) => r.mode === 'set' && timeToGerman(parseTime(r.time), r.style) === phrase,
+          (r: any) =>
+            r.mode === 'set' && timeToWords(parseTime(r.time), r.style, language) === phrase,
         );
         const t = parseTime(round.time);
         for (let k = 0; k < (t.hour - 12 + 24) % 24; k++)
@@ -303,7 +307,7 @@ const solvers: Record<Activity['gameType'], Solver> = {
     }
   },
 
-  async market(page, c) {
+  async market(page, c, language) {
     for (let i = 0; i < c.orders.length; i++) {
       await waitForRound(page, i, c.orders.length);
       const shown = await prompt(page);
@@ -316,10 +320,12 @@ const solvers: Record<Activity['gameType'], Solver> = {
       await page.getByRole('button', { name: 'Check basket' }).click();
       const cents = totalCents(order.items, c.products);
       await page
-        .getByLabel(/Was kostet das zusammen/)
+        .getByLabel(LANGUAGES[language].gameStrings.totalQuestion)
         .fill((cents / 100).toFixed(2).replace('.', ','));
-      await page.getByLabel(/Was kostet das zusammen/).press('Enter');
-      await expect(page.getByText(priceToGerman(cents), { exact: false }).first()).toBeVisible();
+      await page.getByLabel(LANGUAGES[language].gameStrings.totalQuestion).press('Enter');
+      await expect(
+        page.getByText(priceToWords(cents, language), { exact: false }).first(),
+      ).toBeVisible();
       await expect(page.getByTestId('feedback')).toHaveAttribute('data-kind', 'correct');
       await cont(page);
     }
@@ -330,11 +336,12 @@ const solvers: Record<Activity['gameType'], Solver> = {
 export async function playPerfectly(page: Page, id: string, extraQuery = '') {
   const a = activity(id);
   // French activity ids start with the language id and live under /fr
-  const path = pathInLanguage(id.startsWith('fr-') ? 'fr' : 'de', `/play/${id}`);
+  const language: LanguageId = id.startsWith('fr-') ? 'fr' : 'de';
+  const path = pathInLanguage(language, `/play/${id}`);
   await page.goto(`${path}?seed=${SEED}${extraQuery}`);
   await expect(page.getByRole('heading', { name: a.title, level: 1 })).toBeVisible();
   await page.getByTestId('start').click();
-  await solvers[a.gameType](page, a.config);
+  await solvers[a.gameType](page, a.config, language);
   await expect(page.getByRole('heading', { name: 'Well done!' })).toBeVisible({ timeout: 10_000 });
   await expect(page.getByTestId('accuracy')).toHaveText('100% correct');
   return a;

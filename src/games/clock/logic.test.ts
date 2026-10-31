@@ -1,5 +1,6 @@
 import { createRng } from '@/lib/rng';
 import { informalTime, parseTime, formalTime } from '@/lib/german/time';
+import { informalTimeFr, formalTimeFr } from '@/lib/french/time';
 import { buildClockOptions, sameTime, wrapHour, wrapMinute } from './logic';
 
 describe('clock logic', () => {
@@ -11,6 +12,22 @@ describe('clock logic', () => {
           const t = parseTime(time);
           const options = buildClockOptions(t, style, createRng(seed));
           const correct = style === 'formal' ? formalTime(t) : informalTime(t);
+          expect(options).toHaveLength(4);
+          expect(new Set(options).size).toBe(4);
+          expect(options).toContain(correct);
+        }
+      }
+    },
+  );
+
+  it.each(['informal', 'formal'] as const)(
+    'builds four unique French %s options including the right one',
+    (style) => {
+      for (const time of ['03:00', '07:30', '12:00', '14:20', '23:55', '00:05', '11:45']) {
+        for (let seed = 0; seed < 5; seed++) {
+          const t = parseTime(time);
+          const options = buildClockOptions(t, style, createRng(seed), 'fr');
+          const correct = style === 'formal' ? formalTimeFr(t) : informalTimeFr(t);
           expect(options).toHaveLength(4);
           expect(new Set(options).size).toBe(4);
           expect(options).toContain(correct);

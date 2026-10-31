@@ -4,7 +4,9 @@ import { Mascot } from '@/components/ui/Mascot';
 import { SpeakButton } from '@/components/ui/SpeakButton';
 import { WordImage } from '@/components/WordImage';
 import { parsePriceToCents } from '@/lib/answer-check';
-import { formatPrice, priceToGerman } from '@/lib/german/numbers';
+import { useLanguageMeta } from '@/app/language';
+import { formatPrice } from '@/lib/german/numbers';
+import { priceToWords } from '@/lib/spoken';
 import { t } from '@/i18n';
 import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
 import { useAutoSpeak } from '../shared/useAutoSpeak';
@@ -15,6 +17,7 @@ import { adjust, basketMatches, totalCents, type Basket } from './logic';
 export function Market({ config, seed, onFinish }: GameProps<'market'>) {
   const seq = useSequence(config.orders, seed, onFinish);
   const order = seq.item;
+  const language = useLanguageMeta();
   const [basket, setBasket] = useState<Basket>({});
   const [step, setStep] = useState<'basket' | 'pay'>('basket');
   const [paid, setPaid] = useState('');
@@ -64,7 +67,8 @@ export function Market({ config, seed, onFinish }: GameProps<'market'>) {
             title={verdictTitle(done)}
             detail={
               <p>
-                Das macht <strong>{priceToGerman(total)}</strong> ({formatPrice(total)}).
+                {language.gameStrings.priceLead} <strong>{priceToWords(total, language.id)}</strong>{' '}
+                ({formatPrice(total)}).
               </p>
             }
             isLast={seq.isLast}
@@ -95,7 +99,7 @@ export function Market({ config, seed, onFinish }: GameProps<'market'>) {
       <div className="rounded-3xl bg-surface-2 p-4 text-center">
         <p className="flex items-center justify-center gap-2 text-sm font-bold text-muted">
           <Mascot mood="happy" size={32} />
-          Kunde
+          {language.gameStrings.customer}
         </p>
         <p
           className="flex items-center justify-center gap-2 text-2xl font-extrabold text-ink"
@@ -165,7 +169,7 @@ export function Market({ config, seed, onFinish }: GameProps<'market'>) {
               .join(', ')}
           </p>
           <label htmlFor="total" className="text-xl font-extrabold text-ink">
-            Was kostet das zusammen? (in €)
+            {language.gameStrings.totalQuestion}
           </label>
           <input
             id="total"

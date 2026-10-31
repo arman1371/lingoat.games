@@ -2,7 +2,9 @@ import { useMemo, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { SpeakButton } from '@/components/ui/SpeakButton';
 import { createRng, hashString } from '@/lib/rng';
-import { formatDigital, parseTime, timeToGerman } from '@/lib/german/time';
+import { useLanguageMeta } from '@/app/language';
+import { formatDigital, parseTime } from '@/lib/german/time';
+import { timeToWords } from '@/lib/spoken';
 import { t } from '@/i18n';
 import { ChoiceList } from '../shared/ChoiceList';
 import { FeedbackFooter, GameFrame, verdictTitle } from '../shared/GameFrame';
@@ -14,11 +16,13 @@ import { buildClockOptions, sameTime, wrapHour, wrapMinute } from './logic';
 export function ClockMaster({ config, seed, onFinish }: GameProps<'clock'>) {
   const seq = useSequence(config.rounds, seed, onFinish);
   const round = seq.item;
+  const language = useLanguageMeta();
   const target = useMemo(() => parseTime(round.time), [round.time]);
-  const phrase = timeToGerman(target, round.style);
+  const phrase = timeToWords(target, round.style, language.id);
   const options = useMemo(
-    () => buildClockOptions(target, round.style, createRng(seed ^ hashString(round.id))),
-    [target, round.style, round.id, seed],
+    () =>
+      buildClockOptions(target, round.style, createRng(seed ^ hashString(round.id)), language.id),
+    [target, round.style, round.id, seed, language.id],
   );
   const [picked, setPicked] = useState<string | null>(null);
   const [set, setSet] = useState({ hour: 12, minute: 0 });
@@ -72,7 +76,7 @@ export function ClockMaster({ config, seed, onFinish }: GameProps<'clock'>) {
         <>
           <div className="flex flex-col items-center gap-2">
             <h2 className="text-xl font-extrabold text-ink" data-testid="prompt">
-              Wie spät ist es?
+              {language.gameStrings.timeQuestion}
             </h2>
             <AnalogClock time={target} />
             <p className="text-lg font-bold text-muted">
