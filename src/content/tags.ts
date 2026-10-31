@@ -382,6 +382,11 @@ export const TAGS = {
   'fr-quantities': { label: 'un peu de, beaucoup de', group: 'grammar', emoji: '🥄' },
   'fr-prendre-vouloir': { label: 'prendre, vouloir, boire', group: 'grammar', emoji: '🍴' },
   'fr-ir-verbs': { label: 'Regular -ir verbs', group: 'grammar', emoji: '🏁' },
+  // grammar points – French A1.1, unit 7
+  'fr-contractions': { label: 'au, aux, du, des', group: 'grammar', emoji: '🔗' },
+  'fr-place-prepositions': { label: 'dans, sur, devant, près de …', group: 'grammar', emoji: '📍' },
+  'fr-aller': { label: 'aller', group: 'grammar', emoji: '🚶' },
+  'fr-imperative': { label: 'The imperative', group: 'grammar', emoji: '📣' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;
