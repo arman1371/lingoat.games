@@ -153,6 +153,19 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['spell (a hyphen and an accent)', 'fr-a1-1-loisirs-spell-free-time'],
   ['dialogue (three scenes)', 'fr-a1-1-loisirs-dialogues'],
   ['blitz', 'fr-a1-1-loisirs-blitz'],
+  ['flashcards (food)', 'fr-a1-1-table-flash-food'],
+  ['quiz (what is this food)', 'fr-a1-1-table-quiz-emoji'],
+  ['listen (food and French prices)', 'fr-a1-1-table-listen-shop'],
+  ['gap fill (du, de la, des)', 'fr-a1-1-table-gap-partitive'],
+  ['sort it (du, de la, des)', 'fr-a1-1-table-sort-partitive'],
+  ['conjugation (prendre, vouloir, boire)', 'fr-a1-1-table-conj-irregular'],
+  ['conjugation (choisir, finir)', 'fr-a1-1-table-conj-ir'],
+  ['gap fill (quantities)', 'fr-a1-1-table-gap-quantities'],
+  ['market (French prices in euros)', 'fr-a1-1-table-market'],
+  ['sentence builder', 'fr-a1-1-table-sentences'],
+  ['spell (accents and a hyphen)', 'fr-a1-1-table-spell-food'],
+  ['dialogue (three scenes)', 'fr-a1-1-table-dialogues'],
+  ['blitz', 'fr-a1-1-table-blitz'],
 ];
 
 test.describe('French A1.1 – playing the games', () => {

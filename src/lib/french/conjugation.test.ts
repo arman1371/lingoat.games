@@ -10,6 +10,7 @@ describe('conjugateFr', () => {
     expect(row('aller')).toEqual(['vais', 'vas', 'va', 'allons', 'allez', 'vont']);
     expect(row('prendre')).toEqual(['prends', 'prends', 'prend', 'prenons', 'prenez', 'prennent']);
     expect(row('vouloir')).toEqual(['veux', 'veux', 'veut', 'voulons', 'voulez', 'veulent']);
+    expect(row('boire')).toEqual(['bois', 'bois', 'boit', 'buvons', 'buvez', 'boivent']);
   });
 
   it('builds regular -er verbs', () => {

@@ -377,6 +377,11 @@ export const TAGS = {
   'fr-likes': { label: 'J’aime, je déteste …', group: 'grammar', emoji: '💛' },
   'fr-negation': { label: 'ne … pas', group: 'grammar', emoji: '🚫' },
   'fr-jouer-faire': { label: 'jouer à / faire de', group: 'grammar', emoji: '🎾' },
+  // grammar points – French A1.1, unit 6
+  'fr-partitive': { label: 'du, de la, des', group: 'grammar', emoji: '🥖' },
+  'fr-quantities': { label: 'un peu de, beaucoup de', group: 'grammar', emoji: '🥄' },
+  'fr-prendre-vouloir': { label: 'prendre, vouloir, boire', group: 'grammar', emoji: '🍴' },
+  'fr-ir-verbs': { label: 'Regular -ir verbs', group: 'grammar', emoji: '🏁' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

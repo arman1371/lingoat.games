@@ -1155,6 +1155,26 @@ export const LESSONS = {
     rule: 'Games and sports take jouer à: jouer au football. Instruments take jouer de: jouer du piano. Other activities take faire de: faire du sport, faire de la natation. Faire is irregular: je fais, tu fais, il fait, nous faisons, vous faites, ils font.',
     examples: ['Je joue au football.', 'Il joue de la guitare.', 'Nous faisons du sport.'],
   },
+  'fr-partitive': {
+    title: 'du, de la, des',
+    rule: 'To say some of something, use the partitive: du (masculine), de la (feminine), de l’ (before a vowel), des (plural). After a negative it becomes de. Compare with le, la, les, which point to a particular thing or to a thing in general.',
+    examples: ['Je mange du pain.', 'Elle prend de la soupe.', 'Il boit de l’eau.'],
+  },
+  'fr-quantities': {
+    title: 'un peu de, beaucoup de',
+    rule: 'After a quantity use de alone, with no article: un peu de fromage, beaucoup de légumes, un kilo de pommes, une bouteille d’eau. De becomes d’ before a vowel. Pas de works the same way: je ne mange pas de viande.',
+    examples: ['Un kilo de pommes.', 'Beaucoup de légumes.', 'Une bouteille d’eau.'],
+  },
+  'fr-prendre-vouloir': {
+    title: 'prendre, vouloir, boire',
+    rule: 'These verbs are irregular. Prendre: je prends, il prend, nous prenons, ils prennent. Vouloir: je veux, il veut, nous voulons, ils veulent. Boire: je bois, nous buvons, ils boivent. To order politely say je voudrais.',
+    examples: ['Je prends du pain.', 'Vous voulez du thé ?', 'Ils boivent de l’eau.'],
+  },
+  'fr-ir-verbs': {
+    title: 'Regular -ir verbs',
+    rule: 'Verbs like choisir and finir take the endings -is, -is, -it, -issons, -issez, -issent. Their stem gets longer in the plural: je choisis, nous choisissons, ils choisissent.',
+    examples: ['Je choisis le menu.', 'Il finit son repas.', 'Nous finissons à midi.'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
