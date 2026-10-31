@@ -30,9 +30,11 @@ export function stripAccents(input: string): string {
     .replace(/ß/g, 'ss');
 }
 
+const unhyphen = (input: string): string => input.replace(/-/g, ' ');
+
 /**
  * - correct: identical after normalising case/spaces/punctuation
- * - almost: only differs by umlaut/ß or accent spelling (ae or a instead of ä, e instead of é)
+ * - almost: only differs by umlaut/ß or accent spelling (ae or a instead of ä, e instead of é) or by a hyphen
  * - wrong: anything else
  */
 export function checkAnswer(given: string, accepted: string | readonly string[]): AnswerVerdict {
@@ -48,6 +50,9 @@ export function checkAnswer(given: string, accepted: string | readonly string[])
   }
   const ga = stripAccents(g);
   if (list.some((a) => stripAccents(normalize(a)) === ga)) return 'almost';
+  // dix-sept / dix sept: a missing or extra hyphen is a spelling slip, not a wrong word
+  const gh = unhyphen(ga);
+  if (list.some((a) => unhyphen(stripAccents(normalize(a))) === gh)) return 'almost';
   return 'wrong';
 }
 

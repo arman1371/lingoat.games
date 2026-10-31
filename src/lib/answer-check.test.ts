@@ -36,6 +36,13 @@ describe('answer-check', () => {
     expect(checkAnswer("l'eau", 'l’eau')).toBe('correct');
   });
 
+  it('flags a missing hyphen as almost', () => {
+    expect(checkAnswer('dix sept', 'dix-sept')).toBe('almost');
+    expect(checkAnswer('dix-sept', 'dix sept')).toBe('almost');
+    expect(checkAnswer('dix-sept', 'dix-sept')).toBe('correct');
+    expect(checkAnswer('dix huit', 'dix-sept')).toBe('wrong');
+  });
+
   it('strips accents', () => {
     expect(stripAccents('élève à Noël, cœur, garçon')).toBe('eleve a Noel, coeur, garcon');
   });

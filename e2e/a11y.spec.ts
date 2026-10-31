@@ -35,6 +35,7 @@ const PAGES: [string, string, string][] = [
   ['level in French', '/fr/levels/fr-a1-1', 'A1.1'],
   ['unit in French', '/fr/levels/fr-a1-1/units/fr-a1-1-bonjour', 'Bonjour !'],
   ['unit 2 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-presenter', 'Je me présente'],
+  ['unit 3 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-nombres', 'Les nombres'],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],
