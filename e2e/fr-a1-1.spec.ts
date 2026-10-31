@@ -179,6 +179,21 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['spell (accents)', 'fr-a1-1-ville-spell-places'],
   ['dialogue (three scenes)', 'fr-a1-1-ville-dialogues'],
   ['blitz', 'fr-a1-1-ville-blitz'],
+  ['flashcards (days)', 'fr-a1-1-temps-flash-days'],
+  ['flashcards (months and seasons)', 'fr-a1-1-temps-flash-months'],
+  ['flashcards (time and weather)', 'fr-a1-1-temps-flash-weather'],
+  ['quiz (season or weather)', 'fr-a1-1-temps-quiz-emoji'],
+  ['listen (days)', 'fr-a1-1-temps-listen-days'],
+  ['clock (French time, read and set)', 'fr-a1-1-temps-clock-time'],
+  ['flashcards (clothes and colours)', 'fr-a1-1-temps-flash-clothes'],
+  ['gap fill (ce, cet, cette, ces)', 'fr-a1-1-temps-gap-demonstratives'],
+  ['sort it (ce, cet, cette, ces)', 'fr-a1-1-temps-sort-demonstratives'],
+  ['gap fill (near future)', 'fr-a1-1-temps-gap-futur'],
+  ['sort it (adjective position)', 'fr-a1-1-temps-sort-position'],
+  ['sentence builder', 'fr-a1-1-temps-sentences'],
+  ['spell (days and clothes)', 'fr-a1-1-temps-spell-time'],
+  ['dialogue (three scenes)', 'fr-a1-1-temps-dialogues'],
+  ['blitz', 'fr-a1-1-temps-blitz'],
 ];
 
 test.describe('French A1.1 – playing the games', () => {

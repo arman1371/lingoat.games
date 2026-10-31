@@ -49,7 +49,7 @@ like the German units. Vocabulary cards of one unit are not repeated in another.
 1. Language plumbing for a second pack: level loader, content / playability test harness for non-German
    content, `fr-a1-1` level switched to `available`, e2e entry. **Done** with unit 1.
 2. Unit 1 as a complete vertical slice (all engines used there), then units 2 to 8 in small PRs.
-   **Units 1 (`bonjour`, 15 games), 2 (`presenter`, 16 games), 3 (`nombres`, 16 games), 4 (`famille`, 16 games), 5 (`loisirs`, 16 games), 6 (`table`, 16 games) and 7 (`ville`, 16 games) are done.** Conjugation works in French
+   **Units 1 (`bonjour`, 15 games), 2 (`presenter`, 16 games), 3 (`nombres`, 16 games), 4 (`famille`, 16 games), 5 (`loisirs`, 16 games), 6 (`table`, 16 games), 7 (`ville`, 16 games) and 8 (`temps`, 16 games) are done: every A1.1 unit exists.** Conjugation works in French
    (`frTable`); numbers, phone numbers read in pairs and letter names come from `src/lib/french/numbers.ts`. French clock phrases (`src/lib/french/time.ts`) and prices (`priceToFrench`) are in; `src/lib/spoken.ts` picks the language for the Clock master and Market stand.
 3. French grammar lessons (`src/content/grammar/fr-a1-1.ts`) after the units, using the Grammar tab per language.
 
