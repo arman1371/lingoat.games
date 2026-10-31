@@ -1112,6 +1112,34 @@ export const LESSONS = {
       'Il est suisse. Elle est suisse.',
     ],
   },
+  'fr-possessives': {
+    title: 'mon, ma, mes',
+    rule: 'The possessive agrees with the thing owned, not with the owner: mon père, ma mère, mes parents. Singular masculine / feminine / plural: mon, ma, mes (my), ton, ta, tes (your), son, sa, ses (his or her). Before a vowel the feminine takes mon: mon amie.',
+    examples: [
+      'mon frère · ma sœur · mes parents',
+      'ton père · ta mère · tes cousins',
+      'Paul et son frère · Léa et sa tante',
+    ],
+  },
+  'fr-adjectives': {
+    title: 'Adjectives agree',
+    rule: 'An adjective agrees with the noun: add -e for the feminine and -s for the plural (grand, grande, grands, grandes). Some change more: sportif becomes sportive, gentil becomes gentille. Adjectives ending in -e keep one form for both genders: jeune, sympa.',
+    examples: [
+      'Mon père est grand. Ma mère est grande.',
+      'Mes frères sont sportifs.',
+      'Léa est gentille.',
+    ],
+  },
+  'fr-cest-il-est': {
+    title: 'C’est or il est?',
+    rule: 'To say who someone is, use c’est with a noun that has an article or a possessive. To describe them, use il est or elle est with an adjective, or with a job without an article. So: C’est mon frère. Il est grand. Elle est médecin.',
+    examples: ['C’est mon frère. Il est grand.', 'C’est Léa. Elle est sympa.', 'Elle est médecin.'],
+  },
+  'fr-plurals': {
+    title: 'Plurals',
+    rule: 'Most nouns add a silent -s in the plural, so you hear the plural only in the article: le, la and l’ become les, and un and une become des. Nouns in -eau and -al change differently: un bateau, des bateaux; un animal, des animaux.',
+    examples: ['un frère, des frères', 'la sœur, les sœurs', 'un enfant, des enfants'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
