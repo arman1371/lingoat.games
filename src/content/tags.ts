@@ -369,6 +369,10 @@ export const TAGS = {
   'fr-er-verbs': { label: 'Regular -er verbs', group: 'grammar', emoji: '⚙️' },
   'fr-articles': { label: 'Articles (le, la, l’, les)', group: 'grammar', emoji: '🏷️' },
   'fr-gender': { label: 'Masculine and feminine', group: 'grammar', emoji: '👫' },
+  'fr-possessives': { label: 'mon, ma, mes …', group: 'grammar', emoji: '🫴' },
+  'fr-adjectives': { label: 'Adjectives (grand, grande)', group: 'grammar', emoji: '📏' },
+  'fr-cest-il-est': { label: 'C’est or il est?', group: 'grammar', emoji: '👉' },
+  'fr-plurals': { label: 'Plurals (les, des, -s)', group: 'grammar', emoji: '👥' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

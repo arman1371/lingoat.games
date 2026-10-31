@@ -128,6 +128,19 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sentence builder', 'fr-a1-1-nombres-sentences'],
   ['dialogue (three scenes)', 'fr-a1-1-nombres-dialogues'],
   ['blitz', 'fr-a1-1-nombres-blitz'],
+  ['flashcards (family)', 'fr-a1-1-famille-flash-family'],
+  ['quiz (who is this)', 'fr-a1-1-famille-quiz-emoji'],
+  ['memory (man and woman)', 'fr-a1-1-famille-memory-pairs'],
+  ['listen (family words)', 'fr-a1-1-famille-listen-family'],
+  ['sort it (mon, ma, mes)', 'fr-a1-1-famille-sort-possessives'],
+  ['gap fill (possessives)', 'fr-a1-1-famille-gap-possessives'],
+  ['gap fill (adjective agreement)', 'fr-a1-1-famille-gap-adjectives'],
+  ['sort it (c’est or il est)', 'fr-a1-1-famille-sort-cest-il-est'],
+  ['gap fill (plurals)', 'fr-a1-1-famille-gap-plurals'],
+  ['sentence builder', 'fr-a1-1-famille-sentences'],
+  ['spell (œ and a hyphen)', 'fr-a1-1-famille-spell-family'],
+  ['dialogue (three scenes)', 'fr-a1-1-famille-dialogues'],
+  ['blitz', 'fr-a1-1-famille-blitz'],
 ];
 
 test.describe('French A1.1 – playing the games', () => {
