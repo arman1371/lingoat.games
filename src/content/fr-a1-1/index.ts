@@ -5,8 +5,9 @@ import { nombres } from './u3-nombres';
 import { famille } from './u4-famille';
 import { loisirs } from './u5-loisirs';
 import { table } from './u6-table';
+import { ville } from './u7-ville';
 
-const units = [bonjour, presenter, nombres, famille, loisirs, table];
+const units = [bonjour, presenter, nombres, famille, loisirs, table, ville];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

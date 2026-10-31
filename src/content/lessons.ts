@@ -1175,6 +1175,30 @@ export const LESSONS = {
     rule: 'Verbs like choisir and finir take the endings -is, -is, -it, -issons, -issez, -issent. Their stem gets longer in the plural: je choisis, nous choisissons, ils choisissent.',
     examples: ['Je choisis le menu.', 'Il finit son repas.', 'Nous finissons à midi.'],
   },
+  'fr-contractions': {
+    title: 'au, aux, du, des',
+    rule: 'The words à and de merge with le and les: à + le = au, à + les = aux, de + le = du, de + les = des. With la and l’ nothing merges: à la gare, à l’école, de la gare, de l’hôtel. So: je vais au musée, mais je vais à la poste.',
+    examples: ['Je vais au musée.', 'Elle va à la banque.', 'Le parc est près du marché.'],
+  },
+  'fr-place-prepositions': {
+    title: 'dans, sur, devant, près de …',
+    rule: 'Some prepositions of place take the noun directly: dans, sur, sous, devant, derrière, entre. Others end in de and merge with the article: près du parc, loin de la gare, à côté de l’école, en face des magasins.',
+    examples: [
+      'Le livre est sur la table.',
+      'La banque est entre la poste et la gare.',
+      'L’école est en face du parc.',
+    ],
+  },
+  'fr-aller': {
+    title: 'aller',
+    rule: 'Aller is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont. To say where you go use à plus the place: je vais à la gare, nous allons au marché. Ask the way with Pour aller à … ?',
+    examples: ['Je vais à la poste.', 'Vous allez au musée ?', 'Ils vont à l’école.'],
+  },
+  'fr-imperative': {
+    title: 'The imperative',
+    rule: 'To give directions, use the verb without a pronoun. The vous form is the same as in the present: tournez, allez, prenez. The tu form of -er verbs loses its -s: tourne, traverse. Aller is va for tu. Add s’il vous plaît to be polite.',
+    examples: ['Tournez à gauche.', 'Traverse la rue.', 'Va tout droit.'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
