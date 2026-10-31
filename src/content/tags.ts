@@ -373,6 +373,10 @@ export const TAGS = {
   'fr-adjectives': { label: 'Adjectives (grand, grande)', group: 'grammar', emoji: '📏' },
   'fr-cest-il-est': { label: 'C’est or il est?', group: 'grammar', emoji: '👉' },
   'fr-plurals': { label: 'Plurals (les, des, -s)', group: 'grammar', emoji: '👥' },
+  // grammar points – French A1.1, unit 5
+  'fr-likes': { label: 'J’aime, je déteste …', group: 'grammar', emoji: '💛' },
+  'fr-negation': { label: 'ne … pas', group: 'grammar', emoji: '🚫' },
+  'fr-jouer-faire': { label: 'jouer à / faire de', group: 'grammar', emoji: '🎾' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

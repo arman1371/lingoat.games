@@ -141,6 +141,18 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['spell (œ and a hyphen)', 'fr-a1-1-famille-spell-family'],
   ['dialogue (three scenes)', 'fr-a1-1-famille-dialogues'],
   ['blitz', 'fr-a1-1-famille-blitz'],
+  ['flashcards (free time)', 'fr-a1-1-loisirs-flash-activities'],
+  ['quiz (what are they doing)', 'fr-a1-1-loisirs-quiz-emoji'],
+  ['listen (activity verbs)', 'fr-a1-1-loisirs-listen-activities'],
+  ['conjugation (aimer, préférer)', 'fr-a1-1-loisirs-conj-likes'],
+  ['gap fill (likes)', 'fr-a1-1-loisirs-gap-likes'],
+  ['sort it (jouer à, jouer de, faire)', 'fr-a1-1-loisirs-sort-jouer-faire'],
+  ['conjugation (faire, irregular)', 'fr-a1-1-loisirs-conj-faire'],
+  ['gap fill (ne … pas)', 'fr-a1-1-loisirs-gap-negation'],
+  ['sentence builder', 'fr-a1-1-loisirs-sentences'],
+  ['spell (a hyphen and an accent)', 'fr-a1-1-loisirs-spell-free-time'],
+  ['dialogue (three scenes)', 'fr-a1-1-loisirs-dialogues'],
+  ['blitz', 'fr-a1-1-loisirs-blitz'],
 ];
 
 test.describe('French A1.1 – playing the games', () => {
