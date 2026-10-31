@@ -364,6 +364,11 @@ export const TAGS = {
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },
+  'fr-pronouns': { label: 'Subject pronouns (je, tu, il …)', group: 'grammar', emoji: '🙋' },
+  'fr-etre-avoir': { label: 'être and avoir', group: 'grammar', emoji: '🔑' },
+  'fr-er-verbs': { label: 'Regular -er verbs', group: 'grammar', emoji: '⚙️' },
+  'fr-articles': { label: 'Articles (le, la, l’, les)', group: 'grammar', emoji: '🏷️' },
+  'fr-gender': { label: 'Masculine and feminine', group: 'grammar', emoji: '👫' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

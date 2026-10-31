@@ -1075,6 +1075,43 @@ export const LESSONS = {
     rule: 'Comment asks about the manner. With tu the question is Comment vas-tu ?, with vous it is Comment allez-vous ? (verb first, joined to the pronoun by a hyphen). Among friends the voice is enough: Ça va ? goes up at the end.',
     examples: ['Comment vas-tu ?', 'Comment allez-vous ?', 'Ça va ? – Oui, ça va bien.'],
   },
+  'fr-pronouns': {
+    title: 'Subject pronouns',
+    rule: 'The pronoun decides the verb form: je, tu, il/elle/on, nous, vous, ils/elles. Il, elle and on share one form, and so do ils and elles. In everyday speech on means “we” and takes the il form. Before a vowel je becomes j’.',
+    examples: [
+      'je parle · tu parles · il/elle/on parle',
+      'nous parlons · vous parlez · ils/elles parlent',
+      'On habite à Lyon. = Nous habitons à Lyon.',
+    ],
+  },
+  'fr-etre-avoir': {
+    title: 'être and avoir',
+    rule: 'The two most important verbs are irregular, so learn them as they are. être: suis, es, est, sommes, êtes, sont. avoir: ai, as, a, avons, avez, ont. Use être for who you are, where you are from and your job: no article after it.',
+    examples: ['Je suis étudiante.', 'Nous sommes de Lyon.', 'Elle a un frère.'],
+  },
+  'fr-er-verbs': {
+    title: 'Regular -er verbs',
+    rule: 'Drop -er and add -e, -es, -e, -ons, -ez, -ent: parler gives je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent. Only nous and vous sound different. Before a vowel or a mute h, je becomes j’: j’habite.',
+    examples: ['Je parle français.', 'J’habite à Paris.', 'Ils habitent à Nice.'],
+  },
+  'fr-articles': {
+    title: 'le, la, l’, les',
+    rule: 'Every noun is masculine (le) or feminine (la), so learn the article with the noun. Before a vowel or a mute h both become l’. The plural is les for both genders. The indefinite articles are un / une, and des in the plural.',
+    examples: [
+      'le professeur · la ville · l’école',
+      'les étudiants · des amis',
+      'un livre · une table',
+    ],
+  },
+  'fr-gender': {
+    title: 'Masculine and feminine',
+    rule: 'Nationalities and jobs have a feminine form, usually with -e added: étudiant, étudiante. The endings -ien and -ier become -ienne and -ière. Some words do not change: suisse, journaliste. After être you use no article.',
+    examples: [
+      'Il est français. Elle est française.',
+      'Il est italien. Elle est italienne.',
+      'Il est suisse. Elle est suisse.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

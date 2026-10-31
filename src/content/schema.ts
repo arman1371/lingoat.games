@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { LanguageId } from './languages';
-import { PRONOUNS } from '@/lib/german/conjugation';
+import { ALL_PERSONS, personsOf } from '@/lib/persons';
 import { TAG_IDS, type TagId } from './tags';
 import { LESSON_IDS, type LessonId } from './lessons';
 
@@ -176,20 +176,25 @@ export const SortitConfig = z
     'item.bucket must exist',
   );
 
-export const PronounEnum = z.enum(PRONOUNS);
+export const PronounEnum = z.enum(ALL_PERSONS);
 export const ConjugationConfig = z.object({
   tables: z
     .array(
-      z.object({
-        id,
-        verb: text,
-        meaning: text,
-        forms: z
-          .record(PronounEnum, text)
-          .refine((f) => PRONOUNS.every((p) => f[p]), 'all six forms required'),
-        blanks: z.array(PronounEnum).min(1),
-        lesson: hintFields.lesson,
-      }),
+      z
+        .object({
+          id,
+          verb: text,
+          meaning: text,
+          forms: z
+            .partialRecord(PronounEnum, text)
+            .refine((f) => personsOf(f) !== undefined, 'all six forms of one language required'),
+          blanks: z.array(PronounEnum).min(1),
+          lesson: hintFields.lesson,
+        })
+        .refine(
+          (t) => t.blanks.every((p) => t.forms[p] !== undefined),
+          'every blank needs a form in this table',
+        ),
     )
     .min(1),
 });

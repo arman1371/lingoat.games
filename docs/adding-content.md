@@ -58,8 +58,11 @@ two shared test harnesses (`content.test.ts`, `playability.test.tsx`), plus Fren
 - Grammar tags and their mini lessons are French only (`fr-…` in `tags.ts` / `lessons.ts`). Never tag a French grammar
   activity with a German grammar point: the wrong-answer hint would explain German.
 - Sort it cards carry their own English `translation`; there is no `translations.ts` overlay yet.
-- Engines that depend on German helpers (clock, market, conjugation pronouns) need a French counterpart before a unit
-  can use them; unit 1 only uses engines that do not.
+- Conjugation tables use the six French persons (`je, tu, il/elle/on, nous, vous, ils/elles`, `src/lib/persons.ts`);
+  generate the forms with `conjugateFr` / `reflexiveFr` (`src/lib/french`, irregular verbs from a table, regular -er and
+  -ir verbs with the usual spelling changes) through `frTable` in `fr-a1-1/helpers.ts`. A table is written in one
+  language's persons only (the schema checks it). The clock and market engines still depend on German helpers and need a
+  French counterpart before a unit can use them.
 - e2e: add the pack to `frenchActivities` in `e2e/helpers.ts` (kept apart from `allActivities`, which counts German library
   games) and follow `e2e/fr-a1-1.spec.ts`.
 

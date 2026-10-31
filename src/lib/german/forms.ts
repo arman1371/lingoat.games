@@ -1,6 +1,6 @@
 import { adjectiveEnding, type DeclensionKind } from './adjectives';
 import type { Case, Gender } from './articles';
-import { PRONOUNS, type Forms, type Pronoun } from './conjugation';
+import { PRONOUNS } from './conjugation';
 import { normalize } from '@/lib/answer-check';
 
 /**
@@ -125,10 +125,15 @@ export function adjectiveEndingWhy(
  * "sprichst" given for er/sie/es → “sprichst” is the du form – for er/sie/es it is “spricht”.
  * Undefined when the given word is not another person's form of the same verb.
  */
-export function personFormWhy(forms: Forms, person: Pronoun, given: string): string | undefined {
+export function personFormWhy(
+  forms: Partial<Record<string, string>>,
+  person: string,
+  given: string,
+  persons: readonly string[] = PRONOUNS,
+): string | undefined {
   const g = normalize(given);
-  if (g === normalize(forms[person])) return undefined;
-  const owners = PRONOUNS.filter((p) => normalize(forms[p]) === g);
+  if (g === normalize(forms[person] ?? '')) return undefined;
+  const owners = persons.filter((p) => normalize(forms[p] ?? '') === g);
   if (!owners.length) return undefined;
   return `“${given.trim()}” is the ${owners.join(' and ')} form – for ${person} it is “${forms[person]}”.`;
 }

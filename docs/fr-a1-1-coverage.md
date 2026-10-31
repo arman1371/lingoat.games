@@ -49,8 +49,8 @@ like the German units. Vocabulary cards of one unit are not repeated in another.
 1. Language plumbing for a second pack: level loader, content / playability test harness for non-German
    content, `fr-a1-1` level switched to `available`, e2e entry. **Done** with unit 1.
 2. Unit 1 as a complete vertical slice (all engines used there), then units 2 to 8 in small PRs.
-   **Unit 1 (`bonjour`) is done**: 15 games on 10 engines. Still missing for the later units: French
-   conjugation pronouns (je, tu, il/elle/on, nous, vous, ils/elles), French clock phrases and French prices.
+   **Units 1 (`bonjour`, 15 games) and 2 (`presenter`, 16 games) are done.** Conjugation works in French
+   (`frTable`). Still missing for the later units: French clock phrases and French prices.
 3. French grammar lessons (`src/content/grammar/fr-a1-1.ts`) after the units, using the Grammar tab per language.
 
 Open points: French nouns carry their article inside the word ("le pain", "l'eau"), because the `article` field
