@@ -1,4 +1,4 @@
-import { digitsToFrench, numberToFrench, spellOutFr } from './numbers';
+import { digitsToFrench, numberToFrench, priceToFrench, spellOutFr } from './numbers';
 
 const cases: [number, string][] = [
   [0, 'zéro'],
@@ -61,5 +61,21 @@ describe('spellOutFr', () => {
     expect(spellOutFr('Léa')).toBe('elle, e accent aigu, a');
     expect(spellOutFr('Marc')).toBe('emme, a, erre, cé');
     expect(spellOutFr('a-b')).toBe('a, trait d’union, bé');
+  });
+});
+
+describe('priceToFrench', () => {
+  it.each([
+    [250, 'deux euros cinquante'],
+    [100, 'un euro'],
+    [200, 'deux euros'],
+    [101, 'un euro un'],
+    [80, 'quatre-vingts centimes'],
+    [1, 'un centime'],
+    [35, 'trente-cinq centimes'],
+    [1295, 'douze euros quatre-vingt-quinze'],
+    [8000, 'quatre-vingts euros'],
+  ])('%i cents → %s', (cents, expected) => {
+    expect(priceToFrench(cents)).toBe(expected);
   });
 });

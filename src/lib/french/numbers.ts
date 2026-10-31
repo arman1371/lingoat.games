@@ -63,6 +63,15 @@ export function numberToFrench(n: number): string {
   return rest === 0 ? head : `${head} ${below1000(rest, true)}`;
 }
 
+/** Spoken price: 250 → "deux euros cinquante", 100 → "un euro", 80 → "quatre-vingts centimes". */
+export function priceToFrench(cents: number): string {
+  const euros = Math.floor(cents / 100);
+  const rest = cents % 100;
+  if (euros === 0) return rest === 1 ? 'un centime' : `${numberToFrench(rest)} centimes`;
+  const e = euros === 1 ? 'un euro' : `${numberToFrench(euros)} euros`;
+  return rest === 0 ? e : `${e} ${numberToFrench(rest)}`;
+}
+
 /**
  * A phone number as it is read in France: in pairs, "06 12 34 56 78" → "zéro six, douze, trente-quatre,
  * cinquante-six, soixante-dix-huit". A leading zero of a pair is read as "zéro".

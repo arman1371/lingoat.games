@@ -3,6 +3,8 @@ import { renderGame } from '@/test/render';
 import ClockMaster from './Clock';
 import { AnalogClock } from './AnalogClock';
 import { render } from '@testing-library/react';
+import type { ReactNode } from 'react';
+import { LanguageContext } from '@/app/language';
 
 describe('AnalogClock', () => {
   it('draws hands at the right angles and has an accessible label', () => {
@@ -93,5 +95,31 @@ describe('ClockMaster – set mode', () => {
     await press(user, 'Minutes plus', 6);
     await user.click(screen.getByRole('button', { name: 'Check' }));
     expect(screen.getByTestId('feedback')).toHaveAttribute('data-kind', 'wrong');
+  });
+});
+
+describe('ClockMaster in French', () => {
+  const frenchWrapper = ({ children }: { children: ReactNode }) => (
+    <LanguageContext.Provider value="fr">{children}</LanguageContext.Provider>
+  );
+
+  it('asks in French and offers French phrases', async () => {
+    const config = {
+      rounds: [{ id: 'r1', time: '07:30', mode: 'read' as const, style: 'informal' as const }],
+    };
+    const { user, onFinish } = renderGame(ClockMaster, config, 1, { wrapper: frenchWrapper });
+    expect(screen.getByTestId('prompt')).toHaveTextContent('Quelle heure est-il ?');
+    await user.click(screen.getByRole('button', { name: 'sept heures et demie' }));
+    expect(screen.getByTestId('feedback')).toHaveAttribute('data-kind', 'correct');
+    await user.click(screen.getByTestId('continue'));
+    expect(onFinish).toHaveBeenCalledWith(expect.objectContaining({ correct: 1, total: 1 }));
+  });
+
+  it('shows the French phrase to set the clock to', () => {
+    const config = {
+      rounds: [{ id: 'r1', time: '14:45', mode: 'set' as const, style: 'informal' as const }],
+    };
+    renderGame(ClockMaster, config, 1, { wrapper: frenchWrapper });
+    expect(screen.getByTestId('prompt')).toHaveTextContent('trois heures moins le quart');
   });
 });

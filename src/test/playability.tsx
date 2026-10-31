@@ -7,9 +7,11 @@ import { render, screen, waitFor, within, act, configure } from '@testing-librar
 import userEvent from '@testing-library/user-event';
 import { gameComponents, gameLoaders } from '@/games/registry';
 import { buildColumns } from '@/games/memory/logic';
-import { parseTime, timeToGerman } from '@/lib/german/time';
+import { parseTime } from '@/lib/german/time';
+import { timeToWords, priceToWords } from '@/lib/spoken';
+import { LanguageContext } from '@/app/language';
+import { DEFAULT_LANGUAGE, LANGUAGES, type LanguageId } from '@/content/languages';
 import { totalCents } from '@/games/market/logic';
-import { priceToGerman } from '@/lib/german/numbers';
 import type { Activity, LevelContent } from '@/content/schema';
 import type { GameResult } from '@/lib/scoring';
 
@@ -27,6 +29,7 @@ const prompt = async () => text(await screen.findByTestId('prompt'));
 async function solve<T extends Activity['gameType']>(
   a: Extract<Activity, { gameType: T }>,
   user: User,
+  language: LanguageId,
 ) {
   /* eslint-disable @typescript-eslint/no-explicit-any */
   const c = a.config as any;
@@ -178,11 +181,14 @@ async function solve<T extends Activity['gameType']>(
             (r: any) =>
               r.mode === 'read' && r.time.padStart(5, '0') === label.replace('Clock showing ', ''),
           );
-          await user.click(screen.getByRole('button', { name: timeToGerman(time, round.style) }));
+          await user.click(
+            screen.getByRole('button', { name: timeToWords(time, round.style, language) }),
+          );
         } else {
           const phrase = (await prompt()).replace('🔊', '').trim();
           const round = c.rounds.find(
-            (r: any) => r.mode === 'set' && timeToGerman(parseTime(r.time), r.style) === phrase,
+            (r: any) =>
+              r.mode === 'set' && timeToWords(parseTime(r.time), r.style, language) === phrase,
           );
           expect(round, `clock round for "${phrase}"`).toBeDefined();
           const t = parseTime(round.time);
@@ -208,17 +214,22 @@ async function solve<T extends Activity['gameType']>(
         await user.click(screen.getByRole('button', { name: 'Check basket' }));
         const cents = totalCents(order.items, c.products);
         await user.type(
-          screen.getByLabelText(/Was kostet das zusammen/),
+          screen.getByLabelText(LANGUAGES[language].gameStrings.totalQuestion),
           `${(cents / 100).toFixed(2).replace('.', ',')}{Enter}`,
         );
-        expect(screen.getByText(priceToGerman(cents), { selector: 'strong' })).toBeInTheDocument();
+        expect(
+          screen.getByText(priceToWords(cents, language), { selector: 'strong' }),
+        ).toBeInTheDocument();
         await cont(user);
       }
       return;
   }
 }
 
-export function describePlayability(content: LevelContent) {
+export function describePlayability(
+  content: LevelContent,
+  language: LanguageId = DEFAULT_LANGUAGE,
+) {
   // Fake-timer waits burn fake time, so a game's lazy chunk must already be loaded when it renders.
   beforeAll(async () => {
     await Promise.all(Object.values(gameLoaders).map((load) => (load as () => Promise<unknown>)()));
@@ -242,11 +253,13 @@ export function describePlayability(content: LevelContent) {
               onFinish: (r: GameResult) => void;
             }>;
             render(
-              <Suspense fallback={null}>
-                <Game config={activity.config} seed={SEED} onFinish={onFinish} />
-              </Suspense>,
+              <LanguageContext.Provider value={language}>
+                <Suspense fallback={null}>
+                  <Game config={activity.config} seed={SEED} onFinish={onFinish} />
+                </Suspense>
+              </LanguageContext.Provider>,
             );
-            await solve(activity as never, user);
+            await solve(activity as never, user, language);
             if (activity.gameType === 'memory')
               await act(async () => void vi.advanceTimersByTime(700));
             await waitFor(() => expect(onFinish).toHaveBeenCalledTimes(1));

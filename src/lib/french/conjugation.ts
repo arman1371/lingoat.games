@@ -16,6 +16,7 @@ const IRREGULAR: Record<string, FrenchForms> = {
   vouloir: forms('veux', 'veux', 'veut', 'voulons', 'voulez', 'veulent'),
   pouvoir: forms('peux', 'peux', 'peut', 'pouvons', 'pouvez', 'peuvent'),
   savoir: forms('sais', 'sais', 'sait', 'savons', 'savez', 'savent'),
+  boire: forms('bois', 'bois', 'boit', 'buvons', 'buvez', 'boivent'),
 };
 
 /** -er verbs whose stem changes in the je, tu, il and ils forms (j’achète, elle appelle, il paie). */

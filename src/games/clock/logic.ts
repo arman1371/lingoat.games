@@ -1,11 +1,18 @@
 import { pickMany, shuffle, type Rng } from '@/lib/rng';
-import { timeToGerman, type Clock } from '@/lib/german/time';
+import type { Clock } from '@/lib/german/time';
+import type { LanguageId } from '@/content/languages';
+import { timeToWords } from '@/lib/spoken';
 
 export type TimeStyle = 'formal' | 'informal';
 
 /** Four distinct phrases (correct + 3 near-miss distractors) for "read the clock". */
-export function buildClockOptions(target: Clock, style: TimeStyle, rng: Rng): string[] {
-  const correct = timeToGerman(target, style);
+export function buildClockOptions(
+  target: Clock,
+  style: TimeStyle,
+  rng: Rng,
+  language: LanguageId = 'de',
+): string[] {
+  const correct = timeToWords(target, style, language);
   const step = style === 'informal' ? 5 : 5;
   const candidates: Clock[] = [];
   const add = (hour: number, minute: number) => {
@@ -24,7 +31,7 @@ export function buildClockOptions(target: Clock, style: TimeStyle, rng: Rng): st
   add(target.hour + 2, target.minute);
   const phrases = new Set<string>();
   for (const c of shuffle(candidates, rng)) {
-    const phrase = timeToGerman(c, style);
+    const phrase = timeToWords(c, style, language);
     if (phrase !== correct) phrases.add(phrase);
     if (phrases.size >= 3) break;
   }
