@@ -226,6 +226,17 @@ imperative of être and avoir, the negation of the near future, the chez + perso
 Wiktionnaire conjugation pages were checked for prendre, vouloir and finir; the other verb tables come from the
 generated forms in `src/lib/french`.
 
+## French C2.1
+
+The French C2.1 lessons are in `src/content/grammar/fr-c2-1.ts` (pages in `sources-fr.ts`). Lessons are added with their unit.
+
+| Topic                 | Pages read                                                                                                                                                                                                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Prefixes and suffixes | Wiktionnaire [Annexe: Préfixes en français](https://fr.wiktionary.org/wiki/Annexe:Pr%C3%A9fixes_en_fran%C3%A7ais) (read up to the letter D: in-, dé-, dés-, anti-), [Annexe: Suffixes en français](https://fr.wiktionary.org/wiki/Annexe:Suffixes_en_fran%C3%A7ais) |
+
+**Limits:** the meanings of mé-, més-, sur- and sous- and the assimilation of in- before b, m, p, l and r follow common textbook
+teaching and were not checked against a fetched page.
+
 ## Limits of the research
 
 - The Deutsche Welle learner pages could not be fetched, and the Duden grammar pages are not freely readable, so the

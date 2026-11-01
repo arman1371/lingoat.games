@@ -44,4 +44,8 @@ export const FR_SOURCES = {
   imperative: wp('Impératif_(grammaire)', 'Impératif (grammaire)'),
   demonstrative: wp('Adjectif_démonstratif', 'Adjectif démonstratif'),
   futurProche: wp('Futur_proche', 'Futur proche'),
+  // ---- French C2.1
+  prefixes: wiktionary('Annexe:Préfixes_en_français', 'Annexe : Préfixes en français'),
+  suffixes: wiktionary('Annexe:Suffixes_en_français', 'Annexe : Suffixes en français'),
+  register: wp('Registre_de_langue', 'Registre de langue'),
 } as const satisfies Record<string, Source>;

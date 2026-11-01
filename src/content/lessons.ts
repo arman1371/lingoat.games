@@ -1218,6 +1218,16 @@ export const LESSONS = {
     rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
     examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
   },
+  // ---- French C2.1 -------------------------------------------------------------------------
+  'fr-c21-word-formation': {
+    title: 'Prefixes and suffixes',
+    rule: 'A prefix changes the meaning: in-, im-, ir-, il- = not (inlassable), dé-, dés-, mé- = undo or wrongly (déconseiller, méconnaissable), sur- = too much and sous- = too little (surestimer, sous-estimer). Suffixes change the word class: -able / -ible = can be (lisible), -ité and -ation make nouns.',
+    examples: [
+      'inlassable = qu’on ne peut pas lasser',
+      'sous-estimer ≠ surestimer',
+      'méconnaissable = qu’on ne reconnaît plus',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

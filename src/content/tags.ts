@@ -361,6 +361,8 @@ export const TAGS = {
   'c22-prefix-verbs': { label: 'übersetzen or übersetzen?', group: 'grammar', emoji: '🔧' },
   'c22-passive-alternatives': { label: 'Replacing the passive', group: 'grammar', emoji: '🔀' },
   'c22-nuance-particles': { label: 'Nuance particles & adverbs', group: 'grammar', emoji: '🎚️' },
+  // topics – French C2.1
+  'fr-c21-registers': { label: 'Registers & nuance', group: 'topic', emoji: '🎚️' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },
@@ -391,6 +393,12 @@ export const TAGS = {
   'fr-demonstratives': { label: 'ce, cet, cette, ces', group: 'grammar', emoji: '👉' },
   'fr-futur-proche': { label: 'aller + infinitive', group: 'grammar', emoji: '🔮' },
   'fr-adjective-position': { label: 'un petit pull rouge', group: 'grammar', emoji: '↔️' },
+  // grammar points – French C2.1
+  'fr-c21-word-formation': {
+    label: 'Prefixes & suffixes (in-, dé-, sur-)',
+    group: 'grammar',
+    emoji: '🧱',
+  },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

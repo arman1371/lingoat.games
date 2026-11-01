@@ -22,7 +22,8 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   status: 'coming-soon',
 }));
 
-const FRENCH_LEVELS: LevelMeta[] = [
+/** Levels that have content. Add a level here; its coming-soon stub above disappears by itself. */
+const FRENCH_AVAILABLE: LevelMeta[] = [
   {
     language: 'fr',
     id: 'fr-a1-1',
@@ -32,8 +33,37 @@ const FRENCH_LEVELS: LevelMeta[] = [
     status: 'available',
     load: () => import('./fr-a1-1'),
   },
-  ...FRENCH_COMING_SOON,
+  {
+    language: 'fr',
+    id: 'fr-c2-1',
+    title: 'C2.1',
+    subtitle:
+      'Registers, humour, narrative tenses, cause and concession, the subjunctive, emphasis, institutions and debate at near-native level',
+    status: 'available',
+    load: () => import('./fr-c2-1'),
+  },
 ];
+
+/** All French levels in CEFR order: the ones with content and the coming-soon stubs. */
+const levelRank = (id: string) =>
+  [
+    'a1-1',
+    'a1-2',
+    'a2-1',
+    'a2-2',
+    'b1-1',
+    'b1-2',
+    'b2-1',
+    'b2-2',
+    'c1-1',
+    'c1-2',
+    'c2-1',
+    'c2-2',
+  ].indexOf(id.replace(/^fr-/, ''));
+const FRENCH_LEVELS: LevelMeta[] = [
+  ...FRENCH_AVAILABLE,
+  ...FRENCH_COMING_SOON.filter((l) => !FRENCH_AVAILABLE.some((a) => a.id === l.id)),
+].sort((a, b) => levelRank(a.id) - levelRank(b.id));
 
 /**
  * Level catalogue. To add a level: create `src/content/<level-id>/index.ts` that default-exports a
