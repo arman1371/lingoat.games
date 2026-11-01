@@ -50,6 +50,11 @@ const PAGES: [string, string, string][] = [
   ['unit 1 of A2.2 in French', '/fr/levels/fr-a2-2/units/fr-a2-2-sante', 'À votre santé !'],
   ['level in French C1.1', '/fr/levels/fr-c1-1', 'C1.1'],
   ['unit in French C1.1', '/fr/levels/fr-c1-1/units/fr-c1-1-medias', 'Les médias et l’information'],
+  [
+    'unit societe in French C1.1',
+    '/fr/levels/fr-c1-1/units/fr-c1-1-societe',
+    'Société et engagement',
+  ],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],

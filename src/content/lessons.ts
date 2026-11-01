@@ -1318,6 +1318,15 @@ export const LESSONS = {
       'La vidéo a été retirée ; par conséquent, la rumeur s’est calmée.',
     ],
   },
+  'fr-c11-si-clauses': {
+    title: 'Hypotheses with si',
+    rule: 'Si never takes the future or the conditional. Real: si + présent → présent / futur / impératif. Imagined: si + imparfait → conditionnel présent. Too late: si + plus-que-parfait → conditionnel passé. After au cas où, the conditional.',
+    examples: [
+      'Si tu votes, tu auras ton mot à dire.',
+      'Si j’avais le temps, je deviendrais bénévole.',
+      'Si nous avions voté, nous aurions changé le résultat.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

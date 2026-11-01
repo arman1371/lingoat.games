@@ -158,4 +158,113 @@ export const FRC11_TOPICS: GrammarTopic[] = [
     related: [],
     sources: [S.connectors, S.coordination, S.puisque, S.graceA],
   },
+  {
+    id: 'fr-c11-si-clauses',
+    title: 'Hypotheses with si',
+    tagline: 'How do I say what would happen, or would have happened, if …?',
+    level: LEVEL,
+    summary:
+      'A hypothesis has two parts, and the tenses are paired. A real condition is si + présent, with the présent, the futur or the impératif in the result. An imagined condition is si + imparfait with the conditionnel présent. A missed chance is si + plus-que-parfait with the conditionnel passé. Si itself never takes the future or the conditional.',
+    sections: [
+      section(
+        'three-types',
+        'Three kinds of condition',
+        p(
+          'French pairs the tense of the **si-clause** with the tense of the **result**. The first part is always in the indicative, and it is the *result* that carries the conditional. Learn the three pairs as blocks.',
+        ),
+        table(
+          'The three pairs.',
+          ['Kind', 'Si-clause', 'Result', 'Example'],
+          [
+            [
+              'Real or likely',
+              'si + présent',
+              'présent, futur or impératif',
+              'Si tu votes, tu auras ton mot à dire.',
+            ],
+            [
+              'Imagined, unlikely',
+              'si + imparfait',
+              'conditionnel présent',
+              'Si j’avais le temps, je deviendrais bénévole.',
+            ],
+            [
+              'Too late, impossible',
+              'si + plus-que-parfait',
+              'conditionnel passé',
+              'Si nous avions voté, nous aurions changé le résultat.',
+            ],
+          ],
+        ),
+        mistake(
+          'Never after si',
+          '✗ Si j’aurais le temps, je viendrais.  ✓ Si j’avais le temps, je viendrais.',
+          '✗ Si tu viendras, on commencera.  ✓ Si tu viens, on commencera.',
+        ),
+        tip(
+          'Two orders',
+          'The si-clause can come second: *Je deviendrais bénévole si j’avais le temps.* The tenses stay the same; only the comma disappears. Before *il* and *ils*, **si** becomes **s’** (*s’il*, *s’ils*), but not before *elle*.',
+        ),
+      ),
+      section(
+        'forms',
+        'Building the conditional',
+        p(
+          'The **conditionnel présent** takes the stem of the future (*voter-*, *pourr-*, *ser-*) and the endings of the imparfait: **-ais, -ais, -ait, -ions, -iez, -aient**. The **conditionnel passé** is the conditional of **avoir** or **être** plus the past participle: *j’aurais voté*, *elle serait venue*, *je me serais engagé*.',
+        ),
+        table(
+          'Conditionnel présent and passé.',
+          ['Person', 'voter (présent)', 'faire (passé)'],
+          [
+            ['je', 'voterais', 'aurais fait'],
+            ['tu', 'voterais', 'aurais fait'],
+            ['il/elle/on', 'voterait', 'aurait fait'],
+            ['nous', 'voterions', 'aurions fait'],
+            ['vous', 'voteriez', 'auriez fait'],
+            ['ils/elles', 'voteraient', 'auraient fait'],
+          ],
+        ),
+        p(
+          'The si-clause of a missed chance uses the **plus-que-parfait**: the imparfait of the auxiliary plus the participle (*j’avais su, elle était partie, nous nous étions mobilisés*).',
+        ),
+      ),
+      section(
+        'other-markers',
+        'Other ways to set a condition',
+        p(
+          '**Au cas où** expresses a precaution against a possibility and is followed by the **conditionnel**. **Sauf si** states the one case that cancels what you said, and takes the indicative. **À condition que** and **à moins que** take the **subjonctif**.',
+        ),
+        examples(
+          [
+            'Je prends un parapluie au cas où il pleuvrait.',
+            'I am taking an umbrella in case it rains.',
+          ],
+          [
+            'Nous irons à la marche, sauf si le temps est trop mauvais.',
+            'We will go to the march, unless the weather is too bad.',
+          ],
+          ['Je viendrai à condition que tu m’aides.', 'I will come on condition that you help me.'],
+        ),
+        compare(
+          {
+            title: 'si + présent',
+            question: 'It can really happen',
+            example: 'Si tu signes, la mairie réagira.',
+          },
+          {
+            title: 'si + imparfait',
+            question: 'It is imagined or unlikely',
+            example: 'Si tu signais, la mairie réagirait.',
+          },
+          {
+            title: 'si + plus-que-parfait',
+            question: 'It is too late',
+            example: 'Si tu avais signé, la mairie aurait réagi.',
+          },
+        ),
+      ),
+    ],
+    related: ['fr-c11-connectors'],
+    sources: [S.conditional, S.presentConditional, S.pastConditional, S.pqp, S.si, S.auCasOu],
+  },
 ];

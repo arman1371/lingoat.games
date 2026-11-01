@@ -49,4 +49,10 @@ export const FR_SOURCES = {
   coordination: wp('Conjonction_de_coordination', 'Conjonction de coordination'),
   puisque: wiktionary('puisque', 'puisque'),
   graceA: wiktionary('grâce_à', 'grâce à'),
+  conditional: wp('Phrase_conditionnelle', 'Phrase conditionnelle'),
+  pastConditional: wp('Conditionnel_passé', 'Conditionnel passé'),
+  presentConditional: wp('Conditionnel_présent', 'Conditionnel présent'),
+  pqp: wp('Plus-que-parfait', 'Plus-que-parfait'),
+  si: wiktionary('si', 'si'),
+  auCasOu: wiktionary('au_cas_où', 'au cas où'),
 } as const satisfies Record<string, Source>;

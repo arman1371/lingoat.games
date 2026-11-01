@@ -80,6 +80,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue (three scenes)', 'fr-c1-1-medias-dialogues'],
   ['blitz', 'fr-c1-1-medias-blitz'],
   ['unit challenge', 'fr-c1-1-medias-challenge'],
+  ['sort it (real, imagined, too late)', 'fr-c1-1-societe-sort-si'],
+  ['conjugation', 'fr-c1-1-societe-conj-conditionnel'],
+  ['gap fill (choose)', 'fr-c1-1-societe-gap-si'],
+  ['sentence builder', 'fr-c1-1-societe-sentences'],
+  ['dialogue (two scenes)', 'fr-c1-1-societe-dialogues'],
+  ['unit challenge', 'fr-c1-1-societe-challenge'],
 ];
 
 test.describe('French C1.1 – playing the games', () => {

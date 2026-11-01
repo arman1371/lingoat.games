@@ -419,6 +419,11 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🔗',
   },
+  'fr-c11-si-clauses': {
+    label: 'si + présent / imparfait / plus-que-parfait',
+    group: 'grammar',
+    emoji: '🔀',
+  },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;
