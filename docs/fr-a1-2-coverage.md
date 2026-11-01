@@ -50,7 +50,7 @@ earlier French level.
 1. Plumbing: level entry in `levels.ts`, tags and mini lessons prefixed `fr-`, full grammar lessons
    (`src/content/grammar/fr-a1-2.ts`, topic level `fr-a1-2`), unit links in `unitTopics.ts`, e2e entry.
    **Done** with unit 1.
-2. Units, one pull request each. **Unit 1 (`journee`, 16 games) is done.** Units 2 to 8 follow, each with its
+2. Units, one pull request each. **Units 1 (`journee`, 16 games) and 2 (`fetes`, 16 games) are done.** Units 3 to 8 follow, each with its
    grammar lessons so that every `fr-` mini lesson has its full lesson.
 
 ## Unit 1 – Ma journée (`journee`)
@@ -61,3 +61,13 @@ earlier French level.
   clock prepositions (`fr-sequence`).
 - Games: 4 flashcard sets, picture quiz, listening, pronominal conjugation tables, 3 gap fills, sentence builder,
   spelling, dialogue (3 scenes), blitz, challenge.
+
+## Unit 2 – Félicitations ! (`fetes`)
+
+- Vocabulary fields: Family and relatives (15) · Celebrations and life events (13) · Congratulations and wishes (8) ·
+  Looks and character (21) · Past and future (13). Nothing repeats A1.1 family words (père, frère, oncle …) or unit 1.
+- Grammar: the passé composé with avoir (`fr-passe-compose-avoir`; forms from `passeComposeAvoir()` in
+  `src/lib/french/passeCompose.ts`) and past / future time markers (`fr-time-markers`); adjectives for looks and
+  character reuse the A1.1 `fr-adjectives` lesson.
+- Games: 5 flashcard sets, picture quiz, listening, passé composé tables, participle sort, 2 gap fills, looks /
+  character sort, sentence builder, dialogue (3 scenes), blitz, challenge.

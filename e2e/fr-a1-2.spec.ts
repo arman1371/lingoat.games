@@ -49,6 +49,22 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue (three scenes)', 'fr-a1-2-journee-dialogues'],
   ['blitz', 'fr-a1-2-journee-blitz'],
   ['quiz (unit challenge)', 'fr-a1-2-journee-challenge'],
+  ['flashcards (family)', 'fr-a1-2-fetes-flash-family'],
+  ['flashcards (celebrations)', 'fr-a1-2-fetes-flash-events'],
+  ['flashcards (wishes)', 'fr-a1-2-fetes-flash-wishes'],
+  ['flashcards (looks and character)', 'fr-a1-2-fetes-flash-looks'],
+  ['flashcards (past and future)', 'fr-a1-2-fetes-flash-markers'],
+  ['quiz (which celebration)', 'fr-a1-2-fetes-quiz-emoji'],
+  ['listen (wishes)', 'fr-a1-2-fetes-listen-wishes'],
+  ['conjugation (passé composé)', 'fr-a1-2-fetes-conj-passe-compose'],
+  ['sort it (participle endings)', 'fr-a1-2-fetes-sort-participles'],
+  ['gap fill (passé composé)', 'fr-a1-2-fetes-gap-passe-compose'],
+  ['gap fill (time markers)', 'fr-a1-2-fetes-gap-markers'],
+  ['sort it (looks or character)', 'fr-a1-2-fetes-sort-traits'],
+  ['sentence builder', 'fr-a1-2-fetes-sentences'],
+  ['dialogue (three scenes)', 'fr-a1-2-fetes-dialogues'],
+  ['blitz', 'fr-a1-2-fetes-blitz'],
+  ['quiz (unit challenge)', 'fr-a1-2-fetes-challenge'],
 ];
 
 test.describe('French A1.2 – playing the games', () => {

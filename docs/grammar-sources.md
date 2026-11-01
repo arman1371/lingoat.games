@@ -226,22 +226,24 @@ imperative of être and avoir, the negation of the near future, the chez + perso
 Wiktionnaire conjugation pages were checked for prendre, vouloir and finir; the other verb tables come from the
 generated forms in `src/lib/french`.
 
-## French A1.2 (3 topics so far)
+## French A1.2 (5 topics so far)
 
 The lessons are in `src/content/grammar/fr-a1-2.ts`, the pages in `sources-fr-a1-2.ts`. Verb tables use
 `reflexiveFr()` from `src/lib/french`. **Not yet reviewed by a native speaker.**
 
-| Topic                    | Pages read                                                                                                                                                                              |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pronominal verbs         | [Verbe pronominal](https://fr.wikipedia.org/wiki/Verbe_pronominal), [Forme pronominale du verbe en français](https://fr.wikipedia.org/wiki/Forme_pronominale_du_verbe_en_fran%C3%A7ais) |
-| How often? (ne … jamais) | Wiktionnaire [jamais](https://fr.wiktionary.org/wiki/jamais)                                                                                                                            |
-| First, then, finally     | Wiktionnaire [d'abord](https://fr.wiktionary.org/wiki/d%E2%80%99abord), [vers](https://fr.wiktionary.org/wiki/vers)                                                                     |
+| Topic                    | Pages read                                                                                                                                                                                                                                                                                                        |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pronominal verbs         | [Verbe pronominal](https://fr.wikipedia.org/wiki/Verbe_pronominal), [Forme pronominale du verbe en français](https://fr.wikipedia.org/wiki/Forme_pronominale_du_verbe_en_fran%C3%A7ais)                                                                                                                           |
+| How often? (ne … jamais) | Wiktionnaire [jamais](https://fr.wiktionary.org/wiki/jamais)                                                                                                                                                                                                                                                      |
+| Passé composé with avoir | [Passé composé en français](https://fr.wikipedia.org/wiki/Pass%C3%A9_compos%C3%A9_en_fran%C3%A7ais), Wiktionnaire conjugations of [manger](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/manger), [attendre](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/attendre), finir, faire, prendre |
+| Past and future markers  | Wiktionnaire [il y a](https://fr.wiktionary.org/wiki/il_y_a), [dernier](https://fr.wiktionary.org/wiki/dernier), [prochain](https://fr.wiktionary.org/wiki/prochain)                                                                                                                                              |
+| First, then, finally     | Wiktionnaire [d'abord](https://fr.wiktionary.org/wiki/d%E2%80%99abord), [vers](https://fr.wiktionary.org/wiki/vers)                                                                                                                                                                                               |
 
 **Limits:** the Wikipédia article "Adverbe" does not cover frequency adverbs or their position, so the placement of
 toujours / souvent / rarement after the verb and the opening position of parfois / tous les jours follow common
 textbook teaching and are **not** checked against a fetched page; the same holds for the elision of me / te / se
 (the page only shows examples), the ensuite / puis / enfin ordering (the d'abord page does not list them), and the
-use of avant / après with a noun.
+use of avant / après with a noun. For the passé composé the Wikipédia page does not state the participle endings (-é, -i, -u), the irregular participles or the negation around avoir; these follow common textbook teaching and the Wiktionnaire conjugation pages. The wiktionary entries for dernier and prochain do not state their position after a time noun or their agreement.
 
 ## Limits of the research
 

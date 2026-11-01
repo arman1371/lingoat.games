@@ -377,6 +377,9 @@ export const TAGS = {
   'fr-pronominal': { label: 'Pronominal verbs (se lever)', group: 'grammar', emoji: '🪞' },
   'fr-frequency': { label: 'toujours, souvent, ne … jamais', group: 'grammar', emoji: '🔁' },
   'fr-sequence': { label: 'd’abord, ensuite, enfin', group: 'grammar', emoji: '🔢' },
+  // grammar points – French A1.2, unit 2
+  'fr-passe-compose-avoir': { label: 'Passé composé with avoir', group: 'grammar', emoji: '⏮️' },
+  'fr-time-markers': { label: 'hier, il y a, dans, dernier', group: 'grammar', emoji: '🕰️' },
   // grammar points – French A1.1, unit 5
   'fr-likes': { label: 'J’aime, je déteste …', group: 'grammar', emoji: '💛' },
   'fr-negation': { label: 'ne … pas', group: 'grammar', emoji: '🚫' },
