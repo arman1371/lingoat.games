@@ -1300,6 +1300,15 @@ export const LESSONS = {
       'On est allés à la plage. (spoken)',
     ],
   },
+  'fr-c21-cause-consequence': {
+    title: 'Cause and consequence',
+    rule: 'Cause: parce que (new reason), puisque (known reason), étant donné que, vu que; before a noun en raison de, faute de, grâce à. Consequence: si bien que, au point que, tellement … que + indicative; de sorte que + indicative for a result, + subjunctive for a purpose.',
+    examples: [
+      'Puisque vous êtes là, aidez-moi.',
+      'Faute de temps, nous avons abrégé.',
+      'Il parle de sorte que tous comprennent.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',

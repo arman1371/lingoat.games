@@ -54,4 +54,7 @@ export const FR_SOURCES = {
   passeAnterieur: wp('Passé_antérieur', 'Passé antérieur'),
   presentHistorique: wp('Présent_historique', 'Présent historique'),
   register: wp('Registre_de_langue', 'Registre de langue'),
+  subConjunction: wp('Conjonction_de_subordination', 'Conjonction de subordination'),
+  puisque: wiktionary('puisque', 'puisque'),
+  deSorteQue: wiktionary('de_sorte_que', 'de sorte que'),
 } as const satisfies Record<string, Source>;

@@ -301,4 +301,125 @@ export const FRC21_TOPICS: GrammarTopic[] = [
     related: ['fr-c21-passe-simple'],
     sources: [S.passeSimple, S.presentHistorique],
   },
+  {
+    id: 'fr-c21-cause-consequence',
+    title: 'Cause and consequence',
+    tagline: 'Give a reason, draw a result',
+    level: LEVEL,
+    summary:
+      'Connectors of cause (parce que, puisque, étant donné que, faute de, grâce à) and of consequence (si bien que, de sorte que, au point de, par conséquent) differ in meaning, in what follows them and in the mood of the verb.',
+    sections: [
+      section(
+        'cause',
+        'Giving a reason',
+        p(
+          'The choice depends on how the reason is presented. **Parce que** gives new information. **Puisque** refers to a reason the listener already knows. **Étant donné que** and **vu que** are more formal. Before a noun, a clause connector does not work: use a preposition.',
+        ),
+        table(
+          'Connectors of cause and what follows them.',
+          ['Connector', 'Followed by', 'Idea', 'Example'],
+          [
+            [
+              'parce que',
+              'clause (indicative)',
+              'new reason',
+              'Il est absent parce qu’il est malade.',
+            ],
+            ['puisque', 'clause (indicative)', 'known reason', 'Puisque vous le dites, j’accepte.'],
+            [
+              'étant donné que, vu que',
+              'clause (indicative)',
+              'given that (formal)',
+              'Vu que le train est en retard, partons.',
+            ],
+            ['en raison de', 'noun', 'because of', 'En raison de la grève, le vol est annulé.'],
+            [
+              'faute de',
+              'noun or infinitive',
+              'for lack of (negative)',
+              'Faute de temps, nous renonçons.',
+            ],
+            ['grâce à', 'noun', 'thanks to (positive)', 'Grâce à vous, j’ai réussi.'],
+          ],
+        ),
+        examples(
+          ['Puisque vous êtes là, aidez-moi.', 'Since you are here, help me.'],
+          ['Il a échoué faute de préparation.', 'He failed for lack of preparation.'],
+          ['Elle a gagné grâce à son travail.', 'She won thanks to her work.'],
+        ),
+      ),
+      section(
+        'doubt',
+        'A reason you doubt, and a reason you add',
+        p(
+          '**Sous prétexte que** shows that you doubt the reason given. **D’autant que** adds a further reason to one already given. **À force de** + infinitive means “through doing it again and again”.',
+        ),
+        compare(
+          {
+            title: 'sous prétexte que',
+            question: 'You doubt the reason',
+            example: 'Il est resté chez lui sous prétexte qu’il était malade.',
+          },
+          {
+            title: 'd’autant que',
+            question: 'You add a reason',
+            example: 'Je reste, d’autant que le film est gratuit.',
+          },
+        ),
+        mistake(
+          'Watch out',
+          '✗ à cause de bonheur (a positive reason)  ✓ grâce au bonheur',
+          '✗ parce que la grève  ✓ à cause de la grève / en raison de la grève',
+          '✗ faute que temps  ✓ faute de temps',
+        ),
+      ),
+      section(
+        'consequence',
+        'Drawing a result',
+        p(
+          'A result is introduced by **si bien que**, **au point que** or **tellement … que**, followed by the indicative when the result really happened. Between two sentences use **par conséquent**, **de ce fait**, **en conséquence** or **d’où** + noun.',
+        ),
+        table(
+          'Connectors of consequence.',
+          ['Connector', 'Followed by', 'Example'],
+          [
+            ['si bien que', 'indicative', 'Il a trop mangé, si bien qu’il est malade.'],
+            ['tellement … que', 'indicative', 'Il pleut tellement que la rue est inondée.'],
+            ['au point de', 'infinitive', 'Il était ému au point de ne plus pouvoir parler.'],
+            [
+              'par conséquent, de ce fait',
+              'new sentence',
+              'Les prix ont doublé ; par conséquent, les ventes ont chuté.',
+            ],
+            ['d’où', 'noun', 'La crise s’est aggravée, d’où une hausse du chômage.'],
+          ],
+        ),
+      ),
+      section(
+        'mood',
+        'De sorte que: result or purpose',
+        p(
+          '**De sorte que** has two meanings. For a result that really happened, it takes the **indicative**. For a purpose that is not yet reached, it takes the **subjunctive**, like **pour que**. A verb of cause such as **entraîner**, **engendrer**, **déclencher** or **découler de** can replace a connector.',
+        ),
+        compare(
+          {
+            title: 'Result: indicative',
+            question: 'It happened',
+            example: 'Il a bien parlé, de sorte que tous ont compris.',
+          },
+          {
+            title: 'Purpose: subjunctive',
+            question: 'It is the aim',
+            example: 'Parlez lentement de sorte que tous comprennent.',
+          },
+        ),
+        tip(
+          'Denying a reason',
+          'To say that something is not the reason, use ce n’est pas que + subjunctive: Ce n’est pas qu’il soit paresseux, mais il manque de temps. (This pattern follows common textbook teaching.)',
+        ),
+      ),
+    ],
+    related: [],
+    sources: [S.subConjunction, S.puisque, S.deSorteQue],
+  },
 ];

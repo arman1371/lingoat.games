@@ -365,6 +365,7 @@ export const TAGS = {
   'fr-c21-registers': { label: 'Registers & nuance', group: 'topic', emoji: '🎚️' },
   'fr-c21-humour': { label: 'Humour & irony', group: 'topic', emoji: '🎭' },
   'fr-c21-narration': { label: 'Telling a story', group: 'topic', emoji: '📖' },
+  'fr-c21-logic': { label: 'Cause, result & concession', group: 'topic', emoji: '🔗' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },
@@ -411,6 +412,7 @@ export const TAGS = {
   'fr-c21-wordplay': { label: 'Homophones & paronyms', group: 'grammar', emoji: '🔤' },
   'fr-c21-passe-simple': { label: 'Passé simple & passé antérieur', group: 'grammar', emoji: '📜' },
   'fr-c21-narrative-tenses': { label: 'Tenses of a story', group: 'grammar', emoji: '🎞️' },
+  'fr-c21-cause-consequence': { label: 'Cause & consequence', group: 'grammar', emoji: '🔗' },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
   // grammar points – French A2.1, unit 1

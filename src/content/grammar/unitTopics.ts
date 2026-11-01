@@ -544,6 +544,7 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'fr-c2-1-registres': [{ topic: 'fr-c21-word-formation' }],
   'fr-c2-1-humour': [{ topic: 'fr-c21-wordplay' }],
   'fr-c2-1-recit': [{ topic: 'fr-c21-passe-simple' }, { topic: 'fr-c21-narrative-tenses' }],
+  'fr-c2-1-cause': [{ topic: 'fr-c21-cause-consequence' }],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },
