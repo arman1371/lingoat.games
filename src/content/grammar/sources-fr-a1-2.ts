@@ -25,4 +25,8 @@ export const FR12_SOURCES = {
   ilYA: wiktionary('il_y_a', 'il y a'),
   dernier: wiktionary('dernier', 'dernier'),
   prochain: wiktionary('prochain', 'prochain'),
+  cod: wp('Complément_d’objet_direct', 'Complément d’objet direct'),
+  y: wiktionary('y', 'y'),
+  auDessus: wiktionary('au-dessus', 'au-dessus'),
+  interdit: wiktionary('interdit', 'interdit'),
 } as const satisfies Record<string, Source>;

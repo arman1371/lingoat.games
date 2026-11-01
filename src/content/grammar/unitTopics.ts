@@ -551,4 +551,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-time-markers' },
     { topic: 'fr-adjectives', note: 'looks and character' },
   ],
+  'fr-a1-2-logement': [
+    { topic: 'fr-object-pronouns' },
+    { topic: 'fr-y' },
+    { topic: 'fr-rules', note: 'infinitive and imperative' },
+    { topic: 'fr-place-more' },
+  ],
 };

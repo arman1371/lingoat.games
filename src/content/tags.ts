@@ -380,6 +380,11 @@ export const TAGS = {
   // grammar points – French A1.2, unit 2
   'fr-passe-compose-avoir': { label: 'Passé composé with avoir', group: 'grammar', emoji: '⏮️' },
   'fr-time-markers': { label: 'hier, il y a, dans, dernier', group: 'grammar', emoji: '🕰️' },
+  // grammar points – French A1.2, unit 3
+  'fr-object-pronouns': { label: 'le, la, l’, les (it, them)', group: 'grammar', emoji: '🎯' },
+  'fr-y': { label: 'The little word y', group: 'grammar', emoji: '📍' },
+  'fr-rules': { label: 'Rules and orders', group: 'grammar', emoji: '📜' },
+  'fr-place-more': { label: 'au-dessus de, au milieu de …', group: 'grammar', emoji: '🧭' },
   // grammar points – French A1.1, unit 5
   'fr-likes': { label: 'J’aime, je déteste …', group: 'grammar', emoji: '💛' },
   'fr-negation': { label: 'ne … pas', group: 'grammar', emoji: '🚫' },

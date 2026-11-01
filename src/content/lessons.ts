@@ -1185,6 +1185,30 @@ export const LESSONS = {
       'Samedi prochain, nous partons.',
     ],
   },
+  'fr-object-pronouns': {
+    title: 'le, la, l’, les',
+    rule: 'Replace a known thing with le (masculine), la (feminine), l’ (before a vowel) or les (plural). The pronoun goes right before the verb, or before the infinitive: je la prends, je vais la prendre. In the negative ne comes before it: je ne la prends pas. In the passé composé it goes before avoir: je l’ai pris.',
+    examples: ['Je la prends.', 'Il les répare aujourd’hui.', 'Je ne l’aime pas.'],
+  },
+  'fr-y': {
+    title: 'The little word y',
+    rule: 'Y replaces a place that began with à, dans, chez or en. It goes right before the verb (or before the infinitive), like le, la, les: j’y vais, je n’y vais pas, je vais y aller. It never stays at the end of the sentence.',
+    examples: ['Tu vas à la cave ? Oui, j’y vais.', 'Nous y habitons.', 'Je ne vais pas y aller.'],
+  },
+  'fr-rules': {
+    title: 'Rules and orders',
+    rule: 'Written rules use the infinitive: Ne pas fumer. Ne pas entrer. Il est interdit de + infinitive is the formal way: Il est interdit de fumer. To tell someone directly, use the imperative: Fermez la porte ! Ne laissez pas de clés ! In the negative ne … pas wraps the imperative.',
+    examples: ['Ne pas fumer.', 'Il est interdit de fumer ici.', 'Ne faites pas de bruit !'],
+  },
+  'fr-place-more': {
+    title: 'au-dessus de, au milieu de …',
+    rule: 'Many place words end in de: au-dessus de, en dessous de, au milieu de, autour de, à l’intérieur de, au fond de. De combines with the article: de + le = du, de + les = des, but de la and de l’ stay. So: au milieu du salon, autour de la table.',
+    examples: [
+      'La lampe est au-dessus de la table.',
+      'Le tapis est au milieu du salon.',
+      'Le chat est sous le lit.',
+    ],
+  },
   'fr-likes': {
     title: 'J’aime, je déteste …',
     rule: 'Aimer, adorer and détester are regular -er verbs. Before a noun use the definite article, even for things in general: j’aime le café, elle adore les chats. Before an activity use the infinitive: j’aime danser. Add beaucoup for more: j’aime beaucoup la musique.',

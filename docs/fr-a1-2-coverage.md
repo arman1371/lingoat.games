@@ -50,7 +50,7 @@ earlier French level.
 1. Plumbing: level entry in `levels.ts`, tags and mini lessons prefixed `fr-`, full grammar lessons
    (`src/content/grammar/fr-a1-2.ts`, topic level `fr-a1-2`), unit links in `unitTopics.ts`, e2e entry.
    **Done** with unit 1.
-2. Units, one pull request each. **Units 1 (`journee`, 16 games) and 2 (`fetes`, 16 games) are done.** Units 3 to 8 follow, each with its
+2. Units, one pull request each. **Units 1 (`journee`, 16 games), 2 (`fetes`, 16 games) and 3 (`logement`, 16 games) are done.** Units 4 to 8 follow, each with its
    grammar lessons so that every `fr-` mini lesson has its full lesson.
 
 ## Unit 1 – Ma journée (`journee`)
@@ -71,3 +71,14 @@ earlier French level.
   character reuse the A1.1 `fr-adjectives` lesson.
 - Games: 5 flashcard sets, picture quiz, listening, passé composé tables, participle sort, 2 gap fills, looks /
   character sort, sentence builder, dialogue (3 scenes), blitz, challenge.
+
+## Unit 3 – Chez moi (`logement`)
+
+- Vocabulary fields: Rooms and the building (20) · Furniture and appliances (21) · Problems and repairs (14) ·
+  House rules (13) · Where exactly? (12). Nothing repeats A1.1 or units 1 and 2.
+- Grammar: direct object pronouns le / la / l' / les (`fr-object-pronouns`), the pronoun y for a place (`fr-y`),
+  written rules and orders with the infinitive and the imperative (`fr-rules`), and longer place expressions
+  with de (`fr-place-more`). Édito unit 9 introduces il faut and devoir with the doctor, so obligation with those
+  verbs waits for unit 5.
+- Games: 5 flashcard sets, picture quiz, listening, room sort, 4 gap fills (pronouns, y, place words, rules),
+  sentence builder, dialogue (3 scenes), blitz, challenge.

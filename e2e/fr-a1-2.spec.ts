@@ -65,6 +65,22 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue (three scenes)', 'fr-a1-2-fetes-dialogues'],
   ['blitz', 'fr-a1-2-fetes-blitz'],
   ['quiz (unit challenge)', 'fr-a1-2-fetes-challenge'],
+  ['flashcards (rooms)', 'fr-a1-2-logement-flash-rooms'],
+  ['flashcards (furniture)', 'fr-a1-2-logement-flash-furniture'],
+  ['flashcards (repairs)', 'fr-a1-2-logement-flash-repairs'],
+  ['flashcards (house rules)', 'fr-a1-2-logement-flash-rules'],
+  ['flashcards (where exactly)', 'fr-a1-2-logement-flash-where'],
+  ['quiz (what is in the flat)', 'fr-a1-2-logement-quiz-emoji'],
+  ['listen (problems)', 'fr-a1-2-logement-listen-repairs'],
+  ['sort it (which room)', 'fr-a1-2-logement-sort-rooms'],
+  ['gap fill (object pronouns)', 'fr-a1-2-logement-gap-object-pronouns'],
+  ['gap fill (y)', 'fr-a1-2-logement-gap-y'],
+  ['gap fill (place words)', 'fr-a1-2-logement-gap-where'],
+  ['gap fill (rules)', 'fr-a1-2-logement-gap-rules'],
+  ['sentence builder (home)', 'fr-a1-2-logement-sentences'],
+  ['dialogue (home scenes)', 'fr-a1-2-logement-dialogues'],
+  ['blitz (home)', 'fr-a1-2-logement-blitz'],
+  ['quiz (home challenge)', 'fr-a1-2-logement-challenge'],
 ];
 
 test.describe('French A1.2 – playing the games', () => {
