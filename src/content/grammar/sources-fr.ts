@@ -44,4 +44,9 @@ export const FR_SOURCES = {
   imperative: wp('Impératif_(grammaire)', 'Impératif (grammaire)'),
   demonstrative: wp('Adjectif_démonstratif', 'Adjectif démonstratif'),
   futurProche: wp('Futur_proche', 'Futur proche'),
+  // C2.2
+  participle: wp('Participe_présent', 'Participe présent'),
+  gerund: wp('Gérondif', 'Gérondif'),
+  adjectifVerbal: wp('Adjectif_verbal', 'Adjectif verbal'),
+  fatigant: wiktionary('fatigant', 'fatigant'),
 } as const satisfies Record<string, Source>;

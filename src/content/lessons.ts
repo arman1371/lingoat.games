@@ -1218,6 +1218,16 @@ export const LESSONS = {
     rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
     examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
   },
+  // ---- French C2.2 ------------------------------------------------------------------------
+  'fr-c22-participe-present': {
+    title: 'Participe présent, gérondif or adjectif verbal?',
+    rule: 'The participe présent (-ant) is a verb: it is invariable and keeps its object (des visiteurs admirant la toile). With en it is the gérondif: how or when, with the subject of the main verb. The adjectif verbal is an adjective and agrees (des couleurs éclatantes); some spell differently: provoquant / provocant.',
+    examples: [
+      'Des visiteurs admirant la toile. → participe présent: invariable',
+      'Elle a appris en copiant les maîtres. → gérondif: how, same subject',
+      'Des couleurs éclatantes. → adjectif verbal: agrees',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

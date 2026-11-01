@@ -246,3 +246,11 @@ generated forms in `src/lib/french`.
   the factual vs. hypothetical split of obwohl / auch wenn / selbst wenn, the Plusquamperfekt after als in comparisons,
   and the plural -keit / -heit / -ung gender rule. Wiktionary pages state the case and meaning of each connector, not
   its word order, so the verb position of connectors comes from the example sentences and from general German grammar.
+
+## French C2.2
+
+- Participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`): fr.wikipedia.org *Participe présent*,
+  *Gérondif*, *Adjectif verbal* and fr.wiktionary.org *fatigant* were read. The pages give the formation, the
+  invariability of the participle and the gérondif, the agreement of the adjectif verbal and the spelling alternations
+  -guant/-gant, -quant/-cant, -ant/-ent; they do not mention the pairs provoquant/provocant, différant/différent and
+  négligeant/négligent, which follow the same pattern but are not checked against a fetched page.
