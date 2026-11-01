@@ -404,6 +404,9 @@ export const TAGS = {
   'fr-b22-reported-speech': { label: 'Reported speech', group: 'grammar', emoji: '🗨️' },
   'fr-b22-cleft': { label: 'c’est … qui / que', group: 'grammar', emoji: '🔦' },
   'fr-b22-relative-composed': { label: 'lequel, auquel, duquel', group: 'grammar', emoji: '🔗' },
+  'fr-b22-health': { label: 'Health & well-being', group: 'topic', emoji: '🧘' },
+  'fr-b22-subj-or-inf': { label: 'Subjunctive or infinitive', group: 'grammar', emoji: '🌫️' },
+  'fr-b22-ne-expletif': { label: 'The ne explétif', group: 'grammar', emoji: '🔤' },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
   // grammar points – French A2.1, unit 1

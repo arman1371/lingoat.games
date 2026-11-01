@@ -32,7 +32,7 @@ test.describe('French B2.2 – level navigation', () => {
   });
 });
 
-/** Every engine that unit 1 uses, played through the real UI (Vitest plays every activity). */
+/** Every engine the units use, played through the real UI (Vitest plays every activity). */
 const PLAYED: [engine: string, activityId: string][] = [
   ['flashcards', 'fr-b2-2-actu-flash-press'],
   ['quiz', 'fr-b2-2-actu-quiz-meaning'],
@@ -46,6 +46,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['spell', 'fr-b2-2-actu-spell-press'],
   ['dialogue (three scenes)', 'fr-b2-2-actu-dialogues'],
   ['blitz', 'fr-b2-2-actu-blitz'],
+  // unit 2
+  ['flashcards (unit 2)', 'fr-b2-2-sante-flash-wellbeing'],
+  ['gap fill (subjunctive)', 'fr-b2-2-sante-gap-subjunctive'],
+  ['gap fill (ne explétif)', 'fr-b2-2-sante-gap-ne'],
+  ['sort it (mood)', 'fr-b2-2-sante-sort-mood'],
+  ['conjugation (subjunctive)', 'fr-b2-2-sante-conj-subjunctive'],
+  ['dialogue (unit 2)', 'fr-b2-2-sante-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {

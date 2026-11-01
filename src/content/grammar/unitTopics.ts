@@ -546,6 +546,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b22-cleft', note: 'stressing the source or the culprit' },
     { topic: 'fr-b22-relative-composed', note: 'the report she refers to' },
   ],
+  'fr-b2-2-sante': [
+    { topic: 'fr-b22-subj-or-inf', note: 'advising, insisting, fearing, doubting' },
+    { topic: 'fr-b22-ne-expletif', note: 'après craindre que, avant que, à moins que' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

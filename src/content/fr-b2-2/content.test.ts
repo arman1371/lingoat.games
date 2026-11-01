@@ -40,7 +40,7 @@ const earlierLevels = Object.entries(
   .map(([, m]) => m.default);
 
 /** Compare words by their bare form, so "un quotidien" and "quotidien" count as the same word. */
-const key = (de: string) => de.replace(/^(un|une|le|la|l’|les|des) ?/i, '').toLowerCase();
+const key = (de: string) => de.replace(/^(?:(?:un|une|le|la|les|des)\s+|l’)/i, '').toLowerCase();
 
 describe('French B2.2 vocabulary integrity', () => {
   it('does not repeat vocabulary from earlier French levels', () => {

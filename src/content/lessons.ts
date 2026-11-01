@@ -1291,6 +1291,24 @@ export const LESSONS = {
       'Les raisons pour lesquelles il a menti.',
     ],
   },
+  'fr-b22-subj-or-inf': {
+    title: 'Subjunctive or infinitive?',
+    rule: 'Will, necessity, feeling and doubt (vouloir que, il faut que, craindre que, douter que) take the subjunctive. If both verbs have the same subject, use the infinitive instead: je veux partir, not je veux que je parte. Belief and certainty (penser que, savoir que) take the indicative.',
+    examples: [
+      'Il faut que tu dormes huit heures.',
+      'Je veux me coucher plus tôt.',
+      'Je ne pense pas qu’il ait raison.',
+    ],
+  },
+  'fr-b22-ne-expletif': {
+    title: 'The ne explétif',
+    rule: 'After verbs of fear (craindre que, avoir peur que), avant que, à moins que, de peur que and comparatives, careful French can add a ne that is not a negation: Je crains qu’il ne pleuve means I fear it will rain. Do not translate it as not; a real negation still needs pas.',
+    examples: [
+      'Je crains qu’elle ne soit malade.',
+      'Partons avant qu’il ne pleuve.',
+      'Je crains qu’il ne vienne pas. → real negation',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',

@@ -47,4 +47,5 @@ export const FR_SOURCES = {
   indirectSpeech: wp('Discours_indirect', 'Discours indirect'),
   cleft: wp('Phrase_clivée', 'Phrase clivée'),
   lequel: wiktionary('lequel', 'lequel'),
+  subjunctive: wp('Subjonctif_en_français', 'Subjonctif en français'),
 } as const satisfies Record<string, Source>;
