@@ -540,4 +540,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-futur-proche' },
     { topic: 'fr-adjective-position' },
   ],
+  // ---- French C1.2 ----------------------------------------------------------------------------
+  'fr-c1-2-jeu': [
+    { topic: 'fr-c12-participe-present' },
+    { topic: 'fr-c12-gerondif' },
+    { topic: 'fr-c12-adjectif-verbal' },
+  ],
 };

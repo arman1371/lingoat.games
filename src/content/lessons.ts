@@ -1060,6 +1060,34 @@ export const LESSONS = {
     rule: 'Particles colour a sentence without changing what it says: doch (contrary to expectation), ja (as you know), eben / halt (it cannot be changed), wohl (probably), eigentlich (actually), schon (admittedly), immerhin (at least). They are unstressed, never stand first and cannot be negated.',
     examples: ['Das ist ja interessant!', 'Das ist eben so.', 'Du hast es doch versprochen!'],
   },
+  // ---- French C1.2 ---------------------------------------------------------------------------
+  'fr-c12-participe-present': {
+    title: 'The present participle (-ant)',
+    rule: 'Take the nous form of the present, drop -ons and add -ant: jouons → jouant, finissons → finissant, faisons → faisant. Three verbs are irregular: être → étant, avoir → ayant, savoir → sachant. The participle never agrees; it replaces a qui clause or gives a reason.',
+    examples: [
+      'Je cherche un joueur connaissant les règles. (= qui connaît)',
+      'Étant endetté, il a vendu sa voiture. (= comme il était endetté)',
+      'Ayant tout perdu, elle a arrêté de jouer.',
+    ],
+  },
+  'fr-c12-gerondif': {
+    title: 'The gérondif: en + -ant',
+    rule: 'en + the -ant form says how or when something happens: by doing it (means), while doing it (simultaneity), or if you do it (condition). It never agrees, and its subject is the subject of the main verb. tout en … -ant stresses that two things happen together, often in contrast.',
+    examples: [
+      'On apprend les règles en jouant.',
+      'Il a perdu gros en jouant au casino.',
+      'Elle travaille tout en écoutant de la musique.',
+    ],
+  },
+  'fr-c12-adjectif-verbal': {
+    title: 'Adjectif verbal or participe présent?',
+    rule: 'The adjectif verbal describes a noun and agrees with it: une partie passionnante, des résultats décevants. The participle is invariable and acts like a verb. Some pairs are spelled differently: fatiguant (participle) / fatigant (adjective), convainquant / convaincant, provoquant / provocant, différant / différent.',
+    examples: [
+      'Une soirée fatigante. · En se fatiguant trop, il a perdu.',
+      'Des arguments convaincants. · En convainquant ses amis, …',
+      'Des règles différentes. · Des règles différant de celles-ci …',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',

@@ -44,4 +44,10 @@ export const FR_SOURCES = {
   imperative: wp('Impératif_(grammaire)', 'Impératif (grammaire)'),
   demonstrative: wp('Adjectif_démonstratif', 'Adjectif démonstratif'),
   futurProche: wp('Futur_proche', 'Futur proche'),
+  participePresent: wp('Participe_présent', 'Participe présent'),
+  participePresentFr: wp('Participe_présent_en_français', 'Participe présent en français'),
+  gerondif: wp('Gérondif', 'Gérondif'),
+  savoir: conj('savoir'),
+  fatigant: wiktionary('fatigant', 'fatigant'),
+  convaincant: wiktionary('convaincant', 'convaincant'),
 } as const satisfies Record<string, Source>;

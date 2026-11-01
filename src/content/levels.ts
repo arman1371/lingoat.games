@@ -22,7 +22,23 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   status: 'coming-soon',
 }));
 
-const FRENCH_LEVELS: LevelMeta[] = [
+/** CEFR order of the French levels; available and coming-soon levels are merged into this order. */
+const FRENCH_ORDER = [
+  'a1-1',
+  'a1-2',
+  'a2-1',
+  'a2-2',
+  'b1-1',
+  'b1-2',
+  'b2-1',
+  'b2-2',
+  'c1-1',
+  'c1-2',
+  'c2-1',
+  'c2-2',
+].map((id) => `fr-${id}`);
+
+const FRENCH_AVAILABLE: LevelMeta[] = [
   {
     language: 'fr',
     id: 'fr-a1-1',
@@ -32,8 +48,21 @@ const FRENCH_LEVELS: LevelMeta[] = [
     status: 'available',
     load: () => import('./fr-a1-1'),
   },
-  ...FRENCH_COMING_SOON,
+  {
+    language: 'fr',
+    id: 'fr-c1-2',
+    title: 'C1.2',
+    subtitle:
+      'Games and addiction, with the -ant forms: participe présent, gérondif, adjectif verbal',
+    status: 'available',
+    load: () => import('./fr-c1-2'),
+  },
 ];
+
+const FRENCH_LEVELS: LevelMeta[] = [
+  ...FRENCH_AVAILABLE,
+  ...FRENCH_COMING_SOON.filter((l) => !FRENCH_AVAILABLE.some((a) => a.id === l.id)),
+].sort((a, b) => FRENCH_ORDER.indexOf(a.id) - FRENCH_ORDER.indexOf(b.id));
 
 /**
  * Level catalogue. To add a level: create `src/content/<level-id>/index.ts` that default-exports a

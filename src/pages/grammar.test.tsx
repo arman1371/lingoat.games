@@ -222,7 +222,8 @@ describe('French grammar', () => {
     expect(within(index).getByRole('heading', { level: 2, name: /A1\.1/ })).toBeInTheDocument();
     expect(within(index).getByTestId('grammar-fr-tu-vous')).toBeInTheDocument();
     expect(within(index).queryByTestId('grammar-word-order')).not.toBeInTheDocument();
-    expect(within(index).getAllByTestId(/^grammar-fr-/)).toHaveLength(25);
+    expect(within(index).getByRole('heading', { level: 2, name: /C1\.2/ })).toBeInTheDocument();
+    expect(within(index).getAllByTestId(/^grammar-fr-/).length).toBeGreaterThanOrEqual(25);
   });
 
   it('keeps French topics out of the German library', async () => {

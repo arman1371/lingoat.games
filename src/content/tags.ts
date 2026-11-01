@@ -361,6 +361,20 @@ export const TAGS = {
   'c22-prefix-verbs': { label: 'übersetzen or übersetzen?', group: 'grammar', emoji: '🔧' },
   'c22-passive-alternatives': { label: 'Replacing the passive', group: 'grammar', emoji: '🔀' },
   'c22-nuance-particles': { label: 'Nuance particles & adverbs', group: 'grammar', emoji: '🎚️' },
+  // topics – French C1.2
+  'fr-c12-games': { label: 'Games & gambling', group: 'topic', emoji: '🎲' },
+  // grammar points – French C1.2, unit 1
+  'fr-c12-participe-present': {
+    label: 'Participe présent (-ant)',
+    group: 'grammar',
+    emoji: '➡️',
+  },
+  'fr-c12-gerondif': { label: 'Gérondif (en jouant)', group: 'grammar', emoji: '🔄' },
+  'fr-c12-adjectif-verbal': {
+    label: 'Adjectif verbal (passionnant)',
+    group: 'grammar',
+    emoji: '🎭',
+  },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },
