@@ -85,4 +85,66 @@ export const FRC21_TOPICS: GrammarTopic[] = [
     related: ['fr-adjectives'],
     sources: [S.prefixes, S.suffixes],
   },
+  {
+    id: 'fr-c21-wordplay',
+    title: 'Homophones and paronyms',
+    tagline: 'Words that sound or look alike',
+    level: LEVEL,
+    summary:
+      'Homophones are pronounced the same and spelt differently (mer, mère, maire). Paronyms are nearly alike in form but have different meanings (effraction / infraction). Puns (calembours) are built on both, and on words with several meanings.',
+    sections: [
+      section(
+        'homophones',
+        'Homophones: same sound, different spelling',
+        p(
+          'French has many homophones, which is a frequent source of spelling mistakes. They differ in writing, so context and grammar tell you which one to write. Words that are spelt the same but pronounced differently are **homographs** (ferment, the verb, and ferment, the noun).',
+        ),
+        examples(
+          ['La mer est calme.', 'The sea is calm.'],
+          ['Ma mère est maire de la ville.', 'My mother is the mayor of the town.'],
+          ['Il suit un cours. – Je suis en retard.', 'Suit (follows) and suis (am) sound the same.'],
+        ),
+        tip(
+          'Check the sentence, not the sound',
+          'When two words sound the same, ask what role the word plays: a noun, a verb, a preposition? That tells you the spelling.',
+        ),
+      ),
+      section(
+        'paronyms',
+        'Paronyms: nearly alike, different meaning',
+        p(
+          '**Paronyms** differ by one sound or one letter, so they are easy to mix up, even for native speakers. At C2 the exact word matters, especially in legal, economic and formal writing.',
+        ),
+        table(
+          'Paronyms met in this unit and what they mean.',
+          ['Pair', 'First word', 'Second word'],
+          [
+            [
+              'effraction / infraction',
+              'forced entry, a break-in',
+              'an offence, a breach of a rule',
+            ],
+            ['éminent / imminent', 'distinguished', 'about to happen'],
+            ['conjecture / conjoncture', 'a guess', 'the economic situation'],
+            ['collusion / collision', 'a secret agreement to cheat', 'a crash'],
+            ['prodigue / prodige', 'wasteful with money', 'a wonder, a gifted child'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ une chute éminente du gouvernement  ✓ une chute imminente',
+          '✗ la conjecture économique  ✓ la conjoncture économique',
+        ),
+      ),
+      section(
+        'puns',
+        'Puns play on both',
+        p(
+          'A **calembour** is a word game based on homophony and polysemy, one word with several meanings. A small change in intonation can steer a sentence towards one meaning or the other, so puns often work better aloud than in writing. To catch a pun, ask which second meaning or which look-alike word the speaker is pointing at.',
+        ),
+      ),
+    ],
+    related: ['fr-c21-word-formation'],
+    sources: [S.paronymy, S.homophone, S.pun],
+  },
 ];

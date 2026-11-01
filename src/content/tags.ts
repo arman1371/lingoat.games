@@ -363,6 +363,7 @@ export const TAGS = {
   'c22-nuance-particles': { label: 'Nuance particles & adverbs', group: 'grammar', emoji: '🎚️' },
   // topics – French C2.1
   'fr-c21-registers': { label: 'Registers & nuance', group: 'topic', emoji: '🎚️' },
+  'fr-c21-humour': { label: 'Humour & irony', group: 'topic', emoji: '🎭' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },
@@ -399,6 +400,7 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🧱',
   },
+  'fr-c21-wordplay': { label: 'Homophones & paronyms', group: 'grammar', emoji: '🔤' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

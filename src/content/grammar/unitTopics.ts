@@ -542,4 +542,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   ],
   // ---- French C2.1 ------------------------------------------------------------------------
   'fr-c2-1-registres': [{ topic: 'fr-c21-word-formation' }],
+  'fr-c2-1-humour': [{ topic: 'fr-c21-wordplay' }],
 };

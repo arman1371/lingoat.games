@@ -1228,6 +1228,15 @@ export const LESSONS = {
       'méconnaissable = qu’on ne reconnaît plus',
     ],
   },
+  'fr-c21-wordplay': {
+    title: 'Homophones and paronyms',
+    rule: 'Homophones sound the same and are spelt differently (mer, mère, maire). Paronyms look or sound almost alike but mean different things (effraction / infraction, éminent / imminent, conjecture / conjoncture). Puns play on both, so check the meaning, not just the sound.',
+    examples: [
+      'mer · mère · maire (homophones)',
+      'éminent (distinguished) ≠ imminent (about to happen)',
+      'une conjecture (a guess) ≠ la conjoncture (the situation)',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

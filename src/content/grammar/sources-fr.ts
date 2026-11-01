@@ -47,5 +47,8 @@ export const FR_SOURCES = {
   // ---- French C2.1
   prefixes: wiktionary('Annexe:Préfixes_en_français', 'Annexe : Préfixes en français'),
   suffixes: wiktionary('Annexe:Suffixes_en_français', 'Annexe : Suffixes en français'),
+  paronymy: wp('Paronymie', 'Paronymie'),
+  homophone: wp('Homophone', 'Homophone'),
+  pun: wp('Calembour', 'Calembour'),
   register: wp('Registre_de_langue', 'Registre de langue'),
 } as const satisfies Record<string, Source>;
