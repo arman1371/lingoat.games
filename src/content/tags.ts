@@ -364,6 +364,7 @@ export const TAGS = {
   // topics – French C2.1
   'fr-c21-registers': { label: 'Registers & nuance', group: 'topic', emoji: '🎚️' },
   'fr-c21-humour': { label: 'Humour & irony', group: 'topic', emoji: '🎭' },
+  'fr-c21-narration': { label: 'Telling a story', group: 'topic', emoji: '📖' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },
@@ -401,6 +402,8 @@ export const TAGS = {
     emoji: '🧱',
   },
   'fr-c21-wordplay': { label: 'Homophones & paronyms', group: 'grammar', emoji: '🔤' },
+  'fr-c21-passe-simple': { label: 'Passé simple & passé antérieur', group: 'grammar', emoji: '📜' },
+  'fr-c21-narrative-tenses': { label: 'Tenses of a story', group: 'grammar', emoji: '🎞️' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

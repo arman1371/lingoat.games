@@ -1,4 +1,4 @@
-import { examples, mistake, p, section, table, tip } from './build';
+import { compare, examples, mistake, p, section, table, tip } from './build';
 import type { GrammarTopic } from './schema';
 import { FR_SOURCES as S } from './sources-fr';
 
@@ -102,7 +102,10 @@ export const FRC21_TOPICS: GrammarTopic[] = [
         examples(
           ['La mer est calme.', 'The sea is calm.'],
           ['Ma mère est maire de la ville.', 'My mother is the mayor of the town.'],
-          ['Il suit un cours. – Je suis en retard.', 'Suit (follows) and suis (am) sound the same.'],
+          [
+            'Il suit un cours. – Je suis en retard.',
+            'Suit (follows) and suis (am) sound the same.',
+          ],
         ),
         tip(
           'Check the sentence, not the sound',
@@ -146,5 +149,156 @@ export const FRC21_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-c21-word-formation'],
     sources: [S.paronymy, S.homophone, S.pun],
+  },
+  {
+    id: 'fr-c21-passe-simple',
+    title: 'Passé simple and passé antérieur',
+    tagline: 'The tense of written narration',
+    level: LEVEL,
+    summary:
+      'The passé simple tells completed events in writing, mostly in the third person. Its forms follow the past participle: -é verbs end in -ai, -a, -èrent; -i verbs in -is, -it, -irent; -u verbs in -us, -ut, -urent. The passé antérieur is the passé simple of avoir or être plus a participle.',
+    sections: [
+      section(
+        'forms',
+        'Forms',
+        p(
+          'The passé simple is rarely spoken, but you meet it in novels, history books and formal speeches, so you must recognise every form. Three patterns cover most verbs, depending on the past participle.',
+        ),
+        table(
+          'The three regular patterns of the passé simple.',
+          ['Participle', 'Example', 'je', 'il / elle', 'nous', 'ils / elles'],
+          [
+            ['-é', 'parler', 'parlai', 'parla', 'parlâmes', 'parlèrent'],
+            ['-i', 'finir', 'finis', 'finit', 'finîmes', 'finirent'],
+            ['-u', 'courir', 'courus', 'courut', 'courûmes', 'coururent'],
+          ],
+        ),
+        table(
+          'Irregular stems to learn by heart.',
+          ['Infinitive', 'je', 'il / elle', 'nous', 'ils / elles'],
+          [
+            ['être', 'fus', 'fut', 'fûmes', 'furent'],
+            ['avoir', 'eus', 'eut', 'eûmes', 'eurent'],
+            ['faire', 'fis', 'fit', 'fîmes', 'firent'],
+            ['venir', 'vins', 'vint', 'vînmes', 'vinrent'],
+            ['prendre', 'pris', 'prit', 'prîmes', 'prirent'],
+          ],
+        ),
+        tip(
+          'Spot the verb',
+          'Look at the ending to find the group, then the stem: “ils vinrent” is venir, “il fit” is faire, “elle prit” is prendre.',
+        ),
+      ),
+      section(
+        'anterieur',
+        'The passé antérieur',
+        p(
+          'The **passé antérieur** is the passé simple of avoir or être followed by the past participle. It expresses an action finished just before another action told in the passé simple, usually after **dès que**, **quand**, **aussitôt que** or **à peine**.',
+        ),
+        examples(
+          [
+            'Dès qu’il eut fini de parler, il partit.',
+            'As soon as he had finished speaking, he left.',
+          ],
+          [
+            'À peine fut-il arrivé que l’orage éclata.',
+            'Hardly had he arrived when the storm broke.',
+          ],
+          [
+            'Quand elle eut lu la lettre, elle comprit.',
+            'When she had read the letter, she understood.',
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Dès qu’il avait fini, il partit.  ✓ Dès qu’il eut fini, il partit.',
+          '✗ Il eut parti.  ✓ Il fut parti. (partir takes être)',
+        ),
+      ),
+      section(
+        'use',
+        'When to use it, when to avoid it',
+        p(
+          'In writing the passé simple is mostly used for the third person, singular and plural, in narration. In everyday speech and in personal writing the **passé composé** takes its place: *il ouvrit la porte* in a novel, *il a ouvert la porte* in a conversation. Do not speak in the passé simple: it sounds like a book.',
+        ),
+      ),
+    ],
+    related: ['fr-c21-narrative-tenses'],
+    sources: [S.passeSimple, S.passeAnterieur],
+  },
+  {
+    id: 'fr-c21-narrative-tenses',
+    title: 'Tenses of a story',
+    tagline: 'Events, background and vivid present',
+    level: LEVEL,
+    summary:
+      'Foreground events take the passé simple, background and habits take the imparfait, and what happened earlier takes the plus-que-parfait or passé antérieur. The historic present makes the past vivid but alternates with past tenses.',
+    sections: [
+      section(
+        'foreground',
+        'Foreground and background',
+        p(
+          'The choice between the passé simple and the imparfait is not about how long an action lasted. The passé simple brings the **main events** forward, one after another. The imparfait gives the **setting**: descriptions, habits, and what was going on when something happened.',
+        ),
+        compare(
+          {
+            title: 'passé simple',
+            question: 'What happened next?',
+            example: 'Il ouvrit la porte, alluma la lumière et cria.',
+          },
+          {
+            title: 'imparfait',
+            question: 'What was it like? What was going on?',
+            example: 'Il pleuvait et le vent soufflait.',
+          },
+        ),
+        examples(
+          [
+            'Il pleuvait depuis l’aube quand le facteur frappa.',
+            'It had been raining since dawn when the postman knocked.',
+          ],
+          ['Chaque matin, elle prenait la même route.', 'Every morning she took the same road.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il se levait, ouvrait la fenêtre et écoutait. (a chain of events)  ✓ Il se leva, ouvrit la fenêtre et écouta.',
+        ),
+      ),
+      section(
+        'present',
+        'The historic present',
+        p(
+          'The **présent historique** narrates past events in the present to make them vivid. It is common in journalism and history writing. It cannot carry a narrative alone: it alternates with past tenses, the present for the essential facts and the past for background and explanations.',
+        ),
+        examples(
+          [
+            'En 1789, le peuple de Paris prend la Bastille.',
+            'In 1789 the people of Paris take the Bastille.',
+          ],
+          ['Napoléon meurt à Sainte-Hélène en 1821.', 'Napoleon dies on Saint Helena in 1821.'],
+        ),
+      ),
+      section(
+        'earlier',
+        'What happened earlier, and speech',
+        p(
+          'For an action before the main events use the **plus-que-parfait** (il avait fini) or, in a formal narrative after dès que, quand or à peine, the **passé antérieur** (il eut fini). Aloud, tell the whole story with the passé composé for events and the imparfait for the background.',
+        ),
+        table(
+          'The same story in writing and in speech.',
+          ['In a novel', 'In conversation'],
+          [
+            ['Il tomba et se cassa le bras.', 'Il est tombé et il s’est cassé le bras.'],
+            ['Dès qu’il eut fini, il sortit.', 'Dès qu’il a eu fini, il est sorti.'],
+            [
+              'Il pleuvait ; ils restèrent chez eux.',
+              'Il pleuvait, alors on est restés à la maison.',
+            ],
+          ],
+        ),
+      ),
+    ],
+    related: ['fr-c21-passe-simple'],
+    sources: [S.passeSimple, S.presentHistorique],
   },
 ];

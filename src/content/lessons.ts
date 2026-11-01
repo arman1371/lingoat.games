@@ -1237,6 +1237,24 @@ export const LESSONS = {
       'une conjecture (a guess) ≠ la conjoncture (the situation)',
     ],
   },
+  'fr-c21-passe-simple': {
+    title: 'Passé simple and passé antérieur',
+    rule: 'The passé simple tells finished events in writing. Verbs in -er take -ai, -as, -a, -âmes, -âtes, -èrent; most others -is, -it, -îmes, -îtes, -irent or -us, -ut. Être (fus), avoir (eus), venir (vins) are irregular. The passé antérieur is eut / fut + participle (il eut fini).',
+    examples: [
+      'Il ouvrit la porte et entra.',
+      'Ils furent surpris.',
+      'Dès qu’il eut fini, il partit.',
+    ],
+  },
+  'fr-c21-narrative-tenses': {
+    title: 'Tenses of a story',
+    rule: 'In a story the passé simple moves events forward, the imparfait gives the background and habits, and the plus-que-parfait or passé antérieur what came earlier. The présent historique makes past events vivid but alternates with past tenses. In conversation use the passé composé instead of the passé simple.',
+    examples: [
+      'Il pleuvait quand le facteur frappa.',
+      'En 1789, le peuple prend la Bastille.',
+      'On est allés à la plage. (spoken)',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

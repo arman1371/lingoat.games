@@ -50,5 +50,8 @@ export const FR_SOURCES = {
   paronymy: wp('Paronymie', 'Paronymie'),
   homophone: wp('Homophone', 'Homophone'),
   pun: wp('Calembour', 'Calembour'),
+  passeSimple: wp('Passé_simple_en_français', 'Passé simple en français'),
+  passeAnterieur: wp('Passé_antérieur', 'Passé antérieur'),
+  presentHistorique: wp('Présent_historique', 'Présent historique'),
   register: wp('Registre_de_langue', 'Registre de langue'),
 } as const satisfies Record<string, Source>;
