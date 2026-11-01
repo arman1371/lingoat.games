@@ -503,4 +503,41 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'c21-concession', note: 'conceding and rebutting' },
     { topic: 'c21-text-cohesion', note: 'linking and concluding an argument' },
   ],
+  // ---- French A1.1 ----------------------------------------------------------------------------
+  'fr-a1-1-bonjour': [{ topic: 'fr-tu-vous' }, { topic: 'fr-questions', note: 'Comment vas-tu ?' }],
+  'fr-a1-1-presenter': [
+    { topic: 'fr-pronouns' },
+    { topic: 'fr-etre-avoir', note: 'être for who you are' },
+    { topic: 'fr-er-verbs' },
+    { topic: 'fr-articles' },
+    { topic: 'fr-gender', note: 'nationalities and jobs' },
+  ],
+  'fr-a1-1-nombres': [
+    { topic: 'fr-etre-avoir', note: 'avoir for your age, il y a' },
+    { topic: 'fr-questions', note: 'quel âge, combien' },
+  ],
+  'fr-a1-1-famille': [
+    { topic: 'fr-possessives' },
+    { topic: 'fr-adjectives' },
+    { topic: 'fr-cest-il-est' },
+    { topic: 'fr-plurals' },
+  ],
+  'fr-a1-1-loisirs': [{ topic: 'fr-likes' }, { topic: 'fr-jouer-faire' }, { topic: 'fr-negation' }],
+  'fr-a1-1-table': [
+    { topic: 'fr-partitive' },
+    { topic: 'fr-quantities' },
+    { topic: 'fr-prendre-vouloir' },
+    { topic: 'fr-ir-verbs' },
+  ],
+  'fr-a1-1-ville': [
+    { topic: 'fr-contractions', note: 'au, à la, à l’, aux' },
+    { topic: 'fr-place-prepositions' },
+    { topic: 'fr-aller' },
+    { topic: 'fr-imperative' },
+  ],
+  'fr-a1-1-temps': [
+    { topic: 'fr-demonstratives' },
+    { topic: 'fr-futur-proche' },
+    { topic: 'fr-adjective-position' },
+  ],
 };

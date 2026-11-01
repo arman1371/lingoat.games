@@ -51,7 +51,7 @@ like the German units. Vocabulary cards of one unit are not repeated in another.
 2. Unit 1 as a complete vertical slice (all engines used there), then units 2 to 8 in small PRs.
    **Units 1 (`bonjour`, 15 games), 2 (`presenter`, 16 games), 3 (`nombres`, 16 games), 4 (`famille`, 16 games), 5 (`loisirs`, 16 games), 6 (`table`, 16 games), 7 (`ville`, 16 games) and 8 (`temps`, 16 games) are done: every A1.1 unit exists.** Conjugation works in French
    (`frTable`); numbers, phone numbers read in pairs and letter names come from `src/lib/french/numbers.ts`. French clock phrases (`src/lib/french/time.ts`) and prices (`priceToFrench`) are in; `src/lib/spoken.ts` picks the language for the Clock master and Market stand.
-3. French grammar lessons (`src/content/grammar/fr-a1-1.ts`) after the units, using the Grammar tab per language.
+3. French grammar lessons: **done** for A1.1 (25 topics in `src/content/grammar/fr-a1-1.ts` and `fr-a1-1-b.ts`, one per `fr-` mini lesson, linked from the units in `unitTopics.ts`; sources in `docs/grammar-sources.md`). The Grammar tab lists them per language.
 
 Open points: French nouns carry their article inside the word ("le pain", "l'eau"), because the `article` field
 is German-only (der / die / das); the field that holds the target-language text is still named `de`.

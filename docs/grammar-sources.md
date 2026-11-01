@@ -188,6 +188,44 @@ Wiktionary page could not be fetched), the shift of time and place words in repo
 müssen, dürfte and können and the modality verbs versprechen and pflegen, the dative with `von` after genitive
 prepositions without a visible genitive, and the -keit / -heit choice (the page gives tendencies, not a full rule).
 
+## French A1.1 (25 topics)
+
+The French lessons are in `src/content/grammar/fr-a1-1.ts` and `fr-a1-1-b.ts`, the pages in `sources-fr.ts`. Verb tables
+are generated from `src/lib/french` (`frConjugationTable`). The French content has **not yet been reviewed by a native
+speaker**.
+
+| Topic                                     | Pages read                                                                                                                                                                                                         |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| tu or vous?                               | [Tutoiement et vouvoiement](https://fr.wikipedia.org/wiki/Tutoiement_et_vouvoiement)                                                                                                                               |
+| Asking questions                          | [Phrase interrogative](https://fr.wikipedia.org/wiki/Phrase_interrogative)                                                                                                                                         |
+| Subject pronouns                          | [Pronom personnel](https://fr.wikipedia.org/wiki/Pronom_personnel), Wiktionnaire [parler](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/parler)                                                         |
+| être and avoir                            | Wiktionnaire conjugations of [être](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/%C3%AAtre) and [avoir](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/avoir)                                |
+| Regular -er verbs, J'aime                 | Wiktionnaire conjugations of parler, aimer                                                                                                                                                                         |
+| le, la, l', les                           | [Article défini](https://fr.wikipedia.org/wiki/Article_d%C3%A9fini), [Article indéfini](https://fr.wikipedia.org/wiki/Article_ind%C3%A9fini), [Genre grammatical](https://fr.wikipedia.org/wiki/Genre_grammatical) |
+| Masculine and feminine                    | [Féminin (grammaire)](<https://fr.wikipedia.org/wiki/F%C3%A9minin_(grammaire)>), [Genre grammatical](https://fr.wikipedia.org/wiki/Genre_grammatical)                                                              |
+| mon, ma, mes                              | [Adjectif possessif](https://fr.wikipedia.org/wiki/Adjectif_possessif)                                                                                                                                             |
+| Adjectives agree, position                | [Adjectif en français](https://fr.wikipedia.org/wiki/Adjectif_en_fran%C3%A7ais), [Féminin (grammaire)](<https://fr.wikipedia.org/wiki/F%C3%A9minin_(grammaire)>)                                                   |
+| C'est or il est?                          | Wiktionnaire [c'est](https://fr.wiktionary.org/wiki/c%E2%80%99est)                                                                                                                                                 |
+| Plurals                                   | [Nombre grammatical](https://fr.wikipedia.org/wiki/Nombre_grammatical)                                                                                                                                             |
+| ne … pas                                  | [Négation en français](https://fr.wikipedia.org/wiki/N%C3%A9gation_en_fran%C3%A7ais)                                                                                                                               |
+| jouer à, jouer de, faire de               | Wiktionnaire conjugations of jouer and faire                                                                                                                                                                       |
+| du, de la, des                            | [Article partitif](https://fr.wikipedia.org/wiki/Article_partitif), [Article défini](https://fr.wikipedia.org/wiki/Article_d%C3%A9fini)                                                                            |
+| un peu de, beaucoup de                    | Wiktionnaire [beaucoup](https://fr.wiktionary.org/wiki/beaucoup), [peu](https://fr.wiktionary.org/wiki/peu)                                                                                                        |
+| prendre, vouloir, boire; -ir verbs; aller | Wiktionnaire conjugations of prendre, vouloir, boire, finir, aller                                                                                                                                                 |
+| au, aux, du, des; dans, sur, près de      | [Contraction (grammaire)](<https://fr.wikipedia.org/wiki/Contraction_(grammaire)>), [Préposition](https://fr.wikipedia.org/wiki/Pr%C3%A9position)                                                                  |
+| The imperative                            | [Impératif (grammaire)](<https://fr.wikipedia.org/wiki/Imp%C3%A9ratif_(grammaire)>)                                                                                                                                |
+| ce, cet, cette, ces                       | [Adjectif démonstratif](https://fr.wikipedia.org/wiki/Adjectif_d%C3%A9monstratif)                                                                                                                                  |
+| aller + infinitive                        | [Futur proche](https://fr.wikipedia.org/wiki/Futur_proche)                                                                                                                                                         |
+
+**French limits:** the pages above do not state every rule. These follow common textbook teaching and are **not** checked
+against a fetched page: the plural of nouns in -eau, -eu and -al and the invariable -s / -x / -z nouns (the page only
+mentions -x in beaux and chevaux), the feminine patterns -el → -elle and -er → -ère, the short adjectives that go before
+the noun and the forms of beau, the singular partitive after a negation (the page only covers the plural), the
+imperative of être and avoir, the negation of the near future, the chez + person rule, the cities / countries rule
+(à Paris, en France, au Canada), the liaison note, and the c'est + adjective use for things in general. The
+Wiktionnaire conjugation pages were checked for prendre, vouloir and finir; the other verb tables come from the
+generated forms in `src/lib/french`.
+
 ## Limits of the research
 
 - The Deutsche Welle learner pages could not be fetched, and the Duden grammar pages are not freely readable, so the
