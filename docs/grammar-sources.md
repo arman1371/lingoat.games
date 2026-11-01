@@ -249,8 +249,43 @@ generated forms in `src/lib/french`.
 
 ## French C2.2
 
-- Participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`): fr.wikipedia.org *Participe présent*,
-  *Gérondif*, *Adjectif verbal* and fr.wiktionary.org *fatigant* were read. The pages give the formation, the
+- Participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`): fr.wikipedia.org _Participe présent_,
+  _Gérondif_, _Adjectif verbal_ and fr.wiktionary.org _fatigant_ were read. The pages give the formation, the
   invariability of the participle and the gérondif, the agreement of the adjectif verbal and the spelling alternations
   -guant/-gant, -quant/-cant, -ant/-ent; they do not mention the pairs provoquant/provocant, différant/différent and
   négligeant/négligent, which follow the same pattern but are not checked against a fetched page.
+- Past participle agreement (`fr-c22-accord-participe`): fr.wikipedia.org _Accord du participe passé en français_
+  was read for être/avoir, reflexive verbs, participle + infinitive, en, the neutral le and verbs of measure. The page
+  does not cover collective subjects. The remark on se voir + infinitive is textbook teaching.
+- The passive (`fr-c22-passif`): fr.wikipedia.org _Voix passive_ was read for the formation, the agent with par, the
+  restriction to transitive verbs, on and the impersonal passive. It does not cover the pronominal passive, se faire /
+  se voir + infinitive or the choice between par and de (the lesson follows textbook teaching).
+- Relatives (`fr-c22-relatives`): fr.wikipedia.org _Pronom relatif_ (short overview: forms and functions) and
+  fr.wiktionary.org _dont_ and _lequel_ were read. They confirm the role of dont, the forms of lequel and its
+  contractions, and that lequel is used after prepositions other than de. They do not cover ce qui / ce que / ce dont
+  or the dont / duquel choice after a noun with a preposition; those parts follow textbook teaching.
+- Negation (`fr-c22-negation`): fr.wikipedia.org _Négation en français_ was read for ne … que, ni … ni, the negative
+  pronouns as subjects, ne without pas, the ne explétif and pas de after a negation. The page does not give a full list
+  of verbs that allow ne alone; the examples (pouvoir, savoir, cesser, oser) follow textbook teaching.
+- Reserve and distance (`fr-c22-modalisation`): fr.wikipedia.org _Conditionnel en français_ was read (first 100,000 of
+  about 110,000 characters) for the value “information incertaine” (conditionnel journalistique), its alternative names
+  and the other uses of the conditional. The term “conditionnel de réserve” does not appear on the page, and the page
+  calls the analysis of this value disputed. The distance markers (selon, d’après, soi-disant, prétendument) and the
+  subjunctive after il semblerait que follow textbook teaching.
+- The infinitive (`fr-c22-infinitif`): fr.wikipedia.org _Infinitif passé_ was read for the formation (auxiliary +
+  participle), the choice of auxiliary and agreement as in the passé composé, and the rule that après takes the past
+  infinitive. fr.wikipedia.org _Infinitif_ was also read but does not cover the French prepositions. The negative
+  infinitive (ne pas avoir signé), avant de, pour, sans, de peur de and the same-subject rule follow textbook teaching.
+- Agreement with quantifiers (`fr-c22-accord-quantite`): fr.wiktionary.org _plupart_ was read for the verb after la plupart
+  de + noun (agrees with the noun) and la plupart alone (plural). fr.wiktionary.org _tout_ (first 100,000 of about
+  134,000 characters) was read for tout as an adverb: the traditional rule (toute / toutes before a feminine adjective
+  with an initial consonant) and the note that the majority usage writes toute / toutes in all cases; the lesson only
+  tests the consonant case. fr.wikipedia.org _Accord (grammaire)_ was read for collective nouns (foule, multitude,
+  dizaine, centaine: singular or plural verb when a plural noun follows). It does not mention bon nombre de, un grand
+  nombre de or plus d’un; those rules (plural, plural, singular) follow textbook teaching.
+- Figures of style (`fr-c22-figures`): fr.wikipedia.org _Figure de style_ was read (first 100,000 of about 310,000
+  characters) for métaphore, comparaison, litote, antithèse, hyperbole, métonymie, euphémisme, oxymore,
+  personnification, anaphore, périphrase and synecdoque; the literary quotations in the quiz (Labé, Valéry, Brel, Proust,
+  Corneille) come from that page. fr.wikipedia.org _Proverbe_ was read for the definition of a proverb; it quotes only
+  “Chat échaudé craint l’eau froide”. The other proverbs and the idioms (poser un lapin, avoir le cafard…) are classic
+  expressions that were not checked against a fetched list.
