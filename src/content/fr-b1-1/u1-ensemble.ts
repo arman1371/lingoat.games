@@ -4,8 +4,8 @@ import { subjTable, unitFr, type UnitContent } from './helpers';
 const U = 'fr-b1-1-ensemble';
 
 const housing = vocabList(U, 'Housing and neighbours', [
-  ['emménager', 'to move in', '📦'],
-  ['déménager', 'to move out, to move house', '🚚'],
+  ['le bail', 'lease', '📃'],
+  ['la caution', 'deposit', '🏦'],
   ['le locataire', 'tenant', '🔑'],
   ['le propriétaire', 'owner, landlord', '🏠'],
   ['le loyer', 'rent', '💶'],
@@ -16,7 +16,7 @@ const housing = vocabList(U, 'Housing and neighbours', [
   ['le palier', 'landing', '🪜'],
   ['l’ascenseur', 'lift', '🛗'],
   ['le gardien', 'caretaker', '🧑‍🔧'],
-  ['le voisin', 'neighbour', '🧑‍🤝‍🧑'],
+  ['le syndic', 'building manager', '🧑‍💼'],
   ['le bruit', 'noise', '🔊'],
   ['la cour', 'courtyard', '🌳'],
 ]);
@@ -47,23 +47,15 @@ const phrases = vocabList(U, 'Interest, advice and good wishes', [
   ['Il faut que …', 'It is necessary that …', '❗'],
   ['Il vaut mieux que …', 'It is better if …', '💡'],
   ['Je te conseille de …', 'I advise you to …', '🧭'],
-  ['Félicitations !', 'Congratulations!', '🎊'],
-  ['Tous mes vœux de bonheur !', 'All my best wishes for your happiness!', '💐'],
+  ['Quelle bonne nouvelle !', 'What good news!', '🎊'],
+  ['Je suis ravi(e) pour toi !', 'I am delighted for you!', '💐'],
   ['Je te souhaite une bonne installation.', 'I wish you a good settling in.', '🏡'],
   ['Bonne continuation !', 'All the best for what comes next!', '🍀'],
 ]);
 
 const vocab = [...housing, ...living, ...phrases];
 
-const pictureQuiz = byDe(
-  housing,
-  'l’ascenseur',
-  'l’immeuble',
-  'le loyer',
-  'le bruit',
-  'déménager',
-  'la cour',
-);
+const pictureQuiz = byDe(housing, 'l’ascenseur', 'l’immeuble', 'le loyer', 'le bruit', 'la cour');
 
 /** [sentence, bucket, English] for the obligation / ban / permission sort */
 const RULE_CARDS: [string, 'must' | 'banned' | 'allowed', string][] = [

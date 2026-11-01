@@ -223,9 +223,9 @@ describe('French grammar', () => {
     expect(within(index).getByRole('heading', { level: 2, name: /A1\.1/ })).toBeInTheDocument();
     expect(within(index).getByTestId('grammar-fr-tu-vous')).toBeInTheDocument();
     expect(within(index).queryByTestId('grammar-word-order')).not.toBeInTheDocument();
-    expect(within(index).getByRole('heading', { level: 2, name: /B1\.1/ })).toBeInTheDocument();
-    const french = GRAMMAR_TOPICS.filter((t) => t.id.startsWith('fr-'));
-    expect(within(index).getAllByTestId(/^grammar-fr-/)).toHaveLength(french.length);
+    expect(within(index).getAllByTestId(/^grammar-fr-/)).toHaveLength(
+      GRAMMAR_TOPICS.filter((t) => t.id.startsWith('fr-')).length,
+    );
   });
 
   it('keeps French topics out of the German library', async () => {

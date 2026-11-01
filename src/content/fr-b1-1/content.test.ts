@@ -2,7 +2,7 @@ import { getItems } from '@/content/items';
 import { TAGS } from '@/content/tags';
 import { describeLevelContent } from '@/test/contentSuite';
 import { label } from '../builders';
-import fr11 from '../fr-a1-1';
+import type { LevelContent } from '../schema';
 import content from './index';
 
 describeLevelContent('French B1.1', content, 'fr-b1-1');
@@ -40,9 +40,18 @@ const key = (v: Parameters<typeof label>[0]) =>
     .toLowerCase()
     .replace(/^(le |la |l’|les |un |une |des )/, '');
 
+/** The French levels below B1.1 (A1.1 to A2.2), picked up automatically. */
+const EARLIER = ['fr-a1-1', 'fr-a1-2', 'fr-a2-1', 'fr-a2-2'];
+const earlierVocab = Object.entries(
+  import.meta.glob<{ default: LevelContent }>('../fr-*/index.ts', { eager: true }),
+)
+  .filter(([path]) => EARLIER.some((id) => path.includes(`/${id}/`)))
+  .flatMap(([, m]) => m.default.vocab);
+
 describe('French B1.1 vocabulary integrity', () => {
-  it('does not repeat vocabulary from French A1.1', () => {
-    const earlier = new Set(fr11.vocab.map(key));
+  it('does not repeat vocabulary from French A1.1 to A2.2', () => {
+    expect(earlierVocab.length).toBeGreaterThan(0);
+    const earlier = new Set(earlierVocab.map(key));
     const repeated = content.vocab.map(key).filter((k) => earlier.has(k) && !REVIEW_WORDS.has(k));
     expect(repeated).toEqual([]);
   });
