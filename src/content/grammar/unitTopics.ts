@@ -569,7 +569,7 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-subjunctive' },
     { topic: 'fr-obligation' },
     { topic: 'fr-advice' },
-    { topic: 'fr-negative-words' },
+    { topic: 'fr-restriction' },
     { topic: 'fr-negative-prefixes' },
   ],
 };

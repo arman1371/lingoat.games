@@ -365,7 +365,7 @@ export const TAGS = {
   'fr-subjunctive': { label: 'Subjunctive (il faut que …)', group: 'grammar', emoji: '🎯' },
   'fr-obligation': { label: 'Must, forbidden, allowed', group: 'grammar', emoji: '🚦' },
   'fr-advice': { label: 'Giving advice', group: 'grammar', emoji: '💡' },
-  'fr-negative-words': { label: 'ne … plus, jamais, rien, que', group: 'grammar', emoji: '⛔' },
+  'fr-restriction': { label: 'ne … que, ne … ni … ni, aucun', group: 'grammar', emoji: '⛔' },
   'fr-negative-prefixes': { label: 'in-, im-, il-, ir-', group: 'grammar', emoji: '➖' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },

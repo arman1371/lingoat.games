@@ -195,36 +195,36 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
     sources: [S.conseiller, S.subjunctive],
   },
   {
-    id: 'fr-negative-words',
-    title: 'ne … plus, jamais, rien, personne, que',
-    tagline: 'How do I say “no longer”, “never”, “nothing”, “nobody” and “only”?',
+    id: 'fr-restriction',
+    title: 'ne … que, ne … ni … ni, aucun',
+    tagline: 'How do I say “only”, “neither … nor” and “not one”?',
     level: LEVEL,
     summary:
-      'Like ne … pas, the other negations surround the verb: ne … plus, ne … jamais, ne … rien, ne … personne. Ne … que means “only”. Rien and personne can be the subject of the sentence.',
+      'Ne … que means “only” and is not a real negation. Ne … ni … ni … means “neither … nor”, aucun(e) means “not one”. Rien and personne can also be the subject of the sentence.',
     sections: [
       section(
         'forms',
-        'The negative pairs',
+        'Restriction and the other negative words',
         table(
-          'Negations and restriction.',
+          'Forms and meanings.',
           ['Form', 'Meaning', 'Example'],
           [
-            ['ne … plus', 'no longer', 'Je n’habite plus ici.'],
-            ['ne … jamais', 'never', 'Elle ne rend jamais service.'],
+            ['ne … que', 'only', 'Nous n’avons qu’une clé.'],
+            ['ne … ni … ni …', 'neither … nor', 'Je n’ai ni balcon ni jardin.'],
+            ['ne … aucun(e)', 'not one, no', 'Je n’ai aucun problème.'],
             ['ne … rien', 'nothing', 'Il ne dit rien.'],
             ['ne … personne', 'nobody', 'Je ne vois personne.'],
-            ['ne … que', 'only', 'Nous n’avons qu’une clé.'],
           ],
         ),
         p(
-          'In a compound tense **ne** goes before the auxiliary and **plus, jamais, rien** after it: *Il n’a jamais payé.* **Personne** and **que** come after the participle: *Je n’ai vu personne. Je n’ai payé que le loyer.* With two verbs the negation surrounds the first: *Je ne veux plus déménager.*',
+          '**Ne … que** limits the quantity but does not deny it, so the article stays: *Il n’y a que des voisins calmes.* It is the same as **seulement**. **Ne … ni … ni …** drops **un, une, du, des**: *Je n’ai ni frère ni sœur.* The definite article stays: *Il n’aime ni le bruit ni la foule.* **Aucun** is always singular and agrees in gender: *aucun voisin, aucune clé.* You already know **ne … pas, plus and jamais**: these work the same way around the verb.',
         ),
       ),
       section(
-        'subject',
-        'Subject, article and restriction',
+        'position',
+        'Position and subject',
         p(
-          '**Rien** and **personne** can open the sentence; **ne** then goes before the verb: *Personne ne répond. Rien n’est cassé.* After **ne … plus** and **ne … jamais**, **un, une, du, des** become **de**: *Il n’y a plus de voisins.* After **ne … que** the article stays: *Il n’y a que des voisins.*',
+          'In the **passé composé** **ne** goes before the auxiliary. **Rien** comes before the participle, **personne**, **que**, **aucun** and the second **ni** after it: *Je n’ai rien dit. Je n’ai vu personne. Je n’ai payé que le loyer.* **Rien**, **personne**, **aucun** and **ni … ni** can open the sentence. **Ne** then goes before the verb and there is no **pas**: *Personne ne répond. Rien n’est cassé. Aucun voisin ne se plaint.*',
         ),
         compare(
           {
@@ -241,12 +241,12 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
         mistake(
           'Watch out',
           '✗ Il y a que deux chambres.  ✓ Il n’y a que deux chambres.',
-          '✗ Je n’ai jamais des problèmes.  ✓ Je n’ai jamais de problèmes.',
-          '✗ Je vois personne.  ✓ Je ne vois personne.',
+          '✗ Personne ne répond pas.  ✓ Personne ne répond.',
+          '✗ Je n’ai aucuns problèmes.  ✓ Je n’ai aucun problème.',
         ),
         tip(
           'In speech',
-          'In casual speech ne is often dropped (j’habite plus ici, il y a que deux chambres). Write and learn the full pair.',
+          'In casual speech ne is often dropped (il y a que deux chambres, j’ai rien dit). Write and learn the full pair.',
         ),
       ),
     ],
@@ -298,7 +298,7 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['fr-negative-words'],
+    related: ['fr-restriction'],
     sources: [S.prefixIn],
   },
 ];

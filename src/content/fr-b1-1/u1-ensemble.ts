@@ -105,20 +105,24 @@ const PREFIX_CARDS: [string, 'in' | 'im' | 'il' | 'ir', string][] = [
   ['responsable', 'ir', 'responsible → irresponsable'],
 ];
 
-/** [sentence, bucket, English] for the plus / jamais / que / rien-personne sort */
-const NEGATION_CARDS: [string, 'plus' | 'jamais' | 'que' | 'nobody', string][] = [
-  ['Je n’habite plus ici.', 'plus', 'I no longer live here.'],
-  ['Il n’y a plus d’ascenseur.', 'plus', 'There is no lift any more.'],
-  ['Nous ne sommes plus colocataires.', 'plus', 'We are no longer flatmates.'],
-  ['Elle ne rend jamais service.', 'jamais', 'She never does anyone a favour.'],
-  ['Ils ne participent jamais à la fête.', 'jamais', 'They never take part in the party.'],
-  ['Tu ne respectes jamais le règlement.', 'jamais', 'You never respect the rules.'],
+/** [sentence, bucket, English] for the que / ni / aucun / rien-personne sort */
+const NEGATION_CARDS: [string, 'que' | 'ni' | 'aucun' | 'nobody', string][] = [
   ['Nous n’avons qu’une clé.', 'que', 'We have only one key.'],
   ['Il n’y a que deux chambres.', 'que', 'There are only two bedrooms.'],
   ['Je ne paie que les charges.', 'que', 'I only pay the service charges.'],
-  ['Je ne vois personne sur le palier.', 'nobody', 'I see nobody on the landing.'],
-  ['Il ne dit rien.', 'nobody', 'He says nothing.'],
+  [
+    'Je n’ai ni lave-linge ni lave-vaisselle.',
+    'ni',
+    'I have neither a washing machine nor a dishwasher.',
+  ],
+  ['Elle n’aime ni le bruit ni la foule.', 'ni', 'She likes neither noise nor crowds.'],
+  ['Nous ne voulons ni dispute ni problème.', 'ni', 'We want neither a quarrel nor a problem.'],
+  ['Je n’ai aucun problème avec mes voisins.', 'aucun', 'I have no problem with my neighbours.'],
+  ['Aucun voisin ne fait de bruit.', 'aucun', 'No neighbour makes any noise.'],
+  ['Il n’y a aucune place dans la cour.', 'aucun', 'There is no space at all in the courtyard.'],
   ['Personne ne répond.', 'nobody', 'Nobody answers.'],
+  ['Rien n’est cassé.', 'nobody', 'Nothing is broken.'],
+  ['Je n’ai rien dit à personne.', 'nobody', 'I told nobody anything.'],
 ];
 
 export const ensemble: UnitContent = {
@@ -137,7 +141,7 @@ export const ensemble: UnitContent = {
       'The present subjunctive after il faut que',
       'Obligation, ban and permission',
       'Giving advice',
-      'ne … plus, jamais, rien, personne, que',
+      'ne … que, ne … ni … ni, aucun',
       'The prefixes in-, im-, il-, ir-',
     ],
     vocabFields: ['Housing and neighbours', 'Living together', 'Interest, advice and good wishes'],
@@ -441,19 +445,19 @@ export const ensemble: UnitContent = {
       'sort-negations',
       'sortit',
       {
-        title: 'plus, jamais, que or personne?',
+        title: 'que, ni, aucun or personne?',
         description: 'Which negation is in the sentence?',
-        tags: ['grammar', 'fr-negative-words', 'living-together'],
+        tags: ['grammar', 'fr-restriction', 'living-together'],
         difficulty: 2,
         estMinutes: 4,
-        lesson: 'fr-negative-words',
+        lesson: 'fr-restriction',
       },
       {
         instruction: 'Which negation does the sentence use?',
         buckets: [
-          { id: 'plus', label: 'ne … plus (no longer)', emoji: '🛑' },
-          { id: 'jamais', label: 'ne … jamais (never)', emoji: '♾️' },
           { id: 'que', label: 'ne … que (only)', emoji: '1️⃣' },
+          { id: 'ni', label: 'ne … ni … ni', emoji: '➗' },
+          { id: 'aucun', label: 'aucun(e)', emoji: '0️⃣' },
           { id: 'nobody', label: 'rien / personne', emoji: '🕳️' },
         ],
         items: NEGATION_CARDS.map(([text, bucket, translation], i) => ({
@@ -528,7 +532,7 @@ export const ensemble: UnitContent = {
             translation: 'We have only two keys.',
             words: ['Nous', 'n’avons', 'que', 'deux', 'clés.'],
             extra: ['pas'],
-            lesson: 'fr-negative-words',
+            lesson: 'fr-restriction',
           },
           {
             id: 's4',
@@ -546,10 +550,10 @@ export const ensemble: UnitContent = {
           },
           {
             id: 's6',
-            translation: 'She never does anyone a favour.',
-            words: ['Elle', 'ne', 'rend', 'jamais', 'service.'],
+            translation: 'I have neither a balcony nor a garden.',
+            words: ['Je', 'n’ai', 'ni', 'balcon', 'ni', 'jardin.'],
             extra: ['pas'],
-            lesson: 'fr-negative-words',
+            lesson: 'fr-restriction',
           },
         ],
       },
@@ -805,25 +809,23 @@ export const ensemble: UnitContent = {
               {
                 kind: 'npc',
                 who: 'Inès',
-                text: 'L’immeuble est calme, mais il n’y a qu’une chambre.',
-                translation: 'The building is quiet, but there is only one bedroom.',
+                text: 'Il n’y a ni balcon ni jardin, mais l’immeuble est très calme.',
+                translation:
+                  'There is neither a balcony nor a garden, but the building is very quiet.',
               },
               {
                 kind: 'you',
                 options: [
+                  { text: 'Tant mieux : il n’y a aucun bruit !', correct: true },
                   {
-                    text: 'Ce n’est pas grave, tu n’as plus besoin de colocataire !',
-                    correct: true,
+                    text: 'Tant mieux : il n’y a pas aucun bruit !',
+                    correct: false,
+                    feedback: 'Aucun already makes the sentence negative: no pas.',
                   },
                   {
-                    text: 'Ce n’est pas grave, tu n’as pas plus besoin de colocataire !',
+                    text: 'Tant mieux : il y a que du bruit !',
                     correct: false,
-                    feedback: '“No longer” is ne … plus, without pas.',
-                  },
-                  {
-                    text: 'Ce n’est pas grave, tu n’as jamais besoin de colocataire !',
-                    correct: false,
-                    feedback: 'Jamais means never. She no longer needs a flatmate: ne … plus.',
+                    feedback: 'That would mean “only noise”. Say il n’y a aucun bruit.',
                   },
                 ],
               },
@@ -884,9 +886,9 @@ export const ensemble: UnitContent = {
           },
           {
             id: 'b4',
-            text: '“Je n’ai plus d’argent” means “I have never had money”.',
+            text: '“Je n’ai ni frère ni sœur” means “I have a brother and a sister”.',
             isTrue: false,
-            explanation: 'Ne … plus means no longer. Never is ne … jamais.',
+            explanation: 'Ne … ni … ni means neither … nor: no brother and no sister.',
           },
           {
             id: 'b5',
@@ -984,21 +986,16 @@ export const ensemble: UnitContent = {
           {
             id: 'c5',
             prompt: 'Complete: “Nous n’avons ___ une clé.” (only)',
-            options: ['qu’', 'pas', 'plus', 'jamais'],
+            options: ['qu’', 'pas', 'aucun', 'rien'],
             answer: 'qu’',
-            lesson: 'fr-negative-words',
+            lesson: 'fr-restriction',
           },
           {
             id: 'c6',
-            prompt: '“Elle ne rend jamais service” means …',
-            options: [
-              'She never helps.',
-              'She no longer helps.',
-              'She helps nobody.',
-              'She only helps once.',
-            ],
-            answer: 'She never helps.',
-            lesson: 'fr-negative-words',
+            prompt: 'Complete: “Je n’ai ___ problème avec mes voisins.” (not one)',
+            options: ['aucun', 'aucune', 'aucuns', 'pas'],
+            answer: 'aucun',
+            lesson: 'fr-restriction',
           },
           {
             id: 'c7',

@@ -1088,10 +1088,14 @@ export const LESSONS = {
       'Il vaut mieux que tu parles avant de te plaindre.',
     ],
   },
-  'fr-negative-words': {
-    title: 'ne … plus, jamais, rien, personne, que',
-    rule: 'Like ne … pas, the other negations surround the verb: ne … plus (no longer), ne … jamais (never), ne … rien (nothing), ne … personne (nobody). Ne … que means only. Rien and personne can be the subject: Personne ne répond. After plus and jamais, un, du and des become de.',
-    examples: ['Je n’habite plus ici.', 'Elle ne rend jamais service.', 'Nous n’avons qu’une clé.'],
+  'fr-restriction': {
+    title: 'ne … que, ne … ni … ni, aucun',
+    rule: 'Ne … que means only: Je n’ai qu’une clé (the article stays). Ne … ni … ni … means neither … nor: Je n’ai ni frère ni sœur. Aucun(e) means not one: Je n’ai aucun problème. Rien and personne can be the subject: Personne ne répond. Passé composé: je n’ai rien dit, je n’ai vu personne.',
+    examples: [
+      'Nous n’avons qu’une clé.',
+      'Je n’ai ni balcon ni jardin.',
+      'Aucun voisin ne fait de bruit.',
+    ],
   },
   'fr-negative-prefixes': {
     title: 'in-, im-, il-, ir-',
