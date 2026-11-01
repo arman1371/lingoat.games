@@ -391,6 +391,12 @@ export const TAGS = {
   'fr-demonstratives': { label: 'ce, cet, cette, ces', group: 'grammar', emoji: '👉' },
   'fr-futur-proche': { label: 'aller + infinitive', group: 'grammar', emoji: '🔮' },
   'fr-adjective-position': { label: 'un petit pull rouge', group: 'grammar', emoji: '↔️' },
+  // topics and grammar points – French B2.2
+  'fr-b22-news': { label: 'News & press', group: 'topic', emoji: '📰' },
+  'fr-b22-disinformation': { label: 'Disinformation & fact-checking', group: 'topic', emoji: '🕵️' },
+  'fr-b22-reported-speech': { label: 'Reported speech', group: 'grammar', emoji: '🗨️' },
+  'fr-b22-cleft': { label: 'c’est … qui / que', group: 'grammar', emoji: '🔦' },
+  'fr-b22-relative-composed': { label: 'lequel, auquel, duquel', group: 'grammar', emoji: '🔗' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

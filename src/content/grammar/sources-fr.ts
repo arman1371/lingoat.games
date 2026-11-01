@@ -44,4 +44,7 @@ export const FR_SOURCES = {
   imperative: wp('Impératif_(grammaire)', 'Impératif (grammaire)'),
   demonstrative: wp('Adjectif_démonstratif', 'Adjectif démonstratif'),
   futurProche: wp('Futur_proche', 'Futur proche'),
+  indirectSpeech: wp('Discours_indirect', 'Discours indirect'),
+  cleft: wp('Phrase_clivée', 'Phrase clivée'),
+  lequel: wiktionary('lequel', 'lequel'),
 } as const satisfies Record<string, Source>;

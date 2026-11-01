@@ -226,6 +226,22 @@ imperative of être and avoir, the negation of the near future, the chez + perso
 Wiktionnaire conjugation pages were checked for prendre, vouloir and finir; the other verb tables come from the
 generated forms in `src/lib/french`.
 
+## French B2.2 (3 topics so far)
+
+The lessons are in `src/content/grammar/fr-b2-2.ts`, the pages in `sources-fr.ts`. Unit 1 (`fr-b2-2-actu`) teaches three.
+
+| Topic                  | Pages read                                                           |
+| ---------------------- | -------------------------------------------------------------------- |
+| Reported speech        | [Discours indirect](https://fr.wikipedia.org/wiki/Discours_indirect) |
+| c’est … qui / que      | [Phrase clivée](https://fr.wikipedia.org/wiki/Phrase_cliv%C3%A9e)    |
+| lequel, auquel, duquel | Wiktionnaire [lequel](https://fr.wiktionary.org/wiki/lequel)         |
+
+**French B2.2 limits:** the pages do not state every rule. These follow common textbook teaching and are **not** checked
+against a fetched page: the questions in reported speech (si, ce que, ce qui; the Discours indirect page does not cover
+them), the list of introducing verbs and their nuances, the shift of the time words in the table (the page gives only
+ici → là, maintenant → alors and hier → la veille), the pseudo-cleft sentences with ce qui / ce que / ce dont (the Phrase
+clivée page covers only the c’est … qui / que frame) and the use of qui instead of a composed pronoun for people.
+
 ## Limits of the research
 
 - The Deutsche Welle learner pages could not be fetched, and the Duden grammar pages are not freely readable, so the

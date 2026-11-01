@@ -1218,6 +1218,34 @@ export const LESSONS = {
     rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
     examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
   },
+  // ---- French B2.2 -------------------------------------------------------------------------
+  'fr-b22-reported-speech': {
+    title: 'Reported speech',
+    rule: 'After a past verb of saying (a dit, a annoncé) tenses shift back: présent → imparfait, passé composé → plus-que-parfait, futur → conditionnel. Time words change too: demain → le lendemain, hier → la veille. After a present verb nothing shifts. A yes/no question uses si.',
+    examples: [
+      '« Je suis fatiguée. » → Elle a dit qu’elle était fatiguée.',
+      '« Je partirai demain. » → Il a dit qu’il partirait le lendemain.',
+      '« Tu as lu l’article ? » → Elle a demandé si j’avais lu l’article.',
+    ],
+  },
+  'fr-b22-cleft': {
+    title: 'c’est … qui / que',
+    rule: 'To stress one part of a sentence, frame it with c’est … qui (the stressed word is the subject) or c’est … que (an object, a time or a place). To stress a whole clause use ce qui, ce que or ce dont, then c’est.',
+    examples: [
+      'C’est le journal qui a publié l’enquête.',
+      'C’est la veille que le ministre a démissionné.',
+      'Ce dont j’ai besoin, c’est d’un démenti.',
+    ],
+  },
+  'fr-b22-relative-composed': {
+    title: 'lequel, auquel, duquel',
+    rule: 'After a preposition other than de, a thing is replaced by lequel, laquelle, lesquels or lesquelles, matching the noun. À and de contract with the masculine and plural forms: auquel, auxquels, duquel, desquels. For people, qui is usual: la collègue avec qui je travaille.',
+    examples: [
+      'Voici l’article sur lequel elle a travaillé.',
+      'Le rapport auquel elle fait référence est faux.',
+      'Les raisons pour lesquelles il a menti.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

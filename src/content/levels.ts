@@ -9,7 +9,6 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   ['b1-1', 'B1.1', 'Threshold, first half'],
   ['b1-2', 'B1.2', 'Threshold, second half'],
   ['b2-1', 'B2.1', 'Vantage, first half'],
-  ['b2-2', 'B2.2', 'Vantage, second half'],
   ['c1-1', 'C1.1', 'Effective proficiency, first half'],
   ['c1-2', 'C1.2', 'Effective proficiency, second half'],
   ['c2-1', 'C2.1', 'Mastery, first half'],
@@ -22,18 +21,45 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   status: 'coming-soon',
 }));
 
-const FRENCH_LEVELS: LevelMeta[] = [
-  {
-    language: 'fr',
-    id: 'fr-a1-1',
-    title: 'A1.1',
-    subtitle:
-      'First steps: greetings, introductions, numbers, family, hobbies, food, town and time',
-    status: 'available',
-    load: () => import('./fr-a1-1'),
-  },
-  ...FRENCH_COMING_SOON,
+/** Display order of the French levels, whatever order they are declared in. */
+const FRENCH_ORDER = [
+  'fr-a1-1',
+  'fr-a1-2',
+  'fr-a2-1',
+  'fr-a2-2',
+  'fr-b1-1',
+  'fr-b1-2',
+  'fr-b2-1',
+  'fr-b2-2',
+  'fr-c1-1',
+  'fr-c1-2',
+  'fr-c2-1',
+  'fr-c2-2',
 ];
+
+const FRENCH_LEVELS: LevelMeta[] = (
+  [
+    {
+      language: 'fr',
+      id: 'fr-a1-1',
+      title: 'A1.1',
+      subtitle:
+        'First steps: greetings, introductions, numbers, family, hobbies, food, town and time',
+      status: 'available',
+      load: () => import('./fr-a1-1'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-b2-2',
+      title: 'B2.2',
+      subtitle:
+        'News and disinformation: the press, reported speech, highlighting with c’est … qui and composed relative pronouns',
+      status: 'available',
+      load: () => import('./fr-b2-2'),
+    },
+    ...FRENCH_COMING_SOON,
+  ] as LevelMeta[]
+).sort((a, b) => FRENCH_ORDER.indexOf(a.id) - FRENCH_ORDER.indexOf(b.id));
 
 /**
  * Level catalogue. To add a level: create `src/content/<level-id>/index.ts` that default-exports a

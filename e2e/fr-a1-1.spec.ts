@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
 import fr11 from '../src/content/fr-a1-1';
+import fr22 from '../src/content/fr-b2-2';
 import a11 from '../src/content/a1-1';
 import { activity, captureSpeech, playPerfectly, SEED } from './helpers';
 
@@ -52,7 +53,8 @@ test.describe('French A1.1 – level navigation', () => {
 test.describe('French A1.1 – library', () => {
   test('lists only the French games and no German grammar points', async ({ page }) => {
     await page.goto('/fr/library?view=games');
-    await expect(page.getByTestId('result-count')).toHaveText(`${fr11.activities.length} games`);
+    const all = fr11.activities.length + fr22.activities.length;
+    await expect(page.getByTestId('result-count')).toHaveText(`${all} games`);
     await page.getByText(/^Filters/).click();
     await expect(page.getByRole('button', { name: /tu or vous/ })).toBeVisible();
     await expect(page.getByRole('button', { name: /Verb conjugation/ })).toHaveCount(0);
