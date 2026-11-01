@@ -1061,6 +1061,43 @@ export const LESSONS = {
     examples: ['Das ist ja interessant!', 'Das ist eben so.', 'Du hast es doch versprochen!'],
   },
   // ---- French A1.1 -------------------------------------------------------------------------
+  'fr-subjunctive': {
+    title: 'The present subjunctive',
+    rule: 'After il faut que, il vaut mieux que, vouloir que and other expressions of necessity, wish or feeling, the verb after que is in the subjunctive: take the ils stem and add -e, -es, -e, -ions, -iez, -ent (que je prenne, que nous prenions). Être, avoir, aller, faire, pouvoir, savoir and vouloir have their own stems.',
+    examples: [
+      'Il faut que tu fasses moins de bruit.',
+      'Il faut que nous allions à la réunion.',
+      'Il vaut mieux que vous soyez à l’heure.',
+    ],
+  },
+  'fr-obligation': {
+    title: 'Must, forbidden, allowed',
+    rule: 'Obligation: il faut + infinitive (or il faut que + subjunctive), devoir + infinitive. Ban: il est interdit de, il ne faut pas, on ne doit pas. Permission: on a le droit de, il est permis de, on peut. After de or devoir the verb stays in the infinitive.',
+    examples: [
+      'Il faut trier les déchets.',
+      'Il est interdit de fumer dans l’immeuble.',
+      'On a le droit d’inviter des amis.',
+    ],
+  },
+  'fr-advice': {
+    title: 'Giving advice',
+    rule: 'With the same subject use an infinitive: je te conseille de + infinitive, tu devrais + infinitive, il vaut mieux + infinitive. With a new subject after il vaut mieux use que + subjunctive. Never say conseiller que + present: je te conseille de partir.',
+    examples: [
+      'Je te conseille de parler à ta voisine.',
+      'Tu devrais lire le règlement.',
+      'Il vaut mieux que tu parles avant de te plaindre.',
+    ],
+  },
+  'fr-negative-words': {
+    title: 'ne … plus, jamais, rien, personne, que',
+    rule: 'Like ne … pas, the other negations surround the verb: ne … plus (no longer), ne … jamais (never), ne … rien (nothing), ne … personne (nobody). Ne … que means only. Rien and personne can be the subject: Personne ne répond. After plus and jamais, un, du and des become de.',
+    examples: ['Je n’habite plus ici.', 'Elle ne rend jamais service.', 'Nous n’avons qu’une clé.'],
+  },
+  'fr-negative-prefixes': {
+    title: 'in-, im-, il-, ir-',
+    rule: 'The prefix in- turns a word into its opposite. It becomes im- before b, p and m, il- before l and ir- before r: inutile, impossible, illégal, irréel. The spelling follows the sound, not the meaning.',
+    examples: ['utile → inutile', 'possible → impossible', 'légal → illégal'],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',

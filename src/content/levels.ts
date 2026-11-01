@@ -6,7 +6,6 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   ['a1-2', 'A1.2', 'Breakthrough, second half'],
   ['a2-1', 'A2.1', 'Waystage, first half'],
   ['a2-2', 'A2.2', 'Waystage, second half'],
-  ['b1-1', 'B1.1', 'Threshold, first half'],
   ['b1-2', 'B1.2', 'Threshold, second half'],
   ['b2-1', 'B2.1', 'Vantage, first half'],
   ['b2-2', 'B2.2', 'Vantage, second half'],
@@ -22,7 +21,23 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   status: 'coming-soon',
 }));
 
-const FRENCH_LEVELS: LevelMeta[] = [
+/** French levels are listed in CEFR order, whatever order they are declared in. */
+const CEFR_ORDER = [
+  'a1-1',
+  'a1-2',
+  'a2-1',
+  'a2-2',
+  'b1-1',
+  'b1-2',
+  'b2-1',
+  'b2-2',
+  'c1-1',
+  'c1-2',
+  'c2-1',
+  'c2-2',
+];
+
+const FRENCH_DECLARED: LevelMeta[] = [
   {
     language: 'fr',
     id: 'fr-a1-1',
@@ -32,8 +47,21 @@ const FRENCH_LEVELS: LevelMeta[] = [
     status: 'available',
     load: () => import('./fr-a1-1'),
   },
+  {
+    language: 'fr',
+    id: 'fr-b1-1',
+    title: 'B1.1',
+    subtitle:
+      'Living together, family memories, work, consumption, French around the world and the media',
+    status: 'available',
+    load: () => import('./fr-b1-1'),
+  },
   ...FRENCH_COMING_SOON,
 ];
+
+const FRENCH_LEVELS: LevelMeta[] = [...FRENCH_DECLARED].sort(
+  (a, b) => CEFR_ORDER.indexOf(a.id.slice(3)) - CEFR_ORDER.indexOf(b.id.slice(3)),
+);
 
 /**
  * Level catalogue. To add a level: create `src/content/<level-id>/index.ts` that default-exports a

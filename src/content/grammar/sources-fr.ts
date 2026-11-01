@@ -44,4 +44,8 @@ export const FR_SOURCES = {
   imperative: wp('Impératif_(grammaire)', 'Impératif (grammaire)'),
   demonstrative: wp('Adjectif_démonstratif', 'Adjectif démonstratif'),
   futurProche: wp('Futur_proche', 'Futur proche'),
+  subjunctive: wp('Subjonctif_en_français', 'Subjonctif en français'),
+  falloir: wiktionary('falloir', 'falloir'),
+  conseiller: wiktionary('conseiller', 'conseiller'),
+  prefixIn: wiktionary('in-', 'in-'),
 } as const satisfies Record<string, Source>;

@@ -540,4 +540,12 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-futur-proche' },
     { topic: 'fr-adjective-position' },
   ],
+  // ---- French B1.1 ----------------------------------------------------------------------------
+  'fr-b1-1-ensemble': [
+    { topic: 'fr-subjunctive' },
+    { topic: 'fr-obligation' },
+    { topic: 'fr-advice' },
+    { topic: 'fr-negative-words' },
+    { topic: 'fr-negative-prefixes' },
+  ],
 };

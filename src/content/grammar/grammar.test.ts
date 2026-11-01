@@ -11,6 +11,7 @@ import c12 from '../c1-2';
 import c21 from '../c2-1';
 import c22 from '../c2-2';
 import fr11 from '../fr-a1-1';
+import frB11 from '../fr-b1-1';
 import { LESSONS } from '../lessons';
 import { articleTable, datPlural, frConjugationTable } from './build';
 import {
@@ -36,6 +37,7 @@ const units = [
   ...c21.units,
   ...c22.units,
   ...fr11.units,
+  ...frB11.units,
 ];
 const unitIds = new Set(units.map((u) => u.id));
 const levelOfUnit = new Map(units.map((u) => [u.id, u.levelId]));
@@ -162,13 +164,13 @@ describe('French grammar topics', () => {
 
   it('belong to the French level and link only to French topics', () => {
     for (const t of french) {
-      expect(t.level, t.id).toBe('fr-a1-1');
+      expect(t.level, t.id).toMatch(/^fr-[abc][12]-[12]$/);
       for (const r of t.related) expect(r.startsWith('fr-'), `${t.id} → ${r}`).toBe(true);
     }
   });
 
   it('give every French unit its topics, none from German', () => {
-    for (const u of fr11.units) {
+    for (const u of [...fr11.units, ...frB11.units]) {
       expect(topicsOfUnit(u.id).length, u.id).toBeGreaterThan(0);
       for (const { topic } of topicsOfUnit(u.id))
         expect(topic.id.startsWith('fr-'), u.id).toBe(true);

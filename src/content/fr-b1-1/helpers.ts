@@ -1,0 +1,30 @@
+import type { FrenchPronoun } from '@/lib/persons';
+import { subjunctiveFr } from '@/lib/french/subjunctive';
+import { unit as baseUnit } from '../builders';
+import type { ConfigOf } from '../schema';
+
+export type { UnitContent } from './types';
+
+/** `unit()` of the level: every unit passes the level id so the content test can check the prefix. */
+export const unitFr = (u: Parameters<typeof baseUnit>[0]) => baseUnit({ levelId: 'fr-b1-1', ...u });
+
+type Table = ConfigOf<'conjugation'>['tables'][number];
+
+/**
+ * A present-subjunctive table (the forms after "que", generated from `src/lib/french/subjunctive`);
+ * `blanks` are the persons to fill in.
+ */
+export function subjTable(
+  id: string,
+  verb: string,
+  meaning: string,
+  blanks: FrenchPronoun[],
+): Table {
+  return {
+    id,
+    verb: `que … ${verb}`,
+    meaning: `${meaning} (subjonctif présent)`,
+    forms: subjunctiveFr(verb),
+    blanks,
+  };
+}
