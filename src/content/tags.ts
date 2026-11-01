@@ -420,6 +420,12 @@ export const TAGS = {
     emoji: '❔',
   },
   'fr-c22-medias': { label: 'News & media (French C2)', group: 'topic', emoji: '📰' },
+  'fr-c22-infinitif': {
+    label: 'The infinitive: past, negative, after prepositions',
+    group: 'grammar',
+    emoji: '♾️',
+  },
+  'fr-c22-engagement': { label: 'Civic life (French C2)', group: 'topic', emoji: '🤝' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

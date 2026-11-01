@@ -38,7 +38,7 @@ figures of style, and a different set of C2 grammar points:
 | 4   | Patrimoine et histoire (`patrimoine`)  | heritage, history, francophonie                | complex relative clauses (`fr-c22-relatives`)                             | done   |
 | 5   | Droit et justice (`droit`)             | courts, rights, contracts                      | advanced negation (`fr-c22-negation`)                                     | done   |
 | 6   | Médias et société (`medias`)           | press, freedom of expression, misinformation   | conditional of reserve and distance markers (`fr-c22-modalisation`)       | done   |
-| 7   | Engagement citoyen                     | associations, volunteering, civil society      | the infinitive (infinitif passé, avant de, après avoir, de peur de)       | next   |
+| 7   | Engagement citoyen (`engagement`)      | associations, volunteering, civil society      | the infinitive (`fr-c22-infinitif`)                                       | done   |
 | 8   | Climat et environnement                | climate, energy, biodiversity                  | agreement with quantifiers and collectives (la plupart, plus d’un, tout)  | next   |
 | 9   | Proverbes et figures de style          | proverbs, idioms, métaphore, litote, antithèse | figures of style                                                          | next   |
 

@@ -272,3 +272,7 @@ generated forms in `src/lib/french`.
   and the other uses of the conditional. The term “conditionnel de réserve” does not appear on the page, and the page
   calls the analysis of this value disputed. The distance markers (selon, d’après, soi-disant, prétendument) and the
   subjunctive after il semblerait que follow textbook teaching.
+- The infinitive (`fr-c22-infinitif`): fr.wikipedia.org _Infinitif passé_ was read for the formation (auxiliary +
+  participle), the choice of auxiliary and agreement as in the passé composé, and the rule that après takes the past
+  infinitive. fr.wikipedia.org _Infinitif_ was also read but does not cover the French prepositions. The negative
+  infinitive (ne pas avoir signé), avant de, pour, sans, de peur de and the same-subject rule follow textbook teaching.

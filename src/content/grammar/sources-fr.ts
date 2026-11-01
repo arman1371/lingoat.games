@@ -53,6 +53,7 @@ export const FR_SOURCES = {
   dont: wiktionary('dont', 'dont'),
   lequel: wiktionary('lequel', 'lequel'),
   conditional: wp('Conditionnel_en_français', 'Conditionnel en français'),
+  infinitivePast: wp('Infinitif_passé', 'Infinitif passé'),
   passive: wp('Voix_passive', 'Voix passive'),
   pastParticipleAgreement: wp(
     'Accord_du_participe_passé_en_français',

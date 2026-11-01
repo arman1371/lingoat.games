@@ -486,4 +486,77 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-c22-passif'],
     sources: [S.conditional],
   },
+  {
+    id: 'fr-c22-infinitif',
+    title: 'The infinitive: past, negative, after prepositions',
+    tagline: 'Saying what comes before, after and without',
+    level: LEVEL,
+    summary:
+      'The past infinitive (avoir or être + participle) shows an action that is completed before another one, and après always takes it. Avant de, pour, sans, afin de and de peur de take an infinitive when both verbs share a subject. In the negative infinitive ne and pas stay together.',
+    sections: [
+      section(
+        'passe',
+        'The past infinitive',
+        p(
+          'It is built with **avoir** or **être** in the infinitive and the past participle, with the same choice of auxiliary and the same agreement as in the passé composé. It shows an action completed before another one. After **après** it is always used: *Après avoir signé la pétition, ils sont allés à la mairie.* With être the participle agrees with the subject: *Après être arrivés…*',
+        ),
+        table(
+          'Present and past infinitive.',
+          ['Infinitive', 'Present', 'Past'],
+          [
+            ['signer', 'signer', 'avoir signé'],
+            ['arriver', 'arriver', 'être arrivé(e)(s)'],
+            ['se lever', 'se lever', 's’être levé(e)(s)'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Après signer la pétition…  ✓ Après avoir signé la pétition…',
+          '✗ Après avoir rentrés…  ✓ Après être rentrés…',
+        ),
+      ),
+      section(
+        'prepositions',
+        'avant de, pour, sans, de peur de',
+        p(
+          'These prepositions take an infinitive when the two verbs have the **same subject**: *Avant de voter, lisez le programme. Ils se sont tus de peur d’être remarqués.* With a different subject, use a conjunction: *avant que, de peur que* (subjunctive). **Sans** and **pour** can also take the past infinitive: *sans avoir prévenu personne.*',
+        ),
+        examples(
+          ['Avant de décider, il faut consulter.', 'Before deciding, you must consult.'],
+          ['Elle est partie sans avoir prévenu personne.', 'She left without telling anyone.'],
+          ['Il se tait de peur de se tromper.', 'He keeps quiet for fear of being wrong.'],
+        ),
+      ),
+      section(
+        'negatif',
+        'The negative infinitive',
+        p(
+          'Put **ne pas** (or *ne plus, ne jamais, ne rien*) together before the infinitive. In the past infinitive they stand before the auxiliary: *Je regrette de ne pas avoir signé.* The object pronoun comes between pas and the verb: *de ne pas l’avoir fait.*',
+        ),
+        compare(
+          {
+            title: 'Present',
+            question: 'Same time as the main verb?',
+            example: 'Pour ne pas perdre de temps…',
+          },
+          {
+            title: 'Past',
+            question: 'Done before the main verb?',
+            example: 'Je regrette de ne pas avoir signé.',
+          },
+          {
+            title: 'Other subject',
+            question: 'Two different subjects?',
+            example: 'Avant que vous ne signiez…',
+          },
+        ),
+        tip(
+          'Quick test',
+          'Ask who does both actions. If it is the same person, an infinitive works; if not, use que and the subjunctive.',
+        ),
+      ),
+    ],
+    related: ['fr-c22-accord-participe'],
+    sources: [S.infinitivePast],
+  },
 ];

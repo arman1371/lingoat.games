@@ -1273,6 +1273,15 @@ export const LESSONS = {
       'Il semblerait que le journal ait menti. → caution',
     ],
   },
+  'fr-c22-infinitif': {
+    title: 'The infinitive: past, negative, after prepositions',
+    rule: 'After après use the past infinitive (avoir/être + participle): après avoir signé, après être arrivés. Avant de, pour, sans, afin de and de peur de take an infinitive when both verbs share the subject. In a negative infinitive ne pas stay together: pour ne pas perdre, ne pas avoir signé.',
+    examples: [
+      'Après avoir signé la pétition, ils sont partis. → past infinitive',
+      'Avant de voter, lisez le programme. → avant de',
+      'Je regrette de ne pas avoir aidé. → negative past infinitive',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
