@@ -1263,6 +1263,31 @@ export const LESSONS = {
     rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
     examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
   },
+  // ---- French A2.1 ---------------------------------------------------------------------------
+  'fr-a21-passe-compose': {
+    title: 'Passé composé with être',
+    rule: 'Aller, venir, arriver, partir, entrer, sortir, rester, tomber, naître, mourir and all pronominal verbs form the passé composé with être, not avoir. The participle then agrees with the subject: elle est partie, ils sont partis, nous nous sommes mariés.',
+    examples: ['Elle est née en 1995.', 'Nous sommes arrivés hier.', 'Je me suis installé à Lyon.'],
+  },
+  'fr-a21-participles': {
+    title: 'Irregular past participles',
+    rule: 'Regular verbs make the participle from the infinitive: -er → -é (parlé), -ir → -i (fini), -re → -u (vendu). Many common verbs are irregular and must be learned: avoir → eu, être → été, faire → fait, prendre → pris, voir → vu, écrire → écrit, vivre → vécu.',
+    examples: ['J’ai fait un stage.', 'Il a vécu à Rome.', 'Nous avons pris une décision.'],
+  },
+  'fr-a21-negatives': {
+    title: 'ne … rien, personne, plus, pas encore',
+    rule: 'Ne goes before the verb. In the passé composé rien, jamais, plus and pas encore stand between the auxiliary and the participle (je n’ai rien dit); personne comes after the participle (je n’ai vu personne). As a subject, rien and personne come first: personne n’est venu.',
+    examples: ['Elle n’a pas encore trouvé d’emploi.', 'Je n’ai vu personne.', 'Rien n’a changé.'],
+  },
+  'fr-a21-time-markers': {
+    title: 'pendant, depuis, en',
+    rule: 'Pendant gives how long something lasted and is over (j’ai travaillé pendant trois ans). Depuis says that something started in the past and still goes on, with the present tense (j’habite ici depuis 2020). En + year or month gives the moment (en 1998, en mai). Il y a + duration means ago.',
+    examples: [
+      'Il a vécu à Nice pendant dix ans.',
+      'Elle travaille ici depuis mars.',
+      'Je suis né en 1998.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

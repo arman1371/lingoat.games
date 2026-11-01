@@ -398,6 +398,17 @@ export const TAGS = {
   'fr-demonstratives': { label: 'ce, cet, cette, ces', group: 'grammar', emoji: '👉' },
   'fr-futur-proche': { label: 'aller + infinitive', group: 'grammar', emoji: '🔮' },
   'fr-adjective-position': { label: 'un petit pull rouge', group: 'grammar', emoji: '↔️' },
+  // topics – French A2.1
+  'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
+  // grammar points – French A2.1, unit 1
+  'fr-a21-passe-compose': { label: 'Passé composé with être', group: 'grammar', emoji: '⏪' },
+  'fr-a21-participles': { label: 'Irregular past participles', group: 'grammar', emoji: '🧱' },
+  'fr-a21-negatives': {
+    label: 'ne … rien / personne / jamais / plus',
+    group: 'grammar',
+    emoji: '🙅',
+  },
+  'fr-a21-time-markers': { label: 'pendant, depuis, en', group: 'grammar', emoji: '⏳' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

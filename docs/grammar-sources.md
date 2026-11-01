@@ -245,6 +245,25 @@ textbook teaching and are **not** checked against a fetched page; the same holds
 (the page only shows examples), the ensuite / puis / enfin ordering (the d'abord page does not list them), and the
 use of avant / après with a noun. For the passé composé the Wikipédia page does not state the participle endings (-é, -i, -u), the irregular participles or the negation around avoir; these follow common textbook teaching and the Wiktionnaire conjugation pages. The wiktionary entries for dernier and prochain do not state their position after a time noun or their agreement.
 
+## French A2.1 (4 topics so far)
+
+The lessons are in `src/content/grammar/fr-a2-1.ts`, the pages in `sources-fr-a2-1.ts`. Passé composé tables are generated
+by `src/lib/french/tenses.ts`. **Not yet reviewed by a native speaker.**
+
+| Topic                       | Pages read                                                                                                                                                                                          |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Passé composé with être     | [Passé composé en français](https://fr.wikipedia.org/wiki/Pass%C3%A9_compos%C3%A9_en_fran%C3%A7ais)                                                                                                 |
+| Irregular past participles  | the same page, Wiktionnaire conjugations of [faire](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/faire) and [prendre](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/prendre) |
+| ne … rien, personne, plus … | [Négation en français](https://fr.wikipedia.org/wiki/N%C3%A9gation_en_fran%C3%A7ais)                                                                                                                |
+| pendant, depuis, en         | Wiktionnaire [depuis](https://fr.wiktionary.org/wiki/depuis), [pendant](https://fr.wiktionary.org/wiki/pendant)                                                                                     |
+
+**Limits:** the Wikipédia page on the passé composé states the auxiliary choice and the agreement rules but not the
+participle endings, so -é / -i / -u and the list of irregular participles follow common textbook teaching. The negation
+page gives the general structure and "Personne n'est venu", not the place of rien, jamais, plus and pas encore around the
+participle or of personne after it; those follow common textbook teaching. The Wiktionnaire entries for depuis and
+pendant give the meaning (starting point, "during") but no tense rule, so "depuis + present for a continuing situation"
+and "pendant + passé composé" are textbook teaching, not checked against a fetched page.
+
 ## Limits of the research
 
 - The Deutsche Welle learner pages could not be fetched, and the Duden grammar pages are not freely readable, so the
