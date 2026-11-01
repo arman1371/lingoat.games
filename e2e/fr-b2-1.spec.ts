@@ -82,6 +82,14 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue', 'fr-b2-1-sante-dialogues'],
   ['blitz', 'fr-b2-1-sante-blitz'],
   ['quiz', 'fr-b2-1-sante-quiz-text'],
+  ['gap fill (subjunctive forms)', 'fr-b2-1-doute-gap-forms'],
+  ['gap fill (sure or not sure)', 'fr-b2-1-doute-gap-mood'],
+  ['sort it (indicative or subjunctive)', 'fr-b2-1-doute-sort-mood'],
+  ['conjugation (subjunctive)', 'fr-b2-1-doute-conj-subjunctive'],
+  ['sentence builder', 'fr-b2-1-doute-sentences'],
+  ['dialogue', 'fr-b2-1-doute-dialogues'],
+  ['blitz', 'fr-b2-1-doute-blitz'],
+  ['quiz', 'fr-b2-1-doute-challenge'],
 ];
 
 test.describe('French B2.1 – playing the games', () => {

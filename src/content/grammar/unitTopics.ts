@@ -577,4 +577,8 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-conditionnel-present', note: 'softening advice and requests' },
     { topic: 'fr-giving-advice', note: 'imperative, il faut que, il vaut mieux que' },
   ],
+  'fr-b2-1-doute': [
+    { topic: 'fr-subjonctif-present', note: 'que je sois, que tu aies' },
+    { topic: 'fr-opinion-mood', note: 'certainty or doubt' },
+  ],
 };

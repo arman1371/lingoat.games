@@ -1363,6 +1363,24 @@ export const LESSONS = {
       'Soigne-toi bien !',
     ],
   },
+  'fr-subjonctif-present': {
+    title: 'The present subjunctive',
+    rule: 'Take the ils form of the present, drop -ent and add -e, -es, -e, -ent; nous and vous end in -ions, -iez like the imparfait (que je prenne, que nous prenions). Irregular: être (sois), avoir (aie), aller (aille), faire (fasse), pouvoir (puisse), savoir (sache), vouloir (veuille). It follows il faut que, vouloir que, douter que, il est possible que.',
+    examples: [
+      'Il faut que tu sois à l’heure.',
+      'Je doute qu’il ait raison.',
+      'Il faut que je le fasse ce soir.',
+    ],
+  },
+  'fr-opinion-mood': {
+    title: 'Indicative or subjunctive after opinion verbs',
+    rule: 'Certainty takes the indicative (je pense que, je suis sûr que, il est évident que, il est probable que, j’espère que). Doubt, possibility and denial take the subjunctive (je doute que, il est possible que, il se peut que). Penser, croire and être sûr take the subjunctive when negated or questioned.',
+    examples: [
+      'Je pense qu’il a raison.',
+      'Je ne pense pas qu’il ait raison.',
+      'J’espère qu’il viendra.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

@@ -430,6 +430,9 @@ export const TAGS = {
   'health-advice': { label: 'Health & advice', group: 'topic', emoji: '🩺' },
   'fr-conditionnel-present': { label: 'The conditional (advice)', group: 'grammar', emoji: '🤲' },
   'fr-giving-advice': { label: 'Giving advice', group: 'grammar', emoji: '💬' },
+  'opinion-doubt': { label: 'Opinion & doubt', group: 'topic', emoji: '🤔' },
+  'fr-subjonctif-present': { label: 'The present subjunctive', group: 'grammar', emoji: '🔵' },
+  'fr-opinion-mood': { label: 'Indicative or subjunctive?', group: 'grammar', emoji: '⚖️' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;
