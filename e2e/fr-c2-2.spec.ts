@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import fr22 from '../src/content/fr-c2-2';
+import frc22 from '../src/content/fr-c2-2';
 import { activity, captureSpeech, playPerfectly } from './helpers';
 
 test.beforeEach(async ({ page }) => {
@@ -11,7 +11,7 @@ test.describe('French C2.2 – level navigation', () => {
     await page.goto('/fr');
     const card = page.getByTestId('level-fr-c2-2');
     await expect(card).toContainText('C2.2');
-    await expect(card).toContainText(`0 / ${fr22.activities.length} games`);
+    await expect(card).toContainText(`0 / ${frc22.activities.length} games`);
   });
 
   test('Home → C2.2 → unit shows the guided path, all inside /fr', async ({ page }) => {
@@ -19,7 +19,7 @@ test.describe('French C2.2 – level navigation', () => {
     await page.getByTestId('level-fr-c2-2').click();
     await expect(page).toHaveURL(/\/fr\/levels\/fr-c2-2$/);
     const units = page.getByRole('list', { name: 'Units' }).getByRole('listitem');
-    await expect(units).toHaveCount(fr22.units.length);
+    await expect(units).toHaveCount(frc22.units.length);
     await page.getByTestId('unit-fr-c2-2-arts').click();
     await expect(page).toHaveURL(/\/fr\/levels\/fr-c2-2\/units\/fr-c2-2-arts$/);
     await expect(
@@ -27,7 +27,7 @@ test.describe('French C2.2 – level navigation', () => {
     ).toBeVisible();
     const steps = page.getByRole('list', { name: 'Guided path' }).getByRole('listitem');
     await expect(steps).toHaveCount(
-      fr22.activities.filter((x) => x.unitId === 'fr-c2-2-arts').length,
+      frc22.activities.filter((x) => x.unitId === 'fr-c2-2-arts').length,
     );
   });
 
@@ -202,6 +202,6 @@ test.describe('French C2.2 – playing the games', () => {
 
   test('the units covered above include every unit built so far', () => {
     const covered = new Set(PLAYED.map(([, id]) => activity(id).unitId));
-    expect([...covered].sort()).toEqual(fr22.units.map((u) => u.id).sort());
+    expect([...covered].sort()).toEqual(frc22.units.map((u) => u.id).sort());
   });
 });

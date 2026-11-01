@@ -5,7 +5,7 @@ import { FR_SOURCES as S } from './sources-fr';
 const LEVEL = 'fr-c2-2';
 
 /** French C2.2: one full lesson per unit, added unit by unit. */
-export const FR22_TOPICS: GrammarTopic[] = [
+export const FRC22_TOPICS: GrammarTopic[] = [
   {
     id: 'fr-c22-participe-present',
     title: 'Participe présent, gérondif or adjectif verbal?',

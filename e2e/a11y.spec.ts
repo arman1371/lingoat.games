@@ -41,6 +41,13 @@ const PAGES: [string, string, string][] = [
   ['unit 6 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-table', 'À table !'],
   ['unit 7 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-ville', 'En ville'],
   ['unit 8 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-temps', 'Jours, heure et météo'],
+  ['level A1.2 in French', '/fr/levels/fr-a1-2', 'A1.2'],
+  ['A1.2 unit 1 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-journee', 'Ma journée'],
+  ['A1.2 unit 2 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-fetes', 'Félicitations !'],
+  ['level A2.1 in French', '/fr/levels/fr-a2-1', 'A2.1'],
+  ['unit 1 A2.1 in French', '/fr/levels/fr-a2-1/units/fr-a2-1-parcours', 'Nouvelles vies'],
+  ['level A2.2 in French', '/fr/levels/fr-a2-2', 'A2.2'],
+  ['unit 1 of A2.2 in French', '/fr/levels/fr-a2-2/units/fr-a2-2-sante', 'À votre santé !'],
   ['level in French C2.2', '/fr/levels/fr-c2-2', 'C2.2'],
   ['unit 1 in French C2.2', '/fr/levels/fr-c2-2/units/fr-c2-2-arts', 'Arts et expositions'],
   [
