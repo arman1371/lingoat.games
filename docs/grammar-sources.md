@@ -264,3 +264,6 @@ generated forms in `src/lib/french`.
   fr.wiktionary.org _dont_ and _lequel_ were read. They confirm the role of dont, the forms of lequel and its
   contractions, and that lequel is used after prepositions other than de. They do not cover ce qui / ce que / ce dont
   or the dont / duquel choice after a noun with a preposition; those parts follow textbook teaching.
+- Negation (`fr-c22-negation`): fr.wikipedia.org _Négation en français_ was read for ne … que, ni … ni, the negative
+  pronouns as subjects, ne without pas, the ne explétif and pas de after a negation. The page does not give a full list
+  of verbs that allow ne alone; the examples (pouvoir, savoir, cesser, oser) follow textbook teaching.

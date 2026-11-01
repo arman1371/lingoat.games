@@ -408,6 +408,12 @@ export const TAGS = {
   'fr-c22-cinema': { label: 'Film & live shows (French C2)', group: 'topic', emoji: '🎬' },
   'fr-c22-relatives': { label: 'Relatives: dont, lequel, ce dont', group: 'grammar', emoji: '🔗' },
   'fr-c22-patrimoine': { label: 'Heritage & history (French C2)', group: 'topic', emoji: '🏰' },
+  'fr-c22-negation': {
+    label: 'Negation: ne … que, ni … ni, ne alone',
+    group: 'grammar',
+    emoji: '🚫',
+  },
+  'fr-c22-droit': { label: 'Law & justice (French C2)', group: 'topic', emoji: '⚖️' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

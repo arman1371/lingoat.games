@@ -109,6 +109,19 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue (three scenes)', 'fr-c2-2-patrimoine-dialogues'],
   ['blitz', 'fr-c2-2-patrimoine-blitz'],
   ['challenge', 'fr-c2-2-patrimoine-challenge'],
+  ['flashcards (court)', 'fr-c2-2-droit-flash-tribunal'],
+  ['flashcards (rights and contracts)', 'fr-c2-2-droit-flash-droits'],
+  ['quiz (courtroom and law)', 'fr-c2-2-droit-quiz-pictures'],
+  ['listen (rights words)', 'fr-c2-2-droit-listen-droits'],
+  ['memory (rights words)', 'fr-c2-2-droit-memory-droits'],
+  ['spell (dictation)', 'fr-c2-2-droit-spell-tribunal'],
+  ['gap fill (negation)', 'fr-c2-2-droit-gap-negation'],
+  ['sort it (which negation)', 'fr-c2-2-droit-sort-negation'],
+  ['quiz (rewrite with a negation)', 'fr-c2-2-droit-quiz-transform'],
+  ['sentence builder', 'fr-c2-2-droit-sentences'],
+  ['dialogue (three scenes)', 'fr-c2-2-droit-dialogues'],
+  ['blitz', 'fr-c2-2-droit-blitz'],
+  ['challenge', 'fr-c2-2-droit-challenge'],
 ];
 
 test.describe('French C2.2 – playing the games', () => {

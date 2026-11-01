@@ -340,4 +340,77 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-c22-accord-participe'],
     sources: [S.relativePronoun, S.dont, S.lequel],
   },
+  {
+    id: 'fr-c22-negation',
+    title: 'ne … que, ni … ni, ne alone',
+    tagline: 'The finer points of French negation',
+    level: LEVEL,
+    summary:
+      'Beyond ne … pas: ne … que means “only”, ni … ni means “neither … nor”, personne, rien and aucun can be subjects, and formal French can use ne alone or add an explétif ne that is not a negation.',
+    sections: [
+      section(
+        'que-ni',
+        'ne … que and ni … ni',
+        p(
+          '**Ne … que** is not a real negation: it means “only” and keeps the article. **Ni … ni** links two negated items and, with a verb, needs **ne** but no **pas**: *Elle n’a ni témoin ni preuve.* Un, une and des are usually dropped after ni.',
+        ),
+        examples(
+          ['Il n’a que des preuves indirectes.', 'He has only circumstantial evidence.'],
+          ['Elle n’a ni témoin ni preuve.', 'She has neither a witness nor proof.'],
+          ['Il n’a ni nié ni avoué.', 'He neither denied nor confessed.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il n’a pas que des preuves.  ✓ Il n’a que des preuves.',
+          '✗ Elle n’a pas ni témoin ni preuve.  ✓ Elle n’a ni témoin ni preuve.',
+        ),
+      ),
+      section(
+        'pronoms',
+        'personne, rien, aucun and pas de',
+        p(
+          '**Personne**, **rien** and **aucun** can be the subject; they come first and **ne** stays before the verb, without pas: *Personne n’a parlé. Rien ne prouve cette version.* After a negation **un, une, des** become **de** (**d’** before a vowel): *Je n’ai pas de preuve.*',
+        ),
+        table(
+          'Negative words and where they go.',
+          ['Word', 'As subject', 'As object'],
+          [
+            ['personne', 'Personne ne parle.', 'Je ne vois personne.'],
+            ['rien', 'Rien ne prouve cela.', 'Il ne dit rien.'],
+            ['aucun(e)', 'Aucun témoin n’a parlé.', 'Je n’ai aucune preuve.'],
+          ],
+        ),
+      ),
+      section(
+        'ne-seul',
+        'ne alone and the ne explétif',
+        p(
+          'In formal or literary French, **ne** can stand alone with a few verbs: *je ne puis, je ne sais, il ne cesse de, elle n’ose.* Do not confuse this with the **ne explétif**, which adds no negative meaning: *Elle est plus habile qu’on ne le pensait. Je crains qu’il ne vienne.*',
+        ),
+        compare(
+          {
+            title: 'ne … pas',
+            question: 'Does the sentence deny something?',
+            example: 'Il n’a pas avoué.',
+          },
+          {
+            title: 'ne seul',
+            question: 'Formal verb with a negative meaning?',
+            example: 'Il ne cesse de protester.',
+          },
+          {
+            title: 'ne explétif',
+            question: 'After a comparative or craindre?',
+            example: 'Plus grave que je ne pensais.',
+          },
+        ),
+        tip(
+          'Quick test',
+          'If you can remove the ne without changing the meaning, it is an explétif ne, not a negation.',
+        ),
+      ),
+    ],
+    related: ['fr-c22-relatives'],
+    sources: [S.negation],
+  },
 ];

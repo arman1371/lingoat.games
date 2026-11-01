@@ -1255,6 +1255,15 @@ export const LESSONS = {
       'Je sais ce dont tu rêves. → no antecedent',
     ],
   },
+  'fr-c22-negation': {
+    title: 'ne … que, ni … ni, ne alone',
+    rule: 'Ne … que means only (il n’a que des preuves indirectes). Ni … ni takes no pas and repeats the article rules (ni témoin ni preuve). Personne, rien and aucun can be the subject (personne n’a parlé). After a negation un/des become de. Formal French can drop pas (je ne puis) and add an explétif ne.',
+    examples: [
+      'Il n’a que des preuves indirectes. → only',
+      'Elle n’a ni témoin ni preuve. → neither … nor',
+      'Personne n’a parlé. → negative pronoun as subject',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
