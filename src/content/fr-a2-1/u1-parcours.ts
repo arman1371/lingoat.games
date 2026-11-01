@@ -18,7 +18,7 @@ import type { UnitContent } from './types';
 const U = 'fr-a2-1-parcours';
 
 const events = vocabList(U, 'Life path', [
-  ['la naissance', 'birth', '👶'],
+  ['la jeunesse', 'youth', '🧑'],
   ['l’enfance', 'childhood', '🧒'],
   ['l’adolescence', 'teenage years', '🧑‍🎤'],
   ['les études', 'studies', '📖'],
@@ -27,21 +27,21 @@ const events = vocabList(U, 'Life path', [
   ['le stage', 'internship', '🧑‍💼'],
   ['l’emploi', 'job', '💼'],
   ['la carrière', 'career', '📈'],
-  ['le mariage', 'wedding / marriage', '💍'],
+  ['le parcours', 'path / background', '🛤️'],
   ['le déménagement', 'move (to a new home)', '📦'],
   ['la retraite', 'retirement', '🏖️'],
 ]);
 
 const lifeVerbs = vocabList(U, 'Life events', [
-  ['naître', 'to be born', '🍼'],
+  ['vieillir', 'to grow old', '🧓'],
   ['grandir', 'to grow up', '📏'],
   ['étudier', 'to study', '📚'],
   ['réussir', 'to pass / to succeed', '✅'],
   ['obtenir un diplôme', 'to get a degree', '🎓'],
   ['trouver un emploi', 'to find a job', '🔍'],
-  ['déménager', 'to move house', '🚚'],
+  ['emménager', 'to move in', '📦'],
   ['s’installer', 'to settle (somewhere)', '🏡'],
-  ['se marier', 'to get married', '👰'],
+  ['divorcer', 'to get divorced', '💔'],
   ['changer de vie', 'to change one’s life', '🔄'],
   ['quitter', 'to leave', '🚪'],
   ['prendre sa retraite', 'to retire', '🌴'],
@@ -60,13 +60,9 @@ const jobs = vocabList(U, 'Creative jobs', [
   ['l’architecte', 'architect', '🏛️'],
 ]);
 
-const linkers = vocabList(U, 'Telling a story', [
-  ['d’abord', 'first', '1️⃣'],
-  ['ensuite', 'then / next', '2️⃣'],
-  ['enfin', 'finally', '🏁'],
+const linkers = vocabList(U, 'Negative words', [
   ['ne … rien', 'nothing', '🚫'],
   ['ne … personne', 'nobody', '👤'],
-  ['ne … jamais', 'never', '⛔'],
   ['ne … plus', 'no longer', '🔚'],
   ['ne … pas encore', 'not yet', '⏳'],
 ]);
@@ -81,17 +77,17 @@ export const parcours: UnitContent = {
     subtitle: 'Tell your life story and talk about changes, studies and work',
     emoji: '🛤️',
     goals: [
-      'Tell your life story in the passé composé',
+      'Tell your life story in the passé composé, with avoir and être',
       'Say what you have never done or no longer do',
       'Place events in time with il y a, pendant and depuis',
     ],
     grammar: [
-      'Passé composé: avoir or être',
+      'Passé composé with être',
       'Irregular past participles',
       'ne … rien / personne / jamais / plus',
       'il y a, pendant, depuis, en',
     ],
-    vocabFields: ['Life path', 'Life events', 'Creative jobs', 'Telling a story'],
+    vocabFields: ['Life path', 'Life events', 'Creative jobs', 'Negative words'],
   }),
   vocab,
   activities: [
@@ -164,8 +160,8 @@ export const parcours: UnitContent = {
       ),
       listen(
         [
-          ...byDe(vocab, 'le diplôme', 'le stage', 'la retraite', 'le mariage'),
-          ...byDe(vocab, 'déménager', 'obtenir un diplôme', 'se marier', 'quitter'),
+          ...byDe(vocab, 'le diplôme', 'le stage', 'la retraite', 'le parcours'),
+          ...byDe(vocab, 'emménager', 'obtenir un diplôme', 'divorcer', 'quitter'),
         ],
         vocab,
       ),
@@ -176,9 +172,9 @@ export const parcours: UnitContent = {
       'conj-avoir',
       'conjugation',
       meta(
-        'Passé composé with avoir',
-        'Most verbs use avoir plus a past participle: j’ai travaillé.',
-        ['grammar', 'fr-a21-passe-compose'],
+        'Passé composé: participles',
+        'Regular and irregular participles after avoir: travaillé, fini, obtenu, fait.',
+        ['grammar', 'fr-a21-participles'],
         2,
         4,
       ),

@@ -1140,6 +1140,51 @@ export const LESSONS = {
     rule: 'Most nouns add a silent -s in the plural, so you hear the plural only in the article: le, la and l’ become les, and un and une become des. Nouns in -eau and -al change differently: un bateau, des bateaux; un animal, des animaux.',
     examples: ['un frère, des frères', 'la sœur, les sœurs', 'un enfant, des enfants'],
   },
+  'fr-pronominal': {
+    title: 'Pronominal verbs',
+    rule: 'A pronominal verb has a small pronoun before it that matches the subject: je me lève, tu te laves, il se couche, nous nous reposons, vous vous habillez, elles se promènent. Me, te and se become m’, t’ and s’ before a vowel or h: je m’habille. In the negative ne goes before the pronoun.',
+    examples: [
+      'Je me lève à sept heures.',
+      'Elle s’habille vite.',
+      'Nous ne nous couchons pas tôt.',
+    ],
+  },
+  'fr-frequency': {
+    title: 'How often?',
+    rule: 'Short adverbs of frequency (toujours, souvent, rarement, parfois) go right after the verb: il se lève toujours tôt. Tous les jours, d’habitude and parfois can also open the sentence. Never is ne … jamais around the verb, without pas: je ne me couche jamais tard.',
+    examples: [
+      'Je me douche toujours le matin.',
+      'Parfois, nous dînons dehors.',
+      'Il ne fait jamais la vaisselle.',
+    ],
+  },
+  'fr-sequence': {
+    title: 'First, then, finally',
+    rule: 'Order a day with d’abord, ensuite (or puis) and enfin. Avant and après come before a noun: avant le dîner, après le travail. For times use à (à sept heures), vers for around (vers huit heures) and de … à … for from … to (de neuf heures à midi).',
+    examples: [
+      'D’abord, je me lève. Ensuite, je mange.',
+      'Je rentre vers six heures.',
+      'Je travaille de neuf heures à cinq heures.',
+    ],
+  },
+  'fr-passe-compose-avoir': {
+    title: 'The passé composé with avoir',
+    rule: 'To say what happened, use avoir in the present plus the past participle: j’ai mangé, tu as fini, nous avons attendu. Participles: -er → -é, -ir → -i, -re → -u; some are irregular (fait, pris, eu, été). In the negative ne … pas wraps avoir: je n’ai pas mangé.',
+    examples: [
+      'Hier, j’ai regardé un film.',
+      'Nous avons fêté son anniversaire.',
+      'Il n’a pas fini.',
+    ],
+  },
+  'fr-time-markers': {
+    title: 'Past and future time markers',
+    rule: 'Look back with hier, avant-hier and il y a + a length of time (il y a deux jours). Look ahead with demain, après-demain and dans + a length of time (dans deux jours). Dernier (last) and prochain (next) follow the noun and agree with it: la semaine dernière, le mois prochain.',
+    examples: [
+      'Hier soir, j’ai dîné chez eux.',
+      'Elle a eu un bébé il y a deux jours.',
+      'Samedi prochain, nous partons.',
+    ],
+  },
   'fr-likes': {
     title: 'J’aime, je déteste …',
     rule: 'Aimer, adorer and détester are regular -er verbs. Before a noun use the definite article, even for things in general: j’aime le café, elle adore les chats. Before an activity use the infinitive: j’aime danser. Add beaucoup for more: j’aime beaucoup la musique.',
@@ -1220,9 +1265,9 @@ export const LESSONS = {
   },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
-    title: 'Passé composé: avoir or être?',
-    rule: 'The passé composé is the present of avoir (or être) plus a past participle: j’ai travaillé. Use être for aller, venir, arriver, partir, entrer, sortir, rester, tomber, naître and for pronominal verbs (je me suis marié); the participle then agrees: elle est partie, ils sont partis.',
-    examples: ['J’ai étudié à Lyon.', 'Elle est née en 1995.', 'Nous nous sommes mariés en juin.'],
+    title: 'Passé composé with être',
+    rule: 'Aller, venir, arriver, partir, entrer, sortir, rester, tomber, naître, mourir and all pronominal verbs form the passé composé with être, not avoir. The participle then agrees with the subject: elle est partie, ils sont partis, nous nous sommes mariés.',
+    examples: ['Elle est née en 1995.', 'Nous sommes arrivés hier.', 'Je me suis installé à Lyon.'],
   },
   'fr-a21-participles': {
     title: 'Irregular past participles',
@@ -1230,21 +1275,17 @@ export const LESSONS = {
     examples: ['J’ai fait un stage.', 'Il a vécu à Rome.', 'Nous avons pris une décision.'],
   },
   'fr-a21-negatives': {
-    title: 'ne … rien, personne, jamais, plus',
-    rule: 'These negatives work like ne … pas: ne goes before the verb. In the passé composé rien, jamais, plus and pas encore stand between the auxiliary and the participle (je n’ai rien dit); personne comes after the participle (je n’ai vu personne). As a subject, rien and personne come first: personne n’est venu.',
-    examples: [
-      'Je n’ai jamais travaillé à l’étranger.',
-      'Elle n’a vu personne.',
-      'Rien n’a changé.',
-    ],
+    title: 'ne … rien, personne, plus, pas encore',
+    rule: 'Ne goes before the verb. In the passé composé rien, jamais, plus and pas encore stand between the auxiliary and the participle (je n’ai rien dit); personne comes after the participle (je n’ai vu personne). As a subject, rien and personne come first: personne n’est venu.',
+    examples: ['Elle n’a pas encore trouvé d’emploi.', 'Je n’ai vu personne.', 'Rien n’a changé.'],
   },
   'fr-a21-time-markers': {
-    title: 'il y a, pendant, depuis, en',
-    rule: 'Il y a + duration means “ago” (il y a deux ans). Pendant gives how long something lasted and is over (j’ai travaillé pendant trois ans). Depuis says that something started in the past and still goes on, with the present tense (j’habite ici depuis 2020). En + year or month gives the moment (en 1998, en mai).',
+    title: 'pendant, depuis, en',
+    rule: 'Pendant gives how long something lasted and is over (j’ai travaillé pendant trois ans). Depuis says that something started in the past and still goes on, with the present tense (j’habite ici depuis 2020). En + year or month gives the moment (en 1998, en mai). Il y a + duration means ago.',
     examples: [
-      'J’ai déménagé il y a un an.',
       'Il a vécu à Nice pendant dix ans.',
       'Elle travaille ici depuis mars.',
+      'Je suis né en 1998.',
     ],
   },
 } as const satisfies Record<string, Lesson>;

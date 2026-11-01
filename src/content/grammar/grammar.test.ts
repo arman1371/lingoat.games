@@ -10,8 +10,8 @@ import c11 from '../c1-1';
 import c12 from '../c1-2';
 import c21 from '../c2-1';
 import c22 from '../c2-2';
-import fr11 from '../fr-a1-1';
 import { LESSONS } from '../lessons';
+import type { LevelContent } from '../schema';
 import { articleTable, datPlural, frConjugationTable } from './build';
 import {
   GRAMMAR_TOPICS,
@@ -21,6 +21,11 @@ import {
   unitsOfTopic,
 } from './index';
 import { GrammarTopicSchema, UnitTopicRefSchema, type Block } from './schema';
+
+/** Every French level pack, picked up automatically (`src/content/fr-*`). */
+const frenchUnits = Object.values(
+  import.meta.glob<{ default: LevelContent }>('../fr-*/index.ts', { eager: true }),
+).flatMap((m) => m.default.units);
 
 const units = [
   ...a11.units,
@@ -35,7 +40,7 @@ const units = [
   ...c12.units,
   ...c21.units,
   ...c22.units,
-  ...fr11.units,
+  ...frenchUnits,
 ];
 const unitIds = new Set(units.map((u) => u.id));
 const levelOfUnit = new Map(units.map((u) => [u.id, u.levelId]));
@@ -152,28 +157,24 @@ describe('unit → topic links', () => {
   });
 });
 
-/** French A2.1 mini lessons whose full lessons are still to be written (they come after the units). */
-const NO_FULL_LESSON_YET = /^fr-a21-/;
-
 describe('French grammar topics', () => {
   const french = GRAMMAR_TOPICS.filter((t) => t.id.startsWith('fr-'));
+  const frenchLevelIds = new Set(frenchUnits.map((u) => u.levelId));
 
   it('write a full lesson for every French mini lesson', () => {
-    const miniLessons = Object.keys(LESSONS).filter(
-      (id) => id.startsWith('fr-') && !NO_FULL_LESSON_YET.test(id),
-    );
+    const miniLessons = Object.keys(LESSONS).filter((id) => id.startsWith('fr-'));
     expect(french.map((t) => t.id).sort()).toEqual(miniLessons.sort());
   });
 
   it('belong to the French level and link only to French topics', () => {
     for (const t of french) {
-      expect(t.level, t.id).toBe('fr-a1-1');
+      expect(frenchLevelIds.has(t.level), `${t.id} → ${t.level}`).toBe(true);
       for (const r of t.related) expect(r.startsWith('fr-'), `${t.id} → ${r}`).toBe(true);
     }
   });
 
   it('give every French unit its topics, none from German', () => {
-    for (const u of fr11.units) {
+    for (const u of frenchUnits) {
       expect(topicsOfUnit(u.id).length, u.id).toBeGreaterThan(0);
       for (const { topic } of topicsOfUnit(u.id))
         expect(topic.id.startsWith('fr-'), u.id).toBe(true);

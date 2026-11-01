@@ -46,6 +46,9 @@ from an earlier French level (the content test checks this against `fr-a1-1` and
 1. Foundations and unit 1: `src/lib/french/tenses.ts` (passé composé, imparfait and futur simple generated from the
    infinitive, with tests), the `fr-a2-1` pack with its shared tests and an e2e spec, the level switched to
    `available`, tags, mini lessons. **Done** with unit 1 (`parcours`, 16 games).
-2. Units 2 to 8, one pull request each.
-3. Full grammar lessons for the `fr-a21-` mini lessons (the grammar test lists them as pending until then), linked
-   from the units in `unitTopics.ts`.
+2. Units 2 to 8, one pull request each. Each unit brings its full grammar lessons (`src/content/grammar/fr-a2-1.ts`), because the
+   grammar test requires every French unit to link written topics.
+
+**Overlap with French A1.2:** A1.2 already teaches pronominal verbs, ne … jamais, d’abord / ensuite / enfin, the passé composé
+with avoir and il y a / dans / dernier. A2.1 therefore adds the être auxiliary, irregular participles, rien / personne /
+plus / pas encore and pendant / depuis / en, and re-uses the A1.2 words only inside exercises, never as new word cards.

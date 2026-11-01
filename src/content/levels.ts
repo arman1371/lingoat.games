@@ -3,7 +3,6 @@ import type { LevelMeta } from './schema';
 
 /** French is on its way: A1.1 is the pilot, the other CEFR half-levels are listed without content. */
 const FRENCH_COMING_SOON: LevelMeta[] = [
-  ['a1-2', 'A1.2', 'Breakthrough, second half'],
   ['a2-2', 'A2.2', 'Waystage, second half'],
   ['b1-1', 'B1.1', 'Threshold, first half'],
   ['b1-2', 'B1.2', 'Threshold, second half'],
@@ -30,6 +29,15 @@ const FRENCH_LEVELS: LevelMeta[] = [
       'First steps: greetings, introductions, numbers, family, hobbies, food, town and time',
     status: 'available',
     load: () => import('./fr-a1-1'),
+  },
+  {
+    language: 'fr',
+    id: 'fr-a1-2',
+    title: 'A1.2',
+    subtitle:
+      'Everyday life: daily routine, family events, home, holidays, health, work, nature and learning French',
+    status: 'available',
+    load: () => import('./fr-a1-2'),
   },
   {
     language: 'fr',
