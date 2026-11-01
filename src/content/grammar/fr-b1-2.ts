@@ -1,3 +1,4 @@
+import { conditionnel } from '@/lib/french/conditional';
 import { futurSimple } from '@/lib/french/tenses';
 import { FRENCH_PRONOUNS } from '@/lib/persons';
 import { examples, mistake, p, section, table, tip } from './build';
@@ -11,6 +12,13 @@ const futureTable = (caption: string, verbs: readonly string[]) =>
     caption,
     ['Person', ...verbs],
     FRENCH_PRONOUNS.map((pr) => [pr, ...verbs.map((v) => futurSimple(v)[pr])]),
+  );
+
+const conditionalTable = (caption: string, verbs: readonly string[]) =>
+  table(
+    caption,
+    ['Person', ...verbs],
+    FRENCH_PRONOUNS.map((pr) => [pr, ...verbs.map((v) => conditionnel(v)[pr])]),
   );
 
 /** French B1.2: the full lessons of the level, in teaching order. */
@@ -87,5 +95,222 @@ export const FRB12_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-futur-proche', 'fr-aller'],
     sources: [S.futurSimple, S.aller],
+  },
+  {
+    id: 'fr-b12-future-choice',
+    title: 'Which future to use',
+    tagline: 'Present, aller + infinitive or simple future?',
+    level: LEVEL,
+    summary:
+      'French has three ways to talk about the future. The present suits timetables and fixed arrangements, aller + infinitive suits what is about to happen, and the simple future suits plans, predictions and promises, and follows quand, lorsque and dès que.',
+    sections: [
+      section(
+        'three-ways',
+        'Three ways to look ahead',
+        table(
+          'Choosing the form.',
+          ['Form', 'Use it for', 'Example'],
+          [
+            [
+              'Present',
+              'timetables, fixed arrangements, a very close future',
+              'Le car part à huit heures.',
+            ],
+            [
+              'aller + infinitive',
+              'what is about to happen, what you can see coming, what you decide now',
+              'Regarde le ciel : il va pleuvoir.',
+            ],
+            [
+              'Simple future',
+              'plans further away, predictions, promises, instructions',
+              'L’été prochain, nous irons en Corse.',
+            ],
+          ],
+        ),
+        p(
+          'The forms overlap in everyday speech: *Demain, je pars* and *Demain, je partirai* are both possible. The difference is a feeling of distance: the further away or the less certain, the more likely the simple future.',
+        ),
+      ),
+      section(
+        'clauses',
+        'Time clauses: quand, lorsque, dès que',
+        p(
+          'After **quand**, **lorsque**, **dès que** and **aussitôt que**, French uses the **simple future** when the action is still to come, even though English uses the present: *Dès qu’il fera beau, nous partirons.* (“As soon as the weather is fine, we will leave.”) The main clause is future too.',
+        ),
+        examples(
+          [
+            'Quand j’arriverai au sommet, je prendrai une photo.',
+            'When I get to the top, I will take a photo.',
+          ],
+          [
+            'Lorsque la tempête sera passée, nous repartirons.',
+            'When the storm is over, we will set off again.',
+          ],
+          ['D’ici deux jours, le brouillard se lèvera.', 'Within two days the fog will clear.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Dès qu’il fait beau, nous partirons.  ✓ Dès qu’il fera beau, nous partirons.',
+          '✗ Je vais pleuvoir.  ✓ Il va pleuvoir. (the weather verb is impersonal)',
+        ),
+        tip(
+          'Time words',
+          'demain, après-demain, la semaine prochaine, bientôt, prochainement and d’ici + time all point forward. Dans + time counts from now: dans deux jours = in two days’ time.',
+        ),
+      ),
+    ],
+    related: ['fr-futur-simple', 'fr-futur-proche'],
+    sources: [S.futurSimple],
+  },
+  {
+    id: 'fr-b12-si-clauses',
+    title: 'Si… clauses',
+    tagline: 'If it rains… if I were rich…',
+    level: LEVEL,
+    summary:
+      'A si clause sets a condition. For something that can really happen, use si + present and then the present, the future or the imperative. For something imaginary or unlikely, use si + imparfait and then the conditional. The future and the conditional never follow si.',
+    sections: [
+      section(
+        'two-types',
+        'Possible or imaginary?',
+        table(
+          'The two common patterns.',
+          ['Meaning', 'si clause', 'Main clause', 'Example'],
+          [
+            [
+              'Real possibility',
+              'present',
+              'future, present or imperative',
+              'Si tu viens, on sortira.',
+            ],
+            [
+              'Imaginary or unlikely',
+              'imparfait',
+              'conditional',
+              'Si j’avais le temps, je voyagerais.',
+            ],
+          ],
+        ),
+        p(
+          'The choice depends on how **likely** the speaker thinks the condition is, not on the time. *Si je gagne au loto, j’achèterai une maison* is a hope; *Si je gagnais au loto, j’achèterais une maison* is a dream.',
+        ),
+        futureTable('The future in the main clause of a real condition.', ['sortir', 'être']),
+        conditionalTable('The conditional in the main clause of an imaginary condition.', [
+          'sortir',
+          'être',
+        ]),
+      ),
+      section(
+        'never',
+        'What never follows si',
+        p(
+          'After **si** (“if”) French never uses the future or the conditional. The condition stays in the present or the imparfait; only the main clause carries the future or the conditional.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Si j’aurai le temps, je viendrai.  ✓ Si j’ai le temps, je viendrai.',
+          '✗ Si j’aurais le temps, je viendrais.  ✓ Si j’avais le temps, je viendrais.',
+        ),
+        tip(
+          'Indirect questions',
+          'In “Je me demande s’il viendra” si means “whether”, and the future is allowed there. It only follows si when si means “if”.',
+        ),
+        p(
+          'Before **il** and **ils**, si becomes **s’**: *s’il pleut, s’ils viennent*. It does not elide before elle or on.',
+        ),
+      ),
+      section(
+        'order',
+        'Order and variations',
+        p(
+          'The si clause can come first or second: *Si tu veux, je t’aide* or *Je t’aide si tu veux.* When it comes first, a comma follows. For a real condition the main clause can also be an **imperative**: *Si tu as froid, ferme la fenêtre.*',
+        ),
+        examples(
+          [
+            'Si vous prenez ce train, vous arriverez à midi.',
+            'If you take this train, you will arrive at noon.',
+          ],
+          [
+            'Si nous avions un chien, nous marcherions plus.',
+            'If we had a dog, we would walk more.',
+          ],
+          ['Si tu as soif, bois de l’eau.', 'If you are thirsty, drink some water.'],
+        ),
+      ),
+    ],
+    related: ['fr-b12-conditional', 'fr-futur-simple'],
+    sources: [S.phraseConditionnelle, S.conditionnel],
+  },
+  {
+    id: 'fr-b12-conditional',
+    title: 'The conditional',
+    tagline: 'Would, could, should: wishes and polite requests',
+    level: LEVEL,
+    summary:
+      'The conditional present is the stem of the simple future plus the endings of the imparfait. It expresses an imaginary result, a polite request, advice, a wish or an unconfirmed fact. The three modal verbs vouloir, pouvoir and devoir are the most common.',
+    sections: [
+      section(
+        'form',
+        'How it is built',
+        p(
+          'Take the **future stem** (the form that ends in -r-) and add the **endings of the imparfait**: **-ais, -ais, -ait, -ions, -iez, -aient**. The r is always heard: *je viendrais*.',
+        ),
+        conditionalTable('Regular and irregular verbs in the conditional.', [
+          'voyager',
+          'prendre',
+          'aller',
+          'avoir',
+        ]),
+        table(
+          'Future and conditional side by side.',
+          ['Verb', 'Future (je)', 'Conditional (je)'],
+          [
+            ['être', futurSimple('être')['je'], conditionnel('être')['je']],
+            ['faire', futurSimple('faire')['je'], conditionnel('faire')['je']],
+            ['pouvoir', futurSimple('pouvoir')['je'], conditionnel('pouvoir')['je']],
+            ['vouloir', futurSimple('vouloir')['je'], conditionnel('vouloir')['je']],
+          ],
+        ),
+        p(
+          'Compare the endings with the imparfait: *je finissais, je finirais*. The stem differs, the endings are the same.',
+        ),
+      ),
+      section(
+        'use',
+        'What it is used for',
+        table(
+          'Common uses.',
+          ['Use', 'Example'],
+          [
+            ['Polite request', 'Pourriez-vous m’aider ?'],
+            ['Wish', 'Je voudrais un billet pour Nice.'],
+            ['Advice', 'Tu devrais te reposer.'],
+            ['Imaginary result', 'Nous irions en Corse.'],
+            ['Unconfirmed information', 'Il y aurait un retard.'],
+          ],
+        ),
+        tip(
+          'Softening',
+          'Je veux un café is direct; Je voudrais un café is polite. Pourriez-vous… ? and Auriez-vous… ? are the usual ways to ask politely in a shop or at an office.',
+        ),
+      ),
+      section(
+        'watch',
+        'Watch out',
+        mistake(
+          'Common slips',
+          '✗ Je voudrai un billet.  ✓ Je voudrais un billet. (voudrai is the future)',
+          '✗ Si j’irais, je verrais.  ✓ Si j’allais, je verrais.',
+        ),
+        examples(
+          ['Je voudrais réserver une chambre.', 'I would like to book a room.'],
+          ['À ta place, je prendrais le train.', 'In your place I would take the train.'],
+          ['Nous pourrions partir demain.', 'We could leave tomorrow.'],
+        ),
+      ),
+    ],
+    related: ['fr-b12-si-clauses', 'fr-futur-simple'],
+    sources: [S.conditionnel, S.phraseConditionnelle],
   },
 ];

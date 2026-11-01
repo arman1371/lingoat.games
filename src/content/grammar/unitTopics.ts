@@ -566,4 +566,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   ],
   // ---- French B1.2 ----------------------------------------------------------------------------
   'fr-b1-2-voyage': [{ topic: 'fr-futur-simple' }],
+  'fr-b1-2-paysages': [
+    { topic: 'fr-b12-future-choice' },
+    { topic: 'fr-futur-simple', note: 'outdoor verbs' },
+  ],
+  'fr-b1-2-hypotheses': [{ topic: 'fr-b12-si-clauses' }, { topic: 'fr-b12-conditional' }],
 };

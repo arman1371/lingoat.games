@@ -1318,6 +1318,29 @@ export const LESSONS = {
       'Elle fera la réservation.',
     ],
   },
+  'fr-b12-future-choice': {
+    title: 'Which future to use',
+    rule: 'Use the present for timetables and fixed arrangements (Le train part à huit heures). Use aller + infinitive for what is about to happen or is certain (Il va pleuvoir). Use the simple future for plans, predictions and promises further away, and after quand, lorsque and dès que (Dès qu’il fera beau, je sortirai).',
+    examples: [
+      'Le car part dans dix minutes.',
+      'Attention, il va pleuvoir !',
+      'Dès que je serai là, je t’appellerai.',
+    ],
+  },
+  'fr-b12-si-clauses': {
+    title: 'Si… clauses',
+    rule: 'Real possibility: si + present, then present, future or imperative (Si tu viens, on sortira). Imaginary or unlikely: si + imparfait, then conditional (Si j’avais le temps, je voyagerais). Never put the future or the conditional right after si.',
+    examples: [
+      'Si tu viens, on ira au lac.',
+      'Si j’avais plus de temps, je voyagerais.',
+      'Si tu as faim, mange !',
+    ],
+  },
+  'fr-b12-conditional': {
+    title: 'The conditional',
+    rule: 'Future stem plus the endings of the imparfait: je voyagerais, nous irions, ils feraient. Use it for imaginary results, polite requests (Je voudrais…, Pourriez-vous… ?), advice (Tu devrais…) and wishes.',
+    examples: ['Je voudrais un billet.', 'Tu devrais te reposer.', 'Nous irions en Corse.'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

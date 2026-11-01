@@ -415,6 +415,9 @@ export const TAGS = {
   'fr-interrogative-pronouns': { label: 'qui, que, quoi, lequel', group: 'grammar', emoji: '🔎' },
   // grammar points – French B1.2
   'fr-futur-simple': { label: 'The simple future', group: 'grammar', emoji: '🗓️' },
+  'fr-b12-future-choice': { label: 'Which future to use', group: 'grammar', emoji: '🔭' },
+  'fr-b12-si-clauses': { label: 'Si… clauses', group: 'grammar', emoji: '🤔' },
+  'fr-b12-conditional': { label: 'The conditional', group: 'grammar', emoji: '💭' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

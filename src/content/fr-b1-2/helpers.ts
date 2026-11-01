@@ -1,4 +1,5 @@
 import type { FrenchForms } from '@/lib/french/conjugation';
+import { conditionnelPasse, futurAnterieur, plusQueParfait } from '@/lib/french/compound';
 import { conditionnel } from '@/lib/french/conditional';
 import { futurSimple } from '@/lib/french/tenses';
 import type { FrenchPronoun } from '@/lib/persons';
@@ -39,3 +40,75 @@ export const conditionnelTable = (
   meaning: string,
   blanks: FrenchPronoun[],
 ): Table => tense(id, verb, 'conditionnel', meaning, conditionnel(verb), blanks);
+
+export {
+  activity,
+  dictation,
+  gap,
+  heard,
+  meta,
+  q,
+  say,
+  sent,
+  tf,
+  typed,
+  you,
+} from '../a1-2/helpers';
+
+/** Conditionnel passé table: j’aurais pris, elle serait partie. */
+export const condPasseTable = (
+  id: string,
+  verb: string,
+  meaning: string,
+  blanks: FrenchPronoun[],
+  feminine = false,
+): Table =>
+  tense(id, verb, 'conditionnel passé', meaning, conditionnelPasse(verb, { feminine }), blanks);
+
+/** Plus-que-parfait table: j’avais fini, il était parti. */
+export const pqpTable = (
+  id: string,
+  verb: string,
+  meaning: string,
+  blanks: FrenchPronoun[],
+  feminine = false,
+): Table =>
+  tense(id, verb, 'plus-que-parfait', meaning, plusQueParfait(verb, { feminine }), blanks);
+
+/** Futur antérieur table: j’aurai fini, elle sera partie. */
+export const futAnterieurTable = (
+  id: string,
+  verb: string,
+  meaning: string,
+  blanks: FrenchPronoun[],
+  feminine = false,
+): Table => tense(id, verb, 'futur antérieur', meaning, futurAnterieur(verb, { feminine }), blanks);
+
+/** Sort it cards: [text, bucket, English meaning] rows; the text is spoken. */
+export const sortCards = (prefix: string, rows: readonly (readonly [string, string, string])[]) =>
+  rows.map(([text, bucket, translation], i) => ({
+    id: `${prefix}${i + 1}`,
+    text,
+    bucket,
+    speak: text,
+    translation,
+  }));
+
+/** Spelling item: unscramble or type a word; accents are optional. */
+export const sp = (
+  id: string,
+  mode: 'unscramble' | 'type',
+  answer: string,
+  hint: string,
+  emoji?: string,
+  speak?: string,
+) => ({ id, mode, answer, hint, ...(emoji ? { emoji } : {}), speak: speak ?? answer });
+
+/** Dialogue scene: `turns` built with say() and you(). */
+export const scene = (
+  id: string,
+  title: string,
+  emoji: string,
+  setting: string,
+  turns: ConfigOf<'dialogue'>['scenes'][number]['turns'],
+) => ({ id, title, emoji, setting, turns });

@@ -36,6 +36,18 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sentence builder', 'fr-b1-2-voyage-sentences'],
   ['dialogue (three scenes)', 'fr-b1-2-voyage-dialogues'],
   ['blitz', 'fr-b1-2-voyage-blitz'],
+  ['flashcards (landscapes)', 'fr-b1-2-paysages-flash-landscapes'],
+  ['listen (forecast)', 'fr-b1-2-paysages-listen-forecast'],
+  ['sort it (future forms)', 'fr-b1-2-paysages-sort-future-forms'],
+  ['conjugation (futur simple outdoors)', 'fr-b1-2-paysages-conj-future'],
+  ['gap fill (which future)', 'fr-b1-2-paysages-gap-future-choice'],
+  ['sentence builder (weather)', 'fr-b1-2-paysages-sentences'],
+  ['sort it (si clauses)', 'fr-b1-2-hypotheses-sort-si'],
+  ['conjugation (conditional)', 'fr-b1-2-hypotheses-conj-conditional'],
+  ['gap fill (si + tense)', 'fr-b1-2-hypotheses-gap-si'],
+  ['gap fill (conditional)', 'fr-b1-2-hypotheses-gap-conditional'],
+  ['dialogue (hypotheses)', 'fr-b1-2-hypotheses-dialogues'],
+  ['blitz (hypotheses)', 'fr-b1-2-hypotheses-blitz'],
 ];
 
 test.describe('French B1.2 – playing the games', () => {
