@@ -185,3 +185,50 @@ describe('level page', () => {
     expect(screen.queryByText('Grammar in A1.2')).not.toBeInTheDocument();
   });
 });
+
+describe('French grammar', () => {
+  it('lists the topics of a French unit and opens a lesson with French examples', async () => {
+    const { user, router } = renderApp('/fr/levels/fr-a1-1/units/fr-a1-1-ville');
+    const card = await screen.findByTestId('unit-grammar');
+    expect(
+      within(card)
+        .getAllByRole('link')
+        .map((r) => r.getAttribute('data-testid')),
+    ).toEqual([
+      'grammar-fr-contractions',
+      'grammar-fr-place-prepositions',
+      'grammar-fr-aller',
+      'grammar-fr-imperative',
+    ]);
+    await user.click(screen.getByTestId('grammar-fr-contractions'));
+    expect(router.state.location.pathname).toBe('/fr/library/grammar/fr-contractions');
+    expect(
+      await screen.findByRole('heading', { level: 1, name: 'au, aux, du, des' }),
+    ).toBeVisible();
+    const lesson = screen.getByTestId('grammar-lesson');
+    expect(screen.getByText('A1.1')).toBeInTheDocument();
+    expect(
+      within(lesson).getAllByTestId('example')[0]!.querySelector('[lang="fr"]'),
+    ).not.toBeNull();
+    const table = within(lesson).getByRole('table', {
+      name: 'à and de with the definite article.',
+    });
+    expect(within(table).getByRole('row', { name: /^le au du$/ })).toBeInTheDocument();
+  });
+
+  it('shows only French topics in the French library and no German ones', async () => {
+    renderApp('/fr/library');
+    const index = await screen.findByTestId('grammar-index');
+    expect(within(index).getByRole('heading', { level: 2, name: /A1\.1/ })).toBeInTheDocument();
+    expect(within(index).getByTestId('grammar-fr-tu-vous')).toBeInTheDocument();
+    expect(within(index).queryByTestId('grammar-word-order')).not.toBeInTheDocument();
+    expect(within(index).getAllByTestId(/^grammar-fr-/)).toHaveLength(25);
+  });
+
+  it('keeps French topics out of the German library', async () => {
+    renderApp('/library');
+    const index = await screen.findByTestId('grammar-index');
+    expect(within(index).getByTestId('grammar-word-order')).toBeInTheDocument();
+    expect(within(index).queryByTestId('grammar-fr-tu-vous')).not.toBeInTheDocument();
+  });
+});

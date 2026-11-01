@@ -66,8 +66,8 @@ export const GrammarTopicSchema = z.object({
   title: text,
   /** the question or idea behind the topic, shown under the title */
   tagline: text,
-  /** level that first teaches it, e.g. `a1-2` */
-  level: z.string().regex(/^[abc][12]-[12]$/),
+  /** level that first teaches it, e.g. `a1-2` (French levels start with the language: `fr-a1-1`) */
+  level: z.string().regex(/^([a-z]{2}-)?[abc][12]-[12]$/),
   /** the "In short" box */
   summary: text,
   sections: z.array(SectionSchema).min(2),

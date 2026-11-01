@@ -1,5 +1,7 @@
 import { definiteArticle, indefiniteArticle, type Case, type Gender } from '@/lib/german/articles';
 import { conjugate, PRONOUNS, type Forms } from '@/lib/german/conjugation';
+import { conjugateFr } from '@/lib/french/conjugation';
+import { FRENCH_PRONOUNS } from '@/lib/persons';
 import type { Block, Section } from './schema';
 
 export const p = (text: string): Block => ({ type: 'p', text });
@@ -91,5 +93,15 @@ export function conjugationTable(
     caption,
     ['Person', ...verbs],
     PRONOUNS.map((pr) => [pr, ...all.map((f) => f[pr])]),
+  );
+}
+
+/** French persons down, verbs across, forms from `conjugateFr()` (src/lib/french). */
+export function frConjugationTable(caption: string, verbs: readonly string[]): Block {
+  const all = verbs.map((v) => conjugateFr(v));
+  return table(
+    caption,
+    ['Person', ...verbs],
+    FRENCH_PRONOUNS.map((pr) => [pr, ...all.map((f) => f[pr])]),
   );
 }

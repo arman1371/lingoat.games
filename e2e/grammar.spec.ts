@@ -60,6 +60,26 @@ for (const scheme of ['light', 'dark'] as const) {
       await expectNoViolations(page, 'superlative lesson');
     });
 
+    test('French units link to French lessons with generated verb tables', async ({ page }) => {
+      await page.goto('/fr/levels/fr-a1-1/units/fr-a1-1-ville');
+      const card = page.getByTestId('unit-grammar');
+      await expect(card.getByRole('link')).toHaveCount(4);
+      await card.getByTestId('grammar-fr-aller').click();
+      await expect(page).toHaveURL(/\/fr\/library\/grammar\/fr-aller$/);
+      await expect(page.getByRole('heading', { level: 1, name: 'aller' })).toBeVisible();
+      const table = page.getByRole('table', { name: 'Present tense of aller.' });
+      await expect(table.getByRole('row', { name: /ils\/elles/ })).toContainText('vont');
+      await expect(page.getByTestId('example').first().locator('[lang="fr"]')).toBeVisible();
+      await expectNoViolations(page, 'French aller lesson');
+
+      await page.goto('/fr/library');
+      const index = page.getByTestId('grammar-index');
+      await expect(index.getByRole('heading', { level: 2, name: /A1\.1/ })).toBeVisible();
+      await expect(index.getByTestId('grammar-fr-tu-vous')).toBeVisible();
+      await expect(index.getByTestId('grammar-word-order')).toHaveCount(0);
+      await expectNoViolations(page, 'French library grammar tab');
+    });
+
     test('the Library opens on grammar with a level filter and search, games are the second tab', async ({
       page,
     }) => {
