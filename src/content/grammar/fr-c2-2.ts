@@ -123,4 +123,71 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-adjectives'],
     sources: [S.participle, S.gerund, S.adjectifVerbal, S.fatigant],
   },
+  {
+    id: 'fr-c22-accord-participe',
+    title: 'Agreeing the past participle',
+    tagline: 'When does the participle take -e or -s?',
+    level: LEVEL,
+    summary:
+      'With être the participle agrees with the subject. With avoir it agrees only with a direct object placed before it. Reflexive verbs agree with se when se is the direct object. Some cases stay invariable: faire + infinitive, en for a quantity, and verbs of price or duration.',
+    sections: [
+      section(
+        'basics',
+        'être and avoir',
+        table(
+          'Agreement of the past participle.',
+          ['Auxiliary', 'Agrees with', 'Example'],
+          [
+            ['être', 'the subject', 'Elle est partie après le dernier acte.'],
+            ['avoir, object after', 'nothing', 'Elle a lu ces pièces.'],
+            ['avoir, object before', 'the object', 'Les pièces que j’ai vues étaient superbes.'],
+          ],
+          2,
+        ),
+        p(
+          'The direct object can come before the verb as **que**, as a pronoun (**le, la, l’, les**) or in a question (*Quelles pièces avez-vous vues ?*). Ask yourself: *what did I see?* If the answer stands in front of the participle, agree it.',
+        ),
+      ),
+      section(
+        'reflexive',
+        'Reflexive verbs',
+        p(
+          'In *elle s’est levée*, **se** is the direct object (she raised herself), so the participle agrees. In *elle s’est lavé les mains* the direct object is **les mains**, which follows, so there is no agreement. Verbs that take **à** (*se parler, se téléphoner, s’écrire, se plaire*) have an indirect **se**: the participle never agrees.',
+        ),
+        table(
+          'Reflexive verbs and agreement.',
+          ['Type', 'Example', 'Agreement'],
+          [
+            ['se = direct object', 'Elle s’est cachée.', 'yes'],
+            ['direct object after', 'Elles se sont lavé les mains.', 'no'],
+            ['se = indirect (à)', 'Elles se sont parlé.', 'no'],
+            ['direct object before', 'Les lettres qu’elles se sont écrites.', 'yes'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elles se sont lavées les mains.  ✓ Elles se sont lavé les mains.',
+          '✗ Ils se sont parlés.  ✓ Ils se sont parlé.',
+        ),
+      ),
+      section(
+        'invariable',
+        'Cases that stay invariable',
+        p(
+          '**Faire + infinitive** never agrees. After **devoir, pouvoir, vouloir** the participle stays invariable because the object belongs to the infinitive. With **en** standing for a quantity there is no agreement. A price or a duration is an amount, not an object: *les quarante euros que ce roman m’a coûté*.',
+        ),
+        examples(
+          ['La pièce que le metteur en scène a fait jouer.', 'The play the director had staged.'],
+          ['Voici les répliques qu’elle a dû apprendre.', 'Here are the lines she had to learn.'],
+          ['Des romans, j’en ai lu beaucoup.', 'Novels, I have read many.'],
+        ),
+        tip(
+          'With an infinitive',
+          'After voir, entendre or laisser, agree only if the object does the action of the infinitive: *la comédienne que j’ai vue jouer* (she acts), but *les répliques qu’il a entendu chuchoter* (the lines are whispered).',
+        ),
+      ),
+    ],
+    related: ['fr-c22-participe-present'],
+    sources: [S.pastParticipleAgreement],
+  },
 ];

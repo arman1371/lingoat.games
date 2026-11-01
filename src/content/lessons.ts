@@ -1228,6 +1228,15 @@ export const LESSONS = {
       'Des couleurs éclatantes. → adjectif verbal: agrees',
     ],
   },
+  'fr-c22-accord-participe': {
+    title: 'Agreeing the past participle',
+    rule: 'With être the participle agrees with the subject; with avoir only with a direct object placed before it (les pièces que j’ai vues). A reflexive agrees with se only if se is the direct object (elle s’est levée, but elle s’est lavé les mains). Invariable: faire + infinitive, en, price verbs.',
+    examples: [
+      'Les pièces que j’ai vues. → avoir: agrees with the object before it',
+      'Elle s’est levée, but elle s’est lavé les mains. → se is a direct object only in the first',
+      'La pièce qu’il a fait jouer. → faire + infinitive: invariable',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

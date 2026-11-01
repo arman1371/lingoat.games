@@ -49,4 +49,8 @@ export const FR_SOURCES = {
   gerund: wp('Gérondif', 'Gérondif'),
   adjectifVerbal: wp('Adjectif_verbal', 'Adjectif verbal'),
   fatigant: wiktionary('fatigant', 'fatigant'),
+  pastParticipleAgreement: wp(
+    'Accord_du_participe_passé_en_français',
+    'Accord du participe passé en français',
+  ),
 } as const satisfies Record<string, Source>;

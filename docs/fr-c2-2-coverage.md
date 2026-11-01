@@ -30,17 +30,17 @@ the subjunctive with sequence of tenses and reported speech, information structu
 French and EU institutions, debate and argumentation. C2.2 therefore takes the cultural domains, proverbs and
 figures of style, and a different set of C2 grammar points:
 
-| #   | Unit (id suffix)              | Domain                                         | Grammar (tag / mini lesson)                                               | Status |
-| --- | ----------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------- | ------ |
-| 1   | Arts et expositions (`arts`)  | exhibitions, art market, judging a work        | participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`) | done   |
-| 2   | Littérature et théâtre        | books, publishing, stage                       | agreement of the past participle in hard cases                            | next   |
-| 3   | Cinéma et spectacle           | film, festivals, criticism                     | the passive and its alternatives (se faire + infinitive, se voir, on)     | next   |
-| 4   | Patrimoine et histoire        | heritage, history, francophonie                | complex relative clauses (dont, lequel, duquel, ce dont)                  | next   |
-| 5   | Droit et justice              | courts, rights, contracts                      | advanced negation (ne alone, ne … que, ne explétif)                       | next   |
-| 6   | Médias et société             | press, freedom of expression, misinformation   | modalisation and the conditional of reserve                               | next   |
-| 7   | Engagement citoyen            | associations, volunteering, civil society      | the infinitive (infinitif passé, avant de, après avoir, de peur de)       | next   |
-| 8   | Climat et environnement       | climate, energy, biodiversity                  | agreement with quantifiers and collectives (la plupart, plus d’un, tout)  | next   |
-| 9   | Proverbes et figures de style | proverbs, idioms, métaphore, litote, antithèse | figures of style                                                          | next   |
+| #   | Unit (id suffix)                       | Domain                                         | Grammar (tag / mini lesson)                                               | Status |
+| --- | -------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------- | ------ |
+| 1   | Arts et expositions (`arts`)           | exhibitions, art market, judging a work        | participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`) | done   |
+| 2   | Littérature et théâtre (`litterature`) | books, publishing, stage                       | past participle agreement in hard cases (`fr-c22-accord-participe`)       | done   |
+| 3   | Cinéma et spectacle                    | film, festivals, criticism                     | the passive and its alternatives (se faire + infinitive, se voir, on)     | next   |
+| 4   | Patrimoine et histoire                 | heritage, history, francophonie                | complex relative clauses (dont, lequel, duquel, ce dont)                  | next   |
+| 5   | Droit et justice                       | courts, rights, contracts                      | advanced negation (ne alone, ne … que, ne explétif)                       | next   |
+| 6   | Médias et société                      | press, freedom of expression, misinformation   | modalisation and the conditional of reserve                               | next   |
+| 7   | Engagement citoyen                     | associations, volunteering, civil society      | the infinitive (infinitif passé, avant de, après avoir, de peur de)       | next   |
+| 8   | Climat et environnement                | climate, energy, biodiversity                  | agreement with quantifiers and collectives (la plupart, plus d’un, tout)  | next   |
+| 9   | Proverbes et figures de style          | proverbs, idioms, métaphore, litote, antithèse | figures of style                                                          | next   |
 
 Each unit aims at 10 to 16 games with at least 6 of the 13 engines, an easy first game and a final "… challenge". The
 clock and market engines are not used at this level. Word cards are checked against all earlier French levels by the

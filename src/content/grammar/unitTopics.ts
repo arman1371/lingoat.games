@@ -542,4 +542,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   ],
   // ---- French C2.2 ----------------------------------------------------------------------------
   'fr-c2-2-arts': [{ topic: 'fr-c22-participe-present' }],
+  'fr-c2-2-litterature': [{ topic: 'fr-c22-accord-participe' }],
 };
