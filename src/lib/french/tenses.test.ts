@@ -1,4 +1,11 @@
-import { futurSimple, imparfait, participle, passeCompose, passeComposeReflexive } from './tenses';
+import {
+  presentFr,
+  futurSimple,
+  imparfait,
+  participle,
+  passeCompose,
+  passeComposeReflexive,
+} from './tenses';
 
 const row = (f: Record<string, string>) => Object.values(f);
 
@@ -113,5 +120,20 @@ describe('futurSimple', () => {
     expect(futurSimple('venir')['ils/elles']).toBe('viendront');
     expect(futurSimple('acheter')['tu']).toBe('achèteras');
     expect(futurSimple('payer')['je']).toBe('paierai');
+  });
+});
+
+describe('presentFr', () => {
+  it('knows devoir and falls back to the regular conjugator', () => {
+    expect(row(presentFr('devoir'))).toEqual([
+      'dois',
+      'dois',
+      'doit',
+      'devons',
+      'devez',
+      'doivent',
+    ]);
+    expect(presentFr('pouvoir')['je']).toBe('peux');
+    expect(presentFr('aimer').nous).toBe('aimons');
   });
 });

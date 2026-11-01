@@ -64,6 +64,19 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['spell', 'fr-a2-1-parcours-spell-life'],
   ['dialogue (three scenes)', 'fr-a2-1-parcours-dialogues'],
   ['blitz', 'fr-a2-1-parcours-blitz'],
+  ['flashcards (places)', 'fr-a2-1-sorties-flash-places'],
+  ['quiz (pictures)', 'fr-a2-1-sorties-quiz-emoji'],
+  ['listen', 'fr-a2-1-sorties-listen-outings'],
+  ['memory', 'fr-a2-1-sorties-memory-culture'],
+  ['conjugation (pouvoir, devoir, vouloir)', 'fr-a2-1-sorties-conj-modals'],
+  ['gap fill (modals)', 'fr-a2-1-sorties-gap-modals'],
+  ['sort it (accept or refuse)', 'fr-a2-1-sorties-sort-answers'],
+  ['gap fill (invitations)', 'fr-a2-1-sorties-gap-invitations'],
+  ['gap fill (the pronoun y)', 'fr-a2-1-sorties-gap-y'],
+  ['sentence builder', 'fr-a2-1-sorties-sentences'],
+  ['spell', 'fr-a2-1-sorties-spell-culture'],
+  ['dialogue (three scenes)', 'fr-a2-1-sorties-dialogues'],
+  ['blitz', 'fr-a2-1-sorties-blitz'],
 ];
 
 test.describe('French A2.1 – playing the games', () => {

@@ -1,6 +1,12 @@
 import type { FrenchPronoun } from '@/lib/persons';
 import type { FrenchForms } from '@/lib/french/conjugation';
-import { futurSimple, imparfait, passeCompose, passeComposeReflexive } from '@/lib/french/tenses';
+import {
+  futurSimple,
+  imparfait,
+  passeCompose,
+  passeComposeReflexive,
+  presentFr,
+} from '@/lib/french/tenses';
 import { unit } from '../builders';
 import type { ConfigOf, Unit } from '../schema';
 import type { LessonId } from '../lessons';
@@ -92,3 +98,11 @@ export const futurTable = (
   blanks: FrenchPronoun[],
   id = `fut-${verb}`,
 ): Table => table(id, verb, `${meaning} – futur simple`, futurSimple(verb), blanks);
+
+/** Present-tense table for the verbs `conjugateFr` knows plus devoir, sortir, dire … (see `presentFr`). */
+export const presentTable = (
+  verb: string,
+  meaning: string,
+  blanks: FrenchPronoun[],
+  id = `pres-${verb}`,
+): Table => table(id, verb, meaning, presentFr(verb), blanks);

@@ -17,4 +17,8 @@ export const FR21_SOURCES = {
   pendant: wiktionary('pendant', 'pendant'),
   faire: wiktionary('Conjugaison:français/faire', 'Conjugaison : faire'),
   prendre: wiktionary('Conjugaison:français/prendre', 'Conjugaison : prendre'),
+  devoir: wiktionary('Conjugaison:français/devoir', 'Conjugaison : devoir'),
+  pouvoir: wiktionary('pouvoir', 'pouvoir'),
+  y: wiktionary('y', 'y'),
+  envie: wiktionary('envie', 'envie'),
 } as const satisfies Record<string, Source>;

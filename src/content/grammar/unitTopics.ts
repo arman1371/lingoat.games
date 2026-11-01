@@ -558,4 +558,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a21-negatives', note: 'rien, personne, plus, pas encore' },
     { topic: 'fr-a21-time-markers', note: 'pendant, depuis, en' },
   ],
+  'fr-a2-1-sorties': [
+    { topic: 'fr-a21-invitations' },
+    { topic: 'fr-a21-modals' },
+    { topic: 'fr-a21-y', note: 'j’y vais, allons-y' },
+  ],
 };

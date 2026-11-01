@@ -48,6 +48,29 @@ const NOUS: Record<string, string> = {
   rendre: 'rendons',
 };
 
+/** Present-tense forms of irregular verbs that `conjugateFr` does not know yet (devoir, sortir, dire …). */
+const EXTRA_PRESENT: Record<string, FrenchForms> = {
+  devoir: forms('dois', 'dois', 'doit', 'devons', 'devez', 'doivent'),
+  sortir: forms('sors', 'sors', 'sort', 'sortons', 'sortez', 'sortent'),
+  partir: forms('pars', 'pars', 'part', 'partons', 'partez', 'partent'),
+  dire: forms('dis', 'dis', 'dit', 'disons', 'dites', 'disent'),
+  voir: forms('vois', 'vois', 'voit', 'voyons', 'voyez', 'voient'),
+  mettre: forms('mets', 'mets', 'met', 'mettons', 'mettez', 'mettent'),
+  lire: forms('lis', 'lis', 'lit', 'lisons', 'lisez', 'lisent'),
+  écrire: forms('écris', 'écris', 'écrit', 'écrivons', 'écrivez', 'écrivent'),
+  connaître: forms('connais', 'connais', 'connaît', 'connaissons', 'connaissez', 'connaissent'),
+  croire: forms('crois', 'crois', 'croit', 'croyons', 'croyez', 'croient'),
+  vivre: forms('vis', 'vis', 'vit', 'vivons', 'vivez', 'vivent'),
+  recevoir: forms('reçois', 'reçois', 'reçoit', 'recevons', 'recevez', 'reçoivent'),
+  ouvrir: forms('ouvre', 'ouvres', 'ouvre', 'ouvrons', 'ouvrez', 'ouvrent'),
+  offrir: forms('offre', 'offres', 'offre', 'offrons', 'offrez', 'offrent'),
+};
+
+/** Present tense: the verbs of `conjugateFr` plus the extra irregular ones above. */
+export function presentFr(verb: string): FrenchForms {
+  return EXTRA_PRESENT[verb] ?? conjugateFr(verb);
+}
+
 const IMPARFAIT_ENDINGS = ['ais', 'ais', 'ait', 'ions', 'iez', 'aient'] as const;
 
 /** Spelling that keeps the sound before -ions / -iez: nous mangions, nous commencions. */

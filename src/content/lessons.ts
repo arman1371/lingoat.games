@@ -1288,6 +1288,25 @@ export const LESSONS = {
       'Je suis né en 1998.',
     ],
   },
+  'fr-a21-invitations': {
+    title: 'Suggesting, accepting, refusing',
+    rule: 'To suggest an outing say Ça te dit de + infinitive? or Tu as envie de + infinitive? (with vous: Ça vous dit …?). Accept with Bonne idée, Avec plaisir or Pourquoi pas. Refuse politely with Désolé, je ne peux pas, Je suis pris(e) or Dommage.',
+    examples: [
+      'Ça te dit d’aller au théâtre ?',
+      'Tu as envie de sortir samedi ?',
+      'Désolé, je suis pris ce soir.',
+    ],
+  },
+  'fr-a21-modals': {
+    title: 'pouvoir, devoir, vouloir',
+    rule: 'Pouvoir (can), devoir (must) and vouloir (want) are irregular and are followed by an infinitive: je peux venir, nous devons partir, ils veulent sortir. In the negative ne … pas goes around the first verb: je ne peux pas venir.',
+    examples: ['Tu peux venir ?', 'Nous devons réserver.', 'Elle ne veut pas sortir.'],
+  },
+  'fr-a21-y': {
+    title: 'The pronoun y',
+    rule: 'Y replaces à (or dans, chez, sur) + a place, or à + a thing, and means “there”: Tu vas au stade ? – Oui, j’y vais. It goes right before the verb (before the auxiliary in the passé composé: je n’y suis jamais allé) and after the imperative with a hyphen: allons-y, vas-y.',
+    examples: ['J’y vais ce soir.', 'Nous n’y sommes jamais allés.', 'Allons-y !'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
