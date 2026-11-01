@@ -1,0 +1,810 @@
+import { activity, vocabList } from '../builders';
+import {
+  cards,
+  dictated,
+  gap,
+  npc,
+  q,
+  scene,
+  scrambled,
+  tf,
+  typed,
+  unitFrC12,
+  vocabBlock,
+  you,
+} from './helpers';
+import type { UnitContent } from './types';
+
+const U = 'fr-c1-2-sante';
+
+const vocab = vocabList(U, 'Santé et médecine', [
+  ['la consultation', 'medical appointment', '🩺'],
+  ['le généraliste', 'general practitioner', '👨‍⚕️'],
+  ['le spécialiste', 'specialist', '🔬'],
+  ['l’ordonnance', 'prescription', '📝'],
+  ['le traitement', 'treatment', '💊'],
+  ['l’acte médical', 'medical procedure', '➕'],
+  ['le diagnostic', 'diagnosis', '🔍'],
+  ['le dépistage', 'screening test', '🧪'],
+  ['l’intervention chirurgicale', 'surgical operation', '🛏️'],
+  ['la rééducation', 'rehabilitation, physiotherapy', '🦵'],
+  ['les urgences', 'emergency room', '🚑'],
+  ['le dossier médical', 'medical record', '🗂️'],
+  ['le secret médical', 'medical confidentiality', '🤐'],
+  ['la mutuelle', 'supplementary health insurance', '🪪'],
+  ['la Sécurité sociale', 'national social security', '🇫🇷'],
+  ['le remboursement', 'reimbursement', '💸'],
+  ['le handicap', 'disability', '♿'],
+  ['le trouble', 'disorder', '🫨'],
+  ['le traumatisme', 'trauma', '⚡'],
+  ['la douleur chronique', 'chronic pain', '🔥'],
+  ['la téléconsultation', 'video consultation', '💻'],
+  ['l’objet connecté', 'connected device', '⌚'],
+  ['l’intelligence artificielle', 'artificial intelligence', '🤖'],
+  ['les données de santé', 'health data', '🗄️'],
+  ['le consentement éclairé', 'informed consent', '✍️'],
+  ['le don d’organes', 'organ donation', '🫀'],
+  ['la greffe', 'transplant', '🫁'],
+  ['l’éthique médicale', 'medical ethics', '🧭'],
+  ['l’essai clinique', 'clinical trial', '🧫'],
+  ['le vaccin', 'vaccine', '💉'],
+  ['l’épidémie', 'epidemic', '🦠'],
+  ['guérir', 'to heal, to recover', '🌈'],
+  ['soulager', 'to relieve', '😌'],
+  ['prescrire', 'to prescribe', '🖊️'],
+  ['être en rémission', 'to be in remission', '🌤️'],
+]);
+
+export const sante: UnitContent = {
+  unit: unitFrC12({
+    id: U,
+    order: 4,
+    title: 'Santé 3.0',
+    subtitle: 'Consultations, new technologies and medical ethics – and the past tenses of a story',
+    emoji: '🩺',
+    goals: [
+      'Describe a consultation, a treatment and the health system',
+      'Discuss new technologies and ethical questions in medicine',
+      'Tell a story with imparfait, passé composé and plus-que-parfait',
+      'Recognise the passé simple in written narration',
+    ],
+    grammar: ['Temps du récit au passé', 'Le passé simple'],
+    vocabFields: ['Santé et médecine'],
+  }),
+  vocab,
+  activities: [
+    ...vocabBlock(U, 'fr-c12-health', vocab, {
+      first: 'Consultation and health system',
+      firstText: 'Words for appointments, treatment, insurance and hospital care.',
+      second: 'Technology, ethics and recovery',
+      secondText: 'Words for connected health, consent, organ donation and recovery.',
+    }),
+
+    activity(
+      U,
+      'quiz-definitions',
+      'quiz',
+      {
+        title: 'Which word is defined?',
+        description: 'Read the definition in French and find the word.',
+        tags: ['vocabulary', 'fr-c12-health'],
+        difficulty: 2,
+        estMinutes: 4,
+      },
+      {
+        questions: [
+          q(
+            'd1',
+            'Papier signé par le médecin qui indique les médicaments à prendre.',
+            'l’ordonnance',
+            ['le diagnostic', 'le vaccin', 'la greffe'],
+          ),
+          q('d2', 'Examen pour détecter une maladie avant qu’elle ne se déclare.', 'le dépistage', [
+            'la rééducation',
+            'le traitement',
+            'la douleur chronique',
+          ]),
+          q(
+            'd3',
+            'Obligation pour le médecin de ne rien révéler sur ses patients.',
+            'le secret médical',
+            ['le consentement éclairé', 'le dossier médical', 'le remboursement'],
+          ),
+          q(
+            'd4',
+            'Accord que le patient donne après avoir reçu toutes les informations.',
+            'le consentement éclairé',
+            ['la mutuelle', 'l’ordonnance', 'le don d’organes'],
+          ),
+          q('d5', 'Remplacer un organe malade par un organe sain.', 'la greffe', [
+            'la consultation',
+            'l’épidémie',
+            'le trouble',
+          ]),
+          q('d6', 'Maladie qui touche beaucoup de personnes en même temps.', 'l’épidémie', [
+            'le handicap',
+            'le vaccin',
+            'le traumatisme',
+          ]),
+          q('d7', 'Consultation à distance, par vidéo.', 'la téléconsultation', [
+            'les urgences',
+            'l’essai clinique',
+            'l’acte médical',
+          ]),
+          q('d8', 'Réduire la douleur de quelqu’un.', 'soulager', [
+            'guérir',
+            'prescrire',
+            'être en rémission',
+          ]),
+        ],
+      },
+    ),
+
+    activity(
+      U,
+      'sort-tenses',
+      'sortit',
+      {
+        title: 'Background, event or earlier?',
+        description: 'The capitals show the verb. Which tense does the story need?',
+        tags: ['grammar', 'fr-c12-recit-passe'],
+        difficulty: 2,
+        estMinutes: 4,
+      },
+      {
+        instruction: 'Which past tense is in capitals?',
+        buckets: [
+          { id: 'imparfait', label: 'imparfait – background', emoji: '🖼️' },
+          { id: 'compose', label: 'passé composé – event', emoji: '⚡' },
+          { id: 'pqp', label: 'plus-que-parfait – before', emoji: '⏪' },
+        ],
+        items: [
+          ...cards('imparfait', [
+            ['Le patient SOUFFRAIT depuis des mois.', 'The patient had been suffering for months.'],
+            ['Il ÉTAIT très fatigué.', 'He was very tired.'],
+            ['Chaque matin, elle PRENAIT ses cachets.', 'Every morning she took her pills.'],
+          ]),
+          ...cards('compose', [
+            ['Le médecin A POSÉ le diagnostic.', 'The doctor made the diagnosis.'],
+            ['Elle EST ENTRÉE aux urgences à minuit.', 'She came into the ER at midnight.'],
+            ['Nous AVONS ATTENDU deux heures.', 'We waited two hours.'],
+          ]),
+          ...cards('pqp', [
+            ['Il AVAIT OUBLIÉ son ordonnance.', 'He had forgotten his prescription.'],
+            ['Elle ÉTAIT TOMBÉE la veille.', 'She had fallen the day before.'],
+            [
+              'Nous AVIONS PRIS rendez-vous un mois avant.',
+              'We had made an appointment a month before.',
+            ],
+          ]),
+        ],
+      },
+    ),
+
+    activity(
+      U,
+      'gap-tenses',
+      'gapfill',
+      {
+        title: 'Choose the tense',
+        description: 'Imparfait, passé composé or plus-que-parfait?',
+        tags: ['grammar', 'fr-c12-recit-passe'],
+        difficulty: 3,
+        estMinutes: 5,
+      },
+      {
+        items: [
+          gap(
+            't1',
+            'Quand le médecin est arrivé, le patient ___ déjà.',
+            'dormait',
+            ['dormait', 'a dormi', 'dormirait', 'dormit'],
+            'When the doctor arrived, the patient was already asleep.',
+            {
+              lesson: 'fr-c12-recit-passe',
+              explanation: 'A state in progress when the event happens: imparfait.',
+              why: {
+                'a dormi':
+                  'The passé composé would present sleeping as one finished event, not as the background.',
+              },
+            },
+          ),
+          gap(
+            't2',
+            'Elle ___ à l’hôpital parce qu’elle s’était cassé la jambe.',
+            'est allée',
+            ['est allée', 'allait', 'était allée', 'allée'],
+            'She went to the hospital because she had broken her leg.',
+            {
+              lesson: 'fr-c12-recit-passe',
+              explanation:
+                'The main event is in the passé composé; the earlier cause is in the plus-que-parfait.',
+            },
+          ),
+          gap(
+            't3',
+            'Il ___ de l’aspirine avant de consulter.',
+            'avait pris',
+            ['avait pris', 'prenait', 'a pris', 'prit'],
+            'He had taken aspirin before seeing the doctor.',
+            {
+              lesson: 'fr-c12-recit-passe',
+              explanation: 'Taking aspirin happened before the consultation: plus-que-parfait.',
+            },
+          ),
+          gap(
+            't4',
+            'Pendant mon enfance, je ___ souvent malade.',
+            'étais',
+            ['étais', 'ai été', 'avais été', 'fus'],
+            'During my childhood I was often ill.',
+            {
+              lesson: 'fr-c12-recit-passe',
+              explanation: 'A repeated state in the past: imparfait.',
+            },
+          ),
+          gap(
+            't5',
+            'Hier, l’infirmière ___ la prise de sang à neuf heures.',
+            'a fait',
+            ['a fait', 'faisait', 'avait fait', 'fait'],
+            'Yesterday the nurse took the blood sample at nine.',
+            {
+              lesson: 'fr-c12-recit-passe',
+              explanation: 'A single event at a given time: passé composé.',
+            },
+          ),
+          gap(
+            't6',
+            'Quand je suis arrivé, le médecin ___ déjà parti.',
+            'était',
+            ['était', 'avait', 'est', 'fut'],
+            'When I arrived, the doctor had already left.',
+            {
+              lesson: 'fr-c12-recit-passe',
+              explanation: 'partir takes être, so the plus-que-parfait is était parti.',
+            },
+          ),
+          gap(
+            't7',
+            'Elle ___ (prendre) rendez-vous la semaine d’avant.',
+            'avait pris',
+            undefined,
+            'She had made an appointment the week before.',
+            {
+              lesson: 'fr-c12-recit-passe',
+              explanation: 'plus-que-parfait: imparfait of avoir + past participle.',
+            },
+          ),
+        ],
+      },
+    ),
+
+    activity(
+      U,
+      'conj-passe-simple',
+      'conjugation',
+      {
+        title: 'Passé simple forms',
+        description: 'Fill in the forms of the passé simple – the tense of written stories.',
+        tags: ['grammar', 'fr-c12-passe-simple'],
+        difficulty: 3,
+        estMinutes: 5,
+      },
+      {
+        tables: [
+          {
+            id: 'parler',
+            verb: 'parler',
+            meaning: 'to speak',
+            forms: {
+              je: 'parlai',
+              tu: 'parlas',
+              'il/elle/on': 'parla',
+              nous: 'parlâmes',
+              vous: 'parlâtes',
+              'ils/elles': 'parlèrent',
+            },
+            blanks: ['il/elle/on', 'ils/elles'],
+            lesson: 'fr-c12-passe-simple',
+          },
+          {
+            id: 'finir',
+            verb: 'finir',
+            meaning: 'to finish',
+            forms: {
+              je: 'finis',
+              tu: 'finis',
+              'il/elle/on': 'finit',
+              nous: 'finîmes',
+              vous: 'finîtes',
+              'ils/elles': 'finirent',
+            },
+            blanks: ['il/elle/on', 'ils/elles'],
+            lesson: 'fr-c12-passe-simple',
+          },
+          {
+            id: 'etre',
+            verb: 'être',
+            meaning: 'to be',
+            forms: {
+              je: 'fus',
+              tu: 'fus',
+              'il/elle/on': 'fut',
+              nous: 'fûmes',
+              vous: 'fûtes',
+              'ils/elles': 'furent',
+            },
+            blanks: ['il/elle/on', 'ils/elles'],
+            lesson: 'fr-c12-passe-simple',
+          },
+          {
+            id: 'avoir',
+            verb: 'avoir',
+            meaning: 'to have',
+            forms: {
+              je: 'eus',
+              tu: 'eus',
+              'il/elle/on': 'eut',
+              nous: 'eûmes',
+              vous: 'eûtes',
+              'ils/elles': 'eurent',
+            },
+            blanks: ['il/elle/on', 'ils/elles'],
+            lesson: 'fr-c12-passe-simple',
+          },
+          {
+            id: 'faire',
+            verb: 'faire',
+            meaning: 'to do, to make',
+            forms: {
+              je: 'fis',
+              tu: 'fis',
+              'il/elle/on': 'fit',
+              nous: 'fîmes',
+              vous: 'fîtes',
+              'ils/elles': 'firent',
+            },
+            blanks: ['il/elle/on', 'ils/elles'],
+            lesson: 'fr-c12-passe-simple',
+          },
+          {
+            id: 'venir',
+            verb: 'venir',
+            meaning: 'to come',
+            forms: {
+              je: 'vins',
+              tu: 'vins',
+              'il/elle/on': 'vint',
+              nous: 'vînmes',
+              vous: 'vîntes',
+              'ils/elles': 'vinrent',
+            },
+            blanks: ['il/elle/on', 'ils/elles'],
+            lesson: 'fr-c12-passe-simple',
+          },
+        ],
+      },
+    ),
+
+    activity(
+      U,
+      'gap-literary',
+      'gapfill',
+      {
+        title: 'In a novel',
+        description: 'Complete the written narration with the passé simple.',
+        tags: ['grammar', 'fr-c12-passe-simple'],
+        difficulty: 3,
+        estMinutes: 5,
+      },
+      {
+        items: [
+          gap(
+            'l1',
+            'Napoléon ___ à Ajaccio en 1769.',
+            'naquit',
+            ['naquit', 'naissait', 'est né', 'naissit'],
+            'Napoleon was born in Ajaccio in 1769.',
+            {
+              lesson: 'fr-c12-passe-simple',
+              explanation: 'naître is irregular: il naquit.',
+            },
+          ),
+          gap(
+            'l2',
+            'Il ___ la porte du cabinet et entra.',
+            'ouvrit',
+            ['ouvrit', 'ouvra', 'ouvrait', 'ouvri'],
+            'He opened the door of the surgery and went in.',
+            {
+              lesson: 'fr-c12-passe-simple',
+              explanation: 'ouvrir has -is, -it endings in the passé simple (like finir).',
+              why: { ouvra: 'ouvrir is an -ir verb: the endings are -is, -it, -irent.' },
+            },
+          ),
+          gap(
+            'l3',
+            'Elle ___ un cri de douleur.',
+            'poussa',
+            ['poussa', 'poussit', 'poussait', 'a poussé'],
+            'She let out a cry of pain.',
+            {
+              lesson: 'fr-c12-passe-simple',
+              explanation: '-er verbs: il / elle -a, ils / elles -èrent.',
+            },
+          ),
+          gap(
+            'l4',
+            'Les ambulanciers ___ au village à minuit.',
+            'arrivèrent',
+            ['arrivèrent', 'arrivaient', 'arrivent', 'arrivarent'],
+            'The paramedics reached the village at midnight.',
+            {
+              lesson: 'fr-c12-passe-simple',
+            },
+          ),
+          gap(
+            'l5',
+            'Le docteur ___ près du lit toute la nuit.',
+            'resta',
+            ['resta', 'restait', 'restit', 'a resté'],
+            'The doctor stayed by the bed all night.',
+            {
+              lesson: 'fr-c12-passe-simple',
+            },
+          ),
+          gap(
+            'l6',
+            'Louis XIV ___ en 1715.',
+            'mourut',
+            ['mourut', 'mourait', 'mourit', 'est mort'],
+            'Louis XIV died in 1715.',
+            {
+              lesson: 'fr-c12-passe-simple',
+              explanation: 'mourir is irregular: il mourut.',
+            },
+          ),
+        ],
+      },
+    ),
+
+    activity(
+      U,
+      'sentences',
+      'sentence',
+      {
+        title: 'Build the sentence',
+        description: 'Put the words in order – each sentence tells a past event.',
+        tags: ['grammar', 'fr-c12-recit-passe', 'fr-c12-passe-simple'],
+        difficulty: 3,
+        estMinutes: 5,
+      },
+      {
+        items: [
+          {
+            id: 's1',
+            translation: 'It was raining when the doctor arrived.',
+            words: ['Il', 'pleuvait', 'quand', 'le', 'médecin', 'est', 'arrivé.'],
+            lesson: 'fr-c12-recit-passe',
+          },
+          {
+            id: 's2',
+            translation: 'She had forgotten her prescription, so the pharmacist phoned the doctor.',
+            words: [
+              'Elle',
+              'avait',
+              'oublié',
+              'son',
+              'ordonnance,',
+              'donc',
+              'le',
+              'pharmacien',
+              'a',
+              'appelé',
+              'le',
+              'médecin.',
+            ],
+            lesson: 'fr-c12-recit-passe',
+          },
+          {
+            id: 's3',
+            translation: 'The patient had been suffering for a long time when he consulted.',
+            words: [
+              'Le',
+              'patient',
+              'souffrait',
+              'depuis',
+              'longtemps',
+              'quand',
+              'il',
+              'a',
+              'consulté.',
+            ],
+            lesson: 'fr-c12-recit-passe',
+          },
+          {
+            id: 's4',
+            translation: 'We had made an appointment a month before.',
+            words: ['Nous', 'avions', 'pris', 'rendez-vous', 'un', 'mois', 'avant.'],
+            lesson: 'fr-c12-recit-passe',
+          },
+          {
+            id: 's5',
+            translation: 'The surgeon opened a door and went into the theatre.',
+            words: [
+              'Le',
+              'chirurgien',
+              'ouvrit',
+              'une',
+              'porte',
+              'et',
+              'entra',
+              'dans',
+              'la',
+              'salle.',
+            ],
+            lesson: 'fr-c12-passe-simple',
+          },
+          {
+            id: 's6',
+            translation: 'The nurses arrived at midnight and treated the injured man.',
+            words: [
+              'Les',
+              'infirmiers',
+              'arrivèrent',
+              'à',
+              'minuit',
+              'et',
+              'soignèrent',
+              'le',
+              'blessé.',
+            ],
+            lesson: 'fr-c12-passe-simple',
+          },
+        ],
+      },
+    ),
+
+    activity(
+      U,
+      'spell-words',
+      'spell',
+      {
+        title: 'Spell the words',
+        description: 'Unscramble, type and write what you hear. Accents are optional here.',
+        tags: ['spelling', 'fr-c12-health'],
+        difficulty: 2,
+        estMinutes: 4,
+      },
+      {
+        items: [
+          scrambled('p1', 'ordonnance', 'prescription', '📝'),
+          scrambled('p2', 'dépistage', 'screening test', '🧪'),
+          typed('p3', 'le consentement éclairé', 'informed consent', '✍️'),
+          typed('p4', 'la rééducation', 'rehabilitation', '🦵'),
+          dictated('p5', 'le secret médical', 'medical confidentiality'),
+          dictated('p6', 'être en rémission', 'to be in remission'),
+        ],
+      },
+    ),
+
+    activity(
+      U,
+      'dialogues',
+      'dialogue',
+      {
+        title: 'At the doctor’s',
+        description: 'Three conversations: a consultation, an emergency and a story.',
+        tags: ['communication', 'fr-c12-health'],
+        difficulty: 3,
+        estMinutes: 5,
+      },
+      {
+        scenes: [
+          scene(
+            'gp',
+            'At the GP’s',
+            '🩺',
+            'You describe your symptoms.',
+            npc(
+              'Le médecin',
+              'Qu’est-ce qui vous amène ? Depuis quand avez-vous mal ?',
+              'What brings you here? Since when have you been in pain?',
+            ),
+            you(
+              'J’avais déjà un peu mal la semaine dernière, mais hier la douleur est devenue insupportable.',
+              [
+                'J’ai déjà eu un peu mal la semaine dernière, mais hier la douleur devenait insupportable.',
+                'The sudden change yesterday needs the passé composé: est devenue.',
+              ],
+              ['Je souffre depuis ça avait commencé.', 'This is not a grammatical sentence.'],
+            ),
+            npc(
+              'Le médecin',
+              'Je vais vous faire une ordonnance. Avez-vous déjà pris un traitement ?',
+              'I will write you a prescription. Have you already taken a treatment?',
+            ),
+            you(
+              'Oui, j’avais pris de l’ibuprofène avant de venir, mais cela ne m’a pas soulagé.',
+              [
+                'Oui, je prenais de l’ibuprofène avant de venir, mais cela ne m’a pas soulagé.',
+                'Taking it before coming is an earlier single action: plus-que-parfait.',
+              ],
+              ['Oui, j’ai prendre de l’ibuprofène.', 'The participle is missing: j’ai pris.'],
+            ),
+          ),
+          scene(
+            'emergency',
+            'Emergency call',
+            '🚑',
+            'You call the emergency number for your neighbour.',
+            npc(
+              'Le régulateur',
+              'Samu, j’écoute. Que s’est-il passé ?',
+              'Emergency services, I’m listening. What happened?',
+            ),
+            you(
+              'Mon voisin est tombé dans l’escalier. Il ne bougeait plus quand je suis arrivé.',
+              [
+                'Mon voisin tombait dans l’escalier. Il n’a plus bougé quand j’arrivais.',
+                'The fall is an event (passé composé); his not moving is the situation (imparfait).',
+              ],
+              [
+                'Mon voisin est tombé. Il a bougé plus.',
+                'The negation is incomplete: il ne bougeait plus.',
+              ],
+            ),
+            npc(
+              'Le régulateur',
+              'Ne le déplacez pas, une ambulance arrive.',
+              'Do not move him, an ambulance is on its way.',
+            ),
+          ),
+          scene(
+            'story',
+            'A story at dinner',
+            '🍽️',
+            'You tell friends about a hospital stay.',
+            npc(
+              'Hugo',
+              'Alors, comment ça s’est passé à l’hôpital ?',
+              'So how did it go at the hospital?',
+            ),
+            you(
+              'Quand je suis arrivé aux urgences, il y avait beaucoup de monde et j’ai attendu trois heures.',
+              [
+                'Quand j’arrivais aux urgences, il y a eu beaucoup de monde et j’attendais trois heures.',
+                'Event and background are mixed up: arrivé / avait; attendu.',
+              ],
+              [
+                'Quand je suis arrivé aux urgences, il y avait beaucoup de monde et j’attendis trois heures.',
+                'The passé simple does not fit spoken storytelling.',
+              ],
+            ),
+            npc(
+              'Hugo',
+              'Le pauvre ! Et maintenant tu vas mieux ?',
+              'Poor you! And now you’re better?',
+            ),
+          ),
+        ],
+      },
+    ),
+
+    activity(
+      U,
+      'blitz',
+      'blitz',
+      {
+        title: 'Health blitz',
+        description: 'True or false? Vocabulary and tenses.',
+        tags: ['grammar', 'fr-c12-recit-passe', 'fr-c12-passe-simple'],
+        difficulty: 3,
+        estMinutes: 3,
+      },
+      {
+        seconds: 60,
+        statements: [
+          tf('b1', 'The imparfait describes the background of a story.', true),
+          tf('b2', 'The passé composé is used for events that move the story forward.', true),
+          tf(
+            'b3',
+            'The plus-que-parfait shows an action that happened before another past action.',
+            true,
+          ),
+          tf(
+            'b4',
+            'The passé simple is the normal tense for talking to friends.',
+            false,
+            'It is mostly used in written narration, in the third person.',
+          ),
+          tf('b5', '“Il fut” is the passé simple of “être”.', true),
+          tf('b6', '“Ils firent” is the passé simple of “faire”.', true),
+          tf('b7', '“L’ordonnance” is the paper that lists your medicines.', true),
+          tf(
+            'b8',
+            '“Guérir” means to relieve pain without curing.',
+            false,
+            'Guérir means to recover; soulager means to relieve.',
+          ),
+          tf('b9', '“Le dépistage” is a test that looks for a disease early.', true),
+          tf('b10', '“Elle était tombée” expresses an earlier action.', true),
+        ],
+      },
+    ),
+
+    activity(
+      U,
+      'challenge',
+      'quiz',
+      {
+        title: 'Unit challenge',
+        description: 'Health vocabulary and past tenses in one final quiz.',
+        tags: ['vocabulary', 'grammar', 'fr-c12-health'],
+        difficulty: 3,
+        estMinutes: 5,
+      },
+      {
+        questions: [
+          q('c1', '“La mutuelle” is …', 'supplementary health insurance', [
+            'a type of surgery',
+            'a vaccine',
+            'a hospital ward',
+          ]),
+          q(
+            'c2',
+            'Hier, je ___ chez le médecin et il m’a prescrit un traitement.',
+            'suis allé',
+            ['allais', 'étais allé', 'allai'],
+            { lesson: 'fr-c12-recit-passe' },
+          ),
+          q(
+            'c3',
+            'Il ___ très fatigué, donc il a consulté.',
+            'était',
+            ['a été', 'avait été', 'fut'],
+            { lesson: 'fr-c12-recit-passe' },
+          ),
+          q(
+            'c4',
+            'Elle ___ déjà guérie quand le résultat est arrivé.',
+            'était',
+            ['est', 'fut', 'avait'],
+            { lesson: 'fr-c12-recit-passe' },
+          ),
+          q(
+            'c5',
+            'Which sentence is written narration (passé simple)?',
+            'Le médecin entra et salua la famille.',
+            [
+              'Le médecin est entré et a salué la famille.',
+              'Le médecin entrait et saluait la famille.',
+              'Le médecin était entré et avait salué la famille.',
+            ],
+            { lesson: 'fr-c12-passe-simple' },
+          ),
+          q(
+            'c6',
+            'Ils ___ la nouvelle en silence. (accueillir, passé simple)',
+            'accueillirent',
+            ['accueillèrent', 'accueillaient', 'accueillent'],
+            { lesson: 'fr-c12-passe-simple' },
+          ),
+          q('c7', '“Le don d’organes” means …', 'organ donation', [
+            'organ transplant waiting list',
+            'a blood test',
+            'a hospital bill',
+          ]),
+          q(
+            'c8',
+            'Quand elle ___ au village, il pleuvait.',
+            'est arrivée',
+            ['arrivait', 'était arrivée', 'arrivât'],
+            { lesson: 'fr-c12-recit-passe' },
+          ),
+        ],
+      },
+    ),
+  ],
+};

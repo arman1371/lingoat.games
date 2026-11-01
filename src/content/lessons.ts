@@ -1124,6 +1124,24 @@ export const LESSONS = {
       'Victor Hugo est mort en 1885. L’auteur des Misérables avait 83 ans.',
     ],
   },
+  'fr-c12-recit-passe': {
+    title: 'Imparfait, passé composé, plus-que-parfait',
+    rule: 'The imparfait gives the background: states, descriptions, habits. The passé composé gives the events that move the story on. The plus-que-parfait (imparfait of avoir or être + participle) shows what had already happened before another past moment. Together they build a story.',
+    examples: [
+      'Il pleuvait quand le médecin est arrivé.',
+      'Elle avait oublié son ordonnance, alors le pharmacien a appelé.',
+      'Chaque matin, il prenait ses cachets.',
+    ],
+  },
+  'fr-c12-passe-simple': {
+    title: 'The passé simple',
+    rule: 'The passé simple is the tense of written narration: novels, history, tales. You mostly meet the third person. -er verbs: -a, -èrent. -ir verbs: -it, -irent. Many others: -ut, -urent (il eut, il fut, il mourut), or irregular stems (il fit, il vint, il naquit). Learn to recognise it; you rarely say it.',
+    examples: [
+      'Il ouvrit la porte et entra.',
+      'Elle fut surprise. · Ils eurent peur.',
+      'Napoléon naquit en 1769. · Louis XIV mourut en 1715.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',

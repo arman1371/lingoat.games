@@ -383,6 +383,10 @@ export const TAGS = {
   'fr-c12-ageing': { label: 'Ageing & retirement', group: 'topic', emoji: '🧓' },
   'fr-c12-reprise-pronominale': { label: 'Reprise pronominale', group: 'grammar', emoji: '👤' },
   'fr-c12-reprise-nominale': { label: 'Reprise nominale', group: 'grammar', emoji: '🏷️' },
+  // unit 4
+  'fr-c12-health': { label: 'Health & medicine', group: 'topic', emoji: '🩺' },
+  'fr-c12-recit-passe': { label: 'Past tenses of a story', group: 'grammar', emoji: '📖' },
+  'fr-c12-passe-simple': { label: 'Passé simple', group: 'grammar', emoji: '🏰' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },

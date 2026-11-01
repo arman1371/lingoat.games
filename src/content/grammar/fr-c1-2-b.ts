@@ -227,4 +227,125 @@ export const FRC12_TOPICS_B: GrammarTopic[] = [
     related: ['fr-c12-reprise-pronominale', 'fr-demonstratives'],
     sources: [S.anaphore],
   },
+  {
+    id: 'fr-c12-recit-passe',
+    title: 'Imparfait, passé composé, plus-que-parfait',
+    tagline: 'Background, event, and what came before',
+    level: LEVEL,
+    summary:
+      'Use the imparfait for the setting, the passé composé for events that move the story on, and the plus-que-parfait for what had already happened.',
+    sections: [
+      section(
+        'roles',
+        'Three tenses, three jobs',
+        table(
+          'What each tense does in a story.',
+          ['Tense', 'Job', 'Example'],
+          [
+            [
+              'imparfait',
+              'background, states, habits',
+              'Il pleuvait. Le patient souffrait depuis longtemps.',
+            ],
+            [
+              'passé composé',
+              'events, one after another',
+              'Le médecin est arrivé et a posé le diagnostic.',
+            ],
+            ['plus-que-parfait', 'before the main past moment', 'Il avait oublié son ordonnance.'],
+          ],
+          2,
+        ),
+        p(
+          'The **plus-que-parfait** is the imparfait of **avoir** or **être** plus the past participle: *j’avais pris, elle était tombée, nous étions partis*. Verbs that take être in the passé composé take it here too.',
+        ),
+      ),
+      section(
+        'together',
+        'Telling a story',
+        examples(
+          [
+            'Quand je suis arrivé aux urgences, il y avait beaucoup de monde.',
+            'When I got to the ER, there were lots of people.',
+          ],
+          [
+            'Elle s’était cassé la jambe, alors elle est allée à l’hôpital.',
+            'She had broken her leg, so she went to hospital.',
+          ],
+        ),
+        compare(
+          {
+            title: 'Imparfait',
+            question: 'What was going on?',
+            example: 'Il dormait quand le médecin est arrivé.',
+          },
+          {
+            title: 'Passé composé',
+            question: 'What happened?',
+            example: 'Le médecin est arrivé à midi.',
+          },
+          {
+            title: 'Plus-que-parfait',
+            question: 'What had already happened?',
+            example: 'Il avait déjà pris un cachet.',
+          },
+        ),
+        mistake(
+          'Watch out',
+          '✗ Quand j’arrivais, il y a eu beaucoup de monde.  ✓ Quand je suis arrivé, il y avait beaucoup de monde.',
+          '✗ Je suis allé parce que je me suis cassé la jambe.  ✓ Je suis allé à l’hôpital parce que je m’étais cassé la jambe.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-passe-simple'],
+    sources: [S.imparfait, S.plusQueParfait],
+  },
+  {
+    id: 'fr-c12-passe-simple',
+    title: 'The passé simple',
+    tagline: 'The tense of written narration',
+    level: LEVEL,
+    summary:
+      'The passé simple tells finished events in writing, mostly in the third person. Learn to recognise it: -a and -èrent, -it and -irent, -ut and -urent, plus irregular stems.',
+    sections: [
+      section(
+        'forms',
+        'Forms',
+        table(
+          'Passé simple of common verbs.',
+          ['Verb', 'il / elle', 'ils / elles'],
+          [
+            ['parler', 'parla', 'parlèrent'],
+            ['finir', 'finit', 'finirent'],
+            ['être', 'fut', 'furent'],
+            ['avoir', 'eut', 'eurent'],
+            ['faire', 'fit', 'firent'],
+            ['venir', 'vint', 'vinrent'],
+            ['naître', 'naquit', 'naquirent'],
+            ['mourir', 'mourut', 'moururent'],
+          ],
+        ),
+        p(
+          'The endings depend on the verb group: after the -é participle verbs take **-ai, -as, -a, -âmes, -âtes, -èrent**; after -i they take **-is, -is, -it, -îmes, -îtes, -irent**; after -u they take **-us, -us, -ut, -ûmes, -ûtes, -urent**.',
+        ),
+      ),
+      section(
+        'use',
+        'When it is used',
+        p(
+          'It tells completed events of a story in **writing**: novels, history books, tales. In speech and in everyday writing the passé composé replaces it. The imparfait still describes the background: *Il pleuvait. Le docteur ouvrit la porte et entra.*',
+        ),
+        examples(
+          ['Napoléon naquit à Ajaccio en 1769.', 'Napoleon was born in Ajaccio in 1769.'],
+          ['Elle poussa un cri et tomba.', 'She cried out and fell.'],
+        ),
+        tip(
+          'Reading tip',
+          'Look for -a, -it, -ut, -int and -èrent / -irent endings in a text: they signal the passé simple. You will meet it in literature far more than you will ever need to write it.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-recit-passe'],
+    sources: [S.passeSimple],
+  },
 ];

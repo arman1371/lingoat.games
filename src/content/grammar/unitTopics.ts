@@ -575,4 +575,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-c12-reprise-pronominale' },
     { topic: 'fr-c12-reprise-nominale' },
   ],
+  'fr-c1-2-sante': [{ topic: 'fr-c12-recit-passe' }, { topic: 'fr-c12-passe-simple' }],
 };
