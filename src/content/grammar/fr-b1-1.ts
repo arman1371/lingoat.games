@@ -19,7 +19,7 @@ function subjunctiveTable(caption: string, verbs: readonly string[]) {
 /** French B1.1, unit 1: living together (subjunctive, obligation, advice, negations, prefixes). */
 export const FR_B11_TOPICS: GrammarTopic[] = [
   {
-    id: 'fr-subjunctive',
+    id: 'fr-b11-subjunctive',
     title: 'The present subjunctive',
     tagline: 'What follows il faut que?',
     level: LEVEL,
@@ -78,11 +78,11 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['fr-obligation', 'fr-advice'],
+    related: ['fr-b11-obligation', 'fr-b11-advice'],
     sources: [S.subjunctive, S.falloir],
   },
   {
-    id: 'fr-obligation',
+    id: 'fr-b11-obligation',
     title: 'Must, forbidden, allowed',
     tagline: 'How do I say what you have to do, must not do or may do?',
     level: LEVEL,
@@ -143,11 +143,11 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['fr-subjunctive', 'fr-advice'],
+    related: ['fr-b11-subjunctive', 'fr-b11-advice'],
     sources: [S.falloir, S.subjunctive],
   },
   {
-    id: 'fr-advice',
+    id: 'fr-b11-advice',
     title: 'Giving advice',
     tagline: 'How do I tell someone what to do without being rude?',
     level: LEVEL,
@@ -191,11 +191,11 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['fr-subjunctive', 'fr-obligation'],
+    related: ['fr-b11-subjunctive', 'fr-b11-obligation'],
     sources: [S.conseiller, S.subjunctive],
   },
   {
-    id: 'fr-restriction',
+    id: 'fr-b11-restriction',
     title: 'ne … que, ne … ni … ni, aucun',
     tagline: 'How do I say “only”, “neither … nor” and “not one”?',
     level: LEVEL,
@@ -254,7 +254,7 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
     sources: [S.negation],
   },
   {
-    id: 'fr-negative-prefixes',
+    id: 'fr-b11-negative-prefixes',
     title: 'in-, im-, il-, ir-',
     tagline: 'How do I make the opposite of a word?',
     level: LEVEL,
@@ -298,7 +298,7 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['fr-restriction'],
+    related: ['fr-b11-restriction'],
     sources: [S.prefixIn],
   },
 ];

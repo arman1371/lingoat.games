@@ -1061,7 +1061,7 @@ export const LESSONS = {
     examples: ['Das ist ja interessant!', 'Das ist eben so.', 'Du hast es doch versprochen!'],
   },
   // ---- French A1.1 -------------------------------------------------------------------------
-  'fr-subjunctive': {
+  'fr-b11-subjunctive': {
     title: 'The present subjunctive',
     rule: 'After il faut que, il vaut mieux que, vouloir que and other expressions of necessity, wish or feeling, the verb after que is in the subjunctive: take the ils stem and add -e, -es, -e, -ions, -iez, -ent (que je prenne, que nous prenions). Être, avoir, aller, faire, pouvoir, savoir and vouloir have their own stems.',
     examples: [
@@ -1070,7 +1070,7 @@ export const LESSONS = {
       'Il vaut mieux que vous soyez à l’heure.',
     ],
   },
-  'fr-obligation': {
+  'fr-b11-obligation': {
     title: 'Must, forbidden, allowed',
     rule: 'Obligation: il faut + infinitive (or il faut que + subjunctive), devoir + infinitive. Ban: il est interdit de, il ne faut pas, on ne doit pas. Permission: on a le droit de, il est permis de, on peut. After de or devoir the verb stays in the infinitive.',
     examples: [
@@ -1079,7 +1079,7 @@ export const LESSONS = {
       'On a le droit d’inviter des amis.',
     ],
   },
-  'fr-advice': {
+  'fr-b11-advice': {
     title: 'Giving advice',
     rule: 'With the same subject use an infinitive: je te conseille de + infinitive, tu devrais + infinitive, il vaut mieux + infinitive. With a new subject after il vaut mieux use que + subjunctive. Never say conseiller que + present: je te conseille de partir.',
     examples: [
@@ -1088,7 +1088,7 @@ export const LESSONS = {
       'Il vaut mieux que tu parles avant de te plaindre.',
     ],
   },
-  'fr-restriction': {
+  'fr-b11-restriction': {
     title: 'ne … que, ne … ni … ni, aucun',
     rule: 'Ne … que means only: Je n’ai qu’une clé (the article stays). Ne … ni … ni … means neither … nor: Je n’ai ni frère ni sœur. Aucun(e) means not one: Je n’ai aucun problème. Rien and personne can be the subject: Personne ne répond. Passé composé: je n’ai rien dit, je n’ai vu personne.',
     examples: [
@@ -1097,7 +1097,7 @@ export const LESSONS = {
       'Aucun voisin ne fait de bruit.',
     ],
   },
-  'fr-negative-prefixes': {
+  'fr-b11-negative-prefixes': {
     title: 'in-, im-, il-, ir-',
     rule: 'The prefix in- turns a word into its opposite. It becomes im- before b, p and m, il- before l and ir- before r: inutile, impossible, illégal, irréel. The spelling follows the sound, not the meaning.',
     examples: ['utile → inutile', 'possible → impossible', 'légal → illégal'],

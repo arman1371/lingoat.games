@@ -566,10 +566,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   ],
   // ---- French B1.1 ----------------------------------------------------------------------------
   'fr-b1-1-ensemble': [
-    { topic: 'fr-subjunctive' },
-    { topic: 'fr-obligation' },
-    { topic: 'fr-advice' },
-    { topic: 'fr-restriction' },
-    { topic: 'fr-negative-prefixes' },
+    { topic: 'fr-b11-subjunctive' },
+    { topic: 'fr-b11-obligation' },
+    { topic: 'fr-b11-advice' },
+    { topic: 'fr-b11-restriction' },
+    { topic: 'fr-b11-negative-prefixes' },
   ],
 };

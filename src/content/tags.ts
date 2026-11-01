@@ -362,11 +362,11 @@ export const TAGS = {
   'c22-passive-alternatives': { label: 'Replacing the passive', group: 'grammar', emoji: '🔀' },
   'c22-nuance-particles': { label: 'Nuance particles & adverbs', group: 'grammar', emoji: '🎚️' },
   // grammar points – French B1.1
-  'fr-subjunctive': { label: 'Subjunctive (il faut que …)', group: 'grammar', emoji: '🎯' },
-  'fr-obligation': { label: 'Must, forbidden, allowed', group: 'grammar', emoji: '🚦' },
-  'fr-advice': { label: 'Giving advice', group: 'grammar', emoji: '💡' },
-  'fr-restriction': { label: 'ne … que, ne … ni … ni, aucun', group: 'grammar', emoji: '⛔' },
-  'fr-negative-prefixes': { label: 'in-, im-, il-, ir-', group: 'grammar', emoji: '➖' },
+  'fr-b11-subjunctive': { label: 'Subjunctive (il faut que …)', group: 'grammar', emoji: '🎯' },
+  'fr-b11-obligation': { label: 'Must, forbidden, allowed', group: 'grammar', emoji: '🚦' },
+  'fr-b11-advice': { label: 'Giving advice', group: 'grammar', emoji: '💡' },
+  'fr-b11-restriction': { label: 'ne … que, ne … ni … ni, aucun', group: 'grammar', emoji: '⛔' },
+  'fr-b11-negative-prefixes': { label: 'in-, im-, il-, ir-', group: 'grammar', emoji: '➖' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },

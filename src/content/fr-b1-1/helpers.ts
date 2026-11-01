@@ -28,3 +28,27 @@ export function subjTable(
     blanks,
   };
 }
+
+/**
+ * The short authoring forms of A1.2 / A2.1 (gap, q, sent, say, you, tf, heard, dictation, sortCards) and the
+ * generated tense tables (passé composé, imparfait, futur simple) are shared with the earlier French levels.
+ */
+export {
+  activity,
+  dictation,
+  futurTable,
+  gap,
+  heard,
+  imparfaitTable,
+  meta,
+  pcReflexiveTable,
+  pcTable,
+  q,
+  say,
+  sent,
+  sortCards,
+  tf,
+  typed,
+  withLesson,
+  you,
+} from '../fr-a2-1/helpers';

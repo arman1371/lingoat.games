@@ -45,7 +45,7 @@ test.describe('French B1.1 – grammar hints', () => {
     await page.getByRole('button', { name: wrong, exact: true }).click();
     await page.getByTestId('why').click();
     const lesson = page.getByTestId('mini-lesson');
-    await expect(lesson).toHaveAttribute('data-lesson', 'fr-subjunctive');
+    await expect(lesson).toHaveAttribute('data-lesson', 'fr-b11-subjunctive');
     await expect(lesson.locator('li').first()).toHaveAttribute('lang', 'fr');
   });
 });
