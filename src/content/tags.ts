@@ -413,6 +413,10 @@ export const TAGS = {
   'fr-object-pronouns': { label: 'le, la, les, lui, leur', group: 'grammar', emoji: '🎯' },
   'fr-superlative': { label: 'le plus, le meilleur', group: 'grammar', emoji: '🥇' },
   'fr-interrogative-pronouns': { label: 'qui, que, quoi, lequel', group: 'grammar', emoji: '🔎' },
+  'fr-a22-cause-consequence': { label: 'parce que, donc, grâce à', group: 'grammar', emoji: '🔗' },
+  'fr-a22-subjunctive': { label: 'il faut que + subjonctif', group: 'grammar', emoji: '🌀' },
+  'fr-a22-pronoun-order': { label: 'je te le donne', group: 'grammar', emoji: '🧩' },
+  'fr-a22-adverbs-ment': { label: 'adverbes en -ment', group: 'grammar', emoji: '🐢' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

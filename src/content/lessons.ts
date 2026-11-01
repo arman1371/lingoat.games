@@ -1308,6 +1308,34 @@ export const LESSONS = {
     rule: 'Qui asks about a person. For things use qu’est-ce qui (subject) and qu’est-ce que or que (object); after a preposition or at the end of the question use quoi. Lequel, laquelle, lesquels and lesquelles ask “which one(s)?” and agree with the noun.',
     examples: ['Qui a appelé ?', 'Qu’est-ce que vous prenez ?', 'Laquelle est pour moi ?'],
   },
+  'fr-a22-cause-consequence': {
+    title: 'Cause and consequence: parce que, donc',
+    rule: 'Parce que and car give the cause; parce que can start an answer, car cannot. Grâce à gives a positive cause and à cause de a negative one, both followed by a noun. Donc, alors and du coup give the consequence and come after the first idea.',
+    examples: [
+      'Je lis la presse en ligne parce que c’est gratuit.',
+      'Grâce à ce podcast, j’apprends beaucoup.',
+      'Il pleut, donc je reste devant la télé.',
+    ],
+  },
+  'fr-a22-subjunctive': {
+    title: 'The subjunctive after il faut que',
+    rule: 'After il faut que, vouloir que and bien que the verb goes into the subjunctive. For most verbs the forms are the ils form of the present without -ent, plus -e, -es, -e, -ions, -iez, -ent: que je parle, que nous finissions. Être, avoir, aller and faire are irregular.',
+    examples: [
+      'Il faut que je lise cet article.',
+      'Il faut que tu sois à l’heure.',
+      'Je veux que vous veniez.',
+    ],
+  },
+  'fr-a22-pronoun-order': {
+    title: 'Two object pronouns: je te le donne',
+    rule: 'With two pronouns before the verb the order is me / te / nous / vous, then le / la / les, then lui / leur, then y, then en. In the positive imperative the direct pronoun comes first, joined with hyphens: donne-le-moi. In the negative it is back to the normal order.',
+    examples: ['Je te le dis.', 'Envoyez-la-moi.', 'Ne me le donne pas.'],
+  },
+  'fr-a22-adverbs-ment': {
+    title: 'Adverbs in -ment',
+    rule: 'Take the feminine form of the adjective and add -ment: lent → lentement, heureux → heureusement. If the masculine ends in a vowel, add -ment to it: vrai → vraiment. Adjectives in -ant and -ent give -amment and -emment: constant → constamment. Bon becomes bien, mauvais becomes mal.',
+    examples: ['Il parle lentement.', 'Heureusement, il y a internet.', 'Elle répond poliment.'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

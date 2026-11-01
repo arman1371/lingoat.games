@@ -564,4 +564,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-superlative' },
     { topic: 'fr-interrogative-pronouns' },
   ],
+  'fr-a2-2-medias': [
+    { topic: 'fr-a22-cause-consequence' },
+    { topic: 'fr-a22-subjunctive', note: 'il faut que' },
+    { topic: 'fr-a22-pronoun-order', note: 'je te le donne, donne-le-moi' },
+    { topic: 'fr-a22-adverbs-ment' },
+  ],
 };

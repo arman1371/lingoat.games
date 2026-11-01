@@ -67,6 +67,14 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sentence builder', 'fr-a2-2-sante-sentences'],
   ['dialogue (three scenes)', 'fr-a2-2-sante-dialogues'],
   ['blitz', 'fr-a2-2-sante-blitz'],
+  ['flashcards (press)', 'fr-a2-2-medias-flash-press'],
+  ['listen (media)', 'fr-a2-2-medias-listen-media'],
+  ['sort it (cause or consequence)', 'fr-a2-2-medias-sort-cause'],
+  ['conjugation (subjunctive)', 'fr-a2-2-medias-conj-subjunctive'],
+  ['gap fill (two pronouns)', 'fr-a2-2-medias-gap-pronoun-order'],
+  ['gap fill (adverbs in -ment)', 'fr-a2-2-medias-gap-adverbs'],
+  ['dialogue (media)', 'fr-a2-2-medias-dialogues'],
+  ['blitz (media)', 'fr-a2-2-medias-blitz'],
 ];
 
 test.describe('French A2.2 – playing the games', () => {
