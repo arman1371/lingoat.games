@@ -116,4 +116,115 @@ export const FRC12_TOPICS_B: GrammarTopic[] = [
     related: ['fr-c12-registres', 'fr-questions'],
     sources: [S.interrogative, S.registre],
   },
+  {
+    id: 'fr-c12-reprise-pronominale',
+    title: 'Avoiding repetition with pronouns',
+    tagline: 'Il, lui, en, y, l’un … l’autre, cela',
+    level: LEVEL,
+    summary:
+      'A text picks up an earlier word with a pronoun: il, elle, le, lui, leur, en, y, l’un … l’autre, cela. Each pronoun must point to one clear antecedent.',
+    sections: [
+      section(
+        'pronouns',
+        'Which pronoun takes up what?',
+        table(
+          'The most useful pronouns of reprise.',
+          ['Earlier element', 'Pronoun', 'Example'],
+          [
+            [
+              'a person or thing, subject',
+              'il, elle, ils, elles',
+              'Marie a 80 ans. Elle vit seule.',
+            ],
+            ['direct object', 'le, la, les', 'Ses voisins l’aident.'],
+            ['à + person', 'lui, leur', 'Je lui rends visite.'],
+            ['de + noun, or a quantity', 'en', 'Des EHPAD, il y en a peu.'],
+            ['à, dans, en + place or thing', 'y', 'Elle vit à la campagne et y est heureuse.'],
+            ['two people or things', 'l’un … l’autre', 'L’un est médecin, l’autre maire.'],
+            ['a whole idea', 'cela, ça', 'Les seniors voyagent. Cela change le tourisme.'],
+          ],
+        ),
+      ),
+      section(
+        'clarity',
+        'Keeping it clear',
+        p(
+          'Use a pronoun when there is **one** obvious antecedent close by. If two nouns of the same gender and number could be meant, repeat the noun or use ce dernier (the last one mentioned) or celui-ci / celle-ci.',
+        ),
+        examples(
+          [
+            'Le directeur a reçu l’employé ; ce dernier était inquiet.',
+            'The manager received the employee; the latter was worried.',
+          ],
+          [
+            'J’ai deux oncles : l’un vit à Lyon, l’autre à Nice.',
+            'I have two uncles: one lives in Lyon, the other in Nice.',
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je l’ai parlé hier.  ✓ Je lui ai parlé hier. (parler à quelqu’un → lui)',
+          '✗ Des places, il y les a peu.  ✓ Des places, il y en a peu.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-reprise-nominale'],
+    sources: [S.anaphore],
+  },
+  {
+    id: 'fr-c12-reprise-nominale',
+    title: 'Avoiding repetition with noun phrases',
+    tagline: 'Ce phénomène, cette dame, l’auteur des Misérables',
+    level: LEVEL,
+    summary:
+      'A noun phrase can pick up an earlier word: ce, cet, cette or ces + a noun, a synonym, a more general word, a description, or a noun that sums up the previous idea.',
+    sections: [
+      section(
+        'ways',
+        'Ways to pick up a noun',
+        table(
+          'Types of reprise nominale.',
+          ['Type', 'Example'],
+          [
+            [
+              'same noun + demonstrative',
+              'Un vieil arbre domine la place. Cet arbre a trois cents ans.',
+            ],
+            ['synonym', 'Les seniors … ces retraités'],
+            ['more general word', 'Le chêne … l’arbre'],
+            ['description', 'Victor Hugo … l’auteur des Misérables'],
+            ['noun that sums up an idea', 'Le papy-boom commence. Ce phénomène coûtera cher.'],
+          ],
+        ),
+        p(
+          'The demonstrative must agree: **ce** (masculine), **cet** (masculine before a vowel), **cette** (feminine), **ces** (plural).',
+        ),
+      ),
+      section(
+        'why',
+        'Why use them?',
+        p(
+          'Pronouns avoid repetition; noun phrases avoid repetition **and** add information or a point of view: *cette cohabitation*, *ce vieillissement de la population*. They give a written text its cohesion and are typical of essays and articles.',
+        ),
+        compare(
+          {
+            title: 'Pronoun',
+            question: 'The antecedent is close and clear',
+            example: 'L’État finance les retraites. Il doit trouver de nouvelles ressources.',
+          },
+          {
+            title: 'Noun phrase',
+            question: 'You want to name, sum up or comment',
+            example: 'Le vieillissement s’accélère. Ce phénomène pose un défi économique.',
+          },
+        ),
+        tip(
+          'Style',
+          'In a long text vary the substitutes: repeating the same demonstrative phrase (ce phénomène … ce phénomène) sounds heavy.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-reprise-pronominale', 'fr-demonstratives'],
+    sources: [S.anaphore],
+  },
 ];

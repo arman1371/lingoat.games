@@ -1106,6 +1106,24 @@ export const LESSONS = {
       'Où est-ce que tes grands-parents habitent ?',
     ],
   },
+  'fr-c12-reprise-pronominale': {
+    title: 'Avoiding repetition with pronouns',
+    rule: 'A text picks up what it has said with pronouns: il, elle, ils for subjects, le, la, les, lui, leur for objects, en for de + noun or a quantity, y for à + place or thing, l’un … l’autre to share out two, cela or ça for a whole idea. The pronoun must refer to one clear antecedent.',
+    examples: [
+      'Marie a 80 ans. Elle vit seule. Je lui rends visite.',
+      'Des maisons de retraite, il y en a peu. · Elle vit à la campagne et y est heureuse.',
+      'Deux seniors sont venus : l’un est médecin, l’autre ancien maire.',
+    ],
+  },
+  'fr-c12-reprise-nominale': {
+    title: 'Avoiding repetition with noun phrases',
+    rule: 'A noun phrase can also pick up an earlier word: ce, cet, cette or ces + the same noun, a synonym, a more general word (hyperonym), a description, or a noun that sums up a whole idea (ce phénomène). It adds information and avoids heavy repetition in written French.',
+    examples: [
+      'Un vieil homme passait. Cet homme portait une canne.',
+      'Le papy-boom commence. Ce phénomène démographique coûtera cher.',
+      'Victor Hugo est mort en 1885. L’auteur des Misérables avait 83 ans.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',
