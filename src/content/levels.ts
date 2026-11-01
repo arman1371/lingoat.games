@@ -6,7 +6,6 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   ['b1-1', 'B1.1', 'Threshold, first half'],
   ['b1-2', 'B1.2', 'Threshold, second half'],
   ['b2-1', 'B2.1', 'Vantage, first half'],
-  ['b2-2', 'B2.2', 'Vantage, second half'],
   ['c1-1', 'C1.1', 'Effective proficiency, first half'],
   ['c1-2', 'C1.2', 'Effective proficiency, second half'],
   ['c2-1', 'C2.1', 'Mastery, first half'],
