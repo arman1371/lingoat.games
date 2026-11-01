@@ -261,4 +261,83 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-c22-accord-participe'],
     sources: [S.passive],
   },
+  {
+    id: 'fr-c22-relatives',
+    title: 'dont, lequel, ce dont',
+    tagline: 'Joining sentences with the right relative pronoun',
+    level: LEVEL,
+    summary:
+      'Dont replaces de + a noun. After every other preposition a thing takes lequel, laquelle, lesquels or lesquelles, which merge with à and de (auquel, duquel). Ce dont, ce que and ce qui stand for “what”, and où covers place and time.',
+    sections: [
+      section(
+        'dont',
+        'dont: replacing de + noun',
+        p(
+          'Many verbs, adjectives and nouns take **de**: *parler de, avoir besoin de, rêver de, hériter de*. When the noun after de becomes a relative, use **dont**: *La cathédrale dont nous parlons.* Dont also means “whose”, with the article in front of the noun: *L’historien dont le livre a reçu un prix.*',
+        ),
+        examples(
+          ['Le château dont il a hérité est classé.', 'The castle he inherited is listed.'],
+          ['Les archives dont j’ai besoin sont fermées.', 'The archives I need are closed.'],
+          [
+            'Les remparts, dont la construction date du XVIIe siècle.',
+            'The ramparts, whose construction dates from the 17th century.',
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Le château que je rêve.  ✓ Le château dont je rêve.',
+          '✗ La rue au bout dont se trouve le beffroi.  ✓ La rue au bout de laquelle se trouve le beffroi.',
+        ),
+      ),
+      section(
+        'lequel',
+        'Preposition + lequel',
+        p(
+          'After a preposition (**dans, pendant, sur, derrière, avec** …) a thing is introduced by **lequel**, which agrees with the noun. With **à** and **de** it merges. For people, **qui** is also possible after a preposition.',
+        ),
+        table(
+          'lequel and its contractions.',
+          ['Form', 'masc. sing.', 'fem. sing.', 'masc. plural', 'fem. plural'],
+          [
+            ['lequel', 'lequel', 'laquelle', 'lesquels', 'lesquelles'],
+            ['à + lequel', 'auquel', 'à laquelle', 'auxquels', 'auxquelles'],
+            ['de + lequel', 'duquel', 'de laquelle', 'desquels', 'desquelles'],
+          ],
+        ),
+        p(
+          'Use the **de + lequel** forms when dont is not possible: after a noun with its own preposition (*au pied desquels, au bout de laquelle*).',
+        ),
+      ),
+      section(
+        'ce-ou',
+        'ce dont, ce que, ce qui and où',
+        p(
+          'When there is no noun in front, **ce** is added: **ce qui** (subject), **ce que** (direct object) and **ce dont** (de): *Je sais ce dont tu rêves.* **Où** replaces a place or a time: *la ville où je suis né, l’année où le beffroi a brûlé.*',
+        ),
+        compare(
+          {
+            title: 'ce qui',
+            question: 'Is it the subject?',
+            example: 'Ce qui m’étonne, c’est le métissage.',
+          },
+          {
+            title: 'ce que',
+            question: 'Is it the direct object?',
+            example: 'Je ne comprends pas ce que vous cherchez.',
+          },
+          {
+            title: 'ce dont',
+            question: 'Does the verb take de?',
+            example: 'C’est exactement ce dont nous avons besoin.',
+          },
+        ),
+        tip(
+          'Quick test',
+          'Look at the verb in the relative clause: is the thing its subject (qui), its object (que), or linked by de (dont) or another preposition (lequel)?',
+        ),
+      ),
+    ],
+    related: ['fr-c22-accord-participe'],
+    sources: [S.relativePronoun, S.dont, S.lequel],
+  },
 ];

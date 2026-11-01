@@ -260,3 +260,7 @@ generated forms in `src/lib/french`.
 - The passive (`fr-c22-passif`): fr.wikipedia.org _Voix passive_ was read for the formation, the agent with par, the
   restriction to transitive verbs, on and the impersonal passive. It does not cover the pronominal passive, se faire /
   se voir + infinitive or the choice between par and de (the lesson follows textbook teaching).
+- Relatives (`fr-c22-relatives`): fr.wikipedia.org _Pronom relatif_ (short overview: forms and functions) and
+  fr.wiktionary.org _dont_ and _lequel_ were read. They confirm the role of dont, the forms of lequel and its
+  contractions, and that lequel is used after prepositions other than de. They do not cover ce qui / ce que / ce dont
+  or the dont / duquel choice after a noun with a preposition; those parts follow textbook teaching.

@@ -35,7 +35,7 @@ figures of style, and a different set of C2 grammar points:
 | 1   | Arts et expositions (`arts`)           | exhibitions, art market, judging a work        | participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`) | done   |
 | 2   | Littérature et théâtre (`litterature`) | books, publishing, stage                       | past participle agreement in hard cases (`fr-c22-accord-participe`)       | done   |
 | 3   | Cinéma et spectacle (`cinema`)         | film, festivals, criticism                     | the passive and its alternatives (`fr-c22-passif`)                        | done   |
-| 4   | Patrimoine et histoire                 | heritage, history, francophonie                | complex relative clauses (dont, lequel, duquel, ce dont)                  | next   |
+| 4   | Patrimoine et histoire (`patrimoine`)  | heritage, history, francophonie                | complex relative clauses (`fr-c22-relatives`)                             | done   |
 | 5   | Droit et justice                       | courts, rights, contracts                      | advanced negation (ne alone, ne … que, ne explétif)                       | next   |
 | 6   | Médias et société                      | press, freedom of expression, misinformation   | modalisation and the conditional of reserve                               | next   |
 | 7   | Engagement citoyen                     | associations, volunteering, civil society      | the infinitive (infinitif passé, avant de, après avoir, de peur de)       | next   |

@@ -1246,6 +1246,15 @@ export const LESSONS = {
       'Il s’est fait applaudir. → se faire + infinitive',
     ],
   },
+  'fr-c22-relatives': {
+    title: 'dont, lequel, ce dont',
+    rule: 'Dont replaces de + noun (la cathédrale dont nous parlons). After any other preposition use lequel, laquelle, lesquels, lesquelles; with à and de they contract: auquel, duquel. Dont cannot follow preposition + noun (au bout de laquelle). Ce dont, ce que, ce qui stand for what; où also means when.',
+    examples: [
+      'La cathédrale dont nous parlons. → de + noun',
+      'Le monument auquel je m’intéresse. → à + lequel',
+      'Je sais ce dont tu rêves. → no antecedent',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

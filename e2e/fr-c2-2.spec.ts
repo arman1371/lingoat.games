@@ -97,6 +97,18 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue (three scenes)', 'fr-c2-2-cinema-dialogues'],
   ['blitz', 'fr-c2-2-cinema-blitz'],
   ['challenge', 'fr-c2-2-cinema-challenge'],
+  ['flashcards (history)', 'fr-c2-2-patrimoine-flash-histoire'],
+  ['quiz (sites and ruins)', 'fr-c2-2-patrimoine-quiz-pictures'],
+  ['listen (history words)', 'fr-c2-2-patrimoine-listen-histoire'],
+  ['memory (history words)', 'fr-c2-2-patrimoine-memory-histoire'],
+  ['spell (dictation)', 'fr-c2-2-patrimoine-spell-sites'],
+  ['gap fill (relative pronouns)', 'fr-c2-2-patrimoine-gap-relatifs'],
+  ['sort it (which relative)', 'fr-c2-2-patrimoine-sort-relatifs'],
+  ['quiz (join the sentences)', 'fr-c2-2-patrimoine-quiz-join'],
+  ['sentence builder', 'fr-c2-2-patrimoine-sentences'],
+  ['dialogue (three scenes)', 'fr-c2-2-patrimoine-dialogues'],
+  ['blitz', 'fr-c2-2-patrimoine-blitz'],
+  ['challenge', 'fr-c2-2-patrimoine-challenge'],
 ];
 
 test.describe('French C2.2 – playing the games', () => {
