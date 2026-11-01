@@ -21,7 +21,7 @@ const U = 'fr-c2-2-cinema';
 const LESSON = 'fr-c22-passif' as const;
 
 const film = vocabList(U, 'Making a film', [
-  ['le réalisateur', 'film director', '🎥'],
+  ['le cinéaste', 'film-maker', '🎥'],
   ['le scénariste', 'screenwriter', '✒️'],
   ['le long-métrage', 'feature film', '🎞️'],
   ['le court-métrage', 'short film', '📽️'],
@@ -116,7 +116,7 @@ export const cinema: UnitContent = {
         4,
       ),
       quizEmoji([
-        ...byDe(film, 'le réalisateur', 'le long-métrage', 'la bande-annonce', 'l’affiche'),
+        ...byDe(film, 'le cinéaste', 'le long-métrage', 'la bande-annonce', 'l’affiche'),
         ...byDe(film, 'le doublage'),
         ...byDe(critique, 'le montage', 'le gros plan', 'la bande originale'),
       ]),
