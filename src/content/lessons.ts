@@ -1288,6 +1288,26 @@ export const LESSONS = {
       'Je suis né en 1998.',
     ],
   },
+  // ---- French A2.2 ----
+  'fr-object-pronouns': {
+    title: 'Object pronouns: le, la, les, lui, leur',
+    rule: 'Le, la, l’ and les replace a direct object (a person or thing with no preposition). Lui (one person) and leur (several) replace à + a person. Me, te, nous and vous work for both. The pronoun stands before the verb, or before the infinitive: je le vois, je vais lui téléphoner.',
+    examples: ['Je le prends.', 'Je lui téléphone.', 'Je ne la trouve pas.'],
+  },
+  'fr-superlative': {
+    title: 'The superlative: le plus, le meilleur',
+    rule: 'For adjectives use le / la / les + plus (more) or moins (less) + adjective; the article agrees with the noun. Bon becomes le meilleur, bien becomes le mieux. For adverbs the article is always le: le plus vite.',
+    examples: [
+      'C’est la plus grande ville.',
+      'C’est le meilleur médecin.',
+      'Elle court le plus vite.',
+    ],
+  },
+  'fr-interrogative-pronouns': {
+    title: 'Qui, que, quoi, lequel',
+    rule: 'Qui asks about a person. For things use qu’est-ce qui (subject) and qu’est-ce que or que (object); after a preposition or at the end of the question use quoi. Lequel, laquelle, lesquels and lesquelles ask “which one(s)?” and agree with the noun.',
+    examples: ['Qui a appelé ?', 'Qu’est-ce que vous prenez ?', 'Laquelle est pour moi ?'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
