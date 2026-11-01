@@ -44,7 +44,7 @@ test.describe('French B2.1 – grammar hints', () => {
     const wrong = item.options!.find((o) => o !== item.answer && item.why?.[o])!;
     await page.getByRole('button', { name: wrong, exact: true }).click();
     await page.getByTestId('why').click();
-    await expect(page.getByTestId('why')).toContainText(item.why![wrong]!);
+    await expect(page.getByTestId('mistake-why')).toContainText(item.why![wrong]!);
     const lesson = page.getByTestId('mini-lesson');
     await expect(lesson).toHaveAttribute('data-lesson', 'fr-imparfait-pc');
     await expect(lesson.locator('li').first()).toHaveAttribute('lang', 'fr');
