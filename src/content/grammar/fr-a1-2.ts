@@ -284,7 +284,7 @@ export const FR12_TOPICS: GrammarTopic[] = [
     sources: [S.ilYA, S.dernier, S.prochain],
   },
   {
-    id: 'fr-object-pronouns',
+    id: 'fr-a12-object-pronouns',
     title: 'le, la, l’, les',
     tagline: 'Say “it” and “them” without repeating the noun',
     level: LEVEL,
@@ -401,7 +401,7 @@ export const FR12_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: ['fr-object-pronouns', 'fr-futur-proche', 'fr-negation'],
+    related: ['fr-a12-object-pronouns', 'fr-futur-proche', 'fr-negation'],
     sources: [S.y, FR.aller],
   },
   {

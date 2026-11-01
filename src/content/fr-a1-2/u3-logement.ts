@@ -301,10 +301,10 @@ export const logement: UnitContent = {
       {
         title: 'le, la, l’ or les?',
         description: 'Replace the noun with the right pronoun.',
-        tags: ['grammar', 'fr-object-pronouns', 'housing'],
+        tags: ['grammar', 'fr-a12-object-pronouns', 'housing'],
         difficulty: 2,
         estMinutes: 4,
-        lesson: 'fr-object-pronouns',
+        lesson: 'fr-a12-object-pronouns',
       },
       {
         items: [
@@ -606,14 +606,14 @@ export const logement: UnitContent = {
             translation: 'I am not taking it (the lamp).',
             words: ['Je', 'ne', 'la', 'prends', 'pas.'],
             extra: ['le'],
-            lesson: 'fr-object-pronouns',
+            lesson: 'fr-a12-object-pronouns',
           },
           {
             id: 's4',
             translation: 'The plumber is repairing them today.',
             words: ['Le', 'plombier', 'les', 'répare', 'aujourd’hui.'],
             extra: ['la'],
-            lesson: 'fr-object-pronouns',
+            lesson: 'fr-a12-object-pronouns',
           },
           {
             id: 's5',
@@ -883,14 +883,14 @@ export const logement: UnitContent = {
             prompt: 'Complete: “Je ___ prends.” (the lamp)',
             options: ['la', 'le', 'les', 'l’'],
             answer: 'la',
-            lesson: 'fr-object-pronouns',
+            lesson: 'fr-a12-object-pronouns',
           },
           {
             id: 'c2',
             prompt: 'Replace the noun: “Il répare les lampes.”',
             options: ['Il les répare.', 'Il la répare.', 'Il répare les.', 'Il les répare pas.'],
             answer: 'Il les répare.',
-            lesson: 'fr-object-pronouns',
+            lesson: 'fr-a12-object-pronouns',
           },
           {
             id: 'c3',

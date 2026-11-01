@@ -249,6 +249,25 @@ textbook teaching and are **not** checked against a fetched page; the same holds
 (the page only shows examples), the ensuite / puis / enfin ordering (the d'abord page does not list them), and the
 use of avant / après with a noun. For the passé composé the Wikipédia page does not state the participle endings (-é, -i, -u), the irregular participles or the negation around avoir; these follow common textbook teaching and the Wiktionnaire conjugation pages. The wiktionary entries for dernier and prochain do not state their position after a time noun or their agreement. For unit 3: the Wiktionnaire entry for y defines it as replacing an inanimate indirect object introduced by à, so using y for a place with dans, chez and en follows common textbook teaching and is **not** stated on the fetched page; the Wikipédia page on the direct object confirms that the weak pronoun stands before the verb but does not list le / la / l' / les or the position with an infinitive, in the negative or in the passé composé; the "il est interdit de + infinitive" construction and the infinitive on signs are not stated on the Wiktionnaire entry for interdit; au-dessus is documented, but the other place expressions (en dessous de, au milieu de, autour de, au fond de) and their contraction with du / des follow the Contraction page and textbook teaching only.
 
+## French A2.1 (4 topics so far)
+
+The lessons are in `src/content/grammar/fr-a2-1.ts`, the pages in `sources-fr-a2-1.ts`. Passé composé tables are generated
+by `src/lib/french/tenses.ts`. **Not yet reviewed by a native speaker.**
+
+| Topic                       | Pages read                                                                                                                                                                                          |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Passé composé with être     | [Passé composé en français](https://fr.wikipedia.org/wiki/Pass%C3%A9_compos%C3%A9_en_fran%C3%A7ais)                                                                                                 |
+| Irregular past participles  | the same page, Wiktionnaire conjugations of [faire](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/faire) and [prendre](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/prendre) |
+| ne … rien, personne, plus … | [Négation en français](https://fr.wikipedia.org/wiki/N%C3%A9gation_en_fran%C3%A7ais)                                                                                                                |
+| pendant, depuis, en         | Wiktionnaire [depuis](https://fr.wiktionary.org/wiki/depuis), [pendant](https://fr.wiktionary.org/wiki/pendant)                                                                                     |
+
+**Limits:** the Wikipédia page on the passé composé states the auxiliary choice and the agreement rules but not the
+participle endings, so -é / -i / -u and the list of irregular participles follow common textbook teaching. The negation
+page gives the general structure and "Personne n'est venu", not the place of rien, jamais, plus and pas encore around the
+participle or of personne after it; those follow common textbook teaching. The Wiktionnaire entries for depuis and
+pendant give the meaning (starting point, "during") but no tense rule, so "depuis + present for a continuing situation"
+and "pendant + passé composé" are textbook teaching, not checked against a fetched page.
+
 ## Limits of the research
 
 - The Deutsche Welle learner pages could not be fetched, and the Duden grammar pages are not freely readable, so the
@@ -269,3 +288,13 @@ use of avant / après with a noun. For the passé composé the Wikipédia page d
   the factual vs. hypothetical split of obwohl / auch wenn / selbst wenn, the Plusquamperfekt after als in comparisons,
   and the plural -keit / -heit / -ung gender rule. Wiktionary pages state the case and meaning of each connector, not
   its word order, so the verb position of connectors comes from the example sentences and from general German grammar.
+
+## French A2.2
+
+The lessons are in `src/content/grammar/fr-a2-2.ts`, the pages in `sources-fr-a2-2.ts`.
+
+| Topic                                   | Pages read                                                                                                                                                                                                                                                   |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Object pronouns: le, la, les, lui, leur | [Complément d'objet direct](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_d'objet_direct), [Complément d'objet indirect](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_d'objet_indirect), [Pronom personnel](https://fr.wikipedia.org/wiki/Pronom_personnel) |
+| The superlative: le plus, le meilleur   | [Degré de comparaison](https://fr.wikipedia.org/wiki/Degr%C3%A9_de_comparaison) (section "En français")                                                                                                                                                      |
+| Qui, que, quoi, lequel                  | [Pronom interrogatif](https://fr.wikipedia.org/wiki/Pronom_interrogatif) (section "En français")                                                                                                                                                             |

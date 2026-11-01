@@ -76,7 +76,7 @@ earlier French level.
 
 - Vocabulary fields: Rooms and the building (20) · Furniture and appliances (21) · Problems and repairs (14) ·
   House rules (13) · Where exactly? (12). Nothing repeats A1.1 or units 1 and 2.
-- Grammar: direct object pronouns le / la / l' / les (`fr-object-pronouns`), the pronoun y for a place (`fr-y`),
+- Grammar: direct object pronouns le / la / l' / les (`fr-a12-object-pronouns`), the pronoun y for a place (`fr-y`),
   written rules and orders with the infinitive and the imperative (`fr-rules`), and longer place expressions
   with de (`fr-place-more`). Édito unit 9 introduces il faut and devoir with the doctor, so obligation with those
   verbs waits for unit 5.
