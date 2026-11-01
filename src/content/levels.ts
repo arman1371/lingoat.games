@@ -3,12 +3,10 @@ import type { LevelMeta } from './schema';
 
 /** French is on its way: A1.1 is the pilot, the other CEFR half-levels are listed without content. */
 const FRENCH_COMING_SOON: LevelMeta[] = [
-  ['a1-2', 'A1.2', 'Breakthrough, second half'],
-  ['a2-1', 'A2.1', 'Waystage, first half'],
-  ['a2-2', 'A2.2', 'Waystage, second half'],
   ['b1-1', 'B1.1', 'Threshold, first half'],
   ['b1-2', 'B1.2', 'Threshold, second half'],
   ['b2-1', 'B2.1', 'Vantage, first half'],
+  ['b2-2', 'B2.2', 'Vantage, second half'],
   ['c1-1', 'C1.1', 'Effective proficiency, first half'],
   ['c1-2', 'C1.2', 'Effective proficiency, second half'],
   ['c2-1', 'C2.1', 'Mastery, first half'],
@@ -21,21 +19,21 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   status: 'coming-soon',
 }));
 
-/** Display order of the French levels, whatever order they are declared in. */
+/** CEFR order of the French levels, so a level that becomes available stays in its place. */
 const FRENCH_ORDER = [
-  'fr-a1-1',
-  'fr-a1-2',
-  'fr-a2-1',
-  'fr-a2-2',
-  'fr-b1-1',
-  'fr-b1-2',
-  'fr-b2-1',
-  'fr-b2-2',
-  'fr-c1-1',
-  'fr-c1-2',
-  'fr-c2-1',
-  'fr-c2-2',
-];
+  'a1-1',
+  'a1-2',
+  'a2-1',
+  'a2-2',
+  'b1-1',
+  'b1-2',
+  'b2-1',
+  'b2-2',
+  'c1-1',
+  'c1-2',
+  'c2-1',
+  'c2-2',
+].map((id) => `fr-${id}`);
 
 const FRENCH_LEVELS: LevelMeta[] = (
   [
@@ -50,6 +48,33 @@ const FRENCH_LEVELS: LevelMeta[] = (
     },
     {
       language: 'fr',
+      id: 'fr-a1-2',
+      title: 'A1.2',
+      subtitle:
+        'Everyday life: daily routine, family events, home, holidays, health, work, nature and learning French',
+      status: 'available',
+      load: () => import('./fr-a1-2'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-a2-1',
+      title: 'A2.1',
+      subtitle:
+        'Life stories, outings, memories, housing, portraits, the future, cooking and school',
+      status: 'available',
+      load: () => import('./fr-a2-1'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-a2-2',
+      title: 'A2.2',
+      subtitle:
+        'Health, media, responsible shopping, travel, studies and work, and nature, with pronouns, the subjunctive and the conditional',
+      status: 'available',
+      load: () => import('./fr-a2-2'),
+    },
+    {
+      language: 'fr',
       id: 'fr-b2-2',
       title: 'B2.2',
       subtitle:
@@ -58,7 +83,7 @@ const FRENCH_LEVELS: LevelMeta[] = (
       load: () => import('./fr-b2-2'),
     },
     ...FRENCH_COMING_SOON,
-  ] as LevelMeta[]
+  ] satisfies LevelMeta[]
 ).sort((a, b) => FRENCH_ORDER.indexOf(a.id) - FRENCH_ORDER.indexOf(b.id));
 
 /**

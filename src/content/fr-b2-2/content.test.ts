@@ -1,7 +1,7 @@
 import { getItems } from '@/content/items';
 import { TAGS } from '@/content/tags';
 import { describeLevelContent } from '@/test/contentSuite';
-import fr11 from '../fr-a1-1';
+import type { LevelContent } from '../schema';
 import content from './index';
 
 describeLevelContent('French B2.2', content, 'fr-b2-2');
@@ -32,12 +32,19 @@ describe('French B2.2 specifics', () => {
   });
 });
 
+/** Every earlier French level pack (`fr-a1-1` … `fr-b2-1`), picked up automatically. */
+const earlierLevels = Object.entries(
+  import.meta.glob<{ default: LevelContent }>('../fr-*/index.ts', { eager: true }),
+)
+  .filter(([path]) => path.split('/')[1]! < 'fr-b2-2')
+  .map(([, m]) => m.default);
+
 /** Compare words by their bare form, so "un quotidien" and "quotidien" count as the same word. */
 const key = (de: string) => de.replace(/^(un|une|le|la|l’|les|des) ?/i, '').toLowerCase();
 
 describe('French B2.2 vocabulary integrity', () => {
   it('does not repeat vocabulary from earlier French levels', () => {
-    const earlier = new Set(fr11.vocab.map((v) => key(v.de)));
+    const earlier = new Set(earlierLevels.flatMap((l) => l.vocab).map((v) => key(v.de)));
     expect(content.vocab.map((v) => key(v.de)).filter((k) => earlier.has(k))).toEqual([]);
   });
 
