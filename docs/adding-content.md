@@ -63,6 +63,7 @@ two shared test harnesses (`content.test.ts`, `playability.test.tsx`), plus Fren
   -ir verbs with the usual spelling changes) through `frTable` in `fr-a1-1/helpers.ts`. A table is written in one
   language's persons only (the schema checks it). The clock and market engines still depend on German helpers and need a
   French counterpart before a unit can use them.
+- `fr-b2-1/helpers.ts` shows the compact authoring helpers for a higher level (`g` gap-fill with `[option, why]` wrong answers, `q`, `qs`, `sent`, `cards`, `frForms` for hand-written tenses).
 - e2e: add the pack to `frenchActivities` in `e2e/helpers.ts` (kept apart from `allActivities`, which counts German library
   games) and follow `e2e/fr-a1-1.spec.ts`.
 

@@ -391,6 +391,10 @@ export const TAGS = {
   'fr-demonstratives': { label: 'ce, cet, cette, ces', group: 'grammar', emoji: '👉' },
   'fr-futur-proche': { label: 'aller + infinitive', group: 'grammar', emoji: '🔮' },
   'fr-adjective-position': { label: 'un petit pull rouge', group: 'grammar', emoji: '↔️' },
+  // topics + grammar points – French B2.1
+  'identity-origins': { label: 'Identity & origins', group: 'topic', emoji: '🪪' },
+  'fr-imparfait-pc': { label: 'Imparfait or passé composé?', group: 'grammar', emoji: '⏪' },
+  'fr-plus-que-parfait': { label: 'The plus-que-parfait', group: 'grammar', emoji: '⏮️' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

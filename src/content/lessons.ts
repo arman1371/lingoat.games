@@ -1218,6 +1218,25 @@ export const LESSONS = {
     rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
     examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
   },
+  // ---- French B2.1 -------------------------------------------------------------------------
+  'fr-imparfait-pc': {
+    title: 'Imparfait or passé composé?',
+    rule: 'The imparfait sets the scene: how things were, what used to happen, what was going on. The passé composé tells what happened: a single event, a change, something finished. A background action in the imparfait is often interrupted by an event in the passé composé.',
+    examples: [
+      'Quand j’étais petit, nous allions chez ma grand-mère chaque été.',
+      'Je faisais mes devoirs quand le téléphone a sonné.',
+      'En 1998, ma famille a déménagé à Montréal.',
+    ],
+  },
+  'fr-plus-que-parfait': {
+    title: 'The plus-que-parfait',
+    rule: 'Use it for something that had already happened before another past event. Build it with avoir or être in the imparfait plus the past participle. The same verbs as in the passé composé take être (partir, arriver, naître, se lever …), and the participle then agrees with the subject.',
+    examples: [
+      'Quand nous sommes arrivés, le train était déjà parti.',
+      'Elle m’a dit qu’elle avait perdu ses clés.',
+      'Ils avaient quitté leur pays avant ma naissance.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
