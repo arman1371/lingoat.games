@@ -1382,6 +1382,33 @@ export const LESSONS = {
       'Ceux qui partent tôt.',
     ],
   },
+  'fr-a22-cleft': {
+    title: 'Emphasis: c’est … qui / que',
+    rule: 'To stress a word, put it between c’est and qui or que. Qui replaces a subject (c’est Marie qui a téléphoné), que replaces an object or a complement (c’est ce poste que je veux). For a whole idea use ce qui, ce que and ce dont: ce que je cherche, c’est un emploi.',
+    examples: [
+      'C’est moi qui ai écrit la lettre.',
+      'C’est à Lyon que j’ai étudié.',
+      'Ce qui m’intéresse, c’est la médecine.',
+    ],
+  },
+  'fr-a22-reported-speech': {
+    title: 'Reported speech in the present',
+    rule: 'When the reporting verb is in the present, the tense does not change. A statement is introduced by dit que, a yes / no question by demande si, a question word stays (où, quand) or becomes ce que / ce qui, and a command becomes dire de + infinitive. Pronouns change with the speaker and there is no inversion.',
+    examples: [
+      'Elle dit qu’elle cherche un stage.',
+      'Il me demande si j’ai un diplôme.',
+      'Le professeur nous dit de travailler.',
+    ],
+  },
+  'fr-a22-pronoun-y': {
+    title: 'The pronouns y and en',
+    rule: 'Y replaces à, dans, en or chez + a place or a thing (not a person): j’y vais, j’y pense. En replaces de + a place or a thing, or a quantity: j’en reviens, j’en ai besoin. Both stand before the verb, or before the auxiliary in the passé composé.',
+    examples: [
+      'J’y vais tous les jours.',
+      'Elle y habite depuis 2020.',
+      'Il en parle tout le temps.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

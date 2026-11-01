@@ -736,4 +736,169 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-demonstratives'],
     sources: [S.demonstrativePronoun],
   },
+
+  // ---- Unit 5 (De jolis parcours) ----
+  {
+    id: 'fr-a22-cleft',
+    title: 'Emphasis: c’est … qui / que',
+    tagline: 'How do I put the stress on one word?',
+    level: LEVEL,
+    summary:
+      'Put the word you want to stress between c’est and qui or que. Qui replaces a subject, que replaces an object or a complement. Ce qui, ce que and ce dont stress a whole idea.',
+    sections: [
+      section(
+        'cest',
+        'C’est … qui, c’est … que',
+        p(
+          'A **cleft sentence** pulls one word to the front to stress it. After **c’est** and the stressed word, use **qui** if that word is the **subject** of the verb, and **que** if it is the **object** or a **complement** of place, time or cause.',
+        ),
+        table(
+          'Stressing with c’est.',
+          ['Stressed word', 'link', 'example'],
+          [
+            ['subject', 'qui', 'C’est Marie qui a trouvé ce stage.'],
+            ['object', 'que', 'C’est ce métier que je veux faire.'],
+            ['place / time / cause', 'que', 'C’est à Lyon que j’ai fait mes études.'],
+          ],
+        ),
+        p(
+          'With a stress pronoun the verb agrees with it: **c’est moi qui ai écrit la lettre**, **c’est toi qui as gagné**.',
+        ),
+      ),
+      section(
+        'ce',
+        'Ce qui, ce que, ce dont',
+        p(
+          'To stress a whole idea, start with **ce qui** (subject), **ce que** (object) or **ce dont** (verb with de), then **c’est**.',
+        ),
+        examples(
+          ['Ce qui m’intéresse, c’est la médecine.', 'What interests me is medicine.'],
+          [
+            'Ce que je cherche, c’est un emploi à temps partiel.',
+            'What I am looking for is a part-time job.',
+          ],
+          ['Ce dont j’ai besoin, c’est d’un stage.', 'What I need is an internship.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ C’est ce poste qui je veux.  ✓ C’est ce poste que je veux.',
+          '✗ C’est moi qui a écrit.  ✓ C’est moi qui ai écrit.',
+        ),
+      ),
+    ],
+    related: ['fr-pronouns', 'fr-a22-pronoun-order'],
+    sources: [S.cleft],
+  },
+  {
+    id: 'fr-a22-reported-speech',
+    title: 'Reported speech in the present',
+    tagline: 'How do I say what someone said?',
+    level: LEVEL,
+    summary:
+      'With a reporting verb in the present the tense stays the same. Statements take que, yes / no questions take si, commands take de + infinitive. The pronouns change with the speaker.',
+    sections: [
+      section(
+        'types',
+        'Statements, questions and commands',
+        table(
+          'Direct → reported.',
+          ['Type', 'direct speech', 'reported speech'],
+          [
+            ['statement', 'Léa : « Je cherche un stage. »', 'Léa dit qu’elle cherche un stage.'],
+            [
+              'yes / no question',
+              'Elle : « Tu as un diplôme ? »',
+              'Elle me demande si j’ai un diplôme.',
+            ],
+            [
+              'question word',
+              'Il : « Où travaillez-vous ? »',
+              'Il nous demande où nous travaillons.',
+            ],
+            [
+              'what?',
+              'Elle : « Qu’est-ce que tu cherches ? »',
+              'Elle me demande ce que je cherche.',
+            ],
+            ['command', 'Le professeur : « Travaillez ! »', 'Il nous dit de travailler.'],
+          ],
+        ),
+      ),
+      section(
+        'rules',
+        'What changes',
+        p(
+          'The **tense** stays when the reporting verb is in the present. The **pronouns and possessives** follow the speaker (je → il, ton → mon, …). Questions lose the **inversion** and the question mark. Negative commands: **de ne pas + infinitive**.',
+        ),
+        examples(
+          [
+            'Mon père me dit de ne pas partir trop tard.',
+            'My father tells me not to leave too late.',
+          ],
+          [
+            'Ils disent qu’ils ont un entretien demain.',
+            'They say they have an interview tomorrow.',
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elle me demande que j’ai un diplôme.  ✓ Elle me demande si j’ai un diplôme.',
+          '✗ Il demande où travaillez-vous.  ✓ Il demande où nous travaillons.',
+        ),
+      ),
+    ],
+    related: ['fr-questions', 'fr-imperative'],
+    sources: [S.reportedSpeech],
+  },
+  {
+    id: 'fr-a22-pronoun-y',
+    title: 'The pronouns y and en',
+    tagline: 'How do I replace a place or a thing after à or de?',
+    level: LEVEL,
+    summary:
+      'Y replaces à, dans, en or chez + a place or a thing. En replaces de + a place or a thing, or a quantity. Both go before the verb.',
+    sections: [
+      section(
+        'y',
+        'Y: there, about it',
+        p(
+          '**Y** replaces **à / dans / en / chez + a place** (**j’y vais**) or **à + a thing** (**je pense à mon examen → j’y pense**). For a person, use **lui** or **leur** instead.',
+        ),
+        examples(
+          [
+            '— Tu vas à la fac ? — Oui, j’y vais tous les jours.',
+            'Do you go to university? Yes, I go there every day.',
+          ],
+          ['Elle y habite depuis 2020.', 'She has lived there since 2020.'],
+          ['Nous y sommes allés ce matin.', 'We went there this morning.'],
+        ),
+      ),
+      section(
+        'en',
+        'En: from there, about it',
+        p(
+          '**En** replaces **de + a place** (**je reviens de la fac → j’en reviens**) or **de + a thing** (**il parle de son stage → il en parle**), and a quantity.',
+        ),
+        compare(
+          {
+            title: 'Y',
+            question: 'à + place or thing',
+            example: 'Je pense à l’examen. → J’y pense.',
+          },
+          {
+            title: 'En',
+            question: 'de + place or thing',
+            example: 'Je parle de l’examen. → J’en parle.',
+          },
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je lui pense.  ✓ J’y pense. (a thing, not a person)',
+          '✗ J’en vais.  ✓ J’y vais.',
+        ),
+      ),
+    ],
+    related: ['fr-a22-pronoun-order', 'fr-object-pronouns'],
+    sources: [S.yPronoun],
+  },
 ];

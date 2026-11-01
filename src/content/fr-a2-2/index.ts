@@ -3,8 +3,9 @@ import { sante } from './u1-sante';
 import { medias } from './u2-medias';
 import { consommer } from './u3-consommer';
 import { voyage } from './u4-voyage';
+import { parcours } from './u5-parcours';
 
-const units = [sante, medias, consommer, voyage];
+const units = [sante, medias, consommer, voyage, parcours];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

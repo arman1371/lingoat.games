@@ -32,5 +32,8 @@ export const FR22_SOURCES = {
     'Accord du participe passé en français',
   ),
   demonstrativePronoun: wp('Pronom_démonstratif', 'Pronom démonstratif'),
+  cleft: wp('Phrase_clivée', 'Phrase clivée'),
+  reportedSpeech: wp('Discours_indirect', 'Discours indirect'),
+  yPronoun: wk('y', 'y'),
   nounComplement: wp('Complément_du_nom', 'Complément du nom'),
 } as const satisfies Record<string, Source>;

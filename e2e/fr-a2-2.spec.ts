@@ -89,6 +89,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (participle)', 'fr-a2-2-voyage-gap-participle'],
   ['gap fill (celui, celle)', 'fr-a2-2-voyage-gap-demonstratives'],
   ['dialogue (station, story, hotel)', 'fr-a2-2-voyage-dialogues'],
+  ['flashcards (studies)', 'fr-a2-2-parcours-flash-studies'],
+  ['spell (career words)', 'fr-a2-2-parcours-spell-career'],
+  ['gap fill (c’est … qui / que)', 'fr-a2-2-parcours-gap-cleft'],
+  ['sort it (say, ask, order)', 'fr-a2-2-parcours-sort-speech'],
+  ['gap fill (reported speech)', 'fr-a2-2-parcours-gap-reported'],
+  ['gap fill (y or en)', 'fr-a2-2-parcours-gap-y'],
+  ['dialogue (interview, studies, message)', 'fr-a2-2-parcours-dialogues'],
 ];
 
 test.describe('French A2.2 – playing the games', () => {

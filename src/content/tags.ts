@@ -428,6 +428,9 @@ export const TAGS = {
     group: 'grammar',
     emoji: '👈',
   },
+  'fr-a22-cleft': { label: 'c’est moi qui, ce que je veux', group: 'grammar', emoji: '📌' },
+  'fr-a22-reported-speech': { label: 'il dit que, elle demande si', group: 'grammar', emoji: '🗣️' },
+  'fr-a22-pronoun-y': { label: 'j’y vais, j’y pense', group: 'grammar', emoji: '📍' },
   'fr-a22-conditional': { label: 'je voudrais, tu pourrais', group: 'grammar', emoji: '🙏' },
   'fr-a22-gerund': { label: 'en + participe présent', group: 'grammar', emoji: '🔄' },
   'fr-a22-noun-complements': {

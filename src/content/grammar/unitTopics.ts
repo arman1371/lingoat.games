@@ -580,4 +580,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a22-participle-agreement' },
     { topic: 'fr-a22-demonstrative-pronouns' },
   ],
+  'fr-a2-2-parcours': [
+    { topic: 'fr-a22-cleft', note: 'c’est … qui / que, ce qui, ce que' },
+    { topic: 'fr-a22-reported-speech' },
+    { topic: 'fr-a22-pronoun-y', note: 'y and en' },
+  ],
 };
