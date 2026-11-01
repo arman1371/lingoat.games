@@ -563,4 +563,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a21-modals' },
     { topic: 'fr-a21-y', note: 'j’y vais, allons-y' },
   ],
+  // ---- French A2.2 ----------------------------------------------------------------------------
+  'fr-a2-2-sante': [
+    { topic: 'fr-object-pronouns', note: 'le, la, les, lui, leur' },
+    { topic: 'fr-superlative' },
+    { topic: 'fr-interrogative-pronouns' },
+  ],
 };

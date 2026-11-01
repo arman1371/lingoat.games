@@ -1,6 +1,6 @@
 import { configure, screen, within } from '@testing-library/react';
-import { GRAMMAR_TOPICS } from '@/content/grammar';
 import { renderApp, resetStores } from '@/test/app';
+import { GRAMMAR_TOPICS } from '@/content/grammar';
 
 // every render loads all levels and the library queries a large DOM; CI runs ~100 test files in
 // parallel, so the default second (and even five) is too tight there
