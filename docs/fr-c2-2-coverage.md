@@ -39,7 +39,7 @@ figures of style, and a different set of C2 grammar points:
 | 5   | Droit et justice (`droit`)             | courts, rights, contracts                      | advanced negation (`fr-c22-negation`)                                     | done   |
 | 6   | Médias et société (`medias`)           | press, freedom of expression, misinformation   | conditional of reserve and distance markers (`fr-c22-modalisation`)       | done   |
 | 7   | Engagement citoyen (`engagement`)      | associations, volunteering, civil society      | the infinitive (`fr-c22-infinitif`)                                       | done   |
-| 8   | Climat et environnement                | climate, energy, biodiversity                  | agreement with quantifiers and collectives (la plupart, plus d’un, tout)  | next   |
+| 8   | Climat et environnement (`climat`)     | climate, energy, biodiversity                  | agreement with quantifiers and collectives (`fr-c22-accord-quantite`)     | done   |
 | 9   | Proverbes et figures de style          | proverbs, idioms, métaphore, litote, antithèse | figures of style                                                          | next   |
 
 Each unit aims at 10 to 16 games with at least 6 of the 13 engines, an easy first game and a final "… challenge". The

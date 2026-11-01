@@ -1282,6 +1282,15 @@ export const LESSONS = {
       'Je regrette de ne pas avoir aidé. → negative past infinitive',
     ],
   },
+  'fr-c22-accord-quantite': {
+    title: 'Agreement with quantifiers and tout',
+    rule: 'The verb agrees with the noun after la plupart des / bon nombre de / un grand nombre de (plural) and la plupart du (singular); la plupart alone is plural. Plus d’un takes a singular verb. Une foule de + plural noun allows both. Tout agrees before a feminine adjective with a consonant: toutes petites.',
+    examples: [
+      'La plupart des espèces sont menacées. → plural',
+      'Plus d’un maire a protesté. → singular',
+      'Elles sont toutes petites. → tout agrees',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

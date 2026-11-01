@@ -426,6 +426,12 @@ export const TAGS = {
     emoji: '♾️',
   },
   'fr-c22-engagement': { label: 'Civic life (French C2)', group: 'topic', emoji: '🤝' },
+  'fr-c22-accord-quantite': {
+    label: 'Agreement with quantifiers and tout',
+    group: 'grammar',
+    emoji: '👥',
+  },
+  'fr-c22-climat': { label: 'Climate & environment (French C2)', group: 'topic', emoji: '🌍' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

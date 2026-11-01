@@ -276,3 +276,10 @@ generated forms in `src/lib/french`.
   participle), the choice of auxiliary and agreement as in the passé composé, and the rule that après takes the past
   infinitive. fr.wikipedia.org _Infinitif_ was also read but does not cover the French prepositions. The negative
   infinitive (ne pas avoir signé), avant de, pour, sans, de peur de and the same-subject rule follow textbook teaching.
+- Agreement with quantifiers (`fr-c22-accord-quantite`): fr.wiktionary.org _plupart_ was read for the verb after la plupart
+  de + noun (agrees with the noun) and la plupart alone (plural). fr.wiktionary.org _tout_ (first 100,000 of about
+  134,000 characters) was read for tout as an adverb: the traditional rule (toute / toutes before a feminine adjective
+  with an initial consonant) and the note that the majority usage writes toute / toutes in all cases; the lesson only
+  tests the consonant case. fr.wikipedia.org _Accord (grammaire)_ was read for collective nouns (foule, multitude,
+  dizaine, centaine: singular or plural verb when a plural noun follows). It does not mention bon nombre de, un grand
+  nombre de or plus d’un; those rules (plural, plural, singular) follow textbook teaching.

@@ -548,4 +548,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'fr-c2-2-droit': [{ topic: 'fr-c22-negation' }],
   'fr-c2-2-medias': [{ topic: 'fr-c22-modalisation' }],
   'fr-c2-2-engagement': [{ topic: 'fr-c22-infinitif' }],
+  'fr-c2-2-climat': [{ topic: 'fr-c22-accord-quantite' }],
 };

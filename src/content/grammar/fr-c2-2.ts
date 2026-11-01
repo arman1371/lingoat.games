@@ -559,4 +559,82 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-c22-accord-participe'],
     sources: [S.infinitivePast],
   },
+  {
+    id: 'fr-c22-accord-quantite',
+    title: 'Agreement with quantifiers and tout',
+    tagline: 'Which verb after la plupart, un grand nombre, plus d’un?',
+    level: LEVEL,
+    summary:
+      'After a quantifier the verb usually agrees with the noun that follows: plural after la plupart des, bon nombre de and un grand nombre de, singular after la plupart du. Plus d’un takes a singular verb, collectives such as une foule de allow both, and tout agrees or stays invariable depending on its role.',
+    sections: [
+      section(
+        'plupart',
+        'la plupart, bon nombre, un grand nombre',
+        p(
+          'With **la plupart de** the verb agrees with the noun after *de*: *La plupart des espèces sont menacées* (plural), *La plupart du personnel a fait grève* (singular). Used alone, **la plupart** takes a plural verb: *La plupart n’iront pas en vacances.* **Bon nombre de** and **un grand nombre de** + plural noun also take a plural verb.',
+        ),
+        examples(
+          ['La plupart des habitants sont favorables.', 'Most inhabitants are in favour.'],
+          ['La plupart du pays est en alerte.', 'Most of the country is on alert.'],
+          ['Bon nombre de communes ont réagi.', 'Many towns have reacted.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ La plupart des espèces est menacée.  ✓ La plupart des espèces sont menacées.',
+          '✗ La plupart d’espèces…  ✓ La plupart des espèces…',
+        ),
+      ),
+      section(
+        'collectifs',
+        'plus d’un and collective nouns',
+        p(
+          '**Plus d’un** is followed by a singular noun and a singular verb: *Plus d’un maire a protesté.* A **collective noun** alone takes a singular verb (*La foule est unanime*). When a plural noun follows, the verb may be singular or plural: *Une foule de militants a / ont bloqué la route.* Both agreements are found, so treat them as the writer’s choice.',
+        ),
+        table(
+          'Quantifier and verb.',
+          ['Subject', 'Verb', 'Example'],
+          [
+            ['la plupart des + plural', 'plural', 'La plupart des espèces sont menacées.'],
+            ['la plupart du + singular', 'singular', 'La plupart du pays est en alerte.'],
+            ['plus d’un + singular', 'singular', 'Plus d’un maire a protesté.'],
+            [
+              'une foule de + plural',
+              'singular or plural',
+              'Une foule de militants a / ont bloqué la route.',
+            ],
+          ],
+        ),
+      ),
+      section(
+        'tout',
+        'tout: adjective, pronoun, adverb',
+        p(
+          'As an **adjective** tout agrees with the noun (*tout le monde, toute la ville, tous les jours, toutes les îles*). As an **adverb** meaning “completely” it stays invariable before a masculine adjective (*tout petit*) but agrees before a feminine adjective that starts with a consonant (*toutes petites*). Before a feminine adjective starting with a vowel, practice varies: the traditional rule keeps *tout*, yet most people now write *toute* everywhere.',
+        ),
+        compare(
+          {
+            title: 'adjective',
+            question: 'Does it stand before a noun?',
+            example: 'Tous les glaciers fondent.',
+          },
+          {
+            title: 'adverb, masculine',
+            question: 'Does it stand before a masculine adjective?',
+            example: 'Ils sont tout petits.',
+          },
+          {
+            title: 'adverb, feminine',
+            question: 'Before a feminine adjective with a consonant?',
+            example: 'Elles sont toutes petites.',
+          },
+        ),
+        tip(
+          'Quick test',
+          'Replace tout by “complètement”. If that works, it is an adverb: it varies only before a feminine adjective that begins with a consonant.',
+        ),
+      ),
+    ],
+    related: ['fr-c22-accord-participe'],
+    sources: [S.plupart, S.agreement, S.tout],
+  },
 ];

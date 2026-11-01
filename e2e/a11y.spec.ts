@@ -57,6 +57,7 @@ const PAGES: [string, string, string][] = [
   ['unit 5 in French C2.2', '/fr/levels/fr-c2-2/units/fr-c2-2-droit', 'Droit et justice'],
   ['unit 6 in French C2.2', '/fr/levels/fr-c2-2/units/fr-c2-2-medias', 'Médias et société'],
   ['unit 7 in French C2.2', '/fr/levels/fr-c2-2/units/fr-c2-2-engagement', 'Engagement citoyen'],
+  ['unit 8 in French C2.2', '/fr/levels/fr-c2-2/units/fr-c2-2-climat', 'Climat et environnement'],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],
