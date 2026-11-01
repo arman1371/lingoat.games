@@ -246,3 +246,12 @@ generated forms in `src/lib/french`.
   the factual vs. hypothetical split of obwohl / auch wenn / selbst wenn, the Plusquamperfekt after als in comparisons,
   and the plural -keit / -heit / -ung gender rule. Wiktionary pages state the case and meaning of each connector, not
   its word order, so the verb position of connectors comes from the example sentences and from general German grammar.
+
+## French C1.1
+
+- `fr-c11-connectors` (unit 1): read Wikipédia _Connecteur logique (linguistique)_ and _Conjonction de coordination_ (car is
+  a coordinating conjunction; donc is now classed as an adverb and is movable) and the Wiktionnaire entries _puisque_ and
+  _grâce à_ (grâce à has a positive connotation, unlike à cause de). **Not stated by any fetched page and taken from common
+  textbook teaching:** puisque presenting a reason the listener already knows, car never opening a sentence, comme opening the
+  sentence, en raison de being formal and neutral, faute de meaning "for lack of", si bien que taking the indicative, and the
+  register of en outre, par ailleurs and de surcroît. Needs a native speaker's check.

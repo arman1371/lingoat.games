@@ -222,7 +222,9 @@ describe('French grammar', () => {
     expect(within(index).getByRole('heading', { level: 2, name: /A1\.1/ })).toBeInTheDocument();
     expect(within(index).getByTestId('grammar-fr-tu-vous')).toBeInTheDocument();
     expect(within(index).queryByTestId('grammar-word-order')).not.toBeInTheDocument();
-    expect(within(index).getAllByTestId(/^grammar-fr-/)).toHaveLength(25);
+    // 25 lessons of A1.1 and the lessons of the later French levels (C1.1: 1 so far)
+    expect(within(index).getAllByTestId(/^grammar-fr-/)).toHaveLength(26);
+    expect(within(index).getByTestId('grammar-fr-c11-connectors')).toBeInTheDocument();
   });
 
   it('keeps French topics out of the German library', async () => {

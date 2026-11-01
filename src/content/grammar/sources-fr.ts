@@ -44,4 +44,9 @@ export const FR_SOURCES = {
   imperative: wp('Impératif_(grammaire)', 'Impératif (grammaire)'),
   demonstrative: wp('Adjectif_démonstratif', 'Adjectif démonstratif'),
   futurProche: wp('Futur_proche', 'Futur proche'),
+  // C1.1
+  connectors: wp('Connecteur_logique_(linguistique)', 'Connecteur logique (linguistique)'),
+  coordination: wp('Conjonction_de_coordination', 'Conjonction de coordination'),
+  puisque: wiktionary('puisque', 'puisque'),
+  graceA: wiktionary('grâce_à', 'grâce à'),
 } as const satisfies Record<string, Source>;

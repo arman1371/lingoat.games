@@ -41,6 +41,8 @@ const PAGES: [string, string, string][] = [
   ['unit 6 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-table', 'À table !'],
   ['unit 7 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-ville', 'En ville'],
   ['unit 8 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-temps', 'Jours, heure et météo'],
+  ['level in French C1.1', '/fr/levels/fr-c1-1', 'C1.1'],
+  ['unit in French C1.1', '/fr/levels/fr-c1-1/units/fr-c1-1-medias', 'Les médias et l’information'],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],
@@ -48,6 +50,11 @@ const PAGES: [string, string, string][] = [
   ['unit A1.2 with grammar card', '/levels/a1-2/units/a1-2-wohnen', 'Wohnen'],
   ['grammar lesson', '/library/grammar/two-way-prepositions', 'Wo? or Wohin?'],
   ['grammar lesson in French', '/fr/library/grammar/fr-demonstratives', 'ce, cet, cette, ces'],
+  [
+    'grammar lesson in French C1.1',
+    '/fr/library/grammar/fr-c11-connectors',
+    'Connectors: cause, consequence, addition',
+  ],
   ['grammar lesson B2.1', '/library/grammar/konjunktiv-1', 'Reported speech: Konjunktiv I'],
   [
     'grammar lesson B2.2',

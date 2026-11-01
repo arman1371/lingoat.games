@@ -1218,6 +1218,16 @@ export const LESSONS = {
     rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
     examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
   },
+  // ---- French C1.1 -----------------------------------------------------------------------
+  'fr-c11-connectors': {
+    title: 'Connectors: cause, consequence, addition',
+    rule: 'Choose the connector for the register and the grammar around it. Cause: car (written), parce que (answers pourquoi), puisque / comme (known reason), then grâce à / à cause de / en raison de + noun. Result: donc, par conséquent, c’est pourquoi. Addition: de plus, en outre, par ailleurs.',
+    examples: [
+      'Il a hésité, car la source était douteuse.',
+      'Puisque tout le monde en parle, vérifions l’information.',
+      'La vidéo a été retirée ; par conséquent, la rumeur s’est calmée.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

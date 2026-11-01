@@ -10,7 +10,6 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   ['b1-2', 'B1.2', 'Threshold, second half'],
   ['b2-1', 'B2.1', 'Vantage, first half'],
   ['b2-2', 'B2.2', 'Vantage, second half'],
-  ['c1-1', 'C1.1', 'Effective proficiency, first half'],
   ['c1-2', 'C1.2', 'Effective proficiency, second half'],
   ['c2-1', 'C2.1', 'Mastery, first half'],
   ['c2-2', 'C2.2', 'Mastery, second half'],
@@ -22,7 +21,23 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   status: 'coming-soon',
 }));
 
-const FRENCH_LEVELS: LevelMeta[] = [
+/** CEFR order of the French levels, so available levels and coming-soon stubs interleave correctly. */
+const FRENCH_ORDER = [
+  'fr-a1-1',
+  'fr-a1-2',
+  'fr-a2-1',
+  'fr-a2-2',
+  'fr-b1-1',
+  'fr-b1-2',
+  'fr-b2-1',
+  'fr-b2-2',
+  'fr-c1-1',
+  'fr-c1-2',
+  'fr-c2-1',
+  'fr-c2-2',
+];
+
+const FRENCH_AVAILABLE: LevelMeta[] = [
   {
     language: 'fr',
     id: 'fr-a1-1',
@@ -32,8 +47,20 @@ const FRENCH_LEVELS: LevelMeta[] = [
     status: 'available',
     load: () => import('./fr-a1-1'),
   },
+  {
+    language: 'fr',
+    id: 'fr-c1-1',
+    title: 'C1.1',
+    subtitle: 'Media and information, with the connectors of a formal argument',
+    status: 'available',
+    load: () => import('./fr-c1-1'),
+  },
   ...FRENCH_COMING_SOON,
 ];
+
+const FRENCH_LEVELS = [...FRENCH_AVAILABLE].sort(
+  (a, b) => FRENCH_ORDER.indexOf(a.id) - FRENCH_ORDER.indexOf(b.id),
+);
 
 /**
  * Level catalogue. To add a level: create `src/content/<level-id>/index.ts` that default-exports a
