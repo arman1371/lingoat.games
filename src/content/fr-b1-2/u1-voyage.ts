@@ -54,7 +54,7 @@ const verbs = vocabList(U, 'Travel verbs', [
   ['louer', 'to rent', '🗝️'],
   ['se déplacer', 'to get around, to travel around', '🧭'],
   ['séjourner', 'to stay (somewhere)', '🏨'],
-  ['rentrer', 'to go home', '🏠'],
+  ['regagner', 'to get back to', '🏠'],
 ]);
 
 const phrases = vocabList(U, 'Phrases', [

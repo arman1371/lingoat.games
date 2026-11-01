@@ -1,4 +1,4 @@
-import { futureFr } from '@/lib/french/future';
+import { futurSimple } from '@/lib/french/tenses';
 import { FRENCH_PRONOUNS } from '@/lib/persons';
 import { examples, mistake, p, section, table, tip } from './build';
 import type { GrammarTopic } from './schema';
@@ -10,11 +10,11 @@ const futureTable = (caption: string, verbs: readonly string[]) =>
   table(
     caption,
     ['Person', ...verbs],
-    FRENCH_PRONOUNS.map((pr) => [pr, ...verbs.map((v) => futureFr(v)[pr])]),
+    FRENCH_PRONOUNS.map((pr) => [pr, ...verbs.map((v) => futurSimple(v)[pr])]),
   );
 
 /** French B1.2: the full lessons of the level, in teaching order. */
-export const FR12_TOPICS: GrammarTopic[] = [
+export const FRB12_TOPICS: GrammarTopic[] = [
   {
     id: 'fr-futur-simple',
     title: 'The simple future',

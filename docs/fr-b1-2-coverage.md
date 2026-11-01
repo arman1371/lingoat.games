@@ -53,8 +53,10 @@ content test checks this.
 
 ## Build plan
 
-1. Level entry, `src/lib/french/future.ts` (futur simple and conditionnel présent forms), unit 1, its full lesson,
-   e2e and a11y entries. **Done** (unit 1, `voyage`, 16 games).
-2. Units 2 to 12, one PR each; forms for the other tenses (conditionnel passé, plus-que-parfait, futur antérieur,
+French B1.2 ships in **one pull request** with all its units (Arman's rule for the French levels).
+
+1. Level entry, `src/lib/french/conditional.ts` (conditionnel présent, on top of the futur simple of `tenses.ts`), unit 1,
+   its full lesson, e2e and a11y entries. **Done** (unit 1, `voyage`, 16 games).
+2. Units 2 to 12 in the same PR; forms for the other tenses (conditionnel passé, plus-que-parfait, futur antérieur,
    participe présent, gérondif) are added to `src/lib/french` as the units need them.
 3. Full lessons are written with each unit (`src/content/grammar/fr-b1-2.ts`, linked in `unitTopics.ts`).

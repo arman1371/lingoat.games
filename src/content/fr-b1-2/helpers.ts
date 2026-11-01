@@ -1,5 +1,6 @@
 import type { FrenchForms } from '@/lib/french/conjugation';
-import { conditionalFr, futureFr } from '@/lib/french/future';
+import { conditionnel } from '@/lib/french/conditional';
+import { futurSimple } from '@/lib/french/tenses';
 import type { FrenchPronoun } from '@/lib/persons';
 import { unit as baseUnit } from '../builders';
 import type { ConfigOf } from '../schema';
@@ -29,7 +30,7 @@ export const futurTable = (
   verb: string,
   meaning: string,
   blanks: FrenchPronoun[],
-): Table => tense(id, verb, 'futur simple', meaning, futureFr(verb), blanks);
+): Table => tense(id, verb, 'futur simple', meaning, futurSimple(verb), blanks);
 
 /** Conditionnel présent table: j’irais, tu irais … */
 export const conditionnelTable = (
@@ -37,4 +38,4 @@ export const conditionnelTable = (
   verb: string,
   meaning: string,
   blanks: FrenchPronoun[],
-): Table => tense(id, verb, 'conditionnel', meaning, conditionalFr(verb), blanks);
+): Table => tense(id, verb, 'conditionnel', meaning, conditionnel(verb), blanks);
