@@ -226,6 +226,44 @@ imperative of être and avoir, the negation of the near future, the chez + perso
 Wiktionnaire conjugation pages were checked for prendre, vouloir and finir; the other verb tables come from the
 generated forms in `src/lib/french`.
 
+## French A1.2 (5 topics so far)
+
+The lessons are in `src/content/grammar/fr-a1-2.ts`, the pages in `sources-fr-a1-2.ts`. Verb tables use
+`reflexiveFr()` from `src/lib/french`. **Not yet reviewed by a native speaker.**
+
+| Topic                    | Pages read                                                                                                                                                                                                                                                                                                        |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pronominal verbs         | [Verbe pronominal](https://fr.wikipedia.org/wiki/Verbe_pronominal), [Forme pronominale du verbe en français](https://fr.wikipedia.org/wiki/Forme_pronominale_du_verbe_en_fran%C3%A7ais)                                                                                                                           |
+| How often? (ne … jamais) | Wiktionnaire [jamais](https://fr.wiktionary.org/wiki/jamais)                                                                                                                                                                                                                                                      |
+| Passé composé with avoir | [Passé composé en français](https://fr.wikipedia.org/wiki/Pass%C3%A9_compos%C3%A9_en_fran%C3%A7ais), Wiktionnaire conjugations of [manger](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/manger), [attendre](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/attendre), finir, faire, prendre |
+| Past and future markers  | Wiktionnaire [il y a](https://fr.wiktionary.org/wiki/il_y_a), [dernier](https://fr.wiktionary.org/wiki/dernier), [prochain](https://fr.wiktionary.org/wiki/prochain)                                                                                                                                              |
+| First, then, finally     | Wiktionnaire [d'abord](https://fr.wiktionary.org/wiki/d%E2%80%99abord), [vers](https://fr.wiktionary.org/wiki/vers)                                                                                                                                                                                               |
+
+**Limits:** the Wikipédia article "Adverbe" does not cover frequency adverbs or their position, so the placement of
+toujours / souvent / rarement after the verb and the opening position of parfois / tous les jours follow common
+textbook teaching and are **not** checked against a fetched page; the same holds for the elision of me / te / se
+(the page only shows examples), the ensuite / puis / enfin ordering (the d'abord page does not list them), and the
+use of avant / après with a noun. For the passé composé the Wikipédia page does not state the participle endings (-é, -i, -u), the irregular participles or the negation around avoir; these follow common textbook teaching and the Wiktionnaire conjugation pages. The wiktionary entries for dernier and prochain do not state their position after a time noun or their agreement.
+
+## French A2.1 (4 topics so far)
+
+The lessons are in `src/content/grammar/fr-a2-1.ts`, the pages in `sources-fr-a2-1.ts`. Passé composé tables are generated
+by `src/lib/french/tenses.ts`. **Not yet reviewed by a native speaker.**
+
+| Topic                       | Pages read                                                                                                                                                                                          |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Passé composé with être     | [Passé composé en français](https://fr.wikipedia.org/wiki/Pass%C3%A9_compos%C3%A9_en_fran%C3%A7ais)                                                                                                 |
+| Irregular past participles  | the same page, Wiktionnaire conjugations of [faire](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/faire) and [prendre](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/prendre) |
+| ne … rien, personne, plus … | [Négation en français](https://fr.wikipedia.org/wiki/N%C3%A9gation_en_fran%C3%A7ais)                                                                                                                |
+| pendant, depuis, en         | Wiktionnaire [depuis](https://fr.wiktionary.org/wiki/depuis), [pendant](https://fr.wiktionary.org/wiki/pendant)                                                                                     |
+
+**Limits:** the Wikipédia page on the passé composé states the auxiliary choice and the agreement rules but not the
+participle endings, so -é / -i / -u and the list of irregular participles follow common textbook teaching. The negation
+page gives the general structure and "Personne n'est venu", not the place of rien, jamais, plus and pas encore around the
+participle or of personne after it; those follow common textbook teaching. The Wiktionnaire entries for depuis and
+pendant give the meaning (starting point, "during") but no tense rule, so "depuis + present for a continuing situation"
+and "pendant + passé composé" are textbook teaching, not checked against a fetched page.
+
 ## Limits of the research
 
 - The Deutsche Welle learner pages could not be fetched, and the Duden grammar pages are not freely readable, so the
@@ -246,6 +284,16 @@ generated forms in `src/lib/french`.
   the factual vs. hypothetical split of obwohl / auch wenn / selbst wenn, the Plusquamperfekt after als in comparisons,
   and the plural -keit / -heit / -ung gender rule. Wiktionary pages state the case and meaning of each connector, not
   its word order, so the verb position of connectors comes from the example sentences and from general German grammar.
+
+## French A2.2
+
+The lessons are in `src/content/grammar/fr-a2-2.ts`, the pages in `sources-fr-a2-2.ts`.
+
+| Topic                                   | Pages read                                                                                                                                                                                                                                                   |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Object pronouns: le, la, les, lui, leur | [Complément d'objet direct](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_d'objet_direct), [Complément d'objet indirect](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_d'objet_indirect), [Pronom personnel](https://fr.wikipedia.org/wiki/Pronom_personnel) |
+| The superlative: le plus, le meilleur   | [Degré de comparaison](https://fr.wikipedia.org/wiki/Degr%C3%A9_de_comparaison) (section "En français")                                                                                                                                                      |
+| Qui, que, quoi, lequel                  | [Pronom interrogatif](https://fr.wikipedia.org/wiki/Pronom_interrogatif) (section "En français")                                                                                                                                                             |
 
 ## French C1.1
 

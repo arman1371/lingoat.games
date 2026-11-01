@@ -63,6 +63,8 @@ two shared test harnesses (`content.test.ts`, `playability.test.tsx`), plus Fren
   -ir verbs with the usual spelling changes) through `frTable` in `fr-a1-1/helpers.ts`. A table is written in one
   language's persons only (the schema checks it). The clock and market engines still depend on German helpers and need a
   French counterpart before a unit can use them.
+- Tenses beyond the present (passé composé, imparfait, futur simple) come from `src/lib/french/tenses.ts`; `fr-a2-1/helpers.ts`
+  wraps them as conjugation tables (`pcTable`, `pcReflexiveTable`, `imparfaitTable`, `futurTable`).
 - Levels after A1.1 (`src/content/fr-c1-1/`) copy `fr-a1-1`'s layout. Their `helpers.ts` re-exports the language-neutral authoring
   helpers (`gap`, `typed`, `q`, `sent`, `heard`, `dictation`, `tf`, `say` / `you`, `sortItems`, `hint`) from `a1-2/helpers` and
   adds `unitFr` and `frCustomTable` (a conjugation table with six hand-typed forms, for tenses and moods that

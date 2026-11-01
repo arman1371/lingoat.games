@@ -3,9 +3,6 @@ import type { LevelMeta } from './schema';
 
 /** French is on its way: A1.1 is the pilot, the other CEFR half-levels are listed without content. */
 const FRENCH_COMING_SOON: LevelMeta[] = [
-  ['a1-2', 'A1.2', 'Breakthrough, second half'],
-  ['a2-1', 'A2.1', 'Waystage, first half'],
-  ['a2-2', 'A2.2', 'Waystage, second half'],
   ['b1-1', 'B1.1', 'Threshold, first half'],
   ['b1-2', 'B1.2', 'Threshold, second half'],
   ['b2-1', 'B2.1', 'Vantage, first half'],
@@ -21,46 +18,71 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   status: 'coming-soon',
 }));
 
-/** CEFR order of the French levels, so available levels and coming-soon stubs interleave correctly. */
+/** CEFR order of the French levels, so a level that becomes available stays in its place. */
 const FRENCH_ORDER = [
-  'fr-a1-1',
-  'fr-a1-2',
-  'fr-a2-1',
-  'fr-a2-2',
-  'fr-b1-1',
-  'fr-b1-2',
-  'fr-b2-1',
-  'fr-b2-2',
-  'fr-c1-1',
-  'fr-c1-2',
-  'fr-c2-1',
-  'fr-c2-2',
-];
+  'a1-1',
+  'a1-2',
+  'a2-1',
+  'a2-2',
+  'b1-1',
+  'b1-2',
+  'b2-1',
+  'b2-2',
+  'c1-1',
+  'c1-2',
+  'c2-1',
+  'c2-2',
+].map((id) => `fr-${id}`);
 
-const FRENCH_AVAILABLE: LevelMeta[] = [
-  {
-    language: 'fr',
-    id: 'fr-a1-1',
-    title: 'A1.1',
-    subtitle:
-      'First steps: greetings, introductions, numbers, family, hobbies, food, town and time',
-    status: 'available',
-    load: () => import('./fr-a1-1'),
-  },
-  {
-    language: 'fr',
-    id: 'fr-c1-1',
-    title: 'C1.1',
-    subtitle: 'Media and information, with the connectors of a formal argument',
-    status: 'available',
-    load: () => import('./fr-c1-1'),
-  },
-  ...FRENCH_COMING_SOON,
-];
-
-const FRENCH_LEVELS = [...FRENCH_AVAILABLE].sort(
-  (a, b) => FRENCH_ORDER.indexOf(a.id) - FRENCH_ORDER.indexOf(b.id),
-);
+const FRENCH_LEVELS: LevelMeta[] = (
+  [
+    {
+      language: 'fr',
+      id: 'fr-a1-1',
+      title: 'A1.1',
+      subtitle:
+        'First steps: greetings, introductions, numbers, family, hobbies, food, town and time',
+      status: 'available',
+      load: () => import('./fr-a1-1'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-a1-2',
+      title: 'A1.2',
+      subtitle:
+        'Everyday life: daily routine, family events, home, holidays, health, work, nature and learning French',
+      status: 'available',
+      load: () => import('./fr-a1-2'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-a2-1',
+      title: 'A2.1',
+      subtitle:
+        'Life stories, outings, memories, housing, portraits, the future, cooking and school',
+      status: 'available',
+      load: () => import('./fr-a2-1'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-a2-2',
+      title: 'A2.2',
+      subtitle:
+        'Health, media, responsible shopping, travel, studies and work, and nature, with pronouns, the subjunctive and the conditional',
+      status: 'available',
+      load: () => import('./fr-a2-2'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-c1-1',
+      title: 'C1.1',
+      subtitle: 'Media and information, with the connectors of a formal argument',
+      status: 'available',
+      load: () => import('./fr-c1-1'),
+    },
+    ...FRENCH_COMING_SOON,
+  ] satisfies LevelMeta[]
+).sort((a, b) => FRENCH_ORDER.indexOf(a.id) - FRENCH_ORDER.indexOf(b.id));
 
 /**
  * Level catalogue. To add a level: create `src/content/<level-id>/index.ts` that default-exports a
