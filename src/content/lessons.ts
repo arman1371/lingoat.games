@@ -1168,6 +1168,51 @@ export const LESSONS = {
     rule: 'Most nouns add a silent -s in the plural, so you hear the plural only in the article: le, la and l’ become les, and un and une become des. Nouns in -eau and -al change differently: un bateau, des bateaux; un animal, des animaux.',
     examples: ['un frère, des frères', 'la sœur, les sœurs', 'un enfant, des enfants'],
   },
+  'fr-pronominal': {
+    title: 'Pronominal verbs',
+    rule: 'A pronominal verb has a small pronoun before it that matches the subject: je me lève, tu te laves, il se couche, nous nous reposons, vous vous habillez, elles se promènent. Me, te and se become m’, t’ and s’ before a vowel or h: je m’habille. In the negative ne goes before the pronoun.',
+    examples: [
+      'Je me lève à sept heures.',
+      'Elle s’habille vite.',
+      'Nous ne nous couchons pas tôt.',
+    ],
+  },
+  'fr-frequency': {
+    title: 'How often?',
+    rule: 'Short adverbs of frequency (toujours, souvent, rarement, parfois) go right after the verb: il se lève toujours tôt. Tous les jours, d’habitude and parfois can also open the sentence. Never is ne … jamais around the verb, without pas: je ne me couche jamais tard.',
+    examples: [
+      'Je me douche toujours le matin.',
+      'Parfois, nous dînons dehors.',
+      'Il ne fait jamais la vaisselle.',
+    ],
+  },
+  'fr-sequence': {
+    title: 'First, then, finally',
+    rule: 'Order a day with d’abord, ensuite (or puis) and enfin. Avant and après come before a noun: avant le dîner, après le travail. For times use à (à sept heures), vers for around (vers huit heures) and de … à … for from … to (de neuf heures à midi).',
+    examples: [
+      'D’abord, je me lève. Ensuite, je mange.',
+      'Je rentre vers six heures.',
+      'Je travaille de neuf heures à cinq heures.',
+    ],
+  },
+  'fr-passe-compose-avoir': {
+    title: 'The passé composé with avoir',
+    rule: 'To say what happened, use avoir in the present plus the past participle: j’ai mangé, tu as fini, nous avons attendu. Participles: -er → -é, -ir → -i, -re → -u; some are irregular (fait, pris, eu, été). In the negative ne … pas wraps avoir: je n’ai pas mangé.',
+    examples: [
+      'Hier, j’ai regardé un film.',
+      'Nous avons fêté son anniversaire.',
+      'Il n’a pas fini.',
+    ],
+  },
+  'fr-time-markers': {
+    title: 'Past and future time markers',
+    rule: 'Look back with hier, avant-hier and il y a + a length of time (il y a deux jours). Look ahead with demain, après-demain and dans + a length of time (dans deux jours). Dernier (last) and prochain (next) follow the noun and agree with it: la semaine dernière, le mois prochain.',
+    examples: [
+      'Hier soir, j’ai dîné chez eux.',
+      'Elle a eu un bébé il y a deux jours.',
+      'Samedi prochain, nous partons.',
+    ],
+  },
   'fr-likes': {
     title: 'J’aime, je déteste …',
     rule: 'Aimer, adorer and détester are regular -er verbs. Before a noun use the definite article, even for things in general: j’aime le café, elle adore les chats. Before an activity use the infinitive: j’aime danser. Add beaucoup for more: j’aime beaucoup la musique.',
@@ -1245,6 +1290,51 @@ export const LESSONS = {
     title: 'Where does the adjective go?',
     rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
     examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
+  },
+  // ---- French A2.1 ---------------------------------------------------------------------------
+  'fr-a21-passe-compose': {
+    title: 'Passé composé with être',
+    rule: 'Aller, venir, arriver, partir, entrer, sortir, rester, tomber, naître, mourir and all pronominal verbs form the passé composé with être, not avoir. The participle then agrees with the subject: elle est partie, ils sont partis, nous nous sommes mariés.',
+    examples: ['Elle est née en 1995.', 'Nous sommes arrivés hier.', 'Je me suis installé à Lyon.'],
+  },
+  'fr-a21-participles': {
+    title: 'Irregular past participles',
+    rule: 'Regular verbs make the participle from the infinitive: -er → -é (parlé), -ir → -i (fini), -re → -u (vendu). Many common verbs are irregular and must be learned: avoir → eu, être → été, faire → fait, prendre → pris, voir → vu, écrire → écrit, vivre → vécu.',
+    examples: ['J’ai fait un stage.', 'Il a vécu à Rome.', 'Nous avons pris une décision.'],
+  },
+  'fr-a21-negatives': {
+    title: 'ne … rien, personne, plus, pas encore',
+    rule: 'Ne goes before the verb. In the passé composé rien, jamais, plus and pas encore stand between the auxiliary and the participle (je n’ai rien dit); personne comes after the participle (je n’ai vu personne). As a subject, rien and personne come first: personne n’est venu.',
+    examples: ['Elle n’a pas encore trouvé d’emploi.', 'Je n’ai vu personne.', 'Rien n’a changé.'],
+  },
+  'fr-a21-time-markers': {
+    title: 'pendant, depuis, en',
+    rule: 'Pendant gives how long something lasted and is over (j’ai travaillé pendant trois ans). Depuis says that something started in the past and still goes on, with the present tense (j’habite ici depuis 2020). En + year or month gives the moment (en 1998, en mai). Il y a + duration means ago.',
+    examples: [
+      'Il a vécu à Nice pendant dix ans.',
+      'Elle travaille ici depuis mars.',
+      'Je suis né en 1998.',
+    ],
+  },
+  // ---- French A2.2 ----
+  'fr-object-pronouns': {
+    title: 'Object pronouns: le, la, les, lui, leur',
+    rule: 'Le, la, l’ and les replace a direct object (a person or thing with no preposition). Lui (one person) and leur (several) replace à + a person. Me, te, nous and vous work for both. The pronoun stands before the verb, or before the infinitive: je le vois, je vais lui téléphoner.',
+    examples: ['Je le prends.', 'Je lui téléphone.', 'Je ne la trouve pas.'],
+  },
+  'fr-superlative': {
+    title: 'The superlative: le plus, le meilleur',
+    rule: 'For adjectives use le / la / les + plus (more) or moins (less) + adjective; the article agrees with the noun. Bon becomes le meilleur, bien becomes le mieux. For adverbs the article is always le: le plus vite.',
+    examples: [
+      'C’est la plus grande ville.',
+      'C’est le meilleur médecin.',
+      'Elle court le plus vite.',
+    ],
+  },
+  'fr-interrogative-pronouns': {
+    title: 'Qui, que, quoi, lequel',
+    rule: 'Qui asks about a person. For things use qu’est-ce qui (subject) and qu’est-ce que or que (object); after a preposition or at the end of the question use quoi. Lequel, laquelle, lesquels and lesquelles ask “which one(s)?” and agree with the noun.',
+    examples: ['Qui a appelé ?', 'Qu’est-ce que vous prenez ?', 'Laquelle est pour moi ?'],
   },
 } as const satisfies Record<string, Lesson>;
 
