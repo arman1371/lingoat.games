@@ -75,6 +75,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (adverbs in -ment)', 'fr-a2-2-medias-gap-adverbs'],
   ['dialogue (media)', 'fr-a2-2-medias-dialogues'],
   ['blitz (media)', 'fr-a2-2-medias-blitz'],
+  ['flashcards (shopping)', 'fr-a2-2-consommer-flash-shop'],
+  ['spell (consumer words)', 'fr-a2-2-consommer-spell-shop'],
+  ['conjugation (conditional)', 'fr-a2-2-consommer-conj-conditional'],
+  ['gap fill (gerund)', 'fr-a2-2-consommer-gap-gerund'],
+  ['sort it (en, à, de)', 'fr-a2-2-consommer-sort-complements'],
+  ['sentence builder (consumer)', 'fr-a2-2-consommer-sentences'],
+  ['dialogue (repair, loan, complaint)', 'fr-a2-2-consommer-dialogues'],
 ];
 
 test.describe('French A2.2 – playing the games', () => {

@@ -570,4 +570,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a22-pronoun-order', note: 'je te le donne, donne-le-moi' },
     { topic: 'fr-a22-adverbs-ment' },
   ],
+  'fr-a2-2-consommer': [
+    { topic: 'fr-a22-conditional', note: 'je voudrais, pourriez-vous' },
+    { topic: 'fr-a22-gerund' },
+    { topic: 'fr-a22-noun-complements', note: 'en, à, de' },
+  ],
 };

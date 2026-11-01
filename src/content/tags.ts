@@ -417,6 +417,13 @@ export const TAGS = {
   'fr-a22-subjunctive': { label: 'il faut que + subjonctif', group: 'grammar', emoji: '🌀' },
   'fr-a22-pronoun-order': { label: 'je te le donne', group: 'grammar', emoji: '🧩' },
   'fr-a22-adverbs-ment': { label: 'adverbes en -ment', group: 'grammar', emoji: '🐢' },
+  'fr-a22-conditional': { label: 'je voudrais, tu pourrais', group: 'grammar', emoji: '🙏' },
+  'fr-a22-gerund': { label: 'en + participe présent', group: 'grammar', emoji: '🔄' },
+  'fr-a22-noun-complements': {
+    label: 'une table en bois, une tasse à café',
+    group: 'grammar',
+    emoji: '🪵',
+  },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

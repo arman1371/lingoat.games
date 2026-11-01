@@ -1336,6 +1336,29 @@ export const LESSONS = {
     rule: 'Take the feminine form of the adjective and add -ment: lent → lentement, heureux → heureusement. If the masculine ends in a vowel, add -ment to it: vrai → vraiment. Adjectives in -ant and -ent give -amment and -emment: constant → constamment. Bon becomes bien, mauvais becomes mal.',
     examples: ['Il parle lentement.', 'Heureusement, il y a internet.', 'Elle répond poliment.'],
   },
+  'fr-a22-conditional': {
+    title: 'The present conditional: je voudrais',
+    rule: 'The conditional uses the future stem plus the imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient): je voudrais, tu pourrais, nous serions. Use it for polite requests, wishes and advice. In a si + imparfait sentence the main clause takes the conditional.',
+    examples: [
+      'Je voudrais un renseignement.',
+      'Pourriez-vous m’aider ?',
+      'Si j’avais le temps, je réparerais tout.',
+    ],
+  },
+  'fr-a22-gerund': {
+    title: 'The gerund: en réparant',
+    rule: 'The gerund is en + the nous form of the present without -ons, plus -ant: en achetant, en finissant, en faisant. Only three verbs are irregular: être (en étant), avoir (en ayant) and savoir (en sachant). It says how or while something happens, and the subject is the same as in the main verb.',
+    examples: [
+      'On économise en achetant d’occasion.',
+      'Il écoute la radio en réparant la lampe.',
+      'En étant prudent, on évite les erreurs.',
+    ],
+  },
+  'fr-a22-noun-complements': {
+    title: 'Noun complements: en, à, de',
+    rule: 'En gives the material (une table en bois). À gives the use (une machine à laver, une tasse à café). De gives the content, the kind or the origin (un verre de lait, un sac de sport). No article follows when the noun is general.',
+    examples: ['Un pull en laine.', 'Une brosse à dents.', 'Un sac de voyage.'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

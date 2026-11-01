@@ -23,4 +23,7 @@ export const FR22_SOURCES = {
   aCauseDe: wk('à_cause_de', 'à cause de'),
   subjunctive: wp('Subjonctif_en_français', 'Subjonctif en français'),
   adverb: wp('Adverbe', 'Adverbe'),
+  conditional: wp('Conditionnel_en_français', 'Conditionnel en français'),
+  gerund: wp('Gérondif', 'Gérondif'),
+  nounComplement: wp('Complément_du_nom', 'Complément du nom'),
 } as const satisfies Record<string, Source>;

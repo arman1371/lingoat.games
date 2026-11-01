@@ -403,4 +403,181 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-adjectives', 'fr-frequency'],
     sources: [S.adverb],
   },
+
+  // ---- Unit 3 (Consommer responsable) ----
+  {
+    id: 'fr-a22-conditional',
+    title: 'The present conditional: je voudrais',
+    tagline: 'How do I ask politely, wish for something or give advice?',
+    level: LEVEL,
+    summary:
+      'The conditional is the future stem plus the imparfait endings. Use it for polite requests (je voudrais), wishes, advice (tu devrais) and the result of an imaginary condition.',
+    sections: [
+      section(
+        'forms',
+        'Forming the conditional',
+        p(
+          'Take the stem of the **future** (the infinitive for regular verbs, with the final -e dropped for -re verbs) and add the endings of the **imparfait**: **-ais, -ais, -ait, -ions, -iez, -aient**. Irregular verbs keep their irregular future stem.',
+        ),
+        table(
+          'Common conditional forms.',
+          ['Person', 'aimer', 'vouloir', 'pouvoir', 'être'],
+          [
+            ['je', 'aimerais', 'voudrais', 'pourrais', 'serais'],
+            ['tu', 'aimerais', 'voudrais', 'pourrais', 'serais'],
+            ['il / elle / on', 'aimerait', 'voudrait', 'pourrait', 'serait'],
+            ['nous', 'aimerions', 'voudrions', 'pourrions', 'serions'],
+            ['vous', 'aimeriez', 'voudriez', 'pourriez', 'seriez'],
+            ['ils / elles', 'aimeraient', 'voudraient', 'pourraient', 'seraient'],
+          ],
+        ),
+        p(
+          'Other irregular stems: **avoir → aur-**, **aller → ir-**, **faire → fer-**, **devoir → devr-**, **savoir → saur-**, **venir → viendr-**.',
+        ),
+      ),
+      section(
+        'use',
+        'When to use it',
+        table(
+          'Uses of the conditional.',
+          ['Use', 'example'],
+          [
+            ['polite request', 'Pourriez-vous m’aider ?'],
+            ['wish', 'Je voudrais un renseignement.'],
+            ['advice', 'Tu devrais acheter d’occasion.'],
+            ['imaginary result', 'Si j’avais le temps, je réparerais tout.'],
+          ],
+        ),
+        examples(
+          ['Je voudrais réparer mon vélo.', 'I would like to repair my bike.'],
+          ['Ça serait plus écologique.', 'That would be more ecological.'],
+          [
+            'Si nous jetions moins, nous aurions moins de déchets.',
+            'If we threw away less, we would have less waste.',
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Si j’aurais le temps, je réparerais.  ✓ Si j’avais le temps, je réparerais.',
+          '✗ Je voudrai un renseignement.  ✓ Je voudrais un renseignement.',
+        ),
+        tip(
+          'Je veux or je voudrais?',
+          'Je veux sounds like an order. In shops and offices say je voudrais or pourriez-vous.',
+        ),
+      ),
+    ],
+    related: ['fr-prendre-vouloir', 'fr-futur-proche'],
+    sources: [S.conditional],
+  },
+  {
+    id: 'fr-a22-gerund',
+    title: 'The gerund: en réparant',
+    tagline: 'How do I say how, or while, I do something?',
+    level: LEVEL,
+    summary:
+      'En + the -ant form says how or while: en achetant, en faisant. Only être, avoir and savoir are irregular. The subject is the same as in the main verb.',
+    sections: [
+      section(
+        'forms',
+        'Forming the gerund',
+        p(
+          'Take the **nous** form of the present, remove **-ons**, and add **-ant**. Put **en** in front. The gerund never changes.',
+        ),
+        table(
+          'Gerund forms.',
+          ['Infinitive', 'nous form', 'gerund'],
+          [
+            ['acheter', 'nous achetons', 'en achetant'],
+            ['finir', 'nous finissons', 'en finissant'],
+            ['faire', 'nous faisons', 'en faisant'],
+            ['prendre', 'nous prenons', 'en prenant'],
+            ['être', '(irregular)', 'en étant'],
+            ['avoir', '(irregular)', 'en ayant'],
+            ['savoir', '(irregular)', 'en sachant'],
+          ],
+        ),
+      ),
+      section(
+        'use',
+        'What it expresses',
+        p(
+          'The gerund answers **comment ?** (how) or says that two actions happen **at the same time**. Both actions have the **same subject**.',
+        ),
+        examples(
+          [
+            'On économise de l’argent en achetant d’occasion.',
+            'You save money by buying second-hand.',
+          ],
+          [
+            'Il écoute la radio en réparant la lampe.',
+            'He listens to the radio while repairing the lamp.',
+          ],
+          ['En étant prudent, on évite les erreurs.', 'By being careful, you avoid mistakes.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ en acheter  ✓ en achetant',
+          '✗ J’ai trouvé la solution en cherchent.  ✓ …en cherchant.',
+        ),
+      ),
+    ],
+    related: ['fr-er-verbs', 'fr-ir-verbs'],
+    sources: [S.gerund],
+  },
+  {
+    id: 'fr-a22-noun-complements',
+    title: 'Noun complements: en, à, de',
+    tagline: 'How do I say what an object is made of or used for?',
+    level: LEVEL,
+    summary:
+      'En gives the material (une table en bois), à gives the use (une machine à laver), and de gives the content or the kind (un verre de lait, un sac de sport).',
+    sections: [
+      section(
+        'three',
+        'En, à and de',
+        p(
+          'A **noun complement** is a second noun that tells you more about the first. It is introduced by a small word, usually without an article.',
+        ),
+        table(
+          'Which small word?',
+          ['Word', 'meaning', 'example'],
+          [
+            ['en', 'material', 'une table en bois, un pull en laine'],
+            ['à', 'use, purpose', 'une machine à laver, une tasse à café'],
+            ['de', 'content, kind', 'un verre de lait, un sac de sport'],
+          ],
+        ),
+        compare(
+          {
+            title: 'À + noun',
+            question: 'What is it used for?',
+            example: 'une tasse à café (a cup for coffee)',
+          },
+          {
+            title: 'De + noun',
+            question: 'What is inside it?',
+            example: 'une tasse de café (a cup of coffee)',
+          },
+        ),
+      ),
+      section(
+        'extra',
+        'More examples',
+        examples(
+          ['une boîte à outils', 'a toolbox'],
+          ['une bouteille d’eau', 'a bottle of water'],
+          ['un sac en papier', 'a paper bag'],
+          ['une salle de bains', 'a bathroom'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ une table de bois  ✓ une table en bois',
+          '✗ une brosse pour dents  ✓ une brosse à dents',
+        ),
+      ),
+    ],
+    related: ['fr-articles', 'fr-contractions'],
+    sources: [S.nounComplement],
+  },
 ];
