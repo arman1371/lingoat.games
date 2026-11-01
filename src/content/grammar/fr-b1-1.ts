@@ -3,6 +3,8 @@ import type { GrammarTopic } from './schema';
 import { FR_SOURCES as S } from './sources-fr';
 import { FRENCH_PRONOUNS } from '@/lib/persons';
 import { subjunctiveFr } from '@/lib/french/subjunctive';
+import type { FrenchForms } from '@/lib/french/conjugation';
+import { imparfait } from '@/lib/french/tenses';
 
 const LEVEL = 'fr-b1-1';
 
@@ -12,6 +14,16 @@ function subjunctiveTable(caption: string, verbs: readonly string[]) {
   return table(
     caption,
     ['que …', ...verbs],
+    FRENCH_PRONOUNS.map((pr) => [pr, ...all.map((f) => f[pr])]),
+  );
+}
+
+/** A table of generated forms (one column per verb) for any tense function from `src/lib/french`. */
+function formsTable(caption: string, verbs: readonly string[], tense: (v: string) => FrenchForms) {
+  const all = verbs.map((v) => tense(v));
+  return table(
+    caption,
+    ['Person', ...verbs],
     FRENCH_PRONOUNS.map((pr) => [pr, ...all.map((f) => f[pr])]),
   );
 }
@@ -300,5 +312,154 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-b11-restriction'],
     sources: [S.prefixIn],
+  },
+  // ---- unit 2: Souvenirs de famille ------------------------------------------------------------
+  {
+    id: 'fr-b11-imparfait-pc',
+    title: 'Imparfait or passé composé?',
+    tagline: 'Which past tense do I use in a story?',
+    level: LEVEL,
+    summary:
+      'The imparfait sets the scene: states, habits and actions in progress. The passé composé tells the events that move the story forward. Most stories use both.',
+    sections: [
+      section(
+        'imparfait',
+        'The imparfait',
+        p(
+          'Take the **nous** form of the present, drop **-ons** and add **-ais, -ais, -ait, -ions, -iez, -aient**: *nous habitons* → **j’habitais**. The only exception is **être**: **j’étais**.',
+        ),
+        formsTable(
+          'The imparfait of five verbs.',
+          ['habiter', 'finir', 'faire', 'avoir', 'être'],
+          imparfait,
+        ),
+        tip(
+          'Spelling',
+          'Verbs in -ger and -cer keep the sound before -ais (je mangeais, je commençais) but not before -ions (nous mangions, nous commencions).',
+        ),
+      ),
+      section(
+        'choice',
+        'Scene or event?',
+        compare(
+          {
+            title: 'imparfait',
+            question: 'What was the situation? What did you do regularly?',
+            example: 'Il faisait beau. Nous habitions près de la mer.',
+          },
+          {
+            title: 'passé composé',
+            question: 'What happened, once, and finished?',
+            example: 'Un jour, nous avons déménagé.',
+          },
+        ),
+        p(
+          'The two tenses often meet in one sentence: the **imparfait** is the action in progress and the **passé composé** is what interrupts it: *Nous regardions un film quand la lumière s’est éteinte.* A **repeated** action is a habit and takes the imparfait (*chaque été, nous allions …*); a **dated, single** action takes the passé composé (*en 1995, mes parents ont déménagé*).',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Quand j’ai été petit, j’habitais à Lyon.  ✓ Quand j’étais petit, j’habitais à Lyon.',
+          '✗ Soudain, le téléphone sonnait.  ✓ Soudain, le téléphone a sonné.',
+          '✗ Chaque été, nous sommes allés chez mamie.  ✓ Chaque été, nous allions chez mamie.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-narration', 'fr-b11-reflexive-agreement'],
+    sources: [S.imparfait, S.passeCompose],
+  },
+  {
+    id: 'fr-b11-narration',
+    title: 'Connectors of a story',
+    tagline: 'How do I put the events of a story in order?',
+    level: LEVEL,
+    summary:
+      'Time words tell the listener whether you are setting the scene or reporting an event. Scene words go with the imparfait, event words with the passé composé.',
+    sections: [
+      section(
+        'words',
+        'Scene words and event words',
+        table(
+          'Connectors and the tense that usually follows.',
+          ['Connector', 'Meaning', 'Usual tense'],
+          [
+            ['autrefois, à l’époque', 'in the past, at that time', 'imparfait'],
+            ['pendant que', 'while', 'imparfait'],
+            ['un jour, ce jour-là', 'one day, that day', 'passé composé'],
+            ['soudain, tout à coup', 'suddenly', 'passé composé'],
+            ['au moment où', 'at the moment when', 'imparfait or passé composé'],
+            ['la veille, le lendemain', 'the day before, the next day', 'either'],
+            ['finalement', 'in the end', 'passé composé'],
+          ],
+        ),
+        p(
+          'Use **la veille** and **le lendemain** (not *hier* and *demain*) in a story about the past: they are measured from the day you are talking about. *Il est parti la veille de mon anniversaire.*',
+        ),
+      ),
+      section(
+        'example',
+        'A short story',
+        examples(
+          [
+            'Je cuisinais pendant que mon frère regardait la télé.',
+            'I was cooking while my brother watched TV.',
+          ],
+          ['Soudain, quelqu’un a frappé à la porte.', 'Suddenly someone knocked at the door.'],
+          ['Le lendemain, nous avons visité la ville.', 'The next day we visited the town.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Pendant que je cuisine, mon frère a regardé la télé (mixed tenses).  ✓ Pendant que je cuisinais, mon frère regardait la télé.',
+          '✗ Hier est la veille de mon départ (in a story).  ✓ La veille de mon départ …',
+        ),
+      ),
+    ],
+    related: ['fr-b11-imparfait-pc'],
+    sources: [S.imparfait, S.passeCompose],
+  },
+  {
+    id: 'fr-b11-reflexive-agreement',
+    title: 'Reflexive verbs in the passé composé',
+    tagline: 'When does the participle of a pronominal verb agree?',
+    level: LEVEL,
+    summary:
+      'Pronominal verbs take être. The participle agrees with the reflexive pronoun if it is the direct object, and stays unchanged if it is an indirect object or if a direct object follows.',
+    sections: [
+      section(
+        'rule',
+        'Agree or not?',
+        table(
+          'Agreement with se.',
+          ['Case', 'Agreement', 'Example'],
+          [
+            ['se = direct object', 'agrees', 'Elle s’est levée. Ils se sont retrouvés.'],
+            [
+              'se = indirect object (à quelqu’un)',
+              'no agreement',
+              'Ils se sont parlé. Elles se sont écrit.',
+            ],
+            ['direct object after the verb', 'no agreement', 'Elle s’est lavé les mains.'],
+          ],
+        ),
+        p(
+          'Ask: does the verb take **à** + person? *Parler à, écrire à, téléphoner à, sourire à* → **no agreement**. If not, the pronoun is the direct object and the participle agrees in gender and number with the subject: *Les deux sœurs se sont réconciliées.*',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Elle s’est levé à six heures.  ✓ Elle s’est levée à six heures.',
+          '✗ Elles se sont parlées.  ✓ Elles se sont parlé.',
+          '✗ Elle s’est lavée les mains.  ✓ Elle s’est lavé les mains.',
+        ),
+        tip(
+          'Check with être',
+          'The auxiliary is always être: nous nous sommes disputés. Never avoir: ✗ nous nous avons disputés.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-imparfait-pc'],
+    sources: [S.passeCompose],
   },
 ];

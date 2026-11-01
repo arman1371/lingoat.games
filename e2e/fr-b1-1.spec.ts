@@ -50,25 +50,17 @@ test.describe('French B1.1 – grammar hints', () => {
   });
 });
 
-/** Every engine that unit 1 uses is exercised through the real UI (the Vitest playability suite plays them all). */
-const PLAYED: [engine: string, activityId: string][] = [
-  ['flashcards (housing)', 'fr-b1-1-ensemble-flash-housing'],
-  ['quiz (pictures)', 'fr-b1-1-ensemble-quiz-emoji'],
-  ['listen (housing words)', 'fr-b1-1-ensemble-listen-housing'],
-  ['flashcards (living together)', 'fr-b1-1-ensemble-flash-living'],
-  ['flashcards (phrases)', 'fr-b1-1-ensemble-flash-phrases'],
-  ['sort it (must, forbidden, allowed)', 'fr-b1-1-ensemble-sort-rules'],
-  ['gap fill (subjunctive)', 'fr-b1-1-ensemble-gap-subjunctive'],
-  ['conjugation (subjunctive forms)', 'fr-b1-1-ensemble-conj-subjunctive'],
-  ['gap fill (advice)', 'fr-b1-1-ensemble-gap-advice'],
-  ['sort it (negations)', 'fr-b1-1-ensemble-sort-negations'],
-  ['sort it (in-, im-, il-, ir-)', 'fr-b1-1-ensemble-sort-prefixes'],
-  ['sentence builder', 'fr-b1-1-ensemble-sentences'],
-  ['spell (accents)', 'fr-b1-1-ensemble-spell-housing'],
-  ['dialogue (three scenes)', 'fr-b1-1-ensemble-dialogues'],
-  ['blitz', 'fr-b1-1-ensemble-blitz'],
-  ['quiz (unit challenge)', 'fr-b1-1-ensemble-challenge'],
-];
+/**
+ * One game per engine and unit is played through the real UI (the Vitest playability suite plays every
+ * activity of the level through the real engines).
+ */
+const PLAYED: [engine: string, activityId: string][] = frB11.units.flatMap((u) => {
+  const firstOfType = new Map<string, string>();
+  for (const a of frB11.activities.filter((x) => x.unitId === u.id)) {
+    if (!firstOfType.has(a.gameType)) firstOfType.set(a.gameType, a.id);
+  }
+  return [...firstOfType].map(([type, id]) => [`${type} (${u.title})`, id] as [string, string]);
+});
 
 test.describe('French B1.1 – playing the games', () => {
   for (const [engine, id] of PLAYED) {

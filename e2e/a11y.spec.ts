@@ -43,6 +43,11 @@ const PAGES: [string, string, string][] = [
   ['unit 8 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-temps', 'Jours, heure et météo'],
   ['level B1.1 in French', '/fr/levels/fr-b1-1', 'B1.1'],
   ['unit 1 of B1.1 in French', '/fr/levels/fr-b1-1/units/fr-b1-1-ensemble', 'Vivre ensemble'],
+  [
+    'unit 2 of B1.1 in French',
+    '/fr/levels/fr-b1-1/units/fr-b1-1-souvenirs',
+    'Souvenirs de famille',
+  ],
   ['level A1.2 in French', '/fr/levels/fr-a1-2', 'A1.2'],
   ['A1.2 unit 1 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-journee', 'Ma journée'],
   ['A1.2 unit 2 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-fetes', 'Félicitations !'],

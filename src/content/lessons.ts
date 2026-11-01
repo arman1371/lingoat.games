@@ -1102,6 +1102,29 @@ export const LESSONS = {
     rule: 'The prefix in- turns a word into its opposite. It becomes im- before b, p and m, il- before l and ir- before r: inutile, impossible, illégal, irréel. The spelling follows the sound, not the meaning.',
     examples: ['utile → inutile', 'possible → impossible', 'légal → illégal'],
   },
+  'fr-b11-imparfait-pc': {
+    title: 'Imparfait or passé composé?',
+    rule: 'The imparfait describes the scene, a state or a habit (il faisait beau, j’avais dix ans, chaque été nous allions …). The passé composé tells the events that move the story on (soudain, le téléphone a sonné). Imparfait: nous stem + -ais, -ais, -ait, -ions, -iez, -aient.',
+    examples: [
+      'Il pleuvait quand je suis sorti.',
+      'Chaque été, nous allions chez mamie.',
+      'Un jour, elle est arrivée.',
+    ],
+  },
+  'fr-b11-narration': {
+    title: 'Connectors of a story',
+    rule: 'Words like autrefois, à l’époque and pendant que set the scene and take the imparfait. Un jour, soudain, tout à coup, au moment où, le lendemain and finalement mark the events and usually take the passé composé.',
+    examples: [
+      'Autrefois, on écrivait des lettres.',
+      'Je cuisinais pendant que mon frère lisait.',
+      'Soudain, quelqu’un a frappé à la porte.',
+    ],
+  },
+  'fr-b11-reflexive-agreement': {
+    title: 'Reflexive verbs in the passé composé',
+    rule: 'Pronominal verbs take être. The participle agrees with the reflexive pronoun when it is the direct object: elle s’est levée, ils se sont retrouvés. It does not agree when the pronoun is indirect (se parler, s’écrire, se téléphoner) or when a direct object follows: elle s’est lavé les mains.',
+    examples: ['Elle s’est levée tôt.', 'Ils se sont parlé.', 'Elle s’est lavé les mains.'],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',

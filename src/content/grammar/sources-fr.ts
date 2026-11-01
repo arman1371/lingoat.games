@@ -47,5 +47,7 @@ export const FR_SOURCES = {
   subjunctive: wp('Subjonctif_en_français', 'Subjonctif en français'),
   falloir: wiktionary('falloir', 'falloir'),
   conseiller: wiktionary('conseiller', 'conseiller'),
+  imparfait: wp('Imparfait', 'Imparfait'),
+  passeCompose: wp('Passé_composé', 'Passé composé'),
   prefixIn: wiktionary('in-', 'in-'),
 } as const satisfies Record<string, Source>;

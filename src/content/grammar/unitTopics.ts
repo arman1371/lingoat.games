@@ -572,4 +572,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b11-restriction' },
     { topic: 'fr-b11-negative-prefixes' },
   ],
+  'fr-b1-1-souvenirs': [
+    { topic: 'fr-b11-imparfait-pc' },
+    { topic: 'fr-b11-narration' },
+    { topic: 'fr-b11-reflexive-agreement' },
+  ],
 };

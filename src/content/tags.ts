@@ -379,6 +379,14 @@ export const TAGS = {
   'fr-adjectives': { label: 'Adjectives (grand, grande)', group: 'grammar', emoji: '📏' },
   'fr-cest-il-est': { label: 'C’est or il est?', group: 'grammar', emoji: '👉' },
   'fr-plurals': { label: 'Plurals (les, des, -s)', group: 'grammar', emoji: '👥' },
+  // grammar points – French B1.1, unit 2
+  'fr-b11-imparfait-pc': { label: 'Imparfait or passé composé?', group: 'grammar', emoji: '🎞️' },
+  'fr-b11-narration': { label: 'Connectors of a story', group: 'grammar', emoji: '📖' },
+  'fr-b11-reflexive-agreement': {
+    label: 'Agreement: elle s’est levée',
+    group: 'grammar',
+    emoji: '🪞',
+  },
   // grammar points – French A1.2, unit 1
   'fr-pronominal': { label: 'Pronominal verbs (se lever)', group: 'grammar', emoji: '🪞' },
   'fr-frequency': { label: 'toujours, souvent, ne … jamais', group: 'grammar', emoji: '🔁' },
