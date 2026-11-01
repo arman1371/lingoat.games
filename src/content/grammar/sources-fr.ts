@@ -23,6 +23,7 @@ export const FR_SOURCES = {
   jouer: conj('jouer'),
   faire: conj('faire'),
   aller: conj('aller'),
+  futurSimple: wp('Futur_simple', 'Futur simple'),
   prendre: conj('prendre'),
   vouloir: conj('vouloir'),
   boire: conj('boire'),

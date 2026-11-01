@@ -1218,6 +1218,16 @@ export const LESSONS = {
     rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
     examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
   },
+  // ---- French B1.2 -------------------------------------------------------------------------
+  'fr-futur-simple': {
+    title: 'The simple future',
+    rule: 'Take the infinitive (drop the e of -re verbs) and add -ai, -as, -a, -ons, -ez, -ont: je voyagerai, nous prendrons. About a dozen verbs have an irregular stem, but the endings never change: être → ser-, avoir → aur-, aller → ir-, faire → fer-, venir → viendr-.',
+    examples: [
+      'Nous partirons samedi matin.',
+      'Je serai à Lyon à midi.',
+      'Elle fera la réservation.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

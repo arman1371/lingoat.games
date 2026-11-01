@@ -1,13 +1,28 @@
 import { DEFAULT_LANGUAGE, type LanguageId } from './languages';
 import type { LevelMeta } from './schema';
 
+/** CEFR order of the French levels, so the home page lists them in order whatever is available. */
+const FRENCH_ORDER = [
+  'a1-1',
+  'a1-2',
+  'a2-1',
+  'a2-2',
+  'b1-1',
+  'b1-2',
+  'b2-1',
+  'b2-2',
+  'c1-1',
+  'c1-2',
+  'c2-1',
+  'c2-2',
+].map((id) => `fr-${id}`);
+
 /** French is on its way: A1.1 is the pilot, the other CEFR half-levels are listed without content. */
 const FRENCH_COMING_SOON: LevelMeta[] = [
   ['a1-2', 'A1.2', 'Breakthrough, second half'],
   ['a2-1', 'A2.1', 'Waystage, first half'],
   ['a2-2', 'A2.2', 'Waystage, second half'],
   ['b1-1', 'B1.1', 'Threshold, first half'],
-  ['b1-2', 'B1.2', 'Threshold, second half'],
   ['b2-1', 'B2.1', 'Vantage, first half'],
   ['b2-2', 'B2.2', 'Vantage, second half'],
   ['c1-1', 'C1.1', 'Effective proficiency, first half'],
@@ -32,8 +47,18 @@ const FRENCH_LEVELS: LevelMeta[] = [
     status: 'available',
     load: () => import('./fr-a1-1'),
   },
+  {
+    language: 'fr',
+    id: 'fr-b1-2',
+    title: 'B1.2',
+    subtitle:
+      'Travel, hypotheses and regrets, the environment, city life, reported speech, studies, sport and culture',
+    status: 'available',
+    load: () => import('./fr-b1-2'),
+  },
   ...FRENCH_COMING_SOON,
 ];
+FRENCH_LEVELS.sort((a, b) => FRENCH_ORDER.indexOf(a.id) - FRENCH_ORDER.indexOf(b.id));
 
 /**
  * Level catalogue. To add a level: create `src/content/<level-id>/index.ts` that default-exports a

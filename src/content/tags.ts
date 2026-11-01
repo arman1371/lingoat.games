@@ -391,6 +391,8 @@ export const TAGS = {
   'fr-demonstratives': { label: 'ce, cet, cette, ces', group: 'grammar', emoji: '👉' },
   'fr-futur-proche': { label: 'aller + infinitive', group: 'grammar', emoji: '🔮' },
   'fr-adjective-position': { label: 'un petit pull rouge', group: 'grammar', emoji: '↔️' },
+  // grammar points – French B1.2
+  'fr-futur-simple': { label: 'The simple future', group: 'grammar', emoji: '🗓️' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

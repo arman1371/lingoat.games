@@ -246,3 +246,16 @@ generated forms in `src/lib/french`.
   the factual vs. hypothetical split of obwohl / auch wenn / selbst wenn, the Plusquamperfekt after als in comparisons,
   and the plural -keit / -heit / -ung gender rule. Wiktionary pages state the case and meaning of each connector, not
   its word order, so the verb position of connectors comes from the example sentences and from general German grammar.
+
+## French B1.2
+
+The French B1.2 lessons are in `src/content/grammar/fr-b1-2.ts`, the pages in `sources-fr.ts`. Forms in the tables come
+from `src/lib/french/future.ts`. Not reviewed by a native speaker.
+
+| Topic             | Pages read                                                                                                                                                                  |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The simple future | [Futur simple](https://fr.wikipedia.org/wiki/Futur_simple) (first 100 000 characters), Wiktionnaire [aller](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/aller) |
+
+**French B1.2 limits:** the Wikipedia page does not state the future after quand / dès que (it only describes the futur
+d'anticipation) or the spelling of payer. The quand + future tip and paierai / payerai follow common textbook teaching and
+are not checked against a fetched page.
