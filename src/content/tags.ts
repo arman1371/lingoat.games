@@ -387,6 +387,10 @@ export const TAGS = {
   'fr-c12-health': { label: 'Health & medicine', group: 'topic', emoji: '🩺' },
   'fr-c12-recit-passe': { label: 'Past tenses of a story', group: 'grammar', emoji: '📖' },
   'fr-c12-passe-simple': { label: 'Passé simple', group: 'grammar', emoji: '🏰' },
+  // unit 5
+  'fr-c12-solidarity': { label: 'Solidarity & volunteering', group: 'topic', emoji: '🤝' },
+  'fr-c12-modalisation': { label: 'Modalisation', group: 'grammar', emoji: '🎚️' },
+  'fr-c12-subjonctif-present': { label: 'Present subjunctive', group: 'grammar', emoji: '🟣' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },

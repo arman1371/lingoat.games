@@ -191,3 +191,76 @@ export function vocabBlock(
     ),
   ];
 }
+
+// ---- shorter ways to declare the activities of a unit ------------------------------------------
+
+type GameType = Activity['gameType'];
+type Pronoun = ConfigOf<'conjugation'>['tables'][number]['blanks'][number];
+
+/** An activity in one call: `act(U, 'key', 'quiz', 'Title', 'Description', ['tag'], 2, config)`. */
+export const act = <T extends GameType>(
+  U: string,
+  key: string,
+  type: T,
+  title: string,
+  description: string,
+  tags: TagId[],
+  difficulty: 1 | 2 | 3,
+  config: ConfigOf<T>,
+  estMinutes = 4,
+): Activity => activity(U, key, type, { title, description, tags, difficulty, estMinutes }, config);
+
+/** Quiz of French definitions: `[definition, answer, wrong options]` rows. */
+export const definitions = (rows: readonly (readonly [string, string, string[]])[]) => ({
+  questions: rows.map(([prompt, answer, wrong], i) => q(`d${i + 1}`, prompt, answer, wrong)),
+});
+
+/** A sentence-builder item from a plain sentence: words are split on spaces. */
+export const sent = (id: string, sentence: string, translation: string, lesson?: LessonId) => ({
+  id,
+  translation,
+  words: sentence.split(' '),
+  ...(lesson ? { lesson } : {}),
+});
+
+/** A conjugation table: `forms` in the order je, tu, il/elle/on, nous, vous, ils/elles. */
+export const conj = (
+  id: string,
+  meaning: string,
+  forms: readonly [string, string, string, string, string, string],
+  lesson: LessonId,
+  blanks: readonly Pronoun[] = ['il/elle/on', 'ils/elles'],
+) => ({
+  id,
+  verb: id,
+  meaning,
+  forms: {
+    je: forms[0],
+    tu: forms[1],
+    'il/elle/on': forms[2],
+    nous: forms[3],
+    vous: forms[4],
+    'ils/elles': forms[5],
+  },
+  blanks: [...blanks],
+  lesson,
+});
+
+/** The final "Unit challenge" quiz. */
+export const challenge = (
+  U: string,
+  tags: TagId[],
+  questions: ConfigOf<'quiz'>['questions'],
+  description = 'Words and grammar in one final quiz.',
+): Activity =>
+  act(U, 'challenge', 'quiz', 'Unit challenge', description, tags, 3, { questions }, 5);
+
+/** A 60-second true/false blitz. */
+export const blitz = (
+  U: string,
+  title: string,
+  description: string,
+  tags: TagId[],
+  statements: ConfigOf<'blitz'>['statements'],
+): Activity =>
+  act(U, 'blitz', 'blitz', title, description, tags, 3, { seconds: 60, statements }, 3);

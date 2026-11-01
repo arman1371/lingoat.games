@@ -1142,6 +1142,24 @@ export const LESSONS = {
       'Napoléon naquit en 1769. · Louis XIV mourut en 1715.',
     ],
   },
+  'fr-c12-modalisation': {
+    title: 'Modalisation: how sure are you?',
+    rule: 'Modalisation shows how sure the speaker is. Certainty: il est évident / certain que, sans aucun doute, assurément (indicative). Possibility: peut-être que, apparemment (indicative); il se peut que (subjunctive). Doubt: je doute que, il est douteux que, je ne suis pas sûr que (subjunctive).',
+    examples: [
+      'Il est évident que l’aide arrivera.',
+      'Il se peut que nous manquions de bénévoles.',
+      'Je doute que cela suffise.',
+    ],
+  },
+  'fr-c12-subjonctif-present': {
+    title: 'The present subjunctive',
+    rule: 'After que, take the ils form of the present, drop -ent and add -e, -es, -e, -ions, -iez, -ent: que je parle, que nous parlions. Être, avoir, aller, faire and pouvoir are irregular. It follows wishes, necessity, feelings and doubt (vouloir que, il faut que, douter que) and conjunctions like bien que and pour que.',
+    examples: [
+      'Il faut que nous aidions les réfugiés.',
+      'Bien qu’il soit fatigué, il reste.',
+      'Je veux qu’elle vienne.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',

@@ -348,4 +348,119 @@ export const FRC12_TOPICS_B: GrammarTopic[] = [
     related: ['fr-c12-recit-passe'],
     sources: [S.passeSimple],
   },
+  {
+    id: 'fr-c12-modalisation',
+    title: 'Modalisation: how sure are you?',
+    tagline: 'Show certainty, possibility or doubt',
+    level: LEVEL,
+    summary:
+      'Modalisation shows how far the speaker stands behind what they say. Choose an expression of certainty, possibility or doubt, and remember which mood follows it: indicative or subjunctive.',
+    sections: [
+      section(
+        'scale',
+        'From certain to doubtful',
+        table(
+          'Expressions by degree of certainty.',
+          ['Degree', 'Expressions', 'Mood'],
+          [
+            [
+              'Certainty',
+              'il est évident / certain / clair que, sans aucun doute, assurément',
+              'indicative',
+            ],
+            ['Probability', 'il est probable que, apparemment, sans doute', 'indicative'],
+            [
+              'Possibility',
+              'peut-être que, il se peut que, il est possible que',
+              'peut-être que + indicative; il se peut / il est possible que + subjunctive',
+            ],
+            ['Doubt', 'je doute que, il est douteux que, je ne suis pas sûr que', 'subjunctive'],
+          ],
+        ),
+        examples(
+          ['Il est évident que la pauvreté recule.', 'It is obvious that poverty is falling.'],
+          ['Il se peut que nous manquions de bénévoles.', 'We may run short of volunteers.'],
+          ['Je doute que cela suffise.', 'I doubt that this will be enough.'],
+        ),
+      ),
+      section(
+        'distance',
+        'Taking your distance',
+        p(
+          'To report a claim without taking responsibility for it, use **selon**, **d’après**, **apparemment**, **il paraît que** or the conditional: *Selon l’ONG, les réfugiés seraient plus nombreux.* The conditional of journalism says: “I report it, I cannot confirm it.”',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je doute qu’il viendra.  ✓ Je doute qu’il vienne.',
+          '✗ Il est évident qu’il soit là.  ✓ Il est évident qu’il est là.',
+        ),
+        tip(
+          'Rule of thumb',
+          'The more certain you are, the more likely the indicative: certainty → indicative, doubt → subjunctive. “Peut-être que” is the exception to remember: it takes the indicative.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-subjonctif-present'],
+    sources: [S.subjonctif, S.conditionnel],
+  },
+  {
+    id: 'fr-c12-subjonctif-present',
+    title: 'The present subjunctive',
+    tagline: 'The mood of wishes, duty and doubt',
+    level: LEVEL,
+    summary:
+      'The present subjunctive is used after que when the speaker expresses a wish, a necessity, a feeling or a doubt. Regular verbs build it from the ils form; a handful of verbs are irregular.',
+    sections: [
+      section(
+        'forms',
+        'Forms',
+        p(
+          'Take the **ils / elles** form of the present, drop **-ent**, and add **-e, -es, -e, -ions, -iez, -ent**: *ils parlent → que je parle, que nous parlions*; *ils finissent → que je finisse*. Nous and vous look like the imparfait.',
+        ),
+        table(
+          'Irregular subjunctives.',
+          ['Verb', 'que je …', 'que nous …', 'qu’ils …'],
+          [
+            ['être', 'sois', 'soyons', 'soient'],
+            ['avoir', 'aie', 'ayons', 'aient'],
+            ['aller', 'aille', 'allions', 'aillent'],
+            ['faire', 'fasse', 'fassions', 'fassent'],
+            ['pouvoir', 'puisse', 'puissions', 'puissent'],
+            ['savoir', 'sache', 'sachions', 'sachent'],
+          ],
+        ),
+      ),
+      section(
+        'triggers',
+        'When to use it',
+        table(
+          'Common triggers.',
+          ['Meaning', 'Examples'],
+          [
+            ['Wish, will', 'vouloir que, souhaiter que, préférer que'],
+            ['Necessity', 'il faut que, il est important que, il est nécessaire que'],
+            ['Feeling', 'être content que, regretter que, avoir peur que'],
+            ['Doubt', 'douter que, ne pas penser que, il est douteux que'],
+            ['Conjunctions', 'bien que, pour que, avant que, à moins que, jusqu’à ce que'],
+          ],
+        ),
+        examples(
+          ['Il faut que nous aidions les réfugiés.', 'We must help the refugees.'],
+          ['Je veux qu’elle vienne.', 'I want her to come.'],
+          ['Bien qu’il soit fatigué, il reste.', 'Although he is tired, he stays.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je pense qu’il vienne.  ✓ Je pense qu’il vient.  (affirmative penser → indicative)',
+          '✗ Je ne pense pas qu’il vient.  ✓ Je ne pense pas qu’il vienne.  (negative → subjunctive)',
+        ),
+        tip(
+          'Same subject?',
+          'When the subject does not change, use the infinitive instead: *Je veux partir.* but *Je veux que tu partes.* Avoid the subjunctive when there is only one person involved.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-modalisation'],
+    sources: [S.subjonctif],
+  },
 ];
