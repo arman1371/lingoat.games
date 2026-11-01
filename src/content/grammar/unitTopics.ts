@@ -546,6 +546,18 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-frequency' },
     { topic: 'fr-sequence', note: 'à, vers, de … à …' },
   ],
+  'fr-a1-2-fetes': [
+    { topic: 'fr-passe-compose-avoir' },
+    { topic: 'fr-time-markers' },
+    { topic: 'fr-adjectives', note: 'looks and character' },
+  ],
+  // ---- French A2.1 ----------------------------------------------------------------------------
+  'fr-a2-1-parcours': [
+    { topic: 'fr-a21-passe-compose', note: 'naître, aller, se marier' },
+    { topic: 'fr-a21-participles' },
+    { topic: 'fr-a21-negatives', note: 'rien, personne, plus, pas encore' },
+    { topic: 'fr-a21-time-markers', note: 'pendant, depuis, en' },
+  ],
   // ---- French A2.2 ----------------------------------------------------------------------------
   'fr-a2-2-sante': [
     { topic: 'fr-object-pronouns', note: 'le, la, les, lui, leur' },

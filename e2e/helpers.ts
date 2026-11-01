@@ -14,6 +14,7 @@ import c21 from '../src/content/c2-1';
 import c22 from '../src/content/c2-2';
 import fr11 from '../src/content/fr-a1-1';
 import fr12 from '../src/content/fr-a1-2';
+import fr21 from '../src/content/fr-a2-1';
 import fr22 from '../src/content/fr-a2-2';
 import { LANGUAGES, pathInLanguage, type LanguageId } from '../src/content/languages';
 import type { Activity, Vocab } from '../src/content/schema';
@@ -44,6 +45,7 @@ export const allActivities: Activity[] = [
 export const frenchActivities: Activity[] = [
   ...fr11.activities,
   ...fr12.activities,
+  ...fr21.activities,
   ...fr22.activities,
 ];
 

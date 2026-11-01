@@ -1,7 +1,9 @@
 import { reflexiveFr } from '@/lib/french/conjugation';
+import { passeComposeAvoir } from '@/lib/french/passeCompose';
 import { FRENCH_PRONOUNS } from '@/lib/persons';
 import { examples, mistake, p, section, table, tip } from './build';
 import type { GrammarTopic } from './schema';
+import { FR_SOURCES as FR } from './sources-fr';
 import { FR12_SOURCES as S } from './sources-fr-a1-2';
 
 const LEVEL = 'fr-a1-2';
@@ -16,7 +18,17 @@ const reflexiveTable = (caption: string, verbs: readonly string[]) => {
   );
 };
 
-/** French A1.2, unit 1: the daily routine. */
+/** A table of passé composé forms with avoir, one column per verb: [infinitive, participle]. */
+const pcTable = (caption: string, verbs: readonly (readonly [string, string])[]) => {
+  const all = verbs.map(([, participle]) => passeComposeAvoir(participle));
+  return table(
+    caption,
+    ['Person', ...verbs.map(([v]) => v)],
+    FRENCH_PRONOUNS.map((pr) => [pr, ...all.map((f) => f[pr])]),
+  );
+};
+
+/** French A1.2, units 1 and 2: the daily routine, family events and descriptions. */
 export const FR12_TOPICS: GrammarTopic[] = [
   {
     id: 'fr-pronominal',
@@ -165,5 +177,110 @@ export const FR12_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-frequency', 'fr-pronominal'],
     sources: [S.dAbord, S.vers],
+  },
+  {
+    id: 'fr-passe-compose-avoir',
+    title: 'The passé composé with avoir',
+    tagline: 'How do I say what happened?',
+    level: LEVEL,
+    summary:
+      'The passé composé is avoir in the present plus a past participle: j’ai mangé, nous avons fini. Regular participles end in -é (-er verbs), -i (-ir verbs) and -u (-re verbs); some are irregular. Ne … pas wraps avoir.',
+    sections: [
+      section(
+        'form',
+        'Avoir + past participle',
+        p(
+          'The **passé composé** talks about finished events. It has two parts: the present of **avoir** and the **past participle** of the verb. The participle does not change after avoir.',
+        ),
+        pcTable('The passé composé of manger, finir and attendre.', [
+          ['manger', 'mangé'],
+          ['finir', 'fini'],
+          ['attendre', 'attendu'],
+        ]),
+        tip(
+          'Form the participle',
+          '-er verbs: -é (parler → parlé).',
+          '-ir verbs: -i (finir → fini).',
+          '-re verbs: -u (attendre → attendu).',
+        ),
+      ),
+      section(
+        'irregular',
+        'Irregular participles and the negative',
+        table(
+          'Common irregular participles.',
+          ['Infinitive', 'Participle', 'Example'],
+          [
+            ['avoir', 'eu', 'Ils ont eu un bébé.'],
+            ['être', 'été', 'J’ai été malade.'],
+            ['faire', 'fait', 'Qu’est-ce que tu as fait ?'],
+            ['prendre', 'pris', 'Elle a pris un café.'],
+            ['offrir', 'offert', 'Nous avons offert un cadeau.'],
+          ],
+        ),
+        p(
+          'In the negative **ne … pas** goes around **avoir**, not around the participle: *Je n’ai pas mangé.*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ J’ai mange.  ✓ J’ai mangé.',
+          '✗ J’ai manger.  ✓ J’ai mangé.',
+          '✗ Je ne pas ai mangé.  ✓ Je n’ai pas mangé.',
+        ),
+        examples(
+          ['Hier soir, j’ai regardé un film.', 'Last night I watched a film.'],
+          ['Nous n’avons pas fini.', 'We have not finished.'],
+        ),
+      ),
+    ],
+    related: ['fr-etre-avoir', 'fr-negation', 'fr-time-markers'],
+    sources: [S.passeCompose, S.manger, FR.finir, S.attendre, FR.faire, FR.prendre],
+  },
+  {
+    id: 'fr-time-markers',
+    title: 'Past and future time markers',
+    tagline: 'Last week, next month, two days ago, in two days',
+    level: LEVEL,
+    summary:
+      'Look back with hier, avant-hier and il y a + a length of time. Look ahead with demain, après-demain and dans + a length of time. Dernier and prochain follow the noun and agree with it.',
+    sections: [
+      section(
+        'markers',
+        'Looking back and looking ahead',
+        table(
+          'Time markers by direction.',
+          ['Looking back (passé composé)', 'Looking ahead (aller + infinitive)'],
+          [
+            ['hier, hier soir, hier matin', 'demain, demain soir'],
+            ['avant-hier', 'après-demain'],
+            ['il y a deux jours', 'dans deux jours'],
+            ['la semaine dernière', 'la semaine prochaine'],
+            ['le mois dernier, l’année dernière', 'le mois prochain, l’année prochaine'],
+          ],
+        ),
+        p(
+          '**Il y a** + a length of time means *ago*; **dans** + a length of time means *in*. They are never interchangeable.',
+        ),
+      ),
+      section(
+        'dernier',
+        'dernier and prochain',
+        p(
+          'With time nouns **dernier** (last) and **prochain** (next) go after the noun and agree with it: *la semaine dernière* (feminine), *le mois prochain* (masculine), *samedi dernier*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Mon cousin arrive il y a deux jours.  ✓ Mon cousin arrive dans deux jours.',
+          '✗ l’année dernier.  ✓ l’année dernière.',
+          '✗ Samedi dernier, je vais faire une fête.  ✓ Samedi prochain, je vais faire une fête.',
+        ),
+        examples(
+          ['Ma nièce a téléphoné la semaine dernière.', 'My niece called last week.'],
+          ['Mon cousin arrive dans deux jours.', 'My cousin arrives in two days.'],
+        ),
+      ),
+    ],
+    related: ['fr-passe-compose-avoir', 'fr-futur-proche'],
+    sources: [S.ilYA, S.dernier, S.prochain],
   },
 ];
