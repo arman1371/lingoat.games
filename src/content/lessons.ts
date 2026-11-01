@@ -1237,6 +1237,15 @@ export const LESSONS = {
       'La pièce qu’il a fait jouer. → faire + infinitive: invariable',
     ],
   },
+  'fr-c22-passif': {
+    title: 'The passive and its alternatives',
+    rule: 'The passive is être + past participle, and the participle agrees with the subject (le film a été primé par un jury). Avoid it with on + active verb, a pronominal verb (les billets se vendent) or se faire + infinitive (il s’est fait applaudir); faire never agrees.',
+    examples: [
+      'Le film a été primé par un jury. → passive',
+      'Les billets se vendent en ligne. → pronominal passive',
+      'Il s’est fait applaudir. → se faire + infinitive',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

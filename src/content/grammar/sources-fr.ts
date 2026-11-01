@@ -49,6 +49,7 @@ export const FR_SOURCES = {
   gerund: wp('Gérondif', 'Gérondif'),
   adjectifVerbal: wp('Adjectif_verbal', 'Adjectif verbal'),
   fatigant: wiktionary('fatigant', 'fatigant'),
+  passive: wp('Voix_passive', 'Voix passive'),
   pastParticipleAgreement: wp(
     'Accord_du_participe_passé_en_français',
     'Accord du participe passé en français',

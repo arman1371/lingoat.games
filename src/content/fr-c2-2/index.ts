@@ -1,8 +1,9 @@
 import type { LevelContent } from '../schema';
 import { arts } from './u1-arts';
 import { litterature } from './u2-litterature';
+import { cinema } from './u3-cinema';
 
-const units = [arts, litterature];
+const units = [arts, litterature, cinema];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

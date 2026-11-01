@@ -404,6 +404,8 @@ export const TAGS = {
     emoji: '✅',
   },
   'fr-c22-litterature': { label: 'Books & theatre (French C2)', group: 'topic', emoji: '📚' },
+  'fr-c22-passif': { label: 'The passive and its alternatives', group: 'grammar', emoji: '🔄' },
+  'fr-c22-cinema': { label: 'Film & live shows (French C2)', group: 'topic', emoji: '🎬' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

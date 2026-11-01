@@ -249,8 +249,14 @@ generated forms in `src/lib/french`.
 
 ## French C2.2
 
-- Participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`): fr.wikipedia.org *Participe présent*,
-  *Gérondif*, *Adjectif verbal* and fr.wiktionary.org *fatigant* were read. The pages give the formation, the
+- Participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`): fr.wikipedia.org _Participe présent_,
+  _Gérondif_, _Adjectif verbal_ and fr.wiktionary.org _fatigant_ were read. The pages give the formation, the
   invariability of the participle and the gérondif, the agreement of the adjectif verbal and the spelling alternations
   -guant/-gant, -quant/-cant, -ant/-ent; they do not mention the pairs provoquant/provocant, différant/différent and
   négligeant/négligent, which follow the same pattern but are not checked against a fetched page.
+- Past participle agreement (`fr-c22-accord-participe`): fr.wikipedia.org _Accord du participe passé en français_
+  was read for être/avoir, reflexive verbs, participle + infinitive, en, the neutral le and verbs of measure. The page
+  does not cover collective subjects. The remark on se voir + infinitive is textbook teaching.
+- The passive (`fr-c22-passif`): fr.wikipedia.org _Voix passive_ was read for the formation, the agent with par, the
+  restriction to transitive verbs, on and the impersonal passive. It does not cover the pronominal passive, se faire /
+  se voir + infinitive or the choice between par and de (the lesson follows textbook teaching).

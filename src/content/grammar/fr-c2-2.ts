@@ -190,4 +190,75 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-c22-participe-present'],
     sources: [S.pastParticipleAgreement],
   },
+  {
+    id: 'fr-c22-passif',
+    title: 'The passive and its alternatives',
+    tagline: 'Who does what, and who do we leave out?',
+    level: LEVEL,
+    summary:
+      'The passive is être + past participle, and the participle agrees with the subject. The agent comes after par (or de). French often prefers on + active verb, a pronominal verb (se vendre) or se faire + infinitive.',
+    sections: [
+      section(
+        'form',
+        'Building the passive',
+        p(
+          'Only verbs with a direct object have a passive. The object becomes the subject, **être** takes the tense of the active verb, and the participle agrees with the new subject.',
+        ),
+        table(
+          'Active and passive in several tenses.',
+          ['Tense', 'Active', 'Passive'],
+          [
+            ['présent', 'Le jury prime le film.', 'Le film est primé par le jury.'],
+            ['passé composé', 'Le jury a primé le film.', 'Le film a été primé par le jury.'],
+            [
+              'futur',
+              'Un critique présentera les films.',
+              'Les films seront présentés par un critique.',
+            ],
+            ['imparfait', 'On doublait les films.', 'Les films étaient doublés.'],
+          ],
+          1,
+        ),
+        p(
+          'The agent is introduced by **par** for a concrete action (*primé par un jury*) and by **de** with feelings or description (*aimé de tous, couvert de gloire*). It is often left out: *Le voleur a été arrêté.*',
+        ),
+      ),
+      section(
+        'alternatives',
+        'Avoiding the passive',
+        p(
+          'French uses the passive less than English. Four common alternatives keep the agent out of sight or put the focus where you want it.',
+        ),
+        table(
+          'Ways to avoid the passive.',
+          ['Way', 'Example', 'Use'],
+          [
+            ['on + active verb', 'On a projeté trois courts-métrages.', 'unnamed, general agent'],
+            ['pronominal passive', 'Les billets se vendent vite.', 'a general fact about things'],
+            [
+              'se faire + infinitive',
+              'Il s’est fait applaudir.',
+              'a person who undergoes something',
+            ],
+            [
+              'impersonal passive',
+              'Il a été décidé de prolonger le festival.',
+              'formal, administrative',
+            ],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Le film a été tournée à Marseille.  ✓ Le film a été tourné à Marseille.',
+          '✗ Il s’est fait applaudi.  ✓ Il s’est fait applaudir. (the infinitive follows, and faire does not agree)',
+        ),
+        tip(
+          'se voir + infinitive',
+          'Se voir is used for something received: *Le film se voit décerner un prix.* It is formal and fits news writing.',
+        ),
+      ),
+    ],
+    related: ['fr-c22-accord-participe'],
+    sources: [S.passive],
+  },
 ];
