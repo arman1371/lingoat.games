@@ -267,3 +267,8 @@ generated forms in `src/lib/french`.
 - Negation (`fr-c22-negation`): fr.wikipedia.org _Négation en français_ was read for ne … que, ni … ni, the negative
   pronouns as subjects, ne without pas, the ne explétif and pas de after a negation. The page does not give a full list
   of verbs that allow ne alone; the examples (pouvoir, savoir, cesser, oser) follow textbook teaching.
+- Reserve and distance (`fr-c22-modalisation`): fr.wikipedia.org _Conditionnel en français_ was read (first 100,000 of
+  about 110,000 characters) for the value “information incertaine” (conditionnel journalistique), its alternative names
+  and the other uses of the conditional. The term “conditionnel de réserve” does not appear on the page, and the page
+  calls the analysis of this value disputed. The distance markers (selon, d’après, soi-disant, prétendument) and the
+  subjunctive after il semblerait que follow textbook teaching.

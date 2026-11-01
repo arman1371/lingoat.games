@@ -4,8 +4,9 @@ import { litterature } from './u2-litterature';
 import { cinema } from './u3-cinema';
 import { patrimoine } from './u4-patrimoine';
 import { droit } from './u5-droit';
+import { medias } from './u6-medias';
 
-const units = [arts, litterature, cinema, patrimoine, droit];
+const units = [arts, litterature, cinema, patrimoine, droit, medias];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

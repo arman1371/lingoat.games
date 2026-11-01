@@ -413,4 +413,77 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-c22-relatives'],
     sources: [S.negation],
   },
+  {
+    id: 'fr-c22-modalisation',
+    title: 'Reserve: conditional and distance markers',
+    tagline: 'Reporting news without vouching for it',
+    level: LEVEL,
+    summary:
+      'The conditional of reserve (conditionnel journalistique) presents a piece of information as unconfirmed. Source and distance markers (selon, d’après, soi-disant, prétendument, il semblerait que) work in the same direction. A confirmed fact stays in the indicative.',
+    sections: [
+      section(
+        'conditionnel',
+        'The conditional of reserve',
+        p(
+          'The press uses the conditional to report information it cannot guarantee: *Le ministre aurait démissionné.* The speaker does not take responsibility for the claim. Linguists give the value several names (conditionnel journalistique, d’emprunt, de rumeur) and disagree on how to analyse it; for learners the effect is what matters: **doubt or distance**.',
+        ),
+        table(
+          'Same news, two degrees of certainty.',
+          ['Confirmed (indicative)', 'Unconfirmed (conditional)'],
+          [
+            ['Le ministre a démissionné.', 'Le ministre aurait démissionné.'],
+            ['Il y a dix blessés.', 'Il y aurait dix blessés.'],
+            ['L’accord est signé.', 'L’accord serait signé.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Si vous auriez le temps…  ✓ Si vous aviez le temps…',
+          'The conditional of reserve is for reports. It never follows si in a condition.',
+        ),
+      ),
+      section(
+        'distance',
+        'Naming the source and marking doubt',
+        p(
+          'A named source can be added with **selon**, **d’après** or **à en croire**: *Selon la police, le suspect serait en fuite.* Adverbs and adjectives mark the speaker’s distance: **soi-disant**, **prétendument**, **prétendu**, **apparemment**. The expression **il semblerait que** is cautious and is followed by the subjunctive: *Il semblerait que le chiffre soit exagéré.*',
+        ),
+        examples(
+          ['Selon un témoin, il était seul.', 'According to a witness, he was alone.'],
+          ['Cette soi-disant exclusivité était fausse.', 'This so-called exclusive was false.'],
+          ['Il semblerait que le journal ait menti.', 'It seems that the paper lied.'],
+        ),
+      ),
+      section(
+        'choisir',
+        'Choosing the right degree',
+        p(
+          'Before writing, ask how sure you are: if an official source confirmed the fact, use the indicative; if you only have a rumour or a single source, use the conditional or a distance marker.',
+        ),
+        compare(
+          {
+            title: 'Indicative',
+            question: 'Is the fact confirmed?',
+            example: 'L’Élysée a confirmé la démission.',
+          },
+          {
+            title: 'Conditional',
+            question: 'Is it only reported?',
+            example: 'Le ministre aurait démissionné.',
+          },
+          {
+            title: 'Distance marker',
+            question: 'Do you doubt the claim?',
+            example: 'Le prétendu scandale n’existe pas.',
+          },
+        ),
+        tip(
+          'Quick test',
+          'Add “paraît-il” in your head: if the sentence still sounds right, the conditional of reserve fits.',
+        ),
+      ),
+    ],
+    related: ['fr-c22-passif'],
+    sources: [S.conditional],
+  },
 ];

@@ -1264,6 +1264,15 @@ export const LESSONS = {
       'Personne n’a parlé. → negative pronoun as subject',
     ],
   },
+  'fr-c22-modalisation': {
+    title: 'Reserve: conditional and distance markers',
+    rule: 'The conditional of reserve (conditionnel journalistique) presents news as unconfirmed: le ministre aurait démissionné. A confirmed fact takes the indicative. Distance is also shown by selon / d’après, soi-disant, prétendument and il semblerait que + subjunctive. Never put the conditional after si.',
+    examples: [
+      'Le ministre aurait démissionné. → unconfirmed',
+      'D’après un témoin, il était seul. → named source',
+      'Il semblerait que le journal ait menti. → caution',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

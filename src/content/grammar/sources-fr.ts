@@ -52,6 +52,7 @@ export const FR_SOURCES = {
   relativePronoun: wp('Pronom_relatif', 'Pronom relatif'),
   dont: wiktionary('dont', 'dont'),
   lequel: wiktionary('lequel', 'lequel'),
+  conditional: wp('Conditionnel_en_français', 'Conditionnel en français'),
   passive: wp('Voix_passive', 'Voix passive'),
   pastParticipleAgreement: wp(
     'Accord_du_participe_passé_en_français',
