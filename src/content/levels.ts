@@ -1,27 +1,16 @@
 import { DEFAULT_LANGUAGE, type LanguageId } from './languages';
 import type { LevelMeta } from './schema';
 
-/** French is on its way: A1.1 is the pilot, the other CEFR half-levels are listed without content. */
-const FRENCH_COMING_SOON: LevelMeta[] = [
-  ['a1-2', 'A1.2', 'Breakthrough, second half'],
-  ['a2-1', 'A2.1', 'Waystage, first half'],
-  ['a2-2', 'A2.2', 'Waystage, second half'],
-  ['b1-1', 'B1.1', 'Threshold, first half'],
-  ['b1-2', 'B1.2', 'Threshold, second half'],
-  ['b2-1', 'B2.1', 'Vantage, first half'],
-  ['b2-2', 'B2.2', 'Vantage, second half'],
-  ['c1-1', 'C1.1', 'Effective proficiency, first half'],
-  ['c1-2', 'C1.2', 'Effective proficiency, second half'],
-  ['c2-1', 'C2.1', 'Mastery, first half'],
-  ['c2-2', 'C2.2', 'Mastery, second half'],
-].map(([id, title, subtitle]) => ({
+/** A French level without content yet: listed on the French home page as "coming soon". */
+const frenchSoon = (id: string, title: string, subtitle: string): LevelMeta => ({
   language: 'fr',
   id: `fr-${id}`,
-  title: title!,
-  subtitle: subtitle!,
+  title,
+  subtitle,
   status: 'coming-soon',
-}));
+});
 
+/** French is on its way: A1.1 was the pilot, the other CEFR half-levels are filled in one by one. */
 const FRENCH_LEVELS: LevelMeta[] = [
   {
     language: 'fr',
@@ -32,7 +21,25 @@ const FRENCH_LEVELS: LevelMeta[] = [
     status: 'available',
     load: () => import('./fr-a1-1'),
   },
-  ...FRENCH_COMING_SOON,
+  frenchSoon('a1-2', 'A1.2', 'Breakthrough, second half'),
+  frenchSoon('a2-1', 'A2.1', 'Waystage, first half'),
+  {
+    language: 'fr',
+    id: 'fr-a2-2',
+    title: 'A2.2',
+    subtitle:
+      'Health, media, responsible shopping, travel, studies and work, and nature, with pronouns, the subjunctive and the conditional',
+    status: 'available',
+    load: () => import('./fr-a2-2'),
+  },
+  frenchSoon('b1-1', 'B1.1', 'Threshold, first half'),
+  frenchSoon('b1-2', 'B1.2', 'Threshold, second half'),
+  frenchSoon('b2-1', 'B2.1', 'Vantage, first half'),
+  frenchSoon('b2-2', 'B2.2', 'Vantage, second half'),
+  frenchSoon('c1-1', 'C1.1', 'Effective proficiency, first half'),
+  frenchSoon('c1-2', 'C1.2', 'Effective proficiency, second half'),
+  frenchSoon('c2-1', 'C2.1', 'Mastery, first half'),
+  frenchSoon('c2-2', 'C2.2', 'Mastery, second half'),
 ];
 
 /**

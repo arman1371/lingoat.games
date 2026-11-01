@@ -540,4 +540,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-futur-proche' },
     { topic: 'fr-adjective-position' },
   ],
+  // ---- French A2.2 ----------------------------------------------------------------------------
+  'fr-a2-2-sante': [
+    { topic: 'fr-object-pronouns', note: 'le, la, les, lui, leur' },
+    { topic: 'fr-superlative' },
+    { topic: 'fr-interrogative-pronouns' },
+  ],
 };

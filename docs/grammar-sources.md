@@ -246,3 +246,13 @@ generated forms in `src/lib/french`.
   the factual vs. hypothetical split of obwohl / auch wenn / selbst wenn, the Plusquamperfekt after als in comparisons,
   and the plural -keit / -heit / -ung gender rule. Wiktionary pages state the case and meaning of each connector, not
   its word order, so the verb position of connectors comes from the example sentences and from general German grammar.
+
+## French A2.2
+
+The lessons are in `src/content/grammar/fr-a2-2.ts`, the pages in `sources-fr-a2-2.ts`.
+
+| Topic                                   | Pages read                                                                                                                                                                                                                                                   |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Object pronouns: le, la, les, lui, leur | [Complément d'objet direct](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_d'objet_direct), [Complément d'objet indirect](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_d'objet_indirect), [Pronom personnel](https://fr.wikipedia.org/wiki/Pronom_personnel) |
+| The superlative: le plus, le meilleur   | [Degré de comparaison](https://fr.wikipedia.org/wiki/Degr%C3%A9_de_comparaison) (section "En français")                                                                                                                                                      |
+| Qui, que, quoi, lequel                  | [Pronom interrogatif](https://fr.wikipedia.org/wiki/Pronom_interrogatif) (section "En français")                                                                                                                                                             |

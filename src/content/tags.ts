@@ -391,6 +391,10 @@ export const TAGS = {
   'fr-demonstratives': { label: 'ce, cet, cette, ces', group: 'grammar', emoji: '👉' },
   'fr-futur-proche': { label: 'aller + infinitive', group: 'grammar', emoji: '🔮' },
   'fr-adjective-position': { label: 'un petit pull rouge', group: 'grammar', emoji: '↔️' },
+  // grammar points – French A2.2, unit 1
+  'fr-object-pronouns': { label: 'le, la, les, lui, leur', group: 'grammar', emoji: '🎯' },
+  'fr-superlative': { label: 'le plus, le meilleur', group: 'grammar', emoji: '🥇' },
+  'fr-interrogative-pronouns': { label: 'qui, que, quoi, lequel', group: 'grammar', emoji: '🔎' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;
