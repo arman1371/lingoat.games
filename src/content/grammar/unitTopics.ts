@@ -570,4 +570,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-c12-gerondif' },
     { topic: 'fr-c12-adjectif-verbal' },
   ],
+  'fr-c1-2-famille': [{ topic: 'fr-c12-registres' }, { topic: 'fr-c12-questions' }],
 };

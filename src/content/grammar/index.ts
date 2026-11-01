@@ -16,6 +16,7 @@ import { FR12_TOPICS } from './fr-a1-2';
 import { FR21_TOPICS } from './fr-a2-1';
 import { FR22_TOPICS } from './fr-a2-2';
 import { FRC12_TOPICS } from './fr-c1-2';
+import { FRC12_TOPICS_B } from './fr-c1-2-b';
 import type { GrammarTopic, UnitTopicRef } from './schema';
 import { UNIT_TOPICS } from './unitTopics';
 
@@ -42,6 +43,7 @@ export const GRAMMAR_TOPICS: readonly GrammarTopic[] = [
   ...FR21_TOPICS,
   ...FR22_TOPICS,
   ...FRC12_TOPICS,
+  ...FRC12_TOPICS_B,
 ];
 
 export const GRAMMAR_TOPIC_BY_ID: ReadonlyMap<string, GrammarTopic> = new Map(

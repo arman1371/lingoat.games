@@ -1088,6 +1088,24 @@ export const LESSONS = {
       'Des règles différentes. · Des règles différant de celles-ci …',
     ],
   },
+  'fr-c12-registres': {
+    title: 'Familier, courant, soutenu',
+    rule: 'The same idea has several registers: familier (casual, among friends), courant (neutral, everyday) and soutenu (formal, written). Adapt to the person you talk to and the medium. Familiar speech often drops ne and uses on; formal French uses inversion and richer words.',
+    examples: [
+      'une bagnole (familier) · une voiture (courant) · une automobile (soutenu)',
+      'J’en sais rien. · Je ne sais pas. · Je l’ignore.',
+      'On bouffe où ? · On mange où ? · Où souhaitez-vous dîner ?',
+    ],
+  },
+  'fr-c12-questions': {
+    title: 'Three ways to ask a question',
+    rule: 'Intonation (Tu viens ?) is casual. Est-ce que + normal word order is neutral (Est-ce que tu viens ?). Inversion is formal and written (Viens-tu ?). With il, elle or on after a vowel add -t-: A-t-elle appelé ? With a noun subject: Tes parents sont-ils venus ?',
+    examples: [
+      'Vous avez des enfants ? · Est-ce que vous avez des enfants ? · Avez-vous des enfants ?',
+      'A-t-elle téléphoné ?',
+      'Où est-ce que tes grands-parents habitent ?',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',

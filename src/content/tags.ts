@@ -375,6 +375,10 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🎭',
   },
+  // unit 2
+  'fr-c12-family': { label: 'Family & upbringing', group: 'topic', emoji: '👨‍👩‍👧‍👦' },
+  'fr-c12-registres': { label: 'Registres de langue', group: 'grammar', emoji: '🎚️' },
+  'fr-c12-questions': { label: 'Asking questions (3 ways)', group: 'grammar', emoji: '❔' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },
