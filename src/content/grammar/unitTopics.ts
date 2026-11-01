@@ -575,4 +575,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a22-gerund' },
     { topic: 'fr-a22-noun-complements', note: 'en, à, de' },
   ],
+  'fr-a2-2-voyage': [
+    { topic: 'fr-a22-narration', note: 'imparfait and passé composé' },
+    { topic: 'fr-a22-participle-agreement' },
+    { topic: 'fr-a22-demonstrative-pronouns' },
+  ],
 };

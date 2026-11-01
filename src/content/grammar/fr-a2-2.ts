@@ -580,4 +580,160 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-articles', 'fr-contractions'],
     sources: [S.nounComplement],
   },
+
+  // ---- Unit 4 (Envie d’ailleurs ?) ----
+  {
+    id: 'fr-a22-narration',
+    title: 'Telling a story: imparfait and passé composé',
+    tagline: 'Which past tense do I use in a story?',
+    level: LEVEL,
+    summary:
+      'The imparfait sets the scene (weather, descriptions, habits, an action in progress). The passé composé reports the events that move the story forward.',
+    sections: [
+      section(
+        'forms',
+        'The imparfait',
+        p(
+          'Take the **nous** form of the present, remove **-ons**, and add **-ais, -ais, -ait, -ions, -iez, -aient**. The only irregular stem is **être → ét-**.',
+        ),
+        table(
+          'Imparfait forms.',
+          ['Person', 'visiter', 'prendre', 'être'],
+          [
+            ['je', 'visitais', 'prenais', 'étais'],
+            ['tu', 'visitais', 'prenais', 'étais'],
+            ['il / elle / on', 'visitait', 'prenait', 'était'],
+            ['nous', 'visitions', 'prenions', 'étions'],
+            ['vous', 'visitiez', 'preniez', 'étiez'],
+            ['ils / elles', 'visitaient', 'prenaient', 'étaient'],
+          ],
+        ),
+      ),
+      section(
+        'use',
+        'Setting and events',
+        compare(
+          {
+            title: 'Imparfait',
+            question: 'What was the situation?',
+            example: 'Il faisait beau. Nous étions fatigués.',
+          },
+          {
+            title: 'Passé composé',
+            question: 'What happened?',
+            example: 'Nous sommes arrivés à midi.',
+          },
+        ),
+        examples(
+          ['Il pleuvait quand nous sommes arrivés.', 'It was raining when we arrived.'],
+          ['Je dormais quand le téléphone a sonné.', 'I was sleeping when the phone rang.'],
+          [
+            'Quand j’étais petit, nous allions toujours à la mer.',
+            'When I was small, we always went to the sea.',
+          ],
+        ),
+        tip(
+          'Signal words',
+          'Soudain, tout à coup, ce jour-là and hier introduce an event (passé composé). Toujours, souvent, d’habitude and chaque été go with the imparfait.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Soudain, il pleuvait.  ✓ Soudain, il a plu.',
+          '✗ Il a fait beau et nous étions heureux.  ✓ Il faisait beau et nous étions heureux.',
+        ),
+      ),
+    ],
+    related: ['fr-a21-passe-compose', 'fr-sequence'],
+    sources: [S.imparfait, S.passeCompose],
+  },
+  {
+    id: 'fr-a22-participle-agreement',
+    title: 'Agreement of the past participle',
+    tagline: 'When does the participle take an -e or an -s?',
+    level: LEVEL,
+    summary:
+      'With être the participle agrees with the subject. With avoir it agrees with a direct object that stands before the verb; otherwise it does not change.',
+    sections: [
+      section(
+        'etre',
+        'With être',
+        p(
+          'The participle of verbs conjugated with **être** (and of reflexive verbs) agrees with the **subject** in gender and number.',
+        ),
+        table(
+          'Agreement with être.',
+          ['Subject', 'aller', 'arriver'],
+          [
+            ['il', 'allé', 'arrivé'],
+            ['elle', 'allée', 'arrivée'],
+            ['ils', 'allés', 'arrivés'],
+            ['elles', 'allées', 'arrivées'],
+          ],
+        ),
+      ),
+      section(
+        'avoir',
+        'With avoir',
+        p(
+          'The participle agrees with the **direct object only if it stands before the verb**: in a relative clause with **que**, or as a pronoun (**le, la, l’, les**). If the object follows, nothing changes.',
+        ),
+        examples(
+          ['La valise que j’ai perdue est bleue.', 'The suitcase that I lost is blue.'],
+          ['Marie ? Je l’ai vue à la gare.', 'Marie? I saw her at the station.'],
+          ['Nous avons visité la ville.', 'We visited the town.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elle est allé à Rome.  ✓ Elle est allée à Rome.',
+          '✗ Les photos que j’ai pris.  ✓ Les photos que j’ai prises.',
+        ),
+      ),
+    ],
+    related: ['fr-a21-participles', 'fr-pronominal'],
+    sources: [S.participleAgreement],
+  },
+  {
+    id: 'fr-a22-demonstrative-pronouns',
+    title: 'Celui, celle, ceux, celles',
+    tagline: 'How do I say “this one”, “the one” or “those”?',
+    level: LEVEL,
+    summary:
+      'Celui, celle, ceux and celles replace a noun that was already mentioned. They are followed by -ci or -là, by de + noun, or by qui / que.',
+    sections: [
+      section(
+        'forms',
+        'Forms and endings',
+        table(
+          'Demonstrative pronouns.',
+          ['Gender', 'singular', 'plural'],
+          [
+            ['masculine', 'celui', 'ceux'],
+            ['feminine', 'celle', 'celles'],
+          ],
+        ),
+        p(
+          'They never stand alone. Add **-ci** (near) or **-là** (far), **de + noun** (belonging) or **qui / que** (a relative clause).',
+        ),
+        examples(
+          ['Celle-ci est moins chère que celle-là.', 'This one is cheaper than that one.'],
+          ['Je prends celui de 11 h.', 'I take the 11 o’clock one.'],
+          ['Ceux qui partent tôt doivent réserver.', 'Those who leave early must book.'],
+        ),
+      ),
+      section(
+        'choose',
+        'Choosing the right form',
+        p(
+          'The pronoun has the **gender and number of the noun it replaces**: **la chambre → celle**, **les billets → ceux**. For people in general use **ceux qui…**.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je préfère ce de mon frère.  ✓ Je préfère celui de mon frère.',
+          '✗ Celui-ci chambre est calme.  ✓ Celle-ci est calme. (no noun after the pronoun)',
+        ),
+      ),
+    ],
+    related: ['fr-demonstratives'],
+    sources: [S.demonstrativePronoun],
+  },
 ];

@@ -25,5 +25,12 @@ export const FR22_SOURCES = {
   adverb: wp('Adverbe', 'Adverbe'),
   conditional: wp('Conditionnel_en_français', 'Conditionnel en français'),
   gerund: wp('Gérondif', 'Gérondif'),
+  passeCompose: wp('Passé_composé', 'Passé composé'),
+  imparfait: wp('Imparfait', 'Imparfait'),
+  participleAgreement: wp(
+    'Accord_du_participe_passé_en_français',
+    'Accord du participe passé en français',
+  ),
+  demonstrativePronoun: wp('Pronom_démonstratif', 'Pronom démonstratif'),
   nounComplement: wp('Complément_du_nom', 'Complément du nom'),
 } as const satisfies Record<string, Source>;

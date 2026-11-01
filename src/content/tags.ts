@@ -417,6 +417,17 @@ export const TAGS = {
   'fr-a22-subjunctive': { label: 'il faut que + subjonctif', group: 'grammar', emoji: '🌀' },
   'fr-a22-pronoun-order': { label: 'je te le donne', group: 'grammar', emoji: '🧩' },
   'fr-a22-adverbs-ment': { label: 'adverbes en -ment', group: 'grammar', emoji: '🐢' },
+  'fr-a22-narration': { label: 'imparfait et passé composé', group: 'grammar', emoji: '📖' },
+  'fr-a22-participle-agreement': {
+    label: 'accord du participe passé',
+    group: 'grammar',
+    emoji: '✍️',
+  },
+  'fr-a22-demonstrative-pronouns': {
+    label: 'celui, celle, ceux, celles',
+    group: 'grammar',
+    emoji: '👈',
+  },
   'fr-a22-conditional': { label: 'je voudrais, tu pourrais', group: 'grammar', emoji: '🙏' },
   'fr-a22-gerund': { label: 'en + participe présent', group: 'grammar', emoji: '🔄' },
   'fr-a22-noun-complements': {

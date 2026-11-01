@@ -2,8 +2,9 @@ import type { LevelContent } from '../schema';
 import { sante } from './u1-sante';
 import { medias } from './u2-medias';
 import { consommer } from './u3-consommer';
+import { voyage } from './u4-voyage';
 
-const units = [sante, medias, consommer];
+const units = [sante, medias, consommer, voyage];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

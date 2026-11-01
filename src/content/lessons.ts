@@ -1359,6 +1359,29 @@ export const LESSONS = {
     rule: 'En gives the material (une table en bois). À gives the use (une machine à laver, une tasse à café). De gives the content, the kind or the origin (un verre de lait, un sac de sport). No article follows when the noun is general.',
     examples: ['Un pull en laine.', 'Une brosse à dents.', 'Un sac de voyage.'],
   },
+  'fr-a22-narration': {
+    title: 'Telling a story: imparfait and passé composé',
+    rule: 'Use the imparfait for the setting: the weather, descriptions, feelings and habits. Use the passé composé for the events that move the story forward. An action in progress (imparfait) is often interrupted by a new event (passé composé): je dormais quand le téléphone a sonné.',
+    examples: [
+      'Il pleuvait quand nous sommes arrivés.',
+      'Soudain, le train s’est arrêté.',
+      'Nous allions toujours à la mer.',
+    ],
+  },
+  'fr-a22-participle-agreement': {
+    title: 'Agreement of the past participle',
+    rule: 'With être the participle agrees with the subject: elle est allée, ils sont arrivés. With avoir it agrees with a direct object placed before the verb: la valise que j’ai perdue, je l’ai vue. Without such an object it stays unchanged: nous avons visité la ville.',
+    examples: ['Elle est partie tôt.', 'Les photos que j’ai prises.', 'Elles se sont retrouvées.'],
+  },
+  'fr-a22-demonstrative-pronouns': {
+    title: 'Celui, celle, ceux, celles',
+    rule: 'Celui (m), celle (f), ceux (m pl) and celles (f pl) replace a noun already mentioned. They are never alone: they are followed by -ci or -là, by de + noun, or by qui / que. Ce is not used alone for a noun.',
+    examples: [
+      'Je prends celui de 11 h.',
+      'Celle-ci est moins chère que celle-là.',
+      'Ceux qui partent tôt.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

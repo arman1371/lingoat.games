@@ -82,6 +82,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sort it (en, à, de)', 'fr-a2-2-consommer-sort-complements'],
   ['sentence builder (consumer)', 'fr-a2-2-consommer-sentences'],
   ['dialogue (repair, loan, complaint)', 'fr-a2-2-consommer-dialogues'],
+  ['flashcards (travelling)', 'fr-a2-2-voyage-flash-travel'],
+  ['listen (travel)', 'fr-a2-2-voyage-listen-travel'],
+  ['conjugation (imparfait)', 'fr-a2-2-voyage-conj-imparfait'],
+  ['sort it (setting or event)', 'fr-a2-2-voyage-sort-narration'],
+  ['gap fill (participle)', 'fr-a2-2-voyage-gap-participle'],
+  ['gap fill (celui, celle)', 'fr-a2-2-voyage-gap-demonstratives'],
+  ['dialogue (station, story, hotel)', 'fr-a2-2-voyage-dialogues'],
 ];
 
 test.describe('French A2.2 – playing the games', () => {
