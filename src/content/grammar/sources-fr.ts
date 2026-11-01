@@ -54,5 +54,10 @@ export const FR_SOURCES = {
   presentConditional: wp('Conditionnel_présent', 'Conditionnel présent'),
   pqp: wp('Plus-que-parfait', 'Plus-que-parfait'),
   si: wiktionary('si', 'si'),
+  prefix: wp('Préfixe', 'Préfixe'),
+  suffix: wp('Suffixe', 'Suffixe'),
+  affix: wp('Affixe', 'Affixe'),
+  prefixList: wiktionary('Annexe:Préfixes_en_français', 'Annexe : Préfixes en français'),
+  suffixList: wiktionary('Annexe:Suffixes_en_français', 'Annexe : Suffixes en français'),
   auCasOu: wiktionary('au_cas_où', 'au cas où'),
 } as const satisfies Record<string, Source>;

@@ -86,6 +86,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sentence builder', 'fr-c1-1-societe-sentences'],
   ['dialogue (two scenes)', 'fr-c1-1-societe-dialogues'],
   ['unit challenge', 'fr-c1-1-societe-challenge'],
+  ['sort it (affixes)', 'fr-c1-1-egalite-sort-affixes'],
+  ['sort it (le or la)', 'fr-c1-1-egalite-sort-gender'],
+  ['gap fill (choose)', 'fr-c1-1-egalite-gap-affixes'],
+  ['gap fill (type)', 'fr-c1-1-egalite-gap-typed'],
+  ['dialogue (two scenes)', 'fr-c1-1-egalite-dialogues'],
+  ['unit challenge', 'fr-c1-1-egalite-challenge'],
 ];
 
 test.describe('French C1.1 – playing the games', () => {

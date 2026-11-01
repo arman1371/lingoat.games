@@ -424,6 +424,11 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🔀',
   },
+  'fr-c11-affixes': {
+    label: 'Prefixes and suffixes: in-, -ité, -iser',
+    group: 'grammar',
+    emoji: '🧱',
+  },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

@@ -1327,6 +1327,15 @@ export const LESSONS = {
       'Si nous avions voté, nous aurions changé le résultat.',
     ],
   },
+  'fr-c11-affixes': {
+    title: 'Prefixes and suffixes',
+    rule: 'Learn word families. Opposite: in- (injuste), im- before b/m/p, il- before l, ir- before r, dé(s)-, mé-; anti- means against. Nouns: -ité, -tion, -isme (masculine), -ment (masculine), -ance. Adjectives and verbs: -able, -if, -iser.',
+    examples: [
+      'Cette décision est injuste et inacceptable.',
+      'La discrimination est illégale.',
+      'Il faut égaliser les salaires.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

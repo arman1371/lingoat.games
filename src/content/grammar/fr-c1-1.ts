@@ -267,4 +267,92 @@ export const FRC11_TOPICS: GrammarTopic[] = [
     related: ['fr-c11-connectors'],
     sources: [S.conditional, S.presentConditional, S.pastConditional, S.pqp, S.si, S.auCasOu],
   },
+  {
+    id: 'fr-c11-affixes',
+    title: 'Prefixes and suffixes',
+    tagline: 'How do I build and decode words like injuste, égalité, marginaliser?',
+    level: LEVEL,
+    summary:
+      'Many C1 words are built from a base plus a prefix or suffix. Prefixes change the meaning: in- (im-, il-, ir-) and dé(s)- give the opposite, anti- means against, sous- and sur- mean under and over. Suffixes change the word class: -ité, -tion, -isme, -ment and -ance make nouns, -able and -if make adjectives, -iser makes verbs. A suffix also tells you the gender of the noun.',
+    sections: [
+      section(
+        'prefixes',
+        'Prefixes that change the meaning',
+        p(
+          'The most useful prefix at C1 gives the **opposite**: **in-** (injuste, inacceptable). Its spelling follows the next letter: **im-** before b, m and p (*impossible*), **il-** before l (*illégal*) and **ir-** before r (*irréel*). **Dé(s)-** and **mé-** also reverse or damage the base (*désavantage*, *méconnaître*).',
+        ),
+        table(
+          'Prefixes of this unit.',
+          ['Prefix', 'Meaning', 'Example'],
+          [
+            ['in- / im- / il- / ir-', 'not, the opposite', 'injuste, impossible, illégal, irréel'],
+            ['dé- / dés-', 'reversal, removal', 'désavantage, déstigmatiser'],
+            ['mé- / mal-', 'wrongly, badly', 'méconnaître, malhonnête'],
+            ['anti-', 'against', 'antiraciste'],
+            ['sous- / sur-', 'under / over', 'sous-payé, surpayé'],
+            ['pluri- / multi-', 'several', 'pluriculturel, multiculturel'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ inlégal, inpossible, inréel.  ✓ illégal, impossible, irréel.',
+          '✗ inclusif = not inclusive.  ✓ In- is part of the root of inclusif: it means inclusive.',
+        ),
+      ),
+      section(
+        'noun-suffixes',
+        'Suffixes that make nouns, and give the gender',
+        p(
+          'A noun suffix tells you the gender. **-ité, -tion / -ation, -ance / -ence** and **-esse** make **feminine** nouns; **-isme, -ment** and **-age** make **masculine** nouns. So you can predict *la tolérance*, *la discrimination* but *le racisme*, *le traitement*.',
+        ),
+        table(
+          'Noun suffixes.',
+          ['Suffix', 'Gender', 'Built from', 'Example'],
+          [
+            ['-ité', 'feminine', 'adjective', 'égal → l’égalité, divers → la diversité'],
+            ['-tion / -ation', 'feminine', 'verb in -er', 'discriminer → la discrimination'],
+            ['-ance / -ence', 'feminine', 'verb or adjective', 'tolérer → la tolérance'],
+            ['-isme', 'masculine', 'noun or adjective', 'sexiste → le sexisme'],
+            ['-ment', 'masculine', 'verb', 'traiter → le traitement'],
+            ['-age', 'masculine', 'verb or noun', 'métisser → le métissage'],
+          ],
+        ),
+        tip(
+          'Exceptions',
+          'Gender rules have exceptions (*un silence* is masculine), but for the suffixes above they are very reliable. Use them when you meet a new abstract noun.',
+        ),
+      ),
+      section(
+        'adjective-verb-suffixes',
+        'Suffixes that make adjectives and verbs',
+        p(
+          '**-able / -ible** means “that can be …ed” (*acceptable*, *crédible*). **-if / -ive** describes a quality (*inclusif*, *inclusive*). **-iser** and **-ifier** make verbs that mean “make …” (*égal → égaliser*, *marginal → marginaliser*, *simple → simplifier*).',
+        ),
+        examples(
+          ['Ce comportement est inacceptable.', 'This behaviour is unacceptable.'],
+          ['Il faut égaliser les salaires.', 'Salaries must be equalised.'],
+          ['Cette école veut être plus inclusive.', 'This school wants to be more inclusive.'],
+        ),
+        compare(
+          {
+            title: 'in- + base',
+            question: 'The opposite',
+            example: 'injuste, impossible, illégal',
+          },
+          {
+            title: 'base + -ité / -tion',
+            question: 'A noun',
+            example: 'l’égalité, la discrimination',
+          },
+          {
+            title: 'base + -iser',
+            question: 'A verb meaning “make …”',
+            example: 'égaliser, marginaliser',
+          },
+        ),
+      ),
+    ],
+    related: ['fr-c11-connectors'],
+    sources: [S.prefix, S.suffix, S.affix, S.prefixList, S.suffixList],
+  },
 ];
