@@ -46,10 +46,25 @@ test.describe('French C2.2 – grammar hints', () => {
     await page.goto(`/fr/play/${a.id}?seed=1`);
     await page.getByTestId('start').click();
     const squash = (t: string) => t.replace(/\s+/g, ' ').trim();
-    const shown = squash(await page.getByTestId('sentence').innerText());
-    const item = a.config.items.find(
-      (i) => i.options && squash(i.text.replace('___', '…')) === shown,
-    )!;
+    // The sequence is shuffled and mixes typed and chip items: answer typed ones until a chip item shows.
+    const input = page.getByLabel('Missing word');
+    let item: (typeof a.config.items)[number] | undefined;
+    for (let i = 0; i < a.config.items.length && !item; i++) {
+      const shown = squash(await page.getByTestId('sentence').innerText());
+      if ((await input.count()) === 0) {
+        item = a.config.items.find(
+          (x) => x.options && squash(x.text.replace('___', '…')) === shown,
+        );
+      } else {
+        const typedItem = a.config.items.find(
+          (x) => !x.options && shown.startsWith(squash(x.text.split('___')[0] ?? '')),
+        )!;
+        await input.fill(typedItem.answer);
+        await input.press('Enter');
+        await page.getByTestId('continue').click();
+      }
+    }
+    if (!item) throw new Error('no chip item came up');
     const wrong = item.options!.find((o) => o !== item.answer)!;
     await page.getByRole('button', { name: wrong, exact: true }).click();
     await page.getByTestId('why').click();
