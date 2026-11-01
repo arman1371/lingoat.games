@@ -30,17 +30,17 @@ the subjunctive with sequence of tenses and reported speech, information structu
 French and EU institutions, debate and argumentation. C2.2 therefore takes the cultural domains, proverbs and
 figures of style, and a different set of C2 grammar points:
 
-| #   | Unit (id suffix)                       | Domain                                         | Grammar (tag / mini lesson)                                               | Status |
-| --- | -------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------- | ------ |
-| 1   | Arts et expositions (`arts`)           | exhibitions, art market, judging a work        | participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`) | done   |
-| 2   | Littérature et théâtre (`litterature`) | books, publishing, stage                       | past participle agreement in hard cases (`fr-c22-accord-participe`)       | done   |
-| 3   | Cinéma et spectacle (`cinema`)         | film, festivals, criticism                     | the passive and its alternatives (`fr-c22-passif`)                        | done   |
-| 4   | Patrimoine et histoire (`patrimoine`)  | heritage, history, francophonie                | complex relative clauses (`fr-c22-relatives`)                             | done   |
-| 5   | Droit et justice (`droit`)             | courts, rights, contracts                      | advanced negation (`fr-c22-negation`)                                     | done   |
-| 6   | Médias et société (`medias`)           | press, freedom of expression, misinformation   | conditional of reserve and distance markers (`fr-c22-modalisation`)       | done   |
-| 7   | Engagement citoyen (`engagement`)      | associations, volunteering, civil society      | the infinitive (`fr-c22-infinitif`)                                       | done   |
-| 8   | Climat et environnement (`climat`)     | climate, energy, biodiversity                  | agreement with quantifiers and collectives (`fr-c22-accord-quantite`)     | done   |
-| 9   | Proverbes et figures de style          | proverbs, idioms, métaphore, litote, antithèse | figures of style                                                          | next   |
+| #   | Unit (id suffix)                              | Domain                                         | Grammar (tag / mini lesson)                                               | Status |
+| --- | --------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------- | ------ |
+| 1   | Arts et expositions (`arts`)                  | exhibitions, art market, judging a work        | participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`) | done   |
+| 2   | Littérature et théâtre (`litterature`)        | books, publishing, stage                       | past participle agreement in hard cases (`fr-c22-accord-participe`)       | done   |
+| 3   | Cinéma et spectacle (`cinema`)                | film, festivals, criticism                     | the passive and its alternatives (`fr-c22-passif`)                        | done   |
+| 4   | Patrimoine et histoire (`patrimoine`)         | heritage, history, francophonie                | complex relative clauses (`fr-c22-relatives`)                             | done   |
+| 5   | Droit et justice (`droit`)                    | courts, rights, contracts                      | advanced negation (`fr-c22-negation`)                                     | done   |
+| 6   | Médias et société (`medias`)                  | press, freedom of expression, misinformation   | conditional of reserve and distance markers (`fr-c22-modalisation`)       | done   |
+| 7   | Engagement citoyen (`engagement`)             | associations, volunteering, civil society      | the infinitive (`fr-c22-infinitif`)                                       | done   |
+| 8   | Climat et environnement (`climat`)            | climate, energy, biodiversity                  | agreement with quantifiers and collectives (`fr-c22-accord-quantite`)     | done   |
+| 9   | Proverbes et figures de style (`expressions`) | proverbs, idioms, métaphore, litote, antithèse | figures of style (`fr-c22-figures`)                                       | done   |
 
 Each unit aims at 10 to 16 games with at least 6 of the 13 engines, an easy first game and a final "… challenge". The
 clock and market engines are not used at this level. Word cards are checked against all earlier French levels by the

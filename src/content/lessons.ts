@@ -1291,6 +1291,15 @@ export const LESSONS = {
       'Elles sont toutes petites. → tout agrees',
     ],
   },
+  'fr-c22-figures': {
+    title: 'Figures of style',
+    rule: 'A métaphore has no comparison word (cette ville est une jungle); a comparaison has one (fort comme un lion). A litote says less to suggest more, an hyperbole exaggerates, an euphémisme softens, an oxymore joins two contradictory words and a métonymie replaces a word by a linked one.',
+    examples: [
+      'Cette ville est une jungle. → métaphore',
+      'Va, je ne te hais point. → litote',
+      'Éphémère immortel. → oxymore',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

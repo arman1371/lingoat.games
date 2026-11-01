@@ -283,3 +283,9 @@ generated forms in `src/lib/french`.
   tests the consonant case. fr.wikipedia.org _Accord (grammaire)_ was read for collective nouns (foule, multitude,
   dizaine, centaine: singular or plural verb when a plural noun follows). It does not mention bon nombre de, un grand
   nombre de or plus d’un; those rules (plural, plural, singular) follow textbook teaching.
+- Figures of style (`fr-c22-figures`): fr.wikipedia.org _Figure de style_ was read (first 100,000 of about 310,000
+  characters) for métaphore, comparaison, litote, antithèse, hyperbole, métonymie, euphémisme, oxymore,
+  personnification, anaphore, périphrase and synecdoque; the literary quotations in the quiz (Labé, Valéry, Brel, Proust,
+  Corneille) come from that page. fr.wikipedia.org _Proverbe_ was read for the definition of a proverb; it quotes only
+  “Chat échaudé craint l’eau froide”. The other proverbs and the idioms (poser un lapin, avoir le cafard…) are classic
+  expressions that were not checked against a fetched list.

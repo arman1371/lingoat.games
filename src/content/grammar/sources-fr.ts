@@ -57,6 +57,8 @@ export const FR_SOURCES = {
   agreement: wp('Accord_(grammaire)', 'Accord (grammaire)'),
   plupart: wiktionary('plupart', 'plupart'),
   tout: wiktionary('tout', 'tout'),
+  figures: wp('Figure_de_style', 'Figure de style'),
+  proverb: wp('Proverbe', 'Proverbe'),
   passive: wp('Voix_passive', 'Voix passive'),
   pastParticipleAgreement: wp(
     'Accord_du_participe_passé_en_français',

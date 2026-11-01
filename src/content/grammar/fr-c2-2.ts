@@ -637,4 +637,63 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-c22-accord-participe'],
     sources: [S.plupart, S.agreement, S.tout],
   },
+  {
+    id: 'fr-c22-figures',
+    title: 'Figures of style',
+    tagline: 'Naming the images, contrasts and exaggerations in a text',
+    level: LEVEL,
+    summary:
+      'Figures of style are ways of saying something that go beyond the plain meaning. A métaphore replaces a thing by another without a comparison word, a comparaison uses comme, a litote says less, an hyperbole says more, and an oxymore joins two contradictory words.',
+    sections: [
+      section(
+        'images',
+        'Images: métaphore and comparaison',
+        p(
+          'Both put two things side by side. In a **comparaison** a word links them (**comme**, **tel**, **semblable à**): *La musique souvent me prend comme une mer* (Baudelaire). In a **métaphore** there is no such word: *Son rire de pluie fraîche* (Gracq), *Cette ville est une jungle.* Related figures are the **personnification** (human traits given to a thing) and the **périphrase** (a descriptive expression for a word: *le Roi des Astres* for the sun).',
+        ),
+        examples(
+          ['Il est fort comme un lion.', 'He is as strong as a lion. (comparaison)'],
+          ['Cette ville est une jungle.', 'This city is a jungle. (métaphore)'],
+          ['Leurs bras désespérés.', 'Their despairing arms. (personnification of trees)'],
+        ),
+      ),
+      section(
+        'intensite',
+        'More, less, softer: hyperbole, litote, euphémisme',
+        p(
+          'An **hyperbole** exaggerates on purpose: *J’ai attendu une éternité.* A **litote** says less to suggest more, often by denying the opposite: *Va, je ne te hais point* (Corneille). An **euphémisme** softens a harsh idea: *Il nous a quittés.* Ask yourself whether the speaker amplifies, understates by negation, or avoids a hard word.',
+        ),
+        compare(
+          {
+            title: 'hyperbole',
+            question: 'Does it say much more than the facts?',
+            example: 'Je meurs de faim.',
+          },
+          {
+            title: 'litote',
+            question: 'Does it deny the opposite to affirm?',
+            example: 'Ce n’est pas mal du tout.',
+          },
+          {
+            title: 'euphémisme',
+            question: 'Does it soften a hard word?',
+            example: 'Il nous a quittés.',
+          },
+        ),
+      ),
+      section(
+        'contrastes',
+        'Contrast and substitution',
+        p(
+          'An **antithèse** puts opposed ideas in a parallel structure: *Je vis, je meurs ; je me brûle et me noie* (Labé). An **oxymore** puts two contradictory words in one phrase: *Éphémère immortel* (Valéry). A **métonymie** replaces a word by a logically linked one (container for content, author for work, place for people: *Bruxelles chantait*); the **synecdoque** is a kind of métonymie where a part stands for the whole (*Mon bras…* for the person). An **anaphore** repeats a word at the beginning of parallel clauses.',
+        ),
+        tip(
+          'Quick test',
+          'One word standing for another? Think métonymie. Two opposites inside one phrase? Oxymore. Two opposites in parallel clauses? Antithèse.',
+        ),
+      ),
+    ],
+    related: ['fr-c22-participe-present'],
+    sources: [S.figures, S.proverb],
+  },
 ];
