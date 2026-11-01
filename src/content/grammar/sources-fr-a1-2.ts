@@ -19,4 +19,10 @@ export const FR12_SOURCES = {
   jamais: wiktionary('jamais', 'jamais'),
   vers: wiktionary('vers', 'vers'),
   dAbord: wiktionary('d’abord', 'd’abord'),
+  passeCompose: wp('Passé_composé_en_français', 'Passé composé en français'),
+  manger: wiktionary('Conjugaison:français/manger', 'Conjugaison : manger'),
+  attendre: wiktionary('Conjugaison:français/attendre', 'Conjugaison : attendre'),
+  ilYA: wiktionary('il_y_a', 'il y a'),
+  dernier: wiktionary('dernier', 'dernier'),
+  prochain: wiktionary('prochain', 'prochain'),
 } as const satisfies Record<string, Source>;

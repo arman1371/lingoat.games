@@ -1167,6 +1167,24 @@ export const LESSONS = {
       'Je travaille de neuf heures à cinq heures.',
     ],
   },
+  'fr-passe-compose-avoir': {
+    title: 'The passé composé with avoir',
+    rule: 'To say what happened, use avoir in the present plus the past participle: j’ai mangé, tu as fini, nous avons attendu. Participles: -er → -é, -ir → -i, -re → -u; some are irregular (fait, pris, eu, été). In the negative ne … pas wraps avoir: je n’ai pas mangé.',
+    examples: [
+      'Hier, j’ai regardé un film.',
+      'Nous avons fêté son anniversaire.',
+      'Il n’a pas fini.',
+    ],
+  },
+  'fr-time-markers': {
+    title: 'Past and future time markers',
+    rule: 'Look back with hier, avant-hier and il y a + a length of time (il y a deux jours). Look ahead with demain, après-demain and dans + a length of time (dans deux jours). Dernier (last) and prochain (next) follow the noun and agree with it: la semaine dernière, le mois prochain.',
+    examples: [
+      'Hier soir, j’ai dîné chez eux.',
+      'Elle a eu un bébé il y a deux jours.',
+      'Samedi prochain, nous partons.',
+    ],
+  },
   'fr-likes': {
     title: 'J’aime, je déteste …',
     rule: 'Aimer, adorer and détester are regular -er verbs. Before a noun use the definite article, even for things in general: j’aime le café, elle adore les chats. Before an activity use the infinitive: j’aime danser. Add beaucoup for more: j’aime beaucoup la musique.',

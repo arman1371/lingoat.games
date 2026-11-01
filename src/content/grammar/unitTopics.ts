@@ -546,4 +546,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-frequency' },
     { topic: 'fr-sequence', note: 'à, vers, de … à …' },
   ],
+  'fr-a1-2-fetes': [
+    { topic: 'fr-passe-compose-avoir' },
+    { topic: 'fr-time-markers' },
+    { topic: 'fr-adjectives', note: 'looks and character' },
+  ],
 };
