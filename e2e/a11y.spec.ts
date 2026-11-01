@@ -41,6 +41,8 @@ const PAGES: [string, string, string][] = [
   ['unit 6 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-table', 'À table !'],
   ['unit 7 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-ville', 'En ville'],
   ['unit 8 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-temps', 'Jours, heure et météo'],
+  ['level A1.2 in French', '/fr/levels/fr-a1-2', 'A1.2'],
+  ['A1.2 unit 1 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-journee', 'Ma journée'],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],
