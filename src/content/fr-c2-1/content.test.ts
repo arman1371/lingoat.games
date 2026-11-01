@@ -3,6 +3,9 @@ import { TAGS } from '@/content/tags';
 import { describeLevelContent } from '@/test/contentSuite';
 import { label } from '../builders';
 import frA11 from '../fr-a1-1';
+import frA12 from '../fr-a1-2';
+import frA21 from '../fr-a2-1';
+import frA22 from '../fr-a2-2';
 import content from './index';
 
 describeLevelContent('French C2.1', content, 'fr-c2-1');
@@ -14,7 +17,7 @@ describeLevelContent('French C2.1', content, 'fr-c2-1');
 const REVIEW_WORDS = new Set<string>([]);
 
 /** Earlier French levels. Add each level here when it lands on main, so the overlap test keeps its promise. */
-const EARLIER_FRENCH = [frA11];
+const EARLIER_FRENCH = [frA11, frA12, frA21, frA22];
 
 const key = (v: Parameters<typeof label>[0]) => label(v).toLowerCase();
 
