@@ -564,4 +564,14 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-superlative' },
     { topic: 'fr-interrogative-pronouns' },
   ],
+  // ---- French C2.2 ----------------------------------------------------------------------------
+  'fr-c2-2-arts': [{ topic: 'fr-c22-participe-present' }],
+  'fr-c2-2-litterature': [{ topic: 'fr-c22-accord-participe' }],
+  'fr-c2-2-cinema': [{ topic: 'fr-c22-passif' }],
+  'fr-c2-2-patrimoine': [{ topic: 'fr-c22-relatives' }],
+  'fr-c2-2-droit': [{ topic: 'fr-c22-negation' }],
+  'fr-c2-2-medias': [{ topic: 'fr-c22-modalisation' }],
+  'fr-c2-2-engagement': [{ topic: 'fr-c22-infinitif' }],
+  'fr-c2-2-climat': [{ topic: 'fr-c22-accord-quantite' }],
+  'fr-c2-2-expressions': [{ topic: 'fr-c22-figures' }],
 };

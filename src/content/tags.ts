@@ -413,6 +413,49 @@ export const TAGS = {
   'fr-object-pronouns': { label: 'le, la, les, lui, leur', group: 'grammar', emoji: '🎯' },
   'fr-superlative': { label: 'le plus, le meilleur', group: 'grammar', emoji: '🥇' },
   'fr-interrogative-pronouns': { label: 'qui, que, quoi, lequel', group: 'grammar', emoji: '🔎' },
+  // grammar points and topics – French C2.2
+  'fr-c22-participe-present': {
+    label: 'Participe présent, gérondif, adjectif verbal',
+    group: 'grammar',
+    emoji: '➡️',
+  },
+  'fr-c22-art': { label: 'Art & exhibitions (French C2)', group: 'topic', emoji: '🖼️' },
+  'fr-c22-accord-participe': {
+    label: 'Past participle agreement (hard cases)',
+    group: 'grammar',
+    emoji: '✅',
+  },
+  'fr-c22-litterature': { label: 'Books & theatre (French C2)', group: 'topic', emoji: '📚' },
+  'fr-c22-passif': { label: 'The passive and its alternatives', group: 'grammar', emoji: '🔄' },
+  'fr-c22-cinema': { label: 'Film & live shows (French C2)', group: 'topic', emoji: '🎬' },
+  'fr-c22-relatives': { label: 'Relatives: dont, lequel, ce dont', group: 'grammar', emoji: '🔗' },
+  'fr-c22-patrimoine': { label: 'Heritage & history (French C2)', group: 'topic', emoji: '🏰' },
+  'fr-c22-negation': {
+    label: 'Negation: ne … que, ni … ni, ne alone',
+    group: 'grammar',
+    emoji: '🚫',
+  },
+  'fr-c22-droit': { label: 'Law & justice (French C2)', group: 'topic', emoji: '⚖️' },
+  'fr-c22-modalisation': {
+    label: 'Reserve: conditional and distance markers',
+    group: 'grammar',
+    emoji: '❔',
+  },
+  'fr-c22-medias': { label: 'News & media (French C2)', group: 'topic', emoji: '📰' },
+  'fr-c22-infinitif': {
+    label: 'The infinitive: past, negative, after prepositions',
+    group: 'grammar',
+    emoji: '♾️',
+  },
+  'fr-c22-engagement': { label: 'Civic life (French C2)', group: 'topic', emoji: '🤝' },
+  'fr-c22-accord-quantite': {
+    label: 'Agreement with quantifiers and tout',
+    group: 'grammar',
+    emoji: '👥',
+  },
+  'fr-c22-climat': { label: 'Climate & environment (French C2)', group: 'topic', emoji: '🌍' },
+  'fr-c22-figures': { label: 'Figures of style', group: 'grammar', emoji: '🎭' },
+  'fr-c22-expressions': { label: 'Proverbs & idioms (French C2)', group: 'topic', emoji: '💬' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

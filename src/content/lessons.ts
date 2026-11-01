@@ -1308,6 +1308,88 @@ export const LESSONS = {
     rule: 'Qui asks about a person. For things use qu’est-ce qui (subject) and qu’est-ce que or que (object); after a preposition or at the end of the question use quoi. Lequel, laquelle, lesquels and lesquelles ask “which one(s)?” and agree with the noun.',
     examples: ['Qui a appelé ?', 'Qu’est-ce que vous prenez ?', 'Laquelle est pour moi ?'],
   },
+  // ---- French C2.2 ------------------------------------------------------------------------
+  'fr-c22-participe-present': {
+    title: 'Participe présent, gérondif or adjectif verbal?',
+    rule: 'The participe présent (-ant) is a verb: it is invariable and keeps its object (des visiteurs admirant la toile). With en it is the gérondif: how or when, with the subject of the main verb. The adjectif verbal is an adjective and agrees (des couleurs éclatantes); some spell differently: provoquant / provocant.',
+    examples: [
+      'Des visiteurs admirant la toile. → participe présent: invariable',
+      'Elle a appris en copiant les maîtres. → gérondif: how, same subject',
+      'Des couleurs éclatantes. → adjectif verbal: agrees',
+    ],
+  },
+  'fr-c22-accord-participe': {
+    title: 'Agreeing the past participle',
+    rule: 'With être the participle agrees with the subject; with avoir only with a direct object placed before it (les pièces que j’ai vues). A reflexive agrees with se only if se is the direct object (elle s’est levée, but elle s’est lavé les mains). Invariable: faire + infinitive, en, price verbs.',
+    examples: [
+      'Les pièces que j’ai vues. → avoir: agrees with the object before it',
+      'Elle s’est levée, but elle s’est lavé les mains. → se is a direct object only in the first',
+      'La pièce qu’il a fait jouer. → faire + infinitive: invariable',
+    ],
+  },
+  'fr-c22-passif': {
+    title: 'The passive and its alternatives',
+    rule: 'The passive is être + past participle, and the participle agrees with the subject (le film a été primé par un jury). Avoid it with on + active verb, a pronominal verb (les billets se vendent) or se faire + infinitive (il s’est fait applaudir); faire never agrees.',
+    examples: [
+      'Le film a été primé par un jury. → passive',
+      'Les billets se vendent en ligne. → pronominal passive',
+      'Il s’est fait applaudir. → se faire + infinitive',
+    ],
+  },
+  'fr-c22-relatives': {
+    title: 'dont, lequel, ce dont',
+    rule: 'Dont replaces de + noun (la cathédrale dont nous parlons). After any other preposition use lequel, laquelle, lesquels, lesquelles; with à and de they contract: auquel, duquel. Dont cannot follow preposition + noun (au bout de laquelle). Ce dont, ce que, ce qui stand for what; où also means when.',
+    examples: [
+      'La cathédrale dont nous parlons. → de + noun',
+      'Le monument auquel je m’intéresse. → à + lequel',
+      'Je sais ce dont tu rêves. → no antecedent',
+    ],
+  },
+  'fr-c22-negation': {
+    title: 'ne … que, ni … ni, ne alone',
+    rule: 'Ne … que means only (il n’a que des preuves indirectes). Ni … ni takes no pas and repeats the article rules (ni témoin ni preuve). Personne, rien and aucun can be the subject (personne n’a parlé). After a negation un/des become de. Formal French can drop pas (je ne puis) and add an explétif ne.',
+    examples: [
+      'Il n’a que des preuves indirectes. → only',
+      'Elle n’a ni témoin ni preuve. → neither … nor',
+      'Personne n’a parlé. → negative pronoun as subject',
+    ],
+  },
+  'fr-c22-modalisation': {
+    title: 'Reserve: conditional and distance markers',
+    rule: 'The conditional of reserve (conditionnel journalistique) presents news as unconfirmed: le ministre aurait démissionné. A confirmed fact takes the indicative. Distance is also shown by selon / d’après, soi-disant, prétendument and il semblerait que + subjunctive. Never put the conditional after si.',
+    examples: [
+      'Le ministre aurait démissionné. → unconfirmed',
+      'D’après un témoin, il était seul. → named source',
+      'Il semblerait que le journal ait menti. → caution',
+    ],
+  },
+  'fr-c22-infinitif': {
+    title: 'The infinitive: past, negative, after prepositions',
+    rule: 'After après use the past infinitive (avoir/être + participle): après avoir signé, après être arrivés. Avant de, pour, sans, afin de and de peur de take an infinitive when both verbs share the subject. In a negative infinitive ne pas stay together: pour ne pas perdre, ne pas avoir signé.',
+    examples: [
+      'Après avoir signé la pétition, ils sont partis. → past infinitive',
+      'Avant de voter, lisez le programme. → avant de',
+      'Je regrette de ne pas avoir aidé. → negative past infinitive',
+    ],
+  },
+  'fr-c22-accord-quantite': {
+    title: 'Agreement with quantifiers and tout',
+    rule: 'The verb agrees with the noun after la plupart des / bon nombre de / un grand nombre de (plural) and la plupart du (singular); la plupart alone is plural. Plus d’un takes a singular verb. Une foule de + plural noun allows both. Tout agrees before a feminine adjective with a consonant: toutes petites.',
+    examples: [
+      'La plupart des espèces sont menacées. → plural',
+      'Plus d’un maire a protesté. → singular',
+      'Elles sont toutes petites. → tout agrees',
+    ],
+  },
+  'fr-c22-figures': {
+    title: 'Figures of style',
+    rule: 'A métaphore has no comparison word (cette ville est une jungle); a comparaison has one (fort comme un lion). A litote says less to suggest more, an hyperbole exaggerates, an euphémisme softens, an oxymore joins two contradictory words and a métonymie replaces a word by a linked one.',
+    examples: [
+      'Cette ville est une jungle. → métaphore',
+      'Va, je ne te hais point. → litote',
+      'Éphémère immortel. → oxymore',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
