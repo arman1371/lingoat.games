@@ -1,8 +1,8 @@
 import { getItems } from '@/content/items';
 import { TAGS } from '@/content/tags';
 import { describeLevelContent } from '@/test/contentSuite';
-import fr11 from '../fr-a1-1';
 import { label } from '../builders';
+import type { LevelContent } from '../schema';
 import content from './index';
 
 describeLevelContent('French B2.1', content, 'fr-b2-1');
@@ -38,11 +38,23 @@ describe('French B2.1 specifics', () => {
 
 /** Words B2.1 deliberately revisits in a new function; everything else must be new vocabulary. */
 const REVIEW_WORDS = new Set<string>([]);
-const key = (v: Parameters<typeof label>[0]) => label(v).toLowerCase();
+
+/** The French levels that come before B2.1, as far as they exist in the repository. */
+const EARLIER = ['fr-a1-1', 'fr-a1-2', 'fr-a2-1', 'fr-a2-2', 'fr-b1-1', 'fr-b1-2'];
+const packs = import.meta.glob<{ default: LevelContent }>('../fr-*/index.ts', { eager: true });
+const earlierVocab = Object.entries(packs)
+  .filter(([path]) => EARLIER.some((id) => path === `../${id}/index.ts`))
+  .flatMap(([, m]) => m.default.vocab);
+
+/** The word without its article, so “le pain” and “pain” count as the same word. */
+const key = (v: Parameters<typeof label>[0]) =>
+  label(v)
+    .replace(/^(le|la|les|l’|un|une|des) ?/i, '')
+    .toLowerCase();
 
 describe('French B2.1 vocabulary integrity', () => {
   it('does not repeat vocabulary from the earlier French levels', () => {
-    const earlier = new Set(fr11.vocab.map(key));
+    const earlier = new Set(earlierVocab.map(key));
     const repeated = content.vocab.map(key).filter((k) => earlier.has(k) && !REVIEW_WORDS.has(k));
     expect(repeated).toEqual([]);
   });
