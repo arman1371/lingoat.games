@@ -50,4 +50,7 @@ export const FR_SOURCES = {
   imparfait: wp('Imparfait', 'Imparfait'),
   passeCompose: wp('Passé_composé', 'Passé composé'),
   prefixIn: wiktionary('in-', 'in-'),
+  relative: wp('Pronom_relatif', 'Pronom relatif'),
+  subordinate: wp('Proposition_(grammaire)', 'Proposition (grammaire)'),
+  connector: wp('Connecteur_logique', 'Connecteur logique'),
 } as const satisfies Record<string, Source>;

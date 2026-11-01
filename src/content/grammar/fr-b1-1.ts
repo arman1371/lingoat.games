@@ -462,4 +462,169 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
     related: ['fr-b11-imparfait-pc'],
     sources: [S.passeCompose],
   },
+  {
+    id: 'fr-b11-relatives',
+    title: 'qui, que, dont, où',
+    tagline: 'Join two sentences with one relative pronoun',
+    level: LEVEL,
+    summary:
+      'A relative pronoun replaces a noun and links two clauses. Its form depends on its function: qui is the subject, que the direct object, dont replaces de + noun, où a place or a time.',
+    sections: [
+      section(
+        'rule',
+        'Which pronoun?',
+        table(
+          'Relative pronouns.',
+          ['Pronoun', 'Function', 'Example'],
+          [
+            ['qui', 'subject', 'La collègue qui m’aide est très sympa.'],
+            ['que (qu’)', 'direct object', 'Le poste que je cherche est à Lyon.'],
+            ['dont', 'replaces de + noun', 'C’est l’entreprise dont je rêve.'],
+            ['où', 'place or time', 'Le bureau où je travaille est calme.'],
+          ],
+        ),
+        p(
+          'Ask what the pronoun does in its own clause. If a **verb follows directly** (*qui travaille*), it is the subject: **qui**. If a **subject follows** (*que je cherche*), it is the object: **que**. If the verb needs **de** (*parler de, rêver de, avoir besoin de*), use **dont**.',
+        ),
+        examples(
+          [
+            'J’ai un collègue qui parle cinq langues.',
+            'I have a colleague who speaks five languages.',
+          ],
+          [
+            'Le projet dont je m’occupe est important.',
+            'The project I am in charge of is important.',
+          ],
+          ['Le jour où j’ai démissionné, il pleuvait.', 'The day I resigned, it was raining.'],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Le poste qui je cherche.  ✓ Le poste que je cherche.',
+          '✗ Le projet que je parle.  ✓ Le projet dont je parle (parler de).',
+          '✗ Le projet dont je parle de.  ✓ Le projet dont je parle.',
+        ),
+        tip(
+          'Not translated like in English',
+          'English can drop the pronoun (“the job I want”). French never can: le poste **que** je veux.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-opinion'],
+    sources: [S.relative],
+  },
+  {
+    id: 'fr-b11-opinion',
+    title: 'Giving an opinion',
+    tagline: 'Say what you think, contrast ideas and confirm them',
+    level: LEVEL,
+    summary:
+      'Introduce your opinion with à mon avis, selon moi, il me semble que or je suis convaincu que. Structure an argument with d’une part … d’autre part, contrast with par contre or en revanche and confirm with en effet.',
+    sections: [
+      section(
+        'phrases',
+        'Phrases for an argument',
+        table(
+          'Opinion, contrast and reason.',
+          ['Job', 'Phrases'],
+          [
+            ['give your opinion', 'à mon avis, selon moi, il me semble que, en ce qui me concerne'],
+            ['be sure', 'je suis convaincu que, je suis certain que'],
+            ['structure', 'd’une part … d’autre part'],
+            ['contrast', 'par contre, en revanche, cependant, pourtant'],
+            ['confirm or explain', 'en effet, car, puisque, parce que'],
+          ],
+        ),
+        p(
+          '**À mon avis** and **selon moi** are followed by a full sentence without *que*. **Il me semble que** and **je suis convaincu que** need **que** and the indicative: *Je suis convaincu que le télétravail est l’avenir.*',
+        ),
+        examples(
+          [
+            'À mon avis, le télétravail fait gagner du temps.',
+            'In my opinion, working from home saves time.',
+          ],
+          [
+            'Il gagne moins ; en revanche, il est libre.',
+            'He earns less; on the other hand, he is free.',
+          ],
+          ['En effet, c’est plus calme à la maison.', 'Indeed, it is quieter at home.'],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ À mon avis que le travail est important.  ✓ À mon avis, le travail est important.',
+          '✗ Selon moi, je pense que …  ✓ Selon moi, … (or: Je pense que …).',
+        ),
+        tip(
+          'par contre or en revanche?',
+          'Both mean “on the other hand”. En revanche is a little more formal, so prefer it in writing.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-relatives', 'fr-b11-purpose'],
+    sources: [S.connector],
+  },
+  {
+    id: 'fr-b11-purpose',
+    title: 'pour, afin de, pour que',
+    tagline: 'Say what you do something for',
+    level: LEVEL,
+    summary:
+      'To express a purpose, use pour or afin de + infinitive when both verbs have the same subject. When the subject changes, use pour que or afin que + subjunctive.',
+    sections: [
+      section(
+        'rule',
+        'Same subject or new subject?',
+        table(
+          'Expressing a purpose.',
+          ['Situation', 'Construction', 'Example'],
+          [
+            ['same subject', 'pour / afin de + infinitive', 'Je travaille pour gagner ma vie.'],
+            [
+              'different subject',
+              'pour que / afin que + subjunctive',
+              'Je travaille pour que ma famille soit heureuse.',
+            ],
+          ],
+        ),
+        subjunctiveTable('Verbs you need after pour que.', [
+          'prendre',
+          'pouvoir',
+          'être',
+          'avoir',
+        ]),
+        p(
+          '**Afin de / afin que** are slightly more formal than **pour / pour que**. The subjunctive forms are the ones from unit 1.',
+        ),
+        examples(
+          [
+            'Elle apprend l’anglais afin de trouver un meilleur poste.',
+            'She learns English in order to find a better job.',
+          ],
+          [
+            'Il explique le projet pour que tout le monde comprenne.',
+            'He explains the project so that everybody understands.',
+          ],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Je travaille pour que je gagne ma vie.  ✓ Je travaille pour gagner ma vie.',
+          '✗ Il explique pour que tout le monde comprend.  ✓ … pour que tout le monde comprenne.',
+          '✗ Elle étudie afin que trouver un poste.  ✓ Elle étudie afin de trouver un poste.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-subjunctive'],
+    sources: [S.subordinate, S.subjunctive],
+  },
 ];

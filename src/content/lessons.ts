@@ -1125,6 +1125,33 @@ export const LESSONS = {
     rule: 'Pronominal verbs take être. The participle agrees with the reflexive pronoun when it is the direct object: elle s’est levée, ils se sont retrouvés. It does not agree when the pronoun is indirect (se parler, s’écrire, se téléphoner) or when a direct object follows: elle s’est lavé les mains.',
     examples: ['Elle s’est levée tôt.', 'Ils se sont parlé.', 'Elle s’est lavé les mains.'],
   },
+  'fr-b11-relatives': {
+    title: 'qui, que, dont, où',
+    rule: 'A relative pronoun joins two sentences. qui replaces the subject (la collègue qui m’aide), que the direct object (le poste que je cherche), dont replaces de + noun (l’entreprise dont je rêve), où a place or a time (le bureau où je travaille).',
+    examples: [
+      'Le collègue qui m’a aidé est sympa.',
+      'Voilà le projet dont je t’ai parlé.',
+      'C’est le bureau où j’ai passé l’entretien.',
+    ],
+  },
+  'fr-b11-opinion': {
+    title: 'Giving an opinion',
+    rule: 'Give your view with à mon avis, selon moi, il me semble que, je suis convaincu que. Organise it with d’une part … d’autre part. Contrast with par contre or en revanche, and confirm with en effet.',
+    examples: [
+      'À mon avis, le télétravail fait gagner du temps.',
+      'Il gagne moins ; en revanche, il est libre.',
+      'En effet, c’est plus calme à la maison.',
+    ],
+  },
+  'fr-b11-purpose': {
+    title: 'pour, afin de, pour que',
+    rule: 'To say why you do something: pour or afin de + infinitive when the subject is the same (je travaille pour gagner ma vie); pour que or afin que + subjunctive when it changes (je travaille pour que ma famille soit heureuse).',
+    examples: [
+      'Elle apprend l’anglais afin de trouver un poste.',
+      'Il explique le projet pour que tout le monde comprenne.',
+      'Je travaille pour que ma famille soit heureuse.',
+    ],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',

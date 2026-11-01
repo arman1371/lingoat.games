@@ -48,6 +48,7 @@ const PAGES: [string, string, string][] = [
     '/fr/levels/fr-b1-1/units/fr-b1-1-souvenirs',
     'Souvenirs de famille',
   ],
+  ['unit 3 of B1.1 in French', '/fr/levels/fr-b1-1/units/fr-b1-1-travail', 'Travailler autrement'],
   ['level A1.2 in French', '/fr/levels/fr-a1-2', 'A1.2'],
   ['A1.2 unit 1 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-journee', 'Ma journée'],
   ['A1.2 unit 2 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-fetes', 'Félicitations !'],

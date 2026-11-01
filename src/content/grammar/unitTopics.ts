@@ -577,4 +577,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b11-narration' },
     { topic: 'fr-b11-reflexive-agreement' },
   ],
+  'fr-b1-1-travail': [
+    { topic: 'fr-b11-relatives' },
+    { topic: 'fr-b11-opinion' },
+    { topic: 'fr-b11-purpose' },
+  ],
 };
