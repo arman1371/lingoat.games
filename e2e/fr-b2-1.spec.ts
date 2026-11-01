@@ -66,6 +66,22 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['quiz (understand the story)', 'fr-b2-1-identite-quiz-text'],
   ['dialogue (three scenes)', 'fr-b2-1-identite-dialogues'],
   ['blitz', 'fr-b2-1-identite-blitz'],
+  ['flashcards', 'fr-b2-1-parcours-flash-a'],
+  ['gap fill (participle agreement)', 'fr-b2-1-parcours-gap-agreement'],
+  ['gap fill (time conjunctions)', 'fr-b2-1-parcours-gap-time'],
+  ['sort it (indicative or subjunctive)', 'fr-b2-1-parcours-sort-mood'],
+  ['sentence builder', 'fr-b2-1-parcours-sentences'],
+  ['dialogue', 'fr-b2-1-parcours-dialogues'],
+  ['blitz', 'fr-b2-1-parcours-blitz'],
+  ['quiz', 'fr-b2-1-parcours-challenge'],
+  ['gap fill (conditional)', 'fr-b2-1-sante-gap-conditional'],
+  ['gap fill (ways to advise)', 'fr-b2-1-sante-gap-advice'],
+  ['sort it (soft or firm)', 'fr-b2-1-sante-sort-advice'],
+  ['conjugation (conditional)', 'fr-b2-1-sante-conj-conditional'],
+  ['sentence builder', 'fr-b2-1-sante-sentences'],
+  ['dialogue', 'fr-b2-1-sante-dialogues'],
+  ['blitz', 'fr-b2-1-sante-blitz'],
+  ['quiz', 'fr-b2-1-sante-quiz-text'],
 ];
 
 test.describe('French B2.1 – playing the games', () => {

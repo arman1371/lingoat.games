@@ -1327,6 +1327,42 @@ export const LESSONS = {
       'Ils avaient quitté leur pays avant ma naissance.',
     ],
   },
+  'fr-participle-agreement': {
+    title: 'Agreement of the past participle',
+    rule: 'With être the participle agrees with the subject (elle est née). With avoir it agrees with a direct object that stands before the verb (les photos que j’ai trouvées), never with one after it. With pronominal verbs it agrees with the reflexive pronoun when that is the direct object (elles se sont rencontrées), not when it is an indirect object (elles se sont parlé).',
+    examples: [
+      'Ma grand-mère est née en 1940.',
+      'Les photos que j’ai trouvées datent de mon enfance.',
+      'Elles se sont parlé pendant des heures.',
+    ],
+  },
+  'fr-time-conjunctions': {
+    title: 'Conjunctions of time and their mood',
+    rule: 'Quand, lorsque, dès que, après que, pendant que and depuis que take the indicative. Avant que, jusqu’à ce que and en attendant que take the subjunctive. When both clauses have the same subject, use avant de, jusqu’à and après + infinitive instead.',
+    examples: [
+      'Je t’appelle dès que j’arrive.',
+      'Appelle-moi avant que je parte.',
+      'Il a étudié avant de changer de pays.',
+    ],
+  },
+  'fr-conditionnel-present': {
+    title: 'The conditional for advice and politeness',
+    rule: 'Form the conditional from the future stem plus the imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient): devrais, pourrais, ferais, irais. Use it to soften advice and requests (vous devriez, pourriez-vous), to state a wish (je voudrais), to report unconfirmed news (il serait malade) and after si + imparfait (si j’étais toi, je me reposerais).',
+    examples: [
+      'À ta place, je consulterais un médecin.',
+      'Pourriez-vous m’indiquer un bon kiné ?',
+      'Selon la presse, ce vaccin serait efficace.',
+    ],
+  },
+  'fr-giving-advice': {
+    title: 'Giving advice',
+    rule: 'From gentle to firm: the conditional (vous devriez), conseiller de + infinitive, il est conseillé de + infinitive, the imperative (reposez-vous !), and il faut que / il vaut mieux que + subjunctive. In the tu imperative of -er verbs the final s is dropped (soigne-toi).',
+    examples: [
+      'Je vous conseille de marcher plus souvent.',
+      'Il vaut mieux que tu ailles chez le médecin.',
+      'Soigne-toi bien !',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

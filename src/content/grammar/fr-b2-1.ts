@@ -1,3 +1,5 @@
+import { FRB21_U3_TOPICS } from './fr-b2-1-u3';
+import { FRB21_U2_TOPICS } from './fr-b2-1-u2';
 import { compare, examples, mistake, p, section, table, tip } from './build';
 import type { GrammarTopic } from './schema';
 import { FRB21_SOURCES as S } from './sources-fr-b2-1';
@@ -185,4 +187,6 @@ export const FRB21_TOPICS: GrammarTopic[] = [
     related: ['fr-imparfait-pc'],
     sources: [S.plusQueParfait, S.passeCompose],
   },
+  ...FRB21_U2_TOPICS,
+  ...FRB21_U3_TOPICS,
 ];

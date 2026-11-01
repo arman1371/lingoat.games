@@ -1,7 +1,16 @@
 import type { FrenchPronoun } from '@/lib/persons';
-import { activity, unit as baseUnit, type Meta } from '../builders';
+import {
+  activity,
+  byDe,
+  flashcards,
+  listen,
+  memory,
+  quizDeEn,
+  unit as baseUnit,
+  type Meta,
+} from '../builders';
 import type { LessonId } from '../lessons';
-import type { ConfigOf } from '../schema';
+import type { Activity, ConfigOf, Vocab } from '../schema';
 import type { TagId } from '../tags';
 
 export { activity };
@@ -184,3 +193,95 @@ export const frForms = (
   blanks,
   ...(lesson ? { lesson } : {}),
 });
+
+/** Spell row: [mode, answer, hint, emoji, speak?] */
+type SpellRow = readonly [
+  mode: 'unscramble' | 'type',
+  answer: string,
+  hint: string,
+  emoji: string,
+  speak?: string,
+];
+
+interface VocabGroup {
+  title: string;
+  description: string;
+  words: readonly Vocab[];
+}
+
+/**
+ * The six vocabulary games every unit starts with: flashcards of group A, a meaning quiz, flashcards
+ * of group B, a memory board (first eight words of B), a listening game and a spelling game.
+ */
+export function vocabGames(
+  U: string,
+  topic: TagId,
+  o: { a: VocabGroup; b: VocabGroup; listen: string[]; spell: SpellRow[] },
+): Activity[] {
+  const all = [...o.a.words, ...o.b.words];
+  return [
+    activity(
+      U,
+      'flash-a',
+      'flashcards',
+      meta(o.a.title, o.a.description, ['vocabulary', topic], 1, 4),
+      flashcards(o.a.words),
+    ),
+    activity(
+      U,
+      'quiz-meaning',
+      'quiz',
+      meta('What does it mean?', 'Pick the English meaning.', ['vocabulary', topic], 1, 3),
+      quizDeEn(o.a.words, all, 4),
+    ),
+    activity(
+      U,
+      'flash-b',
+      'flashcards',
+      meta(o.b.title, o.b.description, ['vocabulary', topic], 1, 3),
+      flashcards(o.b.words),
+    ),
+    activity(
+      U,
+      'memory',
+      'memory',
+      meta('Word memory', 'Match each word with its meaning.', ['vocabulary', topic], 2, 3),
+      memory(o.b.words.slice(0, 8)),
+    ),
+    activity(
+      U,
+      'listen',
+      'listen',
+      meta(
+        'Listen and pick',
+        'Listen to the word and pick its meaning.',
+        ['listening', topic],
+        2,
+        3,
+      ),
+      listen(byDe(all, ...o.listen), all),
+    ),
+    activity(
+      U,
+      'spell',
+      'spell',
+      meta(
+        'Spell the words',
+        'Unscramble and type the words. Accents are optional.',
+        ['spelling', topic],
+        2,
+        3,
+      ),
+      {
+        items: o.spell.map(([mode, answer, hint, emoji, speak], i) => ({
+          id: `sp${i + 1}`,
+          mode,
+          answer,
+          hint,
+          emoji,
+          speak: speak ?? answer,
+        })),
+      },
+    ),
+  ];
+}

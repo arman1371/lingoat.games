@@ -417,6 +417,19 @@ export const TAGS = {
   'identity-origins': { label: 'Identity & origins', group: 'topic', emoji: '🪪' },
   'fr-imparfait-pc': { label: 'Imparfait or passé composé?', group: 'grammar', emoji: '⏪' },
   'fr-plus-que-parfait': { label: 'The plus-que-parfait', group: 'grammar', emoji: '⏮️' },
+  'fr-participle-agreement': {
+    label: 'Agreement of the past participle',
+    group: 'grammar',
+    emoji: '✍️',
+  },
+  'fr-time-conjunctions': {
+    label: 'avant que, jusqu’à ce que, dès que',
+    group: 'grammar',
+    emoji: '⏱️',
+  },
+  'health-advice': { label: 'Health & advice', group: 'topic', emoji: '🩺' },
+  'fr-conditionnel-present': { label: 'The conditional (advice)', group: 'grammar', emoji: '🤲' },
+  'fr-giving-advice': { label: 'Giving advice', group: 'grammar', emoji: '💬' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

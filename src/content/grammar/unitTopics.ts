@@ -569,4 +569,12 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-imparfait-pc', note: 'telling a life story' },
     { topic: 'fr-plus-que-parfait' },
   ],
+  'fr-b2-1-parcours': [
+    { topic: 'fr-participle-agreement', note: 'avoir, être and pronominal verbs' },
+    { topic: 'fr-time-conjunctions', note: 'quand, dès que, avant que …' },
+  ],
+  'fr-b2-1-sante': [
+    { topic: 'fr-conditionnel-present', note: 'softening advice and requests' },
+    { topic: 'fr-giving-advice', note: 'imperative, il faut que, il vaut mieux que' },
+  ],
 };

@@ -1,7 +1,9 @@
 import type { LevelContent } from '../schema';
 import { identite } from './u1-identite';
+import { parcours } from './u2-parcours';
+import { sante } from './u3-sante';
 
-const units = [identite];
+const units = [identite, parcours, sante];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),
