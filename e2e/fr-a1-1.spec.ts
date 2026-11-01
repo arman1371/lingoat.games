@@ -57,7 +57,7 @@ test.describe('French A1.1 – library', () => {
     await expect(page.getByRole('button', { name: /tu or vous/ })).toBeVisible();
     await expect(page.getByRole('button', { name: /Verb conjugation/ })).toHaveCount(0);
     await page.getByRole('button', { name: /tu or vous/ }).click();
-    const n = fr11.activities.filter((a) => a.tags.includes('fr-tu-vous' as never)).length;
+    const n = frenchActivities.filter((a) => a.tags.includes('fr-tu-vous' as never)).length;
     expect(n).toBeGreaterThan(1);
     await expect(page.getByTestId('result-count')).toHaveText(`${n} games`);
   });
