@@ -1140,6 +1140,33 @@ export const LESSONS = {
     rule: 'Most nouns add a silent -s in the plural, so you hear the plural only in the article: le, la and l’ become les, and un and une become des. Nouns in -eau and -al change differently: un bateau, des bateaux; un animal, des animaux.',
     examples: ['un frère, des frères', 'la sœur, les sœurs', 'un enfant, des enfants'],
   },
+  'fr-pronominal': {
+    title: 'Pronominal verbs',
+    rule: 'A pronominal verb has a small pronoun before it that matches the subject: je me lève, tu te laves, il se couche, nous nous reposons, vous vous habillez, elles se promènent. Me, te and se become m’, t’ and s’ before a vowel or h: je m’habille. In the negative ne goes before the pronoun.',
+    examples: [
+      'Je me lève à sept heures.',
+      'Elle s’habille vite.',
+      'Nous ne nous couchons pas tôt.',
+    ],
+  },
+  'fr-frequency': {
+    title: 'How often?',
+    rule: 'Short adverbs of frequency (toujours, souvent, rarement, parfois) go right after the verb: il se lève toujours tôt. Tous les jours, d’habitude and parfois can also open the sentence. Never is ne … jamais around the verb, without pas: je ne me couche jamais tard.',
+    examples: [
+      'Je me douche toujours le matin.',
+      'Parfois, nous dînons dehors.',
+      'Il ne fait jamais la vaisselle.',
+    ],
+  },
+  'fr-sequence': {
+    title: 'First, then, finally',
+    rule: 'Order a day with d’abord, ensuite (or puis) and enfin. Avant and après come before a noun: avant le dîner, après le travail. For times use à (à sept heures), vers for around (vers huit heures) and de … à … for from … to (de neuf heures à midi).',
+    examples: [
+      'D’abord, je me lève. Ensuite, je mange.',
+      'Je rentre vers six heures.',
+      'Je travaille de neuf heures à cinq heures.',
+    ],
+  },
   'fr-likes': {
     title: 'J’aime, je déteste …',
     rule: 'Aimer, adorer and détester are regular -er verbs. Before a noun use the definite article, even for things in general: j’aime le café, elle adore les chats. Before an activity use the infinitive: j’aime danser. Add beaucoup for more: j’aime beaucoup la musique.',

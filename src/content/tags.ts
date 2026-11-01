@@ -373,6 +373,10 @@ export const TAGS = {
   'fr-adjectives': { label: 'Adjectives (grand, grande)', group: 'grammar', emoji: '📏' },
   'fr-cest-il-est': { label: 'C’est or il est?', group: 'grammar', emoji: '👉' },
   'fr-plurals': { label: 'Plurals (les, des, -s)', group: 'grammar', emoji: '👥' },
+  // grammar points – French A1.2, unit 1
+  'fr-pronominal': { label: 'Pronominal verbs (se lever)', group: 'grammar', emoji: '🪞' },
+  'fr-frequency': { label: 'toujours, souvent, ne … jamais', group: 'grammar', emoji: '🔁' },
+  'fr-sequence': { label: 'd’abord, ensuite, enfin', group: 'grammar', emoji: '🔢' },
   // grammar points – French A1.1, unit 5
   'fr-likes': { label: 'J’aime, je déteste …', group: 'grammar', emoji: '💛' },
   'fr-negation': { label: 'ne … pas', group: 'grammar', emoji: '🚫' },
