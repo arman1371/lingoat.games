@@ -24,7 +24,7 @@ const faces = vocabList(U, 'Face and looks', [
   ['le front', 'forehead', '🤕'],
   ['le menton', 'chin', '🫦'],
   ['la joue', 'cheek', '😊'],
-  ['la peau', 'skin', '🖐️'],
+  ['le grain de beauté', 'mole or beauty spot', '🔘'],
   ['la fossette', 'dimple', '☺️'],
   ['le tatouage', 'tattoo', '🐉'],
   ['la coiffure', 'hairstyle', '💇'],
