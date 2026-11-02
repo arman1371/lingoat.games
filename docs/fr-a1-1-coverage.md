@@ -55,3 +55,52 @@ like the German units. Vocabulary cards of one unit are not repeated in another.
 
 Open points: French nouns carry their article inside the word ("le pain", "l'eau"), because the `article` field
 is German-only (der / die / das); the field that holds the target-language text is still named `de`.
+
+## Cross-check against the official DELF A1 page
+
+Arman supplied the official page [DELF tout public, niveau A1](https://www.france-education-international.fr/diplome/delf-tout-public/niveau-a1)
+(France Éducation international, saved as a PDF because the site blocks automated access; read on 2026-11-02). It
+lists no topics or vocabulary. It gives the "can do" statements for the level and the exam format: oral
+comprehension (4 exercises, 20 min), written comprehension (4 exercises, 30 min), written production (a form and a
+message of at least 40 words, 30 min) and an individual oral production (5 to 7 min, three parts), each out of 25.
+
+| "Je choisis le DELF A1 si je peux …"              | Where A1.1 teaches it                                                                    |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| me présenter et présenter quelqu'un               | units 1, 2 and 4 (introductions, être, mon / ma, c'est / il est)                         |
+| comprendre des annonces et instructions orales    | listen games in every unit, directions and the imperative (unit 7)                       |
+| comprendre des textes courts et simples           | quiz and dialogue games, menus and prices (unit 6), directions (unit 7)                  |
+| remplir un formulaire (nom, nationalité, adresse) | units 2 and 3 (nationalities, age, phone number, address, the alphabet)                  |
+| écrire une carte postale simple et brève          | **gap**: the spell and sentence games build words and sentences, nothing asks for a text |
+| répondre à des questions simples sur moi          | units 1 to 3 and 5 (dialogues, likes, family)                                            |
+| poser des questions simples                       | units 1 and 3 (comment, quel âge), unit 6 (ordering), unit 7 (où, asking the way)        |
+| acheter quelque chose et payer                    | unit 6 (market game with French prices, restaurant dialogue)                             |
+
+What the exam asks that the app cannot do yet: **speaking** (no engine records or scores speech; text-to-speech only
+plays French) and **free writing** (the 40-word message; the engines check answers against known solutions). These
+two skills would need a new kind of game, which is out of scope while only the 13 existing engines are used.
+
+## Cross-check against a DELF A1 curriculum overview
+
+Arman also supplied a three-page "Curriculum overview for DELF A1" from a language school
+([PDF](https://www.dyplus.com.ng/wp-content/uploads/2020/08/Updated-Curriculum-For-DELF-A1.pdf)), read on 2026-11-02.
+It is a school's teaching plan, **not** the official DELF référentiel (it is useful because it names topics, which the
+official page does not), and it spreads all of A1 over nine units, so the later units belong to A1.2. Result for A1.1:
+
+| Topic in the overview                                                          | Status in A1.1                                                                      |
+| ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| greetings, introducing oneself, être / s'appeler, countries and nationalities  | covered: units 1 and 2                                                              |
+| numbers to 99, alphabet, days and months, time, weather                        | covered: units 3 and 8                                                              |
+| articles, avoir, possessives, regular -er verbs, negation, quel, likes         | covered: units 2 to 5                                                               |
+| place in town, giving directions, faire, near future, imperative, on = we      | covered: units 5, 7 and 8                                                           |
+| professions and gender, describing someone, family, colours                    | covered: units 2, 4 and 8                                                           |
+| buying and selling, restaurant menu, quantities (pas de, assez / trop de), -ir | covered: unit 6                                                                     |
+| devoir, pouvoir + infinitive, il faut + infinitive                             | **gap**: vouloir only; no unit teaches devoir, pouvoir or il faut                   |
+| prepositions with countries (en France, au Canada, aux États-Unis)             | **thin**: only a tip in the "au, aux, du, des" lesson, no game                      |
+| tonic pronouns (moi, toi, lui …)                                               | **thin**: only "moi non plus" in unit 5                                             |
+| the verb dire, making an appointment                                           | **gap**: appointment only as a plan in the unit 8 dialogue                          |
+| pronominal verbs, passé composé, avoir mal à, recent past                      | not A1.1: belong to French A1.2 (daily routine, health), as in the overview's units |
+| pronunciation (liaison, nasal vowels, eu / œu, s as [s] or [z])                | **gap**: the app has listening games but no pronunciation lessons                   |
+
+Suggested follow-up for the French A1.2 thread: devoir / pouvoir / il faut and the tonic pronouns are the A1.1 items
+the overview teaches early, so they fit in its first units. Direct and indirect object pronouns, relative qui / que, en, comparatives and the imparfait in the overview are for the
+A1.2 and A2 threads to place.
