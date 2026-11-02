@@ -585,4 +585,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a22-reported-speech' },
     { topic: 'fr-a22-pronoun-y', note: 'y and en' },
   ],
+  'fr-a2-2-nature': [
+    { topic: 'fr-a22-imperative-pronouns', note: 'vas-y, prends-en, ne le touche pas' },
+    { topic: 'fr-a22-purpose' },
+    { topic: 'fr-a22-passive' },
+  ],
 };

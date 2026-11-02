@@ -35,5 +35,9 @@ export const FR22_SOURCES = {
   cleft: wp('Phrase_clivée', 'Phrase clivée'),
   reportedSpeech: wp('Discours_indirect', 'Discours indirect'),
   yPronoun: wk('y', 'y'),
+  imperative: wp('Impératif_(grammaire)', 'Impératif (grammaire)'),
+  afinDe: wk('afin_de', 'afin de'),
+  pourQue: wk('pour_que', 'pour que'),
+  passive: wp('Voix_passive', 'Voix passive'),
   nounComplement: wp('Complément_du_nom', 'Complément du nom'),
 } as const satisfies Record<string, Source>;

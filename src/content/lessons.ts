@@ -1409,6 +1409,29 @@ export const LESSONS = {
       'Il en parle tout le temps.',
     ],
   },
+  'fr-a22-imperative-pronouns': {
+    title: 'The imperative with pronouns',
+    rule: 'In a positive command the pronouns follow the verb, joined by hyphens, with the direct pronoun first: donne-le-moi, prends-en, vas-y. Me becomes moi at the end. In a negative command the pronouns stay before the verb in the normal order: ne le touche pas, n’y va pas. Keep the s before y and en: vas-y.',
+    examples: ['Vas-y !', 'Prends-en un peu.', 'Ne le touchez pas.'],
+  },
+  'fr-a22-purpose': {
+    title: 'Purpose: pour, afin de, pour que',
+    rule: 'To say what something is for, use pour or the more formal afin de + infinitive when the subject does not change: je pars tôt pour éviter la chaleur. When the subject changes use pour que or afin que + subjunctive: je t’explique pour que tu comprennes.',
+    examples: [
+      'Nous partons tôt pour éviter la chaleur.',
+      'Il prend une carte afin de ne pas se perdre.',
+      'On crée un parc pour que les animaux soient protégés.',
+    ],
+  },
+  'fr-a22-passive': {
+    title: 'The passive voice',
+    rule: 'The object of the active sentence becomes the subject: être (in the right tense) + past participle, which agrees with the new subject. The doer is introduced by par (or de after verbs of state). Le garde ferme la porte → La porte est fermée par le garde.',
+    examples: [
+      'Ce parc est protégé par l’État.',
+      'Les arbres ont été abattus par la tempête.',
+      'Le lac est entouré de montagnes.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

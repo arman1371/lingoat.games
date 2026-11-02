@@ -96,6 +96,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (reported speech)', 'fr-a2-2-parcours-gap-reported'],
   ['gap fill (y or en)', 'fr-a2-2-parcours-gap-y'],
   ['dialogue (interview, studies, message)', 'fr-a2-2-parcours-dialogues'],
+  ['flashcards (landscapes)', 'fr-a2-2-nature-flash-landscape'],
+  ['listen (nature)', 'fr-a2-2-nature-listen-nature'],
+  ['sort it (before or after the verb)', 'fr-a2-2-nature-sort-imperative'],
+  ['gap fill (commands with pronouns)', 'fr-a2-2-nature-gap-imperative'],
+  ['gap fill (purpose)', 'fr-a2-2-nature-gap-purpose'],
+  ['gap fill (passive)', 'fr-a2-2-nature-gap-passive'],
+  ['dialogue (reserve, hike, petition)', 'fr-a2-2-nature-dialogues'],
 ];
 
 test.describe('French A2.2 – playing the games', () => {

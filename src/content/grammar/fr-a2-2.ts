@@ -901,4 +901,162 @@ export const FR22_TOPICS: GrammarTopic[] = [
     related: ['fr-a22-pronoun-order', 'fr-object-pronouns'],
     sources: [S.yPronoun],
   },
+
+  // ---- Unit 6 (Soif de nature) ----
+  {
+    id: 'fr-a22-imperative-pronouns',
+    title: 'The imperative with pronouns',
+    tagline: 'Where do the pronouns go in a command?',
+    level: LEVEL,
+    summary:
+      'After a positive command the pronouns follow the verb with hyphens (donne-le-moi, vas-y, prends-en). In a negative command they stay before the verb (ne le touche pas).',
+    sections: [
+      section(
+        'positive',
+        'Positive commands',
+        p(
+          'The pronouns come **after the verb**, joined with **hyphens**. The direct pronoun comes first: **donne-le-moi**. **Me** and **te** become **moi** and **toi** at the end. **Y** and **en** come last: **vas-y**, **prends-en**.',
+        ),
+        table(
+          'Positive commands.',
+          ['Sentence', 'command'],
+          [
+            ['Tu donnes la carte à moi.', 'Donne-la-moi !'],
+            ['Tu y vas.', 'Vas-y !'],
+            ['Tu prends des champignons.', 'Prends-en !'],
+            ['Vous vous levez tôt.', 'Levez-vous tôt !'],
+          ],
+        ),
+        tip(
+          'The s that comes back',
+          '-er verbs lose the s of tu in the imperative (tu vas → va), but it comes back before y and en: vas-y, parles-en.',
+        ),
+      ),
+      section(
+        'negative',
+        'Negative commands',
+        p(
+          'In a **negative** command everything is as usual: **ne**, then the pronouns in their normal order, then the verb, then **pas**.',
+        ),
+        examples(
+          ['Ne le touche pas !', 'Do not touch it!'],
+          ['N’y allez pas !', 'Do not go there!'],
+          ['Ne me le dis pas.', 'Do not tell it to me.'],
+          ['Ne t’inquiète pas.', 'Do not worry.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Donne-moi-le.  ✓ Donne-le-moi.',
+          '✗ Ne prends-en pas.  ✓ N’en prends pas.',
+        ),
+      ),
+    ],
+    related: ['fr-imperative', 'fr-a22-pronoun-order', 'fr-a22-pronoun-y'],
+    sources: [S.imperative, S.personalPronoun],
+  },
+  {
+    id: 'fr-a22-purpose',
+    title: 'Purpose: pour, afin de, pour que',
+    tagline: 'How do I say what something is for?',
+    level: LEVEL,
+    summary:
+      'With the same subject use pour or afin de + infinitive. With a new subject use pour que or afin que + subjunctive.',
+    sections: [
+      section(
+        'same',
+        'Same subject: pour, afin de',
+        p(
+          'If the person who acts is the same in both parts, use **pour** + infinitive. **Afin de** means the same and is a little more formal. For a negative purpose use **pour ne pas** / **afin de ne pas**.',
+        ),
+        examples(
+          ['Nous partons tôt pour éviter la chaleur.', 'We leave early to avoid the heat.'],
+          ['Il met des bottes afin de ne pas glisser.', 'He puts on boots so as not to slip.'],
+        ),
+      ),
+      section(
+        'new',
+        'New subject: pour que, afin que',
+        p(
+          'If the subject changes, use **pour que** or **afin que** and put the verb in the **subjunctive**.',
+        ),
+        table(
+          'Same or new subject?',
+          ['Subject', 'structure', 'example'],
+          [
+            ['same', 'pour / afin de + infinitive', 'Je prends une carte pour trouver le chemin.'],
+            [
+              'different',
+              'pour que / afin que + subjunctive',
+              'Je prends une carte pour que nous ne nous perdions pas.',
+            ],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je pars tôt pour que éviter la chaleur.  ✓ Je pars tôt pour éviter la chaleur.',
+          '✗ Je pars pour que je voie la mer.  ✓ Je pars pour voir la mer. (same subject)',
+        ),
+      ),
+    ],
+    related: ['fr-a22-subjunctive', 'fr-a22-cause-consequence'],
+    sources: [S.afinDe, S.pourQue],
+  },
+  {
+    id: 'fr-a22-passive',
+    title: 'The passive voice',
+    tagline: 'How do I say what is done to something?',
+    level: LEVEL,
+    summary:
+      'The passive is être + past participle, which agrees with the subject. The doer is introduced by par (or de after verbs of state).',
+    sections: [
+      section(
+        'forms',
+        'Forming the passive',
+        p(
+          'The **object** of the active sentence becomes the **subject** of the passive. Use **être** in the same tense as the active verb, then the **past participle**, which agrees with the new subject. The doer follows **par**.',
+        ),
+        table(
+          'Active and passive.',
+          ['Tense', 'active', 'passive'],
+          [
+            ['present', 'L’État protège ce parc.', 'Ce parc est protégé par l’État.'],
+            [
+              'passé composé',
+              'La tempête a abattu les arbres.',
+              'Les arbres ont été abattus par la tempête.',
+            ],
+            [
+              'imparfait',
+              'Un incendie détruisait la forêt.',
+              'La forêt était détruite par un incendie.',
+            ],
+          ],
+        ),
+      ),
+      section(
+        'use',
+        'When to use it',
+        p(
+          'The passive puts the focus on **what happens to something**. The doer can be left out: **le sentier a été fermé**. After verbs of state (entouré, couvert, rempli) the doer is introduced by **de**: **le lac est entouré de montagnes**.',
+        ),
+        examples(
+          [
+            'Cette réserve est visitée chaque année par des milliers de personnes.',
+            'This reserve is visited every year by thousands of people.',
+          ],
+          [
+            'Le sentier a été fermé à cause de la neige.',
+            'The trail was closed because of the snow.',
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ La forêt est détruit.  ✓ La forêt est détruite.',
+          '✗ Les arbres ont abattus.  ✓ Les arbres ont été abattus.',
+        ),
+      ),
+    ],
+    related: ['fr-a21-participles', 'fr-a22-participle-agreement'],
+    sources: [S.passive],
+  },
 ];
