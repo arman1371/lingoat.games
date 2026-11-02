@@ -22,6 +22,8 @@ const formsTable = (
 };
 const imparfaitTable = (caption: string, verbs: readonly string[]) =>
   formsTable(caption, verbs, imparfait);
+const futurTable = (caption: string, verbs: readonly string[]) =>
+  formsTable(caption, verbs, futurSimple);
 
 /** French A2.1, units 3 to 8: memories, housing, portraits, the future, cooking and school. */
 export const FR21_TOPICS_B: GrammarTopic[] = [
@@ -498,5 +500,150 @@ export const FR21_TOPICS_B: GrammarTopic[] = [
     ],
     related: ['fr-possessives', 'fr-a21-equality', 'fr-contractions'],
     sources: [S.pronomPossessif],
+  },
+  // ---- unit 6: futur --------------------------------------------------------------------------
+  {
+    id: 'fr-a21-futur',
+    title: 'The futur simple',
+    tagline: 'Je voyagerai, nous finirons: tomorrow in one word',
+    level: LEVEL,
+    summary:
+      'The futur simple is used for predictions, promises and plans. It is formed from the infinitive (without the final -e for -re verbs) plus the endings -ai, -as, -a, -ons, -ez, -ont, which are the present tense of avoir.',
+    sections: [
+      section(
+        'forms',
+        'Infinitive plus endings',
+        futurTable('Futur simple of parler, finir and prendre.', ['parler', 'finir', 'prendre']),
+        p(
+          'The endings are **the same for every verb**, including the irregular ones. For **-re** verbs drop the final **-e** first: *prendre → prendr-*, *vendre → vendr-*. The **r** is always heard before the ending.',
+        ),
+        tip(
+          'Spelling changes',
+          'Some -er verbs change before the r: j’achèterai, je lèverai, j’appellerai, je jetterai, j’enverrai, j’essaierai or j’essayerai.',
+        ),
+      ),
+      section(
+        'use',
+        'When to use it',
+        p(
+          'Use the futur simple for **predictions** (*Il pleuvra demain.*), **promises** (*Je t’appellerai.*) and plans that are further away (*L’an prochain, nous déménagerons.*). For something about to happen, the **futur proche** is more usual (*Il va pleuvoir.*).',
+        ),
+        table(
+          'Futur proche or futur simple?',
+          ['Futur proche (aller + infinitive)', 'Futur simple'],
+          [
+            ['Je vais prendre le train.', 'Je prendrai le train.'],
+            ['Nous allons déménager.', 'Nous déménagerons l’an prochain.'],
+            ['Il va pleuvoir.', 'Il pleuvra demain.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Nous voyageons l’an prochain.  ✓ Nous voyagerons l’an prochain.',
+          '✗ Ils parlera.  ✓ Ils parleront.',
+          '✗ Tu prendreras.  ✓ Tu prendras.',
+        ),
+      ),
+    ],
+    related: ['fr-a21-futur-irregular', 'fr-futur-proche', 'fr-a21-si-futur'],
+    sources: [S.futurSimple],
+  },
+  {
+    id: 'fr-a21-futur-irregular',
+    title: 'Irregular future stems',
+    tagline: 'Irai, serai, ferai, viendrai: new stems, same endings',
+    level: LEVEL,
+    summary:
+      'About a dozen very common verbs have an irregular stem in the futur simple. The endings do not change: -ai, -as, -a, -ons, -ez, -ont. The stem always ends in -r.',
+    sections: [
+      section(
+        'stems',
+        'The stems to learn',
+        table(
+          'Irregular stems.',
+          ['Infinitive', 'Stem', 'Je …'],
+          [
+            ['être', 'ser-', 'je serai'],
+            ['avoir', 'aur-', 'j’aurai'],
+            ['aller', 'ir-', 'j’irai'],
+            ['faire', 'fer-', 'je ferai'],
+            ['venir / devenir', 'viendr- / deviendr-', 'je viendrai'],
+            ['pouvoir', 'pourr-', 'je pourrai'],
+            ['vouloir', 'voudr-', 'je voudrai'],
+            ['voir', 'verr-', 'je verrai'],
+            ['savoir', 'saur-', 'je saurai'],
+            ['devoir', 'devr-', 'je devrai'],
+          ],
+        ),
+        futurTable('Futur simple of être, aller and faire.', ['être', 'aller', 'faire']),
+      ),
+      section(
+        'tips',
+        'Remembering them',
+        p(
+          'Most irregular stems are close to the infinitive: you hear the **-r** as in the regular verbs. Watch **voir → verr-** (two r, different from voyez) and **aller → ir-** (nothing like *all-*).',
+        ),
+        mistake(
+          'Watch out',
+          '✗ J’allerai à Paris.  ✓ J’irai à Paris.',
+          '✗ Il fairera beau.  ✓ Il fera beau.',
+          '✗ Vous voirez.  ✓ Vous verrez.',
+        ),
+        examples(
+          ['Il sera là demain.', 'He will be there tomorrow.'],
+          ['Nous irons à Paris le mois prochain.', 'We will go to Paris next month.'],
+          ['Tu pourras venir avec nous ?', 'Will you be able to come with us?'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-futur', 'fr-etre-avoir', 'fr-aller'],
+    sources: [S.futurSimple, S.aller, S.etre, S.avoir],
+  },
+  {
+    id: 'fr-a21-si-futur',
+    title: 'si + présent + futur',
+    tagline: 'Si tu viens, nous irons: a real possibility',
+    level: LEVEL,
+    summary:
+      'For a real possibility use si + present in the if-clause and the futur simple (or the imperative) in the result. Never put the futur simple after si.',
+    sections: [
+      section(
+        'pattern',
+        'The pattern',
+        table(
+          'Si + present, then future.',
+          ['If-clause (present)', 'Result (future)'],
+          [
+            ['Si j’ai le temps,', 'je viendrai.'],
+            ['S’il fait beau,', 'nous irons à la plage.'],
+            ['Si tu pars tôt,', 'tu seras à l’heure.'],
+            ['Si nous ne faisons rien,', 'la planète souffrira.'],
+          ],
+        ),
+        p(
+          'The clauses can be swapped without changing the tenses: *Nous irons à la plage s’il fait beau.* Si elides to **s’** only before **il / ils**.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Common mistakes',
+        mistake(
+          'Watch out',
+          '✗ Si j’aurai le temps, je viendrai.  ✓ Si j’ai le temps, je viendrai.',
+          '✗ Si tu viendras, nous irons.  ✓ Si tu viens, nous irons.',
+          '✗ Si il pleut …  ✓ S’il pleut …',
+        ),
+        tip(
+          'Other results',
+          'The result can also be an imperative or a present: Si tu as faim, mange ! Si on se dépêche, on arrive à l’heure.',
+        ),
+        examples(
+          ['Si tu pars tôt, tu seras à l’heure.', 'If you leave early, you will be on time.'],
+          ['S’il pleut, nous resterons à la maison.', 'If it rains, we will stay at home.'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-condition', 'fr-a21-futur', 'fr-a21-futur-irregular'],
+    sources: [S.si, S.futurSimple],
   },
 ];

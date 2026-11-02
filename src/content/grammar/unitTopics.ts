@@ -578,6 +578,11 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a21-chaque-tout' },
     { topic: 'fr-a21-possessive-pronouns' },
   ],
+  'fr-a2-1-futur': [
+    { topic: 'fr-a21-futur' },
+    { topic: 'fr-a21-futur-irregular', note: 'irai, serai, ferai, viendrai' },
+    { topic: 'fr-a21-si-futur' },
+  ],
   // ---- French A2.2 ----------------------------------------------------------------------------
   'fr-a2-2-sante': [
     { topic: 'fr-object-pronouns', note: 'le, la, les, lui, leur' },
