@@ -76,7 +76,7 @@ const FRENCH_LEVELS: LevelMeta[] = (
       language: 'fr',
       id: 'fr-c1-1',
       title: 'C1.1',
-      subtitle: 'Media and information, with the connectors of a formal argument',
+      subtitle: 'Media, society, work and technology, with the grammar of formal argument',
       status: 'available',
       load: () => import('./fr-c1-1'),
     },

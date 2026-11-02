@@ -70,7 +70,7 @@ two shared test harnesses (`content.test.ts`, `playability.test.tsx`), plus Fren
   adds `unitFr` and `frCustomTable` (a conjugation table with six hand-typed forms, for tenses and moods that
   `src/lib/french` does not generate). Grammar tags, mini lessons and full lessons use a level prefix (`fr-c11-…`) so
   levels written in parallel cannot collide; the full lesson is written together with the unit that first teaches it.
-  The content test compares word cards with every earlier French level (see `docs/fr-c1-1-coverage.md`).
+  The content test compares word cards with every earlier French level (see `docs/fr-c1-1-coverage.md`). French C1.1 (`fr-c1-1/helpers.ts`) adds `conditionnel`, `subjonctif`, `plusQueParfait` and `conditionnelPasse` (hand-written forms with tests) with `*Table` wrappers, and the shortcuts `gh` / `qh` (gap fill or quiz whose wrong options are the keys of the `why` map) and `cards` (sort-it cards from rows). A French level goes into one pull request with all its units.
 - e2e: add the pack to `frenchActivities` in `e2e/helpers.ts` (kept apart from `allActivities`, which counts German library
   games) and follow `e2e/fr-a1-1.spec.ts`.
 

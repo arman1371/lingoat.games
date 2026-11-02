@@ -35,22 +35,22 @@ list against the DALF C1 exam description.
 A topic became a unit when at least two of the sources above treat it (Édito C1 counts as one source even though two documents
 describe it). The grammar of a unit is what the Édito sequencing attaches to that topic.
 
-| #   | Unit (id suffix)                       | Édito C1 (UHU 1st ed. / EOI 2nd ed.) | Cosmopolite 5        | Grammar (tag `fr-c11-…`)                             |
-| --- | -------------------------------------- | ------------------------------------ | -------------------- | ---------------------------------------------------- |
-| 1   | Les médias et l'information (`medias`) | Thème 2 · U2 (fake news)             | D6 L1 (press review) | `connectors`: cause, consequence, addition           |
-| 2   | Société et engagement (`societe`)      | U2 democracy, U11 solidarity         | D4 L2, D5 L2         | si: condition and hypothesis (planned)               |
-| 3   | Égalité (`egalite`)                    | U6 feminism                          | D4 L2 (inequality)   | prefixes and suffixes (planned)                      |
-| 4   | Alimentation (`alimentation`)          | Thème 3 · U4 (short circuits)        | D2                   | expressing a paradox and concession (planned)        |
-| 5   | Santé et médecine (`sante`)            | Thème 9 · U10 (health 3.0)           | D3                   | the pronoun system: y, en, double pronouns (planned) |
-| 6   | Ville et climat (`ville`)              | U4 (climate, overtourism)            | D1                   | expressing will and recommendation (planned)         |
-| 7   | Famille et générations (`famille`)     | Thème 6 · U8, U9                     | D5 L4                | reprise and cohesion (planned)                       |
-| 8   | Culture, séries et musique (`culture`) | Thèmes 1, 7 · U5                     | D4 L4, D5 L1         | mise en relief (planned)                             |
-| 9   | Livres et poésie (`litterature`)       | Thèmes 8, 10                         | D5 L3                | narrative tenses (planned)                           |
-| 10  | Monde du travail (`travail`)           | Thème 9 (robots and jobs)            | D6 L2–L4             | registers of language (planned)                      |
-| 11  | Numérique et avenir (`numerique`)      | Thème 9 · U10 (chips, AI)            | –                    | modalisation (planned)                               |
+| #   | Unit (id suffix)                       | Édito C1 (UHU 1st ed. / EOI 2nd ed.) | Cosmopolite 5        | Grammar (tag `fr-c11-…`)                   |
+| --- | -------------------------------------- | ------------------------------------ | -------------------- | ------------------------------------------ |
+| 1   | Les médias et l'information (`medias`) | Thème 2 · U2 (fake news)             | D6 L1 (press review) | `connectors`: cause, consequence, addition |
+| 2   | Société et engagement (`societe`)      | U2 democracy, U11 solidarity         | D4 L2, D5 L2         | si: condition and hypothesis               |
+| 3   | Égalité (`egalite`)                    | U6 feminism                          | D4 L2 (inequality)   | prefixes and suffixes                      |
+| 4   | Alimentation (`alimentation`)          | Thème 3 · U4 (short circuits)        | D2                   | expressing a paradox and concession        |
+| 5   | Santé et médecine (`sante`)            | Thème 9 · U10 (health 3.0)           | D3                   | the pronoun system: y, en, double pronouns |
+| 6   | Ville et climat (`ville`)              | U4 (climate, overtourism)            | D1                   | expressing will and recommendation         |
+| 7   | Famille et générations (`famille`)     | Thème 6 · U8, U9                     | D5 L4                | reprise and cohesion                       |
+| 8   | Culture, séries et musique (`culture`) | Thèmes 1, 7 · U5                     | D4 L4, D5 L1         | mise en relief                             |
+| 9   | Livres et poésie (`litterature`)       | Thèmes 8, 10                         | D5 L3                | narrative tenses                           |
+| 10  | Monde du travail (`travail`)           | Thème 9 (robots and jobs)            | D6 L2–L4             | registers of language                      |
+| 11  | Numérique et avenir (`numerique`)      | Thème 9 · U10 (chips, AI)            | –                    | modalisation                               |
 
-Units 1 to 11 are written one per pull request. **Unit 1 (`medias`, 15 games on 10 engines) is done**; the rest are listed as
-planned and may change while their sources are read.
+All 11 units are written and ship together in one pull request (Arman's rule: one PR per French level, not one per unit):
+**355 word cards and 142 games** in total. Every unit uses at least six of the 13 game engines (enforced by the content suite).
 
 ### Left out on purpose
 
@@ -76,3 +76,35 @@ exceptions would go into `REVIEW_WORDS`; there are none.
 - Grammar lesson `fr-c11-connectors` (mini lesson plus full lesson): parce que / car / puisque / comme / étant donné que,
   grâce à / à cause de / en raison de / faute de, donc / par conséquent / c'est pourquoi / si bien que, de plus / en outre /
   par ailleurs / en effet. Wrong gap-fill options carry a one-sentence `why`.
+
+## Units 2 to 11
+
+Each unit has two or three word lists of about 32 cards, 12 to 13 games on at least six engines (first game difficulty 1, last
+game a "challenge", dialogues, gap fills with a one-sentence `why` on each wrong option) and one full grammar lesson. The
+grammar of a unit is taught in its mini lessons and checked in its gap fills, quizzes and sort-it games; the unit challenge
+mixes vocabulary and grammar.
+
+| #   | Unit                                         | Cards | Games | Lesson (`fr-c11-…`) and what it teaches                                                                                            |
+| --- | -------------------------------------------- | ----- | ----- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 2   | Société et engagement (`societe`)            | 33    | 13    | `si-clauses`: si + présent / imparfait / plus-que-parfait with their result tenses; au cas où, sauf si, à condition que            |
+| 3   | Égalité et diversité (`egalite`)             | 32    | 13    | `affixes`: in-/im-/il-/ir-, dé(s)-, mé-, anti-; -ité, -tion/-ation, -isme, -ment, -ance; -able/-ible, -if, -iser                   |
+| 4   | Manger, produire, consommer (`alimentation`) | 32    | 13    | `concession`: bien que, quoique + subjonctif; même si, alors que, tandis que + indicatif; malgré, en dépit de; pourtant, cependant |
+| 5   | Santé et bien-être (`sante`)                 | 32    | 12    | `pronouns`: en, y, double pronouns (me le, le lui, lui en, y en) and their order after a positive imperative                       |
+| 6   | Ville et environnement (`ville`)             | 32    | 13    | `subjunctive`: after will, necessity, feeling and doubt; same subject → infinitive; certainty keeps the indicative                 |
+| 7   | Famille et générations (`famille`)           | 32    | 12    | `reprise`: celui/celle/ceux/celles + de, qui, que, où; ce qui, ce que, ce dont, ce à quoi; lequel, auquel, duquel, dont            |
+| 8   | Culture et création (`culture`)              | 32    | 12    | `emphasis`: c'est … qui / que, ce qui … c'est (pseudo-cleft) and dislocation                                                       |
+| 9   | Littérature et récit (`litterature`)         | 32    | 13    | `narrative-tenses`: imparfait (scene), passé composé or passé simple (events), plus-que-parfait; recognising the passé simple      |
+| 10  | Le monde du travail (`travail`)              | 32    | 13    | `registers`: vocabulary, questions and negation by register; the formal email (Madame, Monsieur; veuillez; cordialement)           |
+| 11  | Numérique et avenir (`numerique`)            | 32    | 13    | `modality`: certainty (indicatif), possibility and doubt (subjonctif), reported unconfirmed information (conditionnel)             |
+
+Tense and mood tables in the lessons come from `fr-c1-1/helpers.ts` (`conditionnel`, `subjonctif`, `plusQueParfait`,
+`conditionnelPasse` and the `*Table` wrappers), tested in `helpers.test.ts`; nothing was added to the shared `src/lib/french`
+so that French levels written in parallel do not conflict.
+
+### Known limits
+
+- Vocabulary was chosen to avoid the word cards of every earlier French level; the content test enforces it for levels merged
+  before this one.
+- No native speaker has checked the French; register labels (familier / courant / soutenu) and the choice of passé simple
+  forms are the first things to review.
+- The unit list has not been checked against the DALF C1 description (the official pages could not be read).
