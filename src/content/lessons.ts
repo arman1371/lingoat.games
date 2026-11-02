@@ -1178,6 +1178,24 @@ export const LESSONS = {
       'Le club dont il est président recrute.',
     ],
   },
+  'fr-c12-futur-anterieur': {
+    title: 'The futur antérieur',
+    rule: 'Avoir or être in the futur simple + past participle: j’aurai fini, elle sera partie. It shows an action that will be finished before another future action or a future date. It follows quand, lorsque, dès que, aussitôt que, une fois que and après que, and d’ici + date.',
+    examples: [
+      'Quand nous aurons fini le tri, nous sortirons.',
+      'D’ici 2040, la ville aura réduit ses émissions.',
+      'Elle sera partie avant la fin du débat.',
+    ],
+  },
+  'fr-c12-cause-consequence': {
+    title: 'Cause and consequence',
+    rule: 'Cause: parce que, puisque (known to both), car, comme (at the start), grâce à (positive), à cause de (negative), en raison de (formal). Consequence: donc, alors, par conséquent, c’est pourquoi, si bien que, tellement … que, si … que. Put the cause after parce que, the effect after donc.',
+    examples: [
+      'Les récoltes baissent à cause de la canicule.',
+      'Il a peu plu, si bien que le fleuve est à sec.',
+      'Il est tellement fatigué qu’il s’endort.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',

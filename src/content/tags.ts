@@ -399,6 +399,10 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🔗',
   },
+  // unit 7
+  'fr-c12-ecology': { label: 'Climate & ecology', group: 'topic', emoji: '🌍' },
+  'fr-c12-futur-anterieur': { label: 'Futur antérieur', group: 'grammar', emoji: '⏮️' },
+  'fr-c12-cause-consequence': { label: 'Cause and consequence', group: 'grammar', emoji: '⚖️' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },

@@ -564,4 +564,119 @@ export const FRC12_TOPICS_B: GrammarTopic[] = [
     related: ['fr-c12-but'],
     sources: [S.pronomRelatif],
   },
+  {
+    id: 'fr-c12-futur-anterieur',
+    title: 'The futur antérieur',
+    tagline: 'What will have happened by then',
+    level: LEVEL,
+    summary:
+      'The futur antérieur shows an action that will already be finished before another future action or a future date. It is built with avoir or être in the futur simple plus the past participle.',
+    sections: [
+      section(
+        'forms',
+        'Forms',
+        table(
+          'Futur antérieur of three verbs.',
+          ['Person', 'finir (avoir)', 'faire (avoir)', 'partir (être)'],
+          [
+            ['je', 'aurai fini', 'aurai fait', 'serai parti(e)'],
+            ['tu', 'auras fini', 'auras fait', 'seras parti(e)'],
+            ['il / elle / on', 'aura fini', 'aura fait', 'sera parti(e)'],
+            ['nous', 'aurons fini', 'aurons fait', 'serons parti(e)s'],
+            ['vous', 'aurez fini', 'aurez fait', 'serez parti(e)(s)'],
+            ['ils / elles', 'auront fini', 'auront fait', 'seront parti(e)s'],
+          ],
+        ),
+        p(
+          'Verbs that take **être** in the passé composé (aller, partir, venir, arriver, the reflexive verbs) take **être** here too, and the participle agrees with the subject.',
+        ),
+      ),
+      section(
+        'use',
+        'When to use it',
+        examples(
+          [
+            'Quand nous aurons fini le tri, nous sortirons.',
+            'When we have finished sorting, we will go out.',
+          ],
+          [
+            'D’ici 2040, la ville aura réduit ses émissions.',
+            'By 2040 the city will have cut its emissions.',
+          ],
+          [
+            'Il aura oublié son sac.',
+            'He has probably forgotten his bag. (a guess about the past)',
+          ],
+        ),
+        p(
+          'Typical triggers are **quand, lorsque, dès que, aussitôt que, une fois que, après que** and **d’ici** + a future date. The main clause is usually in the **futur simple**. The same tense can express a guess about something that has already happened.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Quand nous finirons, nous sortirons.  ✓ Quand nous aurons fini, nous sortirons.',
+          '✗ Elle aura partie.  ✓ Elle sera partie.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-recit-passe'],
+    sources: [S.futurAnterieur],
+  },
+  {
+    id: 'fr-c12-cause-consequence',
+    title: 'Cause and consequence',
+    tagline: 'Link what happens to why it happens',
+    level: LEVEL,
+    summary:
+      'Cause and consequence connectors link two ideas in either direction. Learn which ones introduce the cause and which introduce the result, and which take a noun, a verb or a full clause.',
+    sections: [
+      section(
+        'cause',
+        'Cause',
+        table(
+          'Expressing cause.',
+          ['Connector', 'Followed by', 'Nuance'],
+          [
+            ['parce que', 'clause', 'new information'],
+            ['puisque', 'clause', 'known to both speakers'],
+            ['comme', 'clause (start of sentence)', 'neutral'],
+            ['car', 'clause (written)', 'explanation'],
+            ['grâce à', 'noun', 'positive cause'],
+            ['à cause de', 'noun', 'negative or neutral cause'],
+            ['en raison de', 'noun', 'formal'],
+          ],
+        ),
+        examples(
+          [
+            'Les récoltes baissent à cause de la canicule.',
+            'Harvests fall because of the heatwave.',
+          ],
+          ['La ville recycle plus grâce au tri.', 'The city recycles more thanks to sorting.'],
+        ),
+      ),
+      section(
+        'consequence',
+        'Consequence',
+        table(
+          'Expressing consequence.',
+          ['Connector', 'Example'],
+          [
+            ['donc, alors', 'Il pleut, donc nous restons.'],
+            [
+              'par conséquent, c’est pourquoi',
+              'Les prix montent ; c’est pourquoi nous économisons.',
+            ],
+            ['si bien que, de sorte que', 'Il a peu plu, si bien que le fleuve est à sec.'],
+            ['tellement / si … que', 'Il est tellement fatigué qu’il s’endort.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il pleut, parce que nous restons.  ✓ Nous restons parce qu’il pleut.',
+          '✗ Grâce de la sécheresse, les prix montent.  ✓ À cause de la sécheresse, les prix montent.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-futur-anterieur'],
+    sources: [S.proposition],
+  },
 ];
