@@ -474,4 +474,133 @@ export const FR22B_TOPICS_B: GrammarTopic[] = [
     related: ['fr-b22-superlative-subj'],
     sources: [S.preposition, S.personalPronoun],
   },
+  {
+    id: 'fr-b22-cause',
+    title: 'Expressing cause',
+    tagline: 'parce que · puisque · grâce à · à cause de',
+    level: LEVEL,
+    summary:
+      'Cause is expressed with a clause or with a noun. Most cause connectors take the indicative; ce n’est pas que and non que take the subjunctive. Before a noun, grâce à is favourable, à cause de unwelcome and en raison de formal.',
+    sections: [
+      section(
+        'clauses',
+        'Cause + clause',
+        table(
+          'Cause connectors with a verb.',
+          ['Connector', 'Nuance', 'Mood', 'Example'],
+          [
+            [
+              'parce que',
+              'the new information',
+              'indicative',
+              'Il est parti parce qu’il était fatigué.',
+            ],
+            ['puisque', 'a cause the listener knows', 'indicative', 'Puisque tu es là, aide-moi.'],
+            [
+              'étant donné que, du fait que',
+              'formal',
+              'indicative',
+              'Étant donné que les fonds sont limités, il faut choisir.',
+            ],
+            [
+              'sous prétexte que',
+              'a doubtful excuse',
+              'indicative',
+              'Il refuse sous prétexte que c’est trop long.',
+            ],
+            [
+              'ce n’est pas que, non que',
+              'a cause that is denied',
+              'subjunctive',
+              'Ce n’est pas qu’il soit paresseux.',
+            ],
+          ],
+        ),
+      ),
+      section(
+        'nouns',
+        'Cause + noun',
+        compare(
+          {
+            title: 'grâce à',
+            question: 'favourable cause',
+            example: 'Grâce à ses recherches, elle a trouvé.',
+          },
+          {
+            title: 'à cause de',
+            question: 'unwelcome cause',
+            example: 'À cause du brouillard, le vol est annulé.',
+          },
+          {
+            title: 'en raison de',
+            question: 'formal, neutral',
+            example: 'En raison du coût, le projet est suspendu.',
+          },
+        ),
+        mistake(
+          'Watch out',
+          '✗ Grâce à il est riche.  ✓ Grâce à son travail, il est riche.',
+          '✗ Parce que la pluie.  ✓ À cause de la pluie.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-consequence'],
+    sources: [S.subordinateAdverbial, S.connector],
+  },
+  {
+    id: 'fr-b22-consequence',
+    title: 'Consequence and aim',
+    tagline: 'donc · si bien que · tellement … que · de façon que',
+    level: LEVEL,
+    summary:
+      'A consequence that has happened takes the indicative (donc, par conséquent, si bien que, tellement … que). An aim that is still to be reached takes the subjunctive (de façon que, de sorte que).',
+    sections: [
+      section(
+        'result',
+        'A result: the indicative',
+        table(
+          'Connectors for a result.',
+          ['Connector', 'Example'],
+          [
+            [
+              'donc, par conséquent, c’est pourquoi',
+              'Le budget baisse, donc la recherche ralentit.',
+            ],
+            [
+              'si bien que, de sorte que',
+              'Les tests étaient rigoureux, si bien que d’autres équipes les ont reproduits.',
+            ],
+            ['tellement / si / tant … que', 'Il y a tant d’erreurs que l’étude est retirée.'],
+            ['au point que', 'Il est épuisé au point qu’il ne peut plus travailler.'],
+          ],
+        ),
+      ),
+      section(
+        'aim',
+        'An aim: the subjunctive',
+        p(
+          'When the clause says what the speaker **wants to achieve**, French uses the **subjunctive**: *Il explique de façon que tout le monde comprenne*. **De sorte que** takes the indicative for a result and the subjunctive for an aim.',
+        ),
+        compare(
+          {
+            title: 'result',
+            question: 'indicative',
+            example: 'Il a parlé fort, de sorte que tout le monde l’a entendu.',
+          },
+          {
+            title: 'aim',
+            question: 'subjunctive',
+            example: 'Parle fort, de sorte que tout le monde t’entende.',
+          },
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il explique de façon que chacun comprend.  ✓ Il explique de façon que chacun comprenne.',
+          '✗ De sorte les résultats soient fiables.  ✓ De sorte que les résultats soient fiables.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-cause', 'fr-b22-subj-or-inf'],
+    sources: [S.subordinateAdverbial, S.connector],
+  },
 ];

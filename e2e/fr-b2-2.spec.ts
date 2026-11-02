@@ -73,6 +73,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sort it (prepositions)', 'fr-b2-2-culture-sort-prep'],
   ['conjugation (unit 5)', 'fr-b2-2-culture-conj-subjunctive'],
   ['dialogue (unit 5)', 'fr-b2-2-culture-dialogues'],
+  // unit 6
+  ['flashcards (unit 6)', 'fr-b2-2-science-flash-research'],
+  ['gap fill (cause)', 'fr-b2-2-science-gap-cause'],
+  ['gap fill (consequence)', 'fr-b2-2-science-gap-consequence'],
+  ['sort it (cause or consequence)', 'fr-b2-2-science-sort-link'],
+  ['dialogue (unit 6)', 'fr-b2-2-science-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {

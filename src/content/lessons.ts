@@ -1359,6 +1359,24 @@ export const LESSONS = {
     rule: 'Many verbs need à (s’intéresser à, assister à, participer à, penser à) or de (parler de, rêver de, s’inspirer de, se souvenir de). Other verbs take their object directly (regarder, écouter, critiquer). A thing introduced by à is replaced by y, a thing introduced by de by en.',
     examples: ['Je m’y intéresse.', 'Il en parle souvent.', 'Elle rêve de réaliser un film.'],
   },
+  'fr-b22-cause': {
+    title: 'Expressing cause',
+    rule: 'Parce que, puisque (known cause), comme, étant donné que, du fait que and sous prétexte que take the indicative; ce n’est pas que and non que take the subjunctive. Before a noun: grâce à (favourable), à cause de (unwelcome), en raison de (formal). Grâce à ses efforts, il a réussi.',
+    examples: [
+      'Puisque tu es là, aide-moi.',
+      'Le vol est annulé à cause du brouillard.',
+      'Ce n’est pas qu’il soit paresseux.',
+    ],
+  },
+  'fr-b22-consequence': {
+    title: 'Consequence and aim',
+    rule: 'A real result takes the indicative: donc, par conséquent, c’est pourquoi, si bien que, tellement … que, tant de … que. An aim takes the subjunctive: de façon que, de sorte que. Il a tant travaillé qu’il est épuisé. Explique-le de façon que tous comprennent.',
+    examples: [
+      'Il y a tant d’erreurs que l’étude est retirée.',
+      'Le budget baisse, donc la recherche ralentit.',
+      'Parlez de sorte que chacun vous entende.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',
