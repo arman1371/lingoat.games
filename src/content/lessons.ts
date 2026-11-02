@@ -1060,6 +1060,196 @@ export const LESSONS = {
     rule: 'Particles colour a sentence without changing what it says: doch (contrary to expectation), ja (as you know), eben / halt (it cannot be changed), wohl (probably), eigentlich (actually), schon (admittedly), immerhin (at least). They are unstressed, never stand first and cannot be negated.',
     examples: ['Das ist ja interessant!', 'Das ist eben so.', 'Du hast es doch versprochen!'],
   },
+  // ---- French C1.2 ---------------------------------------------------------------------------
+  'fr-c12-participe-present': {
+    title: 'The present participle (-ant)',
+    rule: 'Take the nous form of the present, drop -ons and add -ant: jouons → jouant, finissons → finissant, faisons → faisant. Three verbs are irregular: être → étant, avoir → ayant, savoir → sachant. The participle never agrees; it replaces a qui clause or gives a reason.',
+    examples: [
+      'Je cherche un joueur connaissant les règles. (= qui connaît)',
+      'Étant endetté, il a vendu sa voiture. (= comme il était endetté)',
+      'Ayant tout perdu, elle a arrêté de jouer.',
+    ],
+  },
+  'fr-c12-gerondif': {
+    title: 'The gérondif: en + -ant',
+    rule: 'en + the -ant form says how or when something happens: by doing it (means), while doing it (simultaneity), or if you do it (condition). It never agrees, and its subject is the subject of the main verb. tout en … -ant stresses that two things happen together, often in contrast.',
+    examples: [
+      'On apprend les règles en jouant.',
+      'Il a perdu gros en jouant au casino.',
+      'Elle travaille tout en écoutant de la musique.',
+    ],
+  },
+  'fr-c12-adjectif-verbal': {
+    title: 'Adjectif verbal or participe présent?',
+    rule: 'The adjectif verbal describes a noun and agrees with it: une partie passionnante, des résultats décevants. The participle is invariable and acts like a verb. Some pairs are spelled differently: fatiguant (participle) / fatigant (adjective), convainquant / convaincant, provoquant / provocant, différant / différent.',
+    examples: [
+      'Une soirée fatigante. · En se fatiguant trop, il a perdu.',
+      'Des arguments convaincants. · En convainquant ses amis, …',
+      'Des règles différentes. · Des règles différant de celles-ci …',
+    ],
+  },
+  'fr-c12-registres': {
+    title: 'Familier, courant, soutenu',
+    rule: 'The same idea has several registers: familier (casual, among friends), courant (neutral, everyday) and soutenu (formal, written). Adapt to the person you talk to and the medium. Familiar speech often drops ne and uses on; formal French uses inversion and richer words.',
+    examples: [
+      'une bagnole (familier) · une voiture (courant) · une automobile (soutenu)',
+      'J’en sais rien. · Je ne sais pas. · Je l’ignore.',
+      'On bouffe où ? · On mange où ? · Où souhaitez-vous dîner ?',
+    ],
+  },
+  'fr-c12-questions': {
+    title: 'Three ways to ask a question',
+    rule: 'Intonation (Tu viens ?) is casual. Est-ce que + normal word order is neutral (Est-ce que tu viens ?). Inversion is formal and written (Viens-tu ?). With il, elle or on after a vowel add -t-: A-t-elle appelé ? With a noun subject: Tes parents sont-ils venus ?',
+    examples: [
+      'Vous avez des enfants ? · Est-ce que vous avez des enfants ? · Avez-vous des enfants ?',
+      'A-t-elle téléphoné ?',
+      'Où est-ce que tes grands-parents habitent ?',
+    ],
+  },
+  'fr-c12-reprise-pronominale': {
+    title: 'Avoiding repetition with pronouns',
+    rule: 'A text picks up what it has said with pronouns: il, elle, ils for subjects, le, la, les, lui, leur for objects, en for de + noun or a quantity, y for à + place or thing, l’un … l’autre to share out two, cela or ça for a whole idea. The pronoun must refer to one clear antecedent.',
+    examples: [
+      'Marie a 80 ans. Elle vit seule. Je lui rends visite.',
+      'Des maisons de retraite, il y en a peu. · Elle vit à la campagne et y est heureuse.',
+      'Deux seniors sont venus : l’un est médecin, l’autre ancien maire.',
+    ],
+  },
+  'fr-c12-reprise-nominale': {
+    title: 'Avoiding repetition with noun phrases',
+    rule: 'A noun phrase can also pick up an earlier word: ce, cet, cette or ces + the same noun, a synonym, a more general word (hyperonym), a description, or a noun that sums up a whole idea (ce phénomène). It adds information and avoids heavy repetition in written French.',
+    examples: [
+      'Un vieil homme passait. Cet homme portait une canne.',
+      'Le papy-boom commence. Ce phénomène démographique coûtera cher.',
+      'Victor Hugo est mort en 1885. L’auteur des Misérables avait 83 ans.',
+    ],
+  },
+  'fr-c12-recit-passe': {
+    title: 'Imparfait, passé composé, plus-que-parfait',
+    rule: 'The imparfait gives the background: states, descriptions, habits. The passé composé gives the events that move the story on. The plus-que-parfait (imparfait of avoir or être + participle) shows what had already happened before another past moment. Together they build a story.',
+    examples: [
+      'Il pleuvait quand le médecin est arrivé.',
+      'Elle avait oublié son ordonnance, alors le pharmacien a appelé.',
+      'Chaque matin, il prenait ses cachets.',
+    ],
+  },
+  'fr-c12-passe-simple': {
+    title: 'The passé simple',
+    rule: 'The passé simple is the tense of written narration: novels, history, tales. You mostly meet the third person. -er verbs: -a, -èrent. -ir verbs: -it, -irent. Many others: -ut, -urent (il eut, il fut, il mourut), or irregular stems (il fit, il vint, il naquit). Learn to recognise it; you rarely say it.',
+    examples: [
+      'Il ouvrit la porte et entra.',
+      'Elle fut surprise. · Ils eurent peur.',
+      'Napoléon naquit en 1769. · Louis XIV mourut en 1715.',
+    ],
+  },
+  'fr-c12-modalisation': {
+    title: 'Modalisation: how sure are you?',
+    rule: 'Modalisation shows how sure the speaker is. Certainty: il est évident / certain que, sans aucun doute, assurément (indicative). Possibility: peut-être que, apparemment (indicative); il se peut que (subjunctive). Doubt: je doute que, il est douteux que, je ne suis pas sûr que (subjunctive).',
+    examples: [
+      'Il est évident que l’aide arrivera.',
+      'Il se peut que nous manquions de bénévoles.',
+      'Je doute que cela suffise.',
+    ],
+  },
+  'fr-c12-subjonctif-present': {
+    title: 'The present subjunctive',
+    rule: 'After que, take the ils form of the present, drop -ent and add -e, -es, -e, -ions, -iez, -ent: que je parle, que nous parlions. Être, avoir, aller, faire and pouvoir are irregular. It follows wishes, necessity, feelings and doubt (vouloir que, il faut que, douter que) and conjunctions like bien que and pour que.',
+    examples: [
+      'Il faut que nous aidions les réfugiés.',
+      'Bien qu’il soit fatigué, il reste.',
+      'Je veux qu’elle vienne.',
+    ],
+  },
+  'fr-c12-but': {
+    title: 'Expressing purpose',
+    rule: 'Same subject: pour, afin de or de façon à + infinitive. New subject: pour que, afin que or de façon à ce que + subjunctive. De peur que (+ subjunctive) gives a purpose to avoid something.',
+    examples: [
+      'Elle s’entraîne pour gagner.',
+      'On installe un écran afin que tout le monde voie le match.',
+      'Elle parle bas de peur que l’arbitre l’entende.',
+    ],
+  },
+  'fr-c12-relatifs-composes': {
+    title: 'Compound relative pronouns',
+    rule: 'After a preposition, a thing is taken up by lequel, laquelle, lesquels or lesquelles (a person: usually qui). With à and de they contract: auquel, auxquels, auxquelles, duquel, desquels, desquelles. Dont replaces de + noun and needs no further preposition.',
+    examples: [
+      'Le stade dans lequel ils jouent est neuf.',
+      'Les épreuves auxquelles elle participe durent trois jours.',
+      'Le club dont il est président recrute.',
+    ],
+  },
+  'fr-c12-futur-anterieur': {
+    title: 'The futur antérieur',
+    rule: 'Avoir or être in the futur simple + past participle: j’aurai fini, elle sera partie. It shows an action that will be finished before another future action or a future date. It follows quand, lorsque, dès que, aussitôt que, une fois que and après que, and d’ici + date.',
+    examples: [
+      'Quand nous aurons fini le tri, nous sortirons.',
+      'D’ici 2040, la ville aura réduit ses émissions.',
+      'Elle sera partie avant la fin du débat.',
+    ],
+  },
+  'fr-c12-cause-consequence': {
+    title: 'Cause and consequence',
+    rule: 'Cause: parce que, puisque (known to both), car, comme (at the start), grâce à (positive), à cause de (negative), en raison de (formal). Consequence: donc, alors, par conséquent, c’est pourquoi, si bien que, tellement … que, si … que. Put the cause after parce que, the effect after donc.',
+    examples: [
+      'Les récoltes baissent à cause de la canicule.',
+      'Il a peu plu, si bien que le fleuve est à sec.',
+      'Il est tellement fatigué qu’il s’endort.',
+    ],
+  },
+  'fr-c12-concordance': {
+    title: 'Concordance des temps',
+    rule: 'After a reporting verb in the past, the reported clause shifts back: present → imparfait, passé composé → plus-que-parfait, futur → conditionnel. With a reporting verb in the present, nothing shifts. Time words change too: demain → le lendemain, hier → la veille.',
+    examples: [
+      'Il a dit qu’il habitait à Lyon.',
+      'Elle a expliqué qu’elle avait visité le musée.',
+      'Il a promis qu’il viendrait le lendemain.',
+    ],
+  },
+  'fr-c12-marqueurs-temporels': {
+    title: 'Time markers',
+    rule: 'Depuis: start of something that continues. Pendant: a finished duration. Il y a: a time ago, counted from now. Dans: a time ahead, counted from now. En: year, month, season, or the time needed to do something. Dès and à partir de: starting point. Jusqu’à: end point.',
+    examples: [
+      'Ils vivent ici depuis 1990.',
+      'Napoléon est mort il y a deux siècles.',
+      'Le musée ouvrira dans trois mois.',
+    ],
+  },
+  'fr-c12-concession': {
+    title: 'Concession',
+    rule: 'Concession admits a fact, then contrasts it. Bien que and quoique + subjunctive; même si + indicative; malgré and en dépit de + noun; avoir beau + infinitive; pourtant, cependant, néanmoins, toutefois between two sentences; certes … mais.',
+    examples: [
+      'Bien qu’elle soit étrangère, elle se sent chez elle.',
+      'Malgré son accent, il se fait comprendre.',
+      'Il a beau chercher, il ne trouve rien.',
+    ],
+  },
+  'fr-c12-indefinis': {
+    title: 'Indefinite adjectives and pronouns',
+    rule: 'Quantity: certains, plusieurs, quelques, la plupart. Totality: tout, tous, toute, chacun, chaque. None: aucun(e), nul, personne, rien (with ne). Quiconque means anyone who. Chacun, aucun and personne are singular; they agree in gender with their noun.',
+    examples: [
+      'Certains pensent que c’est facile.',
+      'Chacun a ses racines.',
+      'Aucune solution n’est simple.',
+    ],
+  },
+  'fr-c12-appreciation': {
+    title: 'Giving an appreciation',
+    rule: 'Praise: j’ai adoré, ça m’a plu. Reservation: plutôt réussi, mais …; correct, sans plus. Criticism: ça m’a ennuyé, c’est prévisible. Je trouve que + indicative; in the negative, the subjunctive is common. Feelings take the subjunctive: je suis ravi que tu aies aimé.',
+    examples: [
+      'À mon avis, le scénario est brillant.',
+      'Je ne trouve pas que ce soit drôle.',
+      'Il est plutôt réussi, mais la fin m’a déçu.',
+    ],
+  },
+  'fr-c12-conditionnel': {
+    title: 'The conditional',
+    rule: 'Future stem + imparfait endings: je serais, nous irions. Uses: polite request (je voudrais), hypothesis (si + imparfait → conditionnel), unconfirmed news (il sortirait en mai). Past conditional (j’aurais dû) = regret, or after si + plus-que-parfait. Never use it right after si.',
+    examples: [
+      'Je voudrais deux places, s’il vous plaît.',
+      'Si j’avais le temps, j’irais au festival.',
+      'Si j’avais su, je serais venu.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',

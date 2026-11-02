@@ -264,6 +264,22 @@ participle or of personne after it; those follow common textbook teaching. The W
 pendant give the meaning (starting point, "during") but no tense rule, so "depuis + present for a continuing situation"
 and "pendant + passé composé" are textbook teaching, not checked against a fetched page.
 
+## French C1.2 (3 topics so far)
+
+`src/content/grammar/fr-c1-2.ts`, pages in `sources-fr.ts`. Topics are added unit by unit; unit 1 (games) teaches the three
+jobs of the -ant form. The French content has **not yet been reviewed by a native speaker**.
+
+| Topic             | Pages read                                                                                                                                                                                                                                                                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Participe présent | [Participe présent en français](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent_en_fran%C3%A7ais) (formation, three irregular stems), [Participe présent](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent) (agreement with and without a complement), Wiktionnaire [savoir](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/savoir) |
+| Gérondif          | [Gérondif](https://fr.wikipedia.org/wiki/G%C3%A9rondif) (en + participle, same subject, invariable)                                                                                                                                                                                                                                                    |
+| Adjectif verbal   | Wiktionnaire [fatigant](https://fr.wiktionary.org/wiki/fatigant) and [convaincant](https://fr.wiktionary.org/wiki/convaincant) (adjective spelled differently from the participle), [Participe présent](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent)                                                                                          |
+
+**French limits:** not stated on a fetched page, so taught from common textbook practice: the uses of the participle
+(replacing a qui clause, giving a reason), the compound participle (ayant / étant + past participle), the meanings of the
+gérondif beyond simultaneity (means, condition, tout en for opposition), the très test for the adjectif verbal, and the
+pairs provoquant / provocant and différant / différent (fatigant and convaincant were checked on Wiktionnaire).
+
 ## Limits of the research
 
 - The Deutsche Welle learner pages could not be fetched, and the Duden grammar pages are not freely readable, so the

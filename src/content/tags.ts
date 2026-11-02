@@ -361,6 +361,60 @@ export const TAGS = {
   'c22-prefix-verbs': { label: 'übersetzen or übersetzen?', group: 'grammar', emoji: '🔧' },
   'c22-passive-alternatives': { label: 'Replacing the passive', group: 'grammar', emoji: '🔀' },
   'c22-nuance-particles': { label: 'Nuance particles & adverbs', group: 'grammar', emoji: '🎚️' },
+  // topics – French C1.2
+  'fr-c12-games': { label: 'Games & gambling', group: 'topic', emoji: '🎲' },
+  // grammar points – French C1.2, unit 1
+  'fr-c12-participe-present': {
+    label: 'Participe présent (-ant)',
+    group: 'grammar',
+    emoji: '➡️',
+  },
+  'fr-c12-gerondif': { label: 'Gérondif (en jouant)', group: 'grammar', emoji: '🔄' },
+  'fr-c12-adjectif-verbal': {
+    label: 'Adjectif verbal (passionnant)',
+    group: 'grammar',
+    emoji: '🎭',
+  },
+  // unit 2
+  'fr-c12-family': { label: 'Family & upbringing', group: 'topic', emoji: '👨‍👩‍👧‍👦' },
+  'fr-c12-registres': { label: 'Registres de langue', group: 'grammar', emoji: '🎚️' },
+  'fr-c12-questions': { label: 'Asking questions (3 ways)', group: 'grammar', emoji: '❔' },
+  // unit 3
+  'fr-c12-ageing': { label: 'Ageing & retirement', group: 'topic', emoji: '🧓' },
+  'fr-c12-reprise-pronominale': { label: 'Reprise pronominale', group: 'grammar', emoji: '👤' },
+  'fr-c12-reprise-nominale': { label: 'Reprise nominale', group: 'grammar', emoji: '🏷️' },
+  // unit 4
+  'fr-c12-health': { label: 'Health & medicine', group: 'topic', emoji: '🩺' },
+  'fr-c12-recit-passe': { label: 'Past tenses of a story', group: 'grammar', emoji: '📖' },
+  'fr-c12-passe-simple': { label: 'Passé simple', group: 'grammar', emoji: '🏰' },
+  // unit 5
+  'fr-c12-solidarity': { label: 'Solidarity & volunteering', group: 'topic', emoji: '🤝' },
+  'fr-c12-modalisation': { label: 'Modalisation', group: 'grammar', emoji: '🎚️' },
+  'fr-c12-subjonctif-present': { label: 'Present subjunctive', group: 'grammar', emoji: '🟣' },
+  // unit 6
+  'fr-c12-sport': { label: 'Sport & competition', group: 'topic', emoji: '🏅' },
+  'fr-c12-but': { label: 'Expressing purpose', group: 'grammar', emoji: '🎯' },
+  'fr-c12-relatifs-composes': {
+    label: 'Compound relative pronouns',
+    group: 'grammar',
+    emoji: '🔗',
+  },
+  // unit 7
+  'fr-c12-ecology': { label: 'Climate & ecology', group: 'topic', emoji: '🌍' },
+  'fr-c12-futur-anterieur': { label: 'Futur antérieur', group: 'grammar', emoji: '⏮️' },
+  'fr-c12-cause-consequence': { label: 'Cause and consequence', group: 'grammar', emoji: '⚖️' },
+  // unit 8
+  'fr-c12-history': { label: 'History & memory', group: 'topic', emoji: '🏰' },
+  'fr-c12-concordance': { label: 'Sequence of tenses', group: 'grammar', emoji: '🔀' },
+  'fr-c12-marqueurs-temporels': { label: 'Time markers', group: 'grammar', emoji: '📅' },
+  // unit 9
+  'fr-c12-identity': { label: 'Identity & diversity', group: 'topic', emoji: '🪪' },
+  'fr-c12-concession': { label: 'Concession', group: 'grammar', emoji: '↔️' },
+  'fr-c12-indefinis': { label: 'Indefinite words', group: 'grammar', emoji: '🔢' },
+  // unit 10
+  'fr-c12-humour': { label: 'Humour & cinema', group: 'topic', emoji: '🎬' },
+  'fr-c12-appreciation': { label: 'Giving an opinion', group: 'grammar', emoji: '⭐' },
+  'fr-c12-conditionnel': { label: 'The conditional', group: 'grammar', emoji: '💭' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },

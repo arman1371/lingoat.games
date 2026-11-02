@@ -166,7 +166,7 @@ describe('French grammar topics', () => {
     expect(french.map((t) => t.id).sort()).toEqual(miniLessons.sort());
   });
 
-  it('belong to the French level and link only to French topics', () => {
+  it('belong to a French level and link only to French topics', () => {
     for (const t of french) {
       expect(frenchLevelIds.has(t.level), `${t.id} → ${t.level}`).toBe(true);
       for (const r of t.related) expect(r.startsWith('fr-'), `${t.id} → ${r}`).toBe(true);
