@@ -265,7 +265,7 @@ export const FRC11_TOPICS: GrammarTopic[] = [
       ),
     ],
     related: ['fr-c11-connectors'],
-    sources: [S.conditional, S.presentConditional, S.pastConditional, S.pqp, S.si, S.auCasOu],
+    sources: [S.c11Conditional, S.presentConditional, S.pastConditional, S.pqp, S.si, S.auCasOu],
   },
   {
     id: 'fr-c11-affixes',
@@ -884,7 +884,7 @@ export const FRC11_TOPICS: GrammarTopic[] = [
       ),
     ],
     related: ['fr-c11-si-clauses'],
-    sources: [S.passeSimple, S.passeCompose, S.imparfaitWp, S.pqp, S.passeAnterieur],
+    sources: [S.c11PasseSimple, S.passeCompose, S.imparfaitWp, S.pqp, S.passeAnterieur],
   },
   {
     id: 'fr-c11-registers',
