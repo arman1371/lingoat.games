@@ -563,6 +563,21 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a21-modals' },
     { topic: 'fr-a21-y', note: 'j’y vais, allons-y' },
   ],
+  'fr-a2-1-souvenirs': [
+    { topic: 'fr-a21-imparfait' },
+    { topic: 'fr-a21-imparfait-use', note: 'autrefois, à l’époque, chaque été' },
+    { topic: 'fr-a21-en', note: 'j’en veux, il y en a' },
+  ],
+  'fr-a2-1-logement': [
+    { topic: 'fr-a21-relatives', note: 'qui, que, où' },
+    { topic: 'fr-a21-comparison', note: 'plus, moins, meilleur, mieux' },
+    { topic: 'fr-a21-condition' },
+  ],
+  'fr-a2-1-portrait': [
+    { topic: 'fr-a21-equality', note: 'aussi, autant, le même' },
+    { topic: 'fr-a21-chaque-tout' },
+    { topic: 'fr-a21-possessive-pronouns' },
+  ],
   // ---- French A2.2 ----------------------------------------------------------------------------
   'fr-a2-2-sante': [
     { topic: 'fr-object-pronouns', note: 'le, la, les, lui, leur' },
