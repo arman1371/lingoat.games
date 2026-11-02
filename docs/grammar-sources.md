@@ -264,21 +264,34 @@ participle or of personne after it; those follow common textbook teaching. The W
 pendant give the meaning (starting point, "during") but no tense rule, so "depuis + present for a continuing situation"
 and "pendant + passé composé" are textbook teaching, not checked against a fetched page.
 
-## French C1.2 (3 topics so far)
+## French C1.2 (25 topics)
 
-`src/content/grammar/fr-c1-2.ts`, pages in `sources-fr.ts`. Topics are added unit by unit; unit 1 (games) teaches the three
-jobs of the -ant form. The French content has **not yet been reviewed by a native speaker**.
+`src/content/grammar/fr-c1-2.ts` and `fr-c1-2-b.ts`, pages in `sources-fr.ts`. The French content has **not yet been
+reviewed by a native speaker**. Pages below were fetched while writing; each lesson lists them as its sources.
 
-| Topic             | Pages read                                                                                                                                                                                                                                                                                                                                             |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Participe présent | [Participe présent en français](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent_en_fran%C3%A7ais) (formation, three irregular stems), [Participe présent](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent) (agreement with and without a complement), Wiktionnaire [savoir](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/savoir) |
-| Gérondif          | [Gérondif](https://fr.wikipedia.org/wiki/G%C3%A9rondif) (en + participle, same subject, invariable)                                                                                                                                                                                                                                                    |
-| Adjectif verbal   | Wiktionnaire [fatigant](https://fr.wiktionary.org/wiki/fatigant) and [convaincant](https://fr.wiktionary.org/wiki/convaincant) (adjective spelled differently from the participle), [Participe présent](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent)                                                                                          |
+| Topic(s)                                                       | Pages read                                                                                                                                                                                                                                                                        |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Participe présent, gérondif, adjectif verbal                   | [Participe présent en français](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent_en_fran%C3%A7ais), [Participe présent](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent), [Gérondif](https://fr.wikipedia.org/wiki/G%C3%A9rondif), Wiktionnaire fatigant and convaincant |
+| Registres de langue; reprise pronominale / nominale            | [Registre de langue](https://fr.wikipedia.org/wiki/Registre_de_langue), [Anaphore (grammaire)](<https://fr.wikipedia.org/wiki/Anaphore_(grammaire)>)                                                                                                                              |
+| Temps du récit, passé simple                                   | [Plus-que-parfait](https://fr.wikipedia.org/wiki/Plus-que-parfait), [Passé simple en français](https://fr.wikipedia.org/wiki/Pass%C3%A9_simple_en_fran%C3%A7ais), [Imparfait de l'indicatif](https://fr.wikipedia.org/wiki/Imparfait_de_l%27indicatif_en_fran%C3%A7ais)           |
+| Subjonctif présent, modalisation, but, indicatif ou subjonctif | [Subjonctif en français](https://fr.wikipedia.org/wiki/Subjonctif_en_fran%C3%A7ais), [Conditionnel en français](https://fr.wikipedia.org/wiki/Conditionnel_en_fran%C3%A7ais)                                                                                                      |
+| Pronoms relatifs composés                                      | [Pronom relatif](https://fr.wikipedia.org/wiki/Pronom_relatif) (simple relatives only)                                                                                                                                                                                            |
+| Futur antérieur                                                | [Futur antérieur](https://fr.wikipedia.org/wiki/Futur_ant%C3%A9rieur)                                                                                                                                                                                                             |
+| Concordance des temps, conditionnel, hypothèse                 | [Concordance des temps](https://fr.wikipedia.org/wiki/Concordance_des_temps), [Conditionnel en français](https://fr.wikipedia.org/wiki/Conditionnel_en_fran%C3%A7ais)                                                                                                             |
+| Prépositions with places                                       | [Préposition](https://fr.wikipedia.org/wiki/Pr%C3%A9position), [Francophonie](https://fr.wikipedia.org/wiki/Francophonie)                                                                                                                                                         |
+| Cause / consequence, concession, indefinites, connectors       | [Proposition (grammaire)](<https://fr.wikipedia.org/wiki/Proposition_(grammaire)>) (subordination in general)                                                                                                                                                                     |
 
-**French limits:** not stated on a fetched page, so taught from common textbook practice: the uses of the participle
-(replacing a qui clause, giving a reason), the compound participle (ayant / étant + past participle), the meanings of the
-gérondif beyond simultaneity (means, condition, tout en for opposition), the très test for the adjectif verbal, and the
-pairs provoquant / provocant and différant / différent (fatigant and convaincant were checked on Wiktionnaire).
+**French limits:** the pages above describe the tenses and moods, but **not** the lists of triggers and connectors, so
+these follow common textbook practice and are not checked against a fetched page: which expressions of certainty and
+doubt take the subjunctive (modalisation, appreciation), the purpose structures (pour que, afin que, de peur que), the
+forms of lequel and its contractions, the cause and consequence connectors, the concession structures (bien que, même si,
+malgré, avoir beau), the indefinite pronouns and their agreement, the prepositions with countries and cities, the
+si-patterns and au cas où / à condition que / à moins que, the logical connectors, the après que + indicative rule, the
+reported-speech shifts and time words, and the choice of depuis, pendant, il y a, dans and en. Dedicated pages for
+"Concession (grammaire)" and "Connecteur logique" were not usable. Also from textbook practice: the compound participle,
+the meanings of the gérondif beyond simultaneity, the très test for the adjectif verbal, the pairs provoquant /
+provocant and différant / différent, the passé simple endings of irregular verbs beyond the table, and the use of the
+futur antérieur for a guess about the past.
 
 ## Limits of the research
 

@@ -10,6 +10,7 @@ import { histoire } from './u8-histoire';
 import { identites } from './u9-identites';
 import { humour } from './u10-humour';
 import { francophonie } from './u11-francophonie';
+import { argumenter } from './u12-argumenter';
 
 const units = [
   jeu,
@@ -23,6 +24,7 @@ const units = [
   identites,
   humour,
   francophonie,
+  argumenter,
 ];
 
 const content: LevelContent = {

@@ -46,20 +46,20 @@ parallel thread; to keep the halves apart, C1.2 takes the **second half of the S
 themes of the C1.2 courses (identities, humour and cinema, Francophonie), and ends like the exam does, with
 argumentation. Justice, democracy, change, culture and feminism are left to C1.1.
 
-| #   | Unit (id suffix)                     | Themes                                                         | Grammar                                                         | Sources                     |
-| --- | ------------------------------------ | -------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------- |
-| 1   | Quitte ou double ! (`jeu`)           | games, gambling, addiction, prevention, play therapy           | participe présent, gérondif, adjectif verbal                    | DUEF                        |
-| 2   | Ma belle famille (`famille`)         | filiation, family types, tensions, upbringing and transmission | registres de langue                                             | DUEF                        |
-| 3   | Vieillir : une aventure (`vieillir`) | ageing, housing, retirement, "bien vieillir"                   | reprise pronominale et nominale                                 | DUEF                        |
-| 4   | Santé 3.0 (`sante`)                  | consultation, treatment, disability, medical ethics, science   | temps du récit au passé                                         | DUEF                        |
-| 5   | Solidarité (`solidarite`)            | mutual help, volunteering, motives                             | modaliser son discours                                          | DUEF                        |
-| 6   | Sport et loisirs (`sport`)           | sport, health, leisure, advice                                 | expression du but, pronoms relatifs composés                    | summer programme            |
-| 7   | Écologie (`ecologie`)                | activism, pollution, diet and environment                      | futur, participe présent et gérondif                            | summer programme, DUEF      |
-| 8   | Histoire et société (`histoire`)     | nation, citizens, eras, capital punishment, globalisation      | expression du passé, concordance des temps, marqueurs temporels | summer programme            |
-| 9   | Regards croisés (`identites`)        | identity, languages and cultures, stereotypes, laïcité         | nuance and comparison                                           | Lisbon, summer programme    |
-| 10  | Rire et cinéma (`humour`)            | humour, film, appreciation                                     | expression de l'appréciation                                    | UCLouvain, summer programme |
-| 11  | La Francophonie (`francophonie`)     | francophone world, varieties of French, imagery                | prépositions, hypothèse                                         | summer programme            |
-| 12  | Argumenter (`argumenter`)            | synthesis, argumentative essay, oral presentation              | connecteurs logiques, indicatif ou subjonctif                   | DALF C1, Fribourg, DUEF     |
+| #   | Unit (id suffix)                       | Themes                                                         | Grammar                                           | Sources                     |
+| --- | -------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------- | --------------------------- |
+| 1   | Quitte ou double ! (`jeu`)             | games, gambling, addiction, prevention, play therapy           | participe présent, gérondif, adjectif verbal      | DUEF                        |
+| 2   | Ma belle famille ! (`famille`)         | filiation, family types, tensions, upbringing and transmission | registres de langue, three ways to ask a question | DUEF                        |
+| 3   | Vieillir : une aventure (`vieillir`)   | ageing, housing, retirement, "bien vieillir"                   | reprise pronominale et nominale                   | DUEF                        |
+| 4   | Santé 3.0 (`sante`)                    | consultation, treatment, disability, medical ethics, science   | temps du récit au passé, passé simple             | DUEF                        |
+| 5   | Un monde solidaire (`solidarite`)      | mutual help, volunteering, humanitarian action                 | modalisation, subjonctif présent                  | DUEF                        |
+| 6   | Vive le sport ! (`sport`)              | sport, competition, Olympic Games, injury                      | expression du but, pronoms relatifs composés      | summer programme            |
+| 7   | Sauvons la planète ! (`ecologie`)      | climate, energy, eco-gestures, biodiversity                    | futur antérieur, cause et conséquence             | summer programme, DUEF      |
+| 8   | Un voyage dans l'histoire (`histoire`) | eras, power, wars, memory and heritage                         | concordance des temps, marqueurs temporels        | summer programme            |
+| 9   | Qui suis-je ? Identités (`identites`)  | identity, belonging, languages, prejudice                      | concession, adjectifs et pronoms indéfinis        | Lisbon, summer programme    |
+| 10  | Rions un peu ! (`humour`)              | humour, film, festivals, reviews                               | exprimer son appréciation, conditionnel           | UCLouvain, summer programme |
+| 11  | La Francophonie (`francophonie`)       | French-speaking world, regionalisms, loanwords                 | prépositions géographiques, hypothèse             | summer programme            |
+| 12  | Pour ou contre ? (`argumenter`)        | debate, essay, oral presentation                               | connecteurs logiques, indicatif ou subjonctif     | DALF C1, Fribourg, DUEF     |
 
 Every unit aims at 10 to 16 games with at least 6 of the 13 engines, an easy first game and a final "… challenge".
 Vocabulary cards are not repeated across units or earlier French levels (checked by `content.test.ts`; levels built in
@@ -67,6 +67,6 @@ parallel are checked once they are on `main`).
 
 ## Build plan
 
-1. Level plumbing, e2e entry, grammar lessons and unit 1 (`jeu`, 15 games). **Done.**
-2. Units 2 to 12, one PR per unit, each with its grammar lessons (tags `fr-c12-…`, mini lessons, full lessons,
-   `unitTopics.ts`) and its row in the e2e spec.
+All 12 units ship in **one pull request** (Arman's rule for French levels: one PR per level). Each unit has 13 to 16
+games, vocabulary of 33 to 40 cards, two grammar topics with a mini lesson and a full lesson (tags `fr-c12-…`,
+`unitTopics.ts`), an a11y page and two to three e2e games in `e2e/fr-c1-2.spec.ts`. **Done.**

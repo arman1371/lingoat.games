@@ -1106,4 +1106,97 @@ export const FRC12_TOPICS_B: GrammarTopic[] = [
     related: ['fr-c12-conditionnel', 'fr-c12-subjonctif-present'],
     sources: [S.conditionnel, S.subjonctif],
   },
+  {
+    id: 'fr-c12-connecteurs',
+    title: 'Logical connectors',
+    tagline: 'Link and organise the ideas of an argument',
+    level: LEVEL,
+    summary:
+      'Connectors show how ideas relate: they add, oppose, order or conclude. A good argument uses a small set of them accurately, always at the start of the new idea.',
+    sections: [
+      section(
+        'functions',
+        'By function',
+        table(
+          'Connectors in an argument.',
+          ['Function', 'Connectors'],
+          [
+            ['Add', 'de plus, en outre, d’ailleurs, par ailleurs, également'],
+            ['Oppose', 'en revanche, par contre, or, pourtant, cependant, néanmoins, toutefois'],
+            ['Concede', 'certes … mais, il est vrai que … mais, admettons que … pourtant'],
+            ['Order', 'd’abord, premièrement, ensuite, puis, enfin, en dernier lieu'],
+            ['Cause', 'car, en effet, puisque'],
+            ['Result', 'donc, ainsi, par conséquent, c’est pourquoi'],
+            ['Conclude', 'en somme, en définitive, bref, pour conclure'],
+          ],
+        ),
+        examples(
+          [
+            'Ce plan est efficace ; de plus, il coûte peu.',
+            'This plan is effective; moreover, it costs little.',
+          ],
+          [
+            'Certes, l’idée est séduisante, mais elle est irréaliste.',
+            'True, the idea is appealing, but it is unrealistic.',
+          ],
+        ),
+      ),
+      section(
+        'style',
+        'Using them well',
+        p(
+          'Do not stack connectors (*mais pourtant*); one is enough. **Or** is a formal pivot: *Tous les élèves ont un téléphone. Or, il perturbe la classe.* **Car** and **en effet** explain the previous sentence; **donc** and **ainsi** draw its consequence. In an essay, signal each paragraph with a connector of order or addition, and the final paragraph with *en définitive* or *pour conclure*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Mais pourtant il a raison.  ✓ Pourtant, il a raison.',
+          '✗ Premièrement … deuxièmement … finalement … d’ailleurs.  ✓ D’abord … ensuite … enfin.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-cause-consequence', 'fr-c12-concession', 'fr-c12-indicatif-subjonctif'],
+    sources: [S.proposition],
+  },
+  {
+    id: 'fr-c12-indicatif-subjonctif',
+    title: 'Indicative or subjunctive?',
+    tagline: 'The choice of mood after conjunctions and verbs',
+    level: LEVEL,
+    summary:
+      'Some conjunctions and verbs take the indicative, others the subjunctive. When the subject does not change, many of them switch to an infinitive.',
+    sections: [
+      section(
+        'conjunctions',
+        'Conjunctions',
+        table(
+          'Which mood?',
+          ['Indicative', 'Subjunctive'],
+          [
+            ['après que, dès que, aussitôt que', 'avant que (ne), en attendant que'],
+            ['pendant que, tandis que, alors que', 'jusqu’à ce que'],
+            ['parce que, puisque, comme', 'sans que, pour que, afin que'],
+            ['même si, si bien que', 'bien que, quoique, à moins que, à condition que'],
+          ],
+        ),
+        examples(
+          ['Après qu’il a parlé, la salle a applaudi.', 'After he spoke, the room applauded.'],
+          ['Je parlerai jusqu’à ce que vous compreniez.', 'I will speak until you understand.'],
+        ),
+      ),
+      section(
+        'verbs',
+        'Verbs and same subject',
+        p(
+          'Verbs of **certainty and belief in the affirmative** (savoir que, penser que) take the **indicative**; verbs of **wish, necessity, feeling and doubt** (vouloir que, il faut que, être content que, douter que) take the **subjunctive**. When the **subject does not change**, use an **infinitive**: *Je pars avant de manger*, *Il est parti sans dire au revoir*, *Je veux partir.*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Après qu’il ait parlé, nous avons voté.  ✓ Après qu’il a parlé, nous avons voté.',
+          '✗ Il est parti sans qu’il dise au revoir.  ✓ Il est parti sans dire au revoir.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-subjonctif-present', 'fr-c12-connecteurs'],
+    sources: [S.subjonctif, S.proposition],
+  },
 ];

@@ -55,12 +55,12 @@ describe('French C1.2 vocabulary integrity', () => {
   it('does not repeat vocabulary from earlier levels', () => {
     const earlier = new Set(earlierLevels.flatMap(([, c]) => c.vocab).map(key));
     const repeated = content.vocab.map(key).filter((k) => earlier.has(k) && !REVIEW_WORDS.has(k));
-    expect(repeated).toEqual([]);
+    expect(repeated.join(', ')).toBe('');
   });
 
   it('does not teach a word twice inside C1.2', () => {
     const all = content.vocab.map(key);
     const dup = all.filter((k, i) => all.indexOf(k) !== i && !REVIEW_WORDS.has(k));
-    expect(dup).toEqual([]);
+    expect(dup.join(', ')).toBe('');
   });
 });

@@ -419,6 +419,14 @@ export const TAGS = {
   'fr-c12-francophonie': { label: 'The French-speaking world', group: 'topic', emoji: '🌐' },
   'fr-c12-prepositions-geo': { label: 'Prepositions with places', group: 'grammar', emoji: '🗺️' },
   'fr-c12-hypothese': { label: 'Hypothesis', group: 'grammar', emoji: '🔮' },
+  // unit 12
+  'fr-c12-argumentation': { label: 'Argument & debate', group: 'topic', emoji: '⚖️' },
+  'fr-c12-connecteurs': { label: 'Logical connectors', group: 'grammar', emoji: '🧷' },
+  'fr-c12-indicatif-subjonctif': {
+    label: 'Indicative or subjunctive',
+    group: 'grammar',
+    emoji: '🔀',
+  },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },

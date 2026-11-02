@@ -40,7 +40,7 @@ const vocab = vocabList(U, 'Humour et cinéma', [
   ['le fou rire', 'fit of laughter', '🤣'],
   ['se moquer de', 'to make fun of', '😜'],
   ['taquiner', 'to tease', '😉'],
-  ['le réalisateur', 'film director', '🎬'],
+  ['le cinéaste', 'filmmaker', '🎬'],
   ['le scénario', 'screenplay', '📝'],
   ['le scénariste', 'screenwriter', '✍️'],
   ['la bande-annonce', 'trailer', '📽️'],

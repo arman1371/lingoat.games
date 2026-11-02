@@ -583,4 +583,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'fr-c1-2-identites': [{ topic: 'fr-c12-concession' }, { topic: 'fr-c12-indefinis' }],
   'fr-c1-2-humour': [{ topic: 'fr-c12-appreciation' }, { topic: 'fr-c12-conditionnel' }],
   'fr-c1-2-francophonie': [{ topic: 'fr-c12-prepositions-geo' }, { topic: 'fr-c12-hypothese' }],
+  'fr-c1-2-argumenter': [{ topic: 'fr-c12-connecteurs' }, { topic: 'fr-c12-indicatif-subjonctif' }],
 };

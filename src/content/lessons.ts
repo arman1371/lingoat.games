@@ -1268,6 +1268,24 @@ export const LESSONS = {
       'Prends un manteau au cas où il ferait froid.',
     ],
   },
+  'fr-c12-connecteurs': {
+    title: 'Logical connectors',
+    rule: 'Add: de plus, en outre, d’ailleurs. Oppose: en revanche, pourtant, or, certes … mais. Structure: d’abord, ensuite, enfin. Conclude: ainsi, en somme, en définitive. Use one connector per link and put it at the start of the new idea.',
+    examples: [
+      'Ce plan est efficace ; de plus, il coûte peu.',
+      'Certes, l’idée est séduisante, mais elle est irréaliste.',
+      'En définitive, je soutiens cette réforme.',
+    ],
+  },
+  'fr-c12-indicatif-subjonctif': {
+    title: 'Indicative or subjunctive?',
+    rule: 'Indicative: après que, pendant que, tandis que, alors que, parce que, je sais / pense que. Subjunctive: avant que, jusqu’à ce que, sans que, pour que, bien que, il faut que, je doute que. With the same subject use an infinitive: avant de, sans, pour.',
+    examples: [
+      'Après qu’il a parlé, la salle a applaudi.',
+      'Je parlerai jusqu’à ce que vous compreniez.',
+      'Il est parti sans nous voir.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',

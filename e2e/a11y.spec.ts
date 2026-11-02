@@ -56,6 +56,32 @@ const PAGES: [string, string, string][] = [
     'Un monde solidaire',
   ],
   ['unit C1.2 sport in French', '/fr/levels/fr-c1-2/units/fr-c1-2-sport', 'Vive le sport !'],
+  [
+    'unit C1.2 ecologie in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-ecologie',
+    'Sauvons la planète !',
+  ],
+  [
+    'unit C1.2 histoire in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-histoire',
+    'Un voyage dans l’histoire',
+  ],
+  [
+    'unit C1.2 identites in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-identites',
+    'Qui suis-je ? Identités',
+  ],
+  ['unit C1.2 humour in French', '/fr/levels/fr-c1-2/units/fr-c1-2-humour', 'Rions un peu !'],
+  [
+    'unit C1.2 francophonie in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-francophonie',
+    'La Francophonie',
+  ],
+  [
+    'unit C1.2 argumenter in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-argumenter',
+    'Pour ou contre ?',
+  ],
   ['level A1.2 in French', '/fr/levels/fr-a1-2', 'A1.2'],
   ['A1.2 unit 1 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-journee', 'Ma journée'],
   ['A1.2 unit 2 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-fetes', 'Félicitations !'],

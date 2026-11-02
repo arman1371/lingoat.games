@@ -77,7 +77,7 @@ const FRENCH_LEVELS: LevelMeta[] = (
       id: 'fr-c1-2',
       title: 'C1.2',
       subtitle:
-        'Games and addiction, with the -ant forms: participe présent, gérondif, adjectif verbal',
+        'Games, family, health, ecology, history and the Francophonie – the subjunctive, conditional, connectors and argumentation',
       status: 'available',
       load: () => import('./fr-c1-2'),
     },

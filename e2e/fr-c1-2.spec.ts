@@ -72,7 +72,7 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue (three scenes)', 'fr-c1-2-jeu-dialogues'],
   ['blitz', 'fr-c1-2-jeu-blitz'],
   ['quiz (unit challenge)', 'fr-c1-2-jeu-challenge'],
-  // units 2 to 6: a definitions quiz, a grammar game and the challenge each
+  // units 2 to 12: a definitions quiz, a grammar game and the challenge each
   ['quiz (definitions, family)', 'fr-c1-2-famille-quiz-definitions'],
   ['sort it (registers)', 'fr-c1-2-famille-sort-register'],
   ['quiz (family challenge)', 'fr-c1-2-famille-challenge'],
@@ -88,6 +88,24 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['quiz (definitions, sport)', 'fr-c1-2-sport-quiz-definitions'],
   ['sort it (relative pronouns)', 'fr-c1-2-sport-sort-relatifs'],
   ['quiz (sport challenge)', 'fr-c1-2-sport-challenge'],
+  ['quiz (definitions, climate)', 'fr-c1-2-ecologie-quiz-definitions'],
+  ['conjugation (futur antérieur)', 'fr-c1-2-ecologie-conj-futur-anterieur'],
+  ['quiz (climate challenge)', 'fr-c1-2-ecologie-challenge'],
+  ['quiz (definitions, history)', 'fr-c1-2-histoire-quiz-definitions'],
+  ['sort it (time markers)', 'fr-c1-2-histoire-sort-temps'],
+  ['quiz (history challenge)', 'fr-c1-2-histoire-challenge'],
+  ['quiz (definitions, identity)', 'fr-c1-2-identites-quiz-definitions'],
+  ['sort it (concession)', 'fr-c1-2-identites-sort-concession'],
+  ['quiz (identity challenge)', 'fr-c1-2-identites-challenge'],
+  ['quiz (definitions, cinema)', 'fr-c1-2-humour-quiz-definitions'],
+  ['conjugation (conditional)', 'fr-c1-2-humour-conj-conditionnel'],
+  ['quiz (cinema challenge)', 'fr-c1-2-humour-challenge'],
+  ['quiz (definitions, Francophonie)', 'fr-c1-2-francophonie-quiz-definitions'],
+  ['sort it (places)', 'fr-c1-2-francophonie-sort-geo'],
+  ['quiz (Francophonie challenge)', 'fr-c1-2-francophonie-challenge'],
+  ['quiz (definitions, argument)', 'fr-c1-2-argumenter-quiz-definitions'],
+  ['sort it (connectors)', 'fr-c1-2-argumenter-sort-connecteurs'],
+  ['quiz (argument challenge)', 'fr-c1-2-argumenter-challenge'],
 ];
 
 test.describe('French C1.2 – playing the games', () => {
