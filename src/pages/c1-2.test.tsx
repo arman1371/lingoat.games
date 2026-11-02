@@ -28,10 +28,13 @@ describe('Level C1.2', () => {
 
   it('filters the library by the C1.2 level and only offers its units', async () => {
     renderApp('/library?view=games&lvl=c1-2');
-    await waitFor(() =>
-      expect(screen.getByTestId('result-count')).toHaveTextContent(
-        `${c12.activities.length} games`,
-      ),
+    // the library imports every level pack; with the French levels that can pass the default 1 s
+    await waitFor(
+      () =>
+        expect(screen.getByTestId('result-count')).toHaveTextContent(
+          `${c12.activities.length} games`,
+        ),
+      { timeout: 15_000 },
     );
     expect(screen.getByRole('button', { name: 'C1.2' })).toHaveAttribute('aria-pressed', 'true');
     expect(screen.getByRole('button', { name: /Recht & Gesetz/ })).toBeInTheDocument();

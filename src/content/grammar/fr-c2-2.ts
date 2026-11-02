@@ -484,7 +484,7 @@ export const FRC22_TOPICS: GrammarTopic[] = [
       ),
     ],
     related: ['fr-c22-passif'],
-    sources: [S.conditional],
+    sources: [S.conditionalFr],
   },
   {
     id: 'fr-c22-infinitif',
