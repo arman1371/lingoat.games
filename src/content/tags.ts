@@ -418,6 +418,7 @@ export const TAGS = {
   'fr-b12-future-choice': { label: 'Which future to use', group: 'grammar', emoji: '🔭' },
   'fr-b12-si-clauses': { label: 'Si… clauses', group: 'grammar', emoji: '🤔' },
   'fr-b12-conditional': { label: 'The conditional', group: 'grammar', emoji: '💭' },
+  'fr-b12-past-hypotheses': { label: 'Regrets and the past', group: 'grammar', emoji: '⏪' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

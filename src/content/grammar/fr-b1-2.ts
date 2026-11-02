@@ -1,4 +1,5 @@
 import { conditionnel } from '@/lib/french/conditional';
+import { conditionnelPasse, plusQueParfait } from '@/lib/french/compound';
 import { futurSimple } from '@/lib/french/tenses';
 import { FRENCH_PRONOUNS } from '@/lib/persons';
 import { examples, mistake, p, section, table, tip } from './build';
@@ -312,5 +313,77 @@ export const FRB12_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-b12-si-clauses', 'fr-futur-simple'],
     sources: [S.conditionnel, S.phraseConditionnelle],
+  },
+  {
+    id: 'fr-b12-past-hypotheses',
+    title: 'Regrets and the past',
+    tagline: 'If I had known… I should have…',
+    level: LEVEL,
+    summary:
+      'The plus-que-parfait (j’avais su) and the past conditional (je serais venu) let you talk about a past that did not happen. Together they form the third type of si sentence, and with devoir and pouvoir they express regrets and reproaches: j’aurais dû, tu aurais pu.',
+    sections: [
+      section(
+        'pqp',
+        'The plus-que-parfait',
+        p(
+          'The **plus-que-parfait** is the **imparfait** of *avoir* or *être* plus the **past participle**. It describes something that had already happened before another past moment: *Quand je suis arrivé, elle était déjà partie.* The same verbs take *être* as in the passé composé, and the participle agrees with the subject.',
+        ),
+        table(
+          'Plus-que-parfait of three verbs.',
+          ['Person', 'finir', 'prendre', 'partir (elle)'],
+          FRENCH_PRONOUNS.map((pr) => [
+            pr,
+            plusQueParfait('finir')[pr],
+            plusQueParfait('prendre')[pr],
+            plusQueParfait('partir', { feminine: true })[pr],
+          ]),
+        ),
+      ),
+      section(
+        'cond-past',
+        'The past conditional',
+        p(
+          'The **conditionnel passé** is the **conditional** of *avoir* or *être* plus the **past participle**. It says what would have happened, or what you should or could have done.',
+        ),
+        table(
+          'Past conditional of three verbs.',
+          ['Person', 'faire', 'aller', 'devoir'],
+          FRENCH_PRONOUNS.map((pr) => [
+            pr,
+            conditionnelPasse('faire')[pr],
+            conditionnelPasse('aller')[pr],
+            conditionnelPasse('devoir')[pr],
+          ]),
+        ),
+        examples(
+          ['J’aurais dû vous écouter.', 'I should have listened to you.'],
+          ['Tu aurais pu me prévenir !', 'You could have warned me!'],
+          ['Nous serions restés plus longtemps.', 'We would have stayed longer.'],
+        ),
+      ),
+      section(
+        'si',
+        'Si + plus-que-parfait',
+        p(
+          'For an imaginary **past**, put the **si** clause in the plus-que-parfait and the main clause in the past conditional: *Si j’avais su, je serais venu.* As always, the conditional never follows si.',
+        ),
+        table(
+          'The three types of si sentence.',
+          ['Meaning', 'si clause', 'Main clause'],
+          [
+            ['Possible', 'present', 'future'],
+            ['Imaginary now', 'imparfait', 'conditional'],
+            ['Imaginary past', 'plus-que-parfait', 'past conditional'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Si j’aurais su, je serais venu.  ✓ Si j’avais su, je serais venu.',
+          '✗ J’ai dû vous écouter. (for a regret)  ✓ J’aurais dû vous écouter.',
+        ),
+      ),
+    ],
+    related: ['fr-b12-si-clauses', 'fr-b12-conditional'],
+    sources: [S.plusQueParfait, S.conditionnel],
   },
 ];

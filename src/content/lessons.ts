@@ -1341,6 +1341,15 @@ export const LESSONS = {
     rule: 'Future stem plus the endings of the imparfait: je voyagerais, nous irions, ils feraient. Use it for imaginary results, polite requests (Je voudrais…, Pourriez-vous… ?), advice (Tu devrais…) and wishes.',
     examples: ['Je voudrais un billet.', 'Tu devrais te reposer.', 'Nous irions en Corse.'],
   },
+  'fr-b12-past-hypotheses': {
+    title: 'Regrets and the past',
+    rule: 'Plus-que-parfait = imparfait of avoir or être + participle (j’avais su). Past conditional = conditional of avoir or être + participle (je serais venu). Together: si + plus-que-parfait, then past conditional. J’aurais dû = I should have.',
+    examples: [
+      'Si j’avais su, je serais venu.',
+      'J’aurais dû vous écouter.',
+      'Tu aurais pu me prévenir !',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

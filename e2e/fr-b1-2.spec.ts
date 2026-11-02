@@ -48,6 +48,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (conditional)', 'fr-b1-2-hypotheses-gap-conditional'],
   ['dialogue (hypotheses)', 'fr-b1-2-hypotheses-dialogues'],
   ['blitz (hypotheses)', 'fr-b1-2-hypotheses-blitz'],
+  ['sort it (past or present)', 'fr-b1-2-regrets-sort-time'],
+  ['conjugation (plus-que-parfait)', 'fr-b1-2-regrets-conj-pqp'],
+  ['conjugation (past conditional)', 'fr-b1-2-regrets-conj-cond-past'],
+  ['gap fill (past hypotheses)', 'fr-b1-2-regrets-gap-past-hypothesis'],
+  ['dialogue (apologies)', 'fr-b1-2-regrets-dialogues'],
+  ['sentence builder (regrets)', 'fr-b1-2-regrets-sentences'],
 ];
 
 test.describe('French B1.2 – playing the games', () => {
