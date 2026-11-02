@@ -889,4 +889,108 @@ export const FRC12_TOPICS_B: GrammarTopic[] = [
     related: ['fr-c12-concession'],
     sources: [S.proposition],
   },
+  {
+    id: 'fr-c12-appreciation',
+    title: 'Giving an appreciation',
+    tagline: 'Praise, nuance or criticise a film or a show',
+    level: LEVEL,
+    summary:
+      'To review a film or show, choose expressions of praise, reservation or criticism, and watch the mood after your opinion verb.',
+    sections: [
+      section(
+        'expressions',
+        'Useful expressions',
+        table(
+          'Opinions about a film.',
+          ['Tone', 'Expressions'],
+          [
+            ['Praise', 'j’ai adoré, ça m’a beaucoup plu, un vrai régal, je le recommande vivement'],
+            [
+              'Reservation',
+              'plutôt réussi, mais …, correct sans plus, inégal, la fin m’a laissé sur ma faim',
+            ],
+            [
+              'Criticism',
+              'ça m’a ennuyé, c’est prévisible, les dialogues sont plats, je suis resté sur ma faim',
+            ],
+            ['Opinion', 'à mon avis, selon moi, je trouve que, il me semble que'],
+          ],
+        ),
+        examples(
+          [
+            'J’ai adoré ce film, le scénario est brillant.',
+            'I loved this film, the screenplay is brilliant.',
+          ],
+          [
+            'Il est plutôt réussi, mais la fin m’a déçu.',
+            'It is rather good, but the ending disappointed me.',
+          ],
+        ),
+      ),
+      section(
+        'mood',
+        'Which mood?',
+        p(
+          'In the affirmative, **je trouve que, je pense que, il me semble que** + **indicative**. In the negative or a question, the **subjunctive** is common: *Je ne trouve pas que ce soit drôle.* **Feelings** (être ravi / content / déçu que) always take the **subjunctive**: *Je suis ravi que tu aies aimé.*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je trouve que ce soit drôle.  ✓ Je trouve que c’est drôle.',
+          '✗ Je suis ravi que tu as aimé.  ✓ Je suis ravi que tu aies aimé.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-conditionnel', 'fr-c12-subjonctif-present'],
+    sources: [S.subjonctif],
+  },
+  {
+    id: 'fr-c12-conditionnel',
+    title: 'The conditional',
+    tagline: 'Politeness, hypothesis, rumour and regret',
+    level: LEVEL,
+    summary:
+      'The conditional is built on the future stem with the imparfait endings. It is used for polite requests, hypotheses, unconfirmed information and regrets.',
+    sections: [
+      section(
+        'forms',
+        'Forms',
+        table(
+          'Conditional present.',
+          ['Verb', 'je', 'nous', 'ils'],
+          [
+            ['être', 'serais', 'serions', 'seraient'],
+            ['avoir', 'aurais', 'aurions', 'auraient'],
+            ['aller', 'irais', 'irions', 'iraient'],
+            ['pouvoir', 'pourrais', 'pourrions', 'pourraient'],
+            ['vouloir', 'voudrais', 'voudrions', 'voudraient'],
+            ['aimer', 'aimerais', 'aimerions', 'aimeraient'],
+          ],
+        ),
+        p(
+          'The **past** conditional is the conditional of **avoir / être** + the participle: *j’aurais dû*, *il serait venu*.',
+        ),
+      ),
+      section(
+        'uses',
+        'Uses',
+        table(
+          'Four main uses.',
+          ['Use', 'Example'],
+          [
+            ['Polite request', 'Je voudrais deux places. · Pourriez-vous baisser le son ?'],
+            ['Hypothesis', 'Si j’avais le temps, j’irais au festival.'],
+            ['Unconfirmed news', 'Le film sortirait en mai, selon la presse.'],
+            ['Regret, unreal past', 'Si j’avais su, je serais venu. · J’aurais dû voir ce film.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Si j’aurais le temps, j’irais.  ✓ Si j’avais le temps, j’irais.',
+          '✗ Si j’avais su, je viendrais.  ✓ Si j’avais su, je serais venu.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-appreciation', 'fr-c12-concordance'],
+    sources: [S.conditionnel],
+  },
 ];

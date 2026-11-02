@@ -1232,6 +1232,24 @@ export const LESSONS = {
       'Aucune solution n’est simple.',
     ],
   },
+  'fr-c12-appreciation': {
+    title: 'Giving an appreciation',
+    rule: 'Praise: j’ai adoré, ça m’a plu. Reservation: plutôt réussi, mais …; correct, sans plus. Criticism: ça m’a ennuyé, c’est prévisible. Je trouve que + indicative; in the negative, the subjunctive is common. Feelings take the subjunctive: je suis ravi que tu aies aimé.',
+    examples: [
+      'À mon avis, le scénario est brillant.',
+      'Je ne trouve pas que ce soit drôle.',
+      'Il est plutôt réussi, mais la fin m’a déçu.',
+    ],
+  },
+  'fr-c12-conditionnel': {
+    title: 'The conditional',
+    rule: 'Future stem + imparfait endings: je serais, nous irions. Uses: polite request (je voudrais), hypothesis (si + imparfait → conditionnel), unconfirmed news (il sortirait en mai). Past conditional (j’aurais dû) = regret, or after si + plus-que-parfait. Never use it right after si.',
+    examples: [
+      'Je voudrais deux places, s’il vous plaît.',
+      'Si j’avais le temps, j’irais au festival.',
+      'Si j’avais su, je serais venu.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',

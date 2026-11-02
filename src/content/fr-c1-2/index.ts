@@ -8,8 +8,20 @@ import { sport } from './u6-sport';
 import { ecologie } from './u7-ecologie';
 import { histoire } from './u8-histoire';
 import { identites } from './u9-identites';
+import { humour } from './u10-humour';
 
-const units = [jeu, famille, vieillir, sante, solidarite, sport, ecologie, histoire, identites];
+const units = [
+  jeu,
+  famille,
+  vieillir,
+  sante,
+  solidarite,
+  sport,
+  ecologie,
+  histoire,
+  identites,
+  humour,
+];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

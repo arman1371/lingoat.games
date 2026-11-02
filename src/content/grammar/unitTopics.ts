@@ -581,4 +581,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'fr-c1-2-ecologie': [{ topic: 'fr-c12-futur-anterieur' }, { topic: 'fr-c12-cause-consequence' }],
   'fr-c1-2-histoire': [{ topic: 'fr-c12-concordance' }, { topic: 'fr-c12-marqueurs-temporels' }],
   'fr-c1-2-identites': [{ topic: 'fr-c12-concession' }, { topic: 'fr-c12-indefinis' }],
+  'fr-c1-2-humour': [{ topic: 'fr-c12-appreciation' }, { topic: 'fr-c12-conditionnel' }],
 };
