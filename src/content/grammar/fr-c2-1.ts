@@ -867,4 +867,81 @@ export const FRC21_TOPICS: GrammarTopic[] = [
     related: ['fr-c21-emphasis'],
     sources: [S.sigle, S.euInstitutions, S.fifthRepublic],
   },
+  {
+    id: 'fr-c21-argument',
+    title: 'Structuring an argument',
+    tagline: 'Defend a thesis and answer the other side',
+    level: LEVEL,
+    summary:
+      'An argument consists of a thesis and the arguments that support it. Connectors mark the steps: listing, opposition, concession and conclusion. A counter-example is enough to refute a general thesis.',
+    sections: [
+      section(
+        'parts',
+        'The parts of an argument',
+        p(
+          'An argumentation has a **conclusion** and one or more supporting elements, the **prémisses** or **arguments**. It presents arguments in support of a **thèse** or against it, and stays open to **réfutation**. An argument can rest on a concrete example, on a comparison, or on the authority of its author (**argument d’autorité**). A **contre-exemple** refutes a thesis by showing a case that contradicts it.',
+        ),
+        table(
+          'The vocabulary of an argument.',
+          ['Word', 'What it is', 'Example'],
+          [
+            ['la thèse', 'the position defended', 'Je défends la thèse du télétravail partiel.'],
+            ['l’argument', 'a reason that supports it', 'Cet argument est étayé par trois études.'],
+            [
+              'le contre-exemple',
+              'a case that contradicts a claim',
+              'Un contre-exemple suffit à réfuter cette thèse.',
+            ],
+            ['la réfutation', 'proof that a claim is wrong', 'La réfutation est claire.'],
+          ],
+        ),
+      ),
+      section(
+        'connectors',
+        'Connectors that structure the line of reasoning',
+        p(
+          'A **connecteur** is a word or phrase that links two propositions. In an argument, connectors tell the listener what each step does: **list** the points, **oppose** or **restrict** a claim, or **conclude**.',
+        ),
+        table(
+          'Connectors by function.',
+          ['Function', 'Connectors'],
+          [
+            ['list the points', 'tout d’abord, en premier lieu, ensuite, en second lieu, enfin'],
+            ['oppose or restrict', 'cependant, toutefois, en revanche, pourtant'],
+            ['grant a point', 'certes … toutefois, il est vrai que … mais'],
+            ['conclude', 'donc, en définitive, pour conclure, en conclusion'],
+          ],
+        ),
+        examples(
+          [
+            'Certes, ce plan est ambitieux ; toutefois, il reste réaliste.',
+            'Admittedly this plan is ambitious; however, it remains realistic.',
+          ],
+          [
+            'En premier lieu, le budget ; en second lieu, le calendrier.',
+            'In the first place, the budget; secondly, the schedule.',
+          ],
+        ),
+      ),
+      section(
+        'positions',
+        'Taking a position',
+        p(
+          'Verbs show how you stand towards an idea: **étayer** (to support), **réfuter** (to refute), **nuancer** (to qualify), **contester** (to dispute), **cautionner** (to lend support), **dénoncer** (to denounce), **trancher** (to settle) and **plaider en faveur de** (to argue for).',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Un contre-exemple permet d’étayer une thèse générale.  ✓ … de réfuter une thèse générale.',
+          '✗ plaider contre en faveur de  ✓ plaider en faveur de (or plaider contre)',
+          '✗ Donc, ce plan est ambitieux ; toutefois…  ✓ Certes, ce plan est ambitieux ; toutefois…',
+        ),
+        tip(
+          'In a debate',
+          'The **modérateur** gives the floor, each **orateur** has a fixed **temps de parole**, and a **réplique** answers what was just said.',
+        ),
+      ),
+    ],
+    related: ['fr-c21-concession', 'fr-c21-cause-consequence'],
+    sources: [S.argumentation, S.connectors, S.debate],
+  },
 ];

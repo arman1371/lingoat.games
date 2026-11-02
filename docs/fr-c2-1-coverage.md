@@ -48,18 +48,51 @@ Agreed with the C2.2 thread. No source divides C2 into halves, so the split is a
 
 ## Units
 
-| #   | Unit (id suffix)                         | Evidence (at least two)                                                                          | Status                     |
-| --- | ---------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------- |
-| 1   | Registres et nuances (`registres`)       | UCL (registers, prefixes, suffixes) · UN2 (nuances of words) · UN1 (idioms, abstract lexis) · WP | done, 16 games             |
-| 2   | Humour et ironie (`humour`)              | UN1 (humour, irony, cultural references) · UCL (humour, wordplay)                                | planned                    |
-| 3   | Temps du récit (`recit`)                 | UN1 (discursive values of tenses) · UFR (passé simple, passé antérieur)                          | planned                    |
-| 4   | Cause et conséquence (`cause`)           | UCL · UN1 (complex logical connectors)                                                           | planned                    |
-| 5   | Concession et hypothèse (`concession`)   | UCL (concession, opposition, hypothesis) · UN1                                                   | planned                    |
-| 6   | Subjonctif et concordance (`subjonctif`) | UFR (subjunctive) · UN1 (complete mastery of moods) · Reflex'Français (snippet only)             | planned, partly weak       |
-| 7   | Mise en relief (`relief`)                | UN1 (thématisation, focalisation) · UCL (complex sentences)                                      | planned                    |
-| 8   | Institutions (`institutions`)            | UN1 (French and European institutions) only                                                      | planned, **single source** |
-| 9   | Débat et argumentation (`debat`)         | UN1 (defending a thesis, synthesis) · UN2 (debates, essays) · UCL (critical opinion, synthesis)  | planned                    |
+| #   | Unit (id suffix)                         | Evidence (at least two)                                                                          | Status                            |
+| --- | ---------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------- |
+| 1   | Registres et nuances (`registres`)       | UCL (registers, prefixes, suffixes) · UN2 (nuances of words) · UN1 (idioms, abstract lexis) · WP | done, 16 games                    |
+| 2   | Humour et ironie (`humour`)              | UN1 (humour, irony, cultural references) · UCL (humour, wordplay)                                | done, 13 games                    |
+| 3   | Temps du récit (`recit`)                 | UN1 (discursive values of tenses) · UFR (passé simple, passé antérieur)                          | done, 15 games                    |
+| 4   | Cause et conséquence (`cause`)           | UCL · UN1 (complex logical connectors)                                                           | done, 14 games                    |
+| 5   | Concession et hypothèse (`concession`)   | UCL (concession, opposition, hypothesis) · UN1                                                   | done, 14 games                    |
+| 6   | Subjonctif et concordance (`subjonctif`) | UFR (subjunctive) · UN1 (complete mastery of moods) · Reflex'Français (snippet only)             | done, 15 games                    |
+| 7   | Mise en relief (`relief`)                | UN1 (thématisation, focalisation) · UCL (complex sentences)                                      | done, 14 games                    |
+| 8   | Institutions (`institutions`)            | UN1 (French and European institutions) only                                                      | done, 14 games, **single source** |
+| 9   | Débat et argumentation (`debat`)         | UN1 (defending a thesis, synthesis) · UN2 (debates, essays) · UCL (critical opinion, synthesis)  | done, 14 games                    |
 
 Every unit aims at 10 to 16 games with at least 6 of the 13 engines, an easy first game and a final "… challenge". Vocabulary
-cards are not repeated across units or earlier French levels. Each unit is its own pull request, with the full lessons for its
-`fr-c21-` mini lessons.
+cards are not repeated across units or earlier French levels. All nine units are in one pull request, with a full lesson for every `fr-c21-` mini lesson.
+
+## Result
+
+129 games and 254 vocabulary cards in 9 units, 13 grammar topics. Tags: topics `fr-c21-registers`, `fr-c21-humour`,
+`fr-c21-narration`, `fr-c21-logic`, `fr-c21-mood`, `fr-c21-style`, `fr-c21-institutions`, `fr-c21-debate`; grammar
+`fr-c21-word-formation`, `fr-c21-wordplay`, `fr-c21-passe-simple`, `fr-c21-narrative-tenses`, `fr-c21-cause-consequence`,
+`fr-c21-concession`, `fr-c21-subjunctive`, `fr-c21-reported-speech`, `fr-c21-emphasis`, `fr-c21-nominalisation`,
+`fr-c21-acronyms`, `fr-c21-argument`.
+
+## What was checked in units 4 to 9, and what was not
+
+Pages that were fetched and read are listed per topic in `docs/grammar-sources.md`. Several rules are textbook teaching that
+no fetched page states:
+
+- Unit 4: the difference between parce que (new reason) and puisque (known reason) only follows the Wiktionnaire gloss;
+  that tellement … que and si bien que take the indicative, and ce n'est pas que + subjunctive, are textbook teaching.
+  The Wikipédia page on subordinating conjunctions lists the connectors by value but states no moods.
+- Unit 5: quand bien même + conditional, au cas où + conditional (the Académie française only), and quoique + subjunctive
+  come from Wiktionnaire. The si-clause sequences (si + present → future etc.) and à condition que / pourvu que / à moins que
+  - subjunctive are textbook teaching, supported by the Wikipédia list of subjunctive conjunctions.
+- Unit 6: Wikipédia (Subjonctif, Concordance des temps, Discours indirect) state the tense shifts, the time words
+  (hier → la veille, demain → le lendemain) and the exception for timeless truths. The page does not treat indirect
+  questions with si, so that rule is textbook teaching. The subjunctive imparfait is mentioned only as marginal.
+- Unit 7: Wikipédia (Phrase clivée, Dislocation, Nominalisation) support c'est … qui / que, dislocation and the
+  definition and written-language use of nominalisation. The ce qui / ce que / ce dont … c'est construction is not on the
+  clefted-sentence page, so it follows textbook teaching. The Mise en relief page treats a different, text-linguistic sense
+  and was not used.
+- Unit 8: this unit has a **single source in the syllabus research** (Navarra C2.1A lists French and European institutions).
+  The content is checked against Wikipédia: Institutions de l'Union européenne (read up to character 100 000 of 141 539),
+  the Cinquième République page (first 100 000 of 299 770 characters; article 49.3 was not covered) and Sigle. The page on
+  capital letters answered 404, so the typographic rule for institution names follows common practice.
+- Unit 9: Wikipédia (Argumentation) was read; it has nothing on counter-arguments or concession. Connecteur logique
+  (linguistique) gives the categories (enumeration, opposition, concession, conclusion) but not every connector used here.
+  The Débat page has none of the debate vocabulary (modérateur, temps de parole, réplique), which follows common usage.

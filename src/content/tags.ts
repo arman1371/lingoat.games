@@ -368,6 +368,7 @@ export const TAGS = {
   'fr-c21-mood': { label: 'Mood & reported speech', group: 'topic', emoji: '🗣️' },
   'fr-c21-style': { label: 'Emphasis & written style', group: 'topic', emoji: '🔦' },
   'fr-c21-institutions': { label: 'Institutions & politics', group: 'topic', emoji: '🏛️' },
+  'fr-c21-debate': { label: 'Debate & argument', group: 'topic', emoji: '🗨️' },
   'fr-c21-logic': { label: 'Cause, result & concession', group: 'topic', emoji: '🔗' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
@@ -420,6 +421,7 @@ export const TAGS = {
   'fr-c21-emphasis': { label: 'Emphasis (c’est … qui)', group: 'grammar', emoji: '🔦' },
   'fr-c21-nominalisation': { label: 'Nominalisation', group: 'grammar', emoji: '🗞️' },
   'fr-c21-acronyms': { label: 'Acronyms & institution names', group: 'grammar', emoji: '🔤' },
+  'fr-c21-argument': { label: 'Structuring an argument', group: 'grammar', emoji: '🧭' },
   'fr-c21-concession': { label: 'Concession & hypothesis', group: 'grammar', emoji: '⚖️' },
   'fr-c21-cause-consequence': { label: 'Cause & consequence', group: 'grammar', emoji: '🔗' },
   // topics – French A2.1

@@ -266,14 +266,26 @@ and "pendant + passé composé" are textbook teaching, not checked against a fet
 
 ## French C2.1
 
-The French C2.1 lessons are in `src/content/grammar/fr-c2-1.ts` (pages in `sources-fr.ts`). Lessons are added with their unit.
+The French C2.1 lessons are in `src/content/grammar/fr-c2-1.ts` (pages in `sources-fr.ts`).
 
-| Topic                 | Pages read                                                                                                                                                                                                                                                          |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Prefixes and suffixes | Wiktionnaire [Annexe: Préfixes en français](https://fr.wiktionary.org/wiki/Annexe:Pr%C3%A9fixes_en_fran%C3%A7ais) (read up to the letter D: in-, dé-, dés-, anti-), [Annexe: Suffixes en français](https://fr.wiktionary.org/wiki/Annexe:Suffixes_en_fran%C3%A7ais) |
+| Topic                         | Pages read                                                                                                                                                                                                                                                                                        |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Prefixes and suffixes         | Wiktionnaire [Annexe: Préfixes en français](https://fr.wiktionary.org/wiki/Annexe:Pr%C3%A9fixes_en_fran%C3%A7ais) (read up to the letter D: in-, dé-, dés-, anti-), [Annexe: Suffixes en français](https://fr.wiktionary.org/wiki/Annexe:Suffixes_en_fran%C3%A7ais)                               |
+| Homophones and paronyms       | Wikipédia [Paronymie](https://fr.wikipedia.org/wiki/Paronymie), [Homophone](https://fr.wikipedia.org/wiki/Homophone), [Calembour](https://fr.wikipedia.org/wiki/Calembour)                                                                                                                        |
+| Passé simple, passé antérieur | Wikipédia [Passé simple en français](https://fr.wikipedia.org/wiki/Pass%C3%A9_simple_en_fran%C3%A7ais), [Passé antérieur](https://fr.wikipedia.org/wiki/Pass%C3%A9_ant%C3%A9rieur), [Présent historique](https://fr.wikipedia.org/wiki/Pr%C3%A9sent_historique)                                   |
+| Cause and consequence         | Wikipédia [Conjonction de subordination](https://fr.wikipedia.org/wiki/Conjonction_de_subordination); Wiktionnaire [puisque](https://fr.wiktionary.org/wiki/puisque), [de sorte que](https://fr.wiktionary.org/wiki/de_sorte_que)                                                                 |
+| Concession and hypothesis     | Wiktionnaire [quand bien même](https://fr.wiktionary.org/wiki/quand_bien_m%C3%AAme), [au cas où](https://fr.wiktionary.org/wiki/au_cas_o%C3%B9), [quoique](https://fr.wiktionary.org/wiki/quoique); Wikipédia [Subjonctif en français](https://fr.wikipedia.org/wiki/Subjonctif_en_fran%C3%A7ais) |
+| The subjunctive               | Wikipédia [Subjonctif en français](https://fr.wikipedia.org/wiki/Subjonctif_en_fran%C3%A7ais), [Concordance des temps](https://fr.wikipedia.org/wiki/Concordance_des_temps)                                                                                                                       |
+| Reported speech               | Wikipédia [Discours indirect](https://fr.wikipedia.org/wiki/Discours_indirect), [Concordance des temps](https://fr.wikipedia.org/wiki/Concordance_des_temps)                                                                                                                                      |
+| Emphasis                      | Wikipédia [Phrase clivée](https://fr.wikipedia.org/wiki/Phrase_cliv%C3%A9e), [Dislocation (linguistique)](<https://fr.wikipedia.org/wiki/Dislocation_(linguistique)>)                                                                                                                             |
+| Nominalisation                | Wikipédia [Nominalisation](https://fr.wikipedia.org/wiki/Nominalisation)                                                                                                                                                                                                                          |
+| Acronyms and institutions     | Wikipédia [Sigle](https://fr.wikipedia.org/wiki/Sigle), [Institutions de l'Union européenne](https://fr.wikipedia.org/wiki/Institutions_de_l%27Union_europ%C3%A9enne), [Cinquième République (France)](<https://fr.wikipedia.org/wiki/Cinqui%C3%A8me_R%C3%A9publique_(France)>)                   |
+| Structuring an argument       | Wikipédia [Argumentation](https://fr.wikipedia.org/wiki/Argumentation), [Connecteur logique (linguistique)](<https://fr.wikipedia.org/wiki/Connecteur_logique_(linguistique)>), [Débat](https://fr.wikipedia.org/wiki/D%C3%A9bat)                                                                 |
 
-**Limits:** the meanings of mé-, més-, sur- and sous- and the assimilation of in- before b, m, p, l and r follow common textbook
-teaching and were not checked against a fetched page.
+**Limits:** the meanings of mé-, més-, sur- and sous- and the assimilation of in- before b, m, p, l and r follow common
+textbook teaching and were not checked against a fetched page. The rules that no fetched page states (parce que vs puisque,
+si-clause sequences, indirect questions with si, ce qui / ce que … c'est, capital letters for institution names) are listed
+in `docs/fr-c2-1-coverage.md`.
 
 ## Limits of the research
 

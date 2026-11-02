@@ -92,6 +92,10 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (acronyms)', 'fr-c2-1-institutions-gap-acronyms'],
   ['spell (institutions)', 'fr-c2-1-institutions-spell-words'],
   ['quiz (institutions challenge)', 'fr-c2-1-institutions-challenge'],
+  ['sort it (connectors)', 'fr-c2-1-debat-sort-links'],
+  ['gap fill (verbs of position)', 'fr-c2-1-debat-gap-positions'],
+  ['dialogue (a debate)', 'fr-c2-1-debat-dialogues'],
+  ['quiz (debate challenge)', 'fr-c2-1-debat-challenge'],
 ];
 
 test.describe('French C2.1 – playing the games', () => {

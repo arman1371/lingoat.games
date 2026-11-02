@@ -68,5 +68,8 @@ export const FR_SOURCES = {
   sigle: wp('Sigle', 'Sigle'),
   euInstitutions: wp('Institutions_de_l’Union_européenne', 'Institutions de l’Union européenne'),
   fifthRepublic: wp('Cinquième_République_(France)', 'Cinquième République (France)'),
+  argumentation: wp('Argumentation', 'Argumentation'),
+  connectors: wp('Connecteur_logique_(linguistique)', 'Connecteur logique (linguistique)'),
+  debate: wp('Débat', 'Débat'),
   deSorteQue: wiktionary('de_sorte_que', 'de sorte que'),
 } as const satisfies Record<string, Source>;

@@ -7,6 +7,7 @@ import { concessionUnit } from './u5-concession';
 import { subjonctif } from './u6-subjonctif';
 import { relief } from './u7-relief';
 import { institutions } from './u8-institutions';
+import { debat } from './u9-debat';
 
 const units = [
   registres,
@@ -17,6 +18,7 @@ const units = [
   subjonctif,
   relief,
   institutions,
+  debat,
 ];
 
 const content: LevelContent = {

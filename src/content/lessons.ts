@@ -1318,6 +1318,15 @@ export const LESSONS = {
       'Quand bien même vous insisteriez, je refuserais.',
     ],
   },
+  'fr-c21-argument': {
+    title: 'Structuring an argument',
+    rule: 'State the thesis, then support it with arguments and examples, and answer the other side. Connectors mark each step: tout d’abord, ensuite, en second lieu (list); cependant, toutefois, en revanche (opposition); donc, en définitive, en conclusion (end). Certes … toutefois grants a point before objecting.',
+    examples: [
+      'Tout d’abord, il faut définir la thèse.',
+      'Certes, c’est cher ; toutefois, c’est utile.',
+      'En conclusion, je plaide pour cette réforme.',
+    ],
+  },
   'fr-c21-acronyms': {
     title: 'Acronyms and institution names',
     rule: 'A sigle is read letter by letter (SNCF), an acronyme as a word (OTAN). It takes the gender of the core noun of the full name (la SNCF, le CIO, la BCE) and no plural s (des ONG, des BD). Write capitals without full stops: UE, BCE.',
