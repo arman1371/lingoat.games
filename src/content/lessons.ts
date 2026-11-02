@@ -1462,6 +1462,24 @@ export const LESSONS = {
       'Après qu’ils eurent mangé, ils sortirent.',
     ],
   },
+  'fr-relative-pronouns': {
+    title: 'Relative pronouns: qui, que, où, dont',
+    rule: 'Qui replaces the subject (une ville qui attire), que the direct object (le quartier que je préfère), où a place or a time (la ville où j’habite, le jour où il est parti) and dont a complement with de, also meaning “whose” (le projet dont on parle, une ville dont le patrimoine est riche).',
+    examples: [
+      'C’est une ville qui attire beaucoup de touristes.',
+      'La ville où j’habite est calme.',
+      'Voici l’architecte dont je t’ai parlé.',
+    ],
+  },
+  'fr-relative-ce': {
+    title: 'Ce qui, ce que, ce dont',
+    rule: 'Without an antecedent French says ce qui (subject), ce que (object), ce dont (de + idea) and ce à quoi (à + idea), also after tout and rien. Ce qui me plaît, c’est le calme.',
+    examples: [
+      'Ce qui me plaît, c’est le calme.',
+      'Ce que je cherche, c’est un appartement.',
+      'Ce dont j’ai besoin, c’est d’un espace vert.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

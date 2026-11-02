@@ -127,6 +127,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue', 'fr-b2-1-recit-dialogues'],
   ['blitz', 'fr-b2-1-recit-blitz'],
   ['quiz', 'fr-b2-1-recit-challenge'],
+  ['gap fill (qui, que, où, dont)', 'fr-b2-1-cites-gap-relative'],
+  ['gap fill (ce qui, ce que, ce dont)', 'fr-b2-1-cites-gap-ce'],
+  ['sort it (what it replaces)', 'fr-b2-1-cites-sort-role'],
+  ['sentence builder', 'fr-b2-1-cites-sentences'],
+  ['dialogue', 'fr-b2-1-cites-dialogues'],
+  ['blitz', 'fr-b2-1-cites-blitz'],
+  ['quiz', 'fr-b2-1-cites-challenge'],
 ];
 
 test.describe('French B2.1 – playing the games', () => {

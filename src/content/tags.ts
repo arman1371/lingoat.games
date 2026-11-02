@@ -459,6 +459,9 @@ export const TAGS = {
   'reading-stories': { label: 'Reading stories', group: 'topic', emoji: '📖' },
   'fr-passe-simple': { label: 'The passé simple', group: 'grammar', emoji: '📜' },
   'fr-passe-anterieur': { label: 'The passé antérieur', group: 'grammar', emoji: '⏪' },
+  cities: { label: 'Cities', group: 'topic', emoji: '🏙️' },
+  'fr-relative-pronouns': { label: 'qui, que, où, dont', group: 'grammar', emoji: '🔗' },
+  'fr-relative-ce': { label: 'ce qui, ce que, ce dont', group: 'grammar', emoji: '🧩' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

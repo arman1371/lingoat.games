@@ -598,4 +598,8 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-passe-simple', note: 'recognising it in novels' },
     { topic: 'fr-passe-anterieur', note: 'quand il eut fini' },
   ],
+  'fr-b2-1-cites': [
+    { topic: 'fr-relative-pronouns', note: 'qui, que, où, dont' },
+    { topic: 'fr-relative-ce', note: 'ce qui, ce que, ce dont' },
+  ],
 };
