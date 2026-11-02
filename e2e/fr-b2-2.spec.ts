@@ -92,6 +92,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sort it (narrative roles)', 'fr-b2-2-histoire-sort-roles'],
   ['conjugation (passé simple)', 'fr-b2-2-histoire-conj-passe-simple'],
   ['dialogue (unit 8)', 'fr-b2-2-histoire-dialogues'],
+  // unit 9
+  ['flashcards (unit 9)', 'fr-b2-2-territoire-flash-city'],
+  ['gap fill (participle agreement)', 'fr-b2-2-territoire-gap-agreement'],
+  ['gap fill (-ant forms)', 'fr-b2-2-territoire-gap-ant'],
+  ['sort it (-ant forms)', 'fr-b2-2-territoire-sort-ant'],
+  ['dialogue (unit 9)', 'fr-b2-2-territoire-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {

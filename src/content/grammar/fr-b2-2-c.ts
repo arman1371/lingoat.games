@@ -217,4 +217,114 @@ export const FR22B_TOPICS_C: GrammarTopic[] = [
     related: ['fr-b22-passe-simple', 'fr-b22-si-clauses'],
     sources: [S.pluperfect, S.passeSimple],
   },
+  {
+    id: 'fr-b22-participle-agreement',
+    title: 'Past participle agreement',
+    tagline: 'Les photos que j’ai prises · elle s’est installée',
+    level: LEVEL,
+    summary:
+      'The past participle agrees with the subject after être, with a preceding direct object after avoir, and with the subject of a pronominal verb when se is a direct object. Fait before an infinitive and participles with a following object stay invariable.',
+    sections: [
+      section(
+        'rules',
+        'The four cases',
+        table(
+          'When does the participle agree?',
+          ['Case', 'Rule', 'Example'],
+          [
+            ['être', 'agrees with the subject', 'Elles sont parties.'],
+            ['avoir + COD before', 'agrees with the COD', 'Les photos que j’ai prises.'],
+            ['avoir + COD after', 'invariable', 'J’ai pris les photos.'],
+            ['pronominal, se = direct object', 'agrees with the subject', 'Elle s’est installée.'],
+            [
+              'pronominal, se = indirect object',
+              'invariable',
+              'Ils se sont parlé / serré la main.',
+            ],
+            ['fait + infinitive', 'invariable', 'La maison qu’il a fait construire.'],
+          ],
+        ),
+        tip(
+          'Quick test',
+          'Ask the question quoi? or qui? after the verb. If the answer is before the participle (que, les, la, quels…), agree. If there is no such answer, or it comes after, do not.',
+        ),
+      ),
+      section(
+        'traps',
+        'Frequent mistakes',
+        mistake(
+          'Watch out',
+          '✗ Les photos que j’ai pris.  ✓ Les photos que j’ai prises.',
+          '✗ Ils se sont serrés la main.  ✓ Ils se sont serré la main.',
+          '✗ Elle s’est faite construire une maison.  ✓ Elle s’est fait construire une maison.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-present-participle'],
+    sources: [S.participleAgreement, S.pastParticiple],
+  },
+  {
+    id: 'fr-b22-present-participle',
+    title: 'Gérondif and participe présent',
+    tagline: 'En créant · les habitants vivant ici · une rue passante',
+    level: LEVEL,
+    summary:
+      'Three -ant forms look alike but behave differently: the gérondif (en + -ant, how or when), the participe présent (replaces qui + verb or gives a reason, invariable) and the adjectif verbal (an adjective that agrees).',
+    sections: [
+      section(
+        'three',
+        'Three forms with -ant',
+        table(
+          'Gérondif, participe présent and adjectif verbal.',
+          ['Form', 'Function', 'Agrees?', 'Example'],
+          [
+            [
+              'gérondif',
+              'how, when, why: the same subject',
+              'no',
+              'En créant des parcs, la mairie agit.',
+            ],
+            [
+              'participe présent',
+              'like qui + verb, or a cause',
+              'no',
+              'Les habitants vivant en banlieue…',
+            ],
+            ['adjectif verbal', 'describes a noun', 'yes', 'une ville accueillante'],
+          ],
+        ),
+        p(
+          'Some adjectives are spelt differently from the participle: **convaincant** (convainquant), **fatigant** (fatiguant), **différent** (différant), **précédent** (précédant).',
+        ),
+      ),
+      section(
+        'use',
+        'Using them well',
+        compare(
+          {
+            title: 'gérondif',
+            question: 'en + -ant',
+            example: 'Elle s’est blessée en faisant du vélo.',
+          },
+          {
+            title: 'participe présent',
+            question: '-ant alone',
+            example: 'Jugeant le projet inutile, ils ont voté contre.',
+          },
+          { title: 'adjectif verbal', question: 'agrees', example: 'des chiffres convaincants' },
+        ),
+        mistake(
+          'Watch out',
+          '✗ En traversé le centre.  ✓ En traversant le centre.',
+          '✗ Les habitants vivants en banlieue.  ✓ Les habitants vivant en banlieue.',
+        ),
+        tip(
+          'Compound form',
+          'Ayant / étant + participle expresses an earlier action: Ayant refusé le projet, le maire a démissionné.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-participle-agreement'],
+    sources: [S.presentParticiple, S.gerund],
+  },
 ];

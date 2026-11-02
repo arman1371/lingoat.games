@@ -433,6 +433,17 @@ export const TAGS = {
   'fr-b22-history': { label: 'History & memory', group: 'topic', emoji: '🏰' },
   'fr-b22-passe-simple': { label: 'The passé simple', group: 'grammar', emoji: '📜' },
   'fr-b22-plus-que-parfait': { label: 'Narrative tenses', group: 'grammar', emoji: '⏪' },
+  'fr-b22-territory': { label: 'Cities & regions', group: 'topic', emoji: '🏙️' },
+  'fr-b22-participle-agreement': {
+    label: 'Past participle agreement',
+    group: 'grammar',
+    emoji: '🔗',
+  },
+  'fr-b22-present-participle': {
+    label: 'Gérondif and participe présent',
+    group: 'grammar',
+    emoji: '➡️',
+  },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
   // grammar points – French A2.1, unit 1

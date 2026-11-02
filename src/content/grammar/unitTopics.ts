@@ -574,6 +574,13 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b22-passe-simple', note: 'il fut, ils prirent, elle naquit' },
     { topic: 'fr-b22-plus-que-parfait', note: 'événement, arrière-plan, antériorité' },
   ],
+  'fr-b2-2-territoire': [
+    {
+      topic: 'fr-b22-participle-agreement',
+      note: 'les quartiers qu’ils ont choisis, elle s’est installée',
+    },
+    { topic: 'fr-b22-present-participle', note: 'en créant, habitant, accueillante' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

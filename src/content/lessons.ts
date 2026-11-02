@@ -1413,6 +1413,24 @@ export const LESSONS = {
       'Elle raconta ce qu’elle avait vu.',
     ],
   },
+  'fr-b22-participle-agreement': {
+    title: 'Past participle agreement',
+    rule: 'With être the participle agrees with the subject (elles sont parties). With avoir it agrees with a direct object placed before the verb (les photos que j’ai prises). Pronominal verbs agree when se is a direct object (elle s’est installée), not an indirect one (ils se sont parlé). Fait + infinitive never agrees.',
+    examples: [
+      'Les villes qu’ils ont visitées.',
+      'Ils se sont serré la main.',
+      'La maison qu’il a fait construire.',
+    ],
+  },
+  'fr-b22-present-participle': {
+    title: 'Gérondif and participe présent',
+    rule: 'Gérondif = en + -ant: it says how or when and is invariable (en marchant). The participe présent (-ant, no en) replaces qui + verb or gives a reason and is invariable (les gens habitant ici). An adjectif verbal agrees and sometimes has its own spelling (une rue passante, des chiffres convaincants).',
+    examples: [
+      'En créant des parcs, la mairie agit.',
+      'Les habitants vivant en banlieue…',
+      'Une ville accueillante.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',
