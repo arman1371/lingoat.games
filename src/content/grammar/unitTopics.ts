@@ -662,6 +662,18 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-superlative' },
     { topic: 'fr-interrogative-pronouns' },
   ],
+  // ---- French C1.1 ----------------------------------------------------------------------------
+  'fr-c1-1-medias': [{ topic: 'fr-c11-connectors' }],
+  'fr-c1-1-societe': [{ topic: 'fr-c11-si-clauses' }],
+  'fr-c1-1-egalite': [{ topic: 'fr-c11-affixes' }],
+  'fr-c1-1-alimentation': [{ topic: 'fr-c11-concession' }],
+  'fr-c1-1-sante': [{ topic: 'fr-c11-pronouns' }],
+  'fr-c1-1-ville': [{ topic: 'fr-c11-subjunctive' }],
+  'fr-c1-1-famille': [{ topic: 'fr-c11-reprise' }],
+  'fr-c1-1-culture': [{ topic: 'fr-c11-emphasis' }],
+  'fr-c1-1-litterature': [{ topic: 'fr-c11-narrative-tenses' }],
+  'fr-c1-1-travail': [{ topic: 'fr-c11-registers' }],
+  'fr-c1-1-numerique': [{ topic: 'fr-c11-modality' }],
   // ---- French B2.1 ----------------------------------------------------------------------------
   'fr-b2-1-identite': [
     { topic: 'fr-imparfait-pc', note: 'telling a life story' },

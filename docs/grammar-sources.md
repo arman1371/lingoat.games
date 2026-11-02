@@ -399,6 +399,46 @@ The lessons are in `src/content/grammar/fr-a2-2.ts`, the pages in `sources-fr-a2
 | The superlative: le plus, le meilleur   | [Degré de comparaison](https://fr.wikipedia.org/wiki/Degr%C3%A9_de_comparaison) (section "En français")                                                                                                                                                      |
 | Qui, que, quoi, lequel                  | [Pronom interrogatif](https://fr.wikipedia.org/wiki/Pronom_interrogatif) (section "En français")                                                                                                                                                             |
 
+## French C1.1
+
+- `fr-c11-connectors` (unit 1): read Wikipédia _Connecteur logique (linguistique)_ and _Conjonction de coordination_ (car is
+  a coordinating conjunction; donc is now classed as an adverb and is movable) and the Wiktionnaire entries _puisque_ and
+  _grâce à_ (grâce à has a positive connotation, unlike à cause de). **Not stated by any fetched page and taken from common
+  textbook teaching:** puisque presenting a reason the listener already knows, car never opening a sentence, comme opening the
+  sentence, en raison de being formal and neutral, faute de meaning "for lack of", si bien que taking the indicative, and the
+  register of en outre, par ailleurs and de surcroît. Needs a native speaker's check.
+- `fr-c11-si-clauses` (unit 2): linked Wikipédia _Phrase conditionnelle_, _Conditionnel présent_, _Conditionnel passé_,
+  _Plus-que-parfait_ and the Wiktionnaire entries _si_ and _au cas où_. The page _Phrase conditionnelle_ confirms the tense
+  pairs of the three si-clauses and that the verb after si is not in the future or the conditional. **Taken from textbook
+  teaching, not stated on a fetched page:** the label "real / unlikely / missed" for the three types, and the moods after
+  _sauf si_ and _à condition que_.
+- `fr-c11-affixes` (unit 3): linked Wikipédia _Préfixe_, _Suffixe_, _Affixe_ and the Wiktionnaire annexes of French prefixes
+  and suffixes. The prefix and suffix lists come from those annexes; the choice of im-/il-/ir- before certain consonants and
+  the typical meaning of each suffix is textbook teaching. Needs a native speaker's check.
+- `fr-c11-concession` (unit 4): linked Wikipédia _Mode subjonctif_ and _Proposition subordonnée circonstancielle_ and the
+  Wiktionnaire entries _bien que_, _quoique_, _pourtant_ and _cependant_. **Taken from textbook teaching:** bien que /
+  quoique + subjonctif versus même si / alors que + indicatif, and the formal register of toutefois and néanmoins.
+- `fr-c11-pronouns` (unit 5): linked Wikipédia _Pronom personnel_ and _Impératif_ and the Wiktionnaire entries _en_ and _y_.
+  **Taken from textbook teaching:** the order of double pronouns (me le, le lui, lui en, y en) and the order after a positive
+  imperative (donnez-le-moi).
+- `fr-c11-subjunctive` (unit 6): linked Wikipédia _Mode subjonctif_ and the Wiktionnaire entries _falloir_, _douter_ and
+  _souhaiter_. **Taken from textbook teaching:** the lists of triggers (will, feeling, doubt), the infinitive when the subject
+  is the same, and the indicative after certainty (il est évident que).
+- `fr-c11-reprise` (unit 7): linked Wikipédia _Pronom démonstratif_, _Pronom relatif_, _Anaphore (grammaire)_ and the
+  Wiktionnaire entries _celui_, _lequel_ and _dont_. **Taken from textbook teaching:** ce qui / ce que / ce dont / ce à quoi
+  as summing-up pronouns, and the choice between dont and duquel.
+- `fr-c11-emphasis` (unit 8): linked Wikipédia _Phrase clivée_, _Dislocation (linguistique)_ and _Mise en relief_ and the
+  Wiktionnaire entry _c'est_. **Taken from textbook teaching:** the pseudo-cleft (ce qui … c'est) and the register notes.
+- `fr-c11-narrative-tenses` (unit 9): linked Wikipédia _Passé simple_, _Passé composé_, _Imparfait_, _Plus-que-parfait_ and
+  _Passé antérieur_. The passé simple is taught for recognition and third-person writing only; **taken from textbook
+  teaching:** the scene-versus-event split between imparfait and passé composé / passé simple.
+- `fr-c11-registers` (unit 10): linked Wikipédia _Registre de langue_ and _Niveau de langue_ and the Wiktionnaire entries
+  _cordialement_ and _veuillez_. **Taken from textbook teaching:** the register of each example (bosser, œuvrer), the three
+  question forms and the closing formulas of a formal email. Needs a native speaker's check.
+- `fr-c11-modality` (unit 11): linked Wikipédia _Modalité (linguistique)_ and the Wiktionnaire entries _peut-être_ and
+  _apparemment_. **Taken from textbook teaching:** certainty with the indicative, doubt with the subjonctif, and the
+  journalistic conditionnel for unconfirmed information.
+
 ## French B1.2
 
 The French B1.2 lessons are in `src/content/grammar/fr-b1-2.ts`, the pages in `sources-fr.ts`. Forms in the tables come

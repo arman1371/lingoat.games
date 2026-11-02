@@ -3,7 +3,6 @@ import type { LevelMeta } from './schema';
 
 /** French is on its way: A1.1 is the pilot, the other CEFR half-levels are listed without content. */
 const FRENCH_COMING_SOON: LevelMeta[] = [
-  ['c1-1', 'C1.1', 'Effective proficiency, first half'],
   ['c1-2', 'C1.2', 'Effective proficiency, second half'],
   ['c2-2', 'C2.2', 'Mastery, second half'],
 ].map(([id, title, subtitle]) => ({
@@ -112,6 +111,14 @@ const FRENCH_LEVELS: LevelMeta[] = (
         'Registers, humour, narrative tenses, cause and concession, the subjunctive, emphasis, institutions and debate at near-native level',
       status: 'available',
       load: () => import('./fr-c2-1'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-c1-1',
+      title: 'C1.1',
+      subtitle: 'Media, society, work and technology, with the grammar of formal argument',
+      status: 'available',
+      load: () => import('./fr-c1-1'),
     },
     ...FRENCH_COMING_SOON,
   ] satisfies LevelMeta[]

@@ -68,6 +68,12 @@ two shared test harnesses (`content.test.ts`, `playability.test.tsx`), plus Fren
 - Later French levels add their own helpers in `<level>/helpers.ts`: French B1.1 (`fr-b1-1/helpers.ts`) has `subjTable` (present subjunctive from `subjunctiveFr`, `src/lib/french/subjunctive.ts`), `pqpTable` (plus-que-parfait) and `condTable` (conditional), both from `src/lib/french/moreTenses.ts`. Every unit of a French level ships its mini lessons (`lessons.ts`) **and** full lessons (`src/content/grammar/<level>.ts`) in the same PR, because the grammar test needs a full lesson for every `fr-` mini lesson. See `docs/fr-b1-1-coverage.md`.
 - Tenses beyond the present (passé composé, imparfait, futur simple) come from `src/lib/french/tenses.ts`; `fr-a2-1/helpers.ts`
   wraps them as conjugation tables (`pcTable`, `pcReflexiveTable`, `imparfaitTable`, `futurTable`).
+- Levels after A1.1 (`src/content/fr-c1-1/`) copy `fr-a1-1`'s layout. Their `helpers.ts` re-exports the language-neutral authoring
+  helpers (`gap`, `typed`, `q`, `sent`, `heard`, `dictation`, `tf`, `say` / `you`, `sortItems`, `hint`) from `a1-2/helpers` and
+  adds `unitFr` and `frCustomTable` (a conjugation table with six hand-typed forms, for tenses and moods that
+  `src/lib/french` does not generate). Grammar tags, mini lessons and full lessons use a level prefix (`fr-c11-…`) so
+  levels written in parallel cannot collide; the full lesson is written together with the unit that first teaches it.
+  The content test compares word cards with every earlier French level (see `docs/fr-c1-1-coverage.md`). French C1.1 (`fr-c1-1/helpers.ts`) adds `conditionnel`, `subjonctif`, `plusQueParfait` and `conditionnelPasse` (hand-written forms with tests) with `*Table` wrappers, and the shortcuts `gh` / `qh` (gap fill or quiz whose wrong options are the keys of the `why` map) and `cards` (sort-it cards from rows). A French level goes into one pull request with all its units.
 - `fr-b2-1/helpers.ts` shows the compact authoring helpers for a higher level (`g` gap-fill with `[option, why]` wrong answers, `q`, `qs`, `sent`, `cards`, `frForms` for hand-written tenses).
 - e2e: add the pack to `frenchActivities` in `e2e/helpers.ts` (kept apart from `allActivities`, which counts German library
   games) and follow `e2e/fr-a1-1.spec.ts`.
