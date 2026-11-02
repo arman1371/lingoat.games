@@ -417,6 +417,13 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🔑',
   },
+  'fr-b22-culture': { label: 'Culture & the arts', group: 'topic', emoji: '🎨' },
+  'fr-b22-superlative-subj': {
+    label: 'Subjunctive after superlatives',
+    group: 'grammar',
+    emoji: '🏆',
+  },
+  'fr-b22-verb-prep': { label: 'Verbs with à / de, y and en', group: 'grammar', emoji: '↔️' },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
   // grammar points – French A2.1, unit 1

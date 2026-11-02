@@ -66,6 +66,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sort it (si systems)', 'fr-b2-2-justice-sort-si'],
   ['conjugation (conditional)', 'fr-b2-2-justice-conj-conditional'],
   ['dialogue (unit 4)', 'fr-b2-2-justice-dialogues'],
+  // unit 5
+  ['flashcards (unit 5)', 'fr-b2-2-culture-flash-art'],
+  ['gap fill (superlative)', 'fr-b2-2-culture-gap-superlative'],
+  ['gap fill (verbs + prepositions)', 'fr-b2-2-culture-gap-prep'],
+  ['sort it (prepositions)', 'fr-b2-2-culture-sort-prep'],
+  ['conjugation (unit 5)', 'fr-b2-2-culture-conj-subjunctive'],
+  ['dialogue (unit 5)', 'fr-b2-2-culture-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {

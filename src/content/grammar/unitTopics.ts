@@ -558,6 +558,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b22-si-clauses', note: 'si on avait su, on aurait agi' },
     { topic: 'fr-b22-condition', note: 'à condition que, à moins que, au cas où, sauf si' },
   ],
+  'fr-b2-2-culture': [
+    { topic: 'fr-b22-superlative-subj', note: 'le plus beau film que j’aie vu' },
+    { topic: 'fr-b22-verb-prep', note: 'rêver de, s’intéresser à, y et en' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

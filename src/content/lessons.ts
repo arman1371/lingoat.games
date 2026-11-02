@@ -1345,6 +1345,20 @@ export const LESSONS = {
       'Il gagnera, sauf si le tribunal annule tout.',
     ],
   },
+  'fr-b22-superlative-subj': {
+    title: 'Subjunctive after superlatives',
+    rule: 'In careful French a relative clause after a superlative (le plus beau…), le seul, l’unique, le premier, le dernier, or after personne, rien, aucun takes the subjunctive: C’est le plus beau film que j’aie vu. A plain certainty (je sais que, il est certain que) keeps the indicative.',
+    examples: [
+      'C’est le seul peintre que je connaisse.',
+      'Il n’y a personne qui puisse le remplacer.',
+      'Je suis sûr qu’elle est la meilleure.',
+    ],
+  },
+  'fr-b22-verb-prep': {
+    title: 'Verbs with à / de, y and en',
+    rule: 'Many verbs need à (s’intéresser à, assister à, participer à, penser à) or de (parler de, rêver de, s’inspirer de, se souvenir de). Other verbs take their object directly (regarder, écouter, critiquer). A thing introduced by à is replaced by y, a thing introduced by de by en.',
+    examples: ['Je m’y intéresse.', 'Il en parle souvent.', 'Elle rêve de réaliser un film.'],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',

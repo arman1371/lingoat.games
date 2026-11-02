@@ -379,4 +379,99 @@ export const FR22B_TOPICS_B: GrammarTopic[] = [
     related: ['fr-b22-si-clauses', 'fr-b22-ne-expletif'],
     sources: [S.conditionalClause, S.subjunctive],
   },
+  {
+    id: 'fr-b22-superlative-subj',
+    title: 'Subjunctive after superlatives',
+    tagline: 'C’est le plus beau film que j’aie vu',
+    level: LEVEL,
+    summary:
+      'A relative clause that qualifies a superlative, le seul, l’unique, le premier, le dernier or a negative antecedent (personne, rien, aucun) takes the subjunctive in careful French. A plain statement of certainty keeps the indicative.',
+    sections: [
+      section(
+        'when',
+        'When the subjunctive follows',
+        table(
+          'Antecedents that call for the subjunctive.',
+          ['Antecedent', 'Example'],
+          [
+            ['le plus / le moins / le meilleur', 'C’est le meilleur film que j’aie vu.'],
+            [
+              'le seul, l’unique, le premier, le dernier',
+              'Elle est la seule artiste qui sache me surprendre.',
+            ],
+            ['personne, rien, aucun, peu de', 'Il n’y a personne qui puisse la remplacer.'],
+            [
+              'chercher un… qui (not yet found)',
+              'Elle cherche un réalisateur qui comprenne son projet.',
+            ],
+          ],
+        ),
+        p(
+          'The relative clause expresses an **opinion or an evaluation**, not a fact. When the speaker simply states something certain, the **indicative** stays: *Je sais que c’est le premier film qu’il a tourné*.',
+        ),
+      ),
+      section(
+        'forms',
+        'Forms to know',
+        p(
+          'Many of these sentences need the past subjunctive: **que j’aie vu**, **que nous ayons lu**, **qu’il ait été**. It is the subjunctive of *avoir* or *être* plus the participle. Note that the verb agrees with the antecedent: *la seule œuvre qui soit capable*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ C’est la seule qui m’aie ému.  ✓ C’est la seule qui m’ait ému.',
+          '✗ Je ne connais personne qui peut le faire.  ✓ Je ne connais personne qui puisse le faire.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-subj-or-inf', 'fr-b22-verb-prep'],
+    sources: [S.subjunctive],
+  },
+  {
+    id: 'fr-b22-verb-prep',
+    title: 'Verbs with à / de, y and en',
+    tagline: 'Je m’y intéresse · Il en parle',
+    level: LEVEL,
+    summary:
+      'Each verb has its own construction: with à, with de, or with a direct object. The complement that follows à is replaced by y (things) and the one that follows de by en.',
+    sections: [
+      section(
+        'prepositions',
+        'Which preposition?',
+        table(
+          'Common verbs by construction.',
+          ['With à', 'With de', 'Direct object'],
+          [
+            ['s’intéresser à', 'parler de', 'regarder'],
+            ['assister à', 'rêver de', 'écouter'],
+            ['participer à', 's’inspirer de', 'critiquer'],
+            ['se consacrer à', 'dépendre de', 'apprécier'],
+            ['penser à', 'se souvenir de', 'attendre'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il rêve à devenir réalisateur.  ✓ Il rêve de devenir réalisateur.',
+          '✗ J’écoute à la musique.  ✓ J’écoute la musique.',
+        ),
+      ),
+      section(
+        'pronouns',
+        'Replacing the complement',
+        p(
+          'For things, **à + noun → y** and **de + noun → en**: *Tu penses à l’exposition ? — Oui, j’y pense.* *Tu te souviens de ce roman ? — Oui, je m’en souviens.* With people, penser à / s’intéresser à keep the stressed pronoun: *Je pense à lui.*',
+        ),
+        compare(
+          { title: 'à + thing', question: 'y', example: 'Il s’y intéresse.' },
+          { title: 'de + thing', question: 'en', example: 'Il en parle.' },
+          {
+            title: 'à + person (penser, s’intéresser)',
+            question: 'à + stressed pronoun',
+            example: 'Je pense à elle.',
+          },
+        ),
+      ),
+    ],
+    related: ['fr-b22-superlative-subj'],
+    sources: [S.preposition, S.personalPronoun],
+  },
 ];
