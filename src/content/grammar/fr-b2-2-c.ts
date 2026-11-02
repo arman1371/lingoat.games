@@ -542,4 +542,113 @@ export const FR22B_TOPICS_C: GrammarTopic[] = [
     related: ['fr-b22-time-relations', 'fr-b22-conditional-past'],
     sources: [S.pluperfect, S.connector],
   },
+  {
+    id: 'fr-b22-articulators',
+    title: 'Logical connectors',
+    tagline: 'd’abord · en outre · en revanche · par conséquent',
+    level: LEVEL,
+    summary:
+      'Connectors give an argument its structure: they order the steps, add a point, contrast, concede and conclude. Choosing them well is the difference between a list of ideas and a reasoned text.',
+    sections: [
+      section(
+        'functions',
+        'What each connector does',
+        table(
+          'Connectors by function.',
+          ['Function', 'Connectors', 'Example'],
+          [
+            [
+              'order',
+              'd’abord, ensuite, enfin, en conclusion',
+              'D’abord, il faut comprendre ; ensuite, on peut agir.',
+            ],
+            [
+              'addition',
+              'de plus, en outre, par ailleurs, de surcroît',
+              'Ce choix est rentable ; en outre, il protège l’environnement.',
+            ],
+            [
+              'contrast',
+              'en revanche, toutefois, cependant, néanmoins, pourtant',
+              'L’idée est séduisante ; toutefois, elle est difficile à appliquer.',
+            ],
+            [
+              'concession',
+              'certes … mais, il est vrai que … mais',
+              'Certes, le coût est élevé, mais les bénéfices sont réels.',
+            ],
+            [
+              'consequence',
+              'donc, ainsi, par conséquent, c’est pourquoi',
+              'Les données sont claires ; par conséquent, il faut agir.',
+            ],
+            ['new subject', 'quant à, en ce qui concerne', 'Quant à moi, je préfère attendre.'],
+          ],
+        ),
+      ),
+      section(
+        'plan',
+        'A simple plan',
+        p(
+          'A short argument follows: **thesis** → **argument 1** (*d’abord*) → **argument 2** (*en outre*) → **objection and reply** (*certes … mais*) → **conclusion** (*en conclusion*). Use each connector once; repeating *mais* or *donc* makes the text heavy.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Pourtant il est riche, donc il est heureux.  ✓ Pourtant il est riche, il n’est pas heureux.',
+          '✗ Quand à moi, je préfère attendre.  ✓ Quant à moi, je préfère attendre.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-register', 'fr-b22-concession'],
+    sources: [S.connector],
+  },
+  {
+    id: 'fr-b22-register',
+    title: 'Register: familiar to formal',
+    tagline: 'un bouquin · un livre · un ouvrage',
+    level: LEVEL,
+    summary:
+      'French has three broad registers: familiar, standard and formal. They differ in vocabulary, in grammar (ne, inversion, tu / vous) and in set formulas, above all in formal letters and emails.',
+    sections: [
+      section(
+        'words',
+        'Vocabulary and grammar',
+        table(
+          'Three registers.',
+          ['Familiar', 'Standard', 'Formal'],
+          [
+            ['un bouquin', 'un livre', 'un ouvrage'],
+            ['du fric', 'de l’argent', 'des fonds'],
+            ['bosser', 'travailler', 'œuvrer'],
+            [
+              'J’ai pas pu venir.',
+              'Je n’ai pas pu venir.',
+              'Je n’ai pu me rendre à votre invitation.',
+            ],
+            ['Tu peux m’aider ?', 'Pouvez-vous m’aider ?', 'Auriez-vous l’obligeance de m’aider ?'],
+          ],
+        ),
+      ),
+      section(
+        'letters',
+        'Formal letters and emails',
+        examples(
+          ['Je vous prie de bien vouloir m’excuser.', 'Please excuse me.'],
+          ['Auriez-vous l’amabilité de m’indiquer…', 'Would you be so kind as to tell me…'],
+          ['Veuillez agréer mes salutations distinguées.', 'Yours faithfully.'],
+        ),
+        tip(
+          'Adapt, do not pile up',
+          'Do not mix registers in one text: a formal letter keeps vous, ne and inversion from start to finish. In a message to a friend, formal formulas sound ironic.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Veuillez agréez mes salutations.  ✓ Veuillez agréer mes salutations.',
+          '✗ Je vous prie de bien vouloir m’excusant.  ✓ Je vous prie de bien vouloir m’excuser.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-articulators'],
+    sources: [S.register, S.connector],
+  },
 ];

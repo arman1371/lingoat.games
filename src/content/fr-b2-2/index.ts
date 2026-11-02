@@ -10,6 +10,7 @@ import { histoire } from './u8-histoire';
 import { territoire } from './u9-territoire';
 import { societe } from './u10-societe';
 import { climat } from './u11-climat';
+import { debat } from './u12-debat';
 
 const units = [
   actu,
@@ -23,6 +24,7 @@ const units = [
   territoire,
   societe,
   climat,
+  debat,
 ];
 
 const content: LevelContent = {

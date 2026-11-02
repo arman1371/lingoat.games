@@ -51,14 +51,32 @@ that vocabulary does not collide; the content test rejects a word that an earlie
 
 Every unit aims at 10 to 16 games with at least 6 of the 13 engines, an easy first game and a final “… challenge”.
 
-## Build plan
+## Build plan and status
 
-Work is split into one PR per unit, like French A1.1. Each unit PR brings its vocabulary, games, tags, mini lessons, full
-grammar topics (`src/content/grammar/fr-b2-2.ts`), the `unitTopics.ts` links and an e2e entry.
+Arman's rule (2026-11-01): each French level goes in **one PR with all its units**. All twelve units of B2.2 are in PR #107.
+Units 2 to 12 are written with the data-driven builder `src/content/fr-b2-2/kit.ts` (unit 1 was written by hand); each unit
+has its vocabulary, 14 to 16 games, tags, mini lessons, full grammar topics (`src/content/grammar/fr-b2-2*.ts`), a
+`unitTopics.ts` link, an e2e entry and an accessibility page entry.
 
-1. **Unit 1 (`actu`, 16 games) is done**, together with the level plumbing (`levels.ts` entry, test harnesses, e2e
-   spec, accessibility page entries). Sources of its three lessons are in `docs/grammar-sources.md`.
-2. Units 2 to 12: open.
+| #   | Unit         | Games | Grammar topics                                     |
+| --- | ------------ | ----- | -------------------------------------------------- |
+| 1   | `actu`       | 16    | reported speech · c’est … qui / que · lequel       |
+| 2   | `sante`      | 16    | subjunctive or infinitive · ne explétif            |
+| 3   | `solidarite` | 14    | passive · se faire + infinitive                    |
+| 4   | `justice`    | 15    | si clauses · condition connectors                  |
+| 5   | `culture`    | 15    | subjunctive after superlatives · verbs with à / de |
+| 6   | `science`    | 14    | cause · consequence and aim                        |
+| 7   | `economie`   | 14    | concession · comparison                            |
+| 8   | `histoire`   | 15    | passé simple · narrative tenses                    |
+| 9   | `territoire` | 14    | participle agreement · gérondif and -ant forms     |
+| 10  | `societe`    | 15    | purpose · conditionnel passé                       |
+| 11  | `climat`     | 15    | time connectors · futur antérieur                  |
+| 12  | `debat`      | 14    | logical connectors · register                      |
+
+Differences from the first plan: unit 5 teaches verbs with à / de and the pronouns y / en instead of prepositional groups in
+general; unit 11 teaches the futur antérieur instead of frequency expressions; unit 9 also covers the gérondif.
 
 Open points: French nouns carry their article inside the word, the learned-word field is still named `de`. Conjugation
-tables of tenses other than the present must be written out by hand (`src/lib/french` only generates the present).
+tables of tenses other than the present are written out by hand or with the helpers in `kit.ts` (`conditionnel`,
+`conditionnelPasse`, `plusQueParfait`, `futurAnterieur`). A check of the unit list against the official DELF B2 exam
+description is still open, and a native speaker has not reviewed the content.

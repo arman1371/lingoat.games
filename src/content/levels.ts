@@ -77,7 +77,7 @@ const FRENCH_LEVELS: LevelMeta[] = (
       id: 'fr-b2-2',
       title: 'B2.2',
       subtitle:
-        'News and disinformation: the press, reported speech, highlighting with c’est … qui and composed relative pronouns',
+        'Press and disinformation, health, solidarity, justice, culture, science, economy, history, cities, society, climate and debate',
       status: 'available',
       load: () => import('./fr-b2-2'),
     },

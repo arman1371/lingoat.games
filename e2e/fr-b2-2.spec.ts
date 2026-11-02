@@ -112,6 +112,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sort it (time connectors)', 'fr-b2-2-climat-sort-mood'],
   ['conjugation (futur antérieur)', 'fr-b2-2-climat-conj-futur-anterieur'],
   ['dialogue (unit 11)', 'fr-b2-2-climat-dialogues'],
+  // unit 12
+  ['flashcards (unit 12)', 'fr-b2-2-debat-flash-argument'],
+  ['gap fill (connectors)', 'fr-b2-2-debat-gap-connectors'],
+  ['gap fill (register)', 'fr-b2-2-debat-gap-register'],
+  ['sort it (connector functions)', 'fr-b2-2-debat-sort-function'],
+  ['dialogue (unit 12)', 'fr-b2-2-debat-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {

@@ -1467,6 +1467,24 @@ export const LESSONS = {
       'Quand nous serons arrivés, nous mangerons.',
     ],
   },
+  'fr-b22-articulators': {
+    title: 'Logical connectors',
+    rule: 'Order: d’abord, ensuite, enfin, en conclusion. Addition: de plus, en outre, par ailleurs. Contrast: en revanche, toutefois, cependant, néanmoins, pourtant. Consequence: donc, ainsi, par conséquent, c’est pourquoi. Concession: certes … mais. Quant à introduces a new subject.',
+    examples: [
+      'Certes, le coût est élevé, mais les bénéfices sont réels.',
+      'D’abord, il faut comprendre ; ensuite, on peut agir.',
+      'Quant à moi, je préfère attendre.',
+    ],
+  },
+  'fr-b22-register': {
+    title: 'Register: familiar to formal',
+    rule: 'The same idea has familiar, standard and formal forms: un bouquin / un livre / un ouvrage; du fric / de l’argent / des fonds; bosser / travailler. In writing keep ne, use vous, inversion and formulas: Auriez-vous l’amabilité de…, Je vous prie de bien vouloir…, Veuillez agréer mes salutations distinguées.',
+    examples: [
+      'Ça dépend. → Cela dépend des cas.',
+      'Je t’écris pour… → Je vous écris afin de…',
+      'Tu peux m’aider ? → Auriez-vous l’obligeance de m’aider ?',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',

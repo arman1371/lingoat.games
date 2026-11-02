@@ -589,6 +589,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b22-time-relations', note: 'avant que, jusqu’à ce que, après que' },
     { topic: 'fr-b22-futur-anterieur', note: 'dès que j’aurai fini, d’ici 2030' },
   ],
+  'fr-b2-2-debat': [
+    { topic: 'fr-b22-articulators', note: 'certes … mais, en revanche, toutefois' },
+    { topic: 'fr-b22-register', note: 'familier, courant, soutenu; lettres formelles' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },
