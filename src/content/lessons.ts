@@ -1330,6 +1330,34 @@ export const LESSONS = {
     rule: 'Many adverbs end in -ment. Take the feminine adjective and add -ment: lent → lente → lentement, complet → complète → complètement. If the adjective already ends in -e, add -ment: calme → calmement. The adverb goes after the verb.',
     examples: ['Il marche lentement.', 'Elle vit calmement.', 'Nous avons complètement changé.'],
   },
+  'fr-a12-me-te': {
+    title: 'me, te, nous, vous as objects',
+    rule: 'Me, te, nous and vous work as direct and indirect objects (me, you, us). They go right before the verb or before the infinitive: il m’aide, je te téléphone, elle va nous expliquer. Me and te become m’ and t’ before a vowel. In the negative ne goes before them.',
+    examples: ['Il m’aide.', 'Je te comprends.', 'Elle ne nous répond pas.'],
+  },
+  'fr-a12-opinion': {
+    title: 'Giving an opinion',
+    rule: 'Give your opinion with à mon avis, je pense que or je trouve que, followed by a full sentence. Agree with je suis d’accord or tu as raison. Disagree with je ne suis pas d’accord or tu as tort. Pas du tout! means not at all.',
+    examples: [
+      'À mon avis, c’est facile.',
+      'Je trouve que le français est beau.',
+      'Je ne suis pas d’accord.',
+    ],
+  },
+  'fr-a12-verbs-a-de': {
+    title: 'Verbs followed by à or de',
+    rule: 'Many verbs need à or de before an infinitive, and you must learn which. With à: apprendre à, commencer à, continuer à, réussir à, avoir du mal à. With de: essayer de, arrêter de, décider de, oublier de, avoir peur de. Others take the infinitive directly: je veux parler.',
+    examples: [
+      'J’apprends à parler français.',
+      'Elle essaie de répondre.',
+      'Il a peur de faire des fautes.',
+    ],
+  },
+  'fr-a12-tenses': {
+    title: 'Which tense?',
+    rule: 'Choose the tense from what you want to say. Present: habits and now (d’habitude, aujourd’hui). Passé composé: what happened (hier, la semaine dernière). Futur proche, aller + infinitive: plans (demain, bientôt). C’était and il y avait: describing how things were.',
+    examples: ['Hier, j’ai regardé un film.', 'Demain, je vais travailler.', 'C’était très bien.'],
+  },
   'fr-likes': {
     title: 'J’aime, je déteste …',
     rule: 'Aimer, adorer and détester are regular -er verbs. Before a noun use the definite article, even for things in general: j’aime le café, elle adore les chats. Before an activity use the infinitive: j’aime danser. Add beaucoup for more: j’aime beaucoup la musique.',

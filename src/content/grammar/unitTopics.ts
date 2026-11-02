@@ -583,6 +583,12 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a12-adverbs' },
     { topic: 'fr-er-verbs', note: 'déménager, cultiver, recycler' },
   ],
+  'fr-a1-2-langues': [
+    { topic: 'fr-a12-me-te' },
+    { topic: 'fr-a12-opinion' },
+    { topic: 'fr-a12-verbs-a-de' },
+    { topic: 'fr-a12-tenses', note: 'present, passé composé, futur proche, c’était' },
+  ],
   // ---- French A2.1 ----------------------------------------------------------------------------
   'fr-a2-1-parcours': [
     { topic: 'fr-a21-passe-compose', note: 'naître, aller, se marier' },

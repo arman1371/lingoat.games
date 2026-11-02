@@ -410,6 +410,11 @@ export const TAGS = {
   },
   'fr-a12-en': { label: 'The pronoun en', group: 'grammar', emoji: '🔢' },
   'fr-a12-adverbs': { label: 'Adverbs in -ment', group: 'grammar', emoji: '🐢' },
+  // grammar points – French A1.2, unit 8
+  'fr-a12-me-te': { label: 'me, te, nous, vous as objects', group: 'grammar', emoji: '🫵' },
+  'fr-a12-opinion': { label: 'Giving an opinion', group: 'grammar', emoji: '🗨️' },
+  'fr-a12-verbs-a-de': { label: 'Verbs followed by à or de', group: 'grammar', emoji: '↔️' },
+  'fr-a12-tenses': { label: 'Which tense?', group: 'grammar', emoji: '🕰️' },
   // grammar points – French A1.1, unit 5
   'fr-likes': { label: 'J’aime, je déteste …', group: 'grammar', emoji: '💛' },
   'fr-negation': { label: 'ne … pas', group: 'grammar', emoji: '🚫' },

@@ -6,8 +6,9 @@ import { vacances } from './u4-vacances';
 import { sante } from './u5-sante';
 import { travail } from './u6-travail';
 import { grandAir } from './u7-nature';
+import { langues } from './u8-langues';
 
-const units = [journee, fetes, logement, vacances, sante, travail, grandAir];
+const units = [journee, fetes, logement, vacances, sante, travail, grandAir, langues];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

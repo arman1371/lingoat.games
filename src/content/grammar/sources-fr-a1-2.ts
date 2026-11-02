@@ -62,4 +62,12 @@ export const FR12_SOURCES = {
   en: wiktionary('en', 'en'),
   ment: wiktionary('-ment', '-ment'),
   adverb: wp('Adverbe', 'Adverbe'),
+  avis: wiktionary('avis', 'avis'),
+  accord: wiktionary('accord', 'accord'),
+  raison: wiktionary('raison', 'raison'),
+  nous: wiktionary('nous', 'nous'),
+  apprendre: wiktionary('Conjugaison:français/apprendre', 'Conjugaison : apprendre'),
+  comprendre: wiktionary('Conjugaison:français/comprendre', 'Conjugaison : comprendre'),
+  repondre: wiktionary('Conjugaison:français/répondre', 'Conjugaison : répondre'),
+  essayer: wiktionary('Conjugaison:français/essayer', 'Conjugaison : essayer'),
 } as const satisfies Record<string, Source>;

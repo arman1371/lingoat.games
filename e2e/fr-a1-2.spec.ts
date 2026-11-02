@@ -145,6 +145,22 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue (a new life)', 'fr-a1-2-nature-dialogues'],
   ['blitz (nature)', 'fr-a1-2-nature-blitz'],
   ['quiz (nature challenge)', 'fr-a1-2-nature-challenge'],
+  ['flashcards (learning a language)', 'fr-a1-2-langues-flash-learning'],
+  ['flashcards (difficulties and encouragement)', 'fr-a1-2-langues-flash-difficulties'],
+  ['flashcards (opinions)', 'fr-a1-2-langues-flash-opinions'],
+  ['flashcards (practising)', 'fr-a1-2-langues-flash-practise'],
+  ['quiz (tools and encouragement)', 'fr-a1-2-langues-quiz-emoji'],
+  ['listen (learning French)', 'fr-a1-2-langues-listen-langues'],
+  ['conjugation (apprendre, comprendre, répondre)', 'fr-a1-2-langues-conj-apprendre'],
+  ['sort it (à or de)', 'fr-a1-2-langues-sort-a-de'],
+  ['gap fill (me, te, nous, vous)', 'fr-a1-2-langues-gap-pronouns'],
+  ['gap fill (opinion)', 'fr-a1-2-langues-gap-opinion'],
+  ['gap fill (à or de)', 'fr-a1-2-langues-gap-a-de'],
+  ['gap fill (which tense)', 'fr-a1-2-langues-gap-tenses'],
+  ['sentence builder (learning)', 'fr-a1-2-langues-sentences'],
+  ['dialogue (learning together)', 'fr-a1-2-langues-dialogues'],
+  ['blitz (language)', 'fr-a1-2-langues-blitz'],
+  ['quiz (language challenge)', 'fr-a1-2-langues-challenge'],
 ];
 
 test.describe('French A1.2 – playing the games', () => {

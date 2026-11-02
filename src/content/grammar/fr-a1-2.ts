@@ -1368,4 +1368,230 @@ export const FR12_TOPICS: GrammarTopic[] = [
     related: ['fr-adjectives', 'fr-gender', 'fr-a12-intensity'],
     sources: [S.ment, S.adverb],
   },
+  {
+    id: 'fr-a12-me-te',
+    title: 'me, te, nous, vous as objects',
+    tagline: 'He helps me, I understand you',
+    level: LEVEL,
+    summary:
+      'Me, te, nous and vous work as direct and indirect objects. They go right before the verb or the infinitive. Me and te become m’ and t’ before a vowel; in the negative ne goes before them.',
+    sections: [
+      section(
+        'forms',
+        'One set for both kinds of object',
+        p(
+          'For the first and second person French needs no distinction between “direct” and “indirect”: the same four words work for both. Only the third person changes (le, la, les and lui, leur).',
+        ),
+        table(
+          'Object pronouns by person.',
+          ['Person', 'Pronoun', 'Example'],
+          [
+            ['me', 'me, m’', 'Le professeur m’aide.'],
+            ['you (tu)', 'te, t’', 'Je te comprends.'],
+            ['us', 'nous', 'Il nous téléphone.'],
+            ['you (vous)', 'vous', 'Je vous écoute.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'The pronoun always stands before the verb: il m’aide, not il aide moi.',
+          'Me and te lose their vowel before a vowel or a silent h: m’écoute, t’aide.',
+        ),
+      ),
+      section(
+        'position',
+        'Position in other patterns',
+        p(
+          'With **aller** or **vouloir** + infinitive the pronoun stands before the infinitive: *Elle va nous expliquer la règle.* In the negative **ne** goes before the pronoun and **pas** after the verb: *Ils ne me répondent pas.* In the passé composé the pronoun goes before **avoir**: *Il m’a aidé.*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il aide moi.  ✓ Il m’aide.',
+          '✗ Il me aide.  ✓ Il m’aide.',
+          '✗ Je ne comprends vous pas.  ✓ Je ne vous comprends pas.',
+        ),
+        examples(
+          ['Tu m’écoutes ?', 'Are you listening to me?'],
+          ['Elle ne nous répond pas.', 'She does not answer us.'],
+        ),
+      ),
+    ],
+    related: ['fr-a12-object-pronouns', 'fr-a12-lui-leur', 'fr-pronouns'],
+    sources: [S.cod, S.coi, S.nous],
+  },
+  {
+    id: 'fr-a12-opinion',
+    title: 'Giving an opinion',
+    tagline: 'In my opinion, I agree, I do not agree',
+    level: LEVEL,
+    summary:
+      'Give your opinion with à mon avis, je pense que or je trouve que, followed by a full sentence. Agree with je suis d’accord or tu as raison; disagree with je ne suis pas d’accord or tu as tort.',
+    sections: [
+      section(
+        'opinion',
+        'Saying what you think',
+        p(
+          'Use **à mon avis** (in my opinion) before a sentence, or **je pense que** and **je trouve que** to introduce one. After **que** comes a full sentence with its own subject and verb.',
+        ),
+        table(
+          'Opinion, agreement and disagreement.',
+          ['Function', 'Phrase'],
+          [
+            ['opinion', 'À mon avis, la grammaire est difficile.'],
+            ['opinion', 'Je trouve que le français est beau.'],
+            ['agree', 'Je suis d’accord. / Tu as raison. / Exactement !'],
+            ['disagree', 'Je ne suis pas d’accord. / Tu as tort. / Pas du tout !'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'Être d’accord uses être, but avoir raison and avoir tort use avoir: je suis d’accord, tu as raison.',
+        ),
+      ),
+      section(
+        'polite',
+        'Agreeing and disagreeing politely',
+        p(
+          'Soften a disagreement with **peut-être** or **je ne suis pas sûr** before you say no. To agree with someone else’s negative sentence, say **moi non plus**; to agree with a positive one, **moi aussi**.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je suis raison.  ✓ J’ai raison.',
+          '✗ Je suis accord.  ✓ Je suis d’accord.',
+          '✗ À mon avis que c’est facile.  ✓ À mon avis, c’est facile.',
+        ),
+        examples(
+          ['Je pense que tu as raison.', 'I think you are right.'],
+          [
+            '– Je n’aime pas les exercices. – Moi non plus.',
+            '– I do not like exercises. – Neither do I.',
+          ],
+        ),
+      ),
+    ],
+    related: ['fr-likes', 'fr-negation', 'fr-etre-avoir'],
+    sources: [S.avis, S.accord, S.raison],
+  },
+  {
+    id: 'fr-a12-verbs-a-de',
+    title: 'Verbs followed by à or de',
+    tagline: 'J’apprends à parler, j’essaie de répondre',
+    level: LEVEL,
+    summary:
+      'Many verbs need à or de before an infinitive, and you must learn them with the verb: apprendre à, commencer à, essayer de, arrêter de, avoir peur de. Some take the infinitive directly (vouloir, pouvoir, savoir).',
+    sections: [
+      section(
+        'lists',
+        'à or de?',
+        table(
+          'Common verbs and their little word.',
+          ['à + infinitive', 'de + infinitive', 'no word'],
+          [
+            ['apprendre à parler', 'essayer de répondre', 'vouloir parler'],
+            ['commencer à comprendre', 'arrêter de traduire', 'pouvoir venir'],
+            ['continuer à lire', 'décider de partir', 'savoir nager'],
+            ['réussir à écrire', 'oublier de répéter', 'aimer lire'],
+            ['avoir du mal à retenir', 'avoir peur de parler', 'devoir rester'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'There is no rule that predicts à or de: learn the little word together with the verb.',
+          'De becomes d’ before a vowel: j’ai décidé d’apprendre.',
+        ),
+      ),
+      section(
+        'forms',
+        'apprendre and comprendre',
+        table(
+          'Present tense: two verbs like prendre.',
+          ['Person', 'apprendre', 'comprendre'],
+          [
+            ['je', 'apprends', 'comprends'],
+            ['tu', 'apprends', 'comprends'],
+            ['il/elle/on', 'apprend', 'comprend'],
+            ['nous', 'apprenons', 'comprenons'],
+            ['vous', 'apprenez', 'comprenez'],
+            ['ils/elles', 'apprennent', 'comprennent'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ J’essaie à parler.  ✓ J’essaie de parler.',
+          '✗ J’apprends de parler.  ✓ J’apprends à parler.',
+          '✗ Je veux de parler.  ✓ Je veux parler.',
+        ),
+        examples(
+          ['Je commence à comprendre les films.', 'I am starting to understand films.'],
+          ['Elle a arrêté de traduire chaque mot.', 'She stopped translating every word.'],
+        ),
+      ),
+    ],
+    related: ['fr-prendre-vouloir', 'fr-a12-savoir-pouvoir', 'fr-a12-devoir-falloir'],
+    sources: [S.apprendre, S.comprendre, S.repondre, S.essayer],
+  },
+  {
+    id: 'fr-a12-tenses',
+    title: 'Which tense?',
+    tagline: 'Present, passé composé, near future or c’était',
+    level: LEVEL,
+    summary:
+      'Choose the tense from what you want to say: the present for habits and now, the passé composé for what happened, the near future for plans, c’était and il y avait for descriptions of the past.',
+    sections: [
+      section(
+        'overview',
+        'Four tenses, four jobs',
+        table(
+          'What each tense does.',
+          ['Tense', 'Job', 'Time words', 'Example'],
+          [
+            ['present', 'habits, now', 'd’habitude, aujourd’hui', 'Je fais mes exercices le soir.'],
+            [
+              'passé composé',
+              'what happened',
+              'hier, la semaine dernière',
+              'Hier, j’ai regardé un film.',
+            ],
+            ['aller + infinitive', 'plans', 'demain, bientôt', 'Demain, je vais travailler.'],
+            ['c’était, il y avait', 'how things were', 'à ce moment-là', 'C’était très bien.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'The time word is your clue: hier points back, demain points forward, d’habitude says every time.',
+        ),
+      ),
+      section(
+        'together',
+        'Telling a story',
+        p(
+          'In a short story the tenses work together: the **passé composé** tells what happened, **c’était** and **il y avait** describe the scene, and **aller** + infinitive says what comes next. *Hier, nous sommes allés au cinéma. C’était super ! Demain, nous allons y retourner.*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Hier, je vais au cinéma.  ✓ Hier, je suis allé au cinéma.',
+          '✗ Demain, j’ai travaillé.  ✓ Demain, je vais travailler.',
+          '✗ Hier, c’est super.  ✓ Hier, c’était super.',
+        ),
+        examples(
+          [
+            'La semaine dernière, nous avons visité Lyon. C’était magnifique.',
+            'Last week we visited Lyon. It was magnificent.',
+          ],
+          [
+            'Je vais apprendre le français tous les jours.',
+            'I am going to learn French every day.',
+          ],
+        ),
+      ),
+    ],
+    related: [
+      'fr-passe-compose-avoir',
+      'fr-a12-pc-etre',
+      'fr-a12-cetait',
+      'fr-futur-proche',
+      'fr-time-markers',
+    ],
+    sources: [S.passeCompose, S.imparfait, FR.futurProche],
+  },
 ];
