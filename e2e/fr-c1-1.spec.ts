@@ -104,6 +104,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sentence builder', 'fr-c1-1-sante-sentences'],
   ['dialogue (two scenes)', 'fr-c1-1-sante-dialogues'],
   ['unit challenge', 'fr-c1-1-sante-challenge'],
+  ['sort it (subjunctive or indicative)', 'fr-c1-1-ville-sort-triggers'],
+  ['conjugation (subjunctive)', 'fr-c1-1-ville-conj-subjonctif'],
+  ['gap fill (choose)', 'fr-c1-1-ville-gap-subjonctif'],
+  ['gap fill (type)', 'fr-c1-1-ville-gap-typed'],
+  ['sentence builder', 'fr-c1-1-ville-sentences'],
+  ['unit challenge', 'fr-c1-1-ville-challenge'],
 ];
 
 test.describe('French C1.1 – playing the games', () => {

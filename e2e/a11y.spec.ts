@@ -66,6 +66,7 @@ const PAGES: [string, string, string][] = [
     'Manger, produire, consommer',
   ],
   ['unit sante in French C1.1', '/fr/levels/fr-c1-1/units/fr-c1-1-sante', 'Santé et bien-être'],
+  ['unit ville in French C1.1', '/fr/levels/fr-c1-1/units/fr-c1-1-ville', 'Ville et environnement'],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],

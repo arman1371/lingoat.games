@@ -544,4 +544,94 @@ export const FRC11_TOPICS: GrammarTopic[] = [
     related: ['fr-object-pronouns'],
     sources: [S.personalPronoun, S.imperative, S.pronEn, S.pronY],
   },
+  {
+    id: 'fr-c11-subjunctive',
+    title: 'Subjunctive: wish, need, feeling, doubt',
+    tagline: 'When do I need the subjonctif after que, and when not?',
+    level: LEVEL,
+    summary:
+      'The subjonctif follows a clause that expresses will, necessity, feeling or doubt, when the subject of the second verb is different. If the subject stays the same, French uses an infinitive. A clause that states a certainty or a fact keeps the indicative. Penser que and croire que take the indicative, but turn to the subjonctif in a negative sentence or a question about doubt.',
+    sections: [
+      section(
+        'triggers',
+        'What triggers the subjonctif',
+        p(
+          'The **subjonctif** is not a tense but a **mood**: it presents the action as wished, needed, felt or doubted rather than stated as a fact. Four families of expressions call for it.',
+        ),
+        table(
+          'Triggers of the subjonctif.',
+          ['Family', 'Expressions', 'Example'],
+          [
+            [
+              'Will, order, advice',
+              'vouloir que, souhaiter que, exiger que, il vaut mieux que',
+              'Je veux que tu prennes le vélo.',
+            ],
+            [
+              'Necessity',
+              'il faut que, il est nécessaire que, il est important que',
+              'Il faut que nous réduisions notre empreinte carbone.',
+            ],
+            [
+              'Feeling',
+              'regretter que, être content / surpris que, avoir peur que',
+              'Nous regrettons que la ville n’ait pas plus d’espaces verts.',
+            ],
+            [
+              'Doubt, improbability',
+              'douter que, il est peu probable que, ne pas penser que',
+              'Je doute que ce projet réduise les embouteillages.',
+            ],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il faut que nous prenons le bus.  ✓ Il faut que nous prenions le bus.',
+          '✗ Je veux que tu viendras.  ✓ Je veux que tu viennes.',
+        ),
+      ),
+      section(
+        'same-subject',
+        'Same subject: use the infinitive',
+        p(
+          'When the person who wishes, feels or doubts is also the person who acts, French drops **que** and uses the **infinitive**. Compare *Je veux partir* (I want to leave) with *Je veux que tu partes* (I want you to leave). For necessity, *il faut* can take either: *il faut partir* (in general) or *il faut que tu partes* (someone specific).',
+        ),
+        compare(
+          {
+            title: 'Same subject',
+            question: 'Infinitive',
+            example: 'Je veux laisser ma voiture à la maison.',
+          },
+          {
+            title: 'Different subject',
+            question: 'Que + subjonctif',
+            example: 'Je veux que tu laisses ta voiture à la maison.',
+          },
+          {
+            title: 'General statement',
+            question: 'Il faut + infinitive',
+            example: 'Il faut trier ses déchets.',
+          },
+        ),
+      ),
+      section(
+        'certainty',
+        'Certainty keeps the indicative',
+        p(
+          'Expressions of **certainty** and **report** state a fact: *je sais que, il est évident que, je pense que, il me semble que, il est clair que*. They take the **indicatif**. But *je ne pense pas que* and *penses-tu que… ?* express doubt, so they take the **subjonctif**.',
+        ),
+        examples(
+          ['Je pense que le maire a raison.', 'I think the mayor is right.'],
+          ['Je ne pense pas que ce projet soit utile.', 'I do not think this project is useful.'],
+          ['Il est évident que nous devons agir vite.', 'It is obvious that we must act quickly.'],
+        ),
+        tip(
+          'Irregular subjunctives',
+          'Learn the main irregular forms by heart: **être** (sois, soit, soyons), **avoir** (aie, ait, ayons), **aller** (aille, allions), **faire** (fasse), **pouvoir** (puisse), **savoir** (sache), **vouloir** (veuille). The other verbs follow the rule you saw in the concession unit.',
+        ),
+      ),
+    ],
+    related: ['fr-c11-concession'],
+    sources: [S.subjonctifWp, S.falloir, S.douter, S.souhaiter],
+  },
 ];

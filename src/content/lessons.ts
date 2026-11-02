@@ -1354,6 +1354,15 @@ export const LESSONS = {
       'Il m’en a prescrit. / Je ne lui en ai pas parlé.',
     ],
   },
+  'fr-c11-subjunctive': {
+    title: 'Subjunctive: wish, need, feeling, doubt',
+    rule: 'Use the subjonctif after que when the subject changes: il faut que, je veux que, il vaut mieux que (will, need); je regrette que, je suis content que (feeling); je doute que, je ne pense pas que (doubt). Same subject → infinitive (je veux partir). Certainty keeps the indicative: je sais que.',
+    examples: [
+      'Il faut que nous prenions les transports en commun.',
+      'Je doute que ce projet réduise les embouteillages.',
+      'Je veux laisser ma voiture à la maison.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
