@@ -413,6 +413,36 @@ export const TAGS = {
   'fr-object-pronouns': { label: 'le, la, les, lui, leur', group: 'grammar', emoji: '🎯' },
   'fr-superlative': { label: 'le plus, le meilleur', group: 'grammar', emoji: '🥇' },
   'fr-interrogative-pronouns': { label: 'qui, que, quoi, lequel', group: 'grammar', emoji: '🔎' },
+  // grammar points – French C1.1 (prefix fr-c11- so parallel French levels never collide)
+  'fr-c11-connectors': {
+    label: 'Connectors: cause, consequence, addition',
+    group: 'grammar',
+    emoji: '🔗',
+  },
+  'fr-c11-si-clauses': {
+    label: 'si + présent / imparfait / plus-que-parfait',
+    group: 'grammar',
+    emoji: '🔀',
+  },
+  'fr-c11-affixes': {
+    label: 'Prefixes and suffixes: in-, -ité, -iser',
+    group: 'grammar',
+    emoji: '🧱',
+  },
+  'fr-c11-concession': {
+    label: 'Concession: bien que, même si, malgré',
+    group: 'grammar',
+    emoji: '🤷',
+  },
+  'fr-c11-pronouns': { label: 'y, en and double pronouns', group: 'grammar', emoji: '👉' },
+  'fr-c11-subjunctive': { label: 'Subjunctive: wish, need, doubt', group: 'grammar', emoji: '💭' },
+  'fr-c11-reprise': { label: 'celui, ce qui, dont, lequel', group: 'grammar', emoji: '🔗' },
+  'fr-c11-emphasis': { label: 'c’est … qui / que, ce qui … c’est', group: 'grammar', emoji: '🔦' },
+  'fr-c11-narrative-tenses': {
+    label: 'Narrative tenses: imparfait, passé simple',
+    group: 'grammar',
+    emoji: '📜',
+  },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

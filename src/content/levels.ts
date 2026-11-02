@@ -7,7 +7,6 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   ['b1-2', 'B1.2', 'Threshold, second half'],
   ['b2-1', 'B2.1', 'Vantage, first half'],
   ['b2-2', 'B2.2', 'Vantage, second half'],
-  ['c1-1', 'C1.1', 'Effective proficiency, first half'],
   ['c1-2', 'C1.2', 'Effective proficiency, second half'],
   ['c2-1', 'C2.1', 'Mastery, first half'],
   ['c2-2', 'C2.2', 'Mastery, second half'],
@@ -72,6 +71,14 @@ const FRENCH_LEVELS: LevelMeta[] = (
         'Health, media, responsible shopping, travel, studies and work, and nature, with pronouns, the subjunctive and the conditional',
       status: 'available',
       load: () => import('./fr-a2-2'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-c1-1',
+      title: 'C1.1',
+      subtitle: 'Media and information, with the connectors of a formal argument',
+      status: 'available',
+      load: () => import('./fr-c1-1'),
     },
     ...FRENCH_COMING_SOON,
   ] satisfies LevelMeta[]

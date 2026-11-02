@@ -1308,6 +1308,88 @@ export const LESSONS = {
     rule: 'Qui asks about a person. For things use qu’est-ce qui (subject) and qu’est-ce que or que (object); after a preposition or at the end of the question use quoi. Lequel, laquelle, lesquels and lesquelles ask “which one(s)?” and agree with the noun.',
     examples: ['Qui a appelé ?', 'Qu’est-ce que vous prenez ?', 'Laquelle est pour moi ?'],
   },
+  // ---- French C1.1 -----------------------------------------------------------------------
+  'fr-c11-connectors': {
+    title: 'Connectors: cause, consequence, addition',
+    rule: 'Choose the connector for the register and the grammar around it. Cause: car (written), parce que (answers pourquoi), puisque / comme (known reason), then grâce à / à cause de / en raison de + noun. Result: donc, par conséquent, c’est pourquoi. Addition: de plus, en outre, par ailleurs.',
+    examples: [
+      'Il a hésité, car la source était douteuse.',
+      'Puisque tout le monde en parle, vérifions l’information.',
+      'La vidéo a été retirée ; par conséquent, la rumeur s’est calmée.',
+    ],
+  },
+  'fr-c11-si-clauses': {
+    title: 'Hypotheses with si',
+    rule: 'Si never takes the future or the conditional. Real: si + présent → présent / futur / impératif. Imagined: si + imparfait → conditionnel présent. Too late: si + plus-que-parfait → conditionnel passé. After au cas où, the conditional.',
+    examples: [
+      'Si tu votes, tu auras ton mot à dire.',
+      'Si j’avais le temps, je deviendrais bénévole.',
+      'Si nous avions voté, nous aurions changé le résultat.',
+    ],
+  },
+  'fr-c11-affixes': {
+    title: 'Prefixes and suffixes',
+    rule: 'Learn word families. Opposite: in- (injuste), im- before b/m/p, il- before l, ir- before r, dé(s)-, mé-; anti- means against. Nouns: -ité, -tion, -isme (masculine), -ment (masculine), -ance. Adjectives and verbs: -able, -if, -iser.',
+    examples: [
+      'Cette décision est injuste et inacceptable.',
+      'La discrimination est illégale.',
+      'Il faut égaliser les salaires.',
+    ],
+  },
+  'fr-c11-concession': {
+    title: 'Concession: although, even if, despite',
+    rule: 'Bien que / quoique + subjonctif; même si / alors que + indicatif (never future or conditional after si); malgré / en dépit de + noun. Pourtant, cependant, néanmoins and toutefois are adverbs that mark the contrast between two sentences.',
+    examples: [
+      'Bien qu’il soit très occupé, il cuisine tous les soirs.',
+      'Même si c’est plus cher, j’achète bio.',
+      'Malgré la pluie, le marché est ouvert.',
+    ],
+  },
+  'fr-c11-pronouns': {
+    title: 'The pronouns y and en',
+    rule: 'En replaces de + noun or a quantity (j’en ai besoin, j’en prends deux); y replaces à / chez / dans + place or thing (j’y vais). Order before the verb: me, te, nous, vous → le, la, les → lui, leur → y → en. After a positive imperative: donnez-le-moi, parlez-en.',
+    examples: [
+      'Tu penses à ton traitement ? – Oui, j’y pense.',
+      'Vous avez besoin de repos ? – Oui, j’en ai besoin.',
+      'Il m’en a prescrit. / Je ne lui en ai pas parlé.',
+    ],
+  },
+  'fr-c11-subjunctive': {
+    title: 'Subjunctive: wish, need, feeling, doubt',
+    rule: 'Use the subjonctif after que when the subject changes: il faut que, je veux que, il vaut mieux que (will, need); je regrette que, je suis content que (feeling); je doute que, je ne pense pas que (doubt). Same subject → infinitive (je veux partir). Certainty keeps the indicative: je sais que.',
+    examples: [
+      'Il faut que nous prenions les transports en commun.',
+      'Je doute que ce projet réduise les embouteillages.',
+      'Je veux laisser ma voiture à la maison.',
+    ],
+  },
+  'fr-c11-reprise': {
+    title: 'Avoiding repetition: celui, ce qui, dont',
+    rule: 'Celui / celle / ceux / celles replace a noun and need de, qui, que, où or -ci / -là (celui de mon frère). Ce qui (subject), ce que (object), ce dont (de), ce à quoi (à) sum up an idea. After a preposition: lequel, auquel, duquel; dont replaces de + noun.',
+    examples: [
+      'J’ai deux frères : celui qui habite à Lyon est médecin.',
+      'Ce qui compte, c’est la famille.',
+      'Le sujet dont nous parlons est délicat.',
+    ],
+  },
+  'fr-c11-emphasis': {
+    title: 'Highlighting with c’est … qui / que',
+    rule: 'To put a word in the spotlight: c’est … qui (subject), c’est … que (object, place, time), ce sont … qui (plural). To highlight a whole clause: ce qui / ce que / ce dont … c’est. Dislocation repeats the noun with a pronoun: Cette pièce, je l’ai adorée.',
+    examples: [
+      'C’est le réalisateur qui a choisi cette musique.',
+      'Ce que je retiens, c’est l’émotion.',
+      'Cette exposition, je l’ai adorée.',
+    ],
+  },
+  'fr-c11-narrative-tenses': {
+    title: 'Narrative tenses',
+    rule: 'Tell a story with three layers: imparfait for the scene and habits (il pleuvait), passé composé in speech or passé simple in literature for the events (il ouvrit la porte), plus-que-parfait for what had already happened (elle avait oublié son manteau).',
+    examples: [
+      'Il pleuvait et les rues étaient vides.',
+      'Soudain, la porte s’ouvrit.',
+      'Elle avait déjà fermé la fenêtre quand il est arrivé.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

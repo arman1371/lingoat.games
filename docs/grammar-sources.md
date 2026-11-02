@@ -294,3 +294,12 @@ The lessons are in `src/content/grammar/fr-a2-2.ts`, the pages in `sources-fr-a2
 | Object pronouns: le, la, les, lui, leur | [Complément d'objet direct](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_d'objet_direct), [Complément d'objet indirect](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_d'objet_indirect), [Pronom personnel](https://fr.wikipedia.org/wiki/Pronom_personnel) |
 | The superlative: le plus, le meilleur   | [Degré de comparaison](https://fr.wikipedia.org/wiki/Degr%C3%A9_de_comparaison) (section "En français")                                                                                                                                                      |
 | Qui, que, quoi, lequel                  | [Pronom interrogatif](https://fr.wikipedia.org/wiki/Pronom_interrogatif) (section "En français")                                                                                                                                                             |
+
+## French C1.1
+
+- `fr-c11-connectors` (unit 1): read Wikipédia _Connecteur logique (linguistique)_ and _Conjonction de coordination_ (car is
+  a coordinating conjunction; donc is now classed as an adverb and is movable) and the Wiktionnaire entries _puisque_ and
+  _grâce à_ (grâce à has a positive connotation, unlike à cause de). **Not stated by any fetched page and taken from common
+  textbook teaching:** puisque presenting a reason the listener already knows, car never opening a sentence, comme opening the
+  sentence, en raison de being formal and neutral, faute de meaning "for lack of", si bien que taking the indicative, and the
+  register of en outre, par ailleurs and de surcroît. Needs a native speaker's check.
