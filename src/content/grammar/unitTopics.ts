@@ -581,4 +581,8 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-subjonctif-present', note: 'que je sois, que tu aies' },
     { topic: 'fr-opinion-mood', note: 'certainty or doubt' },
   ],
+  'fr-b2-1-sentiments': [
+    { topic: 'fr-subjunctive-or-infinitive', note: 'one subject or two' },
+    { topic: 'fr-subjonctif-passe', note: 'avoir / être in the subjunctive' },
+  ],
 };

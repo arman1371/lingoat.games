@@ -1381,6 +1381,24 @@ export const LESSONS = {
       'J’espère qu’il viendra.',
     ],
   },
+  'fr-subjunctive-or-infinitive': {
+    title: 'Subjunctive or infinitive?',
+    rule: 'If both verbs have the same subject, use the infinitive (je suis content d’être ici). If the subject changes, use que + subjunctive (je suis content que tu sois ici). With a general statement and no named person, il faut is followed by the infinitive. Never combine que and de.',
+    examples: [
+      'Je suis content d’être ici.',
+      'Je suis content que tu sois ici.',
+      'Il faut partir plus tôt.',
+    ],
+  },
+  'fr-subjonctif-passe': {
+    title: 'The past subjunctive',
+    rule: 'Put avoir or être in the present subjunctive and add the past participle (que j’aie fini, qu’elle soit partie). Use it for something that happened before the main verb or is finished: je regrette qu’il soit parti, bien qu’il ait plu.',
+    examples: [
+      'Je suis ravi que tu sois venu.',
+      'Je regrette que vous n’ayez pas appelé.',
+      'Bien qu’il ait plu, le sol est sec.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

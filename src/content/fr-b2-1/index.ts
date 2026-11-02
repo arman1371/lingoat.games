@@ -3,8 +3,9 @@ import { identite } from './u1-identite';
 import { parcours } from './u2-parcours';
 import { sante } from './u3-sante';
 import { doute } from './u4-doute';
+import { sentiments } from './u5-sentiments';
 
-const units = [identite, parcours, sante, doute];
+const units = [identite, parcours, sante, doute, sentiments];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

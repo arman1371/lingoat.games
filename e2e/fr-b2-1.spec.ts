@@ -90,6 +90,14 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue', 'fr-b2-1-doute-dialogues'],
   ['blitz', 'fr-b2-1-doute-blitz'],
   ['quiz', 'fr-b2-1-doute-challenge'],
+  ['gap fill (que or de)', 'fr-b2-1-sentiments-gap-infinitive'],
+  ['gap fill (past subjunctive)', 'fr-b2-1-sentiments-gap-past-subjunctive'],
+  ['sort it (now or before)', 'fr-b2-1-sentiments-sort-time'],
+  ['conjugation (past subjunctive)', 'fr-b2-1-sentiments-conj-past-subjunctive'],
+  ['sentence builder', 'fr-b2-1-sentiments-sentences'],
+  ['dialogue', 'fr-b2-1-sentiments-dialogues'],
+  ['blitz', 'fr-b2-1-sentiments-blitz'],
+  ['quiz', 'fr-b2-1-sentiments-challenge'],
 ];
 
 test.describe('French B2.1 – playing the games', () => {

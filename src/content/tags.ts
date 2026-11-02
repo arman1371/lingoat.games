@@ -433,6 +433,13 @@ export const TAGS = {
   'opinion-doubt': { label: 'Opinion & doubt', group: 'topic', emoji: '🤔' },
   'fr-subjonctif-present': { label: 'The present subjunctive', group: 'grammar', emoji: '🔵' },
   'fr-opinion-mood': { label: 'Indicative or subjunctive?', group: 'grammar', emoji: '⚖️' },
+  'feelings-judgements': { label: 'Feelings & judgements', group: 'topic', emoji: '💬' },
+  'fr-subjunctive-or-infinitive': {
+    label: 'Subjunctive or infinitive?',
+    group: 'grammar',
+    emoji: '↔️',
+  },
+  'fr-subjonctif-passe': { label: 'The past subjunctive', group: 'grammar', emoji: '⏮️' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;
