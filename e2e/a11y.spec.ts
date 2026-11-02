@@ -41,6 +41,47 @@ const PAGES: [string, string, string][] = [
   ['unit 6 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-table', 'À table !'],
   ['unit 7 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-ville', 'En ville'],
   ['unit 8 in French', '/fr/levels/fr-a1-1/units/fr-a1-1-temps', 'Jours, heure et météo'],
+  ['level C1.2 in French', '/fr/levels/fr-c1-2', 'C1.2'],
+  ['unit C1.2 in French', '/fr/levels/fr-c1-2/units/fr-c1-2-jeu', 'Quitte ou double !'],
+  ['unit C1.2 famille in French', '/fr/levels/fr-c1-2/units/fr-c1-2-famille', 'Ma belle famille !'],
+  [
+    'unit C1.2 vieillir in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-vieillir',
+    'Vieillir : une aventure',
+  ],
+  ['unit C1.2 sante in French', '/fr/levels/fr-c1-2/units/fr-c1-2-sante', 'Santé 3.0'],
+  [
+    'unit C1.2 solidarite in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-solidarite',
+    'Un monde solidaire',
+  ],
+  ['unit C1.2 sport in French', '/fr/levels/fr-c1-2/units/fr-c1-2-sport', 'Vive le sport !'],
+  [
+    'unit C1.2 ecologie in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-ecologie',
+    'Sauvons la planète !',
+  ],
+  [
+    'unit C1.2 histoire in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-histoire',
+    'Un voyage dans l’histoire',
+  ],
+  [
+    'unit C1.2 identites in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-identites',
+    'Qui suis-je ? Identités',
+  ],
+  ['unit C1.2 humour in French', '/fr/levels/fr-c1-2/units/fr-c1-2-humour', 'Rions un peu !'],
+  [
+    'unit C1.2 francophonie in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-francophonie',
+    'La Francophonie',
+  ],
+  [
+    'unit C1.2 argumenter in French',
+    '/fr/levels/fr-c1-2/units/fr-c1-2-argumenter',
+    'Pour ou contre ?',
+  ],
   ['level B1.1 in French', '/fr/levels/fr-b1-1', 'B1.1'],
   ['unit 1 of B1.1 in French', '/fr/levels/fr-b1-1/units/fr-b1-1-ensemble', 'Vivre ensemble'],
   [

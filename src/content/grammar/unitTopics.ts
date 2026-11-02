@@ -662,6 +662,26 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-superlative' },
     { topic: 'fr-interrogative-pronouns' },
   ],
+  // ---- French C1.2 ----------------------------------------------------------------------------
+  'fr-c1-2-jeu': [
+    { topic: 'fr-c12-participe-present' },
+    { topic: 'fr-c12-gerondif' },
+    { topic: 'fr-c12-adjectif-verbal' },
+  ],
+  'fr-c1-2-famille': [{ topic: 'fr-c12-registres' }, { topic: 'fr-c12-questions' }],
+  'fr-c1-2-vieillir': [
+    { topic: 'fr-c12-reprise-pronominale' },
+    { topic: 'fr-c12-reprise-nominale' },
+  ],
+  'fr-c1-2-sante': [{ topic: 'fr-c12-recit-passe' }, { topic: 'fr-c12-passe-simple' }],
+  'fr-c1-2-solidarite': [{ topic: 'fr-c12-modalisation' }, { topic: 'fr-c12-subjonctif-present' }],
+  'fr-c1-2-sport': [{ topic: 'fr-c12-but' }, { topic: 'fr-c12-relatifs-composes' }],
+  'fr-c1-2-ecologie': [{ topic: 'fr-c12-futur-anterieur' }, { topic: 'fr-c12-cause-consequence' }],
+  'fr-c1-2-histoire': [{ topic: 'fr-c12-concordance' }, { topic: 'fr-c12-marqueurs-temporels' }],
+  'fr-c1-2-identites': [{ topic: 'fr-c12-concession' }, { topic: 'fr-c12-indefinis' }],
+  'fr-c1-2-humour': [{ topic: 'fr-c12-appreciation' }, { topic: 'fr-c12-conditionnel' }],
+  'fr-c1-2-francophonie': [{ topic: 'fr-c12-prepositions-geo' }, { topic: 'fr-c12-hypothese' }],
+  'fr-c1-2-argumenter': [{ topic: 'fr-c12-connecteurs' }, { topic: 'fr-c12-indicatif-subjonctif' }],
   // ---- French C1.1 ----------------------------------------------------------------------------
   'fr-c1-1-medias': [{ topic: 'fr-c11-connectors' }],
   'fr-c1-1-societe': [{ topic: 'fr-c11-si-clauses' }],
