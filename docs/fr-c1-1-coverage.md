@@ -65,7 +65,10 @@ All 11 units are written and ship together in one pull request (Arman's rule: on
 
 `src/content/fr-c1-1/content.test.ts` fails when a word card repeats a word card of an earlier French level (found by folder
 name, so levels merged later are checked too). Overlap with later levels is checked by those levels' own tests. Deliberate
-exceptions would go into `REVIEW_WORDS`; there are none.
+exceptions would go into `REVIEW_WORDS`; there are none. When French B1.1 to B2.2 and C2.1 were merged, 128 C1.1 cards
+repeated their vocabulary (press, health, city, climate, culture, technology); each was replaced by a different C1 word of the
+same topic, so the topic of every unit is unchanged. Sentences in games may still use an everyday word that is a card of an
+earlier level; only the cards are checked.
 
 ## Unit 1 – Les médias et l'information
 
