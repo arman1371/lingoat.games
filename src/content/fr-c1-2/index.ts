@@ -7,8 +7,9 @@ import { solidarite } from './u5-solidarite';
 import { sport } from './u6-sport';
 import { ecologie } from './u7-ecologie';
 import { histoire } from './u8-histoire';
+import { identites } from './u9-identites';
 
-const units = [jeu, famille, vieillir, sante, solidarite, sport, ecologie, histoire];
+const units = [jeu, famille, vieillir, sante, solidarite, sport, ecologie, histoire, identites];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

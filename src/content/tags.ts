@@ -407,6 +407,10 @@ export const TAGS = {
   'fr-c12-history': { label: 'History & memory', group: 'topic', emoji: '🏰' },
   'fr-c12-concordance': { label: 'Sequence of tenses', group: 'grammar', emoji: '🔀' },
   'fr-c12-marqueurs-temporels': { label: 'Time markers', group: 'grammar', emoji: '📅' },
+  // unit 9
+  'fr-c12-identity': { label: 'Identity & diversity', group: 'topic', emoji: '🪪' },
+  'fr-c12-concession': { label: 'Concession', group: 'grammar', emoji: '↔️' },
+  'fr-c12-indefinis': { label: 'Indefinite words', group: 'grammar', emoji: '🔢' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },

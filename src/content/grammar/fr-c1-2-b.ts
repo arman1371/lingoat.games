@@ -782,4 +782,111 @@ export const FRC12_TOPICS_B: GrammarTopic[] = [
     related: ['fr-c12-concordance'],
     sources: [S.imparfait, S.proposition],
   },
+  {
+    id: 'fr-c12-concession',
+    title: 'Concession',
+    tagline: 'Admit a fact, then contrast it',
+    level: LEVEL,
+    summary:
+      'Concession accepts a fact that could have prevented the main idea, and states the main idea anyway. Each connector takes its own structure: subjunctive, indicative, noun or infinitive.',
+    sections: [
+      section(
+        'connectors',
+        'Connectors and structures',
+        table(
+          'Expressing concession.',
+          ['Connector', 'Followed by', 'Example'],
+          [
+            [
+              'bien que, quoique',
+              'subjunctive',
+              'Bien qu’elle soit étrangère, elle se sent chez elle.',
+            ],
+            ['même si', 'indicative', 'Même si c’est dur, on s’adapte.'],
+            ['malgré, en dépit de', 'noun', 'Malgré son accent, il se fait comprendre.'],
+            ['avoir beau', 'infinitive', 'Il a beau chercher, il ne trouve rien.'],
+            [
+              'pourtant, cependant, néanmoins, toutefois',
+              'new sentence',
+              'Il parle bien ; pourtant, il garde un accent.',
+            ],
+            ['certes … mais', 'two clauses', 'Certes il a raison, mais je ne suis pas d’accord.'],
+          ],
+        ),
+      ),
+      section(
+        'traps',
+        'Common traps',
+        examples(
+          ['Même s’il pleut, nous sortons.', 'Even if it rains, we go out.'],
+          ['Bien qu’il pleuve, nous sortons.', 'Although it is raining, we go out.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Bien qu’il est fatigué, il travaille.  ✓ Bien qu’il soit fatigué, il travaille.',
+          '✗ Malgré qu’il pleut.  ✓ Malgré la pluie. / Bien qu’il pleuve.',
+        ),
+        tip(
+          'Same meaning, different grammar',
+          'Bien que, malgré and pourtant say almost the same thing; pick by what comes next: a clause in the subjunctive, a noun, or a new sentence.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-subjonctif-present'],
+    sources: [S.subjonctif, S.proposition],
+  },
+  {
+    id: 'fr-c12-indefinis',
+    title: 'Indefinite adjectives and pronouns',
+    tagline: 'certains, plusieurs, chacun, aucun, quiconque',
+    level: LEVEL,
+    summary:
+      'Indefinite words speak about people or things without saying exactly which: some, several, each, none. Learn which ones are singular, which are plural, and which need ne.',
+    sections: [
+      section(
+        'list',
+        'The main ones',
+        table(
+          'Indefinite words by meaning.',
+          ['Meaning', 'Words', 'Example'],
+          [
+            [
+              'some, several',
+              'certains, plusieurs, quelques, la plupart',
+              'Certains pensent que c’est facile.',
+            ],
+            ['all, each', 'tout / tous / toute, chacun, chaque', 'Chacun a ses racines.'],
+            [
+              'none',
+              'aucun(e) … ne, nul … ne, personne … ne, rien … ne',
+              'Aucune solution n’est simple.',
+            ],
+            [
+              'anyone',
+              'quiconque, n’importe qui',
+              'Quiconque s’installe ici doit apprendre la langue.',
+            ],
+          ],
+        ),
+      ),
+      section(
+        'agreement',
+        'Agreement',
+        p(
+          '**Chacun, aucun, nul, personne** are singular: *chacun a*, *personne ne vient*. **Certains, plusieurs, tous** are plural: *plusieurs sont venus*. **Aucun** and **chaque** agree with the noun in gender: *aucune solution*, *chaque personne*. **Tout** is an adjective (*tout le monde*, *toute la ville*, *tous les jours*) or a pronoun (*tous sont venus*, *tout est possible*).',
+        ),
+        examples(
+          ['Certains sont partis, d’autres sont restés.', 'Some left, others stayed.'],
+          ['Aucun préjugé ne résiste à la rencontre.', 'No prejudice survives meeting people.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Chacun ont leur idée.  ✓ Chacun a son idée.',
+          '✗ Aucun solution.  ✓ Aucune solution.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-concession'],
+    sources: [S.proposition],
+  },
 ];

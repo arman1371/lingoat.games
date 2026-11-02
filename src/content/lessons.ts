@@ -1214,6 +1214,24 @@ export const LESSONS = {
       'Le musée ouvrira dans trois mois.',
     ],
   },
+  'fr-c12-concession': {
+    title: 'Concession',
+    rule: 'Concession admits a fact, then contrasts it. Bien que and quoique + subjunctive; même si + indicative; malgré and en dépit de + noun; avoir beau + infinitive; pourtant, cependant, néanmoins, toutefois between two sentences; certes … mais.',
+    examples: [
+      'Bien qu’elle soit étrangère, elle se sent chez elle.',
+      'Malgré son accent, il se fait comprendre.',
+      'Il a beau chercher, il ne trouve rien.',
+    ],
+  },
+  'fr-c12-indefinis': {
+    title: 'Indefinite adjectives and pronouns',
+    rule: 'Quantity: certains, plusieurs, quelques, la plupart. Totality: tout, tous, toute, chacun, chaque. None: aucun(e), nul, personne, rien (with ne). Quiconque means anyone who. Chacun, aucun and personne are singular; they agree in gender with their noun.',
+    examples: [
+      'Certains pensent que c’est facile.',
+      'Chacun a ses racines.',
+      'Aucune solution n’est simple.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',
