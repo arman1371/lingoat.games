@@ -19,9 +19,9 @@ import {
 const U = 'fr-b2-1-doute';
 
 const ideas = vocabList(U, 'Opinions and arguments', [
-  ['un point de vue', 'a point of view', '👁️'],
-  ['un argument', 'an argument', '🗣️'],
-  ['la conviction', 'conviction', '💪'],
+  ['une opinion', 'an opinion', '💬'],
+  ['une thèse', 'a thesis, a claim', '📑'],
+  ['la croyance', 'a belief', '🙏'],
   ['un doute', 'a doubt', '❓'],
   ['une certitude', 'a certainty', '✅'],
   ['une hypothèse', 'a hypothesis', '🧪'],
@@ -30,7 +30,7 @@ const ideas = vocabList(U, 'Opinions and arguments', [
   ['un compromis', 'a compromise', '🤝'],
   ['une objection', 'an objection', '✋'],
   ['une preuve', 'a proof, evidence', '🔍'],
-  ['un débat', 'a debate', '🎙️'],
+  ['une controverse', 'a controversy', '⚔️'],
   ['une rumeur', 'a rumour', '🗨️'],
   ['une polémique', 'a controversy', '🔥'],
 ]);
@@ -108,7 +108,7 @@ export const doute: UnitContent = {
         words: attitudes,
       },
       listen: [
-        'un argument',
+        'une thèse',
         'une certitude',
         'un compromis',
         'une rumeur',
@@ -118,7 +118,7 @@ export const doute: UnitContent = {
         'improbable',
       ],
       spell: [
-        ['unscramble', 'argument', 'argument', '🗣️', 'un argument'],
+        ['type', 'e thèse', 'a thesis', '📑', 'une thèse'],
         ['unscramble', 'compromis', 'compromise', '🤝', 'un compromis'],
         ['type', 'hypothèse', 'hypothesis', '🧪', 'une hypothèse'],
         ['type', 'sceptique', 'sceptical', '🤨', 'sceptique'],

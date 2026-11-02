@@ -655,6 +655,82 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-passive', note: 'être + participle, se + verb' },
     { topic: 'fr-concession', note: 'bien que, alors que, malgré, même si' },
   ],
+  // ---- French B1.1 ----------------------------------------------------------------------------
+  'fr-b1-1-ensemble': [
+    { topic: 'fr-b11-subjunctive' },
+    { topic: 'fr-b11-obligation' },
+    { topic: 'fr-b11-advice' },
+    { topic: 'fr-b11-restriction' },
+    { topic: 'fr-b11-negative-prefixes' },
+  ],
+  'fr-b1-1-souvenirs': [
+    { topic: 'fr-b11-imparfait-pc' },
+    { topic: 'fr-b11-narration' },
+    { topic: 'fr-b11-reflexive-agreement' },
+  ],
+  'fr-b1-1-travail': [
+    { topic: 'fr-b11-relatives' },
+    { topic: 'fr-b11-opinion' },
+    { topic: 'fr-b11-purpose' },
+  ],
+  'fr-b1-1-consommer': [
+    { topic: 'fr-b11-certainty' },
+    { topic: 'fr-b11-comparison' },
+    { topic: 'fr-b11-adj-place' },
+  ],
+  'fr-b1-1-monde': [
+    { topic: 'fr-b11-pqp' },
+    { topic: 'fr-b11-en-y' },
+    { topic: 'fr-b11-chronology' },
+  ],
+  'fr-b1-1-medias': [
+    { topic: 'fr-b11-passive' },
+    { topic: 'fr-b11-nominalisation' },
+    { topic: 'fr-b11-adverbs' },
+  ],
+  'fr-b1-1-temps': [
+    { topic: 'fr-b11-possessive-pronouns' },
+    { topic: 'fr-b11-wishes' },
+    { topic: 'fr-b11-duration' },
+  ],
+  'fr-b1-1-apprendre': [
+    { topic: 'fr-b11-gerund' },
+    { topic: 'fr-b11-participle-avoir' },
+    { topic: 'fr-b11-agreement' },
+  ],
+  'fr-b1-1-critique': [
+    { topic: 'fr-b11-cond-news' },
+    { topic: 'fr-b11-se-faire' },
+    { topic: 'fr-b11-doubt-adverbs' },
+  ],
+  'fr-b1-1-sentiments': [
+    { topic: 'fr-b11-si-hypothesis' },
+    { topic: 'fr-b11-feelings' },
+    { topic: 'fr-b11-regrets' },
+  ],
+  // ---- French B1.2 ----------------------------------------------------------------------------
+  'fr-b1-2-voyage': [{ topic: 'fr-futur-simple' }],
+  'fr-b1-2-paysages': [
+    { topic: 'fr-b12-future-choice' },
+    { topic: 'fr-futur-simple', note: 'outdoor verbs' },
+  ],
+  'fr-b1-2-hypotheses': [{ topic: 'fr-b12-si-clauses' }, { topic: 'fr-b12-conditional' }],
+  'fr-b1-2-planete': [{ topic: 'fr-b12-prepositions' }],
+  'fr-b1-2-convaincre': [{ topic: 'fr-b12-gerondif' }, { topic: 'fr-b12-connectors' }],
+  'fr-b1-2-ville': [{ topic: 'fr-b12-indefinite' }],
+  'fr-b1-2-rapporter': [{ topic: 'fr-b12-reported-speech' }, { topic: 'fr-b12-inversion' }],
+  'fr-b1-2-etudes': [{ topic: 'fr-b12-compound-relatives' }],
+  'fr-b1-2-cause': [{ topic: 'fr-b12-cause-consequence' }, { topic: 'fr-b12-participe-present' }],
+  'fr-b1-2-sport': [
+    { topic: 'fr-b12-double-pronouns' },
+    { topic: 'fr-b12-emphasis' },
+    { topic: 'fr-b12-futur-anterieur' },
+  ],
+  'fr-b1-2-culture': [{ topic: 'fr-b12-opposition' }, { topic: 'fr-b12-passe-simple' }],
+  'fr-b1-2-regrets': [
+    { topic: 'fr-b12-past-hypotheses' },
+    { topic: 'fr-b12-si-clauses', note: 'si + plus-que-parfait' },
+  ],
   'fr-a2-2-medias': [
     { topic: 'fr-a22-cause-consequence' },
     { topic: 'fr-a22-subjunctive', note: 'il faut que' },

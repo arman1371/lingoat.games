@@ -38,14 +38,14 @@ const family = vocabList(U, 'Family ties and adoption', [
   ['l’adoption', 'adoption', '🍼'],
   ['un orphelin', 'an orphan', '🧸'],
   ['une famille d’accueil', 'a foster family', '🏡'],
-  ['l’aîné', 'the eldest', '1️⃣'],
-  ['le cadet', 'the youngest', '🔚'],
+  ['le benjamin', 'the youngest child', '🍼'],
+  ['l’héritier', 'the heir', '👑'],
   ['une fratrie', 'siblings', '👫'],
   ['un jumeau', 'a twin', '👯'],
-  ['un ancêtre', 'an ancestor', '🪦'],
+  ['un descendant', 'a descendant', '🌱'],
   ['la descendance', 'descendants', '🌿'],
   ['la tutelle', 'guardianship', '🛡️'],
-  ['un parrain', 'a godfather', '🎩'],
+  ['une marraine', 'a godmother', '🧚'],
   ['les aïeux', 'forefathers', '📜'],
 ]);
 
@@ -125,7 +125,7 @@ export const parcours: UnitContent = {
         'l’adoption',
         'un orphelin',
         'un jumeau',
-        'un ancêtre',
+        'un descendant',
       ],
       spell: [
         ['unscramble', 'vieillesse', 'old age', '👵', 'la vieillesse'],

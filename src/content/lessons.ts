@@ -1061,6 +1061,274 @@ export const LESSONS = {
     examples: ['Das ist ja interessant!', 'Das ist eben so.', 'Du hast es doch versprochen!'],
   },
   // ---- French A1.1 -------------------------------------------------------------------------
+  'fr-b11-subjunctive': {
+    title: 'The present subjunctive',
+    rule: 'After il faut que, il vaut mieux que, vouloir que and other expressions of necessity, wish or feeling, the verb after que is in the subjunctive: take the ils stem and add -e, -es, -e, -ions, -iez, -ent (que je prenne, que nous prenions). Être, avoir, aller, faire, pouvoir, savoir and vouloir have their own stems.',
+    examples: [
+      'Il faut que tu fasses moins de bruit.',
+      'Il faut que nous allions à la réunion.',
+      'Il vaut mieux que vous soyez à l’heure.',
+    ],
+  },
+  'fr-b11-obligation': {
+    title: 'Must, forbidden, allowed',
+    rule: 'Obligation: il faut + infinitive (or il faut que + subjunctive), devoir + infinitive. Ban: il est interdit de, il ne faut pas, on ne doit pas. Permission: on a le droit de, il est permis de, on peut. After de or devoir the verb stays in the infinitive.',
+    examples: [
+      'Il faut trier les déchets.',
+      'Il est interdit de fumer dans l’immeuble.',
+      'On a le droit d’inviter des amis.',
+    ],
+  },
+  'fr-b11-advice': {
+    title: 'Giving advice',
+    rule: 'With the same subject use an infinitive: je te conseille de + infinitive, tu devrais + infinitive, il vaut mieux + infinitive. With a new subject after il vaut mieux use que + subjunctive. Never say conseiller que + present: je te conseille de partir.',
+    examples: [
+      'Je te conseille de parler à ta voisine.',
+      'Tu devrais lire le règlement.',
+      'Il vaut mieux que tu parles avant de te plaindre.',
+    ],
+  },
+  'fr-b11-restriction': {
+    title: 'ne … que, ne … ni … ni, aucun',
+    rule: 'Ne … que means only: Je n’ai qu’une clé (the article stays). Ne … ni … ni … means neither … nor: Je n’ai ni frère ni sœur. Aucun(e) means not one: Je n’ai aucun problème. Rien and personne can be the subject: Personne ne répond. Passé composé: je n’ai rien dit, je n’ai vu personne.',
+    examples: [
+      'Nous n’avons qu’une clé.',
+      'Je n’ai ni balcon ni jardin.',
+      'Aucun voisin ne fait de bruit.',
+    ],
+  },
+  'fr-b11-negative-prefixes': {
+    title: 'in-, im-, il-, ir-',
+    rule: 'The prefix in- turns a word into its opposite. It becomes im- before b, p and m, il- before l and ir- before r: inutile, impossible, illégal, irréel. The spelling follows the sound, not the meaning.',
+    examples: ['utile → inutile', 'possible → impossible', 'légal → illégal'],
+  },
+  'fr-b11-imparfait-pc': {
+    title: 'Imparfait or passé composé?',
+    rule: 'The imparfait describes the scene, a state or a habit (il faisait beau, j’avais dix ans, chaque été nous allions …). The passé composé tells the events that move the story on (soudain, le téléphone a sonné). Imparfait: nous stem + -ais, -ais, -ait, -ions, -iez, -aient.',
+    examples: [
+      'Il pleuvait quand je suis sorti.',
+      'Chaque été, nous allions chez mamie.',
+      'Un jour, elle est arrivée.',
+    ],
+  },
+  'fr-b11-narration': {
+    title: 'Connectors of a story',
+    rule: 'Words like autrefois, à l’époque and pendant que set the scene and take the imparfait. Un jour, soudain, tout à coup, au moment où, le lendemain and finalement mark the events and usually take the passé composé.',
+    examples: [
+      'Autrefois, on écrivait des lettres.',
+      'Je cuisinais pendant que mon frère lisait.',
+      'Soudain, quelqu’un a frappé à la porte.',
+    ],
+  },
+  'fr-b11-reflexive-agreement': {
+    title: 'Reflexive verbs in the passé composé',
+    rule: 'Pronominal verbs take être. The participle agrees with the reflexive pronoun when it is the direct object: elle s’est levée, ils se sont retrouvés. It does not agree when the pronoun is indirect (se parler, s’écrire, se téléphoner) or when a direct object follows: elle s’est lavé les mains.',
+    examples: ['Elle s’est levée tôt.', 'Ils se sont parlé.', 'Elle s’est lavé les mains.'],
+  },
+  'fr-b11-relatives': {
+    title: 'qui, que, dont, où',
+    rule: 'A relative pronoun joins two sentences. qui replaces the subject (la collègue qui m’aide), que the direct object (le poste que je cherche), dont replaces de + noun (l’entreprise dont je rêve), où a place or a time (le bureau où je travaille).',
+    examples: [
+      'Le collègue qui m’a aidé est sympa.',
+      'Voilà le projet dont je t’ai parlé.',
+      'C’est le bureau où j’ai passé l’entretien.',
+    ],
+  },
+  'fr-b11-opinion': {
+    title: 'Giving an opinion',
+    rule: 'Give your view with à mon avis, selon moi, il me semble que, je suis convaincu que. Organise it with d’une part … d’autre part. Contrast with par contre or en revanche, and confirm with en effet.',
+    examples: [
+      'À mon avis, le télétravail fait gagner du temps.',
+      'Il gagne moins ; en revanche, il est libre.',
+      'En effet, c’est plus calme à la maison.',
+    ],
+  },
+  'fr-b11-purpose': {
+    title: 'pour, afin de, pour que',
+    rule: 'To say why you do something: pour or afin de + infinitive when the subject is the same (je travaille pour gagner ma vie); pour que or afin que + subjunctive when it changes (je travaille pour que ma famille soit heureuse).',
+    examples: [
+      'Elle apprend l’anglais afin de trouver un poste.',
+      'Il explique le projet pour que tout le monde comprenne.',
+      'Je travaille pour que ma famille soit heureuse.',
+    ],
+  },
+  'fr-b11-certainty': {
+    title: 'Certainty: indicative or subjunctive',
+    rule: 'Certainty takes the indicative: je pense que, je suis sûr que, il est évident que. Doubt, denial or possibility takes the subjunctive: je doute que, je ne pense pas que, il est possible que, il se peut que.',
+    examples: [
+      'Je pense que c’est utile.',
+      'Je ne pense pas que ce soit utile.',
+      'Il est possible que nous consommions moins.',
+    ],
+  },
+  'fr-b11-comparison': {
+    title: 'plus … que, le plus, meilleur',
+    rule: 'Compare with plus / moins / aussi + adjective + que, and plus de / moins de / autant de + noun + que. The superlative adds the article: le / la / les plus. Bon becomes meilleur, bien becomes mieux.',
+    examples: [
+      'Ce magasin est moins cher que l’autre.',
+      'C’est le marché le plus animé de la ville.',
+      'Ce vélo est meilleur que l’ancien.',
+    ],
+  },
+  'fr-b11-adj-place': {
+    title: 'Place of the adjective',
+    rule: 'Most adjectives go after the noun (une voiture rouge). A few short, common ones go before it: beau, bon, petit, grand, jeune, vieux, nouveau, joli, gros, mauvais. Before a masculine noun with a vowel: un bel arbre.',
+    examples: ['une jolie robe rouge', 'un bon repas', 'un petit panier'],
+  },
+  'fr-b11-pqp': {
+    title: 'Plus-que-parfait',
+    rule: 'The plus-que-parfait says what had already happened before another past moment. Form: imparfait of avoir or être + past participle (j’avais fini, elle était partie). The same verbs take être as in the passé composé.',
+    examples: [
+      'Quand je suis arrivé, le film avait déjà commencé.',
+      'Elle était partie avant moi.',
+      'Il n’avait jamais pris l’avion.',
+    ],
+  },
+  'fr-b11-en-y': {
+    title: 'The pronouns en and y',
+    rule: 'En replaces de + noun or a quantity (j’en viens, j’en ai trois). Y replaces à / in / on + a place or a thing (j’y vais, j’y pense). Both go before the verb, or before the infinitive: je veux y aller.',
+    examples: [
+      'Tu viens de Dakar ? — Oui, j’en viens.',
+      'Tu vas à Paris ? — Oui, j’y vais.',
+      'J’en ai trois.',
+    ],
+  },
+  'fr-b11-chronology': {
+    title: 'avant de, après avoir, dès que',
+    rule: 'Avant de + infinitive (same subject); après avoir / être + participle; dès que + verb (future for a coming event). Il y a + period means ago; depuis + period + present means for/since; au bout de means after (a period).',
+    examples: [
+      'Avant de partir, j’ai fait ma valise.',
+      'Après avoir mangé, elle est sortie.',
+      'Je t’appellerai dès que j’arriverai.',
+    ],
+  },
+  'fr-b11-passive': {
+    title: 'The passive voice',
+    rule: 'Passive = être (in the tense of the active verb) + past participle, agreeing with the subject; the agent follows par. L’article est publié par le journaliste. La rumeur a été démentie. Les résultats seront annoncés.',
+    examples: [
+      'Le journaliste publie l’article. → L’article est publié par le journaliste.',
+      'La rumeur a été démentie.',
+      'Les résultats seront annoncés demain.',
+    ],
+  },
+  'fr-b11-nominalisation': {
+    title: 'Headlines: verb → noun',
+    rule: 'Headlines often replace a verb with a noun: les prix augmentent → l’augmentation des prix. Common endings: -ation / -tion / -sion (création, décision), -ée (arrivée), -ure (ouverture), or irregular nouns (la baisse, la découverte).',
+    examples: ['La baisse du chômage', 'L’arrivée du président', 'La découverte d’un virus'],
+  },
+  'fr-b11-adverbs': {
+    title: 'Adverbs in -ment',
+    rule: 'Most adverbs are the feminine adjective + -ment: lent → lentement, heureux → heureusement. If the adjective ends in a vowel, add -ment: vrai → vraiment. Adjectives in -ent / -ant give -emment / -amment: évident → évidemment.',
+    examples: ['Elle répond rapidement.', 'Évidemment, c’est faux.', 'Il se plaint constamment.'],
+  },
+  'fr-b11-possessive-pronouns': {
+    title: 'le mien, la tienne, les leurs',
+    rule: 'A possessive pronoun replaces mon / ton / son + noun and always has an article that agrees with the thing owned: le mien, la mienne, les miens, les miennes (tien, sien, nôtre, vôtre, leur). C’est mon sac. → C’est le mien.',
+    examples: [
+      'Ton sac est vert, le mien est noir.',
+      'Notre jardin est grand, le leur est petit.',
+      'Voici mes clés. Où sont les tiennes ?',
+    ],
+  },
+  'fr-b11-wishes': {
+    title: 'Wishes and hopes',
+    rule: 'Souhaiter que, vouloir que, aimerais que and pourvu que take the subjunctive. Espérer que takes the indicative (often the future): j’espère que tu viendras. With one subject use the infinitive: je rêve de vivre à la campagne.',
+    examples: [
+      'Je souhaite que tu sois heureux.',
+      'J’espère qu’il fera beau.',
+      'Pourvu qu’il fasse beau !',
+    ],
+  },
+  'fr-b11-duration': {
+    title: 'en, pendant, dans, pour + time',
+    rule: 'En + time = how long it takes to finish (en deux heures). Pendant = how long it lasts (pendant trois jours). Dans = a point in the future (dans dix minutes). Pour = planned length after partir or aller (pour une semaine).',
+    examples: [
+      'J’ai lu ce livre en une soirée.',
+      'Il reste pendant trois jours.',
+      'Le train part dans dix minutes.',
+    ],
+  },
+  'fr-b11-gerund': {
+    title: 'The gerund (en + -ant)',
+    rule: 'The gerund is en + the nous stem + -ant (en regardant, en finissant, en faisant). It says how (by doing) or at the same time (while doing). Both actions have the same subject. Irregular: en étant, en ayant, en sachant.',
+    examples: [
+      'Elle apprend le français en regardant des films.',
+      'Je révise en écoutant de la musique.',
+      'En travaillant beaucoup, il a réussi.',
+    ],
+  },
+  'fr-b11-participle-avoir': {
+    title: 'Participle agreement with avoir',
+    rule: 'With avoir, the participle agrees in gender and number with a direct object that comes BEFORE the verb (que, l’, les, quel cours). If the object comes after the verb, there is no agreement: la leçon que j’ai apprise, but j’ai appris la leçon.',
+    examples: [
+      'La leçon que j’ai apprise est difficile.',
+      'Je l’ai vue hier.',
+      'Elle a reçu les résultats.',
+    ],
+  },
+  'fr-b11-agreement': {
+    title: 'Agree, disagree, nuance',
+    rule: 'Agree: tout à fait, je suis d’accord, c’est exact. Disagree: pas du tout, au contraire, je ne suis pas convaincu. Nuance: certes … mais, ça dépend, dans une certaine mesure, d’un côté … de l’autre.',
+    examples: [
+      'Tout à fait, je suis d’accord.',
+      'Au contraire, je pense que c’est faux.',
+      'Certes, mais ça dépend des gens.',
+    ],
+  },
+  'fr-b11-cond-news': {
+    title: 'Conditional for uncertain news',
+    rule: 'The conditional presents news as unconfirmed: Le ministre aurait démissionné. Il y aurait trois blessés. Form: the future stem + imparfait endings (je serais, nous aurions, ils pourraient). The past conditional is aurait / serait + participle.',
+    examples: [
+      'Le ministre aurait démissionné.',
+      'Il y aurait trois blessés, selon un témoin.',
+      'Les prix pourraient augmenter.',
+    ],
+  },
+  'fr-b11-se-faire': {
+    title: 'se faire + infinitive',
+    rule: 'Se faire + infinitive says that something happens to you or that you have it done: je me suis fait voler mon sac, elle s’est fait couper les cheveux, se faire avoir (to be fooled). In the passé composé, fait stays invariable.',
+    examples: [
+      'Je me suis fait voler mon sac.',
+      'Elle s’est fait couper les cheveux.',
+      'Il s’est fait avoir.',
+    ],
+  },
+  'fr-b11-doubt-adverbs': {
+    title: 'peut-être, sans doute, soi-disant',
+    rule: 'Show how sure you are: certainement and sûrement (very sure), sans doute and probablement (probable), peut-être (possible; peut-être que + clause), apparemment, soi-disant and prétendument (distance). Il paraît que takes the indicative, il semblerait que the subjunctive.',
+    examples: [
+      'Peut-être qu’elle a raison.',
+      'Sans doute est-il déjà parti.',
+      'Il paraît que la nouvelle est fausse.',
+    ],
+  },
+  'fr-b11-si-hypothesis': {
+    title: 'si + présent / imparfait',
+    rule: 'A real possibility: si + présent, then the future (or the imperative): S’il fait beau, nous irons. An imagined situation: si + imparfait, then the conditional: Si j’avais le temps, je voyagerais. Never the conditional or the future right after si.',
+    examples: [
+      'Si tu viens, nous irons au cinéma.',
+      'Si j’avais plus de temps, je voyagerais.',
+      'Si j’étais toi, j’accepterais.',
+    ],
+  },
+  'fr-b11-feelings': {
+    title: 'Feelings: que + subjunctive',
+    rule: 'Feelings with a new subject take que + subjunctive: je suis content que tu sois venu, j’ai peur qu’il ne puisse pas, dommage que … With the same subject use de + infinitive: je suis soulagé d’avoir fini, je regrette de ne pas pouvoir venir.',
+    examples: [
+      'Je suis content que tu sois venu.',
+      'Je regrette de ne pas pouvoir venir.',
+      'Dommage que tu doives partir.',
+    ],
+  },
+  'fr-b11-regrets': {
+    title: 'j’aurais dû, si + plus-que-parfait',
+    rule: 'Regrets and reproaches use the past conditional: j’aurais dû t’écouter, tu aurais pu me prévenir. An imagined past: si + plus-que-parfait, then the past conditional: Si j’avais su, je ne serais pas venu. Dû has a circumflex.',
+    examples: [
+      'Tu aurais dû m’appeler.',
+      'Si j’avais su, je ne serais pas venu.',
+      'Si seulement il avait écouté !',
+    ],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',
@@ -1784,6 +2052,162 @@ export const LESSONS = {
       'Malgré la pluie, le marché a eu lieu.',
       'Même si c’est cher, c’est nécessaire.',
     ],
+  },
+  // ---- French B1.2 -------------------------------------------------------------------------
+  'fr-futur-simple': {
+    title: 'The simple future',
+    rule: 'Take the infinitive (drop the e of -re verbs) and add -ai, -as, -a, -ons, -ez, -ont: je voyagerai, nous prendrons. About a dozen verbs have an irregular stem, but the endings never change: être → ser-, avoir → aur-, aller → ir-, faire → fer-, venir → viendr-.',
+    examples: [
+      'Nous partirons samedi matin.',
+      'Je serai à Lyon à midi.',
+      'Elle fera la réservation.',
+    ],
+  },
+  'fr-b12-future-choice': {
+    title: 'Which future to use',
+    rule: 'Use the present for timetables and fixed arrangements (Le train part à huit heures). Use aller + infinitive for what is about to happen or is certain (Il va pleuvoir). Use the simple future for plans, predictions and promises further away, and after quand, lorsque and dès que (Dès qu’il fera beau, je sortirai).',
+    examples: [
+      'Le car part dans dix minutes.',
+      'Attention, il va pleuvoir !',
+      'Dès que je serai là, je t’appellerai.',
+    ],
+  },
+  'fr-b12-si-clauses': {
+    title: 'Si… clauses',
+    rule: 'Real possibility: si + present, then present, future or imperative (Si tu viens, on sortira). Imaginary or unlikely: si + imparfait, then conditional (Si j’avais le temps, je voyagerais). Never put the future or the conditional right after si.',
+    examples: [
+      'Si tu viens, on ira au lac.',
+      'Si j’avais plus de temps, je voyagerais.',
+      'Si tu as faim, mange !',
+    ],
+  },
+  'fr-b12-conditional': {
+    title: 'The conditional',
+    rule: 'Future stem plus the endings of the imparfait: je voyagerais, nous irions, ils feraient. Use it for imaginary results, polite requests (Je voudrais…, Pourriez-vous… ?), advice (Tu devrais…) and wishes.',
+    examples: ['Je voudrais un billet.', 'Tu devrais te reposer.', 'Nous irions en Corse.'],
+  },
+  'fr-b12-past-hypotheses': {
+    title: 'Regrets and the past',
+    rule: 'Plus-que-parfait = imparfait of avoir or être + participle (j’avais su). Past conditional = conditional of avoir or être + participle (je serais venu). Together: si + plus-que-parfait, then past conditional. J’aurais dû = I should have.',
+    examples: [
+      'Si j’avais su, je serais venu.',
+      'J’aurais dû vous écouter.',
+      'Tu aurais pu me prévenir !',
+    ],
+  },
+  'fr-b12-prepositions': {
+    title: 'Verbs with prepositions',
+    rule: 'Many verbs and adjectives need a fixed preposition before their complement: participer à, s’intéresser à, être sensible à; dépendre de, s’occuper de, être capable de; lutter contre, compter sur. à + le = au, à + les = aux, de + le = du, de + les = des.',
+    examples: [
+      'Il participe au tri.',
+      'Elle s’occupe du recyclage.',
+      'Nous luttons contre la pollution.',
+    ],
+  },
+  'fr-b12-gerondif': {
+    title: 'The gérondif',
+    rule: 'En + the participe présent (the nous form without -ons, plus -ant) shows two actions at once, the way, or a condition: Il chante en cuisinant. En travaillant, tu réussiras. It never changes. Exceptions: étant, ayant, sachant.',
+    examples: [
+      'Elle parle en marchant.',
+      'On apprend en pratiquant.',
+      'En partant tôt, tu éviteras les bouchons.',
+    ],
+  },
+  'fr-b12-connectors': {
+    title: 'Linking words',
+    rule: 'Connectors structure an argument: d’abord, ensuite, enfin (order); de plus, d’ailleurs (add); cependant, pourtant, en revanche (contrast); certes … mais (concede); par exemple (illustrate); en somme (conclude).',
+    examples: [
+      'Certes, c’est cher, mais c’est utile.',
+      'Le vélo est rapide ; de plus, il est écologique.',
+      'En somme, nous sommes d’accord.',
+    ],
+  },
+  'fr-b12-indefinite': {
+    title: 'Indefinite pronouns',
+    rule: 'People: quelqu’un, personne, tout le monde, chacun. Things: quelque chose, rien, n’importe quoi. Amounts: plusieurs, certains, la plupart (des), aucun. Personne and rien go with ne: Personne n’a rien dit. With en: J’en ai vu plusieurs.',
+    examples: [
+      'Personne n’a protesté.',
+      'La plupart des gens respectent les règles.',
+      'Des affiches ? J’en ai vu plusieurs.',
+    ],
+  },
+  'fr-b12-reported-speech': {
+    title: 'Reported speech',
+    rule: 'After dire que, demander si and ce que, the words are reported without quotation marks. After a past verb of saying, shift the tenses: present → imparfait, passé composé → plus-que-parfait, future → conditional; demain → le lendemain, hier → la veille.',
+    examples: [
+      'Il a dit qu’il viendrait.',
+      'Elle a demandé si j’avais faim.',
+      'Il dit qu’il est fatigué.',
+    ],
+  },
+  'fr-b12-inversion': {
+    title: 'Formal questions',
+    rule: 'Formal questions invert the verb and the pronoun with a hyphen: Où habitez-vous ? Pourriez-vous m’aider ? A noun subject is repeated by a pronoun (Paul est-il arrivé ?), and -t- separates two vowels (A-t-il répondu ?).',
+    examples: ['Où habitez-vous ?', 'Pourriez-vous m’indiquer le tarif ?', 'A-t-il déjà répondu ?'],
+  },
+  'fr-b12-compound-relatives': {
+    title: 'lequel, auquel, dont',
+    rule: 'After a preposition use lequel, laquelle, lesquels, lesquelles (avec laquelle). With à they merge: auquel, auxquels, auxquelles. Dont replaces de + noun and also means “whose”: le livre dont j’ai besoin. For people qui is possible after a preposition.',
+    examples: [
+      'La méthode avec laquelle j’étudie.',
+      'Le cours auquel je participe.',
+      'Voilà le livre dont j’ai besoin.',
+    ],
+  },
+  'fr-b12-cause-consequence': {
+    title: 'Cause and consequence',
+    rule: 'Cause: parce que, car, puisque, comme; with a noun à cause de (negative), grâce à (positive), en raison de. Consequence: donc, alors, par conséquent, c’est pourquoi, si bien que; tellement / si … que: Il a tellement plu que la route est inondée.',
+    examples: [
+      'À cause de la grève, les bus sont rares.',
+      'Il pleut, donc nous restons ici.',
+      'Grâce à vous, tout va bien.',
+    ],
+  },
+  'fr-b12-participe-present': {
+    title: 'The present participle',
+    rule: 'The participe présent (nous form without -ons + -ant) is invariable and often gives the cause in writing: Étant malade, il est resté au lit. Same subject as the main verb. Unlike the gérondif it has no en. Irregular: étant, ayant, sachant.',
+    examples: [
+      'Étant fatiguée, elle est partie.',
+      'Ayant peur, il a appelé.',
+      'Sachant la réponse, elle a levé la main.',
+    ],
+  },
+  'fr-b12-double-pronouns': {
+    title: 'Two pronouns together',
+    rule: 'Order: me / te / nous / vous come before le / la / les (il me la prête); le / la / les come before lui / leur (je le lui donne); y and en come last (il leur en parle). In the affirmative imperative the order changes: donne-le-moi.',
+    examples: ['Je te le prête.', 'Elle la leur montre.', 'Il m’en parle.'],
+  },
+  'fr-b12-emphasis': {
+    title: 'C’est … qui / que',
+    rule: 'To stress a word, frame it with c’est … qui (for the subject) or c’est … que (for an object or a circumstance of place or time): C’est Paul qui a marqué. C’est ce match que j’ai préféré. Before a plural use ce sont.',
+    examples: [
+      'C’est Paul qui a marqué.',
+      'C’est à Lyon que nous jouons.',
+      'Ce sont les fans qui chantent.',
+    ],
+  },
+  'fr-b12-futur-anterieur': {
+    title: 'The future perfect',
+    rule: 'Futur antérieur = futur simple of avoir or être + participle: j’aurai fini, elle sera partie. It names an action that will be finished before another future action or a point in time: Quand j’aurai fini, je t’appellerai.',
+    examples: [
+      'Quand j’aurai fini, je t’appellerai.',
+      'Dès qu’il sera arrivé, nous commencerons.',
+      'Demain, elle aura gagné.',
+    ],
+  },
+  'fr-b12-opposition': {
+    title: 'Contrast and concession',
+    rule: 'Contrast: alors que, tandis que, au contraire. Concession: bien que + subjunctive, même si + indicative, malgré / en dépit de + noun, néanmoins, toutefois. Malgré la pluie, on sort. Bien qu’il pleuve, on sort.',
+    examples: [
+      'Il aime lire, alors qu’elle préfère écrire.',
+      'Bien qu’il pleuve, nous sortons.',
+      'Malgré la fatigue, il continue.',
+    ],
+  },
+  'fr-b12-passe-simple': {
+    title: 'The passé simple',
+    rule: 'The passé simple is the past tense of novels and history; you read it, you rarely say it. It is mostly third person: il parla, ils parlèrent, elle finit, il fut, elle eut, il dit, ils allèrent. In speech the passé composé replaces it.',
+    examples: ['Il ouvrit la porte et entra.', 'Elle naquit en 1850.', 'Ils furent surpris.'],
   },
   'fr-a22-cause-consequence': {
     title: 'Cause and consequence: parce que, donc',

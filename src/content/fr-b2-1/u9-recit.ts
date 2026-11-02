@@ -25,7 +25,7 @@ const story = vocabList(U, 'Storytelling', [
   ['une intrigue', 'a plot', '🧵'],
   ['un dénouement', 'an ending, a resolution', '🏁'],
   ['un rebondissement', 'a twist', '🔄'],
-  ['un roman', 'a novel', '📚'],
+  ['une saga', 'a saga', '📚'],
   ['une nouvelle', 'a short story', '📄'],
   ['une anecdote', 'an anecdote', '💬'],
   ['un chapitre', 'a chapter', '🔖'],
@@ -36,16 +36,16 @@ const story = vocabList(U, 'Storytelling', [
 ]);
 
 const time = vocabList(U, 'Time in a story', [
-  ['brusquement', 'abruptly', '⚡'],
+  ['subitement', 'suddenly', '⚡'],
   ['aussitôt', 'immediately', '💨'],
   ['dès lors', 'from then on', '➡️'],
   ['peu à peu', 'little by little', '🐢'],
   ['à l’improviste', 'unexpectedly', '🎁'],
   ['peu après', 'shortly after', '⏱️'],
   ['au fil du temps', 'as time went by', '⏳'],
-  ['jadis', 'long ago', '🏺'],
+  ['en ce temps-là', 'in those days', '📜'],
   ['naguère', 'not long ago, formerly', '🕰️'],
-  ['par la suite', 'afterwards', '⏭️'],
+  ['dans la foulée', 'immediately afterwards', '⏭️'],
   ['sur ces entrefaites', 'at that moment', '🎬'],
   ['un beau jour', 'one fine day', '🌤️'],
 ]);
@@ -116,10 +116,10 @@ export const recit: UnitContent = {
         'une intrigue',
         'un dénouement',
         'un rebondissement',
-        'brusquement',
+        'subitement',
         'aussitôt',
         'peu à peu',
-        'jadis',
+        'en ce temps-là',
       ],
       spell: [
         ['unscramble', 'personnage', 'character', '🎭', 'un personnage'],

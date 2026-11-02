@@ -27,7 +27,7 @@ const france = vocabList(U, 'French institutions', [
 
 const europe = vocabList(U, 'European institutions', [
   ['la directive', 'directive (must be transposed)', '📐'],
-  ['le règlement', 'regulation (directly applicable)', '📏'],
+  ['le règlement européen', 'EU regulation (directly applicable)', '📏'],
   ['la codécision', 'ordinary legislative procedure', '🔗'],
   ['la zone euro', 'the eurozone', '💶'],
   ['le Haut Représentant', 'High Representative', '🎖️'],
@@ -148,7 +148,7 @@ export const institutions: UnitContent = {
           'la motion de censure',
           'le suffrage universel',
           'la directive',
-          'le règlement',
+          'le règlement européen',
           'la codécision',
           'promulguer',
           'abroger',

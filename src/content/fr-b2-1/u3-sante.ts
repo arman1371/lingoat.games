@@ -26,12 +26,12 @@ const symptoms = vocabList(U, 'Symptoms and health problems', [
   ['une entorse', 'a sprain', '🦶'],
   ['une fracture', 'a fracture', '🦴'],
   ['la tension', 'blood pressure', '🩺'],
-  ['le surmenage', 'overwork, burnout', '🥵'],
+  ['l’épuisement', 'exhaustion', '🪫'],
   ['l’insomnie', 'insomnia', '🌙'],
   ['un symptôme', 'a symptom', '🌡️'],
   ['une maladie chronique', 'a chronic illness', '♾️'],
   ['la fatigue', 'tiredness', '😴'],
-  ['le stress', 'stress', '😰'],
+  ['l’anxiété', 'anxiety', '😰'],
   ['un diagnostic', 'a diagnosis', '📋'],
 ]);
 
@@ -44,8 +44,8 @@ const care = vocabList(U, 'Treatment, prevention and sport', [
   ['un kinésithérapeute', 'a physiotherapist', '🧑‍⚕️'],
   ['une hospitalisation', 'a hospital stay', '🏥'],
   ['la prévention', 'prevention', '🛡️'],
-  ['le dopage', 'doping', '💉'],
-  ['un échauffement', 'a warm-up', '🤸'],
+  ['le tabagisme', 'smoking (habit)', '🚬'],
+  ['un étirement', 'a stretch', '🤸'],
   ['la récupération', 'recovery', '🛌'],
   ['une mutuelle', 'supplementary health insurance', '🧾'],
 ]);
@@ -117,8 +117,8 @@ export const sante: UnitContent = {
         'l’insomnie',
         'un traitement',
         'la posologie',
-        'le dopage',
-        'un échauffement',
+        'le tabagisme',
+        'un étirement',
       ],
       spell: [
         ['unscramble', 'migraine', 'migraine', '🤯', 'une migraine'],
