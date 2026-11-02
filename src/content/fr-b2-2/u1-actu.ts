@@ -4,19 +4,19 @@ import { unitFr, type UnitContent } from './helpers';
 const U = 'fr-b2-2-actu';
 
 const press = vocabList(U, 'The press and the news', [
-  ['l’actualité', 'the news, current affairs', '📰'],
+  ['une chronique', 'a regular column', '📨'],
   ['la presse écrite', 'the print press', '🗞️'],
-  ['un quotidien', 'a daily newspaper', '📅'],
-  ['un hebdomadaire', 'a weekly magazine', '📖'],
-  ['la une', 'the front page', '🔝'],
+  ['une rubrique', 'a section of a newspaper', '🗂️'],
+  ['un mensuel', 'a monthly magazine', '📖'],
+  ['une manchette', 'a banner headline', '🔝'],
   ['un gros titre', 'a headline', '🔠'],
   ['un éditorial', 'an editorial', '✍️'],
-  ['un reportage', 'a news report', '🎥'],
+  ['une tribune', 'an opinion column by an outside writer', '🖊️'],
   ['une enquête', 'an investigation', '🔎'],
   ['une dépêche', 'a news agency wire', '📠'],
   ['un correspondant', 'a correspondent', '🌍'],
   ['la rédaction', 'the editorial team, the newsroom', '🏢'],
-  ['un abonné', 'a subscriber', '🔔'],
+  ['un internaute', 'an internet user', '🧑‍💻'],
   ['une chaîne d’info en continu', 'a rolling news channel', '📺'],
 ]);
 
@@ -61,20 +61,20 @@ const opinion = vocabList(U, 'Judging the media', [
   ['sensationnel', 'sensationalist', '⚡'],
   ['accrocheur', 'catchy, attention-grabbing', '🪝'],
   ['approfondi', 'in-depth', '🔬'],
-  ['superficiel', 'superficial', '🌫️'],
+  ['lacunaire', 'patchy, incomplete', '🕳️'],
   ['une polémique', 'a controversy', '🔥'],
   ['l’audience', 'the audience, the ratings', '📊'],
   ['la couverture médiatique', 'media coverage', '📡'],
   ['un sondage', 'an opinion poll', '📋'],
   ['l’esprit critique', 'critical thinking', '🧠'],
-  ['s’informer', 'to keep oneself informed', '📚'],
+  ['se tenir au courant', 'to keep up to date', '📚'],
 ]);
 
 const vocab = [...press, ...disinfo, ...verbs, ...opinion];
 
 const quizWords = byDe(
   vocab,
-  'la une',
+  'une manchette',
   'un gros titre',
   'une enquête',
   'la rédaction',
@@ -526,12 +526,12 @@ export const actu: UnitContent = {
       memory(
         byDe(
           press,
-          'un quotidien',
-          'un hebdomadaire',
-          'un reportage',
+          'une rubrique',
+          'un mensuel',
+          'une tribune',
           'une enquête',
           'une dépêche',
-          'la une',
+          'une manchette',
           'un éditorial',
           'la rédaction',
         ),
@@ -727,12 +727,12 @@ export const actu: UnitContent = {
             speak: 'la rédaction',
           },
           {
-            id: 'sp-hebdomadaire',
+            id: 'sp-mensuel',
             mode: 'type',
-            answer: 'hebdomadaire',
-            hint: 'a weekly magazine',
+            answer: 'mensuel',
+            hint: 'a monthly magazine',
             emoji: '📖',
-            speak: 'un hebdomadaire',
+            speak: 'un mensuel',
           },
           {
             id: 'sp-propagande',
@@ -960,12 +960,12 @@ export const actu: UnitContent = {
       {
         seconds: 50,
         statements: [
-          { id: 'b1', text: '“Un quotidien” is a daily newspaper.', isTrue: true },
+          { id: 'b1', text: '“Un mensuel” is a monthly magazine.', isTrue: true },
           {
             id: 'b2',
-            text: '“Un hebdomadaire” comes out every day.',
+            text: '“Un mensuel” comes out every day.',
             isTrue: false,
-            explanation: 'Un hebdomadaire is a weekly. A daily is un quotidien.',
+            explanation: 'Un mensuel comes out once a month, not every day.',
           },
           {
             id: 'b3',

@@ -1,4 +1,4 @@
-import { passeCompose } from '@/lib/french/tenses';
+import { passeCompose, presentFr } from '@/lib/french/tenses';
 import { FRENCH_PRONOUNS } from '@/lib/persons';
 import { examples, mistake, p, section, table, tip } from './build';
 import type { GrammarTopic } from './schema';
@@ -16,7 +16,17 @@ const etreTable = (caption: string, verbs: readonly string[]) => {
   );
 };
 
-/** French A2.1: the past tenses, negatives and time markers of unit 1. */
+/** Present-tense table, one column per verb, forms from `presentFr` (src/lib/french/tenses). */
+const presentTable = (caption: string, verbs: readonly string[]) => {
+  const all = verbs.map((v) => presentFr(v));
+  return table(
+    caption,
+    ['Person', ...verbs],
+    FRENCH_PRONOUNS.map((pr) => [pr, ...all.map((f) => f[pr])]),
+  );
+};
+
+/** French A2.1: unit 1 (past tenses, negatives, time markers) and unit 2 (outings, modals, y). */
 export const FR21_TOPICS: GrammarTopic[] = [
   {
     id: 'fr-a21-passe-compose',
@@ -226,5 +236,168 @@ export const FR21_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-time-markers', 'fr-a21-passe-compose', 'fr-futur-proche'],
     sources: [S.depuis, S.pendant],
+  },
+  {
+    id: 'fr-a21-invitations',
+    title: 'Suggesting, accepting, refusing',
+    tagline: 'Ça te dit de sortir ?',
+    level: LEVEL,
+    summary:
+      'Suggest an outing with Ça te dit de + infinitive or Tu as envie de + infinitive. Accept with Bonne idée or Avec plaisir; refuse politely with Désolé, je ne peux pas and a reason.',
+    sections: [
+      section(
+        'suggest',
+        'Suggesting something',
+        table(
+          'Ways to suggest an outing.',
+          ['Phrase', 'Meaning', 'Example'],
+          [
+            [
+              'Ça te / vous dit de + infinitif ?',
+              'Do you feel like …?',
+              'Ça te dit d’aller au théâtre ?',
+            ],
+            [
+              'Tu as / Vous avez envie de + infinitif ?',
+              'Do you fancy …?',
+              'Tu as envie de sortir samedi ?',
+            ],
+            ['On + présent ?', 'Shall we …?', 'On va au cirque ?'],
+            ['On y va ?', 'Shall we go?', 'Il est huit heures : on y va ?'],
+          ],
+        ),
+        p(
+          '**Avoir envie de** expresses a wish or desire and is followed by a noun or an infinitive. With a verb, **de** shortens to **d’** before a vowel: *Ça te dit d’aller au concert ?*',
+        ),
+        tip(
+          'Tu or vous?',
+          'Ça te dit …? is for friends, Ça vous dit …? is polite. In everyday French *on* is often used instead of nous: on va au cinéma = we are going to the cinema.',
+        ),
+      ),
+      section(
+        'answer',
+        'Saying yes, saying no',
+        table(
+          'Answers to an invitation.',
+          ['Accepting', 'Refusing'],
+          [
+            ['Bonne idée !', 'Désolé, je ne peux pas.'],
+            ['Avec plaisir !', 'Je suis pris ce soir.'],
+            ['Pourquoi pas ?', 'Non merci, pas ce soir.'],
+            ['D’accord, on y va !', 'Dommage, je n’ai pas le temps.'],
+          ],
+        ),
+        p(
+          'A polite refusal gives a short reason: *Désolé, je ne peux pas : je suis pris.* To fix a meeting say *On se retrouve où ?* and *Rendez-vous à huit heures devant l’entrée.*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Bon idée !  ✓ Bonne idée ! (idée is feminine)',
+          '✗ Ça te dit aller au cinéma ?  ✓ Ça te dit d’aller au cinéma ?',
+        ),
+      ),
+    ],
+    related: ['fr-a21-modals', 'fr-a21-y', 'fr-futur-proche'],
+    sources: [S.envie],
+  },
+  {
+    id: 'fr-a21-modals',
+    title: 'pouvoir, devoir, vouloir',
+    tagline: 'Can, must, want: the verbs that lead to an infinitive',
+    level: LEVEL,
+    summary:
+      'Pouvoir (can), devoir (must) and vouloir (want) are irregular. Each is followed directly by an infinitive; in the negative ne … pas wraps around the first verb.',
+    sections: [
+      section(
+        'forms',
+        'The present tense',
+        presentTable('Present tense of pouvoir, devoir and vouloir.', [
+          'pouvoir',
+          'devoir',
+          'vouloir',
+        ]),
+        p(
+          'All three have **two stems**: one for je, tu, il/elle/on and ils/elles (peux, dois, veux …) and one for nous and vous (pouvons, devons, voulons). Note the **-x** in peux and veux, which devoir lacks (dois).',
+        ),
+        tip(
+          'Je voudrais',
+          'Je voudrais (I would like) is the polite form of je veux and is used to ask for tickets, a table or a favour.',
+        ),
+      ),
+      section(
+        'use',
+        'With an infinitive',
+        p(
+          '**Pouvoir** expresses ability, possibility or permission (*Je peux venir.*). **Devoir** expresses necessity or obligation (*Nous devons réserver.*). **Vouloir** expresses a wish (*Ils veulent sortir.*). The second verb stays in the infinitive.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je ne peut pas venir.  ✓ Je ne peux pas venir.',
+          '✗ Nous devez partir.  ✓ Nous devons partir.',
+          '✗ Elle ne pas peut sortir.  ✓ Elle ne peut pas sortir.',
+        ),
+        examples(
+          ['Tu peux venir au concert ?', 'Can you come to the concert?'],
+          ['Elle ne peut pas sortir : elle est malade.', 'She cannot go out: she is ill.'],
+          ['Ils doivent partir tôt.', 'They have to leave early.'],
+        ),
+      ),
+    ],
+    related: ['fr-prendre-vouloir', 'fr-a21-invitations', 'fr-negation'],
+    sources: [S.pouvoir, S.devoir],
+  },
+  {
+    id: 'fr-a21-y',
+    title: 'The pronoun y',
+    tagline: 'J’y vais, allons-y: how to say “there”',
+    level: LEVEL,
+    summary:
+      'Y replaces à + a place (or à + a thing) and means “there”. It goes right before the verb, before the auxiliary in the passé composé, and after an imperative with a hyphen.',
+    sections: [
+      section(
+        'meaning',
+        'What y replaces',
+        table(
+          'Y instead of a place.',
+          ['With the place', 'With y'],
+          [
+            ['Je vais au stade.', 'J’y vais.'],
+            ['Nous allons à la piscine.', 'Nous y allons.'],
+            ['Il est à la patinoire.', 'Il y est.'],
+            ['Elle va au parc tous les jours.', 'Elle y va tous les jours.'],
+          ],
+        ),
+        p(
+          '**Y** also replaces a place introduced by *dans, chez* or *sur*, and an idea introduced by *à* (*Je pense à mon examen → J’y pense*). Before a vowel **je** becomes **j’**: *j’y vais.*',
+        ),
+      ),
+      section(
+        'position',
+        'Where does y go?',
+        table(
+          'The position of y.',
+          ['Case', 'Example'],
+          [
+            ['Present tense', 'Tu y vas ?'],
+            ['Negative', 'Nous n’y allons pas.'],
+            ['Passé composé', 'Je n’y suis jamais allé.'],
+            ['Infinitive (futur proche)', 'Je vais y aller.'],
+            ['Imperative', 'Allons-y ! Vas-y !'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je vais y au cinéma.  ✓ J’y vais.',
+          '✗ Je suis jamais y allé.  ✓ Je n’y suis jamais allé.',
+          '✗ Allons y !  ✓ Allons-y !',
+        ),
+        tip(
+          'Futur simple',
+          'Before the future and conditional forms of aller the y disappears: j’irai, not j’y irai.',
+        ),
+      ),
+    ],
+    related: ['fr-aller', 'fr-futur-proche', 'fr-a21-invitations'],
+    sources: [S.y],
   },
 ];

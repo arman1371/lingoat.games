@@ -69,7 +69,7 @@ export const sante = buildUnit({
         ['une rémission', 'a remission', '📉'],
         ['la rééducation', 'rehabilitation', '🦽'],
         ['la mutuelle', 'supplementary health insurance', '💳'],
-        ['un remboursement', 'a reimbursement', '🧾'],
+        ['une prise en charge', 'coverage of costs, care', '🧾'],
         ['prescrire', 'to prescribe', '✍️'],
         ['dépister', 'to screen for', '🔎'],
         ['soulager', 'to relieve', '😮‍💨'],
@@ -120,7 +120,7 @@ export const sante = buildUnit({
     'un traitement',
     'une rémission',
     'la rééducation',
-    'un remboursement',
+    'une prise en charge',
   ],
   listen: [
     'le bien-être',

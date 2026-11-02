@@ -8,7 +8,6 @@ const FRENCH_COMING_SOON: LevelMeta[] = [
   ['b2-1', 'B2.1', 'Vantage, first half'],
   ['c1-1', 'C1.1', 'Effective proficiency, first half'],
   ['c1-2', 'C1.2', 'Effective proficiency, second half'],
-  ['c2-1', 'C2.1', 'Mastery, first half'],
   ['c2-2', 'C2.2', 'Mastery, second half'],
 ].map(([id, title, subtitle]) => ({
   language: 'fr',
@@ -80,6 +79,15 @@ const FRENCH_LEVELS: LevelMeta[] = (
         'Press and disinformation, health, solidarity, justice, culture, science, economy, history, cities, society, climate and debate',
       status: 'available',
       load: () => import('./fr-b2-2'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-c2-1',
+      title: 'C2.1',
+      subtitle:
+        'Registers, humour, narrative tenses, cause and concession, the subjunctive, emphasis, institutions and debate at near-native level',
+      status: 'available',
+      load: () => import('./fr-c2-1'),
     },
     ...FRENCH_COMING_SOON,
   ] satisfies LevelMeta[]
