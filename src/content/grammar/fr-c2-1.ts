@@ -525,4 +525,160 @@ export const FRC21_TOPICS: GrammarTopic[] = [
     related: ['fr-c21-cause-consequence'],
     sources: [S.subConjunction, S.quandBienMeme, S.auCasOu, S.quoique, S.subjunctive],
   },
+  {
+    id: 'fr-c21-subjunctive',
+    title: 'The subjunctive',
+    tagline: 'When the mood changes the verb',
+    level: LEVEL,
+    summary:
+      'The subjunctive follows verbs and expressions of will, necessity, doubt, emotion and possibility. Facts and certainty keep the indicative. Several common verbs have irregular subjunctive stems.',
+    sections: [
+      section(
+        'when',
+        'When the subjunctive is needed',
+        p(
+          'The subjunctive appears in a clause with **que** after a main clause that is not a plain statement of fact. It is used for what is wanted, needed, doubted, felt or merely possible, and after conjunctions such as **bien que**, **pour que**, **avant que**, **à condition que** and **à moins que**.',
+        ),
+        table(
+          'Main clauses and the mood they require.',
+          ['Idea', 'Examples', 'Mood'],
+          [
+            [
+              'will, necessity',
+              'vouloir que, exiger que, il faut que, il importe que',
+              'subjunctive',
+            ],
+            ['doubt, possibility', 'douter que, il se peut que, il est douteux que', 'subjunctive'],
+            [
+              'emotion, judgement',
+              'regretter que, s’étonner que, se réjouir que, déplorer que',
+              'subjunctive',
+            ],
+            ['certainty, opinion', 'il est certain que, je pense que, je sais que', 'indicative'],
+          ],
+        ),
+        examples(
+          ['Il faut que nous partions avant la nuit.', 'We must leave before nightfall.'],
+          ['Je m’étonne que tu ne sois pas venu.', 'I am surprised that you did not come.'],
+          ['Il est certain qu’elle a raison.', 'It is certain that she is right.'],
+        ),
+      ),
+      section(
+        'forms',
+        'Forms of the present and the past subjunctive',
+        p(
+          'Most verbs form the present subjunctive from the **ils** form of the present: ils partent → que je parte. Six verbs are irregular. The **past subjunctive** is formed with the subjunctive of avoir or être and the past participle: qu’il soit parti, qu’elle ait fini. It shows an action that is already completed.',
+        ),
+        table(
+          'Irregular present subjunctives.',
+          ['Person', 'être', 'avoir', 'aller', 'faire', 'savoir'],
+          [
+            ['que je', 'sois', 'aie', 'aille', 'fasse', 'sache'],
+            ['que tu', 'sois', 'aies', 'ailles', 'fasses', 'saches'],
+            ['qu’il', 'soit', 'ait', 'aille', 'fasse', 'sache'],
+            ['que nous', 'soyons', 'ayons', 'allions', 'fassions', 'sachions'],
+            ['que vous', 'soyez', 'ayez', 'alliez', 'fassiez', 'sachiez'],
+            ['qu’ils', 'soient', 'aient', 'aillent', 'fassent', 'sachent'],
+          ],
+        ),
+      ),
+      section(
+        'sequence',
+        'Sequence of tenses and the imperfect subjunctive',
+        p(
+          'After a main verb in the past, formal written French can use the **imparfait du subjonctif** (je priais pour qu’il m’aimât) or the plus-que-parfait of the subjunctive. This sequence is rare and mostly literary: in modern French the present or the past subjunctive is used instead.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je pense qu’il vienne.  ✓ Je pense qu’il vient. (affirmative opinion: indicative)',
+          '✗ Il faut que tu es patient.  ✓ Il faut que tu sois patient.',
+          '✗ Je regrette qu’il a oublié.  ✓ Je regrette qu’il ait oublié.',
+        ),
+        tip(
+          'Negated opinion',
+          'After a negated or questioned verb of thought, the subjunctive is optional and stresses doubt; the indicative stresses that the fact is real: Je ne pense pas qu’il vienne.',
+        ),
+      ),
+    ],
+    related: ['fr-c21-concession', 'fr-c21-reported-speech'],
+    sources: [S.subjunctive, S.concordance],
+  },
+  {
+    id: 'fr-c21-reported-speech',
+    title: 'Reported speech in the past',
+    tagline: 'Pass on what someone said',
+    level: LEVEL,
+    summary:
+      'In reported speech after a past verb of saying, the tenses move back one step, the time and place words change, a yes/no question is introduced by si and a general truth keeps its tense.',
+    sections: [
+      section(
+        'tenses',
+        'The tenses move back',
+        p(
+          'When the introducing verb (**il a dit**, **elle a affirmé**) is in the past, the verb of the reported clause changes. When it is in the present or future, nothing changes. The imparfait, the plus-que-parfait and the conditional stay as they are.',
+        ),
+        table(
+          'Tense shifts after a past verb of saying.',
+          ['Direct speech', 'Reported speech'],
+          [
+            ['« Je suis fatigué. » (présent)', 'Il a dit qu’il était fatigué. (imparfait)'],
+            ['« J’ai fini. » (passé composé)', 'Elle a dit qu’elle avait fini. (plus-que-parfait)'],
+            ['« Je viendrai. » (futur)', 'Il a dit qu’il viendrait. (conditionnel)'],
+            [
+              '« J’aurai fini. » (futur antérieur)',
+              'Elle a dit qu’elle aurait fini. (conditionnel passé)',
+            ],
+          ],
+        ),
+        examples(
+          ['Il dit qu’il est malade.', 'He says he is ill. (present verb: no shift)'],
+          [
+            'Le professeur a rappelé que la Terre est ronde.',
+            'The teacher reminded us that the Earth is round. (general truth)',
+          ],
+        ),
+      ),
+      section(
+        'words',
+        'Time and place words, questions',
+        p('The words that point to the moment of speaking move to the narrator’s point of view.'),
+        table(
+          'Time and place words in reported speech.',
+          ['Direct speech', 'Reported speech'],
+          [
+            ['hier', 'la veille'],
+            ['demain', 'le lendemain'],
+            ['maintenant', 'alors'],
+            ['ici', 'là'],
+          ],
+        ),
+        compare(
+          {
+            title: 'Direct',
+            question: 'Original words',
+            example: 'Il m’a demandé : « Tu viens ? »',
+          },
+          {
+            title: 'Reported',
+            question: 'Yes/no question with si',
+            example: 'Il m’a demandé si je venais.',
+          },
+        ),
+      ),
+      section(
+        'verbs',
+        'Choosing the verb of saying',
+        p(
+          'A neutral **dire** can be replaced by a verb that shows attitude: **affirmer** (to claim), **avouer** (to admit), **répliquer** (to retort), **objecter** (to object), **souligner** (to stress), **prétendre** (to claim without proof) or **insinuer** (to hint).',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il a dit qu’il viendra demain.  ✓ Il a dit qu’il viendrait le lendemain.',
+          '✗ Il m’a demandé que je venais.  ✓ Il m’a demandé si je venais.',
+        ),
+      ),
+    ],
+    related: ['fr-c21-subjunctive', 'fr-c21-narrative-tenses'],
+    sources: [S.indirectSpeech, S.concordance],
+  },
 ];

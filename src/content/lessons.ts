@@ -1318,6 +1318,24 @@ export const LESSONS = {
       'Quand bien même vous insisteriez, je refuserais.',
     ],
   },
+  'fr-c21-subjunctive': {
+    title: 'The subjunctive',
+    rule: 'The subjunctive follows will, necessity, doubt, emotion and possibility: il faut que, exiger que, douter que, regretter que, il se peut que. Facts and certainty take the indicative: je pense que, il est certain que. Irregular: être → sois, avoir → aie, aller → aille, faire → fasse, savoir → sache.',
+    examples: [
+      'Il faut que tu sois patient.',
+      'Je doute qu’il dise la vérité.',
+      'Il est certain qu’elle a raison.',
+    ],
+  },
+  'fr-c21-reported-speech': {
+    title: 'Reported speech in the past',
+    rule: 'After a past verb of saying, tenses move back: présent → imparfait, passé composé → plus-que-parfait, futur → conditionnel. Time words change: hier → la veille, demain → le lendemain. A yes/no question uses si. A general truth keeps its tense.',
+    examples: [
+      'Il a dit qu’il viendrait le lendemain.',
+      'Elle a dit qu’elle avait fini.',
+      'Il m’a demandé si je venais.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',

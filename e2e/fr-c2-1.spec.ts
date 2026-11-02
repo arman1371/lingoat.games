@@ -80,6 +80,10 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (verb forms in conditions)', 'fr-c2-1-concession-gap-hypothesis'],
   ['sentence builder (concession)', 'fr-c2-1-concession-sentences'],
   ['quiz (concession challenge)', 'fr-c2-1-concession-challenge'],
+  ['sort it (subjunctive or indicative)', 'fr-c2-1-subjonctif-sort-mood'],
+  ['conjugation (present subjunctive)', 'fr-c2-1-subjonctif-conj-subjunctive'],
+  ['gap fill (reported speech)', 'fr-c2-1-subjonctif-gap-reported'],
+  ['quiz (subjunctive challenge)', 'fr-c2-1-subjonctif-challenge'],
 ];
 
 test.describe('French C2.1 – playing the games', () => {

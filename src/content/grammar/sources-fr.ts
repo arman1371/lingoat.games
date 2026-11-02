@@ -60,5 +60,7 @@ export const FR_SOURCES = {
   auCasOu: wiktionary('au_cas_où', 'au cas où'),
   quoique: wiktionary('quoique', 'quoique'),
   subjunctive: wp('Subjonctif_en_français', 'Subjonctif en français'),
+  concordance: wp('Concordance_des_temps', 'Concordance des temps'),
+  indirectSpeech: wp('Discours_indirect', 'Discours indirect'),
   deSorteQue: wiktionary('de_sorte_que', 'de sorte que'),
 } as const satisfies Record<string, Source>;
