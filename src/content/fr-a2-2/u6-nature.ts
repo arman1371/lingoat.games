@@ -4,10 +4,10 @@ import { gap, mc, npc, unitFr, you, type UnitContent } from './helpers';
 const U = 'fr-a2-2-nature';
 
 const landscape = vocabList(U, 'Landscapes and places', [
-  ['un sentier', 'a path, a trail', '🥾'],
+  ['un ruisseau', 'a stream', '🥾'],
   ['une colline', 'a hill', '⛰️'],
   ['une falaise', 'a cliff', '🪨'],
-  ['un lac', 'a lake', '🏞️'],
+  ['un étang', 'a pond', '🏞️'],
   ['une rivière', 'a river', '🌊'],
   ['une vallée', 'a valley', '🌄'],
   ['un sommet', 'a summit', '🏔️'],
@@ -39,7 +39,7 @@ const outdoors = vocabList(U, 'Outdoors, fear and protest', [
   ['une tente', 'a tent', '⛺'],
   ['un sac à dos', 'a backpack', '🎒'],
   ['une boussole', 'a compass', '🧭'],
-  ['un feu de camp', 'a campfire', '🔥'],
+  ['un réchaud', 'a camping stove', '🔥'],
   ['une pétition', 'a petition', '📝'],
   ['protéger', 'to protect', '🛡️'],
   ['J’ai peur des serpents.', 'I am afraid of snakes.', '🐍'],
@@ -54,7 +54,7 @@ const vocab = [...landscape, ...wildlife, ...outdoors];
 
 const meaningQuiz = byDe(
   vocab,
-  'un sentier',
+  'un ruisseau',
   'une falaise',
   'une vallée',
   'une prairie',
@@ -105,7 +105,7 @@ export const nature: UnitContent = {
       'flashcards',
       {
         title: 'Landscapes and places',
-        description: 'Trails, lakes, summits and parks.',
+        description: 'Streams, ponds, summits and parks.',
         tags: ['vocabulary', 'environment'],
         difficulty: 1,
         estMinutes: 3,
@@ -182,12 +182,12 @@ export const nature: UnitContent = {
       {
         items: [
           {
-            id: 'sp-sentier',
+            id: 'sp-ruisseau',
             mode: 'unscramble',
-            answer: 'sentier',
-            hint: 'trail',
+            answer: 'ruisseau',
+            hint: 'stream',
             emoji: '🥾',
-            speak: 'un sentier',
+            speak: 'un ruisseau',
           },
           {
             id: 'sp-renard',
