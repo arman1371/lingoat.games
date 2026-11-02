@@ -23,7 +23,11 @@ import type { UnitContent } from './types';
 const U = 'fr-c1-2-francophonie';
 
 const vocab = vocabList(U, 'Francophonie et diversité du français', [
-  ['la Francophonie', 'the French-speaking world', '🌐'],
+  [
+    'l’Organisation internationale de la Francophonie',
+    'the international organisation of French-speaking countries',
+    '🌐',
+  ],
   ['le francophone', 'French speaker', '🗣️'],
   ['la langue officielle', 'official language', '🏛️'],
   ['la langue véhiculaire', 'lingua franca', '🔗'],
@@ -31,8 +35,8 @@ const vocab = vocabList(U, 'Francophonie et diversité du français', [
   ['le Maghreb', 'the Maghreb', '🐪'],
   ['les Antilles', 'the West Indies', '🏝️'],
   ['la Suisse romande', 'French-speaking Switzerland', '🏔️'],
-  ['la diaspora', 'diaspora', '🧭'],
-  ['le rayonnement', 'international influence, reach', '✨'],
+  ['la communauté francophone', 'French-speaking community', '🧑‍🤝‍🧑'],
+  ['l’influence culturelle', 'cultural influence', '🎭'],
   ['la coopération', 'cooperation', '🤝'],
   ['la diversité linguistique', 'linguistic diversity', '🔠'],
   ['le régionalisme', 'regional expression', '📍'],
@@ -47,7 +51,7 @@ const vocab = vocabList(U, 'Francophonie et diversité du français', [
   ['l’emprunt', 'loanword', '📥'],
   ['l’anglicisme', 'anglicism', '🇬🇧'],
   ['le néologisme', 'new word', '🆕'],
-  ['le verlan', 'verlan (backslang)', '🔄'],
+  ['l’argot', 'slang', '🗣️'],
   ['la féminisation des noms de métier', 'feminisation of job titles', '👩‍🔬'],
   ['la norme', 'standard, norm', '📏'],
   ['l’oralité', 'oral tradition, orality', '🎙️'],
@@ -56,7 +60,7 @@ const vocab = vocabList(U, 'Francophonie et diversité du français', [
   ['la littérature-monde', 'world literature in French', '📚'],
   ['le patrimoine linguistique', 'linguistic heritage', '🏺'],
   ['le multilinguisme', 'multilingualism', '🗺️'],
-  ['transmettre', 'to pass on', '🎁'],
+  ['propager', 'to spread (a language, an idea)', '📡'],
 ]);
 
 export const francophonie: UnitContent = {

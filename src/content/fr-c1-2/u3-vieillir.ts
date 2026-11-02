@@ -18,8 +18,6 @@ import type { UnitContent } from './types';
 const U = 'fr-c1-2-vieillir';
 
 const vocab = vocabList(U, 'Vieillesse et retraite', [
-  ['le vieillissement', 'ageing (of a population)', '⏳'],
-  ['le troisième âge', 'old age, senior citizens', '👴'],
   ['la personne âgée', 'elderly person', '👵'],
   ['l’âge de la retraite', 'retirement age', '🎂'],
   ['le retraité', 'retired person', '🧑‍🦳'],
@@ -29,11 +27,11 @@ const vocab = vocabList(U, 'Vieillesse et retraite', [
   ['la maison de retraite', 'retirement home', '🏥'],
   ['l’EHPAD', 'nursing home (for dependent elderly people)', '🏨'],
   ['le maintien à domicile', 'care at home', '🏠'],
-  ['l’aidant', 'family carer', '🤲'],
-  ['l’autonomie', 'independence, self-sufficiency', '🚶'],
+  ['l’aide à domicile', 'home help', '🏠'],
+  ['la perte d’autonomie', 'loss of independence', '🪑'],
   ['l’isolement', 'isolation', '🏝️'],
   ['la solitude', 'loneliness', '🪑'],
-  ['le lien intergénérationnel', 'bond between generations', '🔄'],
+  ['la cohabitation intergénérationnelle', 'living together across generations', '🏘️'],
   ['le papy-boom', 'retirement of the baby-boom generation', '📈'],
   ['l’espérance de vie', 'life expectancy', '📊'],
   ['la longévité', 'longevity', '♾️'],
@@ -43,14 +41,13 @@ const vocab = vocabList(U, 'Vieillesse et retraite', [
   ['avoir un coup de vieux', 'to suddenly look much older', '😮‍💨'],
   ['la ride', 'wrinkle', '〰️'],
   ['les cheveux blancs', 'grey hair', '🤍'],
-  ['la mémoire', 'memory', '🧠'],
   ['l’oubli', 'forgetfulness, lapse of memory', '🫥'],
   ['la maladie d’Alzheimer', 'Alzheimer’s disease', '🌫️'],
   ['l’arthrose', 'osteoarthritis', '🦴'],
   ['la canne', 'walking stick', '🦯'],
   ['le déambulateur', 'walking frame', '🛒'],
   ['la sagesse', 'wisdom', '🦉'],
-  ['léguer', 'to bequeath, to hand down', '🎁'],
+  ['passer le flambeau', 'to pass the torch', '🔥'],
   ['l’âgisme', 'ageism', '🚷'],
 ]);
 
