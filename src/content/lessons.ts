@@ -1444,6 +1444,24 @@ export const LESSONS = {
       'Les accidents résultent de la fatigue.',
     ],
   },
+  'fr-passe-simple': {
+    title: 'The passé simple (recognition)',
+    rule: 'The passé simple is the past tense of written narrative; it tells single events in sequence while the imparfait describes the background. Third persons: -er verbs end in -a / -èrent (il entra), -ir and many -re verbs in -it / -irent (il finit), many irregular verbs in -ut / -urent (il eut, il dut) and venir in -int / -inrent (il vint). In speech the passé composé replaces it.',
+    examples: [
+      'Il ouvrit la porte et entra.',
+      'Un étranger vint au village.',
+      'Il fit un pas, puis s’arrêta.',
+    ],
+  },
+  'fr-passe-anterieur': {
+    title: 'The passé antérieur (recognition)',
+    rule: 'Avoir or être in the passé simple plus the past participle. It marks an event just before another one told in the passé simple, after quand, lorsque, dès que, aussitôt que, après que. In speech it is replaced by the passé composé (a eu fini) or the plus-que-parfait.',
+    examples: [
+      'Quand il eut fini son récit, personne ne dit un mot.',
+      'Dès qu’elle fut arrivée, la pluie commença.',
+      'Après qu’ils eurent mangé, ils sortirent.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

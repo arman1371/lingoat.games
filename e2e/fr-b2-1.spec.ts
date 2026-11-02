@@ -119,6 +119,14 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue', 'fr-b2-1-cause-dialogues'],
   ['blitz', 'fr-b2-1-cause-blitz'],
   ['quiz', 'fr-b2-1-cause-challenge'],
+  ['gap fill (passé simple)', 'fr-b2-1-recit-gap-simple'],
+  ['gap fill (passé antérieur)', 'fr-b2-1-recit-gap-anterior'],
+  ['sort it (which tense)', 'fr-b2-1-recit-sort-tense'],
+  ['conjugation (passé simple)', 'fr-b2-1-recit-conj-simple'],
+  ['sentence builder', 'fr-b2-1-recit-sentences'],
+  ['dialogue', 'fr-b2-1-recit-dialogues'],
+  ['blitz', 'fr-b2-1-recit-blitz'],
+  ['quiz', 'fr-b2-1-recit-challenge'],
 ];
 
 test.describe('French B2.1 – playing the games', () => {

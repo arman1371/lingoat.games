@@ -456,6 +456,9 @@ export const TAGS = {
   'cause-effect': { label: 'Cause & effect', group: 'topic', emoji: '⛓️' },
   'fr-consequence': { label: 'donc, si bien que, tellement … que', group: 'grammar', emoji: '🌊' },
   'fr-cause-verbs': { label: 'provoquer, être dû à, résulter de', group: 'grammar', emoji: '🔗' },
+  'reading-stories': { label: 'Reading stories', group: 'topic', emoji: '📖' },
+  'fr-passe-simple': { label: 'The passé simple', group: 'grammar', emoji: '📜' },
+  'fr-passe-anterieur': { label: 'The passé antérieur', group: 'grammar', emoji: '⏪' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

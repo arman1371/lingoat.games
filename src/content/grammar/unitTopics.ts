@@ -594,4 +594,8 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-consequence', note: 'donc, si bien que, tellement … que' },
     { topic: 'fr-cause-verbs', note: 'provoquer, être dû à, résulter de' },
   ],
+  'fr-b2-1-recit': [
+    { topic: 'fr-passe-simple', note: 'recognising it in novels' },
+    { topic: 'fr-passe-anterieur', note: 'quand il eut fini' },
+  ],
 };
