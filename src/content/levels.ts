@@ -3,9 +3,6 @@ import type { LevelMeta } from './schema';
 
 /** French is on its way: A1.1 is the pilot, the other CEFR half-levels are listed without content. */
 const FRENCH_COMING_SOON: LevelMeta[] = [
-  ['b1-1', 'B1.1', 'Threshold, first half'],
-  ['b1-2', 'B1.2', 'Threshold, second half'],
-  ['b2-1', 'B2.1', 'Vantage, first half'],
   ['c1-1', 'C1.1', 'Effective proficiency, first half'],
   ['c1-2', 'C1.2', 'Effective proficiency, second half'],
   ['c2-2', 'C2.2', 'Mastery, second half'],
@@ -79,6 +76,33 @@ const FRENCH_LEVELS: LevelMeta[] = (
         'Press and disinformation, health, solidarity, justice, culture, science, economy, history, cities, society, climate and debate',
       status: 'available',
       load: () => import('./fr-b2-2'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-b2-1',
+      title: 'B2.1',
+      subtitle:
+        'Identities, life stories and health, then doubt and feeling with the subjunctive, migration, cause and consequence, narrative past, cities and housing',
+      status: 'available',
+      load: () => import('./fr-b2-1'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-b1-1',
+      title: 'B1.1',
+      subtitle:
+        'Living together, memories, work, consumption, the French-speaking world, the media, time, studies, critical thinking and feelings',
+      status: 'available',
+      load: () => import('./fr-b1-1'),
+    },
+    {
+      language: 'fr',
+      id: 'fr-b1-2',
+      title: 'B1.2',
+      subtitle:
+        'Travel, hypotheses and regrets, the environment, city life, reported speech, studies, sport and culture',
+      status: 'available',
+      load: () => import('./fr-b1-2'),
     },
     {
       language: 'fr',
