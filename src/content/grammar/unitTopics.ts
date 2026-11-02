@@ -579,4 +579,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'fr-c1-2-solidarite': [{ topic: 'fr-c12-modalisation' }, { topic: 'fr-c12-subjonctif-present' }],
   'fr-c1-2-sport': [{ topic: 'fr-c12-but' }, { topic: 'fr-c12-relatifs-composes' }],
   'fr-c1-2-ecologie': [{ topic: 'fr-c12-futur-anterieur' }, { topic: 'fr-c12-cause-consequence' }],
+  'fr-c1-2-histoire': [{ topic: 'fr-c12-concordance' }, { topic: 'fr-c12-marqueurs-temporels' }],
 };

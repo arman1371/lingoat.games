@@ -1196,6 +1196,24 @@ export const LESSONS = {
       'Il est tellement fatigué qu’il s’endort.',
     ],
   },
+  'fr-c12-concordance': {
+    title: 'Concordance des temps',
+    rule: 'After a reporting verb in the past, the reported clause shifts back: present → imparfait, passé composé → plus-que-parfait, futur → conditionnel. With a reporting verb in the present, nothing shifts. Time words change too: demain → le lendemain, hier → la veille.',
+    examples: [
+      'Il a dit qu’il habitait à Lyon.',
+      'Elle a expliqué qu’elle avait visité le musée.',
+      'Il a promis qu’il viendrait le lendemain.',
+    ],
+  },
+  'fr-c12-marqueurs-temporels': {
+    title: 'Time markers',
+    rule: 'Depuis: start of something that continues. Pendant: a finished duration. Il y a: a time ago, counted from now. Dans: a time ahead, counted from now. En: year, month, season, or the time needed to do something. Dès and à partir de: starting point. Jusqu’à: end point.',
+    examples: [
+      'Ils vivent ici depuis 1990.',
+      'Napoléon est mort il y a deux siècles.',
+      'Le musée ouvrira dans trois mois.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',

@@ -679,4 +679,107 @@ export const FRC12_TOPICS_B: GrammarTopic[] = [
     related: ['fr-c12-futur-anterieur'],
     sources: [S.proposition],
   },
+  {
+    id: 'fr-c12-concordance',
+    title: 'Concordance des temps',
+    tagline: 'Report what was said, in the right tense',
+    level: LEVEL,
+    summary:
+      'When the verb of saying is in the past, the reported verb moves one step back in time. When it is in the present, nothing changes.',
+    sections: [
+      section(
+        'shift',
+        'The shift',
+        table(
+          'Direct speech and reported speech after a past verb.',
+          ['Direct speech', 'Reported speech', 'Example'],
+          [
+            ['présent', 'imparfait', 'Il a dit qu’il habitait à Lyon.'],
+            ['passé composé', 'plus-que-parfait', 'Il a dit qu’il avait visité le musée.'],
+            ['futur simple', 'conditionnel présent', 'Il a dit qu’il viendrait.'],
+            ['futur antérieur', 'conditionnel passé', 'Il a dit qu’il aurait fini.'],
+          ],
+        ),
+        examples(
+          ['Il dit qu’il viendra.', 'He says he will come. (present reporting verb: no shift)'],
+          ['Il a dit qu’il viendrait.', 'He said he would come.'],
+        ),
+      ),
+      section(
+        'time',
+        'Time words change too',
+        table(
+          'Time expressions in reported speech.',
+          ['Direct', 'Reported'],
+          [
+            ['aujourd’hui', 'ce jour-là'],
+            ['hier', 'la veille'],
+            ['demain', 'le lendemain'],
+            ['maintenant', 'à ce moment-là'],
+            ['dans trois jours', 'trois jours plus tard'],
+            ['il y a trois jours', 'trois jours avant / plus tôt'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elle a dit qu’elle viendra demain.  ✓ Elle a dit qu’elle viendrait le lendemain.',
+          '✗ Il a dit qu’il a visité le musée.  ✓ Il a dit qu’il avait visité le musée.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-recit-passe', 'fr-c12-marqueurs-temporels'],
+    sources: [S.concordance, S.plusQueParfait, S.conditionnel],
+  },
+  {
+    id: 'fr-c12-marqueurs-temporels',
+    title: 'Time markers',
+    tagline: 'depuis, pendant, il y a, dans, en, dès',
+    level: LEVEL,
+    summary:
+      'Choose the time marker by the question it answers: since when, for how long, how long ago, in how long, how fast, from when, until when.',
+    sections: [
+      section(
+        'markers',
+        'Which one?',
+        table(
+          'Common time markers.',
+          ['Marker', 'Use', 'Example'],
+          [
+            ['depuis', 'start of a state that continues', 'Ils vivent ici depuis 1990.'],
+            ['pendant', 'a duration that is over', 'La guerre a duré pendant six ans.'],
+            ['il y a', 'how long ago', 'Napoléon est mort il y a deux siècles.'],
+            ['dans', 'how long from now', 'Le musée ouvre dans trois mois.'],
+            ['en', 'year, month, or time needed', 'Il a bâti le pont en deux ans.'],
+            ['dès / à partir de', 'starting point', 'Dès 1789, le peuple se soulève.'],
+            ['jusqu’à', 'end point', 'Jusqu’en 1962, l’Algérie était française.'],
+            ['au cours de / lors de', 'during an event', 'Lors de la bataille, il fut blessé.'],
+          ],
+        ),
+        examples(
+          [
+            'Elle étudie l’histoire depuis dix ans.',
+            'She has been studying history for ten years.',
+          ],
+          [
+            'Elle a étudié l’histoire pendant dix ans.',
+            'She studied history for ten years. (it is over)',
+          ],
+        ),
+      ),
+      section(
+        'traps',
+        'Common traps',
+        p(
+          '**Depuis** goes with a present or imparfait verb for a state that continues; **pendant** goes with a past tense for a completed period. **Il y a** looks back and **dans** looks ahead, both counted from now. **En** answers “how long did it take?”, **dans** answers “when will it start?”.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ J’habite ici pendant dix ans.  ✓ J’habite ici depuis dix ans.',
+          '✗ Il est mort dans deux siècles.  ✓ Il est mort il y a deux siècles.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-concordance'],
+    sources: [S.imparfait, S.proposition],
+  },
 ];
