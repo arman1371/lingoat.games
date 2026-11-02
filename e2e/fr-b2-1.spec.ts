@@ -98,6 +98,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue', 'fr-b2-1-sentiments-dialogues'],
   ['blitz', 'fr-b2-1-sentiments-blitz'],
   ['quiz', 'fr-b2-1-sentiments-challenge'],
+  ['gap fill (cause conjunctions)', 'fr-b2-1-migrations-gap-conj'],
+  ['gap fill (cause prepositions)', 'fr-b2-1-migrations-gap-prep'],
+  ['sort it (conjunction or preposition)', 'fr-b2-1-migrations-sort-kind'],
+  ['sentence builder', 'fr-b2-1-migrations-sentences'],
+  ['dialogue', 'fr-b2-1-migrations-dialogues'],
+  ['blitz', 'fr-b2-1-migrations-blitz'],
+  ['quiz', 'fr-b2-1-migrations-challenge'],
 ];
 
 test.describe('French B2.1 – playing the games', () => {

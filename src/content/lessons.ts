@@ -1399,6 +1399,24 @@ export const LESSONS = {
       'Bien qu’il ait plu, le sol est sec.',
     ],
   },
+  'fr-cause-conjunctions': {
+    title: 'Giving a reason: conjunctions',
+    rule: 'Parce que gives a new reason (and answers pourquoi ?), puisque a reason both people know, comme starts a sentence, car follows a comma and never begins a sentence; étant donné que and du fait que are formal; d’autant que adds a further reason. All take the indicative.',
+    examples: [
+      'Elle est partie parce qu’elle ne trouvait pas de travail.',
+      'Puisque tu connais la ville, guide-nous.',
+      'Comme il pleuvait, nous sommes restés.',
+    ],
+  },
+  'fr-cause-prepositions': {
+    title: 'Giving a reason: prepositions',
+    rule: 'With a noun use à cause de (negative or neutral), grâce à (positive), en raison de (formal), faute de (for lack of); à force de takes an infinitive (by dint of). Contract with the article: à cause du, grâce aux, en raison des.',
+    examples: [
+      'Ils ont fui à cause de la guerre.',
+      'Grâce à une association, il a obtenu un visa.',
+      'Faute de temps, il n’a pas fini.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

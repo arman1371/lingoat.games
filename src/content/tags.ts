@@ -440,6 +440,17 @@ export const TAGS = {
     emoji: '↔️',
   },
   'fr-subjonctif-passe': { label: 'The past subjunctive', group: 'grammar', emoji: '⏮️' },
+  migration: { label: 'Migration', group: 'topic', emoji: '🧳' },
+  'fr-cause-conjunctions': {
+    label: 'parce que, puisque, comme, car',
+    group: 'grammar',
+    emoji: '🧱',
+  },
+  'fr-cause-prepositions': {
+    label: 'à cause de, grâce à, faute de',
+    group: 'grammar',
+    emoji: '🏷️',
+  },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

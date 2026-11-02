@@ -585,4 +585,8 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-subjunctive-or-infinitive', note: 'one subject or two' },
     { topic: 'fr-subjonctif-passe', note: 'avoir / être in the subjunctive' },
   ],
+  'fr-b2-1-migrations': [
+    { topic: 'fr-cause-conjunctions', note: 'parce que, puisque, comme, car' },
+    { topic: 'fr-cause-prepositions', note: 'à cause de, grâce à, faute de' },
+  ],
 };
