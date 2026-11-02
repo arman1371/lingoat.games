@@ -20,11 +20,11 @@ const U = 'fr-b1-1-travail';
 
 const world = vocabList(U, 'The professional world', [
   ['le salarié', 'employee', '🧑‍💼'],
-  ['l’employeur', 'employer', '🏢'],
+  ['l’employé', 'employee', '🧑‍💼'],
   ['le CDI', 'permanent contract', '📃'],
   ['le CDD', 'fixed-term contract', '⏳'],
-  ['le télétravail', 'working from home', '🏠'],
-  ['le chômage', 'unemployment', '📉'],
+  ['l’intérim', 'temp work', '⏳'],
+  ['le plan social', 'redundancy plan', '📉'],
   ['le licenciement', 'dismissal, redundancy', '📦'],
   ['la démission', 'resignation', '🚪'],
   ['les horaires flexibles', 'flexible hours', '🕐'],
@@ -159,7 +159,7 @@ export const travail: UnitContent = {
           vocab,
           'le CDI',
           'le CDD',
-          'le chômage',
+          'le plan social',
           'le licenciement',
           'la démission',
           'encadrer',
@@ -184,8 +184,8 @@ export const travail: UnitContent = {
         byDe(
           vocab,
           'le salarié',
-          'l’employeur',
-          'le télétravail',
+          'l’employé',
+          'l’intérim',
           'les horaires flexibles',
           'l’intérimaire',
           'gérer',
@@ -553,7 +553,7 @@ export const travail: UnitContent = {
             answer: 'chômage',
             hint: 'unemployment',
             emoji: '📉',
-            speak: 'le chômage',
+            speak: 'le plan social',
           },
           {
             id: 'sp-salarie',
@@ -569,7 +569,7 @@ export const travail: UnitContent = {
             answer: 'télétravail',
             hint: 'working from home',
             emoji: '🏠',
-            speak: 'le télétravail',
+            speak: 'l’intérim',
           },
           dictation(
             'sp-epanouissement',

@@ -4,7 +4,7 @@ French A2.2 is the second half of CEFR A2 (Waystage), the counterpart of German 
 been reviewed by a native speaker**.
 
 Level id `fr-a2-2`; unit and activity ids start with `fr-a2-2-`; content lives in `src/content/fr-a2-2/`. The level is
-built unit by unit, one pull request per unit, like French A1.1.
+built in two steps: level plumbing and unit 1 first (PR #103), then units 2 to 6 together in one pull request.
 
 ## Sources (what was actually read)
 
@@ -43,5 +43,22 @@ levels that come before A2.2 (A1.1, A1.2, A2.1, as soon as they are in the repos
 ## Build status
 
 1. Level plumbing (catalogue entry, content and playability tests, e2e spec, accessibility pages) and unit 1 `sante`
-   (16 games, three grammar lessons): **done**.
-2. Units 2 to 6: open.
+   (16 games, three grammar lessons): **done** (PR #103).
+2. Units 2 to 6 (`medias`, `consommer`, `voyage`, `parcours`, `nature`): **done**, in one pull request. Every unit has
+   13 to 16 games on 9 or 10 engines, one flashcard deck per vocabulary field, an easy first game and a final
+   "Unit challenge". Each grammar point has a tag, a mini lesson, a full lesson and a unit link (16 new grammar points).
+
+## Grammar added per unit
+
+| Unit        | Tags (all prefixed `fr-a22-`)                                       |
+| ----------- | ------------------------------------------------------------------- |
+| `medias`    | `cause-consequence`, `subjunctive`, `pronoun-order`, `adverbs-ment` |
+| `consommer` | `conditional`, `gerund`, `noun-complements`                         |
+| `voyage`    | `narration`, `participle-agreement`, `demonstrative-pronouns`       |
+| `parcours`  | `cleft`, `reported-speech`, `pronoun-y` (y and en)                  |
+| `nature`    | `imperative-pronouns`, `purpose`, `passive`                         |
+
+The Édito plan listed the "imperative with pronouns" in unit 12; unit 2 already teaches the pronoun order, so unit 6
+focuses on y, en and reflexive pronouns in commands. The units were written from the grammar and vocabulary fields of
+the LMU table of contents, not from the Édito book itself (unreadable). The French has not been checked by a native
+speaker.

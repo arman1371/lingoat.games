@@ -4,7 +4,7 @@ import { FR22_SOURCES as S } from './sources-fr-a2-2';
 
 const LEVEL = 'fr-a2-2';
 
-/** French A2.2, unit 1 (À votre santé !): object pronouns, the superlative, interrogative pronouns. */
+/** French A2.2: one block of topics per unit, in unit order. */
 export const FR22_TOPICS: GrammarTopic[] = [
   {
     id: 'fr-object-pronouns',
@@ -201,5 +201,862 @@ export const FR22_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-questions', 'fr-object-pronouns'],
     sources: [S.interrogativePronoun],
+  },
+
+  // ---- Unit 2 (Dans les médias) ----
+  {
+    id: 'fr-a22-cause-consequence',
+    title: 'Cause and consequence: parce que, donc',
+    tagline: 'How do I give a reason, and say what follows?',
+    level: LEVEL,
+    summary:
+      'Parce que, car, grâce à and à cause de give a reason. Donc, alors and du coup give the result. Grâce à and à cause de are followed by a noun, parce que by a full clause.',
+    sections: [
+      section(
+        'cause',
+        'Giving a reason',
+        p(
+          '**Parce que** answers the question *pourquoi ?* and is followed by a clause: **je lis la presse en ligne parce que c’est gratuit**. **Car** means the same but is written style and never starts an answer. **Puisque** gives a reason the listener already knows.',
+        ),
+        table(
+          'Ways to give a cause.',
+          ['Word', 'followed by', 'example'],
+          [
+            ['parce que / car', 'a clause', 'Je regarde le journal parce que j’aime les infos.'],
+            ['grâce à', 'a noun (good cause)', 'Grâce à cette appli, je suis informé.'],
+            ['à cause de', 'a noun (bad cause)', 'À cause du bruit, je ne peux pas écouter.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Parce que la grève, le train est en retard.  ✓ À cause de la grève, le train est en retard.',
+          '✗ Pourquoi ? Car j’aime ça.  ✓ Pourquoi ? Parce que j’aime ça.',
+        ),
+      ),
+      section(
+        'consequence',
+        'Saying what follows',
+        p(
+          '**Donc** (so), **alors** (then, so) and **du coup** (as a result, spoken) introduce the result. They stand after the first idea, not at the beginning of the whole sentence.',
+        ),
+        examples(
+          [
+            'Il pleut, donc je reste devant la télé.',
+            'It is raining, so I stay in front of the TV.',
+          ],
+          [
+            'Je n’ai plus de batterie, alors je ne peux pas regarder la vidéo.',
+            'My battery is dead, so I cannot watch the video.',
+          ],
+        ),
+      ),
+    ],
+    related: ['fr-sequence', 'fr-questions'],
+    sources: [S.subordinatingConjunction, S.graceA, S.donc, S.aCauseDe],
+  },
+  {
+    id: 'fr-a22-subjunctive',
+    title: 'The subjunctive after il faut que',
+    tagline: 'What happens to the verb after il faut que?',
+    level: LEVEL,
+    summary:
+      'After il faut que, vouloir que and bien que the verb is in the subjunctive. Regular verbs take the ils stem plus -e, -es, -e, -ions, -iez, -ent; être, avoir, aller and faire are irregular.',
+    sections: [
+      section(
+        'forms',
+        'Forming the subjunctive',
+        p(
+          'The subjunctive follows **que**. Take the **ils** form of the present, remove **-ent**, and add the endings **-e, -es, -e, -ions, -iez, -ent**. The nous and vous forms usually look like the imparfait.',
+        ),
+        table(
+          'Regular subjunctive endings.',
+          ['Person', 'parler', 'finir', 'lire'],
+          [
+            ['que je', 'parle', 'finisse', 'lise'],
+            ['que tu', 'parles', 'finisses', 'lises'],
+            ['qu’il / elle', 'parle', 'finisse', 'lise'],
+            ['que nous', 'parlions', 'finissions', 'lisions'],
+            ['que vous', 'parliez', 'finissiez', 'lisiez'],
+            ['qu’ils / elles', 'parlent', 'finissent', 'lisent'],
+          ],
+        ),
+        table(
+          'Irregular verbs.',
+          ['Person', 'être', 'avoir', 'aller', 'faire'],
+          [
+            ['que je', 'sois', 'aie', 'aille', 'fasse'],
+            ['que tu', 'sois', 'aies', 'ailles', 'fasses'],
+            ['qu’il / elle', 'soit', 'ait', 'aille', 'fasse'],
+            ['que nous', 'soyons', 'ayons', 'allions', 'fassions'],
+            ['que vous', 'soyez', 'ayez', 'alliez', 'fassiez'],
+            ['qu’ils / elles', 'soient', 'aient', 'aillent', 'fassent'],
+          ],
+        ),
+      ),
+      section(
+        'when',
+        'When to use it',
+        p(
+          'Use the subjunctive after **il faut que** (it is necessary that), **vouloir que**, **il vaut mieux que** and **bien que** (although). If the subject does not change, use the infinitive instead: **il faut lire** (in general), **je veux lire**.',
+        ),
+        examples(
+          ['Il faut que je lise cet article.', 'I must read this article.'],
+          ['Je veux que tu regardes ce documentaire.', 'I want you to watch this documentary.'],
+          ['Il faut que nous soyons informés.', 'We have to be informed.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il faut que je vais au cinéma.  ✓ Il faut que j’aille au cinéma.',
+          '✗ Je veux que je lise.  ✓ Je veux lire. (same subject, so an infinitive)',
+        ),
+      ),
+    ],
+    related: ['fr-prendre-vouloir', 'fr-aller'],
+    sources: [S.subjunctive],
+  },
+  {
+    id: 'fr-a22-pronoun-order',
+    title: 'Two object pronouns: je te le donne',
+    tagline: 'What if there are two pronouns before the verb?',
+    level: LEVEL,
+    summary:
+      'Two pronouns stand before the verb in a fixed order: me / te / nous / vous, then le / la / les, then lui / leur, then y, then en. In a positive command the direct pronoun comes first: donne-le-moi.',
+    sections: [
+      section(
+        'order',
+        'The order before the verb',
+        p(
+          'When a direct and an indirect object are both replaced, the pronouns follow a fixed order. With **me, te, nous, vous** the person comes first; with **lui** and **leur** the direct pronoun comes first.',
+        ),
+        table(
+          'Order of the pronouns.',
+          ['1st', '2nd', '3rd', '4th', '5th'],
+          [['me, te, nous, vous', 'le, la, l’, les', 'lui, leur', 'y', 'en']],
+        ),
+        examples(
+          ['Je te le dis.', 'I tell it to you.'],
+          ['Elle me les envoie.', 'She sends them to me.'],
+          ['Je le lui donne.', 'I give it to him.'],
+          ['Il m’en parle.', 'He talks to me about it.'],
+        ),
+      ),
+      section(
+        'imperative',
+        'In commands',
+        p(
+          'In the **positive** imperative the pronouns come after the verb, joined by hyphens, with the direct pronoun first: **donne-le-moi**, **envoyez-la-nous**. Me becomes **moi** at the end. In the **negative** the normal order returns: **ne me le donne pas**.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je lui le donne.  ✓ Je le lui donne.',
+          '✗ Donne-moi-le.  ✓ Donne-le-moi.',
+        ),
+      ),
+    ],
+    related: ['fr-object-pronouns', 'fr-imperative'],
+    sources: [S.personalPronoun],
+  },
+  {
+    id: 'fr-a22-adverbs-ment',
+    title: 'Adverbs in -ment',
+    tagline: 'How do I say how something is done?',
+    level: LEVEL,
+    summary:
+      'Add -ment to the feminine adjective (lente → lentement). After a vowel add it to the masculine (vrai → vraiment). -ant and -ent adjectives give -amment and -emment. Bon gives bien and mauvais gives mal.',
+    sections: [
+      section(
+        'forms',
+        'Forming adverbs',
+        p(
+          'Adverbs of manner say **how** something happens. Most are built from the **adjective**. They never change for gender or number.',
+        ),
+        table(
+          'Rules for -ment.',
+          ['Type', 'adjective', 'adverb'],
+          [
+            ['normal: feminine + -ment', 'lent(e)', 'lentement'],
+            ['ends in a vowel: masculine + -ment', 'vrai', 'vraiment'],
+            ['-ant becomes -amment', 'constant', 'constamment'],
+            ['-ent becomes -emment', 'évident', 'évidemment'],
+            ['irregular', 'bon / mauvais', 'bien / mal'],
+          ],
+        ),
+      ),
+      section(
+        'place',
+        'Where they go',
+        p(
+          'A short adverb stands right after the verb: **il parle lentement**. In the passé composé it often stands between avoir and the participle: **il a bien parlé**. Sentence adverbs such as **heureusement** or **malheureusement** usually start the sentence.',
+        ),
+        examples(
+          ['Heureusement, il y a des sous-titres.', 'Luckily, there are subtitles.'],
+          ['La journaliste répond poliment.', 'The journalist answers politely.'],
+          ['Il a vraiment aimé le film.', 'He really liked the film.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elle parle bonne.  ✓ Elle parle bien.',
+          '✗ évidentement  ✓ évidemment',
+        ),
+      ),
+    ],
+    related: ['fr-adjectives', 'fr-frequency'],
+    sources: [S.adverb],
+  },
+
+  // ---- Unit 3 (Consommer responsable) ----
+  {
+    id: 'fr-a22-conditional',
+    title: 'The present conditional: je voudrais',
+    tagline: 'How do I ask politely, wish for something or give advice?',
+    level: LEVEL,
+    summary:
+      'The conditional is the future stem plus the imparfait endings. Use it for polite requests (je voudrais), wishes, advice (tu devrais) and the result of an imaginary condition.',
+    sections: [
+      section(
+        'forms',
+        'Forming the conditional',
+        p(
+          'Take the stem of the **future** (the infinitive for regular verbs, with the final -e dropped for -re verbs) and add the endings of the **imparfait**: **-ais, -ais, -ait, -ions, -iez, -aient**. Irregular verbs keep their irregular future stem.',
+        ),
+        table(
+          'Common conditional forms.',
+          ['Person', 'aimer', 'vouloir', 'pouvoir', 'être'],
+          [
+            ['je', 'aimerais', 'voudrais', 'pourrais', 'serais'],
+            ['tu', 'aimerais', 'voudrais', 'pourrais', 'serais'],
+            ['il / elle / on', 'aimerait', 'voudrait', 'pourrait', 'serait'],
+            ['nous', 'aimerions', 'voudrions', 'pourrions', 'serions'],
+            ['vous', 'aimeriez', 'voudriez', 'pourriez', 'seriez'],
+            ['ils / elles', 'aimeraient', 'voudraient', 'pourraient', 'seraient'],
+          ],
+        ),
+        p(
+          'Other irregular stems: **avoir → aur-**, **aller → ir-**, **faire → fer-**, **devoir → devr-**, **savoir → saur-**, **venir → viendr-**.',
+        ),
+      ),
+      section(
+        'use',
+        'When to use it',
+        table(
+          'Uses of the conditional.',
+          ['Use', 'example'],
+          [
+            ['polite request', 'Pourriez-vous m’aider ?'],
+            ['wish', 'Je voudrais un renseignement.'],
+            ['advice', 'Tu devrais acheter d’occasion.'],
+            ['imaginary result', 'Si j’avais le temps, je réparerais tout.'],
+          ],
+        ),
+        examples(
+          ['Je voudrais réparer mon vélo.', 'I would like to repair my bike.'],
+          ['Ça serait plus écologique.', 'That would be more ecological.'],
+          [
+            'Si nous jetions moins, nous aurions moins de déchets.',
+            'If we threw away less, we would have less waste.',
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Si j’aurais le temps, je réparerais.  ✓ Si j’avais le temps, je réparerais.',
+          '✗ Je voudrai un renseignement.  ✓ Je voudrais un renseignement.',
+        ),
+        tip(
+          'Je veux or je voudrais?',
+          'Je veux sounds like an order. In shops and offices say je voudrais or pourriez-vous.',
+        ),
+      ),
+    ],
+    related: ['fr-prendre-vouloir', 'fr-futur-proche'],
+    sources: [S.conditional],
+  },
+  {
+    id: 'fr-a22-gerund',
+    title: 'The gerund: en réparant',
+    tagline: 'How do I say how, or while, I do something?',
+    level: LEVEL,
+    summary:
+      'En + the -ant form says how or while: en achetant, en faisant. Only être, avoir and savoir are irregular. The subject is the same as in the main verb.',
+    sections: [
+      section(
+        'forms',
+        'Forming the gerund',
+        p(
+          'Take the **nous** form of the present, remove **-ons**, and add **-ant**. Put **en** in front. The gerund never changes.',
+        ),
+        table(
+          'Gerund forms.',
+          ['Infinitive', 'nous form', 'gerund'],
+          [
+            ['acheter', 'nous achetons', 'en achetant'],
+            ['finir', 'nous finissons', 'en finissant'],
+            ['faire', 'nous faisons', 'en faisant'],
+            ['prendre', 'nous prenons', 'en prenant'],
+            ['être', '(irregular)', 'en étant'],
+            ['avoir', '(irregular)', 'en ayant'],
+            ['savoir', '(irregular)', 'en sachant'],
+          ],
+        ),
+      ),
+      section(
+        'use',
+        'What it expresses',
+        p(
+          'The gerund answers **comment ?** (how) or says that two actions happen **at the same time**. Both actions have the **same subject**.',
+        ),
+        examples(
+          [
+            'On économise de l’argent en achetant d’occasion.',
+            'You save money by buying second-hand.',
+          ],
+          [
+            'Il écoute la radio en réparant la lampe.',
+            'He listens to the radio while repairing the lamp.',
+          ],
+          ['En étant prudent, on évite les erreurs.', 'By being careful, you avoid mistakes.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ en acheter  ✓ en achetant',
+          '✗ J’ai trouvé la solution en cherchent.  ✓ …en cherchant.',
+        ),
+      ),
+    ],
+    related: ['fr-er-verbs', 'fr-ir-verbs'],
+    sources: [S.gerund],
+  },
+  {
+    id: 'fr-a22-noun-complements',
+    title: 'Noun complements: en, à, de',
+    tagline: 'How do I say what an object is made of or used for?',
+    level: LEVEL,
+    summary:
+      'En gives the material (une table en bois), à gives the use (une machine à laver), and de gives the content or the kind (un verre de lait, un sac de sport).',
+    sections: [
+      section(
+        'three',
+        'En, à and de',
+        p(
+          'A **noun complement** is a second noun that tells you more about the first. It is introduced by a small word, usually without an article.',
+        ),
+        table(
+          'Which small word?',
+          ['Word', 'meaning', 'example'],
+          [
+            ['en', 'material', 'une table en bois, un pull en laine'],
+            ['à', 'use, purpose', 'une machine à laver, une tasse à café'],
+            ['de', 'content, kind', 'un verre de lait, un sac de sport'],
+          ],
+        ),
+        compare(
+          {
+            title: 'À + noun',
+            question: 'What is it used for?',
+            example: 'une tasse à café (a cup for coffee)',
+          },
+          {
+            title: 'De + noun',
+            question: 'What is inside it?',
+            example: 'une tasse de café (a cup of coffee)',
+          },
+        ),
+      ),
+      section(
+        'extra',
+        'More examples',
+        examples(
+          ['une boîte à outils', 'a toolbox'],
+          ['une bouteille d’eau', 'a bottle of water'],
+          ['un sac en papier', 'a paper bag'],
+          ['une salle de bains', 'a bathroom'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ une table de bois  ✓ une table en bois',
+          '✗ une brosse pour dents  ✓ une brosse à dents',
+        ),
+      ),
+    ],
+    related: ['fr-articles', 'fr-contractions'],
+    sources: [S.nounComplement],
+  },
+
+  // ---- Unit 4 (Envie d’ailleurs ?) ----
+  {
+    id: 'fr-a22-narration',
+    title: 'Telling a story: imparfait and passé composé',
+    tagline: 'Which past tense do I use in a story?',
+    level: LEVEL,
+    summary:
+      'The imparfait sets the scene (weather, descriptions, habits, an action in progress). The passé composé reports the events that move the story forward.',
+    sections: [
+      section(
+        'forms',
+        'The imparfait',
+        p(
+          'Take the **nous** form of the present, remove **-ons**, and add **-ais, -ais, -ait, -ions, -iez, -aient**. The only irregular stem is **être → ét-**.',
+        ),
+        table(
+          'Imparfait forms.',
+          ['Person', 'visiter', 'prendre', 'être'],
+          [
+            ['je', 'visitais', 'prenais', 'étais'],
+            ['tu', 'visitais', 'prenais', 'étais'],
+            ['il / elle / on', 'visitait', 'prenait', 'était'],
+            ['nous', 'visitions', 'prenions', 'étions'],
+            ['vous', 'visitiez', 'preniez', 'étiez'],
+            ['ils / elles', 'visitaient', 'prenaient', 'étaient'],
+          ],
+        ),
+      ),
+      section(
+        'use',
+        'Setting and events',
+        compare(
+          {
+            title: 'Imparfait',
+            question: 'What was the situation?',
+            example: 'Il faisait beau. Nous étions fatigués.',
+          },
+          {
+            title: 'Passé composé',
+            question: 'What happened?',
+            example: 'Nous sommes arrivés à midi.',
+          },
+        ),
+        examples(
+          ['Il pleuvait quand nous sommes arrivés.', 'It was raining when we arrived.'],
+          ['Je dormais quand le téléphone a sonné.', 'I was sleeping when the phone rang.'],
+          [
+            'Quand j’étais petit, nous allions toujours à la mer.',
+            'When I was small, we always went to the sea.',
+          ],
+        ),
+        tip(
+          'Signal words',
+          'Soudain, tout à coup, ce jour-là and hier introduce an event (passé composé). Toujours, souvent, d’habitude and chaque été go with the imparfait.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Soudain, il pleuvait.  ✓ Soudain, il a plu.',
+          '✗ Il a fait beau et nous étions heureux.  ✓ Il faisait beau et nous étions heureux.',
+        ),
+      ),
+    ],
+    related: ['fr-a21-passe-compose', 'fr-sequence'],
+    sources: [S.imparfait, S.passeCompose],
+  },
+  {
+    id: 'fr-a22-participle-agreement',
+    title: 'Agreement of the past participle',
+    tagline: 'When does the participle take an -e or an -s?',
+    level: LEVEL,
+    summary:
+      'With être the participle agrees with the subject. With avoir it agrees with a direct object that stands before the verb; otherwise it does not change.',
+    sections: [
+      section(
+        'etre',
+        'With être',
+        p(
+          'The participle of verbs conjugated with **être** (and of reflexive verbs) agrees with the **subject** in gender and number.',
+        ),
+        table(
+          'Agreement with être.',
+          ['Subject', 'aller', 'arriver'],
+          [
+            ['il', 'allé', 'arrivé'],
+            ['elle', 'allée', 'arrivée'],
+            ['ils', 'allés', 'arrivés'],
+            ['elles', 'allées', 'arrivées'],
+          ],
+        ),
+      ),
+      section(
+        'avoir',
+        'With avoir',
+        p(
+          'The participle agrees with the **direct object only if it stands before the verb**: in a relative clause with **que**, or as a pronoun (**le, la, l’, les**). If the object follows, nothing changes.',
+        ),
+        examples(
+          ['La valise que j’ai perdue est bleue.', 'The suitcase that I lost is blue.'],
+          ['Marie ? Je l’ai vue à la gare.', 'Marie? I saw her at the station.'],
+          ['Nous avons visité la ville.', 'We visited the town.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elle est allé à Rome.  ✓ Elle est allée à Rome.',
+          '✗ Les photos que j’ai pris.  ✓ Les photos que j’ai prises.',
+        ),
+      ),
+    ],
+    related: ['fr-a21-participles', 'fr-pronominal'],
+    sources: [S.participleAgreement],
+  },
+  {
+    id: 'fr-a22-demonstrative-pronouns',
+    title: 'Celui, celle, ceux, celles',
+    tagline: 'How do I say “this one”, “the one” or “those”?',
+    level: LEVEL,
+    summary:
+      'Celui, celle, ceux and celles replace a noun that was already mentioned. They are followed by -ci or -là, by de + noun, or by qui / que.',
+    sections: [
+      section(
+        'forms',
+        'Forms and endings',
+        table(
+          'Demonstrative pronouns.',
+          ['Gender', 'singular', 'plural'],
+          [
+            ['masculine', 'celui', 'ceux'],
+            ['feminine', 'celle', 'celles'],
+          ],
+        ),
+        p(
+          'They never stand alone. Add **-ci** (near) or **-là** (far), **de + noun** (belonging) or **qui / que** (a relative clause).',
+        ),
+        examples(
+          ['Celle-ci est moins chère que celle-là.', 'This one is cheaper than that one.'],
+          ['Je prends celui de 11 h.', 'I take the 11 o’clock one.'],
+          ['Ceux qui partent tôt doivent réserver.', 'Those who leave early must book.'],
+        ),
+      ),
+      section(
+        'choose',
+        'Choosing the right form',
+        p(
+          'The pronoun has the **gender and number of the noun it replaces**: **la chambre → celle**, **les billets → ceux**. For people in general use **ceux qui…**.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je préfère ce de mon frère.  ✓ Je préfère celui de mon frère.',
+          '✗ Celui-ci chambre est calme.  ✓ Celle-ci est calme. (no noun after the pronoun)',
+        ),
+      ),
+    ],
+    related: ['fr-demonstratives'],
+    sources: [S.demonstrativePronoun],
+  },
+
+  // ---- Unit 5 (De jolis parcours) ----
+  {
+    id: 'fr-a22-cleft',
+    title: 'Emphasis: c’est … qui / que',
+    tagline: 'How do I put the stress on one word?',
+    level: LEVEL,
+    summary:
+      'Put the word you want to stress between c’est and qui or que. Qui replaces a subject, que replaces an object or a complement. Ce qui, ce que and ce dont stress a whole idea.',
+    sections: [
+      section(
+        'cest',
+        'C’est … qui, c’est … que',
+        p(
+          'A **cleft sentence** pulls one word to the front to stress it. After **c’est** and the stressed word, use **qui** if that word is the **subject** of the verb, and **que** if it is the **object** or a **complement** of place, time or cause.',
+        ),
+        table(
+          'Stressing with c’est.',
+          ['Stressed word', 'link', 'example'],
+          [
+            ['subject', 'qui', 'C’est Marie qui a trouvé ce stage.'],
+            ['object', 'que', 'C’est ce métier que je veux faire.'],
+            ['place / time / cause', 'que', 'C’est à Lyon que j’ai fait mes études.'],
+          ],
+        ),
+        p(
+          'With a stress pronoun the verb agrees with it: **c’est moi qui ai écrit la lettre**, **c’est toi qui as gagné**.',
+        ),
+      ),
+      section(
+        'ce',
+        'Ce qui, ce que, ce dont',
+        p(
+          'To stress a whole idea, start with **ce qui** (subject), **ce que** (object) or **ce dont** (verb with de), then **c’est**.',
+        ),
+        examples(
+          ['Ce qui m’intéresse, c’est la médecine.', 'What interests me is medicine.'],
+          [
+            'Ce que je cherche, c’est un emploi à temps partiel.',
+            'What I am looking for is a part-time job.',
+          ],
+          ['Ce dont j’ai besoin, c’est d’un stage.', 'What I need is an internship.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ C’est ce poste qui je veux.  ✓ C’est ce poste que je veux.',
+          '✗ C’est moi qui a écrit.  ✓ C’est moi qui ai écrit.',
+        ),
+      ),
+    ],
+    related: ['fr-pronouns', 'fr-a22-pronoun-order'],
+    sources: [S.cleft],
+  },
+  {
+    id: 'fr-a22-reported-speech',
+    title: 'Reported speech in the present',
+    tagline: 'How do I say what someone said?',
+    level: LEVEL,
+    summary:
+      'With a reporting verb in the present the tense stays the same. Statements take que, yes / no questions take si, commands take de + infinitive. The pronouns change with the speaker.',
+    sections: [
+      section(
+        'types',
+        'Statements, questions and commands',
+        table(
+          'Direct → reported.',
+          ['Type', 'direct speech', 'reported speech'],
+          [
+            ['statement', 'Léa : « Je cherche un stage. »', 'Léa dit qu’elle cherche un stage.'],
+            [
+              'yes / no question',
+              'Elle : « Tu as un diplôme ? »',
+              'Elle me demande si j’ai un diplôme.',
+            ],
+            [
+              'question word',
+              'Il : « Où travaillez-vous ? »',
+              'Il nous demande où nous travaillons.',
+            ],
+            [
+              'what?',
+              'Elle : « Qu’est-ce que tu cherches ? »',
+              'Elle me demande ce que je cherche.',
+            ],
+            ['command', 'Le professeur : « Travaillez ! »', 'Il nous dit de travailler.'],
+          ],
+        ),
+      ),
+      section(
+        'rules',
+        'What changes',
+        p(
+          'The **tense** stays when the reporting verb is in the present. The **pronouns and possessives** follow the speaker (je → il, ton → mon, …). Questions lose the **inversion** and the question mark. Negative commands: **de ne pas + infinitive**.',
+        ),
+        examples(
+          [
+            'Mon père me dit de ne pas partir trop tard.',
+            'My father tells me not to leave too late.',
+          ],
+          [
+            'Ils disent qu’ils ont un entretien demain.',
+            'They say they have an interview tomorrow.',
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elle me demande que j’ai un diplôme.  ✓ Elle me demande si j’ai un diplôme.',
+          '✗ Il demande où travaillez-vous.  ✓ Il demande où nous travaillons.',
+        ),
+      ),
+    ],
+    related: ['fr-questions', 'fr-imperative'],
+    sources: [S.reportedSpeech],
+  },
+  {
+    id: 'fr-a22-pronoun-y',
+    title: 'The pronouns y and en',
+    tagline: 'How do I replace a place or a thing after à or de?',
+    level: LEVEL,
+    summary:
+      'Y replaces à, dans, en or chez + a place or a thing. En replaces de + a place or a thing, or a quantity. Both go before the verb.',
+    sections: [
+      section(
+        'y',
+        'Y: there, about it',
+        p(
+          '**Y** replaces **à / dans / en / chez + a place** (**j’y vais**) or **à + a thing** (**je pense à mon examen → j’y pense**). For a person, use **lui** or **leur** instead.',
+        ),
+        examples(
+          [
+            '— Tu vas à la fac ? — Oui, j’y vais tous les jours.',
+            'Do you go to university? Yes, I go there every day.',
+          ],
+          ['Elle y habite depuis 2020.', 'She has lived there since 2020.'],
+          ['Nous y sommes allés ce matin.', 'We went there this morning.'],
+        ),
+      ),
+      section(
+        'en',
+        'En: from there, about it',
+        p(
+          '**En** replaces **de + a place** (**je reviens de la fac → j’en reviens**) or **de + a thing** (**il parle de son stage → il en parle**), and a quantity.',
+        ),
+        compare(
+          {
+            title: 'Y',
+            question: 'à + place or thing',
+            example: 'Je pense à l’examen. → J’y pense.',
+          },
+          {
+            title: 'En',
+            question: 'de + place or thing',
+            example: 'Je parle de l’examen. → J’en parle.',
+          },
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je lui pense.  ✓ J’y pense. (a thing, not a person)',
+          '✗ J’en vais.  ✓ J’y vais.',
+        ),
+      ),
+    ],
+    related: ['fr-a22-pronoun-order', 'fr-object-pronouns'],
+    sources: [S.yPronoun],
+  },
+
+  // ---- Unit 6 (Soif de nature) ----
+  {
+    id: 'fr-a22-imperative-pronouns',
+    title: 'The imperative with pronouns',
+    tagline: 'Where do the pronouns go in a command?',
+    level: LEVEL,
+    summary:
+      'After a positive command the pronouns follow the verb with hyphens (donne-le-moi, vas-y, prends-en). In a negative command they stay before the verb (ne le touche pas).',
+    sections: [
+      section(
+        'positive',
+        'Positive commands',
+        p(
+          'The pronouns come **after the verb**, joined with **hyphens**. The direct pronoun comes first: **donne-le-moi**. **Me** and **te** become **moi** and **toi** at the end. **Y** and **en** come last: **vas-y**, **prends-en**.',
+        ),
+        table(
+          'Positive commands.',
+          ['Sentence', 'command'],
+          [
+            ['Tu donnes la carte à moi.', 'Donne-la-moi !'],
+            ['Tu y vas.', 'Vas-y !'],
+            ['Tu prends des champignons.', 'Prends-en !'],
+            ['Vous vous levez tôt.', 'Levez-vous tôt !'],
+          ],
+        ),
+        tip(
+          'The s that comes back',
+          '-er verbs lose the s of tu in the imperative (tu vas → va), but it comes back before y and en: vas-y, parles-en.',
+        ),
+      ),
+      section(
+        'negative',
+        'Negative commands',
+        p(
+          'In a **negative** command everything is as usual: **ne**, then the pronouns in their normal order, then the verb, then **pas**.',
+        ),
+        examples(
+          ['Ne le touche pas !', 'Do not touch it!'],
+          ['N’y allez pas !', 'Do not go there!'],
+          ['Ne me le dis pas.', 'Do not tell it to me.'],
+          ['Ne t’inquiète pas.', 'Do not worry.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Donne-moi-le.  ✓ Donne-le-moi.',
+          '✗ Ne prends-en pas.  ✓ N’en prends pas.',
+        ),
+      ),
+    ],
+    related: ['fr-imperative', 'fr-a22-pronoun-order', 'fr-a22-pronoun-y'],
+    sources: [S.imperative, S.personalPronoun],
+  },
+  {
+    id: 'fr-a22-purpose',
+    title: 'Purpose: pour, afin de, pour que',
+    tagline: 'How do I say what something is for?',
+    level: LEVEL,
+    summary:
+      'With the same subject use pour or afin de + infinitive. With a new subject use pour que or afin que + subjunctive.',
+    sections: [
+      section(
+        'same',
+        'Same subject: pour, afin de',
+        p(
+          'If the person who acts is the same in both parts, use **pour** + infinitive. **Afin de** means the same and is a little more formal. For a negative purpose use **pour ne pas** / **afin de ne pas**.',
+        ),
+        examples(
+          ['Nous partons tôt pour éviter la chaleur.', 'We leave early to avoid the heat.'],
+          ['Il met des bottes afin de ne pas glisser.', 'He puts on boots so as not to slip.'],
+        ),
+      ),
+      section(
+        'new',
+        'New subject: pour que, afin que',
+        p(
+          'If the subject changes, use **pour que** or **afin que** and put the verb in the **subjunctive**.',
+        ),
+        table(
+          'Same or new subject?',
+          ['Subject', 'structure', 'example'],
+          [
+            ['same', 'pour / afin de + infinitive', 'Je prends une carte pour trouver le chemin.'],
+            [
+              'different',
+              'pour que / afin que + subjunctive',
+              'Je prends une carte pour que nous ne nous perdions pas.',
+            ],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je pars tôt pour que éviter la chaleur.  ✓ Je pars tôt pour éviter la chaleur.',
+          '✗ Je pars pour que je voie la mer.  ✓ Je pars pour voir la mer. (same subject)',
+        ),
+      ),
+    ],
+    related: ['fr-a22-subjunctive', 'fr-a22-cause-consequence'],
+    sources: [S.afinDe, S.pourQue],
+  },
+  {
+    id: 'fr-a22-passive',
+    title: 'The passive voice',
+    tagline: 'How do I say what is done to something?',
+    level: LEVEL,
+    summary:
+      'The passive is être + past participle, which agrees with the subject. The doer is introduced by par (or de after verbs of state).',
+    sections: [
+      section(
+        'forms',
+        'Forming the passive',
+        p(
+          'The **object** of the active sentence becomes the **subject** of the passive. Use **être** in the same tense as the active verb, then the **past participle**, which agrees with the new subject. The doer follows **par**.',
+        ),
+        table(
+          'Active and passive.',
+          ['Tense', 'active', 'passive'],
+          [
+            ['present', 'L’État protège ce parc.', 'Ce parc est protégé par l’État.'],
+            [
+              'passé composé',
+              'La tempête a abattu les arbres.',
+              'Les arbres ont été abattus par la tempête.',
+            ],
+            [
+              'imparfait',
+              'Un incendie détruisait la forêt.',
+              'La forêt était détruite par un incendie.',
+            ],
+          ],
+        ),
+      ),
+      section(
+        'use',
+        'When to use it',
+        p(
+          'The passive puts the focus on **what happens to something**. The doer can be left out: **le sentier a été fermé**. After verbs of state (entouré, couvert, rempli) the doer is introduced by **de**: **le lac est entouré de montagnes**.',
+        ),
+        examples(
+          [
+            'Cette réserve est visitée chaque année par des milliers de personnes.',
+            'This reserve is visited every year by thousands of people.',
+          ],
+          [
+            'Le sentier a été fermé à cause de la neige.',
+            'The trail was closed because of the snow.',
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ La forêt est détruit.  ✓ La forêt est détruite.',
+          '✗ Les arbres ont abattus.  ✓ Les arbres ont été abattus.',
+        ),
+      ),
+    ],
+    related: ['fr-a21-participles', 'fr-a22-participle-agreement'],
+    sources: [S.passive],
   },
 ];

@@ -19,31 +19,31 @@ import {
 const U = 'fr-b1-1-medias';
 
 const press = vocabList(U, 'News and the press', [
-  ['l’actualité', 'current affairs', '📰'],
-  ['la une', 'front page', '🗞️'],
-  ['le titre', 'headline, title', '🔠'],
-  ['le reportage', 'report', '🎥'],
-  ['le reporter', 'reporter', '🎙️'],
+  ['les informations', 'the news', '📰'],
+  ['la rubrique', 'section (of a paper)', '🗂️'],
+  ['l’édito', 'editorial', '✍️'],
+  ['l’investigation', 'investigative reporting', '🔍'],
+  ['le rédacteur', 'editor, writer', '🖋️'],
   ['la rédaction', 'editorial team', '🖋️'],
   ['l’enquête', 'investigation', '🔎'],
   ['l’éditorial', 'editorial', '✍️'],
-  ['le quotidien', 'daily newspaper', '📅'],
-  ['l’hebdomadaire', 'weekly magazine', '🗓️'],
+  ['la chronique', 'column, regular feature', '📅'],
+  ['le mensuel', 'monthly magazine', '🗓️'],
   ['la chaîne d’information', 'news channel', '📺'],
-  ['le lecteur', 'reader', '👓'],
+  ['le public', 'audience', '🎧'],
 ]);
 
 const social = vocabList(U, 'Social networks', [
-  ['le réseau social', 'social network', '🌐'],
-  ['publier', 'to post, to publish', '📤'],
+  ['la communauté', 'online community', '🌐'],
+  ['relayer', 'to relay, to pass on', '📤'],
   ['diffuser', 'to broadcast, to spread', '🔁'],
   ['le fil d’actualité', 'news feed', '📜'],
-  ['l’abonné', 'follower, subscriber', '👤'],
+  ['l’internaute', 'web user', '👤'],
   ['la rumeur', 'rumour', '🗣️'],
   ['la fausse information', 'fake news', '🚫'],
   ['l’influenceur', 'influencer', '🤳'],
   ['la notification', 'notification', '🔔'],
-  ['le commentaire', 'comment', '💬'],
+  ['la légende', 'caption', '💬'],
   ['vérifier une source', 'to check a source', '✅'],
   ['la liberté d’expression', 'freedom of expression', '🕊️'],
 ]);
@@ -164,9 +164,9 @@ export const medias: UnitContent = {
       quizDeEn(
         byDe(
           vocab,
-          'la une',
+          'la rubrique',
           'l’enquête',
-          'l’hebdomadaire',
+          'le mensuel',
           'le fil d’actualité',
           'la rumeur',
           'la fausse information',
@@ -190,9 +190,9 @@ export const medias: UnitContent = {
       listen(
         byDe(
           vocab,
-          'le reportage',
+          'l’investigation',
           'la rédaction',
-          'le quotidien',
+          'la chronique',
           'l’influenceur',
           'la notification',
           'la liberté d’expression',
@@ -601,7 +601,7 @@ export const medias: UnitContent = {
             answer: 'reportage',
             hint: 'report',
             emoji: '🎥',
-            speak: 'le reportage',
+            speak: 'l’investigation',
           },
           {
             id: 'sp-redaction',

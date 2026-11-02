@@ -19,7 +19,7 @@ import {
 const U = 'fr-b1-1-temps';
 
 const rhythm = vocabList(U, 'Time and rhythm', [
-  ['l’emploi du temps', 'schedule, timetable', '🗓️'],
+  ['l’horaire', 'timetable, hours', '🗓️'],
   ['le rythme', 'pace, rhythm', '🥁'],
   ['ralentir', 'to slow down', '🐢'],
   ['le surmenage', 'overwork, burnout', '🥵'],
@@ -34,16 +34,16 @@ const rhythm = vocabList(U, 'Time and rhythm', [
 ]);
 
 const nature = vocabList(U, 'Nature and the outdoors', [
-  ['la forêt', 'forest', '🌲'],
+  ['la clairière', 'clearing', '🌲'],
   ['la randonnée', 'hike', '🥾'],
-  ['le paysage', 'landscape', '🏞️'],
-  ['le sentier', 'path', '🛤️'],
+  ['l’horizon', 'horizon', '🏞️'],
+  ['la piste', 'track, trail', '🛤️'],
   ['le lever du soleil', 'sunrise', '🌅'],
-  ['la campagne', 'countryside', '🌾'],
+  ['le hameau', 'hamlet', '🌾'],
   ['le potager', 'vegetable garden', '🥕'],
   ['jardiner', 'to garden', '🧑‍🌾'],
-  ['la rivière', 'river', '🏞️'],
-  ['la falaise', 'cliff', '⛰️'],
+  ['le torrent', 'mountain stream', '🏞️'],
+  ['le coteau', 'hillside', '⛰️'],
   ['le silence', 'silence', '🤫'],
   ['respirer', 'to breathe', '🌬️'],
 ]);
@@ -144,13 +144,13 @@ export const temps: UnitContent = {
       quizDeEn(
         byDe(
           vocab,
-          'l’emploi du temps',
+          'l’horaire',
           'ralentir',
           'le surmenage',
           'le délai',
           'flâner',
           'le potager',
-          'la falaise',
+          'le coteau',
           'tant pis',
         ),
         vocab,
@@ -172,7 +172,7 @@ export const temps: UnitContent = {
           vocab,
           'la sieste',
           'être pressé',
-          'le sentier',
+          'la piste',
           'le lever du soleil',
           'respirer',
           'pourvu que',
@@ -566,7 +566,7 @@ export const temps: UnitContent = {
             answer: 'paysage',
             hint: 'landscape',
             emoji: '🏞️',
-            speak: 'le paysage',
+            speak: 'l’horizon',
           },
           {
             id: 'sp-randonnee',

@@ -20,7 +20,7 @@ import {
 const U = 'fr-b1-1-sentiments';
 
 const character = vocabList(U, 'Character', [
-  ['têtu', 'stubborn', '🐂'],
+  ['obstiné', 'obstinate', '🐂'],
   ['rancunier', 'resentful', '😠'],
   ['attentionné', 'caring', '🤗'],
   ['bienveillant', 'kind, benevolent', '💛'],
@@ -139,7 +139,7 @@ export const sentiments: UnitContent = {
       quizDeEn(
         byDe(
           vocab,
-          'têtu',
+          'obstiné',
           'rancunier',
           'susceptible',
           'étourdi',

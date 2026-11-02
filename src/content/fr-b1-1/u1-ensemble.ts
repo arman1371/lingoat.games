@@ -4,17 +4,17 @@ import { subjTable, unitFr, type UnitContent } from './helpers';
 const U = 'fr-b1-1-ensemble';
 
 const housing = vocabList(U, 'Housing and neighbours', [
-  ['le bail', 'lease', '📃'],
-  ['la caution', 'deposit', '🏦'],
-  ['le locataire', 'tenant', '🔑'],
-  ['le propriétaire', 'owner, landlord', '🏠'],
-  ['le loyer', 'rent', '💶'],
-  ['les charges', 'service charges', '🧾'],
+  ['le préavis', 'notice period', '📆'],
+  ['le dépôt de garantie', 'security deposit', '🏦'],
+  ['le bailleur', 'landlord (lessor)', '🔑'],
+  ['le déménageur', 'removal man', '🚚'],
+  ['la quittance', 'rent receipt', '🧾'],
+  ['l’assurance habitation', 'home insurance', '🛡️'],
   ['la colocation', 'flat share', '👯'],
-  ['le colocataire', 'flatmate', '🛋️'],
-  ['l’immeuble', 'block of flats', '🏢'],
+  ['le sous-locataire', 'subtenant', '🛋️'],
+  ['la résidence', 'residential complex', '🏘️'],
   ['le palier', 'landing', '🪜'],
-  ['l’ascenseur', 'lift', '🛗'],
+  ['l’interphone', 'intercom', '📟'],
   ['le gardien', 'caretaker', '🧑‍🔧'],
   ['le syndic', 'building manager', '🧑‍💼'],
   ['le bruit', 'noise', '🔊'],
@@ -22,7 +22,7 @@ const housing = vocabList(U, 'Housing and neighbours', [
 ]);
 
 const living = vocabList(U, 'Living together', [
-  ['partager', 'to share', '🤝'],
+  ['mutualiser', 'to pool, to share out', '🤝'],
   ['rendre service', 'to do someone a favour', '🙌'],
   ['un coup de main', 'a helping hand', '🖐️'],
   ['la fête des voisins', 'neighbours’ party', '🎉'],
@@ -33,7 +33,7 @@ const living = vocabList(U, 'Living together', [
   ['le vivre-ensemble', 'living together, community spirit', '🏘️'],
   ['la convivialité', 'friendly atmosphere', '🥂'],
   ['accueillir', 'to welcome', '🚪'],
-  ['le règlement', 'house rules, regulations', '📜'],
+  ['le règlement intérieur', 'house rules', '📜'],
   ['le tapage nocturne', 'night-time disturbance', '🌙'],
   ['un malentendu', 'a misunderstanding', '🤷'],
 ]);
@@ -55,7 +55,14 @@ const phrases = vocabList(U, 'Interest, advice and good wishes', [
 
 const vocab = [...housing, ...living, ...phrases];
 
-const pictureQuiz = byDe(housing, 'l’ascenseur', 'l’immeuble', 'le loyer', 'le bruit', 'la cour');
+const pictureQuiz = byDe(
+  housing,
+  'l’interphone',
+  'la résidence',
+  'la quittance',
+  'le bruit',
+  'la cour',
+);
 
 /** [sentence, bucket, English] for the obligation / ban / permission sort */
 const RULE_CARDS: [string, 'must' | 'banned' | 'allowed', string][] = [
@@ -190,13 +197,13 @@ export const ensemble: UnitContent = {
       listen(
         byDe(
           housing,
-          'le locataire',
-          'le propriétaire',
-          'le loyer',
-          'les charges',
+          'le bailleur',
+          'le déménageur',
+          'la quittance',
+          'l’assurance habitation',
           'le palier',
           'le gardien',
-          'le colocataire',
+          'le sous-locataire',
         ),
         housing,
       ),
@@ -578,7 +585,7 @@ export const ensemble: UnitContent = {
             answer: 'propriétaire',
             hint: 'owner, landlord',
             emoji: '🏠',
-            speak: 'le propriétaire',
+            speak: 'le déménageur',
           },
           {
             id: 'sp-ascenseur',
@@ -586,7 +593,7 @@ export const ensemble: UnitContent = {
             answer: 'ascenseur',
             hint: 'lift',
             emoji: '🛗',
-            speak: 'l’ascenseur',
+            speak: 'l’interphone',
           },
           {
             id: 'sp-convivialite',
