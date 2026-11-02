@@ -9,6 +9,7 @@ import { ecologie } from './u7-ecologie';
 import { histoire } from './u8-histoire';
 import { identites } from './u9-identites';
 import { humour } from './u10-humour';
+import { francophonie } from './u11-francophonie';
 
 const units = [
   jeu,
@@ -21,6 +22,7 @@ const units = [
   histoire,
   identites,
   humour,
+  francophonie,
 ];
 
 const content: LevelContent = {

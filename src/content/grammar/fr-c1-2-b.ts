@@ -993,4 +993,117 @@ export const FRC12_TOPICS_B: GrammarTopic[] = [
     related: ['fr-c12-appreciation', 'fr-c12-concordance'],
     sources: [S.conditionnel],
   },
+  {
+    id: 'fr-c12-prepositions-geo',
+    title: 'Prepositions with places',
+    tagline: 'en, au, aux, à and de, du, des',
+    level: LEVEL,
+    summary:
+      'The preposition before a place depends on what kind of place it is: a city, a feminine country, a masculine country or a plural name. Learn the pairs for “in/to” and “from”.',
+    sections: [
+      section(
+        'table',
+        'The pairs',
+        table(
+          'In / to and from.',
+          ['Type', 'In / to', 'From', 'Example'],
+          [
+            ['City', 'à', 'de / d’', 'à Dakar · de Dakar'],
+            ['Feminine country, or vowel', 'en', 'de / d’', 'en Belgique · de Suisse · d’Algérie'],
+            ['Masculine country', 'au', 'du', 'au Québec · du Maroc'],
+            ['Plural name', 'aux', 'des', 'aux Antilles · des États-Unis'],
+          ],
+        ),
+        examples(
+          [
+            'Elle vit en Belgique et travaille à Bruxelles.',
+            'She lives in Belgium and works in Brussels.',
+          ],
+          ['Il revient du Cameroun.', 'He is coming back from Cameroon.'],
+        ),
+      ),
+      section(
+        'notes',
+        'Notes',
+        p(
+          'Most country names ending in **-e** are feminine (*la Belgique*, *la Tunisie*); exceptions include *le Mexique* and *le Cambodge*. Masculine countries starting with a vowel take **en** (*en Iran*, *en Israël*). **Islands** often take **à** (*à Madagascar*, *à Cuba*, *à Haïti*), but some take **en** (*en Corse*). For a region like Québec, **au Québec** is the province and **à Québec** the city.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je vis en Québec.  ✓ Je vis au Québec.',
+          '✗ Il vient de Sénégal.  ✓ Il vient du Sénégal.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-hypothese'],
+    sources: [S.preposition, S.francophonie],
+  },
+  {
+    id: 'fr-c12-hypothese',
+    title: 'Expressing a hypothesis',
+    tagline: 'si, au cas où, à condition que, à moins que',
+    level: LEVEL,
+    summary:
+      'A hypothesis can be real (possible), unreal in the present, or unreal in the past. Each type has its own tense pattern, and several connectors take the subjunctive or the conditional.',
+    sections: [
+      section(
+        'si',
+        'The three si-patterns',
+        table(
+          'Hypotheses with si.',
+          ['Type', 'si-clause', 'Result clause', 'Example'],
+          [
+            [
+              'Possible',
+              'présent',
+              'futur (or present, imperative)',
+              'Si tu viens, je te montrerai la ville.',
+            ],
+            [
+              'Unreal now',
+              'imparfait',
+              'conditionnel présent',
+              'Si je parlais créole, je comprendrais.',
+            ],
+            [
+              'Unreal past',
+              'plus-que-parfait',
+              'conditionnel passé',
+              'Si j’avais su, je serais venu.',
+            ],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Si j’aurais le temps, je viendrais.  ✓ Si j’avais le temps, je viendrais.',
+          '✗ Si tu viendras, je serai content.  ✓ Si tu viens, je serai content.',
+        ),
+      ),
+      section(
+        'others',
+        'Other connectors',
+        table(
+          'Hypothesis without si.',
+          ['Connector', 'Mood', 'Example'],
+          [
+            [
+              'à condition que, pourvu que',
+              'subjunctive',
+              'Je viendrai à condition que tu m’invites.',
+            ],
+            ['à moins que (ne)', 'subjunctive', 'Nous partons, à moins qu’il (ne) pleuve.'],
+            [
+              'en admettant que, supposons que',
+              'subjunctive',
+              'En admettant que ce soit vrai, que faire ?',
+            ],
+            ['au cas où', 'conditional', 'Prends un manteau au cas où il ferait froid.'],
+            ['si jamais', 'present or imparfait', 'Si jamais tu passes par ici, appelle-moi.'],
+          ],
+        ),
+      ),
+    ],
+    related: ['fr-c12-conditionnel', 'fr-c12-subjonctif-present'],
+    sources: [S.conditionnel, S.subjonctif],
+  },
 ];

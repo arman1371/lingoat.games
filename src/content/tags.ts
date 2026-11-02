@@ -415,6 +415,10 @@ export const TAGS = {
   'fr-c12-humour': { label: 'Humour & cinema', group: 'topic', emoji: '🎬' },
   'fr-c12-appreciation': { label: 'Giving an opinion', group: 'grammar', emoji: '⭐' },
   'fr-c12-conditionnel': { label: 'The conditional', group: 'grammar', emoji: '💭' },
+  // unit 11
+  'fr-c12-francophonie': { label: 'The French-speaking world', group: 'topic', emoji: '🌐' },
+  'fr-c12-prepositions-geo': { label: 'Prepositions with places', group: 'grammar', emoji: '🗺️' },
+  'fr-c12-hypothese': { label: 'Hypothesis', group: 'grammar', emoji: '🔮' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },

@@ -1250,6 +1250,24 @@ export const LESSONS = {
       'Si j’avais su, je serais venu.',
     ],
   },
+  'fr-c12-prepositions-geo': {
+    title: 'Prepositions with places',
+    rule: 'Cities: à (à Dakar), de/d’ (de Paris). Feminine countries or those starting with a vowel: en / de (en Belgique, de Suisse). Masculine countries: au / du (au Québec, du Maroc). Plural names: aux / des (aux Antilles, des États-Unis).',
+    examples: [
+      'Elle vit en Belgique et travaille à Bruxelles.',
+      'Il revient du Cameroun.',
+      'Ils partent aux Seychelles.',
+    ],
+  },
+  'fr-c12-hypothese': {
+    title: 'Expressing a hypothesis',
+    rule: 'Si + présent → futur (possible); si + imparfait → conditionnel (unreal now); si + plus-que-parfait → conditionnel passé (unreal past). Never the future or conditional after si. Also: à condition que and à moins que + subjunctive; au cas où + conditional.',
+    examples: [
+      'Si nous allons à Québec, nous goûterons la poutine.',
+      'Si je parlais créole, je comprendrais.',
+      'Prends un manteau au cas où il ferait froid.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',
