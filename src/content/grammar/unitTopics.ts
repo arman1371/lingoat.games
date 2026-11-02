@@ -576,6 +576,7 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'fr-b1-2-ville': [{ topic: 'fr-b12-indefinite' }],
   'fr-b1-2-rapporter': [{ topic: 'fr-b12-reported-speech' }, { topic: 'fr-b12-inversion' }],
   'fr-b1-2-etudes': [{ topic: 'fr-b12-compound-relatives' }],
+  'fr-b1-2-cause': [{ topic: 'fr-b12-cause-consequence' }, { topic: 'fr-b12-participe-present' }],
   'fr-b1-2-regrets': [
     { topic: 'fr-b12-past-hypotheses' },
     { topic: 'fr-b12-si-clauses', note: 'si + plus-que-parfait' },

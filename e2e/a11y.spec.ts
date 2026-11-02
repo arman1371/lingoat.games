@@ -58,6 +58,7 @@ const PAGES: [string, string, string][] = [
   ['B1.2 unit 7 in French', '/fr/levels/fr-b1-2/units/fr-b1-2-ville', 'Un tour en ville'],
   ['B1.2 unit 8 in French', '/fr/levels/fr-b1-2/units/fr-b1-2-rapporter', 'Rapporter'],
   ['B1.2 unit 9 in French', '/fr/levels/fr-b1-2/units/fr-b1-2-etudes', 'Soif d’apprendre'],
+  ['B1.2 unit 10 in French', '/fr/levels/fr-b1-2/units/fr-b1-2-cause', 'Cause et conséquence'],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],

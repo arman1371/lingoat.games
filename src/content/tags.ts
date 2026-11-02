@@ -425,6 +425,8 @@ export const TAGS = {
   'fr-b12-reported-speech': { label: 'Reported speech', group: 'grammar', emoji: '🗒️' },
   'fr-b12-inversion': { label: 'Formal questions', group: 'grammar', emoji: '🎩' },
   'fr-b12-compound-relatives': { label: 'lequel, auquel, dont', group: 'grammar', emoji: '🔗' },
+  'fr-b12-cause-consequence': { label: 'Cause and consequence', group: 'grammar', emoji: '🔗' },
+  'fr-b12-participe-present': { label: 'The present participle', group: 'grammar', emoji: '⏳' },
   'fr-b12-past-hypotheses': { label: 'Regrets and the past', group: 'grammar', emoji: '⏪' },
 } as const satisfies Record<string, TagInfo>;
 

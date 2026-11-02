@@ -765,4 +765,105 @@ export const FRB12_TOPICS: GrammarTopic[] = [
     related: ['fr-b12-prepositions', 'fr-interrogative-pronouns'],
     sources: [S.relatif],
   },
+  {
+    id: 'fr-b12-cause-consequence',
+    title: 'Cause and consequence',
+    tagline: 'Parce que, grâce à, donc, tellement… que',
+    level: LEVEL,
+    summary:
+      'French has separate connectors for the cause (why?) and for the consequence (so what?). With a noun, choose à cause de for a negative cause and grâce à for a positive one. Donc, c’est pourquoi, si bien que and tellement… que introduce the result.',
+    sections: [
+      section(
+        'cause',
+        'Giving the cause',
+        table(
+          'Connectors of cause.',
+          ['Connector', 'Followed by', 'Example'],
+          [
+            ['parce que', 'a clause', 'Il est absent parce qu’il est malade.'],
+            ['car', 'a clause (formal)', 'Il est absent, car il est malade.'],
+            ['puisque', 'a clause (known reason)', 'Puisque tu le sais, dis-le.'],
+            ['comme', 'a clause (at the start)', 'Comme il pleut, nous restons ici.'],
+            ['à cause de', 'a noun (negative)', 'À cause de la grève, il marche.'],
+            ['grâce à', 'a noun (positive)', 'Grâce à toi, j’ai réussi.'],
+            ['en raison de', 'a noun (formal)', 'En raison de la tempête, le vol est annulé.'],
+          ],
+        ),
+        p(
+          '**Parce que** answers *pourquoi ?* and can stand alone. **Car** cannot start a sentence. **Comme** always comes first: *Comme il pleut, …* Do not confuse **à cause de** (blame) with **grâce à** (credit).',
+        ),
+      ),
+      section(
+        'consequence',
+        'Giving the consequence',
+        table(
+          'Connectors of consequence.',
+          ['Connector', 'Example'],
+          [
+            ['donc', 'Il pleut ; donc nous restons ici.'],
+            ['alors', 'Il pleut, alors nous restons ici.'],
+            ['par conséquent', 'Le pont est fermé ; par conséquent, il faut faire un détour.'],
+            ['c’est pourquoi', 'Il y a une grève, c’est pourquoi les bus sont rares.'],
+            ['si bien que', 'Il a neigé, si bien que les routes sont fermées.'],
+            ['tellement / si … que', 'Il a tellement plu que la route est inondée.'],
+          ],
+        ),
+        tip(
+          'tellement … que',
+          'Put tellement before the verb or an adjective and que before the result: Il est tellement fatigué qu’il dort. Use tant de for nouns: Il y a tant de monde que nous ne passons pas.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Grâce à la panne, nous sommes en retard.  ✓ À cause de la panne, nous sommes en retard.',
+          '✗ Car il pleut, nous restons.  ✓ Comme il pleut, nous restons.',
+        ),
+      ),
+    ],
+    related: ['fr-b12-connectors', 'fr-b12-participe-present'],
+    sources: [S.cause, S.consequence],
+  },
+  {
+    id: 'fr-b12-participe-present',
+    title: 'The present participle',
+    tagline: 'Étant malade, il est resté au lit',
+    level: LEVEL,
+    summary:
+      'The participe présent is formed like the gérondif without en. It is invariable and, in writing, gives the cause or the circumstances of the main action. Both verbs must have the same subject. Do not confuse it with the gérondif, which has en and tells how or when.',
+    sections: [
+      section(
+        'form',
+        'Form',
+        table(
+          'Participe présent of common verbs.',
+          ['Infinitive', 'Participe présent'],
+          ['parler', 'finir', 'prendre', 'faire', 'être', 'avoir', 'savoir'].map((v) => [
+            v,
+            participePresent(v),
+          ]),
+        ),
+        p(
+          'Take the **nous** form of the present, remove **-ons** and add **-ant**. The three exceptions are **étant**, **ayant** and **sachant**.',
+        ),
+      ),
+      section(
+        'use',
+        'Use',
+        p(
+          'The participe présent gives a **reason** (*Étant fatiguée, elle est partie*), often at the start of a sentence in formal or written French. In everyday speech parce que or comme replaces it. With a different subject, use a relative clause: *un homme qui parle* (not a participle).',
+        ),
+        examples(
+          ['Ayant peur, il a appelé la police.', 'Being afraid, he called the police.'],
+          ['Sachant la réponse, elle a levé la main.', 'Knowing the answer, she raised her hand.'],
+          ['Roulant trop vite, il a perdu le contrôle.', 'Driving too fast, he lost control.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elles étantes malades…  ✓ Étant malades, elles…',
+          '✗ Ils parlent en marchants.  ✓ Ils parlent en marchant. (the gérondif never agrees either)',
+        ),
+      ),
+    ],
+    related: ['fr-b12-gerondif', 'fr-b12-cause-consequence'],
+    sources: [S.participePresent, S.gerondif],
+  },
 ];

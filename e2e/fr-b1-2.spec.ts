@@ -84,6 +84,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sentence builder (relatives)', 'fr-b1-2-etudes-sentences'],
   ['dialogue (student life)', 'fr-b1-2-etudes-dialogues'],
   ['blitz (relative pronouns)', 'fr-b1-2-etudes-blitz'],
+  ['sort it (cause or consequence)', 'fr-b1-2-cause-sort-cause'],
+  ['conjugation (news verbs)', 'fr-b1-2-cause-conj-cause'],
+  ['gap fill (cause and consequence)', 'fr-b1-2-cause-gap-cause'],
+  ['gap fill (participe présent)', 'fr-b1-2-cause-gap-participle'],
+  ['dialogue (what happened)', 'fr-b1-2-cause-dialogues'],
+  ['blitz (cause)', 'fr-b1-2-cause-blitz'],
 ];
 
 test.describe('French B1.2 – playing the games', () => {

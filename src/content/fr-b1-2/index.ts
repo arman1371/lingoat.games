@@ -8,6 +8,7 @@ import { convaincre } from './u6-convaincre';
 import { ville } from './u7-ville';
 import { rapporter } from './u8-rapporter';
 import { etudes } from './u9-etudes';
+import { cause } from './u10-cause';
 
 const units = [
   voyage,
@@ -19,6 +20,7 @@ const units = [
   ville,
   rapporter,
   etudes,
+  cause,
 ];
 
 const content: LevelContent = {

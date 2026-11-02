@@ -1409,6 +1409,24 @@ export const LESSONS = {
       'Voilà le livre dont j’ai besoin.',
     ],
   },
+  'fr-b12-cause-consequence': {
+    title: 'Cause and consequence',
+    rule: 'Cause: parce que, car, puisque, comme; with a noun à cause de (negative), grâce à (positive), en raison de. Consequence: donc, alors, par conséquent, c’est pourquoi, si bien que; tellement / si … que: Il a tellement plu que la route est inondée.',
+    examples: [
+      'À cause de la grève, les bus sont rares.',
+      'Il pleut, donc nous restons ici.',
+      'Grâce à vous, tout va bien.',
+    ],
+  },
+  'fr-b12-participe-present': {
+    title: 'The present participle',
+    rule: 'The participe présent (nous form without -ons + -ant) is invariable and often gives the cause in writing: Étant malade, il est resté au lit. Same subject as the main verb. Unlike the gérondif it has no en. Irregular: étant, ayant, sachant.',
+    examples: [
+      'Étant fatiguée, elle est partie.',
+      'Ayant peur, il a appelé.',
+      'Sachant la réponse, elle a levé la main.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
