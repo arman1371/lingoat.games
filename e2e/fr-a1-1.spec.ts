@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('French A1.1 – level navigation', () => {
-  test('French Home lists A1.1 as available and no other French level has games', async ({
+  test('French Home lists A1.1 as available and the German levels are not part of it', async ({
     page,
   }) => {
     await page.goto('/fr');

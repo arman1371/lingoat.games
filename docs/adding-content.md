@@ -65,6 +65,7 @@ two shared test harnesses (`content.test.ts`, `playability.test.tsx`), plus Fren
   French counterpart before a unit can use them.
 - Tenses beyond the present (passé composé, imparfait, futur simple) come from `src/lib/french/tenses.ts`; `fr-a2-1/helpers.ts`
   wraps them as conjugation tables (`pcTable`, `pcReflexiveTable`, `imparfaitTable`, `futurTable`).
+- `fr-b2-1/helpers.ts` shows the compact authoring helpers for a higher level (`g` gap-fill with `[option, why]` wrong answers, `q`, `qs`, `sent`, `cards`, `frForms` for hand-written tenses).
 - e2e: add the pack to `frenchActivities` in `e2e/helpers.ts` (kept apart from `allActivities`, which counts German library
   games) and follow `e2e/fr-a1-1.spec.ts`.
 

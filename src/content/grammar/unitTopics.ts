@@ -564,4 +564,42 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-superlative' },
     { topic: 'fr-interrogative-pronouns' },
   ],
+  // ---- French B2.1 ----------------------------------------------------------------------------
+  'fr-b2-1-identite': [
+    { topic: 'fr-imparfait-pc', note: 'telling a life story' },
+    { topic: 'fr-plus-que-parfait' },
+  ],
+  'fr-b2-1-parcours': [
+    { topic: 'fr-participle-agreement', note: 'avoir, être and pronominal verbs' },
+    { topic: 'fr-time-conjunctions', note: 'quand, dès que, avant que …' },
+  ],
+  'fr-b2-1-sante': [
+    { topic: 'fr-conditionnel-present', note: 'softening advice and requests' },
+    { topic: 'fr-giving-advice', note: 'imperative, il faut que, il vaut mieux que' },
+  ],
+  'fr-b2-1-doute': [
+    { topic: 'fr-subjonctif-present', note: 'que je sois, que tu aies' },
+    { topic: 'fr-opinion-mood', note: 'certainty or doubt' },
+  ],
+  'fr-b2-1-sentiments': [
+    { topic: 'fr-subjunctive-or-infinitive', note: 'one subject or two' },
+    { topic: 'fr-subjonctif-passe', note: 'avoir / être in the subjunctive' },
+  ],
+  'fr-b2-1-migrations': [
+    { topic: 'fr-cause-conjunctions', note: 'parce que, puisque, comme, car' },
+    { topic: 'fr-cause-prepositions', note: 'à cause de, grâce à, faute de' },
+  ],
+  'fr-b2-1-demarches': [{ topic: 'fr-purpose', note: 'pour, afin de, pour que, afin que' }],
+  'fr-b2-1-cause': [
+    { topic: 'fr-consequence', note: 'donc, si bien que, tellement … que' },
+    { topic: 'fr-cause-verbs', note: 'provoquer, être dû à, résulter de' },
+  ],
+  'fr-b2-1-recit': [
+    { topic: 'fr-passe-simple', note: 'recognising it in novels' },
+    { topic: 'fr-passe-anterieur', note: 'quand il eut fini' },
+  ],
+  'fr-b2-1-cites': [
+    { topic: 'fr-relative-pronouns', note: 'qui, que, où, dont' },
+    { topic: 'fr-relative-ce', note: 'ce qui, ce que, ce dont' },
+  ],
 };

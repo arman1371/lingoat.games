@@ -264,6 +264,20 @@ participle or of personne after it; those follow common textbook teaching. The W
 pendant give the meaning (starting point, "during") but no tense rule, so "depuis + present for a continuing situation"
 and "pendant + passé composé" are textbook teaching, not checked against a fetched page.
 
+## French B2.1 (topics added unit by unit)
+
+The lessons are in `src/content/grammar/fr-b2-1.ts`, the pages in `sources-fr-b2-1.ts`. The forms in the tables are written by
+hand. The French content has **not yet been reviewed by a native speaker**.
+
+| Topic                       | Pages read                                                                                                                                                                                      |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Imparfait or passé composé? | [Imparfait de l’indicatif en français](https://fr.wikipedia.org/wiki/Imparfait_de_l%E2%80%99indicatif_en_fran%C3%A7ais), [Passé composé](https://fr.wikipedia.org/wiki/Pass%C3%A9_compos%C3%A9) |
+| The plus-que-parfait        | [Indicatif plus-que-parfait en français](https://fr.wikipedia.org/wiki/Indicatif_plus-que-parfait_en_fran%C3%A7ais), [Passé composé](https://fr.wikipedia.org/wiki/Pass%C3%A9_compos%C3%A9)     |
+
+**French B2.1 limits:** the pages do not state every detail. These follow common textbook teaching and are **not** checked against a
+fetched page: the list of verbs that take être, the signal-word table (souvent, hier, soudain …), the spelling changes
+(mangeais, commençais) and the "film test" tip.
+
 ## Limits of the research
 
 - The Deutsche Welle learner pages could not be fetched, and the Duden grammar pages are not freely readable, so the
