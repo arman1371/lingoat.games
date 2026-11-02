@@ -18,6 +18,11 @@ import fr12 from '../src/content/fr-a1-2';
 import fr21 from '../src/content/fr-a2-1';
 import fr22 from '../src/content/fr-a2-2';
 import frC12 from '../src/content/fr-c1-2';
+import frc11 from '../src/content/fr-c1-1';
+import frb22 from '../src/content/fr-b2-2';
+import frB21 from '../src/content/fr-b2-1';
+import frB11 from '../src/content/fr-b1-1';
+import frB12 from '../src/content/fr-b1-2';
 import { LANGUAGES, pathInLanguage, type LanguageId } from '../src/content/languages';
 import type { Activity, Vocab } from '../src/content/schema';
 import { parseTime } from '../src/lib/german/time';
@@ -50,6 +55,11 @@ export const frenchActivities: Activity[] = [
   ...fr21.activities,
   ...fr22.activities,
   ...frC12.activities,
+  ...frc11.activities,
+  ...frb22.activities,
+  ...frB21.activities,
+  ...frB11.activities,
+  ...frB12.activities,
   ...frc21.activities,
 ];
 
