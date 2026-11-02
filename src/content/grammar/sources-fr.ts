@@ -54,5 +54,8 @@ export const FR_SOURCES = {
   subordinate: wp('Proposition_(grammaire)', 'Proposition (grammaire)'),
   comparative: wp('Comparatif', 'Comparatif'),
   superlative: wp('Superlatif', 'Superlatif'),
+  plusQueParfait: wp('Plus-que-parfait', 'Plus-que-parfait'),
+  en: wiktionary('en', 'en'),
+  y: wiktionary('y', 'y'),
   connector: wp('Connecteur_logique', 'Connecteur logique'),
 } as const satisfies Record<string, Source>;

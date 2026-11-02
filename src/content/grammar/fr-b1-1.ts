@@ -5,6 +5,7 @@ import { FRENCH_PRONOUNS } from '@/lib/persons';
 import { subjunctiveFr } from '@/lib/french/subjunctive';
 import type { FrenchForms } from '@/lib/french/conjugation';
 import { imparfait } from '@/lib/french/tenses';
+import { plusQueParfait } from '@/lib/french/moreTenses';
 
 const LEVEL = 'fr-b1-1';
 
@@ -783,5 +784,140 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-b11-comparison'],
     sources: [S.adjective],
+  },
+  {
+    id: 'fr-b11-pqp',
+    title: 'Plus-que-parfait',
+    tagline: 'What had already happened?',
+    level: LEVEL,
+    summary:
+      'The plus-que-parfait expresses an action that was finished before another past moment. It is the imparfait of avoir or être plus the past participle. The choice of auxiliary is the same as in the passé composé.',
+    sections: [
+      section(
+        'form',
+        'How it is formed',
+        formsTable(
+          'avoir or être in the imparfait + participle.',
+          ['finir', 'prendre', 'aller'],
+          (v) => plusQueParfait(v),
+        ),
+        p(
+          'With **être** the participle agrees with the subject: *elles étaient parties*. Pronominal verbs also take être: *je m’étais levé tôt*.',
+        ),
+      ),
+      section(
+        'use',
+        'When to use it',
+        p(
+          'Use it for the earlier of two past events: *Quand je suis arrivé, le film **avait** déjà **commencé**.* It is also used after verbs of saying and thinking in the past: *Il m’a dit qu’il **avait** déjà **mangé**.*',
+        ),
+        examples(
+          [
+            'Elle avait déjà visité le Maroc avant d’y vivre.',
+            'She had already visited Morocco before living there.',
+          ],
+          ['Nous étions partis tôt.', 'We had left early.'],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Quand je suis arrivé, il a déjà mangé.  ✓ Quand je suis arrivé, il avait déjà mangé.',
+          '✗ Nous avions partis.  ✓ Nous étions partis.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-imparfait-pc', 'fr-b11-chronology'],
+    sources: [S.plusQueParfait],
+  },
+  {
+    id: 'fr-b11-en-y',
+    title: 'The pronouns en and y',
+    tagline: 'Replace a place, a thing or a quantity',
+    level: LEVEL,
+    summary:
+      'En replaces de + noun or a quantity; y replaces à / dans / sur + a place or a thing. Both stand before the verb (before the auxiliary in the passé composé, before the infinitive otherwise).',
+    sections: [
+      section(
+        'rule',
+        'En or y?',
+        table(
+          'Two small pronouns.',
+          ['Pronoun', 'Replaces', 'Example'],
+          [
+            ['en', 'de + noun (from, about)', 'Tu viens de Dakar ? — J’en viens.'],
+            ['en', 'a quantity or du / de la / des + noun', 'Tu as des cousins ? — J’en ai trois.'],
+            ['y', 'à / au / dans / chez + a place', 'Tu vas au Maroc ? — J’y vais.'],
+            ['y', 'à + a thing (penser à, répondre à)', 'Tu penses à ton pays ? — J’y pense.'],
+          ],
+        ),
+        p(
+          'Position: *J’y suis allé. Je veux y aller. Je n’en ai pas.* In the affirmative imperative they follow the verb: *Vas-y ! Prends-en !* (the -s of va and prends reappears before y and en). For **people**, use the stressed pronoun instead of y: *Je pense à elle.*',
+        ),
+        examples(
+          ['Il n’y est jamais allé.', 'He has never been there.'],
+          ['Nous en avons discuté hier.', 'We discussed it yesterday.'],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Je suis allé y.  ✓ J’y suis allé.',
+          '✗ J’ai trois.  ✓ J’en ai trois.',
+          '✗ Je pense à lui → j’y pense (for a person).  ✓ Je pense à lui.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-pqp'],
+    sources: [S.en, S.y],
+  },
+  {
+    id: 'fr-b11-chronology',
+    title: 'avant de, après avoir, dès que',
+    tagline: 'Put events in order',
+    level: LEVEL,
+    summary:
+      'Avant de + infinitive and après avoir / être + participle link two actions of the same subject. Dès que + verb means as soon as. Il y a, depuis and au bout de place an event in time.',
+    sections: [
+      section(
+        'rule',
+        'Words for order and time',
+        table(
+          'Chronology.',
+          ['Expression', 'Meaning', 'Example'],
+          [
+            ['avant de + infinitive', 'before (doing)', 'Avant de partir, j’ai fait ma valise.'],
+            [
+              'après avoir / être + participle',
+              'after (having)',
+              'Après avoir mangé, elle est sortie.',
+            ],
+            ['dès que + verb', 'as soon as', 'Je t’appellerai dès que j’arriverai.'],
+            ['il y a + period', 'ago', 'Il a déménagé il y a trois ans.'],
+            ['depuis + period', 'for, since (still true)', 'Il habite à Abidjan depuis cinq ans.'],
+            ['au bout de + period', 'after a period', 'Au bout de deux mois, il parlait bien.'],
+          ],
+        ),
+        p(
+          'After **dès que**, use the **future** (not the present) for a coming event, as in *quand*. For reflexive verbs: *Après m’être installé, j’ai cherché un travail.*',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Avant partir, …  ✓ Avant de partir, …',
+          '✗ Après manger, …  ✓ Après avoir mangé, …',
+          '✗ Il habite ici il y a cinq ans.  ✓ Il habite ici depuis cinq ans.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-pqp', 'fr-b11-narration'],
+    sources: [S.connector],
   },
 ];

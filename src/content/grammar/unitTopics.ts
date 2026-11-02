@@ -587,4 +587,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b11-comparison' },
     { topic: 'fr-b11-adj-place' },
   ],
+  'fr-b1-1-monde': [
+    { topic: 'fr-b11-pqp' },
+    { topic: 'fr-b11-en-y' },
+    { topic: 'fr-b11-chronology' },
+  ],
 };

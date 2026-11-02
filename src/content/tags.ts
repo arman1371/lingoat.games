@@ -399,6 +399,10 @@ export const TAGS = {
   },
   'fr-b11-comparison': { label: 'plus … que, le plus, meilleur', group: 'grammar', emoji: '⚖️' },
   'fr-b11-adj-place': { label: 'Place of the adjective', group: 'grammar', emoji: '📏' },
+  // grammar points – French B1.1, unit 5
+  'fr-b11-pqp': { label: 'Plus-que-parfait', group: 'grammar', emoji: '⏮️' },
+  'fr-b11-en-y': { label: 'The pronouns en and y', group: 'grammar', emoji: '📍' },
+  'fr-b11-chronology': { label: 'avant de, après avoir, dès que', group: 'grammar', emoji: '⏳' },
   // grammar points – French A1.2, unit 1
   'fr-pronominal': { label: 'Pronominal verbs (se lever)', group: 'grammar', emoji: '🪞' },
   'fr-frequency': { label: 'toujours, souvent, ne … jamais', group: 'grammar', emoji: '🔁' },

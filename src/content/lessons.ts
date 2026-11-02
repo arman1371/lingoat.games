@@ -1175,6 +1175,33 @@ export const LESSONS = {
     rule: 'Most adjectives go after the noun (une voiture rouge). A few short, common ones go before it: beau, bon, petit, grand, jeune, vieux, nouveau, joli, gros, mauvais. Before a masculine noun with a vowel: un bel arbre.',
     examples: ['une jolie robe rouge', 'un bon repas', 'un petit panier'],
   },
+  'fr-b11-pqp': {
+    title: 'Plus-que-parfait',
+    rule: 'The plus-que-parfait says what had already happened before another past moment. Form: imparfait of avoir or être + past participle (j’avais fini, elle était partie). The same verbs take être as in the passé composé.',
+    examples: [
+      'Quand je suis arrivé, le film avait déjà commencé.',
+      'Elle était partie avant moi.',
+      'Il n’avait jamais pris l’avion.',
+    ],
+  },
+  'fr-b11-en-y': {
+    title: 'The pronouns en and y',
+    rule: 'En replaces de + noun or a quantity (j’en viens, j’en ai trois). Y replaces à / in / on + a place or a thing (j’y vais, j’y pense). Both go before the verb, or before the infinitive: je veux y aller.',
+    examples: [
+      'Tu viens de Dakar ? — Oui, j’en viens.',
+      'Tu vas à Paris ? — Oui, j’y vais.',
+      'J’en ai trois.',
+    ],
+  },
+  'fr-b11-chronology': {
+    title: 'avant de, après avoir, dès que',
+    rule: 'Avant de + infinitive (same subject); après avoir / être + participle; dès que + verb (future for a coming event). Il y a + period means ago; depuis + period + present means for/since; au bout de means after (a period).',
+    examples: [
+      'Avant de partir, j’ai fait ma valise.',
+      'Après avoir mangé, elle est sortie.',
+      'Je t’appellerai dès que j’arriverai.',
+    ],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',
