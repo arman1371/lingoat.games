@@ -634,4 +634,94 @@ export const FRC11_TOPICS: GrammarTopic[] = [
     related: ['fr-c11-concession'],
     sources: [S.subjonctifWp, S.falloir, S.douter, S.souhaiter],
   },
+  {
+    id: 'fr-c11-reprise',
+    title: 'Avoiding repetition: celui, ce qui, dont',
+    tagline: 'How do I refer back to a noun or an idea without repeating it?',
+    level: LEVEL,
+    summary:
+      'A C1 text avoids repeating a word. Celui, celle, ceux and celles replace a noun and are completed by de, qui, que, où or -ci / -là. Ce qui, ce que, ce dont and ce à quoi sum up an idea. After a preposition, relative pronouns become lequel, auquel, duquel; dont replaces de + noun. Le premier … le second, ce dernier and celui-ci also keep track of what you mentioned.',
+    sections: [
+      section(
+        'celui',
+        'Celui, celle, ceux, celles',
+        p(
+          'These demonstrative pronouns stand for a noun you have just used and agree with it in **gender and number**. They are never alone: they need **de** (*celui de mon frère*), a relative clause (*celle que j’aime, ceux qui habitent ici*) or the particles **-ci / -là** (*celui-ci* = this one, the latter; *celui-là* = that one, the former).',
+        ),
+        table(
+          'Celui and its forms.',
+          ['Form', 'With', 'Example'],
+          [
+            [
+              'celui / celle',
+              'de + noun',
+              'Ma voiture est vieille, mais celle de mon père est neuve.',
+            ],
+            [
+              'ceux / celles',
+              'qui, que, où',
+              'Ceux qui travaillent aujourd’hui financent les retraites.',
+            ],
+            [
+              'celui-ci / celui-là',
+              'nothing',
+              'J’ai deux frères : celui-ci est médecin, celui-là professeur.',
+            ],
+          ],
+        ),
+      ),
+      section(
+        'ce',
+        'Ce qui, ce que, ce dont, ce à quoi',
+        p(
+          'To sum up an **idea** or a thing without a noun, use **ce** + a relative pronoun. The pronoun follows the function: **ce qui** is the subject (*ce qui compte*), **ce que** is the direct object (*ce que tu dis*), **ce dont** goes with a verb that takes **de** (*ce dont j’ai besoin*) and **ce à quoi** goes with **à** (*ce à quoi je pense*).',
+        ),
+        table(
+          'Summing up an idea.',
+          ['Pronoun', 'Function', 'Example'],
+          [
+            ['ce qui', 'subject', 'Ce qui compte, c’est la famille.'],
+            ['ce que / ce qu’', 'direct object', 'Je ne comprends pas ce que tu veux dire.'],
+            ['ce dont', 'de + …', 'C’est exactement ce dont j’ai besoin.'],
+            ['ce à quoi', 'à + …', 'Voilà ce à quoi je pense.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Ce que me plaît.  ✓ Ce qui me plaît.',
+          '✗ Ce que j’ai besoin.  ✓ Ce dont j’ai besoin.',
+        ),
+      ),
+      section(
+        'relative',
+        'Relative pronouns after a preposition',
+        p(
+          'When the relative pronoun follows a preposition, a person usually needs **qui** (*la personne à qui je parle*) and a thing needs **lequel, laquelle, lesquels, lesquelles**. With **à** they contract: **auquel, auxquels, auxquelles**; with **de**: **duquel, desquels, desquelles**. But **dont** replaces **de + noun** for people and things alike. **Où** replaces a place or a time.',
+        ),
+        compare(
+          {
+            title: 'dont',
+            question: 'de + noun',
+            example: 'Le médecin dont je parle est mon voisin.',
+          },
+          {
+            title: 'auquel',
+            question: 'à + noun',
+            example: 'Les amis auxquels je pense habitent loin.',
+          },
+          {
+            title: 'où',
+            question: 'place or time',
+            example: 'La maison où j’ai grandi est à vendre.',
+          },
+        ),
+        tip(
+          'Ordering ideas',
+          'To keep track of two things: *le premier … le second* (or *l’un … l’autre*). *Ce dernier* and *celui-ci* point to the last one mentioned.',
+        ),
+      ),
+    ],
+    related: ['fr-c11-pronouns'],
+    sources: [S.demonstrativePronoun, S.relativePronoun, S.anaphora, S.celui, S.lequel, S.dont],
+  },
 ];

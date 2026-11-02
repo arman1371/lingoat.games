@@ -110,6 +110,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (type)', 'fr-c1-1-ville-gap-typed'],
   ['sentence builder', 'fr-c1-1-ville-sentences'],
   ['unit challenge', 'fr-c1-1-ville-challenge'],
+  ['sort it (reprise)', 'fr-c1-1-famille-sort-reprise'],
+  ['gap fill (choose)', 'fr-c1-1-famille-gap-reprise'],
+  ['gap fill (type)', 'fr-c1-1-famille-gap-typed'],
+  ['sentence builder', 'fr-c1-1-famille-sentences'],
+  ['dialogue (two scenes)', 'fr-c1-1-famille-dialogues'],
+  ['unit challenge', 'fr-c1-1-famille-challenge'],
 ];
 
 test.describe('French C1.1 – playing the games', () => {

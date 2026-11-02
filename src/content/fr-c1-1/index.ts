@@ -5,8 +5,9 @@ import { egalite } from './u3-egalite';
 import { alimentation } from './u4-alimentation';
 import { sante } from './u5-sante';
 import { ville } from './u6-ville';
+import { famille7 } from './u7-famille';
 
-const units = [medias, societe, egalite, alimentation, sante, ville];
+const units = [medias, societe, egalite, alimentation, sante, ville, famille7];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

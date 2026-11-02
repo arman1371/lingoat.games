@@ -1363,6 +1363,15 @@ export const LESSONS = {
       'Je veux laisser ma voiture à la maison.',
     ],
   },
+  'fr-c11-reprise': {
+    title: 'Avoiding repetition: celui, ce qui, dont',
+    rule: 'Celui / celle / ceux / celles replace a noun and need de, qui, que, où or -ci / -là (celui de mon frère). Ce qui (subject), ce que (object), ce dont (de), ce à quoi (à) sum up an idea. After a preposition: lequel, auquel, duquel; dont replaces de + noun.',
+    examples: [
+      'J’ai deux frères : celui qui habite à Lyon est médecin.',
+      'Ce qui compte, c’est la famille.',
+      'Le sujet dont nous parlons est délicat.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

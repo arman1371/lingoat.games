@@ -571,4 +571,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'fr-c1-1-alimentation': [{ topic: 'fr-c11-concession' }],
   'fr-c1-1-sante': [{ topic: 'fr-c11-pronouns' }],
   'fr-c1-1-ville': [{ topic: 'fr-c11-subjunctive' }],
+  'fr-c1-1-famille': [{ topic: 'fr-c11-reprise' }],
 };

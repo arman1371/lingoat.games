@@ -67,6 +67,11 @@ const PAGES: [string, string, string][] = [
   ],
   ['unit sante in French C1.1', '/fr/levels/fr-c1-1/units/fr-c1-1-sante', 'Santé et bien-être'],
   ['unit ville in French C1.1', '/fr/levels/fr-c1-1/units/fr-c1-1-ville', 'Ville et environnement'],
+  [
+    'unit famille in French C1.1',
+    '/fr/levels/fr-c1-1/units/fr-c1-1-famille',
+    'Famille et générations',
+  ],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],
