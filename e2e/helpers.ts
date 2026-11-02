@@ -13,9 +13,17 @@ import c11 from '../src/content/c1-1';
 import c21 from '../src/content/c2-1';
 import c22 from '../src/content/c2-2';
 import fr11 from '../src/content/fr-a1-1';
+import frc21 from '../src/content/fr-c2-1';
 import fr12 from '../src/content/fr-a1-2';
 import fr21 from '../src/content/fr-a2-1';
 import fr22 from '../src/content/fr-a2-2';
+import frC12 from '../src/content/fr-c1-2';
+import frc11 from '../src/content/fr-c1-1';
+import frb22 from '../src/content/fr-b2-2';
+import frB21 from '../src/content/fr-b2-1';
+import frB11 from '../src/content/fr-b1-1';
+import frB12 from '../src/content/fr-b1-2';
+import frc22 from '../src/content/fr-c2-2';
 import { LANGUAGES, pathInLanguage, type LanguageId } from '../src/content/languages';
 import type { Activity, Vocab } from '../src/content/schema';
 import { parseTime } from '../src/lib/german/time';
@@ -47,6 +55,14 @@ export const frenchActivities: Activity[] = [
   ...fr12.activities,
   ...fr21.activities,
   ...fr22.activities,
+  ...frC12.activities,
+  ...frc11.activities,
+  ...frb22.activities,
+  ...frB21.activities,
+  ...frB11.activities,
+  ...frB12.activities,
+  ...frc21.activities,
+  ...frc22.activities,
 ];
 
 /** Every vocabulary entry of every available German level. */

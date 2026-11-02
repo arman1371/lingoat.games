@@ -1,6 +1,11 @@
-import { screen, within } from '@testing-library/react';
+import { configure, screen, within } from '@testing-library/react';
 import { getProgressStore, useProgressStore } from '@/store/progressStore';
 import { renderApp, resetStores } from '@/test/app';
+
+// the French library renders every game of every French level, and CI runs ~100 test files in parallel,
+// so the default second is too tight there
+configure({ asyncUtilTimeout: 30_000 });
+vi.setConfig({ testTimeout: 60_000 });
 
 beforeEach(resetStores);
 
@@ -50,11 +55,11 @@ describe('French first visit and per-language data', () => {
 
   it('keeps German grammar points out of the French library', async () => {
     const { user } = renderApp('/fr/library?view=games');
-    // the lazy library route + a large French catalogue can take longer than 1s on CI
-    await user.click(await screen.findByText(/^Filters/, undefined, { timeout: 8000 }));
+    // The French library lists every French level, so it can take a while to appear on a busy CI runner.
+    await user.click(await screen.findByText(/^Filters/, {}, { timeout: 20_000 }));
     expect(await screen.findByRole('button', { name: /tu or vous/ })).toBeInTheDocument();
     expect(screen.queryByRole('button', { name: /Verb conjugation/ })).not.toBeInTheDocument();
-  }, 20000);
+  }, 30_000);
 
   it('shows no welcome card in German', async () => {
     renderApp('/');

@@ -540,6 +540,69 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-futur-proche' },
     { topic: 'fr-adjective-position' },
   ],
+  // ---- French B2.2 ----------------------------------------------------------------------------
+  'fr-b2-2-actu': [
+    { topic: 'fr-b22-reported-speech', note: 'what the minister said, what the journalists asked' },
+    { topic: 'fr-b22-cleft', note: 'stressing the source or the culprit' },
+    { topic: 'fr-b22-relative-composed', note: 'the report she refers to' },
+  ],
+  'fr-b2-2-sante': [
+    { topic: 'fr-b22-subj-or-inf', note: 'advising, insisting, fearing, doubting' },
+    { topic: 'fr-b22-ne-expletif', note: 'après craindre que, avant que, à moins que' },
+  ],
+  'fr-b2-2-solidarite': [
+    { topic: 'fr-b22-passive', note: 'les repas sont servis, les familles ont été aidées' },
+    { topic: 'fr-b22-se-faire', note: 'il s’est fait voler son sac' },
+  ],
+  'fr-b2-2-justice': [
+    { topic: 'fr-b22-si-clauses', note: 'si on avait su, on aurait agi' },
+    { topic: 'fr-b22-condition', note: 'à condition que, à moins que, au cas où, sauf si' },
+  ],
+  'fr-b2-2-culture': [
+    { topic: 'fr-b22-superlative-subj', note: 'le plus beau film que j’aie vu' },
+    { topic: 'fr-b22-verb-prep', note: 'rêver de, s’intéresser à, y et en' },
+  ],
+  'fr-b2-2-science': [
+    { topic: 'fr-b22-cause', note: 'grâce à, à cause de, puisque, ce n’est pas que' },
+    { topic: 'fr-b22-consequence', note: 'si bien que, tellement … que, de façon que' },
+  ],
+  'fr-b2-2-economie': [
+    { topic: 'fr-b22-concession', note: 'bien que, même si, malgré, pourtant' },
+    { topic: 'fr-b22-comparison', note: 'plus … plus, de plus en plus, autant … que' },
+  ],
+  'fr-b2-2-histoire': [
+    { topic: 'fr-b22-passe-simple', note: 'il fut, ils prirent, elle naquit' },
+    { topic: 'fr-b22-plus-que-parfait', note: 'événement, arrière-plan, antériorité' },
+  ],
+  'fr-b2-2-territoire': [
+    {
+      topic: 'fr-b22-participle-agreement',
+      note: 'les quartiers qu’ils ont choisis, elle s’est installée',
+    },
+    { topic: 'fr-b22-present-participle', note: 'en créant, habitant, accueillante' },
+  ],
+  'fr-b2-2-societe': [
+    { topic: 'fr-b22-purpose', note: 'pour que, afin de, de peur que' },
+    { topic: 'fr-b22-conditional-past', note: 'regret, reproche, information non confirmée' },
+  ],
+  'fr-b2-2-climat': [
+    { topic: 'fr-b22-time-relations', note: 'avant que, jusqu’à ce que, après que' },
+    { topic: 'fr-b22-futur-anterieur', note: 'dès que j’aurai fini, d’ici 2030' },
+  ],
+  'fr-b2-2-debat': [
+    { topic: 'fr-b22-articulators', note: 'certes … mais, en revanche, toutefois' },
+    { topic: 'fr-b22-register', note: 'familier, courant, soutenu; lettres formelles' },
+  ],
+  // ---- French C2.1 ------------------------------------------------------------------------
+  'fr-c2-1-registres': [{ topic: 'fr-c21-word-formation' }],
+  'fr-c2-1-humour': [{ topic: 'fr-c21-wordplay' }],
+  'fr-c2-1-recit': [{ topic: 'fr-c21-passe-simple' }, { topic: 'fr-c21-narrative-tenses' }],
+  'fr-c2-1-cause': [{ topic: 'fr-c21-cause-consequence' }],
+  'fr-c2-1-concession': [{ topic: 'fr-c21-concession' }],
+  'fr-c2-1-subjonctif': [{ topic: 'fr-c21-subjunctive' }, { topic: 'fr-c21-reported-speech' }],
+  'fr-c2-1-relief': [{ topic: 'fr-c21-emphasis' }, { topic: 'fr-c21-nominalisation' }],
+  'fr-c2-1-institutions': [{ topic: 'fr-c21-acronyms', note: 'SNCF, BCE, ONG, OTAN' }],
+  'fr-c2-1-debat': [{ topic: 'fr-c21-argument' }],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },
@@ -596,10 +659,235 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a21-negatives', note: 'rien, personne, plus, pas encore' },
     { topic: 'fr-a21-time-markers', note: 'pendant, depuis, en' },
   ],
+  'fr-a2-1-sorties': [
+    { topic: 'fr-a21-invitations' },
+    { topic: 'fr-a21-modals' },
+    { topic: 'fr-a21-y', note: 'j’y vais, allons-y' },
+  ],
+  'fr-a2-1-souvenirs': [
+    { topic: 'fr-a21-imparfait' },
+    { topic: 'fr-a21-imparfait-use', note: 'autrefois, à l’époque, chaque été' },
+    { topic: 'fr-a21-en', note: 'j’en veux, il y en a' },
+  ],
+  'fr-a2-1-logement': [
+    { topic: 'fr-a21-relatives', note: 'qui, que, où' },
+    { topic: 'fr-a21-comparison', note: 'plus, moins, meilleur, mieux' },
+    { topic: 'fr-a21-condition' },
+  ],
+  'fr-a2-1-portrait': [
+    { topic: 'fr-a21-equality', note: 'aussi, autant, le même' },
+    { topic: 'fr-a21-chaque-tout' },
+    { topic: 'fr-a21-possessive-pronouns' },
+  ],
+  'fr-a2-1-futur': [
+    { topic: 'fr-a21-futur' },
+    { topic: 'fr-a21-futur-irregular', note: 'irai, serai, ferai, viendrai' },
+    { topic: 'fr-a21-si-futur' },
+  ],
+  'fr-a2-1-cuisine': [
+    { topic: 'fr-a21-obligation', note: 'il faut, devoir, interdit de' },
+    { topic: 'fr-a21-ne-que' },
+    { topic: 'fr-a21-measures' },
+  ],
+  'fr-a2-1-etudes': [
+    { topic: 'fr-a21-imparfait-pc' },
+    { topic: 'fr-a21-cause', note: 'parce que, à cause de, grâce à' },
+    { topic: 'fr-a21-consequence' },
+  ],
   // ---- French A2.2 ----------------------------------------------------------------------------
   'fr-a2-2-sante': [
     { topic: 'fr-object-pronouns', note: 'le, la, les, lui, leur' },
     { topic: 'fr-superlative' },
     { topic: 'fr-interrogative-pronouns' },
   ],
+  // ---- French C1.2 ----------------------------------------------------------------------------
+  'fr-c1-2-jeu': [
+    { topic: 'fr-c12-participe-present' },
+    { topic: 'fr-c12-gerondif' },
+    { topic: 'fr-c12-adjectif-verbal' },
+  ],
+  'fr-c1-2-famille': [{ topic: 'fr-c12-registres' }, { topic: 'fr-c12-questions' }],
+  'fr-c1-2-vieillir': [
+    { topic: 'fr-c12-reprise-pronominale' },
+    { topic: 'fr-c12-reprise-nominale' },
+  ],
+  'fr-c1-2-sante': [{ topic: 'fr-c12-recit-passe' }, { topic: 'fr-c12-passe-simple' }],
+  'fr-c1-2-solidarite': [{ topic: 'fr-c12-modalisation' }, { topic: 'fr-c12-subjonctif-present' }],
+  'fr-c1-2-sport': [{ topic: 'fr-c12-but' }, { topic: 'fr-c12-relatifs-composes' }],
+  'fr-c1-2-ecologie': [{ topic: 'fr-c12-futur-anterieur' }, { topic: 'fr-c12-cause-consequence' }],
+  'fr-c1-2-histoire': [{ topic: 'fr-c12-concordance' }, { topic: 'fr-c12-marqueurs-temporels' }],
+  'fr-c1-2-identites': [{ topic: 'fr-c12-concession' }, { topic: 'fr-c12-indefinis' }],
+  'fr-c1-2-humour': [{ topic: 'fr-c12-appreciation' }, { topic: 'fr-c12-conditionnel' }],
+  'fr-c1-2-francophonie': [{ topic: 'fr-c12-prepositions-geo' }, { topic: 'fr-c12-hypothese' }],
+  'fr-c1-2-argumenter': [{ topic: 'fr-c12-connecteurs' }, { topic: 'fr-c12-indicatif-subjonctif' }],
+  // ---- French C1.1 ----------------------------------------------------------------------------
+  'fr-c1-1-medias': [{ topic: 'fr-c11-connectors' }],
+  'fr-c1-1-societe': [{ topic: 'fr-c11-si-clauses' }],
+  'fr-c1-1-egalite': [{ topic: 'fr-c11-affixes' }],
+  'fr-c1-1-alimentation': [{ topic: 'fr-c11-concession' }],
+  'fr-c1-1-sante': [{ topic: 'fr-c11-pronouns' }],
+  'fr-c1-1-ville': [{ topic: 'fr-c11-subjunctive' }],
+  'fr-c1-1-famille': [{ topic: 'fr-c11-reprise' }],
+  'fr-c1-1-culture': [{ topic: 'fr-c11-emphasis' }],
+  'fr-c1-1-litterature': [{ topic: 'fr-c11-narrative-tenses' }],
+  'fr-c1-1-travail': [{ topic: 'fr-c11-registers' }],
+  'fr-c1-1-numerique': [{ topic: 'fr-c11-modality' }],
+  // ---- French B2.1 ----------------------------------------------------------------------------
+  'fr-b2-1-identite': [
+    { topic: 'fr-imparfait-pc', note: 'telling a life story' },
+    { topic: 'fr-plus-que-parfait' },
+  ],
+  'fr-b2-1-parcours': [
+    { topic: 'fr-participle-agreement', note: 'avoir, être and pronominal verbs' },
+    { topic: 'fr-time-conjunctions', note: 'quand, dès que, avant que …' },
+  ],
+  'fr-b2-1-sante': [
+    { topic: 'fr-conditionnel-present', note: 'softening advice and requests' },
+    { topic: 'fr-giving-advice', note: 'imperative, il faut que, il vaut mieux que' },
+  ],
+  'fr-b2-1-doute': [
+    { topic: 'fr-subjonctif-present', note: 'que je sois, que tu aies' },
+    { topic: 'fr-opinion-mood', note: 'certainty or doubt' },
+  ],
+  'fr-b2-1-sentiments': [
+    { topic: 'fr-subjunctive-or-infinitive', note: 'one subject or two' },
+    { topic: 'fr-subjonctif-passe', note: 'avoir / être in the subjunctive' },
+  ],
+  'fr-b2-1-migrations': [
+    { topic: 'fr-cause-conjunctions', note: 'parce que, puisque, comme, car' },
+    { topic: 'fr-cause-prepositions', note: 'à cause de, grâce à, faute de' },
+  ],
+  'fr-b2-1-demarches': [{ topic: 'fr-purpose', note: 'pour, afin de, pour que, afin que' }],
+  'fr-b2-1-cause': [
+    { topic: 'fr-consequence', note: 'donc, si bien que, tellement … que' },
+    { topic: 'fr-cause-verbs', note: 'provoquer, être dû à, résulter de' },
+  ],
+  'fr-b2-1-recit': [
+    { topic: 'fr-passe-simple', note: 'recognising it in novels' },
+    { topic: 'fr-passe-anterieur', note: 'quand il eut fini' },
+  ],
+  'fr-b2-1-cites': [
+    { topic: 'fr-relative-pronouns', note: 'qui, que, où, dont' },
+    { topic: 'fr-relative-ce', note: 'ce qui, ce que, ce dont' },
+  ],
+  'fr-b2-1-logement': [
+    { topic: 'fr-lequel', note: 'lequel, auquel, duquel' },
+    { topic: 'fr-relative-choice', note: 'qui, dont, où or lequel?' },
+  ],
+  'fr-b2-1-ville': [
+    { topic: 'fr-passive', note: 'être + participle, se + verb' },
+    { topic: 'fr-concession', note: 'bien que, alors que, malgré, même si' },
+  ],
+  // ---- French B1.1 ----------------------------------------------------------------------------
+  'fr-b1-1-ensemble': [
+    { topic: 'fr-b11-subjunctive' },
+    { topic: 'fr-b11-obligation' },
+    { topic: 'fr-b11-advice' },
+    { topic: 'fr-b11-restriction' },
+    { topic: 'fr-b11-negative-prefixes' },
+  ],
+  'fr-b1-1-souvenirs': [
+    { topic: 'fr-b11-imparfait-pc' },
+    { topic: 'fr-b11-narration' },
+    { topic: 'fr-b11-reflexive-agreement' },
+  ],
+  'fr-b1-1-travail': [
+    { topic: 'fr-b11-relatives' },
+    { topic: 'fr-b11-opinion' },
+    { topic: 'fr-b11-purpose' },
+  ],
+  'fr-b1-1-consommer': [
+    { topic: 'fr-b11-certainty' },
+    { topic: 'fr-b11-comparison' },
+    { topic: 'fr-b11-adj-place' },
+  ],
+  'fr-b1-1-monde': [
+    { topic: 'fr-b11-pqp' },
+    { topic: 'fr-b11-en-y' },
+    { topic: 'fr-b11-chronology' },
+  ],
+  'fr-b1-1-medias': [
+    { topic: 'fr-b11-passive' },
+    { topic: 'fr-b11-nominalisation' },
+    { topic: 'fr-b11-adverbs' },
+  ],
+  'fr-b1-1-temps': [
+    { topic: 'fr-b11-possessive-pronouns' },
+    { topic: 'fr-b11-wishes' },
+    { topic: 'fr-b11-duration' },
+  ],
+  'fr-b1-1-apprendre': [
+    { topic: 'fr-b11-gerund' },
+    { topic: 'fr-b11-participle-avoir' },
+    { topic: 'fr-b11-agreement' },
+  ],
+  'fr-b1-1-critique': [
+    { topic: 'fr-b11-cond-news' },
+    { topic: 'fr-b11-se-faire' },
+    { topic: 'fr-b11-doubt-adverbs' },
+  ],
+  'fr-b1-1-sentiments': [
+    { topic: 'fr-b11-si-hypothesis' },
+    { topic: 'fr-b11-feelings' },
+    { topic: 'fr-b11-regrets' },
+  ],
+  // ---- French B1.2 ----------------------------------------------------------------------------
+  'fr-b1-2-voyage': [{ topic: 'fr-futur-simple' }],
+  'fr-b1-2-paysages': [
+    { topic: 'fr-b12-future-choice' },
+    { topic: 'fr-futur-simple', note: 'outdoor verbs' },
+  ],
+  'fr-b1-2-hypotheses': [{ topic: 'fr-b12-si-clauses' }, { topic: 'fr-b12-conditional' }],
+  'fr-b1-2-planete': [{ topic: 'fr-b12-prepositions' }],
+  'fr-b1-2-convaincre': [{ topic: 'fr-b12-gerondif' }, { topic: 'fr-b12-connectors' }],
+  'fr-b1-2-ville': [{ topic: 'fr-b12-indefinite' }],
+  'fr-b1-2-rapporter': [{ topic: 'fr-b12-reported-speech' }, { topic: 'fr-b12-inversion' }],
+  'fr-b1-2-etudes': [{ topic: 'fr-b12-compound-relatives' }],
+  'fr-b1-2-cause': [{ topic: 'fr-b12-cause-consequence' }, { topic: 'fr-b12-participe-present' }],
+  'fr-b1-2-sport': [
+    { topic: 'fr-b12-double-pronouns' },
+    { topic: 'fr-b12-emphasis' },
+    { topic: 'fr-b12-futur-anterieur' },
+  ],
+  'fr-b1-2-culture': [{ topic: 'fr-b12-opposition' }, { topic: 'fr-b12-passe-simple' }],
+  'fr-b1-2-regrets': [
+    { topic: 'fr-b12-past-hypotheses' },
+    { topic: 'fr-b12-si-clauses', note: 'si + plus-que-parfait' },
+  ],
+  'fr-a2-2-medias': [
+    { topic: 'fr-a22-cause-consequence' },
+    { topic: 'fr-a22-subjunctive', note: 'il faut que' },
+    { topic: 'fr-a22-pronoun-order', note: 'je te le donne, donne-le-moi' },
+    { topic: 'fr-a22-adverbs-ment' },
+  ],
+  'fr-a2-2-consommer': [
+    { topic: 'fr-a22-conditional', note: 'je voudrais, pourriez-vous' },
+    { topic: 'fr-a22-gerund' },
+    { topic: 'fr-a22-noun-complements', note: 'en, à, de' },
+  ],
+  'fr-a2-2-voyage': [
+    { topic: 'fr-a22-narration', note: 'imparfait and passé composé' },
+    { topic: 'fr-a22-participle-agreement' },
+    { topic: 'fr-a22-demonstrative-pronouns' },
+  ],
+  'fr-a2-2-parcours': [
+    { topic: 'fr-a22-cleft', note: 'c’est … qui / que, ce qui, ce que' },
+    { topic: 'fr-a22-reported-speech' },
+    { topic: 'fr-a22-pronoun-y', note: 'y and en' },
+  ],
+  'fr-a2-2-nature': [
+    { topic: 'fr-a22-imperative-pronouns', note: 'vas-y, prends-en, ne le touche pas' },
+    { topic: 'fr-a22-purpose' },
+    { topic: 'fr-a22-passive' },
+  ],
+  // ---- French C2.2 ----------------------------------------------------------------------------
+  'fr-c2-2-arts': [{ topic: 'fr-c22-participe-present' }],
+  'fr-c2-2-litterature': [{ topic: 'fr-c22-accord-participe' }],
+  'fr-c2-2-cinema': [{ topic: 'fr-c22-passif' }],
+  'fr-c2-2-patrimoine': [{ topic: 'fr-c22-relatives' }],
+  'fr-c2-2-droit': [{ topic: 'fr-c22-negation' }],
+  'fr-c2-2-medias': [{ topic: 'fr-c22-modalisation' }],
+  'fr-c2-2-engagement': [{ topic: 'fr-c22-infinitif' }],
+  'fr-c2-2-climat': [{ topic: 'fr-c22-accord-quantite' }],
+  'fr-c2-2-expressions': [{ topic: 'fr-c22-figures' }],
 };

@@ -12,9 +12,21 @@ import { C21_TOPICS } from './c2-1';
 import { C22_TOPICS } from './c2-2';
 import { FR11_TOPICS } from './fr-a1-1';
 import { FR11_TOPICS_B } from './fr-a1-1-b';
+import { FR22B_TOPICS } from './fr-b2-2';
+import { FR22B_TOPICS_B } from './fr-b2-2-b';
+import { FR22B_TOPICS_C } from './fr-b2-2-c';
+import { FR_B11_TOPICS } from './fr-b1-1';
+import { FRC21_TOPICS } from './fr-c2-1';
 import { FR12_TOPICS } from './fr-a1-2';
+import { FRB12_TOPICS } from './fr-b1-2';
 import { FR21_TOPICS } from './fr-a2-1';
+import { FR21_TOPICS_B } from './fr-a2-1-b';
 import { FR22_TOPICS } from './fr-a2-2';
+import { FRC12_TOPICS } from './fr-c1-2';
+import { FRC12_TOPICS_B } from './fr-c1-2-b';
+import { FRC11_TOPICS } from './fr-c1-1';
+import { FRB21_TOPICS } from './fr-b2-1';
+import { FRC22_TOPICS } from './fr-c2-2';
 import type { GrammarTopic, UnitTopicRef } from './schema';
 import { UNIT_TOPICS } from './unitTopics';
 
@@ -37,9 +49,21 @@ export const GRAMMAR_TOPICS: readonly GrammarTopic[] = [
   ...C22_TOPICS,
   ...FR11_TOPICS,
   ...FR11_TOPICS_B,
+  ...FR22B_TOPICS,
+  ...FR22B_TOPICS_B,
+  ...FR22B_TOPICS_C,
+  ...FRC21_TOPICS,
   ...FR12_TOPICS,
   ...FR21_TOPICS,
+  ...FR21_TOPICS_B,
   ...FR22_TOPICS,
+  ...FRC12_TOPICS,
+  ...FRC12_TOPICS_B,
+  ...FRC11_TOPICS,
+  ...FRB21_TOPICS,
+  ...FR_B11_TOPICS,
+  ...FRB12_TOPICS,
+  ...FRC22_TOPICS,
 ];
 
 export const GRAMMAR_TOPIC_BY_ID: ReadonlyMap<string, GrammarTopic> = new Map(

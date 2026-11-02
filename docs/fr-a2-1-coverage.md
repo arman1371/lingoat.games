@@ -46,9 +46,19 @@ from an earlier French level (the content test checks this against `fr-a1-1` and
 1. Foundations and unit 1: `src/lib/french/tenses.ts` (passé composé, imparfait and futur simple generated from the
    infinitive, with tests), the `fr-a2-1` pack with its shared tests and an e2e spec, the level switched to
    `available`, tags, mini lessons. **Done** with unit 1 (`parcours`, 16 games).
-2. Units 2 to 8, one pull request each. Each unit brings its full grammar lessons (`src/content/grammar/fr-a2-1.ts`), because the
-   grammar test requires every French unit to link written topics.
+2. Units 2 to 8 in one pull request (Arman: one PR per level). Each unit brings its full grammar lessons
+   (`src/content/grammar/fr-a2-1.ts` and `fr-a2-1-b.ts`), because the grammar test requires every French unit to link
+   written topics. **Done:** all eight units, 16 games each (see the table above).
 
 **Overlap with French A1.2:** A1.2 already teaches pronominal verbs, ne … jamais, d’abord / ensuite / enfin, the passé composé
 with avoir and il y a / dans / dernier. A2.1 therefore adds the être auxiliary, irregular participles, rien / personne /
 plus / pas encore and pendant / depuis / en, and re-uses the A1.2 words only inside exercises, never as new word cards.
+
+**Overlap inside A2.1 and with A1:** the content test checks that no word card repeats an earlier French level or another
+unit of A2.1. Words that A1.1, A1.2 or unit 1 already teach (for example _l'enfance_, _grandir_, _mince_, _timide_,
+_drôle_, _l'addition_, _le serveur_, _le baccalauréat_, _le diplôme_, _emménager_) are used inside sentences only; the new
+cards use other words (_la nostalgie_, _svelte_, _réservé_, _rigolo_, _le plat du jour_, _le brevet_ …).
+
+**Sources for units 3 to 8:** the same three course outlines (LMU / Édito A2 units 2 to 6, SUL référentiel, unibz). The
+Édito unit "Tous pareils, tous différents" gives unit 5, "En route vers le futur !" unit 6 and "En cuisine" unit 7; unit 8 comes from the SUL education
+theme and the unibz "school memories" topic. As for units 1 and 2, the DELF pages could not be read.
