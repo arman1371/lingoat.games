@@ -423,6 +423,14 @@ export const TAGS = {
     emoji: '🔑',
   },
   'fr-b11-agreement': { label: 'Agree, disagree, nuance', group: 'grammar', emoji: '⚖️' },
+  // grammar points – French B1.1, unit 9
+  'fr-b11-cond-news': { label: 'Conditional for uncertain news', group: 'grammar', emoji: '📣' },
+  'fr-b11-se-faire': { label: 'se faire + infinitive', group: 'grammar', emoji: '🔁' },
+  'fr-b11-doubt-adverbs': {
+    label: 'peut-être, sans doute, soi-disant',
+    group: 'grammar',
+    emoji: '🎚️',
+  },
   // grammar points – French A1.2, unit 1
   'fr-pronominal': { label: 'Pronominal verbs (se lever)', group: 'grammar', emoji: '🪞' },
   'fr-frequency': { label: 'toujours, souvent, ne … jamais', group: 'grammar', emoji: '🔁' },

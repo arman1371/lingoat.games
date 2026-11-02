@@ -5,7 +5,7 @@ import { FRENCH_PRONOUNS } from '@/lib/persons';
 import { subjunctiveFr } from '@/lib/french/subjunctive';
 import type { FrenchForms } from '@/lib/french/conjugation';
 import { imparfait } from '@/lib/french/tenses';
-import { plusQueParfait } from '@/lib/french/moreTenses';
+import { conditionnel, plusQueParfait } from '@/lib/french/moreTenses';
 
 const LEVEL = 'fr-b1-1';
 
@@ -1321,6 +1321,133 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
       ),
     ],
     related: ['fr-b11-opinion'],
+    sources: [S.connector],
+  },
+  {
+    id: 'fr-b11-cond-news',
+    title: 'Conditional for uncertain news',
+    tagline: 'Le ministre aurait démissionné',
+    level: LEVEL,
+    summary:
+      'The conditional is also used to present information that is not confirmed: rumours, first reports, claims. It is formed with the future stem and the imparfait endings; the past conditional is aurait or serait + participle.',
+    sections: [
+      section(
+        'form',
+        'Form',
+        formsTable('Conditionnel présent.', ['être', 'avoir', 'aller', 'pouvoir'], (v) =>
+          conditionnel(v),
+        ),
+        p(
+          'The **past conditional** (*aurait démissionné, serait arrivé, aurait été signé*) reports a past event that is not confirmed. The same endings are used for polite requests (*je voudrais*, *pourriez-vous ?*) and advice (*tu devrais*).',
+        ),
+      ),
+      section(
+        'use',
+        'Use in the news',
+        table(
+          'Reporting with the conditional.',
+          ['Confirmed', 'Not confirmed'],
+          [
+            ['Le ministre a démissionné.', 'Le ministre aurait démissionné.'],
+            ['Il y a trois blessés.', 'Il y aurait trois blessés.'],
+            ['Les prix vont augmenter.', 'Les prix pourraient augmenter.'],
+          ],
+        ),
+        p(
+          'It often comes with *selon* or *d’après* (*Selon la radio, …*) or *dit-on*. Do not use it when you are sure.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Selon la radio, le ministre démissionnerait (past event).  ✓ … aurait démissionné.',
+          '✗ je serai content si tu venais.  ✓ je serais content si tu venais.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-doubt-adverbs', 'fr-b11-passive'],
+    sources: [S.conditional],
+  },
+  {
+    id: 'fr-b11-se-faire',
+    title: 'se faire + infinitive',
+    tagline: 'Things that happen to you',
+    level: LEVEL,
+    summary:
+      'Se faire + infinitive says that something is done to the subject, often something unpleasant or something done by someone else. The participle fait stays invariable before an infinitive.',
+    sections: [
+      section(
+        'rule',
+        'Form and use',
+        table(
+          'Se faire + infinitive.',
+          ['Example', 'Meaning'],
+          [
+            ['Je me suis fait voler mon sac.', 'I had my bag stolen.'],
+            ['Elle s’est fait couper les cheveux.', 'She had her hair cut.'],
+            ['Il s’est fait avoir.', 'He was fooled.'],
+            ['Elle ne se laisse pas influencer.', 'She does not let herself be influenced.'],
+          ],
+        ),
+        p(
+          'It is an alternative to the passive. **Se faire** is for what happens to you; **se laisser** for what you let happen. The auxiliary is always **être**, but **fait** (and **laissé** before an infinitive) does **not** agree: *Elle s’est fait voler son sac.*',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Elle s’est faite voler son sac.  ✓ Elle s’est fait voler son sac.',
+          '✗ Je me suis fait volé.  ✓ Je me suis fait voler.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-passive', 'fr-b11-reflexive-agreement'],
+    sources: [S.passive],
+  },
+  {
+    id: 'fr-b11-doubt-adverbs',
+    title: 'peut-être, sans doute, soi-disant',
+    tagline: 'How sure are you?',
+    level: LEVEL,
+    summary:
+      'Adverbs and phrases show how sure you are: certainement, sûrement; sans doute, probablement; peut-être; and apparemment, soi-disant, prétendument for distance. Il paraît que takes the indicative, il semblerait que the subjunctive.',
+    sections: [
+      section(
+        'rule',
+        'From sure to doubtful',
+        table(
+          'Degrees of certainty.',
+          ['Degree', 'Words', 'Example'],
+          [
+            ['almost sure', 'certainement, sûrement, de source sûre', 'Il viendra sûrement.'],
+            ['probable', 'sans doute, probablement, apparemment', 'Il est sans doute parti.'],
+            ['possible', 'peut-être (que)', 'Peut-être qu’elle a raison.'],
+            [
+              'distance',
+              'soi-disant, prétendument, il paraît que, il semblerait que',
+              'Un soi-disant expert.',
+            ],
+          ],
+        ),
+        p(
+          '**Peut-être** at the start is followed by **que** (*Peut-être qu’il pleuvra*) or by inversion (*Peut-être pleuvra-t-il*). **Sans doute** also allows inversion: *Sans doute est-il parti.* **Il semblerait que** takes the subjunctive: *Il semblerait que ce soit faux.*',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Peut-être il viendra.  ✓ Peut-être qu’il viendra. / Il viendra peut-être.',
+          '✗ Il paraît que la nouvelle soit fausse.  ✓ Il paraît que la nouvelle est fausse.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-certainty', 'fr-b11-cond-news'],
     sources: [S.connector],
   },
 ];

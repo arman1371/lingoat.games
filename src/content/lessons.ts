@@ -1275,6 +1275,33 @@ export const LESSONS = {
       'Certes, mais ça dépend des gens.',
     ],
   },
+  'fr-b11-cond-news': {
+    title: 'Conditional for uncertain news',
+    rule: 'The conditional presents news as unconfirmed: Le ministre aurait démissionné. Il y aurait trois blessés. Form: the future stem + imparfait endings (je serais, nous aurions, ils pourraient). The past conditional is aurait / serait + participle.',
+    examples: [
+      'Le ministre aurait démissionné.',
+      'Il y aurait trois blessés, selon un témoin.',
+      'Les prix pourraient augmenter.',
+    ],
+  },
+  'fr-b11-se-faire': {
+    title: 'se faire + infinitive',
+    rule: 'Se faire + infinitive says that something happens to you or that you have it done: je me suis fait voler mon sac, elle s’est fait couper les cheveux, se faire avoir (to be fooled). In the passé composé, fait stays invariable.',
+    examples: [
+      'Je me suis fait voler mon sac.',
+      'Elle s’est fait couper les cheveux.',
+      'Il s’est fait avoir.',
+    ],
+  },
+  'fr-b11-doubt-adverbs': {
+    title: 'peut-être, sans doute, soi-disant',
+    rule: 'Show how sure you are: certainement and sûrement (very sure), sans doute and probablement (probable), peut-être (possible; peut-être que + clause), apparemment, soi-disant and prétendument (distance). Il paraît que takes the indicative, il semblerait que the subjunctive.',
+    examples: [
+      'Peut-être qu’elle a raison.',
+      'Sans doute est-il déjà parti.',
+      'Il paraît que la nouvelle est fausse.',
+    ],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',

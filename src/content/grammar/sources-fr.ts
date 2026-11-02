@@ -67,5 +67,6 @@ export const FR_SOURCES = {
     'Accord_du_participe_passé_en_français',
     'Accord du participe passé en français',
   ),
+  conditional: wp('Conditionnel', 'Conditionnel'),
   connector: wp('Connecteur_logique', 'Connecteur logique'),
 } as const satisfies Record<string, Source>;
