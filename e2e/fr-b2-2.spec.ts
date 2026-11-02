@@ -59,6 +59,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (se faire)', 'fr-b2-2-solidarite-gap-sefaire'],
   ['sort it (voice)', 'fr-b2-2-solidarite-sort-voice'],
   ['dialogue (unit 3)', 'fr-b2-2-solidarite-dialogues'],
+  // unit 4
+  ['flashcards (unit 4)', 'fr-b2-2-justice-flash-law'],
+  ['gap fill (si clauses)', 'fr-b2-2-justice-gap-si'],
+  ['gap fill (conditions)', 'fr-b2-2-justice-gap-condition'],
+  ['sort it (si systems)', 'fr-b2-2-justice-sort-si'],
+  ['conjugation (conditional)', 'fr-b2-2-justice-conj-conditional'],
+  ['dialogue (unit 4)', 'fr-b2-2-justice-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {

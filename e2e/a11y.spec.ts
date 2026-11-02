@@ -56,6 +56,7 @@ const PAGES: [string, string, string][] = [
     '/fr/levels/fr-b2-2/units/fr-b2-2-solidarite',
     'La richesse en partage',
   ],
+  ['unit 4 B2.2 in French', '/fr/levels/fr-b2-2/units/fr-b2-2-justice', 'Justice et droit'],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],

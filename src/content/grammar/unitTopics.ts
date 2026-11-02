@@ -554,6 +554,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b22-passive', note: 'les repas sont servis, les familles ont été aidées' },
     { topic: 'fr-b22-se-faire', note: 'il s’est fait voler son sac' },
   ],
+  'fr-b2-2-justice': [
+    { topic: 'fr-b22-si-clauses', note: 'si on avait su, on aurait agi' },
+    { topic: 'fr-b22-condition', note: 'à condition que, à moins que, au cas où, sauf si' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

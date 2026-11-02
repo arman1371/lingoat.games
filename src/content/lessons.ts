@@ -1327,6 +1327,24 @@ export const LESSONS = {
       'Le riz se vend en vrac.',
     ],
   },
+  'fr-b22-si-clauses': {
+    title: 'Si clauses',
+    rule: 'Si never takes the conditional. Real possibility: si + présent → futur (Si tu viens, je serai content). Unreal present: si + imparfait → conditionnel (Si j’étais juge, je ferais autrement). Unreal past: si + plus-que-parfait → conditionnel passé (Si j’avais su, je serais venu).',
+    examples: [
+      'Si tu portes plainte, il paiera.',
+      'Si j’avais le temps, je viendrais.',
+      'S’il avait menti, il aurait été condamné.',
+    ],
+  },
+  'fr-b22-condition': {
+    title: 'Conditions: à condition que, au cas où',
+    rule: 'À condition que, à moins que, pourvu que and pour peu que take the subjunctive. Au cas où and dans l’hypothèse où take the conditional. Sauf si, même si and si take the indicative. Je signe à condition que vous lisiez le texte.',
+    examples: [
+      'Je viens, à moins que tu ne préfères rester.',
+      'Prends un parapluie au cas où il pleuvrait.',
+      'Il gagnera, sauf si le tribunal annule tout.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',

@@ -256,4 +256,127 @@ export const FR22B_TOPICS_B: GrammarTopic[] = [
     related: ['fr-b22-passive'],
     sources: [S.passive, S.pronominalVoice],
   },
+  {
+    id: 'fr-b22-si-clauses',
+    title: 'Si clauses',
+    tagline: 'Si j’avais su, je serais venu',
+    level: LEVEL,
+    summary:
+      'French has three si-systems: real possibility (si + présent → futur), unreal present (si + imparfait → conditionnel) and unreal past (si + plus-que-parfait → conditionnel passé). Si is never followed by the conditional.',
+    sections: [
+      section(
+        'systems',
+        'The three systems',
+        table(
+          'Tenses on each side of the si-clause.',
+          ['Meaning', 'After si', 'Main clause', 'Example'],
+          [
+            [
+              'real, possible',
+              'présent',
+              'futur (or présent, impératif)',
+              'Si tu portes plainte, il paiera.',
+            ],
+            [
+              'unreal, now',
+              'imparfait',
+              'conditionnel présent',
+              'Si j’étais juge, je ferais autrement.',
+            ],
+            [
+              'unreal, past',
+              'plus-que-parfait',
+              'conditionnel passé',
+              'S’il avait menti, il aurait été condamné.',
+            ],
+          ],
+        ),
+        tip(
+          'Never after si',
+          'The conditional and the future never follow si in a condition. Say si j’avais su, not si j’aurais su. Si can mean whether in an indirect question (Je me demande s’il viendra): there the future is allowed.',
+        ),
+      ),
+      section(
+        'forms',
+        'Building the forms',
+        p(
+          'The **conditionnel présent** is the future stem plus the imparfait endings: *je serais*, *tu irais*, *nous pourrions*. The **plus-que-parfait** is the imparfait of *avoir* or *être* plus the participle: *j’avais su*, *elle était partie*. The **conditionnel passé** is the conditionnel of *avoir* or *être* plus the participle: *j’aurais su*, *elle serait partie*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Si j’aurais le temps, je viendrais.  ✓ Si j’avais le temps, je viendrais.',
+          '✗ Si j’avais su, je viendrais.  ✓ Si j’avais su, je serais venu.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-condition'],
+    sources: [S.conditionalClause, S.conditional, S.conditionalPast, S.pluperfect],
+  },
+  {
+    id: 'fr-b22-condition',
+    title: 'Conditions: à condition que, au cas où',
+    tagline: 'à condition que · à moins que · au cas où · sauf si',
+    level: LEVEL,
+    summary:
+      'Besides si, French expresses a condition with connectors that decide the mood: subjunctive after à condition que, à moins que and pourvu que, conditional after au cas où, indicative after sauf si and même si.',
+    sections: [
+      section(
+        'connectors',
+        'Connectors and moods',
+        table(
+          'Condition connectors.',
+          ['Connector', 'Meaning', 'Mood', 'Example'],
+          [
+            [
+              'à condition que',
+              'provided that',
+              'subjunctive',
+              'Je signe à condition que vous lisiez le texte.',
+            ],
+            [
+              'pourvu que',
+              'as long as',
+              'subjunctive',
+              'Pourvu qu’il soit honnête, tout ira bien.',
+            ],
+            [
+              'à moins que',
+              'unless',
+              'subjunctive (+ ne)',
+              'Il paiera, à moins qu’il ne fasse appel.',
+            ],
+            [
+              'au cas où',
+              'in case',
+              'conditional',
+              'Prends un avocat au cas où il y aurait un procès.',
+            ],
+            [
+              'sauf si',
+              'unless, except if',
+              'indicative',
+              'Il gagnera, sauf si le tribunal annule tout.',
+            ],
+            ['même si', 'even if', 'indicative (like si)', 'Même s’il avait raison, il perdrait.'],
+          ],
+        ),
+      ),
+      section(
+        'tips',
+        'Choosing between them',
+        compare(
+          { title: 'à moins que', question: '+ subjunctive', example: 'à moins qu’il ne vienne' },
+          { title: 'sauf si', question: '+ indicative', example: 'sauf s’il vient' },
+          { title: 'au cas où', question: '+ conditional', example: 'au cas où il viendrait' },
+        ),
+        mistake(
+          'Watch out',
+          '✗ au cas où il ait un problème.  ✓ au cas où il aurait un problème.',
+          '✗ à condition que vous lisez.  ✓ à condition que vous lisiez.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-si-clauses', 'fr-b22-ne-expletif'],
+    sources: [S.conditionalClause, S.subjunctive],
+  },
 ];

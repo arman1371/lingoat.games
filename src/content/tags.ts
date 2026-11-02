@@ -410,6 +410,13 @@ export const TAGS = {
   'fr-b22-solidarity': { label: 'Solidarity & inequality', group: 'topic', emoji: '🤝' },
   'fr-b22-passive': { label: 'The passive voice', group: 'grammar', emoji: '📥' },
   'fr-b22-se-faire': { label: 'se faire + infinitive', group: 'grammar', emoji: '🎯' },
+  'fr-b22-law': { label: 'Law & justice', group: 'topic', emoji: '⚖️' },
+  'fr-b22-si-clauses': { label: 'Si clauses', group: 'grammar', emoji: '💭' },
+  'fr-b22-condition': {
+    label: 'Conditions: à condition que, au cas où',
+    group: 'grammar',
+    emoji: '🔑',
+  },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
   // grammar points – French A2.1, unit 1
