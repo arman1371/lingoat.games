@@ -23,7 +23,7 @@ const TOPIC = 'media-news' as const;
 
 const events = vocabList(U, 'News and incidents', [
   ['la grève', 'strike', '✊'],
-  ['la panne', 'breakdown, power cut', '🔌'],
+  ['la coupure', 'outage, cut', '🔌'],
   ['l’embouteillage', 'traffic jam', '🚗'],
   ['l’incendie', 'fire', '🔥'],
   ['les dégâts', 'damage', '🏚️'],
@@ -173,7 +173,7 @@ export const cause: UnitContent = {
         byDe(
           vocab,
           'la grève',
-          'la panne',
+          'la coupure',
           'l’embouteillage',
           'l’incendie',
           'les dégâts',
@@ -261,7 +261,7 @@ export const cause: UnitContent = {
       {
         items: [
           sp('sp-greve', 'unscramble', 'grève', mean('la grève'), '✊', 'la grève'),
-          sp('sp-panne', 'unscramble', 'panne', mean('la panne'), '🔌', 'la panne'),
+          sp('sp-coupure', 'unscramble', 'coupure', mean('la coupure'), '🔌', 'la coupure'),
           sp('sp-incendie', 'type', 'incendie', mean('l’incendie'), '🔥', 'l’incendie'),
           sp('sp-enquete', 'type', 'enquête', mean('l’enquête'), '🕵️', 'l’enquête'),
           dictation('sp-consequence', 'conséquence', 'consequence', 'la conséquence'),

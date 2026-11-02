@@ -22,18 +22,18 @@ const REL = 'fr-b12-compound-relatives' as const;
 const TOPIC = 'university-study' as const;
 
 const studies = vocabList(U, 'Studies and university', [
-  ['l’inscription', 'enrolment', '📝'],
-  ['la filière', 'degree programme', '🎓'],
-  ['le cursus', 'course of study', '📚'],
-  ['la bourse', 'grant, scholarship', '💶'],
+  ['le dossier', 'application file', '📝'],
+  ['la discipline', 'field of study', '🎓'],
+  ['le certificat', 'certificate', '📚'],
+  ['le prêt étudiant', 'student loan', '💶'],
   ['le mémoire', 'dissertation', '📖'],
   ['la soutenance', 'oral defence', '🎤'],
-  ['la licence', 'bachelor’s degree', '🎓'],
-  ['le master', 'master’s degree', '🏛️'],
+  ['la moyenne', 'average mark', '🎓'],
+  ['le doctorat', 'doctorate', '🏛️'],
   ['le partiel', 'term exam', '✏️'],
-  ['le campus', 'campus', '🏫'],
-  ['l’amphithéâtre', 'lecture hall', '🏟️'],
-  ['la formation', 'training, education', '🧑‍🎓'],
+  ['la résidence universitaire', 'halls of residence', '🏫'],
+  ['la bibliothèque universitaire', 'university library', '🏟️'],
+  ['la spécialisation', 'specialisation', '🧑‍🎓'],
 ]);
 
 const feelings = vocabList(U, 'Knowledge and feelings', [
@@ -48,8 +48,8 @@ const feelings = vocabList(U, 'Knowledge and feelings', [
 ]);
 
 const verbs = vocabList(U, 'Verbs for learning', [
-  ['s’inscrire', 'to enrol', '🖊️'],
-  ['réviser', 'to revise', '🔁'],
+  ['déposer un dossier', 'to submit an application', '🖊️'],
+  ['potasser', 'to cram', '🔁'],
   ['approfondir', 'to go deeper into', '⛏️'],
   ['maîtriser', 'to master', '🥋'],
   ['retenir', 'to remember', '📌'],
@@ -57,7 +57,7 @@ const verbs = vocabList(U, 'Verbs for learning', [
   ['se spécialiser', 'to specialise', '🎯'],
   ['s’inquiéter', 'to worry', '😬'],
   ['se réjouir', 'to be delighted', '🥳'],
-  ['progresser', 'to make progress', '📈'],
+  ['s’améliorer', 'to improve', '📈'],
 ]);
 
 const phrases = vocabList(U, 'Phrases', [
@@ -151,12 +151,12 @@ export const etudes: UnitContent = {
       quizEmoji(
         byDe(
           vocab,
-          'l’inscription',
-          'la bourse',
+          'le dossier',
+          'le prêt étudiant',
           'le mémoire',
           'le partiel',
-          'le campus',
-          'l’amphithéâtre',
+          'la résidence universitaire',
+          'la bibliothèque universitaire',
           'la réussite',
           'le stress',
         ),
@@ -179,8 +179,8 @@ export const etudes: UnitContent = {
       memory(
         byDe(
           vocab,
-          's’inscrire',
-          'réviser',
+          'déposer un dossier',
+          'potasser',
           'approfondir',
           'maîtriser',
           'retenir',
@@ -205,10 +205,10 @@ export const etudes: UnitContent = {
       listen(
         byDe(
           vocab,
-          'la filière',
-          'le cursus',
+          'la discipline',
+          'le certificat',
           'la soutenance',
-          'la licence',
+          'la moyenne',
           'le savoir',
           'la curiosité',
           'l’inquiétude',
@@ -245,11 +245,18 @@ export const etudes: UnitContent = {
       ),
       {
         items: [
-          sp('sp-bourse', 'unscramble', 'bourse', mean('la bourse'), '💶', 'la bourse'),
-          sp('sp-campus', 'unscramble', 'campus', mean('le campus'), '🏫', 'le campus'),
+          sp('sp-doctorat', 'unscramble', 'doctorat', mean('le doctorat'), '🏛️', 'le doctorat'),
+          sp(
+            'sp-certificat',
+            'unscramble',
+            'certificat',
+            mean('le certificat'),
+            '📚',
+            'le certificat',
+          ),
           sp('sp-memoire', 'type', 'mémoire', mean('le mémoire'), '📖', 'le mémoire'),
-          sp('sp-licence', 'type', 'licence', mean('la licence'), '🎓', 'la licence'),
-          dictation('sp-filiere', 'filière', 'degree programme', 'la filière'),
+          sp('sp-moyenne', 'type', 'moyenne', mean('la moyenne'), '🎓', 'la moyenne'),
+          dictation('sp-discipline', 'discipline', 'field of study', 'la discipline'),
           dictation('sp-curiosite', 'curiosité', 'curiosity', 'la curiosité'),
         ],
       },
@@ -577,10 +584,10 @@ export const etudes: UnitContent = {
             'avec laquelle',
           ]),
           q('c4', 'What does “le mémoire” mean?', 'dissertation', ['memory', 'memo', 'internship']),
-          q('c5', 'Which word means “scholarship”?', 'la bourse', [
-            'la filière',
-            'le cursus',
-            'l’amphithéâtre',
+          q('c5', 'Which word means “student loan”?', 'le prêt étudiant', [
+            'la discipline',
+            'le certificat',
+            'la bibliothèque universitaire',
           ]),
           q('c6', '“Approfondir” means …', 'to go deeper into', [
             'to forget',

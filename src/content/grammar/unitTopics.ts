@@ -540,6 +540,16 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-futur-proche' },
     { topic: 'fr-adjective-position' },
   ],
+  // ---- French C2.1 ------------------------------------------------------------------------
+  'fr-c2-1-registres': [{ topic: 'fr-c21-word-formation' }],
+  'fr-c2-1-humour': [{ topic: 'fr-c21-wordplay' }],
+  'fr-c2-1-recit': [{ topic: 'fr-c21-passe-simple' }, { topic: 'fr-c21-narrative-tenses' }],
+  'fr-c2-1-cause': [{ topic: 'fr-c21-cause-consequence' }],
+  'fr-c2-1-concession': [{ topic: 'fr-c21-concession' }],
+  'fr-c2-1-subjonctif': [{ topic: 'fr-c21-subjunctive' }, { topic: 'fr-c21-reported-speech' }],
+  'fr-c2-1-relief': [{ topic: 'fr-c21-emphasis' }, { topic: 'fr-c21-nominalisation' }],
+  'fr-c2-1-institutions': [{ topic: 'fr-c21-acronyms', note: 'SNCF, BCE, ONG, OTAN' }],
+  'fr-c2-1-debat': [{ topic: 'fr-c21-argument' }],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },
@@ -557,6 +567,41 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a21-participles' },
     { topic: 'fr-a21-negatives', note: 'rien, personne, plus, pas encore' },
     { topic: 'fr-a21-time-markers', note: 'pendant, depuis, en' },
+  ],
+  'fr-a2-1-sorties': [
+    { topic: 'fr-a21-invitations' },
+    { topic: 'fr-a21-modals' },
+    { topic: 'fr-a21-y', note: 'j’y vais, allons-y' },
+  ],
+  'fr-a2-1-souvenirs': [
+    { topic: 'fr-a21-imparfait' },
+    { topic: 'fr-a21-imparfait-use', note: 'autrefois, à l’époque, chaque été' },
+    { topic: 'fr-a21-en', note: 'j’en veux, il y en a' },
+  ],
+  'fr-a2-1-logement': [
+    { topic: 'fr-a21-relatives', note: 'qui, que, où' },
+    { topic: 'fr-a21-comparison', note: 'plus, moins, meilleur, mieux' },
+    { topic: 'fr-a21-condition' },
+  ],
+  'fr-a2-1-portrait': [
+    { topic: 'fr-a21-equality', note: 'aussi, autant, le même' },
+    { topic: 'fr-a21-chaque-tout' },
+    { topic: 'fr-a21-possessive-pronouns' },
+  ],
+  'fr-a2-1-futur': [
+    { topic: 'fr-a21-futur' },
+    { topic: 'fr-a21-futur-irregular', note: 'irai, serai, ferai, viendrai' },
+    { topic: 'fr-a21-si-futur' },
+  ],
+  'fr-a2-1-cuisine': [
+    { topic: 'fr-a21-obligation', note: 'il faut, devoir, interdit de' },
+    { topic: 'fr-a21-ne-que' },
+    { topic: 'fr-a21-measures' },
+  ],
+  'fr-a2-1-etudes': [
+    { topic: 'fr-a21-imparfait-pc' },
+    { topic: 'fr-a21-cause', note: 'parce que, à cause de, grâce à' },
+    { topic: 'fr-a21-consequence' },
   ],
   // ---- French A2.2 ----------------------------------------------------------------------------
   'fr-a2-2-sante': [
@@ -586,5 +631,31 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'fr-b1-2-regrets': [
     { topic: 'fr-b12-past-hypotheses' },
     { topic: 'fr-b12-si-clauses', note: 'si + plus-que-parfait' },
+  ],
+  'fr-a2-2-medias': [
+    { topic: 'fr-a22-cause-consequence' },
+    { topic: 'fr-a22-subjunctive', note: 'il faut que' },
+    { topic: 'fr-a22-pronoun-order', note: 'je te le donne, donne-le-moi' },
+    { topic: 'fr-a22-adverbs-ment' },
+  ],
+  'fr-a2-2-consommer': [
+    { topic: 'fr-a22-conditional', note: 'je voudrais, pourriez-vous' },
+    { topic: 'fr-a22-gerund' },
+    { topic: 'fr-a22-noun-complements', note: 'en, à, de' },
+  ],
+  'fr-a2-2-voyage': [
+    { topic: 'fr-a22-narration', note: 'imparfait and passé composé' },
+    { topic: 'fr-a22-participle-agreement' },
+    { topic: 'fr-a22-demonstrative-pronouns' },
+  ],
+  'fr-a2-2-parcours': [
+    { topic: 'fr-a22-cleft', note: 'c’est … qui / que, ce qui, ce que' },
+    { topic: 'fr-a22-reported-speech' },
+    { topic: 'fr-a22-pronoun-y', note: 'y and en' },
+  ],
+  'fr-a2-2-nature': [
+    { topic: 'fr-a22-imperative-pronouns', note: 'vas-y, prends-en, ne le touche pas' },
+    { topic: 'fr-a22-purpose' },
+    { topic: 'fr-a22-passive' },
   ],
 };

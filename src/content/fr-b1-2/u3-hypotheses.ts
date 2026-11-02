@@ -35,12 +35,12 @@ const dreams = vocabList(U, 'Dreams and chances', [
   ['le conseil', 'piece of advice', '🗣️'],
   ['la proposition', 'suggestion, offer', '🤝'],
   ['le tour du monde', 'trip around the world', '🌍'],
-  ['le défi', 'challenge', '🏁'],
+  ['l’enjeu', 'stake', '🏁'],
   ['la reconversion', 'career change', '🔄'],
 ]);
 
 const verbs = vocabList(U, 'Verbs of imagining and deciding', [
-  ['imaginer', 'to imagine', '🧠'],
+  ['rêvasser', 'to daydream', '🧠'],
   ['supposer', 'to suppose', '🤔'],
   ['envisager', 'to consider', '👀'],
   ['hésiter', 'to hesitate', '😬'],
@@ -189,7 +189,7 @@ export const hypotheses: UnitContent = {
       memory(
         byDe(
           vocab,
-          'imaginer',
+          'rêvasser',
           'supposer',
           'envisager',
           'hésiter',
@@ -217,7 +217,7 @@ export const hypotheses: UnitContent = {
           vocab,
           'le souhait',
           'l’occasion',
-          'le défi',
+          'l’enjeu',
           'hériter',
           'renoncer',
           'sinon',

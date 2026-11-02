@@ -36,15 +36,15 @@ const feelings = vocabList(U, 'Regrets and mistakes', [
 ]);
 
 const verbs = vocabList(U, 'Verbs of regret and repair', [
-  ['regretter', 'to regret', '😢'],
+  ['déplorer', 'to deplore', '😢'],
   ['reprocher', 'to blame, to reproach', '☝️'],
   ['s’en vouloir', 'to be cross with oneself', '🤦'],
   ['pardonner', 'to forgive', '🤝'],
   ['rater', 'to miss, to fail', '🎯'],
   ['gâcher', 'to spoil, to waste', '🗑️'],
-  ['rattraper', 'to make up for, to catch up', '🏃'],
+  ['compenser', 'to make up for', '🩹'],
   ['éviter', 'to avoid', '🚧'],
-  ['échouer', 'to fail', '📉'],
+  ['capituler', 'to give in', '📉'],
   ['s’excuser', 'to apologise', '🙏'],
   ['mériter', 'to deserve', '🏅'],
   ['avoir tort', 'to be wrong', '🙅'],
@@ -167,13 +167,13 @@ export const regrets: UnitContent = {
       memory(
         byDe(
           vocab,
-          'regretter',
+          'déplorer',
           'reprocher',
           's’en vouloir',
           'pardonner',
           'rater',
           'gâcher',
-          'rattraper',
+          'compenser',
           'mériter',
         ),
       ),
@@ -197,7 +197,7 @@ export const regrets: UnitContent = {
           'le reproche',
           'l’excuse',
           'éviter',
-          'échouer',
+          'capituler',
           'hélas',
           'tant pis',
           'autrement',
