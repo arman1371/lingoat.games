@@ -88,6 +88,8 @@ const PAGES: [string, string, string][] = [
   ['unit 8 A2.1 in French', '/fr/levels/fr-a2-1/units/fr-a2-1-etudes', 'École et formation'],
   ['level A2.2 in French', '/fr/levels/fr-a2-2', 'A2.2'],
   ['unit 1 of A2.2 in French', '/fr/levels/fr-a2-2/units/fr-a2-2-sante', 'À votre santé !'],
+  ['level B2.1 in French', '/fr/levels/fr-b2-1', 'B2.1'],
+  ['unit B2.1 in French', '/fr/levels/fr-b2-1/units/fr-b2-1-identite', 'Identités'],
   ['level B1.2 in French', '/fr/levels/fr-b1-2', 'B1.2'],
   ['B1.2 unit 1 in French', '/fr/levels/fr-b1-2/units/fr-b1-2-voyage', 'Et si on partait ?'],
   ['B1.2 unit 2 in French', '/fr/levels/fr-b1-2/units/fr-b1-2-paysages', 'Paysages et météo'],

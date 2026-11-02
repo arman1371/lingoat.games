@@ -66,6 +66,7 @@ two shared test harnesses (`content.test.ts`, `playability.test.tsx`), plus Fren
 - Later French levels add their own helpers in `<level>/helpers.ts`: French B1.1 (`fr-b1-1/helpers.ts`) has `subjTable` (present subjunctive from `subjunctiveFr`, `src/lib/french/subjunctive.ts`), `pqpTable` (plus-que-parfait) and `condTable` (conditional), both from `src/lib/french/moreTenses.ts`. Every unit of a French level ships its mini lessons (`lessons.ts`) **and** full lessons (`src/content/grammar/<level>.ts`) in the same PR, because the grammar test needs a full lesson for every `fr-` mini lesson. See `docs/fr-b1-1-coverage.md`.
 - Tenses beyond the present (passé composé, imparfait, futur simple) come from `src/lib/french/tenses.ts`; `fr-a2-1/helpers.ts`
   wraps them as conjugation tables (`pcTable`, `pcReflexiveTable`, `imparfaitTable`, `futurTable`).
+- `fr-b2-1/helpers.ts` shows the compact authoring helpers for a higher level (`g` gap-fill with `[option, why]` wrong answers, `q`, `qs`, `sent`, `cards`, `frForms` for hand-written tenses).
 - e2e: add the pack to `frenchActivities` in `e2e/helpers.ts` (kept apart from `allActivities`, which counts German library
   games) and follow `e2e/fr-a1-1.spec.ts`.
 

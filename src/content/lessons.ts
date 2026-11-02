@@ -1845,6 +1845,214 @@ export const LESSONS = {
     rule: 'Qui asks about a person. For things use qu’est-ce qui (subject) and qu’est-ce que or que (object); after a preposition or at the end of the question use quoi. Lequel, laquelle, lesquels and lesquelles ask “which one(s)?” and agree with the noun.',
     examples: ['Qui a appelé ?', 'Qu’est-ce que vous prenez ?', 'Laquelle est pour moi ?'],
   },
+  // ---- French B2.1 -------------------------------------------------------------------------
+  'fr-imparfait-pc': {
+    title: 'Imparfait or passé composé?',
+    rule: 'The imparfait sets the scene: how things were, what used to happen, what was going on. The passé composé tells what happened: a single event, a change, something finished. A background action in the imparfait is often interrupted by an event in the passé composé.',
+    examples: [
+      'Quand j’étais petit, nous allions chez ma grand-mère chaque été.',
+      'Je faisais mes devoirs quand le téléphone a sonné.',
+      'En 1998, ma famille a déménagé à Montréal.',
+    ],
+  },
+  'fr-plus-que-parfait': {
+    title: 'The plus-que-parfait',
+    rule: 'Use it for something that had already happened before another past event. Build it with avoir or être in the imparfait plus the past participle. The same verbs as in the passé composé take être (partir, arriver, naître, se lever …), and the participle then agrees with the subject.',
+    examples: [
+      'Quand nous sommes arrivés, le train était déjà parti.',
+      'Elle m’a dit qu’elle avait perdu ses clés.',
+      'Ils avaient quitté leur pays avant ma naissance.',
+    ],
+  },
+  'fr-participle-agreement': {
+    title: 'Agreement of the past participle',
+    rule: 'With être the participle agrees with the subject (elle est née). With avoir it agrees with a direct object placed before the verb (les photos que j’ai trouvées), never after it. In pronominal verbs it agrees when se is the direct object (elles se sont rencontrées), not when it is indirect (elles se sont parlé).',
+    examples: [
+      'Ma grand-mère est née en 1940.',
+      'Les photos que j’ai trouvées datent de mon enfance.',
+      'Elles se sont parlé pendant des heures.',
+    ],
+  },
+  'fr-time-conjunctions': {
+    title: 'Conjunctions of time and their mood',
+    rule: 'Quand, lorsque, dès que, après que, pendant que and depuis que take the indicative. Avant que, jusqu’à ce que and en attendant que take the subjunctive. When both clauses have the same subject, use avant de, jusqu’à and après + infinitive instead.',
+    examples: [
+      'Je t’appelle dès que j’arrive.',
+      'Appelle-moi avant que je parte.',
+      'Il a étudié avant de changer de pays.',
+    ],
+  },
+  'fr-conditionnel-present': {
+    title: 'The conditional for advice and politeness',
+    rule: 'Future stem plus imparfait endings: devrais, pourrais, ferais, irais. It softens advice and requests (vous devriez, pourriez-vous), states a wish (je voudrais), reports unconfirmed news (il serait malade) and answers si + imparfait (si j’étais toi, je me reposerais).',
+    examples: [
+      'À ta place, je consulterais un médecin.',
+      'Pourriez-vous m’indiquer un bon kiné ?',
+      'Selon la presse, ce vaccin serait efficace.',
+    ],
+  },
+  'fr-giving-advice': {
+    title: 'Giving advice',
+    rule: 'From gentle to firm: the conditional (vous devriez), conseiller de + infinitive, il est conseillé de + infinitive, the imperative (reposez-vous !), and il faut que / il vaut mieux que + subjunctive. In the tu imperative of -er verbs the final s is dropped (soigne-toi).',
+    examples: [
+      'Je vous conseille de marcher plus souvent.',
+      'Il vaut mieux que tu ailles chez le médecin.',
+      'Soigne-toi bien !',
+    ],
+  },
+  'fr-subjonctif-present': {
+    title: 'The present subjunctive',
+    rule: 'Take the ils form, drop -ent, add -e, -es, -e, -ent; nous and vous end in -ions, -iez (que je prenne, que nous prenions). Irregular: être (sois), avoir (aie), aller (aille), faire (fasse), pouvoir (puisse), savoir (sache), vouloir (veuille). Used after il faut que, vouloir que, douter que.',
+    examples: [
+      'Il faut que tu sois à l’heure.',
+      'Je doute qu’il ait raison.',
+      'Il faut que je le fasse ce soir.',
+    ],
+  },
+  'fr-opinion-mood': {
+    title: 'Indicative or subjunctive after opinion verbs',
+    rule: 'Certainty takes the indicative (je pense que, je suis sûr que, il est évident que, il est probable que, j’espère que). Doubt, possibility and denial take the subjunctive (je doute que, il est possible que, il se peut que). Penser, croire and être sûr take the subjunctive when negated or questioned.',
+    examples: [
+      'Je pense qu’il a raison.',
+      'Je ne pense pas qu’il ait raison.',
+      'J’espère qu’il viendra.',
+    ],
+  },
+  'fr-subjunctive-or-infinitive': {
+    title: 'Subjunctive or infinitive?',
+    rule: 'If both verbs have the same subject, use the infinitive (je suis content d’être ici). If the subject changes, use que + subjunctive (je suis content que tu sois ici). With a general statement and no named person, il faut is followed by the infinitive. Never combine que and de.',
+    examples: [
+      'Je suis content d’être ici.',
+      'Je suis content que tu sois ici.',
+      'Il faut partir plus tôt.',
+    ],
+  },
+  'fr-subjonctif-passe': {
+    title: 'The past subjunctive',
+    rule: 'Put avoir or être in the present subjunctive and add the past participle (que j’aie fini, qu’elle soit partie). Use it for something that happened before the main verb or is finished: je regrette qu’il soit parti, bien qu’il ait plu.',
+    examples: [
+      'Je suis ravi que tu sois venu.',
+      'Je regrette que vous n’ayez pas appelé.',
+      'Bien qu’il ait plu, le sol est sec.',
+    ],
+  },
+  'fr-cause-conjunctions': {
+    title: 'Giving a reason: conjunctions',
+    rule: 'Parce que gives a new reason (and answers pourquoi ?), puisque a reason both people know, comme starts a sentence, car follows a comma and never begins a sentence; étant donné que and du fait que are formal; d’autant que adds a further reason. All take the indicative.',
+    examples: [
+      'Elle est partie parce qu’elle ne trouvait pas de travail.',
+      'Puisque tu connais la ville, guide-nous.',
+      'Comme il pleuvait, nous sommes restés.',
+    ],
+  },
+  'fr-cause-prepositions': {
+    title: 'Giving a reason: prepositions',
+    rule: 'With a noun use à cause de (negative or neutral), grâce à (positive), en raison de (formal), faute de (for lack of); à force de takes an infinitive (by dint of). Contract with the article: à cause du, grâce aux, en raison des.',
+    examples: [
+      'Ils ont fui à cause de la guerre.',
+      'Grâce à une association, il a obtenu un visa.',
+      'Faute de temps, il n’a pas fini.',
+    ],
+  },
+  'fr-purpose': {
+    title: 'Expressing a purpose',
+    rule: 'With the same subject use pour, afin de, de manière à or dans le but de and an infinitive (il vient pour renouveler son visa). With a new subject use pour que, afin que, de peur que and the subjunctive (je vous écris pour que vous examiniez mon dossier).',
+    examples: [
+      'Il a pris rendez-vous pour renouveler son titre de séjour.',
+      'Je vous envoie ce formulaire pour que vous le remplissiez.',
+      'Il se dépêche de peur de rater le train.',
+    ],
+  },
+  'fr-consequence': {
+    title: 'Expressing consequence',
+    rule: 'Link a result with donc, alors, c’est pourquoi or (formal) par conséquent. Si bien que and de sorte que (result) take the indicative; tellement, si and tant … que express an effect that follows from a degree; trop / assez … pour (+ infinitive, or pour que + subjunctive) says whether a quality is enough.',
+    examples: [
+      'Il pleut, donc nous restons à la maison.',
+      'Il est si fatigué qu’il s’endort au travail.',
+      'Il est assez grand pour comprendre.',
+    ],
+  },
+  'fr-cause-verbs': {
+    title: 'Verbs of cause and effect',
+    rule: 'Provoquer, causer, entraîner and engendrer have the cause as subject; conduire à and mener à describe a process. Être dû à, résulter de and découler de have the effect as subject. Dû agrees: des retards dus à une grève.',
+    examples: [
+      'La sécheresse a provoqué une hausse des prix.',
+      'Ce problème est dû à un manque de moyens.',
+      'Les accidents résultent de la fatigue.',
+    ],
+  },
+  'fr-passe-simple': {
+    title: 'The passé simple (recognition)',
+    rule: 'The passé simple is the past tense of written narrative: single events in sequence, while the imparfait gives the background. Third persons: -a / -èrent (il entra), -it / -irent (il finit), -ut / -urent (il eut), venir: il vint. In speech the passé composé replaces it.',
+    examples: [
+      'Il ouvrit la porte et entra.',
+      'Un étranger vint au village.',
+      'Il fit un pas, puis s’arrêta.',
+    ],
+  },
+  'fr-passe-anterieur': {
+    title: 'The passé antérieur (recognition)',
+    rule: 'Avoir or être in the passé simple plus the past participle. It marks an event just before another one told in the passé simple, after quand, lorsque, dès que, aussitôt que, après que. In speech it is replaced by the passé composé (a eu fini) or the plus-que-parfait.',
+    examples: [
+      'Quand il eut fini son récit, personne ne dit un mot.',
+      'Dès qu’elle fut arrivée, la pluie commença.',
+      'Après qu’ils eurent mangé, ils sortirent.',
+    ],
+  },
+  'fr-relative-pronouns': {
+    title: 'Relative pronouns: qui, que, où, dont',
+    rule: 'Qui replaces the subject (une ville qui attire), que the direct object (le quartier que je préfère), où a place or a time (la ville où j’habite, le jour où il est parti) and dont a complement with de, also meaning “whose” (le projet dont on parle, une ville dont le patrimoine est riche).',
+    examples: [
+      'C’est une ville qui attire beaucoup de touristes.',
+      'La ville où j’habite est calme.',
+      'Voici l’architecte dont je t’ai parlé.',
+    ],
+  },
+  'fr-relative-ce': {
+    title: 'Ce qui, ce que, ce dont',
+    rule: 'Without an antecedent French says ce qui (subject), ce que (object), ce dont (de + idea) and ce à quoi (à + idea), also after tout and rien. Ce qui me plaît, c’est le calme.',
+    examples: [
+      'Ce qui me plaît, c’est le calme.',
+      'Ce que je cherche, c’est un appartement.',
+      'Ce dont j’ai besoin, c’est d’un espace vert.',
+    ],
+  },
+  'fr-lequel': {
+    title: 'Compound relatives: lequel, auquel, duquel',
+    rule: 'After a preposition, things take lequel, laquelle, lesquels, lesquelles (agreeing with the noun). With à they become auquel, à laquelle, auxquels, auxquelles; with de they become duquel, de laquelle, desquels, desquelles. Prepositional phrases ending in de (au pied de, près de) take duquel, not dont.',
+    examples: [
+      'L’appartement dans lequel j’habite est lumineux.',
+      'Les problèmes auxquels nous faisons face sont graves.',
+      'L’immeuble au pied duquel il y a un parc est calme.',
+    ],
+  },
+  'fr-relative-choice': {
+    title: 'Choosing the right relative pronoun',
+    rule: 'Subject: qui. Direct object: que. Person after a preposition: preposition + qui (l’ami chez qui j’habite). Thing after a preposition: lequel. De + noun or whose: dont. Place or time: où (simpler than dans lequel).',
+    examples: [
+      'L’ami chez qui j’habite est absent.',
+      'La cuisine dont les murs sont blancs est lumineuse.',
+      'La ville où je travaille est loin.',
+    ],
+  },
+  'fr-passive': {
+    title: 'The passive and the pronominal passive',
+    rule: 'Passive: être (in the tense of the active verb) + past participle, which agrees with the subject, with the doer after par (la loi a été votée par le conseil). Pronominal passive: se + verb for general facts (ce quartier se visite à pied, les vélos se louent à la gare). French often prefers on with an active verb.',
+    examples: [
+      'Ces rues ont été rénovées par la mairie.',
+      'Ce quartier se visite à pied.',
+      'Les vélos se louent à la gare.',
+    ],
+  },
+  'fr-concession': {
+    title: 'Opposition and concession',
+    rule: 'Bien que and quoique take the subjunctive; alors que, tandis que and même si take the indicative (no future after si); malgré and en dépit de take a noun; pourtant, cependant and toutefois link two sentences. Avoid malgré que.',
+    examples: [
+      'Bien que la ville soit polluée, les habitants y restent.',
+      'Malgré la pluie, le marché a eu lieu.',
+      'Même si c’est cher, c’est nécessaire.',
+    ],
+  },
   // ---- French B1.2 -------------------------------------------------------------------------
   'fr-futur-simple': {
     title: 'The simple future',
