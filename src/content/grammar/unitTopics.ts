@@ -564,4 +564,30 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-superlative' },
     { topic: 'fr-interrogative-pronouns' },
   ],
+  'fr-a2-2-medias': [
+    { topic: 'fr-a22-cause-consequence' },
+    { topic: 'fr-a22-subjunctive', note: 'il faut que' },
+    { topic: 'fr-a22-pronoun-order', note: 'je te le donne, donne-le-moi' },
+    { topic: 'fr-a22-adverbs-ment' },
+  ],
+  'fr-a2-2-consommer': [
+    { topic: 'fr-a22-conditional', note: 'je voudrais, pourriez-vous' },
+    { topic: 'fr-a22-gerund' },
+    { topic: 'fr-a22-noun-complements', note: 'en, à, de' },
+  ],
+  'fr-a2-2-voyage': [
+    { topic: 'fr-a22-narration', note: 'imparfait and passé composé' },
+    { topic: 'fr-a22-participle-agreement' },
+    { topic: 'fr-a22-demonstrative-pronouns' },
+  ],
+  'fr-a2-2-parcours': [
+    { topic: 'fr-a22-cleft', note: 'c’est … qui / que, ce qui, ce que' },
+    { topic: 'fr-a22-reported-speech' },
+    { topic: 'fr-a22-pronoun-y', note: 'y and en' },
+  ],
+  'fr-a2-2-nature': [
+    { topic: 'fr-a22-imperative-pronouns', note: 'vas-y, prends-en, ne le touche pas' },
+    { topic: 'fr-a22-purpose' },
+    { topic: 'fr-a22-passive' },
+  ],
 };

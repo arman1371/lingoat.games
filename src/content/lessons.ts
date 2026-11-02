@@ -1308,6 +1308,130 @@ export const LESSONS = {
     rule: 'Qui asks about a person. For things use qu’est-ce qui (subject) and qu’est-ce que or que (object); after a preposition or at the end of the question use quoi. Lequel, laquelle, lesquels and lesquelles ask “which one(s)?” and agree with the noun.',
     examples: ['Qui a appelé ?', 'Qu’est-ce que vous prenez ?', 'Laquelle est pour moi ?'],
   },
+  'fr-a22-cause-consequence': {
+    title: 'Cause and consequence: parce que, donc',
+    rule: 'Parce que and car give the cause; parce que can start an answer, car cannot. Grâce à gives a positive cause and à cause de a negative one, both followed by a noun. Donc, alors and du coup give the consequence and come after the first idea.',
+    examples: [
+      'Je lis la presse en ligne parce que c’est gratuit.',
+      'Grâce à ce podcast, j’apprends beaucoup.',
+      'Il pleut, donc je reste devant la télé.',
+    ],
+  },
+  'fr-a22-subjunctive': {
+    title: 'The subjunctive after il faut que',
+    rule: 'After il faut que, vouloir que and bien que the verb goes into the subjunctive. For most verbs the forms are the ils form of the present without -ent, plus -e, -es, -e, -ions, -iez, -ent: que je parle, que nous finissions. Être, avoir, aller and faire are irregular.',
+    examples: [
+      'Il faut que je lise cet article.',
+      'Il faut que tu sois à l’heure.',
+      'Je veux que vous veniez.',
+    ],
+  },
+  'fr-a22-pronoun-order': {
+    title: 'Two object pronouns: je te le donne',
+    rule: 'With two pronouns before the verb the order is me / te / nous / vous, then le / la / les, then lui / leur, then y, then en. In the positive imperative the direct pronoun comes first, joined with hyphens: donne-le-moi. In the negative it is back to the normal order.',
+    examples: ['Je te le dis.', 'Envoyez-la-moi.', 'Ne me le donne pas.'],
+  },
+  'fr-a22-adverbs-ment': {
+    title: 'Adverbs in -ment',
+    rule: 'Take the feminine form of the adjective and add -ment: lent → lentement, heureux → heureusement. If the masculine ends in a vowel, add -ment to it: vrai → vraiment. Adjectives in -ant and -ent give -amment and -emment: constant → constamment. Bon becomes bien, mauvais becomes mal.',
+    examples: ['Il parle lentement.', 'Heureusement, il y a internet.', 'Elle répond poliment.'],
+  },
+  'fr-a22-conditional': {
+    title: 'The present conditional: je voudrais',
+    rule: 'The conditional uses the future stem plus the imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient): je voudrais, tu pourrais, nous serions. Use it for polite requests, wishes and advice. In a si + imparfait sentence the main clause takes the conditional.',
+    examples: [
+      'Je voudrais un renseignement.',
+      'Pourriez-vous m’aider ?',
+      'Si j’avais le temps, je réparerais tout.',
+    ],
+  },
+  'fr-a22-gerund': {
+    title: 'The gerund: en réparant',
+    rule: 'The gerund is en + the nous form of the present without -ons, plus -ant: en achetant, en finissant, en faisant. Only three verbs are irregular: être (en étant), avoir (en ayant) and savoir (en sachant). It says how or while something happens, and the subject is the same as in the main verb.',
+    examples: [
+      'On économise en achetant d’occasion.',
+      'Il écoute la radio en réparant la lampe.',
+      'En étant prudent, on évite les erreurs.',
+    ],
+  },
+  'fr-a22-noun-complements': {
+    title: 'Noun complements: en, à, de',
+    rule: 'En gives the material (une table en bois). À gives the use (une machine à laver, une tasse à café). De gives the content, the kind or the origin (un verre de lait, un sac de sport). No article follows when the noun is general.',
+    examples: ['Un pull en laine.', 'Une brosse à dents.', 'Un sac de voyage.'],
+  },
+  'fr-a22-narration': {
+    title: 'Telling a story: imparfait and passé composé',
+    rule: 'Use the imparfait for the setting: the weather, descriptions, feelings and habits. Use the passé composé for the events that move the story forward. An action in progress (imparfait) is often interrupted by a new event (passé composé): je dormais quand le téléphone a sonné.',
+    examples: [
+      'Il pleuvait quand nous sommes arrivés.',
+      'Soudain, le train s’est arrêté.',
+      'Nous allions toujours à la mer.',
+    ],
+  },
+  'fr-a22-participle-agreement': {
+    title: 'Agreement of the past participle',
+    rule: 'With être the participle agrees with the subject: elle est allée, ils sont arrivés. With avoir it agrees with a direct object placed before the verb: la valise que j’ai perdue, je l’ai vue. Without such an object it stays unchanged: nous avons visité la ville.',
+    examples: ['Elle est partie tôt.', 'Les photos que j’ai prises.', 'Elles se sont retrouvées.'],
+  },
+  'fr-a22-demonstrative-pronouns': {
+    title: 'Celui, celle, ceux, celles',
+    rule: 'Celui (m), celle (f), ceux (m pl) and celles (f pl) replace a noun already mentioned. They are never alone: they are followed by -ci or -là, by de + noun, or by qui / que. Ce is not used alone for a noun.',
+    examples: [
+      'Je prends celui de 11 h.',
+      'Celle-ci est moins chère que celle-là.',
+      'Ceux qui partent tôt.',
+    ],
+  },
+  'fr-a22-cleft': {
+    title: 'Emphasis: c’est … qui / que',
+    rule: 'To stress a word, put it between c’est and qui or que. Qui replaces a subject (c’est Marie qui a téléphoné), que replaces an object or a complement (c’est ce poste que je veux). For a whole idea use ce qui, ce que and ce dont: ce que je cherche, c’est un emploi.',
+    examples: [
+      'C’est moi qui ai écrit la lettre.',
+      'C’est à Lyon que j’ai étudié.',
+      'Ce qui m’intéresse, c’est la médecine.',
+    ],
+  },
+  'fr-a22-reported-speech': {
+    title: 'Reported speech in the present',
+    rule: 'When the reporting verb is in the present, the tense does not change. A statement is introduced by dit que, a yes / no question by demande si, a question word stays (où, quand) or becomes ce que / ce qui, and a command becomes dire de + infinitive. Pronouns change with the speaker and there is no inversion.',
+    examples: [
+      'Elle dit qu’elle cherche un stage.',
+      'Il me demande si j’ai un diplôme.',
+      'Le professeur nous dit de travailler.',
+    ],
+  },
+  'fr-a22-pronoun-y': {
+    title: 'The pronouns y and en',
+    rule: 'Y replaces à, dans, en or chez + a place or a thing (not a person): j’y vais, j’y pense. En replaces de + a place or a thing, or a quantity: j’en reviens, j’en ai besoin. Both stand before the verb, or before the auxiliary in the passé composé.',
+    examples: [
+      'J’y vais tous les jours.',
+      'Elle y habite depuis 2020.',
+      'Il en parle tout le temps.',
+    ],
+  },
+  'fr-a22-imperative-pronouns': {
+    title: 'The imperative with pronouns',
+    rule: 'In a positive command the pronouns follow the verb, joined by hyphens, with the direct pronoun first: donne-le-moi, prends-en, vas-y. Me becomes moi at the end. In a negative command the pronouns stay before the verb in the normal order: ne le touche pas, n’y va pas. Keep the s before y and en: vas-y.',
+    examples: ['Vas-y !', 'Prends-en un peu.', 'Ne le touchez pas.'],
+  },
+  'fr-a22-purpose': {
+    title: 'Purpose: pour, afin de, pour que',
+    rule: 'To say what something is for, use pour or the more formal afin de + infinitive when the subject does not change: je pars tôt pour éviter la chaleur. When the subject changes use pour que or afin que + subjunctive: je t’explique pour que tu comprennes.',
+    examples: [
+      'Nous partons tôt pour éviter la chaleur.',
+      'Il prend une carte afin de ne pas se perdre.',
+      'On crée un parc pour que les animaux soient protégés.',
+    ],
+  },
+  'fr-a22-passive': {
+    title: 'The passive voice',
+    rule: 'The object of the active sentence becomes the subject: être (in the right tense) + past participle, which agrees with the new subject. The doer is introduced by par (or de after verbs of state). Le garde ferme la porte → La porte est fermée par le garde.',
+    examples: [
+      'Ce parc est protégé par l’État.',
+      'Les arbres ont été abattus par la tempête.',
+      'Le lac est entouré de montagnes.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
