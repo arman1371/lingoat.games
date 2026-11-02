@@ -1266,6 +1266,70 @@ export const LESSONS = {
       'J’ai de la fièvre, alors je reste au lit.',
     ],
   },
+  'fr-a12-savoir-pouvoir': {
+    title: 'savoir, pouvoir, vouloir',
+    rule: 'Savoir means to know how to do something you have learnt: je sais conduire. Pouvoir means can, to be allowed or able: je peux venir. Vouloir means to want: je veux travailler. All three are irregular and are followed by an infinitive.',
+    examples: [
+      'Elle sait parler anglais.',
+      'Je peux venir demain.',
+      'Nous voulons changer de poste.',
+    ],
+  },
+  'fr-a12-si-present': {
+    title: 'si + present',
+    rule: 'Si (if) is followed by the present, never the future. The result can be the present, the near future or an order: Si tu as le temps, tu peux venir. Si elle réussit, elle va déménager. Si vous cherchez un emploi, envoyez votre CV. Si + il becomes s’il.',
+    examples: [
+      'Si tu veux, tu peux venir.',
+      'S’il pleut, je reste à la maison.',
+      'Si vous êtes prêt, commençons.',
+    ],
+  },
+  'fr-a12-depuis-pendant': {
+    title: 'depuis and pendant',
+    rule: 'Depuis + present says how long something has lasted until now: je travaille ici depuis trois ans. Pendant + passé composé says how long something lasted in the past: j’ai travaillé pendant trois ans. Depuis also gives a starting point: depuis janvier.',
+    examples: [
+      'J’habite ici depuis 2019.',
+      'Elle a dormi pendant dix heures.',
+      'Il cherche depuis lundi.',
+    ],
+  },
+  'fr-a12-qui-que': {
+    title: 'qui and que',
+    rule: 'Qui and que join two sentences and replace a noun that was already named. Qui replaces the subject: un métier qui me plaît. Que replaces the object: un métier que j’aime. Que becomes qu’ before a vowel: le poste qu’il cherche. Qui never changes.',
+    examples: [
+      'J’ai un patron qui est sympa.',
+      'C’est le poste que je cherche.',
+      'Le métier qu’elle aime.',
+    ],
+  },
+  'fr-a12-intensity': {
+    title: 'très, trop, assez, un peu',
+    rule: 'Très (very), assez (fairly), trop (too) and un peu (a little) go before adjectives and adverbs: très difficile, trop tard. With a verb use beaucoup, trop or un peu after it: il travaille beaucoup, elle parle un peu. Before a noun add de: trop de travail.',
+    examples: [
+      'Ce poste est très intéressant.',
+      'J’ai trop de travail.',
+      'Elle parle un peu anglais.',
+    ],
+  },
+  'fr-a12-quantity-compare': {
+    title: 'plus de, moins de, autant de',
+    rule: 'To compare quantities of a noun use plus de (more), moins de (less) or autant de (as much, as many), then que: Il y a plus de bruit en ville qu’à la campagne. De becomes d’ before a vowel: autant d’arbres que de maisons.',
+    examples: [
+      'Il y a moins de pollution ici.',
+      'J’ai autant de travail que toi.',
+      'Il y a plus d’arbres que de maisons.',
+    ],
+  },
+  'fr-a12-en': {
+    title: 'The pronoun en',
+    rule: 'En replaces du, de la, des or de + a noun that was already mentioned. It goes right before the verb. A number or quantity stays after the verb: J’en ai trois. Il y en a beaucoup. In the negative ne goes before en: je n’en ai pas.',
+    examples: ['Tu veux du pain ? Oui, j’en veux.', 'J’en ai trois.', 'Nous n’en avons pas.'],
+  },
+  'fr-a12-adverbs': {
+    title: 'Adverbs in -ment',
+    rule: 'Many adverbs end in -ment. Take the feminine adjective and add -ment: lent → lente → lentement, complet → complète → complètement. If the adjective already ends in -e, add -ment: calme → calmement. The adverb goes after the verb.',
+    examples: ['Il marche lentement.', 'Elle vit calmement.', 'Nous avons complètement changé.'],
+  },
   'fr-likes': {
     title: 'J’aime, je déteste …',
     rule: 'Aimer, adorer and détester are regular -er verbs. Before a noun use the definite article, even for things in general: j’aime le café, elle adore les chats. Before an activity use the infinitive: j’aime danser. Add beaucoup for more: j’aime beaucoup la musique.',

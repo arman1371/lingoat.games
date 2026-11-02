@@ -570,6 +570,19 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a12-pc-pronominal' },
     { topic: 'fr-a12-because' },
   ],
+  'fr-a1-2-travail': [
+    { topic: 'fr-a12-savoir-pouvoir' },
+    { topic: 'fr-a12-si-present' },
+    { topic: 'fr-a12-depuis-pendant' },
+    { topic: 'fr-a12-qui-que' },
+    { topic: 'fr-a12-intensity' },
+  ],
+  'fr-a1-2-nature': [
+    { topic: 'fr-a12-quantity-compare' },
+    { topic: 'fr-a12-en' },
+    { topic: 'fr-a12-adverbs' },
+    { topic: 'fr-er-verbs', note: 'déménager, cultiver, recycler' },
+  ],
   // ---- French A2.1 ----------------------------------------------------------------------------
   'fr-a2-1-parcours': [
     { topic: 'fr-a21-passe-compose', note: 'naître, aller, se marier' },

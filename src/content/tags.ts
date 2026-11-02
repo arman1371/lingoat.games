@@ -396,6 +396,20 @@ export const TAGS = {
   'fr-a12-lui-leur': { label: 'lui and leur', group: 'grammar', emoji: '🎁' },
   'fr-a12-pc-pronominal': { label: 'Pronominal verbs in the past', group: 'grammar', emoji: '🩹' },
   'fr-a12-because': { label: 'pourquoi, parce que, alors', group: 'grammar', emoji: '🧩' },
+  // grammar points – French A1.2, unit 6
+  'fr-a12-savoir-pouvoir': { label: 'savoir, pouvoir, vouloir', group: 'grammar', emoji: '🛠️' },
+  'fr-a12-si-present': { label: 'si + present', group: 'grammar', emoji: '🔀' },
+  'fr-a12-depuis-pendant': { label: 'depuis, pendant', group: 'grammar', emoji: '⏱️' },
+  'fr-a12-qui-que': { label: 'qui and que', group: 'grammar', emoji: '🔗' },
+  'fr-a12-intensity': { label: 'très, trop, assez, un peu', group: 'grammar', emoji: '🎚️' },
+  // grammar points – French A1.2, unit 7
+  'fr-a12-quantity-compare': {
+    label: 'plus de, moins de, autant de',
+    group: 'grammar',
+    emoji: '🧮',
+  },
+  'fr-a12-en': { label: 'The pronoun en', group: 'grammar', emoji: '🔢' },
+  'fr-a12-adverbs': { label: 'Adverbs in -ment', group: 'grammar', emoji: '🐢' },
   // grammar points – French A1.1, unit 5
   'fr-likes': { label: 'J’aime, je déteste …', group: 'grammar', emoji: '💛' },
   'fr-negation': { label: 'ne … pas', group: 'grammar', emoji: '🚫' },

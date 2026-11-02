@@ -47,6 +47,8 @@ const PAGES: [string, string, string][] = [
   ['A1.2 unit 3 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-logement', 'Chez moi'],
   ['A1.2 unit 4 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-vacances', 'Bonnes vacances !'],
   ['A1.2 unit 5 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-sante', 'Pas de chance !'],
+  ['A1.2 unit 6 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-travail', 'Beau travail !'],
+  ['A1.2 unit 7 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-nature', 'Au grand air'],
   ['level A2.1 in French', '/fr/levels/fr-a2-1', 'A2.1'],
   ['unit 1 A2.1 in French', '/fr/levels/fr-a2-1/units/fr-a2-1-parcours', 'Nouvelles vies'],
   ['level A2.2 in French', '/fr/levels/fr-a2-2', 'A2.2'],

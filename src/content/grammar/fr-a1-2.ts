@@ -981,4 +981,391 @@ export const FR12_TOPICS: GrammarTopic[] = [
     related: ['fr-questions', 'fr-a12-devoir-falloir'],
     sources: [S.pourquoi, S.parceQue],
   },
+  {
+    id: 'fr-a12-savoir-pouvoir',
+    title: 'savoir, pouvoir, vouloir',
+    tagline: 'What you can do, what you may do, what you want',
+    level: LEVEL,
+    summary:
+      'Savoir is a skill you have learnt, pouvoir is a possibility or permission, vouloir is a wish. All three are irregular and are followed by an infinitive.',
+    sections: [
+      section(
+        'forms',
+        'Three irregular verbs',
+        table(
+          'Present tense.',
+          ['Person', 'savoir', 'pouvoir', 'vouloir'],
+          [
+            ['je', 'sais', 'peux', 'veux'],
+            ['tu', 'sais', 'peux', 'veux'],
+            ['il/elle/on', 'sait', 'peut', 'veut'],
+            ['nous', 'savons', 'pouvons', 'voulons'],
+            ['vous', 'savez', 'pouvez', 'voulez'],
+            ['ils/elles', 'savent', 'peuvent', 'veulent'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'The three singular forms of pouvoir and vouloir sound alike: je peux, tu peux, il peut. They end in -x, -x, -t.',
+          'Savoir has no -x: je sais, tu sais, il sait.',
+        ),
+      ),
+      section(
+        'meaning',
+        'savoir or pouvoir?',
+        p(
+          'Use **savoir** for something you learnt: *Je sais nager* (I learnt it). Use **pouvoir** for a possibility, permission or a request: *Je peux venir demain* (I am free), *Je peux entrer ?* (May I?). English “can” covers both, French keeps them apart.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je peux conduire. (meaning: I learnt it)  ✓ Je sais conduire.',
+          '✗ Elle peut parler quatre langues. (a skill)  ✓ Elle sait parler quatre langues.',
+          '✗ Je sais venir demain.  ✓ Je peux venir demain.',
+        ),
+        examples(
+          ['Il sait utiliser ce logiciel.', 'He knows how to use this software.'],
+          ['Vous pouvez commencer lundi ?', 'Can you start on Monday?'],
+        ),
+      ),
+    ],
+    related: ['fr-prendre-vouloir', 'fr-a12-devoir-falloir'],
+    sources: [S.savoir, S.pouvoir, FR.vouloir],
+  },
+  {
+    id: 'fr-a12-si-present',
+    title: 'si + present',
+    tagline: 'If you want, you can',
+    level: LEVEL,
+    summary:
+      'After si (if) the verb is in the present, never the future. The result can be the present, the near future (aller + infinitive) or an order.',
+    sections: [
+      section(
+        'pattern',
+        'si + present, then …',
+        p(
+          '**Si** introduces a condition that is possible. The verb after si is in the **present**; the result can be the present, the near future or the imperative.',
+        ),
+        table(
+          'Three results after si + present.',
+          ['Result', 'Example'],
+          [
+            ['present', 'Si tu as le temps, tu peux m’aider.'],
+            ['near future', 'Si elle réussit, elle va déménager.'],
+            ['imperative', 'Si vous cherchez un emploi, envoyez votre CV.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'The two halves can swap places: Tu peux m’aider si tu as le temps. The condition still has si + present.',
+          'Si + il becomes s’il, but si + elle stays si elle.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'No future after si',
+        mistake(
+          'Watch out',
+          '✗ Si tu viendras, je serai content.  ✓ Si tu viens, je serai content.',
+          '✗ Si il pleut, je reste.  ✓ S’il pleut, je reste.',
+          '✗ Je reste si elle pleut.  ✓ Je reste s’il pleut.',
+        ),
+        examples(
+          ['Si tu veux, tu peux venir.', 'If you want, you can come.'],
+          ['S’il y a trop de travail, il démissionne.', 'If there is too much work, he resigns.'],
+        ),
+      ),
+    ],
+    related: ['fr-futur-proche', 'fr-imperative'],
+    sources: [S.si],
+  },
+  {
+    id: 'fr-a12-depuis-pendant',
+    title: 'depuis and pendant',
+    tagline: 'Since when? For how long?',
+    level: LEVEL,
+    summary:
+      'Depuis + present says how long something has lasted until now and gives its starting point. Pendant + passé composé says how long something lasted in the past.',
+    sections: [
+      section(
+        'contrast',
+        'Still going on, or finished?',
+        table(
+          'depuis and pendant.',
+          ['Word', 'Situation', 'Example'],
+          [
+            ['depuis + present', 'still true now', 'Je travaille ici depuis trois ans.'],
+            ['depuis + a date', 'still true now', 'J’habite à Lyon depuis 2019.'],
+            ['pendant + passé composé', 'finished', 'J’ai travaillé en Italie pendant deux ans.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'English uses “have been … for” for depuis (I have been working here for three years), and French simply uses the present.',
+        ),
+      ),
+      section(
+        'others',
+        'depuis, pendant, il y a, dans',
+        p(
+          'Do not mix them up: **depuis** looks from now back to the start; **pendant** gives the length of a past period; **il y a** says how long *ago* something happened (you learnt it in unit 2); **dans** says how long *from now*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je travaille ici pendant trois ans.  ✓ Je travaille ici depuis trois ans.',
+          '✗ J’ai habité à Nice depuis cinq ans. (and I left)  ✓ J’ai habité à Nice pendant cinq ans.',
+        ),
+        examples(
+          [
+            'Elle cherche un emploi depuis janvier.',
+            'She has been looking for a job since January.',
+          ],
+          ['Il a dormi pendant dix heures.', 'He slept for ten hours.'],
+        ),
+      ),
+    ],
+    related: ['fr-time-markers', 'fr-passe-compose-avoir'],
+    sources: [S.depuis, S.pendant],
+  },
+  {
+    id: 'fr-a12-qui-que',
+    title: 'qui and que',
+    tagline: 'A job that I like, a boss who is nice',
+    level: LEVEL,
+    summary:
+      'Qui and que join two sentences. Qui replaces the subject of the second part, que replaces its object. Que becomes qu’ before a vowel.',
+    sections: [
+      section(
+        'subject-object',
+        'Subject: qui, object: que',
+        p(
+          'Instead of repeating a noun, use a **relative pronoun**. Ask what the noun does in the second part. If it is the *subject* (it does the action), use **qui**. If it is the *object* (it receives the action), use **que**.',
+        ),
+        table(
+          'qui or que?',
+          ['Two sentences', 'Joined'],
+          [
+            ['J’ai un patron. Il est sympa.', 'J’ai un patron qui est sympa.'],
+            ['C’est un métier. Il me plaît.', 'C’est un métier qui me plaît.'],
+            ['Voici le poste. Je cherche ce poste.', 'Voici le poste que je cherche.'],
+            ['C’est un métier. Elle aime ce métier.', 'C’est un métier qu’elle aime.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'After qui comes the verb. After que comes a subject (je, elle, mon ami …) and then the verb.',
+          'Que becomes qu’ before a vowel: qu’elle, qu’il, qu’on. Qui never changes.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Common mistakes',
+        mistake(
+          'Watch out',
+          '✗ Le collègue que travaille ici.  ✓ Le collègue qui travaille ici.',
+          '✗ Le poste qui je cherche.  ✓ Le poste que je cherche.',
+          '✗ Le métier que elle aime.  ✓ Le métier qu’elle aime.',
+        ),
+        examples(
+          ['La société qui m’a embauché est grande.', 'The company that hired me is big.'],
+          ['Le métier que j’aime est difficile.', 'The job I like is difficult.'],
+        ),
+      ),
+    ],
+    related: ['fr-pronouns', 'fr-a12-object-pronouns'],
+    sources: [S.relative, S.qui, S.que],
+  },
+  {
+    id: 'fr-a12-intensity',
+    title: 'très, trop, assez, un peu',
+    tagline: 'How much? Very, too, quite, a little',
+    level: LEVEL,
+    summary:
+      'Très, assez, trop and un peu go before an adjective or adverb. With a verb use beaucoup, trop or un peu after it. Before a noun add de: trop de travail.',
+    sections: [
+      section(
+        'scale',
+        'A scale of degree',
+        table(
+          'From little to too much.',
+          ['Word', 'Meaning', 'Example'],
+          [
+            ['un peu', 'a little', 'Le salaire est un peu bas.'],
+            ['assez', 'fairly', 'Le salaire est assez bon.'],
+            ['très', 'very', 'Le poste est très intéressant.'],
+            ['trop', 'too (much)', 'Ce travail est trop difficile.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'Très modifies adjectives and adverbs only: très bien, très tard. It never goes with a verb.',
+        ),
+      ),
+      section(
+        'with-verbs',
+        'With a verb, with a noun',
+        p(
+          'After a verb use **beaucoup** (a lot), **trop** (too much) or **un peu** (a little): *Il travaille beaucoup. Elle parle un peu.* Before a noun add **de**: *beaucoup de travail, trop de collègues, assez de temps, un peu de patience*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il aime très son travail.  ✓ Il aime beaucoup son travail.',
+          '✗ J’ai trop travail.  ✓ J’ai trop de travail.',
+          '✗ Elle est beaucoup motivée.  ✓ Elle est très motivée.',
+        ),
+        examples(
+          ['Je suis très content de mon poste.', 'I am very happy with my job.'],
+          ['Nous avons assez de temps.', 'We have enough time.'],
+        ),
+      ),
+    ],
+    related: ['fr-quantities', 'fr-a12-comparison'],
+    sources: [S.tres, S.trop, S.assez, FR.beaucoup, FR.peu],
+  },
+  {
+    id: 'fr-a12-quantity-compare',
+    title: 'plus de, moins de, autant de',
+    tagline: 'More noise, less pollution, as many trees',
+    level: LEVEL,
+    summary:
+      'Compare quantities of a noun with plus de, moins de or autant de, then que. De becomes d’ before a vowel: autant d’arbres que de maisons.',
+    sections: [
+      section(
+        'pattern',
+        'Comparing nouns',
+        p(
+          'You already know **plus … que** with adjectives. With a **noun** the little word is followed by **de**: *Il y a plus de bruit en ville.* There is no article after it.',
+        ),
+        table(
+          'Comparing quantities.',
+          ['Meaning', 'Pattern', 'Example'],
+          [
+            ['more', 'plus de + noun (+ que)', 'Il y a plus de bruit en ville qu’à la campagne.'],
+            ['less', 'moins de + noun (+ que)', 'Il y a moins de pollution à la campagne.'],
+            ['as much / as many', 'autant de + noun (+ que)', 'J’ai autant de travail que toi.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'De becomes d’ before a vowel: plus d’arbres, moins d’habitants, autant d’animaux.',
+          'Que also elides: qu’à la campagne, qu’ici.',
+        ),
+      ),
+      section(
+        'versus',
+        'plus que, plus de',
+        mistake(
+          'Watch out',
+          '✗ Il y a plus bruit en ville.  ✓ Il y a plus de bruit en ville.',
+          '✗ Il y a plus du bruit.  ✓ Il y a plus de bruit.',
+          '✗ J’ai aussi de travail que toi.  ✓ J’ai autant de travail que toi.',
+        ),
+        examples(
+          ['Il y a moins de circulation ici.', 'There is less traffic here.'],
+          ['Nous avons autant d’arbres que de maisons.', 'We have as many trees as houses.'],
+        ),
+      ),
+    ],
+    related: ['fr-a12-comparison', 'fr-quantities', 'fr-partitive'],
+    sources: [S.plus, S.autant, FR.beaucoup],
+  },
+  {
+    id: 'fr-a12-en',
+    title: 'The pronoun en',
+    tagline: 'Do you have any? Yes, I have three',
+    level: LEVEL,
+    summary:
+      'En replaces du, de la, des or de + a noun that was already named. It stands right before the verb. A number or quantity stays after the verb: j’en ai trois, il y en a beaucoup.',
+    sections: [
+      section(
+        'use',
+        'One word instead of de + noun',
+        p(
+          'When a noun with **du**, **de la**, **des** or **de** is already known, do not repeat it: replace it with **en**. It goes right before the verb, like le, la, les and y.',
+        ),
+        table(
+          'Noun phrase and en.',
+          ['With the noun', 'With en'],
+          [
+            ['Tu veux du pain ?', 'Oui, j’en veux.'],
+            ['Vous avez des poules ?', 'Non, nous n’en avons pas.'],
+            ['Il y a des vaches ?', 'Oui, il y en a dix.'],
+            ['Tu as trois lapins ?', 'Oui, j’en ai trois.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'A number or a quantity word (trois, beaucoup, un peu) stays after the verb: j’en ai trois.',
+          'In the negative ne goes before en: je n’en ai pas, il n’y en a pas.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Common mistakes',
+        mistake(
+          'Watch out',
+          '✗ J’ai trois.  ✓ J’en ai trois.',
+          '✗ Je en veux.  ✓ J’en veux.',
+          '✗ Nous avons n’en pas.  ✓ Nous n’en avons pas.',
+        ),
+        examples(
+          [
+            'Combien de lapins as-tu ? J’en ai trois.',
+            'How many rabbits do you have? I have three.',
+          ],
+          ['Il y en a beaucoup dans le champ.', 'There are lots of them in the field.'],
+        ),
+      ),
+    ],
+    related: ['fr-partitive', 'fr-quantities', 'fr-a12-object-pronouns', 'fr-y'],
+    sources: [S.en, FR.partitive],
+  },
+  {
+    id: 'fr-a12-adverbs',
+    title: 'Adverbs in -ment',
+    tagline: 'Slowly, calmly, completely',
+    level: LEVEL,
+    summary:
+      'Many French adverbs end in -ment. Take the feminine form of the adjective and add -ment: lent, lente, lentement. If the adjective already ends in -e, add -ment: calmement. The adverb goes after the verb.',
+    sections: [
+      section(
+        'forms',
+        'How to build them',
+        table(
+          'Adjective, feminine, adverb.',
+          ['Adjective', 'Feminine', 'Adverb'],
+          [
+            ['lent', 'lente', 'lentement'],
+            ['complet', 'complète', 'complètement'],
+            ['heureux', 'heureuse', 'heureusement'],
+            ['calme', 'calme', 'calmement'],
+            ['rapide', 'rapide', 'rapidement'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'Think of English -ly: slow → slowly. In French the base is the feminine adjective.',
+          'The adverb is invariable: it never takes -e or -s.',
+        ),
+      ),
+      section(
+        'position',
+        'Where does it go?',
+        p(
+          'A short adverb goes right **after the verb**: *Il marche lentement.* In the passé composé it usually stands between the helping verb and the participle: *Elle a complètement changé de vie.* Some common adverbs are not built this way: **bien**, **mal**, **vite**.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elle vit calme.  ✓ Elle vit calmement.',
+          '✗ Il court rapidment.  ✓ Il court rapidement.',
+          '✗ Il marche vitement.  ✓ Il marche vite.',
+        ),
+        examples(
+          ['Elle travaille tranquillement dans son jardin.', 'She works quietly in her garden.'],
+          ['Ils ont heureusement trouvé une maison.', 'Luckily they found a house.'],
+        ),
+      ),
+    ],
+    related: ['fr-adjectives', 'fr-gender', 'fr-a12-intensity'],
+    sources: [S.ment, S.adverb],
+  },
 ];
