@@ -1288,6 +1288,167 @@ export const LESSONS = {
       'Je suis né en 1998.',
     ],
   },
+  'fr-a21-invitations': {
+    title: 'Suggesting, accepting, refusing',
+    rule: 'To suggest an outing say Ça te dit de + infinitive? or Tu as envie de + infinitive? (with vous: Ça vous dit …?). Accept with Bonne idée, Avec plaisir or Pourquoi pas. Refuse politely with Désolé, je ne peux pas, Je suis pris(e) or Dommage.',
+    examples: [
+      'Ça te dit d’aller au théâtre ?',
+      'Tu as envie de sortir samedi ?',
+      'Désolé, je suis pris ce soir.',
+    ],
+  },
+  'fr-a21-modals': {
+    title: 'pouvoir, devoir, vouloir',
+    rule: 'Pouvoir (can), devoir (must) and vouloir (want) are irregular and are followed by an infinitive: je peux venir, nous devons partir, ils veulent sortir. In the negative ne … pas goes around the first verb: je ne peux pas venir.',
+    examples: ['Tu peux venir ?', 'Nous devons réserver.', 'Elle ne veut pas sortir.'],
+  },
+  'fr-a21-y': {
+    title: 'The pronoun y',
+    rule: 'Y replaces à (or dans, chez, sur) + a place, or à + a thing, and means “there”: Tu vas au stade ? – Oui, j’y vais. It goes right before the verb (before the auxiliary in the passé composé: je n’y suis jamais allé) and after the imperative with a hyphen: allons-y, vas-y.',
+    examples: ['J’y vais ce soir.', 'Nous n’y sommes jamais allés.', 'Allons-y !'],
+  },
+  'fr-a21-imparfait': {
+    title: 'The imparfait: forms',
+    rule: 'Take the nous form of the present, drop -ons and add -ais, -ais, -ait, -ions, -iez, -aient: nous habitons → j’habitais, nous finissons → je finissais. Only être is irregular (j’étais). Verbs in -ger and -cer keep their sound: nous mangions, je commençais.',
+    examples: ['Nous habitions à Lyon.', 'Tu avais un vélo rouge.', 'Il était petit.'],
+  },
+  'fr-a21-imparfait-use': {
+    title: 'Imparfait: habits and descriptions',
+    rule: 'Use the imparfait for habits in the past (chaque été, autrefois, quand j’étais petit), for descriptions and for the weather. It does not say when something started or ended.',
+    examples: [
+      'Chaque été, nous allions à la mer.',
+      'Il pleuvait et il faisait froid.',
+      'Quand j’étais petit, je jouais dehors.',
+    ],
+  },
+  'fr-a21-en': {
+    title: 'The pronoun en',
+    rule: 'En replaces du, de la, des or de + noun, and a noun after a number or quantity. It goes before the verb and the number stays at the end: Tu as des frères ? J’en ai deux. Negative: Je n’en ai pas.',
+    examples: ['Tu veux du pain ? J’en veux.', 'Il y en a beaucoup.', 'Je n’en ai pas.'],
+  },
+  'fr-a21-relatives': {
+    title: 'qui, que, où',
+    rule: 'Qui is the subject of the next verb, que (qu’) is its object, où gives a place or a time. They join two sentences into one.',
+    examples: [
+      'Je cherche un appartement qui a un balcon.',
+      'Le quartier que tu aimes est loin.',
+      'La rue où j’habite est calme.',
+    ],
+  },
+  'fr-a21-comparison': {
+    title: 'plus, moins … que',
+    rule: 'Compare with plus (more) or moins (less) + adjective + que. Before a noun use plus de / moins de. Bon becomes meilleur and bien becomes mieux in comparisons.',
+    examples: [
+      'La cuisine est plus grande que le salon.',
+      'Il y a moins de bruit ici.',
+      'Ce vin est meilleur que l’autre.',
+    ],
+  },
+  'fr-a21-condition': {
+    title: 'si + présent',
+    rule: 'Si + present gives a condition or advice. The result is in the present or the imperative. Si becomes s’ before il and ils: s’il pleut.',
+    examples: [
+      'Si tu cherches un studio, regarde les annonces.',
+      'S’il y a un balcon, je le prends.',
+      'Si vous voulez, vous pouvez visiter.',
+    ],
+  },
+  'fr-a21-equality': {
+    title: 'aussi … que, autant de',
+    rule: 'Equality: aussi + adjective + que (aussi grand que), autant de + noun + que (autant d’amis que). Le même / la même / les mêmes means “the same”.',
+    examples: [
+      'Il est aussi sportif que son frère.',
+      'Elle a autant de patience que moi.',
+      'Nous avons les mêmes goûts.',
+    ],
+  },
+  'fr-a21-chaque-tout': {
+    title: 'chaque, tout, tous',
+    rule: 'Chaque (each, every) never changes and stands before a singular noun. Tout agrees: tout le monde, toute la famille, tous les jours, toutes les filles.',
+    examples: [
+      'Chaque personne est différente.',
+      'Tous mes amis sont sportifs.',
+      'Toute la famille est venue.',
+    ],
+  },
+  'fr-a21-possessive-pronouns': {
+    title: 'le mien, la tienne',
+    rule: 'A possessive pronoun replaces possessive + noun and agrees with the thing owned: le mien, la mienne, les miens, les miennes; le tien, le sien, le nôtre, le vôtre, le leur.',
+    examples: [
+      'Ton sac est vert, le mien est noir.',
+      'Voici ma clé ; où est la tienne ?',
+      'Nos voisins sont sympas, et les vôtres ?',
+    ],
+  },
+  'fr-a21-futur': {
+    title: 'The futur simple',
+    rule: 'For most verbs add -ai, -as, -a, -ons, -ez, -ont to the infinitive (dropping the final -e of -re verbs): je parlerai, nous finirons, ils prendront. Use it for predictions and plans.',
+    examples: [
+      'Je voyagerai en train.',
+      'Nous finirons à dix-huit heures.',
+      'Ils prendront un taxi.',
+    ],
+  },
+  'fr-a21-futur-irregular': {
+    title: 'Irregular future stems',
+    rule: 'Some verbs have an irregular stem but the usual endings: être → ser-, avoir → aur-, aller → ir-, faire → fer-, venir → viendr-, pouvoir → pourr-, vouloir → voudr-, voir → verr-.',
+    examples: ['Il sera là demain.', 'Nous irons à Paris.', 'Tu pourras venir ?'],
+  },
+  'fr-a21-si-futur': {
+    title: 'si + présent + futur',
+    rule: 'For a real possibility use si + present in the if-part and the futur simple in the result: Si tu travailles, tu réussiras. Si becomes s’ before il and ils.',
+    examples: [
+      'Si j’ai le temps, je viendrai.',
+      'S’il fait beau, nous irons à la plage.',
+      'Si tu pars tôt, tu seras à l’heure.',
+    ],
+  },
+  'fr-a21-obligation': {
+    title: 'il faut, devoir, interdit',
+    rule: 'Il faut + infinitive says what is necessary; il ne faut pas forbids it. Devoir needs a person (tu dois). Il est interdit de + infinitive appears on signs.',
+    examples: ['Il faut mélanger les œufs.', 'Il ne faut pas fumer ici.', 'Vous devez réserver.'],
+  },
+  'fr-a21-ne-que': {
+    title: 'ne … que',
+    rule: 'Ne … que means “only”. Ne stands before the verb and que before the word it limits. It is not a negation, so the article stays: je ne mange que du pain.',
+    examples: ['Il n’y a que deux œufs.', 'Je ne bois que de l’eau.', 'Elle n’a mangé que du riz.'],
+  },
+  'fr-a21-measures': {
+    title: 'Quantities and measures',
+    rule: 'After a quantity or a measure use de (d’) without an article: 200 grammes de sucre, un verre d’eau, assez de sel, trop de beurre. Quelques and plusieurs go straight before the noun.',
+    examples: [
+      'Il faut 250 grammes de farine.',
+      'Je prends une tasse de thé.',
+      'Il y a trop de sel.',
+    ],
+  },
+  'fr-a21-imparfait-pc': {
+    title: 'Imparfait or passé composé?',
+    rule: 'The imparfait sets the scene (what was going on, habits); the passé composé tells the events that moved the story on. They often meet in one sentence.',
+    examples: [
+      'Il pleuvait quand je suis sorti.',
+      'Je lisais quand le téléphone a sonné.',
+      'Elle était fatiguée, alors elle est rentrée.',
+    ],
+  },
+  'fr-a21-cause': {
+    title: 'parce que, à cause de, grâce à',
+    rule: 'Parce que + clause gives a cause. À cause de + noun gives a negative cause, grâce à + noun a positive one. Comme at the start of a sentence also means “because”.',
+    examples: [
+      'Je suis resté parce que j’avais un examen.',
+      'À cause de la grève, je suis en retard.',
+      'Grâce à mes amis, j’ai réussi.',
+    ],
+  },
+  'fr-a21-consequence': {
+    title: 'donc, alors, du coup',
+    rule: 'Donc and alors state the result of what was just said. C’est pourquoi also introduces a result; du coup is the spoken form.',
+    examples: [
+      'J’étais malade, donc je suis resté.',
+      'Il pleuvait, alors nous sommes rentrés.',
+      'Du coup, elle a changé de filière.',
+    ],
+  },
   // ---- French A2.2 ----
   'fr-object-pronouns': {
     title: 'Object pronouns: le, la, les, lui, leur',

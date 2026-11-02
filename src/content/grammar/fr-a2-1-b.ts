@@ -1,0 +1,950 @@
+import { futurSimple, imparfait } from '@/lib/french/tenses';
+import type { FrenchForms } from '@/lib/french/conjugation';
+import { FRENCH_PRONOUNS } from '@/lib/persons';
+import { examples, mistake, p, section, table, tip } from './build';
+import type { GrammarTopic } from './schema';
+import { FR21_SOURCES as S } from './sources-fr-a2-1';
+
+const LEVEL = 'fr-a2-1';
+
+/** One column per verb, forms from a tense generator in `src/lib/french/tenses`. */
+const formsTable = (
+  caption: string,
+  verbs: readonly string[],
+  make: (verb: string) => FrenchForms,
+) => {
+  const all = verbs.map((v) => make(v));
+  return table(
+    caption,
+    ['Person', ...verbs],
+    FRENCH_PRONOUNS.map((pr) => [pr, ...all.map((f) => f[pr])]),
+  );
+};
+const imparfaitTable = (caption: string, verbs: readonly string[]) =>
+  formsTable(caption, verbs, imparfait);
+const futurTable = (caption: string, verbs: readonly string[]) =>
+  formsTable(caption, verbs, futurSimple);
+
+/** French A2.1, units 3 to 8: memories, housing, portraits, the future, cooking and school. */
+export const FR21_TOPICS_B: GrammarTopic[] = [
+  // ---- unit 3: souvenirs ----------------------------------------------------------------------
+  {
+    id: 'fr-a21-imparfait',
+    title: 'The imparfait: forms',
+    tagline: 'Nous habitons → j’habitais: one stem, six endings',
+    level: LEVEL,
+    summary:
+      'The imparfait is the tense of memories and descriptions. Its stem is the nous form of the present without -ons, and the endings are the same for every verb: -ais, -ais, -ait, -ions, -iez, -aient. Only être has an irregular stem (ét-).',
+    sections: [
+      section(
+        'forms',
+        'Stem and endings',
+        p(
+          'Take the **nous** form of the present, drop **-ons** and add the endings. *Nous habitons → habit-*, *nous finissons → finiss-*, *nous faisons → fais-*, *nous allons → all-*.',
+        ),
+        imparfaitTable('Imparfait of five common verbs.', [
+          'être',
+          'avoir',
+          'aller',
+          'faire',
+          'finir',
+        ]),
+        tip(
+          'Only être is irregular',
+          'Its stem is ét- (j’étais, nous étions), but the endings are the regular ones.',
+        ),
+      ),
+      section(
+        'spelling',
+        'Spelling and sound',
+        p(
+          'The endings **-ais, -ait, -aient** sound the same (/ɛ/), so je jouais, il jouait and ils jouaient are pronounced alike: only the spelling tells the person. Before **-ions** and **-iez** verbs in **-ger** and **-cer** keep their sound: *nous mangions* (not mangeions), *nous commencions* but *je commençais*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Ils jouait au foot.  ✓ Ils jouaient au foot.',
+          '✗ Nous mangeons dehors, avant.  ✓ Avant, nous mangions dehors.',
+          '✗ J’avait un vélo.  ✓ J’avais un vélo.',
+        ),
+        examples(
+          ['Nous habitions à la campagne.', 'We lived in the countryside.'],
+          ['Tu avais un chien noir.', 'You had a black dog.'],
+          ['Vous étiez très jeunes.', 'You were very young.'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-imparfait-use', 'fr-a21-futur', 'fr-etre-avoir'],
+    sources: [S.imparfait, S.etre, S.avoir],
+  },
+  {
+    id: 'fr-a21-imparfait-use',
+    title: 'Imparfait: habits and descriptions',
+    tagline: 'Chaque été, il faisait beau: the tense of the background',
+    level: LEVEL,
+    summary:
+      'The imparfait describes what used to be or what used to happen: habits, states, the weather, people and places in the past. It does not say when something started or ended.',
+    sections: [
+      section(
+        'when',
+        'When to use it',
+        table(
+          'The two jobs of the imparfait.',
+          ['Job', 'Example'],
+          [
+            ['A habit in the past', 'Chaque été, nous allions à la mer.'],
+            ['A description', 'La maison était grande et vieille.'],
+            ['The weather', 'Il pleuvait et il faisait froid.'],
+            ['A feeling or state', 'J’étais heureux, je n’avais pas peur.'],
+          ],
+        ),
+        p(
+          'Words that often signal an habit: *autrefois*, *à l’époque*, *quand j’étais petit*, *chaque été / tous les jours / le dimanche*, *souvent*, *toujours*.',
+        ),
+      ),
+      section(
+        'now-then',
+        'Then and now',
+        table(
+          'The same verb now and in the past.',
+          ['Present', 'Imparfait'],
+          [
+            ['J’habite à Paris.', 'Avant, j’habitais à la campagne.'],
+            ['Il y a un supermarché.', 'Il y avait une ferme.'],
+            ['Il fait froid.', 'Il faisait froid.'],
+            ['Les enfants jouent sur l’écran.', 'Les enfants jouaient dehors.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Autrefois, j’habite à la campagne.  ✓ Autrefois, j’habitais à la campagne.',
+          '✗ Il y a avait un jardin.  ✓ Il y avait un jardin.',
+        ),
+        examples(
+          [
+            'Quand j’étais petit, je jouais dans la forêt.',
+            'When I was little, I played in the forest.',
+          ],
+          ['Autrefois, on n’avait pas de téléphone.', 'In the past, we had no phone.'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-imparfait', 'fr-a21-imparfait-pc', 'fr-time-markers'],
+    sources: [S.imparfaitGeneral, S.imparfait],
+  },
+  {
+    id: 'fr-a21-en',
+    title: 'The pronoun en',
+    tagline: 'J’en veux, il y en a trois: replacing “of it, of them”',
+    level: LEVEL,
+    summary:
+      'En replaces du, de la, des or de + a noun, and a noun after a number or an expression of quantity. It stands right before the verb; the number or quantity word stays at the end. En also replaces de + a place you come from.',
+    sections: [
+      section(
+        'replace',
+        'What en replaces',
+        table(
+          'En instead of de + noun.',
+          ['With the noun', 'With en'],
+          [
+            ['Tu veux du pain ?', 'Oui, j’en veux.'],
+            ['Tu as des frères ?', 'J’en ai deux.'],
+            ['Il y a de la neige ?', 'Non, il n’y en a pas.'],
+            ['Elle parle de son enfance.', 'Elle en parle.'],
+            ['Je reviens de la campagne.', 'J’en reviens.'],
+          ],
+        ),
+        p(
+          'The **number** or the **quantity word** (*beaucoup, assez, trois, un peu*) is kept: *J’en ai trois. Il y en a beaucoup.* With **un** or **une** keep it too: *Tu as une voiture ? Oui, j’en ai une.*',
+        ),
+      ),
+      section(
+        'position',
+        'Where does en go?',
+        table(
+          'The position of en.',
+          ['Case', 'Example'],
+          [
+            ['Present tense', 'Nous en voulons.'],
+            ['Negative', 'Je n’en ai pas.'],
+            ['Passé composé', 'J’en ai pris beaucoup.'],
+            ['Infinitive (futur proche)', 'Je vais en prendre.'],
+            ['Imperative', 'Prends-en ! N’en prends pas !'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je veux en.  ✓ J’en veux.',
+          '✗ J’ai deux.  ✓ J’en ai deux.',
+          '✗ Je n’ai pas en.  ✓ Je n’en ai pas.',
+        ),
+        tip(
+          'En or y?',
+          'En comes from de (some of it, from there); y comes from à (to there). *Tu viens de Lyon ? J’en viens. Tu vas à Lyon ? J’y vais.*',
+        ),
+      ),
+    ],
+    related: ['fr-partitive', 'fr-quantities', 'fr-a21-y'],
+    sources: [S.en],
+  },
+  // ---- unit 4: logement -----------------------------------------------------------------------
+  {
+    id: 'fr-a21-relatives',
+    title: 'qui, que, où',
+    tagline: 'One sentence instead of two: the flat that I like',
+    level: LEVEL,
+    summary:
+      'Relative pronouns join two sentences. Qui replaces the subject, que (qu’) replaces the direct object, où replaces a place or a time.',
+    sections: [
+      section(
+        'three',
+        'Three pronouns',
+        table(
+          'Which pronoun?',
+          ['Pronoun', 'It replaces', 'Example'],
+          [
+            [
+              'qui',
+              'the subject (who/which does the action)',
+              'J’ai un voisin qui joue de la guitare.',
+            ],
+            [
+              'que / qu’',
+              'the direct object (who/what is acted on)',
+              'L’appartement que nous avons visité est lumineux.',
+            ],
+            [
+              'où',
+              'a place or a time',
+              'La rue où j’habite est calme. Le jour où nous avons emménagé …',
+            ],
+          ],
+        ),
+        p(
+          'A quick test: after **qui** comes a **verb** (*qui habite*). After **que** comes a **subject** (*que j’aime, que tu as acheté*). **Que** becomes **qu’** before a vowel: *le quartier qu’il aime*.',
+        ),
+      ),
+      section(
+        'details',
+        'Details that cause mistakes',
+        p(
+          'Qui never loses its **i** (there is no *qu’* for the subject). With **que** in the passé composé the participle agrees with the object in front of the verb: *la lampe qu’elle a choisie*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ L’appartement qui j’ai visité.  ✓ L’appartement que j’ai visité.',
+          '✗ Le voisin que habite en face.  ✓ Le voisin qui habite en face.',
+          '✗ La rue que j’habite.  ✓ La rue où j’habite.',
+        ),
+        examples(
+          [
+            'Je cherche un studio qui est près du métro.',
+            'I am looking for a studio that is near the metro.',
+          ],
+          ['La lampe qu’elle a choisie est belle.', 'The lamp she chose is beautiful.'],
+          ['Le quartier où je suis né est calme.', 'The district where I was born is quiet.'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-comparison', 'fr-demonstratives', 'fr-place-prepositions'],
+    sources: [S.pronomRelatif, S.que],
+  },
+  {
+    id: 'fr-a21-comparison',
+    title: 'plus, moins … que',
+    tagline: 'Plus grand que, moins cher que, meilleur, mieux',
+    level: LEVEL,
+    summary:
+      'To compare, put plus (more) or moins (less) before an adjective or adverb and que (than) before the second term. With nouns use plus de / moins de. The comparatives of bon and bien are irregular: meilleur and mieux.',
+    sections: [
+      section(
+        'regular',
+        'Regular comparisons',
+        table(
+          'Comparing with plus and moins.',
+          ['Structure', 'Example'],
+          [
+            ['plus + adjective + que', 'La cuisine est plus grande que le salon.'],
+            ['moins + adjective + que', 'Ce studio est moins cher que l’autre.'],
+            ['plus de / moins de + noun + que', 'Il y a moins de bruit qu’avant.'],
+            ['verb + plus / moins que', 'Je travaille plus que toi.'],
+          ],
+        ),
+        p(
+          'The adjective **agrees** with the first term: *la cuisine est plus grande*. **Que** becomes **qu’** before a vowel: *qu’avant, qu’en province*.',
+        ),
+      ),
+      section(
+        'irregular',
+        'Meilleur and mieux',
+        table(
+          'Two irregular comparatives.',
+          ['Positive', 'Comparative', 'Example'],
+          [
+            ['bon (adjective)', 'meilleur(e)(s)', 'Ce canapé est meilleur que l’autre.'],
+            ['bien (adverb)', 'mieux', 'Je dors mieux dans ce lit.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ plus bon  ✓ meilleur',
+          '✗ Je dors plus bien.  ✓ Je dors mieux.',
+          '✗ plus grand de moi  ✓ plus grand que moi',
+        ),
+        tip(
+          'Meilleur or mieux?',
+          'Meilleur describes a noun and agrees with it (une meilleure idée). Mieux modifies a verb and never changes (elle chante mieux).',
+        ),
+      ),
+    ],
+    related: ['fr-a21-equality', 'fr-superlative', 'fr-adjectives'],
+    sources: [S.comparatif],
+  },
+  {
+    id: 'fr-a21-condition',
+    title: 'si + présent',
+    tagline: 'Si tu veux, viens: conditions and advice',
+    level: LEVEL,
+    summary:
+      'A condition that is possible is introduced by si followed by the present tense. The result is in the present or the imperative: Si tu as le temps, viens.',
+    sections: [
+      section(
+        'structure',
+        'si + present, then present or imperative',
+        table(
+          'The pattern.',
+          ['If-part (si + present)', 'Result', 'Meaning'],
+          [
+            ['Si tu cherches un studio,', 'regarde les annonces.', 'advice (imperative)'],
+            ['Si vous voulez,', 'vous pouvez visiter demain.', 'permission (present)'],
+            ['Si on habite ensemble,', 'on paie moins de loyer.', 'general truth (present)'],
+          ],
+        ),
+        p(
+          '**Si** elides before **il / ils** only: *s’il pleut, s’ils viennent* but *si elle vient, si on part*. Nothing else changes: the verb after si stays in the **present**.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Common mistakes',
+        mistake(
+          'Watch out',
+          '✗ Si tu auras le temps, viens.  ✓ Si tu as le temps, viens.',
+          '✗ Si il y a un balcon …  ✓ S’il y a un balcon …',
+          '✗ Si tu veux, tu peut venir.  ✓ Si tu veux, tu peux venir.',
+        ),
+        tip(
+          'Order',
+          'The si-part can come second without a comma: Viens visiter si tu as le temps.',
+        ),
+        examples(
+          [
+            'Si tu as le temps, passe voir l’appartement.',
+            'If you have time, come and see the flat.',
+          ],
+          [
+            'S’il y a un balcon, je prends l’appartement.',
+            'If there is a balcony, I will take the flat.',
+          ],
+        ),
+      ),
+    ],
+    related: ['fr-a21-si-futur', 'fr-imperative', 'fr-a21-modals'],
+    sources: [S.si],
+  },
+  // ---- unit 5: portrait -----------------------------------------------------------------------
+  {
+    id: 'fr-a21-equality',
+    title: 'aussi … que, autant de',
+    tagline: 'As tall as, as many as, the same',
+    level: LEVEL,
+    summary:
+      'Equality is expressed with aussi + adjective + que, autant de + noun + que and verb + autant que. Le même, la même, les mêmes means “the same”.',
+    sections: [
+      section(
+        'as',
+        'As … as',
+        table(
+          'Equality.',
+          ['Structure', 'Example'],
+          [
+            ['aussi + adjective / adverb + que', 'Elle est aussi grande que son frère.'],
+            ['autant de + noun + que', 'J’ai autant d’amis que toi.'],
+            ['verb + autant que', 'Il travaille autant que moi.'],
+            ['ne … pas aussi / autant …', 'Ce n’est pas aussi simple que je pensais.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il est autant grand que moi.  ✓ Il est aussi grand que moi.',
+          '✗ J’ai aussi d’amis que toi.  ✓ J’ai autant d’amis que toi.',
+        ),
+      ),
+      section(
+        'same',
+        'The same',
+        p(
+          '**Même** is an adjective placed before the noun and agrees with it: *le même âge, la même ville, les mêmes goûts*. After **même** use **que** for the comparison: *Elle a le même sac que moi.*',
+        ),
+        table(
+          'Le même.',
+          ['Masculine', 'Feminine'],
+          [
+            ['le même âge', 'la même ville'],
+            ['les mêmes goûts', 'les mêmes idées'],
+          ],
+        ),
+        examples(
+          ['Il est aussi sportif que son frère.', 'He is as sporty as his brother.'],
+          ['Elle a autant de patience que moi.', 'She has as much patience as I do.'],
+          ['Nous avons les mêmes goûts.', 'We have the same tastes.'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-comparison', 'fr-adjectives', 'fr-plurals'],
+    sources: [S.aussi, S.autant, S.comparatif],
+  },
+  {
+    id: 'fr-a21-chaque-tout',
+    title: 'chaque, tout, tous',
+    tagline: 'Every, all, everybody: one word, many forms',
+    level: LEVEL,
+    summary:
+      'Chaque (each, every) is invariable and goes before a singular noun. Tout is an adjective that agrees: tout, toute, tous, toutes. Chacun means “each one” and stands alone.',
+    sections: [
+      section(
+        'chaque',
+        'Chaque and chacun',
+        p(
+          '**Chaque** never changes and is followed by a singular noun: *chaque personne, chaque jour*. **Chacun / chacune** replaces the noun: *Chacun a ses goûts.* Do not write *chaque jours* or *chaques*.',
+        ),
+      ),
+      section(
+        'tout',
+        'The four forms of tout',
+        table(
+          'Tout, toute, tous, toutes.',
+          ['Form', 'Used with', 'Example'],
+          [
+            ['tout / tout le', 'masculine singular', 'tout le temps, tout le monde'],
+            ['toute / toute la', 'feminine singular', 'toute la famille'],
+            ['tous les', 'masculine plural', 'tous les jours, tous mes amis'],
+            ['toutes les', 'feminine plural', 'toutes les filles, toutes ses sœurs'],
+          ],
+        ),
+        p(
+          '**Tous les deux / toutes les deux** means “both”: *Ils sont tous les deux timides.* **Tout le monde** means “everybody” and takes a singular verb: *Tout le monde est différent.*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Tous le monde est là.  ✓ Tout le monde est là.',
+          '✗ Chaque personnes est différente.  ✓ Chaque personne est différente.',
+        ),
+        examples(
+          ['Chaque personne est différente.', 'Every person is different.'],
+          ['Toute la famille est venue.', 'The whole family came.'],
+          ['Tous mes amis sont sportifs.', 'All my friends are sporty.'],
+        ),
+      ),
+    ],
+    related: ['fr-plurals', 'fr-a21-equality', 'fr-articles'],
+    sources: [S.chaque, S.tout],
+  },
+  {
+    id: 'fr-a21-possessive-pronouns',
+    title: 'le mien, la tienne',
+    tagline: 'Mine, yours, theirs: possessives that stand alone',
+    level: LEVEL,
+    summary:
+      'A possessive pronoun replaces possessive + noun and agrees with the noun it replaces, not with the owner: le mien, la mienne, les miens, les miennes.',
+    sections: [
+      section(
+        'forms',
+        'The forms',
+        table(
+          'Possessive pronouns.',
+          ['Owner', 'Masc. sing.', 'Fem. sing.', 'Masc. pl.', 'Fem. pl.'],
+          [
+            ['je', 'le mien', 'la mienne', 'les miens', 'les miennes'],
+            ['tu', 'le tien', 'la tienne', 'les tiens', 'les tiennes'],
+            ['il / elle', 'le sien', 'la sienne', 'les siens', 'les siennes'],
+            ['nous', 'le nôtre', 'la nôtre', 'les nôtres', 'les nôtres'],
+            ['vous', 'le vôtre', 'la vôtre', 'les vôtres', 'les vôtres'],
+            ['ils / elles', 'le leur', 'la leur', 'les leurs', 'les leurs'],
+          ],
+        ),
+        p(
+          'The article **le / la / les** is always part of the pronoun. Use it where English says *mine, yours, hers*: *Ton sac est vert, le mien est noir.*',
+        ),
+      ),
+      section(
+        'use',
+        'Agreement and contractions',
+        p(
+          'The pronoun agrees with the **thing owned**: *ma clé → la mienne* even if the owner is a man. After **à** and **de** the article contracts: *Je pense à mes enfants et toi, tu penses aux tiens. Voici mon avis, et le vôtre ?*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Où est la tien ?  ✓ Où est la tienne ?',
+          '✗ Ton sac est vert, mien est noir.  ✓ … le mien est noir.',
+          '✗ Notre maison et la leurs.  ✓ Notre maison et la leur.',
+        ),
+        examples(
+          ['Voici ma clé ; où est la tienne ?', 'Here is my key; where is yours?'],
+          ['Nos voisins sont sympas, et les vôtres ?', 'Our neighbours are nice, and yours?'],
+          [
+            'Mes enfants sont sportifs, les siens sont timides.',
+            'My children are sporty, hers are shy.',
+          ],
+        ),
+      ),
+    ],
+    related: ['fr-possessives', 'fr-a21-equality', 'fr-contractions'],
+    sources: [S.pronomPossessif],
+  },
+  // ---- unit 6: futur --------------------------------------------------------------------------
+  {
+    id: 'fr-a21-futur',
+    title: 'The futur simple',
+    tagline: 'Je voyagerai, nous finirons: tomorrow in one word',
+    level: LEVEL,
+    summary:
+      'The futur simple is used for predictions, promises and plans. It is formed from the infinitive (without the final -e for -re verbs) plus the endings -ai, -as, -a, -ons, -ez, -ont, which are the present tense of avoir.',
+    sections: [
+      section(
+        'forms',
+        'Infinitive plus endings',
+        futurTable('Futur simple of parler, finir and prendre.', ['parler', 'finir', 'prendre']),
+        p(
+          'The endings are **the same for every verb**, including the irregular ones. For **-re** verbs drop the final **-e** first: *prendre → prendr-*, *vendre → vendr-*. The **r** is always heard before the ending.',
+        ),
+        tip(
+          'Spelling changes',
+          'Some -er verbs change before the r: j’achèterai, je lèverai, j’appellerai, je jetterai, j’enverrai, j’essaierai or j’essayerai.',
+        ),
+      ),
+      section(
+        'use',
+        'When to use it',
+        p(
+          'Use the futur simple for **predictions** (*Il pleuvra demain.*), **promises** (*Je t’appellerai.*) and plans that are further away (*L’an prochain, nous déménagerons.*). For something about to happen, the **futur proche** is more usual (*Il va pleuvoir.*).',
+        ),
+        table(
+          'Futur proche or futur simple?',
+          ['Futur proche (aller + infinitive)', 'Futur simple'],
+          [
+            ['Je vais prendre le train.', 'Je prendrai le train.'],
+            ['Nous allons déménager.', 'Nous déménagerons l’an prochain.'],
+            ['Il va pleuvoir.', 'Il pleuvra demain.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Nous voyageons l’an prochain.  ✓ Nous voyagerons l’an prochain.',
+          '✗ Ils parlera.  ✓ Ils parleront.',
+          '✗ Tu prendreras.  ✓ Tu prendras.',
+        ),
+      ),
+    ],
+    related: ['fr-a21-futur-irregular', 'fr-futur-proche', 'fr-a21-si-futur'],
+    sources: [S.futurSimple],
+  },
+  {
+    id: 'fr-a21-futur-irregular',
+    title: 'Irregular future stems',
+    tagline: 'Irai, serai, ferai, viendrai: new stems, same endings',
+    level: LEVEL,
+    summary:
+      'About a dozen very common verbs have an irregular stem in the futur simple. The endings do not change: -ai, -as, -a, -ons, -ez, -ont. The stem always ends in -r.',
+    sections: [
+      section(
+        'stems',
+        'The stems to learn',
+        table(
+          'Irregular stems.',
+          ['Infinitive', 'Stem', 'Je …'],
+          [
+            ['être', 'ser-', 'je serai'],
+            ['avoir', 'aur-', 'j’aurai'],
+            ['aller', 'ir-', 'j’irai'],
+            ['faire', 'fer-', 'je ferai'],
+            ['venir / devenir', 'viendr- / deviendr-', 'je viendrai'],
+            ['pouvoir', 'pourr-', 'je pourrai'],
+            ['vouloir', 'voudr-', 'je voudrai'],
+            ['voir', 'verr-', 'je verrai'],
+            ['savoir', 'saur-', 'je saurai'],
+            ['devoir', 'devr-', 'je devrai'],
+          ],
+        ),
+        futurTable('Futur simple of être, aller and faire.', ['être', 'aller', 'faire']),
+      ),
+      section(
+        'tips',
+        'Remembering them',
+        p(
+          'Most irregular stems are close to the infinitive: you hear the **-r** as in the regular verbs. Watch **voir → verr-** (two r, different from voyez) and **aller → ir-** (nothing like *all-*).',
+        ),
+        mistake(
+          'Watch out',
+          '✗ J’allerai à Paris.  ✓ J’irai à Paris.',
+          '✗ Il fairera beau.  ✓ Il fera beau.',
+          '✗ Vous voirez.  ✓ Vous verrez.',
+        ),
+        examples(
+          ['Il sera là demain.', 'He will be there tomorrow.'],
+          ['Nous irons à Paris le mois prochain.', 'We will go to Paris next month.'],
+          ['Tu pourras venir avec nous ?', 'Will you be able to come with us?'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-futur', 'fr-etre-avoir', 'fr-aller'],
+    sources: [S.futurSimple, S.aller, S.etre, S.avoir],
+  },
+  {
+    id: 'fr-a21-si-futur',
+    title: 'si + présent + futur',
+    tagline: 'Si tu viens, nous irons: a real possibility',
+    level: LEVEL,
+    summary:
+      'For a real possibility use si + present in the if-clause and the futur simple (or the imperative) in the result. Never put the futur simple after si.',
+    sections: [
+      section(
+        'pattern',
+        'The pattern',
+        table(
+          'Si + present, then future.',
+          ['If-clause (present)', 'Result (future)'],
+          [
+            ['Si j’ai le temps,', 'je viendrai.'],
+            ['S’il fait beau,', 'nous irons à la plage.'],
+            ['Si tu pars tôt,', 'tu seras à l’heure.'],
+            ['Si nous ne faisons rien,', 'la planète souffrira.'],
+          ],
+        ),
+        p(
+          'The clauses can be swapped without changing the tenses: *Nous irons à la plage s’il fait beau.* Si elides to **s’** only before **il / ils**.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Common mistakes',
+        mistake(
+          'Watch out',
+          '✗ Si j’aurai le temps, je viendrai.  ✓ Si j’ai le temps, je viendrai.',
+          '✗ Si tu viendras, nous irons.  ✓ Si tu viens, nous irons.',
+          '✗ Si il pleut …  ✓ S’il pleut …',
+        ),
+        tip(
+          'Other results',
+          'The result can also be an imperative or a present: Si tu as faim, mange ! Si on se dépêche, on arrive à l’heure.',
+        ),
+        examples(
+          ['Si tu pars tôt, tu seras à l’heure.', 'If you leave early, you will be on time.'],
+          ['S’il pleut, nous resterons à la maison.', 'If it rains, we will stay at home.'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-condition', 'fr-a21-futur', 'fr-a21-futur-irregular'],
+    sources: [S.si, S.futurSimple],
+  },
+  // ---- unit 7: cuisine ------------------------------------------------------------------------
+  {
+    id: 'fr-a21-obligation',
+    title: 'il faut, devoir, interdit',
+    tagline: 'Il faut remuer, il ne faut pas fumer: rules and recipes',
+    level: LEVEL,
+    summary:
+      'Il faut + infinitive says what is necessary in general; devoir says that a particular person must. Il ne faut pas + infinitive forbids; il est interdit de + infinitive appears on signs.',
+    sections: [
+      section(
+        'faut',
+        'Il faut and devoir',
+        table(
+          'Two ways to say “must”.',
+          ['Structure', 'Example'],
+          [
+            ['il faut + infinitive (general)', 'Il faut mélanger les œufs.'],
+            ['devoir + infinitive (a person)', 'Vous devez réserver à l’avance.'],
+            ['il ne faut pas + infinitive', 'Il ne faut pas toucher le four.'],
+            ['il est interdit de + infinitive', 'Il est interdit de fumer.'],
+          ],
+        ),
+        p(
+          '**Il faut** has only one form (from *falloir*) and is always followed by the **infinitive**: *il faut remuer*, never *il faut remuez*. To say who must do it, use **devoir** (*tu dois, vous devez*) or add a pronoun: *il me faut du temps*.',
+        ),
+      ),
+      section(
+        'negative',
+        'Watch the negative',
+        p(
+          'Be careful with the negative: **il ne faut pas fumer** means “you must not smoke” (a prohibition), not “you do not have to”. To say that something is not necessary use **il n’est pas nécessaire de** or **on n’a pas besoin de**.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il faut remuez la sauce.  ✓ Il faut remuer la sauce.',
+          '✗ Il faux ajouter du sel.  ✓ Il faut ajouter du sel.',
+          '✗ Il faut pas fumer.  ✓ Il ne faut pas fumer.',
+        ),
+        examples(
+          ['Il faut laisser reposer la pâte.', 'You have to let the dough rest.'],
+          ['Vous devez réserver une table.', 'You have to book a table.'],
+          ['Il est interdit de courir.', 'Running is forbidden.'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-modals', 'fr-imperative', 'fr-negation'],
+    sources: [S.falloir, S.devoir, S.interdit],
+  },
+  {
+    id: 'fr-a21-ne-que',
+    title: 'ne … que',
+    tagline: 'Je ne bois que de l’eau: only, not “not”',
+    level: LEVEL,
+    summary:
+      'Ne … que is a restriction meaning “only”. Ne stands before the verb, que before the word it limits. The sentence is affirmative in meaning, so the article does not turn into de.',
+    sections: [
+      section(
+        'meaning',
+        'Only',
+        table(
+          'Ne … que and its meaning.',
+          ['With ne … que', 'Meaning'],
+          [
+            ['Il n’y a que deux œufs.', 'There are only two eggs.'],
+            ['Je ne bois que de l’eau.', 'I only drink water.'],
+            ['Elle n’a mangé que du riz.', 'She only ate rice.'],
+            ['Il ne reste qu’une tranche.', 'Only one slice is left.'],
+          ],
+        ),
+        p(
+          'Que sits **before** the word it restricts: with a compound tense it stays before the object, not before the participle (*Elle n’a mangé que du riz*). Que becomes **qu’** before a vowel.',
+        ),
+      ),
+      section(
+        'compare',
+        'Not the same as ne … pas',
+        table(
+          'Ne … pas de or ne … que?',
+          ['Negation', 'Restriction'],
+          [
+            ['Je ne mange pas de pain.', 'Je ne mange que du pain.'],
+            ['Je n’ai pas d’argent.', 'Je n’ai que dix euros.'],
+            ['Il n’y a pas d’œufs.', 'Il n’y a que des œufs.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je bois que de l’eau.  ✓ Je ne bois que de l’eau.',
+          '✗ Je ne bois pas que de l’eau.  ✓ Je ne bois que de l’eau.',
+          '✗ Il ne reste que une tranche.  ✓ Il ne reste qu’une tranche.',
+        ),
+        tip(
+          'Seulement',
+          'In speech seulement or juste often replaces ne … que: Il y a seulement deux œufs.',
+        ),
+      ),
+    ],
+    related: ['fr-negation', 'fr-a21-negatives', 'fr-partitive'],
+    sources: [S.que, S.negation],
+  },
+  {
+    id: 'fr-a21-measures',
+    title: 'Quantities and measures',
+    tagline: 'Un kilo de pommes, une pincée de sel: de and no article',
+    level: LEVEL,
+    summary:
+      'After a number of units, a container or an expression of quantity use de (d’) with no article: 200 grammes de farine, un verre d’eau, beaucoup de sel. Quelques and plusieurs go directly before the noun.',
+    sections: [
+      section(
+        'de',
+        'De without an article',
+        table(
+          'Measures and quantity words with de.',
+          ['Type', 'Example'],
+          [
+            ['weights and volumes', 'deux cents grammes de farine, un litre de lait'],
+            ['containers and portions', 'un verre d’eau, une tasse de thé, une tranche de pain'],
+            ['small amounts', 'une pincée de sel, une cuillère à soupe d’huile'],
+            ['adverbs of quantity', 'beaucoup de sucre, trop de sel, assez de temps, peu de lait'],
+          ],
+        ),
+        p(
+          'The article **du / de la / des** disappears: *un kilo de pommes* (not *des pommes*). **De** becomes **d’** before a vowel: *un verre d’eau, beaucoup d’huile*.',
+        ),
+      ),
+      section(
+        'others',
+        'Quelques, plusieurs and the exceptions',
+        p(
+          '**Quelques** (a few) and **plusieurs** (several) come directly before a plural noun, without **de**: *quelques tomates, plusieurs œufs*. After **bien** and **la plupart** the article stays: *bien des gens, la plupart des restaurants*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Une pincée du sel.  ✓ Une pincée de sel.',
+          '✗ Beaucoup du sucre.  ✓ Beaucoup de sucre.',
+          '✗ Un verre de eau.  ✓ Un verre d’eau.',
+        ),
+        examples(
+          ['Il faut 250 grammes de farine.', 'You need 250 grams of flour.'],
+          ['Je prends une tasse de thé.', 'I will have a cup of tea.'],
+          ['Il y a trop de sel.', 'There is too much salt.'],
+        ),
+      ),
+    ],
+    related: ['fr-quantities', 'fr-partitive', 'fr-a21-en'],
+    sources: [S.cuillere],
+  },
+  // ---- unit 8: etudes -------------------------------------------------------------------------
+  {
+    id: 'fr-a21-imparfait-pc',
+    title: 'Imparfait or passé composé?',
+    tagline: 'Il pleuvait quand je suis sorti: scene and action',
+    level: LEVEL,
+    summary:
+      'Tell a story with two tenses: the imparfait paints the scene (weather, feelings, habits, what was going on) and the passé composé tells the events that move the story forward.',
+    sections: [
+      section(
+        'roles',
+        'Two jobs, one story',
+        table(
+          'Scene and event.',
+          ['Imparfait (the scene)', 'Passé composé (the event)'],
+          [
+            ['Il pleuvait.', 'Je suis sorti.'],
+            ['J’étudiais à la bibliothèque.', 'Mon ami est arrivé.'],
+            ['Elle était fatiguée.', 'Elle est rentrée.'],
+            ['Chaque matin, je prenais le métro.', 'Ce matin-là, j’ai raté le métro.'],
+          ],
+        ),
+        p(
+          'The two tenses often meet in one sentence: the **imparfait** is the long action or situation, and the **passé composé** is the short event that interrupts it. *Je lisais quand le téléphone a sonné.* Time words help: **soudain, un jour, ce jour-là, hier** point to an event; **chaque jour, souvent, toujours, à l’époque** point to a habit or scene.',
+        ),
+      ),
+      section(
+        'test',
+        'A quick test',
+        p(
+          'Ask yourself: could I put **“at that moment”** in front? *Il pleuvait* (it was raining at that moment) is a scene. Could I put **“and then”** in front? *Et puis je suis sorti* is an event. A state of mind or a description is never an event on its own.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il a plu quand je suis sorti.  ✓ Il pleuvait quand je suis sorti.',
+          '✗ Je lisais quand le téléphone sonnait.  ✓ Je lisais quand le téléphone a sonné.',
+          '✗ Elle a été fatiguée, alors elle est rentrée.  ✓ Elle était fatiguée, alors elle est rentrée.',
+        ),
+        examples(
+          ['Il pleuvait quand je suis sorti.', 'It was raining when I went out.'],
+          ['Elle était fatiguée, alors elle est rentrée.', 'She was tired, so she went home.'],
+          [
+            'Chaque matin, je prenais le bus, mais ce jour-là, je l’ai raté.',
+            'Every morning I took the bus, but that day I missed it.',
+          ],
+        ),
+      ),
+    ],
+    related: ['fr-a21-imparfait-use', 'fr-a21-passe-compose', 'fr-a21-time-markers'],
+    sources: [S.imparfaitGeneral, S.concordance, S.passeCompose],
+  },
+  {
+    id: 'fr-a21-cause',
+    title: 'parce que, à cause de, grâce à',
+    tagline: 'Giving the reason: clause or noun, good or bad',
+    level: LEVEL,
+    summary:
+      'Parce que is followed by a full clause. À cause de and grâce à are followed by a noun: à cause de for a negative or neutral cause, grâce à for a positive one. Comme at the start of a sentence also gives the reason.',
+    sections: [
+      section(
+        'choose',
+        'Which one?',
+        table(
+          'Four ways to give a reason.',
+          ['Word', 'Followed by', 'Example'],
+          [
+            ['parce que (qu’)', 'a clause', 'Je suis resté parce que j’avais un cours.'],
+            [
+              'à cause de (du, de la, des)',
+              'a noun (negative)',
+              'Je suis en retard à cause de la grève.',
+            ],
+            ['grâce à (au, à la, aux)', 'a noun (positive)', 'Grâce à mon prof, j’ai réussi.'],
+            ['comme', 'a clause, sentence-initial', 'Comme il pleuvait, nous sommes rentrés.'],
+          ],
+        ),
+        p(
+          'The question **Pourquoi … ?** is answered with **parce que**. **Parce que** becomes **parce qu’** before a vowel (*parce qu’il était malade*). A reason given first starts with **comme**, never with *parce que*.',
+        ),
+      ),
+      section(
+        'contractions',
+        'Contractions and mistakes',
+        p(
+          'With **à cause de** and **grâce à** the article contracts as usual: *à cause du stress, à cause des retards; grâce au stage, grâce aux amis*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ À cause de j’étais malade.  ✓ Parce que j’étais malade.',
+          '✗ Grâce à le stage.  ✓ Grâce au stage.',
+          '✗ J’ai échoué grâce au stress.  ✓ J’ai échoué à cause du stress.',
+        ),
+        examples(
+          ['À cause de la grève, je suis en retard.', 'Because of the strike, I am late.'],
+          ['Elle a pu étudier grâce à sa bourse.', 'She was able to study thanks to her grant.'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-consequence', 'fr-a21-imparfait-pc', 'fr-contractions'],
+    sources: [S.parceQue, S.causeDe, S.graceA],
+  },
+  {
+    id: 'fr-a21-consequence',
+    title: 'donc, alors, du coup',
+    tagline: 'So, yet, that is why: linking cause and result',
+    level: LEVEL,
+    summary:
+      'Donc, alors, c’est pourquoi and du coup introduce a result. Pourtant introduces a contrast with what was expected. They link two clauses and do not change the verb forms.',
+    sections: [
+      section(
+        'result',
+        'Results and contrasts',
+        table(
+          'Linking words.',
+          ['Word', 'Meaning', 'Example'],
+          [
+            ['donc', 'so, therefore', 'J’étais malade, donc je suis resté au lit.'],
+            ['alors', 'so, then', 'Il pleuvait, alors nous sommes rentrés.'],
+            ['c’est pourquoi', 'that is why', 'Je veux réussir, c’est pourquoi je révise.'],
+            ['du coup (informal)', 'so', 'Du coup, elle a changé de filière.'],
+            ['pourtant', 'yet, even so', 'Il avait révisé, pourtant il a échoué.'],
+          ],
+        ),
+        p(
+          'These words can start a sentence (*Alors, nous sommes rentrés.*) or follow a comma. **Donc** can also stand after the subject: *Je pense, donc je suis.*',
+        ),
+      ),
+      section(
+        'tips',
+        'Telling a short story',
+        p(
+          'Combine all three: a **scene** (imparfait), the **reason** (parce que, à cause de), the **result** (donc, du coup). *Il pleuvait, alors nous sommes restés à la maison. Du coup, nous avons regardé un film.*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ J’avais faim, pourtant j’ai mangé.  ✓ J’avais faim, donc j’ai mangé.',
+          '✗ Il pleuvait, parce que nous sommes rentrés.  ✓ Il pleuvait, alors nous sommes rentrés.',
+        ),
+        examples(
+          ['J’étais malade, donc je suis resté au lit.', 'I was ill, so I stayed in bed.'],
+          [
+            'Il avait beaucoup révisé, pourtant il a échoué.',
+            'He had revised a lot, yet he failed.',
+          ],
+          [
+            'Elle n’aimait pas la chimie. Du coup, elle a changé de filière.',
+            'She did not like chemistry. So she changed course.',
+          ],
+        ),
+      ),
+    ],
+    related: ['fr-a21-cause', 'fr-a21-imparfait-pc', 'fr-questions'],
+    sources: [S.donc, S.alors],
+  },
+];

@@ -558,6 +558,41 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a21-negatives', note: 'rien, personne, plus, pas encore' },
     { topic: 'fr-a21-time-markers', note: 'pendant, depuis, en' },
   ],
+  'fr-a2-1-sorties': [
+    { topic: 'fr-a21-invitations' },
+    { topic: 'fr-a21-modals' },
+    { topic: 'fr-a21-y', note: 'j’y vais, allons-y' },
+  ],
+  'fr-a2-1-souvenirs': [
+    { topic: 'fr-a21-imparfait' },
+    { topic: 'fr-a21-imparfait-use', note: 'autrefois, à l’époque, chaque été' },
+    { topic: 'fr-a21-en', note: 'j’en veux, il y en a' },
+  ],
+  'fr-a2-1-logement': [
+    { topic: 'fr-a21-relatives', note: 'qui, que, où' },
+    { topic: 'fr-a21-comparison', note: 'plus, moins, meilleur, mieux' },
+    { topic: 'fr-a21-condition' },
+  ],
+  'fr-a2-1-portrait': [
+    { topic: 'fr-a21-equality', note: 'aussi, autant, le même' },
+    { topic: 'fr-a21-chaque-tout' },
+    { topic: 'fr-a21-possessive-pronouns' },
+  ],
+  'fr-a2-1-futur': [
+    { topic: 'fr-a21-futur' },
+    { topic: 'fr-a21-futur-irregular', note: 'irai, serai, ferai, viendrai' },
+    { topic: 'fr-a21-si-futur' },
+  ],
+  'fr-a2-1-cuisine': [
+    { topic: 'fr-a21-obligation', note: 'il faut, devoir, interdit de' },
+    { topic: 'fr-a21-ne-que' },
+    { topic: 'fr-a21-measures' },
+  ],
+  'fr-a2-1-etudes': [
+    { topic: 'fr-a21-imparfait-pc' },
+    { topic: 'fr-a21-cause', note: 'parce que, à cause de, grâce à' },
+    { topic: 'fr-a21-consequence' },
+  ],
   // ---- French A2.2 ----------------------------------------------------------------------------
   'fr-a2-2-sante': [
     { topic: 'fr-object-pronouns', note: 'le, la, les, lui, leur' },

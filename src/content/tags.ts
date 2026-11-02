@@ -400,6 +400,7 @@ export const TAGS = {
   'fr-adjective-position': { label: 'un petit pull rouge', group: 'grammar', emoji: '↔️' },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
+  'culture-outings': { label: 'Culture & outings', group: 'topic', emoji: '🎭' },
   // grammar points – French A2.1, unit 1
   'fr-a21-passe-compose': { label: 'Passé composé with être', group: 'grammar', emoji: '⏪' },
   'fr-a21-participles': { label: 'Irregular past participles', group: 'grammar', emoji: '🧱' },
@@ -409,6 +410,35 @@ export const TAGS = {
     emoji: '🙅',
   },
   'fr-a21-time-markers': { label: 'pendant, depuis, en', group: 'grammar', emoji: '⏳' },
+  // grammar points – French A2.1, unit 2
+  'fr-a21-invitations': { label: 'Suggesting, accepting, refusing', group: 'grammar', emoji: '💌' },
+  'fr-a21-modals': { label: 'pouvoir, devoir, vouloir', group: 'grammar', emoji: '🔑' },
+  'fr-a21-y': { label: 'The pronoun y', group: 'grammar', emoji: '📍' },
+  // topics and grammar points – French A2.1, units 3-8
+  memories: { label: 'Memories & landscapes', group: 'topic', emoji: '🏞️' },
+  cooking: { label: 'Cooking & restaurants', group: 'topic', emoji: '🍳' },
+  'fr-a21-imparfait': { label: 'The imparfait: forms', group: 'grammar', emoji: '⏪' },
+  'fr-a21-imparfait-use': {
+    label: 'Imparfait: habits and descriptions',
+    group: 'grammar',
+    emoji: '🌄',
+  },
+  'fr-a21-en': { label: 'The pronoun en', group: 'grammar', emoji: '🔢' },
+  'fr-a21-relatives': { label: 'qui, que, où', group: 'grammar', emoji: '🔗' },
+  'fr-a21-comparison': { label: 'plus, moins … que', group: 'grammar', emoji: '⚖️' },
+  'fr-a21-condition': { label: 'si + présent', group: 'grammar', emoji: '❔' },
+  'fr-a21-equality': { label: 'aussi … que, autant de', group: 'grammar', emoji: '🟰' },
+  'fr-a21-chaque-tout': { label: 'chaque, tout, tous', group: 'grammar', emoji: '🌐' },
+  'fr-a21-possessive-pronouns': { label: 'le mien, la tienne', group: 'grammar', emoji: '🫳' },
+  'fr-a21-futur': { label: 'The futur simple', group: 'grammar', emoji: '🔭' },
+  'fr-a21-futur-irregular': { label: 'Irregular future stems', group: 'grammar', emoji: '🧩' },
+  'fr-a21-si-futur': { label: 'si + présent + futur', group: 'grammar', emoji: '🔀' },
+  'fr-a21-obligation': { label: 'il faut, devoir, interdit', group: 'grammar', emoji: '🚧' },
+  'fr-a21-ne-que': { label: 'ne … que', group: 'grammar', emoji: '☝️' },
+  'fr-a21-measures': { label: 'Quantities and measures', group: 'grammar', emoji: '⚖️' },
+  'fr-a21-imparfait-pc': { label: 'Imparfait or passé composé?', group: 'grammar', emoji: '🎬' },
+  'fr-a21-cause': { label: 'parce que, à cause de, grâce à', group: 'grammar', emoji: '🔎' },
+  'fr-a21-consequence': { label: 'donc, alors, du coup', group: 'grammar', emoji: '➡️' },
   // grammar points – French A2.2, unit 1
   'fr-object-pronouns': { label: 'le, la, les, lui, leur', group: 'grammar', emoji: '🎯' },
   'fr-superlative': { label: 'le plus, le meilleur', group: 'grammar', emoji: '🥇' },
