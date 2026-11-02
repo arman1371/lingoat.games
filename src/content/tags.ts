@@ -462,6 +462,8 @@ export const TAGS = {
   cities: { label: 'Cities', group: 'topic', emoji: '🏙️' },
   'fr-relative-pronouns': { label: 'qui, que, où, dont', group: 'grammar', emoji: '🔗' },
   'fr-relative-ce': { label: 'ce qui, ce que, ce dont', group: 'grammar', emoji: '🧩' },
+  'fr-lequel': { label: 'lequel, auquel, duquel', group: 'grammar', emoji: '🔀' },
+  'fr-relative-choice': { label: 'qui, dont, où or lequel?', group: 'grammar', emoji: '🧭' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

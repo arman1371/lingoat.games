@@ -1,3 +1,4 @@
+import { FRB21_U11_TOPICS } from './fr-b2-1-u11';
 import { FRB21_U10_TOPICS } from './fr-b2-1-u10';
 import { FRB21_U9_TOPICS } from './fr-b2-1-u9';
 import { FRB21_U8_TOPICS } from './fr-b2-1-u8';
@@ -203,4 +204,5 @@ export const FRB21_TOPICS: GrammarTopic[] = [
   ...FRB21_U8_TOPICS,
   ...FRB21_U9_TOPICS,
   ...FRB21_U10_TOPICS,
+  ...FRB21_U11_TOPICS,
 ];

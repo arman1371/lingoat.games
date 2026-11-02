@@ -134,6 +134,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue', 'fr-b2-1-cites-dialogues'],
   ['blitz', 'fr-b2-1-cites-blitz'],
   ['quiz', 'fr-b2-1-cites-challenge'],
+  ['gap fill (lequel, auquel, duquel)', 'fr-b2-1-logement-gap-lequel'],
+  ['gap fill (qui, dont, où or lequel)', 'fr-b2-1-logement-gap-choice'],
+  ['sort it (which preposition)', 'fr-b2-1-logement-sort-prep'],
+  ['sentence builder', 'fr-b2-1-logement-sentences'],
+  ['dialogue', 'fr-b2-1-logement-dialogues'],
+  ['blitz', 'fr-b2-1-logement-blitz'],
+  ['quiz', 'fr-b2-1-logement-challenge'],
 ];
 
 test.describe('French B2.1 – playing the games', () => {

@@ -602,4 +602,8 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-relative-pronouns', note: 'qui, que, où, dont' },
     { topic: 'fr-relative-ce', note: 'ce qui, ce que, ce dont' },
   ],
+  'fr-b2-1-logement': [
+    { topic: 'fr-lequel', note: 'lequel, auquel, duquel' },
+    { topic: 'fr-relative-choice', note: 'qui, dont, où or lequel?' },
+  ],
 };

@@ -9,6 +9,7 @@ import { demarches } from './u7-demarches';
 import { cause } from './u8-cause';
 import { recit } from './u9-recit';
 import { cites } from './u10-cites';
+import { logement } from './u11-logement';
 
 const units = [
   identite,
@@ -21,6 +22,7 @@ const units = [
   cause,
   recit,
   cites,
+  logement,
 ];
 
 const content: LevelContent = {

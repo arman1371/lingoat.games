@@ -1480,6 +1480,24 @@ export const LESSONS = {
       'Ce dont j’ai besoin, c’est d’un espace vert.',
     ],
   },
+  'fr-lequel': {
+    title: 'Compound relatives: lequel, auquel, duquel',
+    rule: 'After a preposition, things take lequel, laquelle, lesquels, lesquelles (agreeing with the noun). With à they become auquel, à laquelle, auxquels, auxquelles; with de they become duquel, de laquelle, desquels, desquelles. Prepositional phrases ending in de (au pied de, près de) take duquel, not dont.',
+    examples: [
+      'L’appartement dans lequel j’habite est lumineux.',
+      'Les problèmes auxquels nous faisons face sont graves.',
+      'L’immeuble au pied duquel il y a un parc est calme.',
+    ],
+  },
+  'fr-relative-choice': {
+    title: 'Choosing the right relative pronoun',
+    rule: 'Subject: qui. Direct object: que. Person after a preposition: preposition + qui (l’ami chez qui j’habite). Thing after a preposition: lequel. De + noun or whose: dont. Place or time: où (simpler than dans lequel).',
+    examples: [
+      'L’ami chez qui j’habite est absent.',
+      'La cuisine dont les murs sont blancs est lumineuse.',
+      'La ville où je travaille est loin.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
