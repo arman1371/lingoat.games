@@ -920,4 +920,135 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
     related: ['fr-b11-pqp', 'fr-b11-narration'],
     sources: [S.connector],
   },
+  {
+    id: 'fr-b11-passive',
+    title: 'The passive voice',
+    tagline: 'The article is published by the journalist',
+    level: LEVEL,
+    summary:
+      'The passive puts the object of the action first. It is formed with être (in the tense of the active verb) plus the past participle, which agrees with the subject. The doer, if mentioned, follows par.',
+    sections: [
+      section(
+        'form',
+        'How it is formed',
+        table(
+          'From active to passive.',
+          ['Tense', 'Active', 'Passive'],
+          [
+            [
+              'present',
+              'Le journaliste publie l’article.',
+              'L’article est publié par le journaliste.',
+            ],
+            [
+              'passé composé',
+              'La rédaction a vérifié la source.',
+              'La source a été vérifiée par la rédaction.',
+            ],
+            ['future', 'On annoncera les résultats.', 'Les résultats seront annoncés.'],
+          ],
+        ),
+        p(
+          'The participle always agrees with the **new subject**: *la rumeur a été démentie, les photos sont partagées*. In the passé composé, **été** never changes. Use **par** for the doer; **de** appears with feelings (*aimé de tous*).',
+        ),
+        tip(
+          'On instead of the passive',
+          'French often avoids the passive: *On annonce les résultats demain* or *Les résultats s’annoncent demain* are more natural in speech.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ La rumeur a été démenti.  ✓ La rumeur a été démentie.',
+          '✗ Les photos sont été partagées.  ✓ Les photos ont été partagées.',
+          '✗ L’article a publié par le journaliste.  ✓ L’article a été publié par le journaliste.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-nominalisation'],
+    sources: [S.passive],
+  },
+  {
+    id: 'fr-b11-nominalisation',
+    title: 'Headlines: verb → noun',
+    tagline: 'Les prix augmentent → L’augmentation des prix',
+    level: LEVEL,
+    summary:
+      'Press headlines often use a noun phrase instead of a sentence. Many nouns come from a verb: -er → -ation, -ir → -ssement, -ir → -ure, or an irregular noun like la baisse. Learn the noun together with the verb.',
+    sections: [
+      section(
+        'rule',
+        'From verb to noun',
+        table(
+          'Common patterns.',
+          ['Verb', 'Noun', 'Headline'],
+          [
+            ['augmenter', 'l’augmentation', 'L’augmentation des prix'],
+            ['arriver', 'l’arrivée', 'L’arrivée du président'],
+            ['découvrir', 'la découverte', 'La découverte d’un virus'],
+            ['décider', 'la décision', 'La décision du gouvernement'],
+            ['baisser', 'la baisse', 'La baisse du chômage'],
+            ['ouvrir', 'l’ouverture', 'L’ouverture d’un musée'],
+          ],
+        ),
+        p(
+          'The subject of the verb becomes **de + noun**: *le chômage baisse → la baisse du chômage*. The gender of the noun follows its ending: nouns in **-tion, -sion, -ure, -ée** are feminine, nouns in **-ment** are masculine (*un changement*).',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Baisser du chômage  ✓ La baisse du chômage',
+          '✗ Le création d’un club  ✓ La création d’un club',
+        ),
+      ),
+    ],
+    related: ['fr-b11-passive'],
+    sources: [S.nominalisation],
+  },
+  {
+    id: 'fr-b11-adverbs',
+    title: 'Adverbs in -ment',
+    tagline: 'Add -ment to the feminine adjective',
+    level: LEVEL,
+    summary:
+      'Most French adverbs of manner end in -ment. Take the feminine form of the adjective and add -ment (lent → lentement). After a vowel add -ment to the masculine (vrai → vraiment). Adjectives in -ent and -ant give -emment and -amment.',
+    sections: [
+      section(
+        'rule',
+        'How to form them',
+        table(
+          'Adverbs in -ment.',
+          ['Adjective', 'Adverb', 'Rule'],
+          [
+            ['lent / lente', 'lentement', 'feminine + -ment'],
+            ['heureux / heureuse', 'heureusement', 'feminine + -ment'],
+            ['vrai', 'vraiment', 'ends in a vowel: + -ment'],
+            ['évident', 'évidemment', '-ent → -emment'],
+            ['constant', 'constamment', '-ant → -amment'],
+            ['gentil', 'gentiment', 'irregular'],
+          ],
+        ),
+        p(
+          'The adverb goes after the verb (*Il répond rapidement*), before an adjective (*vraiment intéressant*) or at the start of a sentence (*Heureusement, personne n’a été blessé*). Some common adverbs are not formed this way: **bien, mal, vite, mieux**.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ évidentment  ✓ évidemment',
+          '✗ Il parle bonnement français.  ✓ Il parle bien français.',
+          '✗ Elle répond rapide.  ✓ Elle répond rapidement.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-passive'],
+    sources: [S.adverb],
+  },
 ];

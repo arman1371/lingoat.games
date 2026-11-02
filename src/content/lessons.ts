@@ -1202,6 +1202,25 @@ export const LESSONS = {
       'Je t’appellerai dès que j’arriverai.',
     ],
   },
+  'fr-b11-passive': {
+    title: 'The passive voice',
+    rule: 'Passive = être (in the tense of the active verb) + past participle, agreeing with the subject; the agent follows par. L’article est publié par le journaliste. La rumeur a été démentie. Les résultats seront annoncés.',
+    examples: [
+      'Le journaliste publie l’article. → L’article est publié par le journaliste.',
+      'La rumeur a été démentie.',
+      'Les résultats seront annoncés demain.',
+    ],
+  },
+  'fr-b11-nominalisation': {
+    title: 'Headlines: verb → noun',
+    rule: 'Headlines often replace a verb with a noun: les prix augmentent → l’augmentation des prix. Common endings: -ation / -tion / -sion (création, décision), -ée (arrivée), -ure (ouverture), or irregular nouns (la baisse, la découverte).',
+    examples: ['La baisse du chômage', 'L’arrivée du président', 'La découverte d’un virus'],
+  },
+  'fr-b11-adverbs': {
+    title: 'Adverbs in -ment',
+    rule: 'Most adverbs are the feminine adjective + -ment: lent → lentement, heureux → heureusement. If the adjective ends in a vowel, add -ment: vrai → vraiment. Adjectives in -ent / -ant give -emment / -amment: évident → évidemment.',
+    examples: ['Elle répond rapidement.', 'Évidemment, c’est faux.', 'Il se plaint constamment.'],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',

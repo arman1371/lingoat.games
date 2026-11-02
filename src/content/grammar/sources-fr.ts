@@ -57,5 +57,8 @@ export const FR_SOURCES = {
   plusQueParfait: wp('Plus-que-parfait', 'Plus-que-parfait'),
   en: wiktionary('en', 'en'),
   y: wiktionary('y', 'y'),
+  passive: wp('Voix_passive', 'Voix passive'),
+  nominalisation: wp('Nominalisation', 'Nominalisation'),
+  adverb: wp('Adverbe_en_français', 'Adverbe en français'),
   connector: wp('Connecteur_logique', 'Connecteur logique'),
 } as const satisfies Record<string, Source>;
