@@ -1185,6 +1185,151 @@ export const LESSONS = {
       'Samedi prochain, nous partons.',
     ],
   },
+  'fr-a12-object-pronouns': {
+    title: 'le, la, l’, les',
+    rule: 'Replace a known thing with le (masculine), la (feminine), l’ (before a vowel) or les (plural). The pronoun goes right before the verb, or before the infinitive: je la prends, je vais la prendre. In the negative ne comes before it: je ne la prends pas. In the passé composé it goes before avoir: je l’ai pris.',
+    examples: ['Je la prends.', 'Il les répare aujourd’hui.', 'Je ne l’aime pas.'],
+  },
+  'fr-y': {
+    title: 'The little word y',
+    rule: 'Y replaces a place that began with à, dans, chez or en. It goes right before the verb (or before the infinitive), like le, la, les: j’y vais, je n’y vais pas, je vais y aller. It never stays at the end of the sentence.',
+    examples: ['Tu vas à la cave ? Oui, j’y vais.', 'Nous y habitons.', 'Je ne vais pas y aller.'],
+  },
+  'fr-rules': {
+    title: 'Rules and orders',
+    rule: 'Written rules use the infinitive: Ne pas fumer. Ne pas entrer. Il est interdit de + infinitive is the formal way: Il est interdit de fumer. To tell someone directly, use the imperative: Fermez la porte ! Ne laissez pas de clés ! In the negative ne … pas wraps the imperative.',
+    examples: ['Ne pas fumer.', 'Il est interdit de fumer ici.', 'Ne faites pas de bruit !'],
+  },
+  'fr-place-more': {
+    title: 'au-dessus de, au milieu de …',
+    rule: 'Many place words end in de: au-dessus de, en dessous de, au milieu de, autour de, à l’intérieur de, au fond de. De combines with the article: de + le = du, de + les = des, but de la and de l’ stay. So: au milieu du salon, autour de la table.',
+    examples: [
+      'La lampe est au-dessus de la table.',
+      'Le tapis est au milieu du salon.',
+      'Le chat est sous le lit.',
+    ],
+  },
+  'fr-a12-comparison': {
+    title: 'plus, moins, aussi … que',
+    rule: 'Compare with plus (more), moins (less) or aussi (as) + adjective + que: Le train est plus rapide que le bus. L’hôtel est aussi cher que l’auberge. Bon is special: the comparative is meilleur, never plus bon. It agrees: meilleure, meilleurs.',
+    examples: [
+      'Elle est plus grande que moi.',
+      'Il est moins bruyant qu’avant.',
+      'Ce film est meilleur.',
+    ],
+  },
+  'fr-a12-partir': {
+    title: 'partir, sortir, dormir',
+    rule: 'These -ir verbs do not take -iss-. In the singular they lose the last consonant of the stem and add -s, -s, -t: je pars, tu pars, il part. The plural is regular: nous partons, vous partez, ils partent. Sortir (je sors) and dormir (je dors) work the same way.',
+    examples: ['Je pars lundi.', 'Tu sors ce soir ?', 'Ils dorment à l’hôtel.'],
+  },
+  'fr-a12-pc-etre': {
+    title: 'The passé composé with être',
+    rule: 'Verbs of movement and change use être, not avoir: aller, arriver, partir, rester, sortir, venir, entrer, tomber. The participle agrees with the subject: elle est allée, nous sommes partis. Ne … pas wraps être: je ne suis pas resté.',
+    examples: ['Je suis allé à la mer.', 'Elle est arrivée hier.', 'Ils sont restés à l’hôtel.'],
+  },
+  'fr-a12-cetait': {
+    title: 'c’était, il y avait',
+    rule: 'To describe a past place or situation use c’était (it was) and il y avait (there was, there were). The weather is il faisait beau. They stay the same for singular and plural: il y avait une plage, il y avait des touristes.',
+    examples: ['C’était super !', 'Il y avait beaucoup de monde.', 'Il faisait beau.'],
+  },
+  'fr-a12-avoir-mal': {
+    title: 'avoir mal à',
+    rule: 'To say where it hurts, use avoir mal à + the part of the body. À joins the article: à + le = au, à + les = aux, but à la and à l’ stay. So: j’ai mal à la tête, il a mal au dos, elle a mal aux dents, nous avons mal à l’oreille.',
+    examples: ['J’ai mal à la tête.', 'Il a mal au dos.', 'Elle a mal aux dents.'],
+  },
+  'fr-a12-devoir-falloir': {
+    title: 'devoir and il faut',
+    rule: 'Devoir (must, have to) is irregular: je dois, tu dois, il doit, nous devons, vous devez, ils doivent. It is followed by an infinitive. Il faut + infinitive says what is needed in general; il ne faut pas means you must not.',
+    examples: ['Je dois aller chez le médecin.', 'Il faut se reposer.', 'Il ne faut pas fumer.'],
+  },
+  'fr-a12-lui-leur': {
+    title: 'lui and leur',
+    rule: 'Lui replaces à + one person, leur replaces à + several people. They go before the verb: je lui téléphone, je leur parle. Use them with parler, téléphoner, donner, dire, demander, répondre. Leur never takes an -s as a pronoun.',
+    examples: ['Je lui téléphone.', 'Le médecin leur parle.', 'Il ne lui répond pas.'],
+  },
+  'fr-a12-pc-pronominal': {
+    title: 'Pronominal verbs in the past',
+    rule: 'Pronominal verbs form the passé composé with être: je me suis blessé, tu t’es reposé, nous nous sommes soignés. The participle agrees with the subject: elle s’est blessée. In the negative ne … pas wraps me suis: je ne me suis pas reposé.',
+    examples: [
+      'Je me suis blessé au pied.',
+      'Elle s’est reposée.',
+      'Nous ne nous sommes pas soignés.',
+    ],
+  },
+  'fr-a12-because': {
+    title: 'pourquoi, parce que, alors',
+    rule: 'Ask for a reason with pourquoi and answer with parce que (parce qu’ before a vowel): Pourquoi tu restes au lit ? – Parce que je suis malade. Alors introduces the result: Je suis malade, alors je reste au lit.',
+    examples: [
+      'Pourquoi tu tousses ?',
+      'Parce que je suis enrhumé.',
+      'J’ai de la fièvre, alors je reste au lit.',
+    ],
+  },
+  'fr-a12-savoir-pouvoir': {
+    title: 'savoir, pouvoir, vouloir',
+    rule: 'Savoir means to know how to do something you have learnt: je sais conduire. Pouvoir means can, to be allowed or able: je peux venir. Vouloir means to want: je veux travailler. All three are irregular and are followed by an infinitive.',
+    examples: [
+      'Elle sait parler anglais.',
+      'Je peux venir demain.',
+      'Nous voulons changer de poste.',
+    ],
+  },
+  'fr-a12-si-present': {
+    title: 'si + present',
+    rule: 'Si (if) is followed by the present, never the future. The result can be the present, the near future or an order: Si tu as le temps, tu peux venir. Si elle réussit, elle va déménager. Si vous cherchez un emploi, envoyez votre CV. Si + il becomes s’il.',
+    examples: [
+      'Si tu veux, tu peux venir.',
+      'S’il pleut, je reste à la maison.',
+      'Si vous êtes prêt, commençons.',
+    ],
+  },
+  'fr-a12-depuis-pendant': {
+    title: 'depuis and pendant',
+    rule: 'Depuis + present says how long something has lasted until now: je travaille ici depuis trois ans. Pendant + passé composé says how long something lasted in the past: j’ai travaillé pendant trois ans. Depuis also gives a starting point: depuis janvier.',
+    examples: [
+      'J’habite ici depuis 2019.',
+      'Elle a dormi pendant dix heures.',
+      'Il cherche depuis lundi.',
+    ],
+  },
+  'fr-a12-qui-que': {
+    title: 'qui and que',
+    rule: 'Qui and que join two sentences and replace a noun that was already named. Qui replaces the subject: un métier qui me plaît. Que replaces the object: un métier que j’aime. Que becomes qu’ before a vowel: le poste qu’il cherche. Qui never changes.',
+    examples: [
+      'J’ai un patron qui est sympa.',
+      'C’est le poste que je cherche.',
+      'Le métier qu’elle aime.',
+    ],
+  },
+  'fr-a12-intensity': {
+    title: 'très, trop, assez, un peu',
+    rule: 'Très (very), assez (fairly), trop (too) and un peu (a little) go before adjectives and adverbs: très difficile, trop tard. With a verb use beaucoup, trop or un peu after it: il travaille beaucoup, elle parle un peu. Before a noun add de: trop de travail.',
+    examples: [
+      'Ce poste est très intéressant.',
+      'J’ai trop de travail.',
+      'Elle parle un peu anglais.',
+    ],
+  },
+  'fr-a12-quantity-compare': {
+    title: 'plus de, moins de, autant de',
+    rule: 'To compare quantities of a noun use plus de (more), moins de (less) or autant de (as much, as many), then que: Il y a plus de bruit en ville qu’à la campagne. De becomes d’ before a vowel: autant d’arbres que de maisons.',
+    examples: [
+      'Il y a moins de pollution ici.',
+      'J’ai autant de travail que toi.',
+      'Il y a plus d’arbres que de maisons.',
+    ],
+  },
+  'fr-a12-en': {
+    title: 'The pronoun en',
+    rule: 'En replaces du, de la, des or de + a noun that was already mentioned. It goes right before the verb. A number or quantity stays after the verb: J’en ai trois. Il y en a beaucoup. In the negative ne goes before en: je n’en ai pas.',
+    examples: ['Tu veux du pain ? Oui, j’en veux.', 'J’en ai trois.', 'Nous n’en avons pas.'],
+  },
+  'fr-a12-adverbs': {
+    title: 'Adverbs in -ment',
+    rule: 'Many adverbs end in -ment. Take the feminine adjective and add -ment: lent → lente → lentement, complet → complète → complètement. If the adjective already ends in -e, add -ment: calme → calmement. The adverb goes after the verb.',
+    examples: ['Il marche lentement.', 'Elle vit calmement.', 'Nous avons complètement changé.'],
+  },
   'fr-likes': {
     title: 'J’aime, je déteste …',
     rule: 'Aimer, adorer and détester are regular -er verbs. Before a noun use the definite article, even for things in general: j’aime le café, elle adore les chats. Before an activity use the infinitive: j’aime danser. Add beaucoup for more: j’aime beaucoup la musique.',
