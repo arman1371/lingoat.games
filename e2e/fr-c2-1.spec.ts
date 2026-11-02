@@ -66,6 +66,20 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue (three scenes)', 'fr-c2-1-registres-dialogues'],
   ['blitz', 'fr-c2-1-registres-blitz'],
   ['quiz (unit challenge)', 'fr-c2-1-registres-challenge'],
+  ['sort it (kinds of irony)', 'fr-c2-1-humour-sort-irony'],
+  ['gap fill (paronyms)', 'fr-c2-1-humour-gap-paronyms'],
+  ['quiz (humour challenge)', 'fr-c2-1-humour-challenge'],
+  ['sort it (narrative tenses)', 'fr-c2-1-recit-sort-tenses'],
+  ['conjugation (passé simple)', 'fr-c2-1-recit-conj-irregular'],
+  ['dialogue (telling a story)', 'fr-c2-1-recit-dialogues'],
+  ['sort it (cause or consequence)', 'fr-c2-1-cause-sort-roles'],
+  ['gap fill (connectors of cause)', 'fr-c2-1-cause-gap-connectors'],
+  ['spell (verbs of cause)', 'fr-c2-1-cause-spell-words'],
+  ['quiz (cause challenge)', 'fr-c2-1-cause-challenge'],
+  ['sort it (moods after connectors)', 'fr-c2-1-concession-sort-moods'],
+  ['gap fill (verb forms in conditions)', 'fr-c2-1-concession-gap-hypothesis'],
+  ['sentence builder (concession)', 'fr-c2-1-concession-sentences'],
+  ['quiz (concession challenge)', 'fr-c2-1-concession-challenge'],
 ];
 
 test.describe('French C2.1 – playing the games', () => {

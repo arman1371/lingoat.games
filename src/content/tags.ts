@@ -412,6 +412,7 @@ export const TAGS = {
   'fr-c21-wordplay': { label: 'Homophones & paronyms', group: 'grammar', emoji: '🔤' },
   'fr-c21-passe-simple': { label: 'Passé simple & passé antérieur', group: 'grammar', emoji: '📜' },
   'fr-c21-narrative-tenses': { label: 'Tenses of a story', group: 'grammar', emoji: '🎞️' },
+  'fr-c21-concession': { label: 'Concession & hypothesis', group: 'grammar', emoji: '⚖️' },
   'fr-c21-cause-consequence': { label: 'Cause & consequence', group: 'grammar', emoji: '🔗' },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },

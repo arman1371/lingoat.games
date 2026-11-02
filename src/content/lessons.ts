@@ -1309,6 +1309,15 @@ export const LESSONS = {
       'Il parle de sorte que tous comprennent.',
     ],
   },
+  'fr-c21-concession': {
+    title: 'Concession and hypothesis',
+    rule: 'Concession: bien que, quoique + subjunctive; quand bien même + conditional; en dépit de + noun. Opposition: alors que, tandis que + indicative. Condition: si + present → future, si + imparfait → conditional; au cas où + conditional; à condition que, pourvu que, à moins que + subjunctive.',
+    examples: [
+      'Bien qu’il soit fatigué, il continue.',
+      'Au cas où il pleuvrait, prends un parapluie.',
+      'Quand bien même vous insisteriez, je refuserais.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',

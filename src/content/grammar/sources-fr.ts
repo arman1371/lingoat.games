@@ -56,5 +56,9 @@ export const FR_SOURCES = {
   register: wp('Registre_de_langue', 'Registre de langue'),
   subConjunction: wp('Conjonction_de_subordination', 'Conjonction de subordination'),
   puisque: wiktionary('puisque', 'puisque'),
+  quandBienMeme: wiktionary('quand_bien_même', 'quand bien même'),
+  auCasOu: wiktionary('au_cas_où', 'au cas où'),
+  quoique: wiktionary('quoique', 'quoique'),
+  subjunctive: wp('Subjonctif_en_français', 'Subjonctif en français'),
   deSorteQue: wiktionary('de_sorte_que', 'de sorte que'),
 } as const satisfies Record<string, Source>;

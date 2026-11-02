@@ -419,7 +419,110 @@ export const FRC21_TOPICS: GrammarTopic[] = [
         ),
       ),
     ],
-    related: [],
+    related: ['fr-c21-concession'],
     sources: [S.subConjunction, S.puisque, S.deSorteQue],
+  },
+  {
+    id: 'fr-c21-concession',
+    title: 'Concession and hypothesis',
+    tagline: 'Concede, contrast and imagine',
+    level: LEVEL,
+    summary:
+      'Concession (bien que, quoique, quand bien même, en dépit de), opposition (alors que, tandis que, en revanche) and condition (si, au cas où, à condition que, à moins que) take different moods: subjunctive, indicative or conditional.',
+    sections: [
+      section(
+        'concession',
+        'Conceding a point',
+        p(
+          'A concession says “this is true, but it does not change the outcome”. **Bien que**, **quoique** and **encore que** take the **subjunctive**. **Quand bien même** takes the **conditional**. Before a noun, use **en dépit de**. Between sentences, use **certes … toutefois / néanmoins**.',
+        ),
+        table(
+          'Connectors of concession.',
+          ['Connector', 'Followed by', 'Example'],
+          [
+            ['bien que, quoique', 'subjunctive', 'Bien qu’il soit fatigué, il continue.'],
+            ['quand bien même', 'conditional', 'Quand bien même vous insisteriez, je refuserais.'],
+            ['en dépit de', 'noun', 'En dépit de la pluie, le match a eu lieu.'],
+            [
+              'certes … toutefois',
+              'new clause',
+              'Certes, c’est cher ; toutefois, cela vaut la peine.',
+            ],
+          ],
+        ),
+        examples(
+          ['Quoique peu riche, il est généreux.', 'Although not rich, he is generous.'],
+          [
+            'Quand bien même seraient-ils cinq mille !',
+            'Even if there were five thousand of them!',
+          ],
+        ),
+        tip(
+          'Quoique or quoi que?',
+          'Quoique (one word) means “although”. Quoi que (two words) means “whatever” and always takes the subjunctive: Quoi que tu fasses, je t’aiderai.',
+        ),
+      ),
+      section(
+        'opposition',
+        'Setting two facts against each other',
+        p(
+          '**Alors que** and **tandis que** put two facts side by side and take the **indicative**. Between sentences use **en revanche** or **à l’inverse**; **par contre** is more spoken. **Au lieu de** + infinitive means “instead of”.',
+        ),
+        examples(
+          [
+            'Il travaille alors que ses amis s’amusent.',
+            'He works while his friends enjoy themselves.',
+          ],
+          [
+            'Lyon est calme ; en revanche, Marseille est animée.',
+            'Lyon is calm; on the other hand, Marseille is lively.',
+          ],
+        ),
+      ),
+      section(
+        'condition',
+        'Condition and hypothesis',
+        p(
+          '**Si** is followed by the present (then the future), by the imparfait (then the conditional), or by the plus-que-parfait (then the past conditional). **Au cas où** and **dans l’hypothèse où** take the **conditional**; the Académie française recommends only the conditional after au cas où. **À condition que**, **pourvu que**, **à moins que** and **à supposer que** take the **subjunctive**.',
+        ),
+        table(
+          'Conditions and their moods.',
+          ['Pattern', 'Meaning', 'Example'],
+          [
+            ['si + present → future', 'real condition', 'Si tu viens, nous irons au cinéma.'],
+            [
+              'si + imparfait → conditional',
+              'unlikely condition',
+              'Si j’avais le temps, je lirais.',
+            ],
+            [
+              'si + plus-que-parfait → past conditional',
+              'regret',
+              'Si j’avais su, je ne serais pas venu.',
+            ],
+            ['au cas où + conditional', 'in case', 'Au cas où il pleuvrait, prends un parapluie.'],
+            [
+              'à condition que + subjunctive',
+              'provided that',
+              'Nous partons à condition qu’il fasse beau.',
+            ],
+            ['à moins que + subjunctive', 'unless', 'Restons, à moins que tu ne sois pressé.'],
+            [
+              'sauf si + indicative',
+              'except if',
+              'Sauf si tu changes d’avis, on part à huit heures.',
+            ],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Si j’aurais le temps, je viendrais.  ✓ Si j’avais le temps, je viendrais.',
+          '✗ Au cas où il pleuvra  ✓ Au cas où il pleuvrait',
+          '✗ à condition que tu viendras  ✓ à condition que tu viennes',
+        ),
+      ),
+    ],
+    related: ['fr-c21-cause-consequence'],
+    sources: [S.subConjunction, S.quandBienMeme, S.auCasOu, S.quoique, S.subjunctive],
   },
 ];
