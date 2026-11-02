@@ -361,6 +361,12 @@ export const TAGS = {
   'c22-prefix-verbs': { label: 'übersetzen or übersetzen?', group: 'grammar', emoji: '🔧' },
   'c22-passive-alternatives': { label: 'Replacing the passive', group: 'grammar', emoji: '🔀' },
   'c22-nuance-particles': { label: 'Nuance particles & adverbs', group: 'grammar', emoji: '🎚️' },
+  // grammar points – French B1.1
+  'fr-b11-subjunctive': { label: 'Subjunctive (il faut que …)', group: 'grammar', emoji: '🎯' },
+  'fr-b11-obligation': { label: 'Must, forbidden, allowed', group: 'grammar', emoji: '🚦' },
+  'fr-b11-advice': { label: 'Giving advice', group: 'grammar', emoji: '💡' },
+  'fr-b11-restriction': { label: 'ne … que, ne … ni … ni, aucun', group: 'grammar', emoji: '⛔' },
+  'fr-b11-negative-prefixes': { label: 'in-, im-, il-, ir-', group: 'grammar', emoji: '➖' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },
@@ -373,6 +379,42 @@ export const TAGS = {
   'fr-adjectives': { label: 'Adjectives (grand, grande)', group: 'grammar', emoji: '📏' },
   'fr-cest-il-est': { label: 'C’est or il est?', group: 'grammar', emoji: '👉' },
   'fr-plurals': { label: 'Plurals (les, des, -s)', group: 'grammar', emoji: '👥' },
+  // grammar points – French B1.1, unit 2
+  'fr-b11-imparfait-pc': { label: 'Imparfait or passé composé?', group: 'grammar', emoji: '🎞️' },
+  'fr-b11-narration': { label: 'Connectors of a story', group: 'grammar', emoji: '📖' },
+  'fr-b11-reflexive-agreement': {
+    label: 'Agreement: elle s’est levée',
+    group: 'grammar',
+    emoji: '🪞',
+  },
+  // grammar points – French B1.1, unit 3
+  'fr-b11-relatives': { label: 'qui, que, dont, où', group: 'grammar', emoji: '🔗' },
+  'fr-b11-opinion': { label: 'Giving an opinion', group: 'grammar', emoji: '💭' },
+  'fr-b11-purpose': { label: 'pour, afin de, pour que', group: 'grammar', emoji: '🎯' },
+  // grammar points – French B1.1, unit 4
+  'fr-b11-certainty': {
+    label: 'Certainty: indicative or subjunctive',
+    group: 'grammar',
+    emoji: '🤔',
+  },
+  'fr-b11-comparison': { label: 'plus … que, le plus, meilleur', group: 'grammar', emoji: '⚖️' },
+  'fr-b11-adj-place': { label: 'Place of the adjective', group: 'grammar', emoji: '📏' },
+  // grammar points – French B1.1, unit 5
+  'fr-b11-pqp': { label: 'Plus-que-parfait', group: 'grammar', emoji: '⏮️' },
+  'fr-b11-en-y': { label: 'The pronouns en and y', group: 'grammar', emoji: '📍' },
+  'fr-b11-chronology': { label: 'avant de, après avoir, dès que', group: 'grammar', emoji: '⏳' },
+  // grammar points – French B1.1, unit 6
+  'fr-b11-passive': { label: 'The passive voice', group: 'grammar', emoji: '🔄' },
+  'fr-b11-nominalisation': { label: 'Headlines: verb → noun', group: 'grammar', emoji: '🗞️' },
+  'fr-b11-adverbs': { label: 'Adverbs in -ment', group: 'grammar', emoji: '➡️' },
+  // grammar points – French B1.1, unit 7
+  'fr-b11-possessive-pronouns': {
+    label: 'le mien, la tienne, les leurs',
+    group: 'grammar',
+    emoji: '🫴',
+  },
+  'fr-b11-wishes': { label: 'Wishes and hopes', group: 'grammar', emoji: '🌠' },
+  'fr-b11-duration': { label: 'en, pendant, dans, pour + time', group: 'grammar', emoji: '⏱️' },
   // grammar points – French A1.2, unit 1
   'fr-pronominal': { label: 'Pronominal verbs (se lever)', group: 'grammar', emoji: '🪞' },
   'fr-frequency': { label: 'toujours, souvent, ne … jamais', group: 'grammar', emoji: '🔁' },

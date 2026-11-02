@@ -564,4 +564,42 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-superlative' },
     { topic: 'fr-interrogative-pronouns' },
   ],
+  // ---- French B1.1 ----------------------------------------------------------------------------
+  'fr-b1-1-ensemble': [
+    { topic: 'fr-b11-subjunctive' },
+    { topic: 'fr-b11-obligation' },
+    { topic: 'fr-b11-advice' },
+    { topic: 'fr-b11-restriction' },
+    { topic: 'fr-b11-negative-prefixes' },
+  ],
+  'fr-b1-1-souvenirs': [
+    { topic: 'fr-b11-imparfait-pc' },
+    { topic: 'fr-b11-narration' },
+    { topic: 'fr-b11-reflexive-agreement' },
+  ],
+  'fr-b1-1-travail': [
+    { topic: 'fr-b11-relatives' },
+    { topic: 'fr-b11-opinion' },
+    { topic: 'fr-b11-purpose' },
+  ],
+  'fr-b1-1-consommer': [
+    { topic: 'fr-b11-certainty' },
+    { topic: 'fr-b11-comparison' },
+    { topic: 'fr-b11-adj-place' },
+  ],
+  'fr-b1-1-monde': [
+    { topic: 'fr-b11-pqp' },
+    { topic: 'fr-b11-en-y' },
+    { topic: 'fr-b11-chronology' },
+  ],
+  'fr-b1-1-medias': [
+    { topic: 'fr-b11-passive' },
+    { topic: 'fr-b11-nominalisation' },
+    { topic: 'fr-b11-adverbs' },
+  ],
+  'fr-b1-1-temps': [
+    { topic: 'fr-b11-possessive-pronouns' },
+    { topic: 'fr-b11-wishes' },
+    { topic: 'fr-b11-duration' },
+  ],
 };
