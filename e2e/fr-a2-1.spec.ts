@@ -49,7 +49,7 @@ test.describe('French A2.1 – grammar hints', () => {
   });
 });
 
-/** Every game engine that unit 1 uses is exercised through the real UI (the Vitest suite plays them all). */
+/** Game engines of every unit are exercised through the real UI (the Vitest suite plays them all). */
 const PLAYED: [engine: string, activityId: string][] = [
   ['flashcards', 'fr-a2-1-parcours-flash-life'],
   ['quiz (pictures)', 'fr-a2-1-parcours-quiz-jobs'],
@@ -77,6 +77,42 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['spell', 'fr-a2-1-sorties-spell-culture'],
   ['dialogue (three scenes)', 'fr-a2-1-sorties-dialogues'],
   ['blitz', 'fr-a2-1-sorties-blitz'],
+  ['flashcards', 'fr-a2-1-souvenirs-flash-landscapes'],
+  ['conjugation (imparfait)', 'fr-a2-1-souvenirs-conj-imparfait'],
+  ['gap fill (en)', 'fr-a2-1-souvenirs-gap-en'],
+  ['sort it (habit or description)', 'fr-a2-1-souvenirs-sort-usage'],
+  ['sentence builder', 'fr-a2-1-souvenirs-sentences'],
+  ['dialogue (three scenes)', 'fr-a2-1-souvenirs-dialogues'],
+  ['flashcards', 'fr-a2-1-logement-flash-building'],
+  ['conjugation (flat verbs)', 'fr-a2-1-logement-conj-flat'],
+  ['gap fill (qui, que, où)', 'fr-a2-1-logement-gap-relatives'],
+  ['sort it (qui, que, où)', 'fr-a2-1-logement-sort-relatives'],
+  ['sentence builder', 'fr-a2-1-logement-sentences'],
+  ['dialogue (three scenes)', 'fr-a2-1-logement-dialogues'],
+  ['flashcards', 'fr-a2-1-portrait-flash-faces'],
+  ['conjugation (verbs about people)', 'fr-a2-1-portrait-conj-people'],
+  ['gap fill (possessive pronouns)', 'fr-a2-1-portrait-gap-possessive'],
+  ['sort it (quality or flaw)', 'fr-a2-1-portrait-sort-traits'],
+  ['sentence builder', 'fr-a2-1-portrait-sentences'],
+  ['dialogue (three scenes)', 'fr-a2-1-portrait-dialogues'],
+  ['flashcards', 'fr-a2-1-futur-flash-tech'],
+  ['conjugation (futur simple)', 'fr-a2-1-futur-conj-futur'],
+  ['gap fill (irregular futures)', 'fr-a2-1-futur-gap-irregular'],
+  ['sort it (near or far future)', 'fr-a2-1-futur-sort-tense'],
+  ['sentence builder', 'fr-a2-1-futur-sentences'],
+  ['dialogue (three scenes)', 'fr-a2-1-futur-dialogues'],
+  ['flashcards', 'fr-a2-1-cuisine-flash-kitchen'],
+  ['conjugation (recipe verbs)', 'fr-a2-1-cuisine-conj-recipe'],
+  ['gap fill (ne … que)', 'fr-a2-1-cuisine-gap-ne-que'],
+  ['sort it (must or must not)', 'fr-a2-1-cuisine-sort-obligation'],
+  ['sentence builder', 'fr-a2-1-cuisine-sentences'],
+  ['dialogue (three scenes)', 'fr-a2-1-cuisine-dialogues'],
+  ['flashcards', 'fr-a2-1-etudes-flash-system'],
+  ['conjugation (past tenses)', 'fr-a2-1-etudes-conj-school'],
+  ['gap fill (cause)', 'fr-a2-1-etudes-gap-cause'],
+  ['sort it (background or event)', 'fr-a2-1-etudes-sort-past'],
+  ['sentence builder', 'fr-a2-1-etudes-sentences'],
+  ['dialogue (three scenes)', 'fr-a2-1-etudes-dialogues'],
 ];
 
 test.describe('French A2.1 – playing the games', () => {

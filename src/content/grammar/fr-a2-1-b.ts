@@ -676,7 +676,7 @@ export const FR21_TOPICS_B: GrammarTopic[] = [
         'negative',
         'Watch the negative',
         p(
-          '**Il faut** and **il ne faut pas** are opposites in meaning in a way English does not show: *il ne faut pas fumer* means “you must not smoke” (a prohibition), not “you do not have to”. To say “not necessary” use **il n’est pas nécessaire de** or **on n’a pas besoin de**.',
+          'Be careful with the negative: **il ne faut pas fumer** means “you must not smoke” (a prohibition), not “you do not have to”. To say that something is not necessary use **il n’est pas nécessaire de** or **on n’a pas besoin de**.',
         ),
         mistake(
           'Watch out',
@@ -792,5 +792,159 @@ export const FR21_TOPICS_B: GrammarTopic[] = [
     ],
     related: ['fr-quantities', 'fr-partitive', 'fr-a21-en'],
     sources: [S.cuillere],
+  },
+  // ---- unit 8: etudes -------------------------------------------------------------------------
+  {
+    id: 'fr-a21-imparfait-pc',
+    title: 'Imparfait or passé composé?',
+    tagline: 'Il pleuvait quand je suis sorti: scene and action',
+    level: LEVEL,
+    summary:
+      'Tell a story with two tenses: the imparfait paints the scene (weather, feelings, habits, what was going on) and the passé composé tells the events that move the story forward.',
+    sections: [
+      section(
+        'roles',
+        'Two jobs, one story',
+        table(
+          'Scene and event.',
+          ['Imparfait (the scene)', 'Passé composé (the event)'],
+          [
+            ['Il pleuvait.', 'Je suis sorti.'],
+            ['J’étudiais à la bibliothèque.', 'Mon ami est arrivé.'],
+            ['Elle était fatiguée.', 'Elle est rentrée.'],
+            ['Chaque matin, je prenais le métro.', 'Ce matin-là, j’ai raté le métro.'],
+          ],
+        ),
+        p(
+          'The two tenses often meet in one sentence: the **imparfait** is the long action or situation, and the **passé composé** is the short event that interrupts it. *Je lisais quand le téléphone a sonné.* Time words help: **soudain, un jour, ce jour-là, hier** point to an event; **chaque jour, souvent, toujours, à l’époque** point to a habit or scene.',
+        ),
+      ),
+      section(
+        'test',
+        'A quick test',
+        p(
+          'Ask yourself: could I put **“at that moment”** in front? *Il pleuvait* (it was raining at that moment) is a scene. Could I put **“and then”** in front? *Et puis je suis sorti* is an event. A state of mind or a description is never an event on its own.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il a plu quand je suis sorti.  ✓ Il pleuvait quand je suis sorti.',
+          '✗ Je lisais quand le téléphone sonnait.  ✓ Je lisais quand le téléphone a sonné.',
+          '✗ Elle a été fatiguée, alors elle est rentrée.  ✓ Elle était fatiguée, alors elle est rentrée.',
+        ),
+        examples(
+          ['Il pleuvait quand je suis sorti.', 'It was raining when I went out.'],
+          ['Elle était fatiguée, alors elle est rentrée.', 'She was tired, so she went home.'],
+          [
+            'Chaque matin, je prenais le bus, mais ce jour-là, je l’ai raté.',
+            'Every morning I took the bus, but that day I missed it.',
+          ],
+        ),
+      ),
+    ],
+    related: ['fr-a21-imparfait-use', 'fr-a21-passe-compose', 'fr-a21-time-markers'],
+    sources: [S.imparfaitGeneral, S.concordance, S.passeCompose],
+  },
+  {
+    id: 'fr-a21-cause',
+    title: 'parce que, à cause de, grâce à',
+    tagline: 'Giving the reason: clause or noun, good or bad',
+    level: LEVEL,
+    summary:
+      'Parce que is followed by a full clause. À cause de and grâce à are followed by a noun: à cause de for a negative or neutral cause, grâce à for a positive one. Comme at the start of a sentence also gives the reason.',
+    sections: [
+      section(
+        'choose',
+        'Which one?',
+        table(
+          'Four ways to give a reason.',
+          ['Word', 'Followed by', 'Example'],
+          [
+            ['parce que (qu’)', 'a clause', 'Je suis resté parce que j’avais un cours.'],
+            [
+              'à cause de (du, de la, des)',
+              'a noun (negative)',
+              'Je suis en retard à cause de la grève.',
+            ],
+            ['grâce à (au, à la, aux)', 'a noun (positive)', 'Grâce à mon prof, j’ai réussi.'],
+            ['comme', 'a clause, sentence-initial', 'Comme il pleuvait, nous sommes rentrés.'],
+          ],
+        ),
+        p(
+          'The question **Pourquoi … ?** is answered with **parce que**. **Parce que** becomes **parce qu’** before a vowel (*parce qu’il était malade*). A reason given first starts with **comme**, never with *parce que*.',
+        ),
+      ),
+      section(
+        'contractions',
+        'Contractions and mistakes',
+        p(
+          'With **à cause de** and **grâce à** the article contracts as usual: *à cause du stress, à cause des retards; grâce au stage, grâce aux amis*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ À cause de j’étais malade.  ✓ Parce que j’étais malade.',
+          '✗ Grâce à le stage.  ✓ Grâce au stage.',
+          '✗ J’ai échoué grâce au stress.  ✓ J’ai échoué à cause du stress.',
+        ),
+        examples(
+          ['À cause de la grève, je suis en retard.', 'Because of the strike, I am late.'],
+          ['Elle a pu étudier grâce à sa bourse.', 'She was able to study thanks to her grant.'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-consequence', 'fr-a21-imparfait-pc', 'fr-contractions'],
+    sources: [S.parceQue, S.causeDe, S.graceA],
+  },
+  {
+    id: 'fr-a21-consequence',
+    title: 'donc, alors, du coup',
+    tagline: 'So, yet, that is why: linking cause and result',
+    level: LEVEL,
+    summary:
+      'Donc, alors, c’est pourquoi and du coup introduce a result. Pourtant introduces a contrast with what was expected. They link two clauses and do not change the verb forms.',
+    sections: [
+      section(
+        'result',
+        'Results and contrasts',
+        table(
+          'Linking words.',
+          ['Word', 'Meaning', 'Example'],
+          [
+            ['donc', 'so, therefore', 'J’étais malade, donc je suis resté au lit.'],
+            ['alors', 'so, then', 'Il pleuvait, alors nous sommes rentrés.'],
+            ['c’est pourquoi', 'that is why', 'Je veux réussir, c’est pourquoi je révise.'],
+            ['du coup (informal)', 'so', 'Du coup, elle a changé de filière.'],
+            ['pourtant', 'yet, even so', 'Il avait révisé, pourtant il a échoué.'],
+          ],
+        ),
+        p(
+          'These words can start a sentence (*Alors, nous sommes rentrés.*) or follow a comma. **Donc** can also stand after the subject: *Je pense, donc je suis.*',
+        ),
+      ),
+      section(
+        'tips',
+        'Telling a short story',
+        p(
+          'Combine all three: a **scene** (imparfait), the **reason** (parce que, à cause de), the **result** (donc, du coup). *Il pleuvait, alors nous sommes restés à la maison. Du coup, nous avons regardé un film.*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ J’avais faim, pourtant j’ai mangé.  ✓ J’avais faim, donc j’ai mangé.',
+          '✗ Il pleuvait, parce que nous sommes rentrés.  ✓ Il pleuvait, alors nous sommes rentrés.',
+        ),
+        examples(
+          ['J’étais malade, donc je suis resté au lit.', 'I was ill, so I stayed in bed.'],
+          [
+            'Il avait beaucoup révisé, pourtant il a échoué.',
+            'He had revised a lot, yet he failed.',
+          ],
+          [
+            'Elle n’aimait pas la chimie. Du coup, elle a changé de filière.',
+            'She did not like chemistry. So she changed course.',
+          ],
+        ),
+      ),
+    ],
+    related: ['fr-a21-cause', 'fr-a21-imparfait-pc', 'fr-questions'],
+    sources: [S.donc, S.alors],
   },
 ];

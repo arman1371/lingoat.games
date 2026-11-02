@@ -588,6 +588,11 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a21-ne-que' },
     { topic: 'fr-a21-measures' },
   ],
+  'fr-a2-1-etudes': [
+    { topic: 'fr-a21-imparfait-pc' },
+    { topic: 'fr-a21-cause', note: 'parce que, à cause de, grâce à' },
+    { topic: 'fr-a21-consequence' },
+  ],
   // ---- French A2.2 ----------------------------------------------------------------------------
   'fr-a2-2-sante': [
     { topic: 'fr-object-pronouns', note: 'le, la, les, lui, leur' },
