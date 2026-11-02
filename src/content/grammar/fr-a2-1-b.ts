@@ -646,4 +646,151 @@ export const FR21_TOPICS_B: GrammarTopic[] = [
     related: ['fr-a21-condition', 'fr-a21-futur', 'fr-a21-futur-irregular'],
     sources: [S.si, S.futurSimple],
   },
+  // ---- unit 7: cuisine ------------------------------------------------------------------------
+  {
+    id: 'fr-a21-obligation',
+    title: 'il faut, devoir, interdit',
+    tagline: 'Il faut remuer, il ne faut pas fumer: rules and recipes',
+    level: LEVEL,
+    summary:
+      'Il faut + infinitive says what is necessary in general; devoir says that a particular person must. Il ne faut pas + infinitive forbids; il est interdit de + infinitive appears on signs.',
+    sections: [
+      section(
+        'faut',
+        'Il faut and devoir',
+        table(
+          'Two ways to say “must”.',
+          ['Structure', 'Example'],
+          [
+            ['il faut + infinitive (general)', 'Il faut mélanger les œufs.'],
+            ['devoir + infinitive (a person)', 'Vous devez réserver à l’avance.'],
+            ['il ne faut pas + infinitive', 'Il ne faut pas toucher le four.'],
+            ['il est interdit de + infinitive', 'Il est interdit de fumer.'],
+          ],
+        ),
+        p(
+          '**Il faut** has only one form (from *falloir*) and is always followed by the **infinitive**: *il faut remuer*, never *il faut remuez*. To say who must do it, use **devoir** (*tu dois, vous devez*) or add a pronoun: *il me faut du temps*.',
+        ),
+      ),
+      section(
+        'negative',
+        'Watch the negative',
+        p(
+          '**Il faut** and **il ne faut pas** are opposites in meaning in a way English does not show: *il ne faut pas fumer* means “you must not smoke” (a prohibition), not “you do not have to”. To say “not necessary” use **il n’est pas nécessaire de** or **on n’a pas besoin de**.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il faut remuez la sauce.  ✓ Il faut remuer la sauce.',
+          '✗ Il faux ajouter du sel.  ✓ Il faut ajouter du sel.',
+          '✗ Il faut pas fumer.  ✓ Il ne faut pas fumer.',
+        ),
+        examples(
+          ['Il faut laisser reposer la pâte.', 'You have to let the dough rest.'],
+          ['Vous devez réserver une table.', 'You have to book a table.'],
+          ['Il est interdit de courir.', 'Running is forbidden.'],
+        ),
+      ),
+    ],
+    related: ['fr-a21-modals', 'fr-imperative', 'fr-negation'],
+    sources: [S.falloir, S.devoir, S.interdit],
+  },
+  {
+    id: 'fr-a21-ne-que',
+    title: 'ne … que',
+    tagline: 'Je ne bois que de l’eau: only, not “not”',
+    level: LEVEL,
+    summary:
+      'Ne … que is a restriction meaning “only”. Ne stands before the verb, que before the word it limits. The sentence is affirmative in meaning, so the article does not turn into de.',
+    sections: [
+      section(
+        'meaning',
+        'Only',
+        table(
+          'Ne … que and its meaning.',
+          ['With ne … que', 'Meaning'],
+          [
+            ['Il n’y a que deux œufs.', 'There are only two eggs.'],
+            ['Je ne bois que de l’eau.', 'I only drink water.'],
+            ['Elle n’a mangé que du riz.', 'She only ate rice.'],
+            ['Il ne reste qu’une tranche.', 'Only one slice is left.'],
+          ],
+        ),
+        p(
+          'Que sits **before** the word it restricts: with a compound tense it stays before the object, not before the participle (*Elle n’a mangé que du riz*). Que becomes **qu’** before a vowel.',
+        ),
+      ),
+      section(
+        'compare',
+        'Not the same as ne … pas',
+        table(
+          'Ne … pas de or ne … que?',
+          ['Negation', 'Restriction'],
+          [
+            ['Je ne mange pas de pain.', 'Je ne mange que du pain.'],
+            ['Je n’ai pas d’argent.', 'Je n’ai que dix euros.'],
+            ['Il n’y a pas d’œufs.', 'Il n’y a que des œufs.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je bois que de l’eau.  ✓ Je ne bois que de l’eau.',
+          '✗ Je ne bois pas que de l’eau.  ✓ Je ne bois que de l’eau.',
+          '✗ Il ne reste que une tranche.  ✓ Il ne reste qu’une tranche.',
+        ),
+        tip(
+          'Seulement',
+          'In speech seulement or juste often replaces ne … que: Il y a seulement deux œufs.',
+        ),
+      ),
+    ],
+    related: ['fr-negation', 'fr-a21-negatives', 'fr-partitive'],
+    sources: [S.que, S.negation],
+  },
+  {
+    id: 'fr-a21-measures',
+    title: 'Quantities and measures',
+    tagline: 'Un kilo de pommes, une pincée de sel: de and no article',
+    level: LEVEL,
+    summary:
+      'After a number of units, a container or an expression of quantity use de (d’) with no article: 200 grammes de farine, un verre d’eau, beaucoup de sel. Quelques and plusieurs go directly before the noun.',
+    sections: [
+      section(
+        'de',
+        'De without an article',
+        table(
+          'Measures and quantity words with de.',
+          ['Type', 'Example'],
+          [
+            ['weights and volumes', 'deux cents grammes de farine, un litre de lait'],
+            ['containers and portions', 'un verre d’eau, une tasse de thé, une tranche de pain'],
+            ['small amounts', 'une pincée de sel, une cuillère à soupe d’huile'],
+            ['adverbs of quantity', 'beaucoup de sucre, trop de sel, assez de temps, peu de lait'],
+          ],
+        ),
+        p(
+          'The article **du / de la / des** disappears: *un kilo de pommes* (not *des pommes*). **De** becomes **d’** before a vowel: *un verre d’eau, beaucoup d’huile*.',
+        ),
+      ),
+      section(
+        'others',
+        'Quelques, plusieurs and the exceptions',
+        p(
+          '**Quelques** (a few) and **plusieurs** (several) come directly before a plural noun, without **de**: *quelques tomates, plusieurs œufs*. After **bien** and **la plupart** the article stays: *bien des gens, la plupart des restaurants*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Une pincée du sel.  ✓ Une pincée de sel.',
+          '✗ Beaucoup du sucre.  ✓ Beaucoup de sucre.',
+          '✗ Un verre de eau.  ✓ Un verre d’eau.',
+        ),
+        examples(
+          ['Il faut 250 grammes de farine.', 'You need 250 grams of flour.'],
+          ['Je prends une tasse de thé.', 'I will have a cup of tea.'],
+          ['Il y a trop de sel.', 'There is too much salt.'],
+        ),
+      ),
+    ],
+    related: ['fr-quantities', 'fr-partitive', 'fr-a21-en'],
+    sources: [S.cuillere],
+  },
 ];

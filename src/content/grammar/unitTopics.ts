@@ -583,6 +583,11 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-a21-futur-irregular', note: 'irai, serai, ferai, viendrai' },
     { topic: 'fr-a21-si-futur' },
   ],
+  'fr-a2-1-cuisine': [
+    { topic: 'fr-a21-obligation', note: 'il faut, devoir, interdit de' },
+    { topic: 'fr-a21-ne-que' },
+    { topic: 'fr-a21-measures' },
+  ],
   // ---- French A2.2 ----------------------------------------------------------------------------
   'fr-a2-2-sante': [
     { topic: 'fr-object-pronouns', note: 'le, la, les, lui, leur' },
