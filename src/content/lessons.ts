@@ -1309,6 +1309,24 @@ export const LESSONS = {
       'Je crains qu’il ne vienne pas. → real negation',
     ],
   },
+  'fr-b22-passive': {
+    title: 'The passive voice',
+    rule: 'Passive = être (in the tense of the active verb) + past participle, which agrees with the subject. The agent is introduced by par; de is used for states and feelings (entouré de, aimé de). Les familles ont été aidées par l’association.',
+    examples: [
+      'Les repas sont servis à 19 h.',
+      'La loi a été votée à l’unanimité.',
+      'Elle est respectée de tous.',
+    ],
+  },
+  'fr-b22-se-faire': {
+    title: 'se faire + infinitive',
+    rule: 'Se faire + infinitive says that something happens to the subject, usually something unwelcome: Il s’est fait voler son sac. Fait stays invariable and the verb after it is an infinitive. A thing can also be the subject of a pronominal passive: Ce vin se boit frais.',
+    examples: [
+      'Elle s’est fait licencier.',
+      'Ils se sont fait aider par une voisine.',
+      'Le riz se vend en vrac.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',

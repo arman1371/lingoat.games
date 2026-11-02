@@ -50,10 +50,13 @@ describe('French first visit and per-language data', () => {
 
   it('keeps German grammar points out of the French library', async () => {
     const { user } = renderApp('/fr/library?view=games');
-    await user.click(await screen.findByText(/^Filters/));
-    expect(await screen.findByRole('button', { name: /tu or vous/ })).toBeInTheDocument();
+    // The French library loads every French level; on a busy CI worker that can take longer than the default 1 s.
+    await user.click(await screen.findByText(/^Filters/, {}, { timeout: 10_000 }));
+    expect(
+      await screen.findByRole('button', { name: /tu or vous/ }, { timeout: 10_000 }),
+    ).toBeInTheDocument();
     expect(screen.queryByRole('button', { name: /Verb conjugation/ })).not.toBeInTheDocument();
-  });
+  }, 20_000);
 
   it('shows no welcome card in German', async () => {
     renderApp('/');

@@ -550,6 +550,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b22-subj-or-inf', note: 'advising, insisting, fearing, doubting' },
     { topic: 'fr-b22-ne-expletif', note: 'après craindre que, avant que, à moins que' },
   ],
+  'fr-b2-2-solidarite': [
+    { topic: 'fr-b22-passive', note: 'les repas sont servis, les familles ont été aidées' },
+    { topic: 'fr-b22-se-faire', note: 'il s’est fait voler son sac' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

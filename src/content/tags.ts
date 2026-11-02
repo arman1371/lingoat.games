@@ -407,6 +407,9 @@ export const TAGS = {
   'fr-b22-health': { label: 'Health & well-being', group: 'topic', emoji: '🧘' },
   'fr-b22-subj-or-inf': { label: 'Subjunctive or infinitive', group: 'grammar', emoji: '🌫️' },
   'fr-b22-ne-expletif': { label: 'The ne explétif', group: 'grammar', emoji: '🔤' },
+  'fr-b22-solidarity': { label: 'Solidarity & inequality', group: 'topic', emoji: '🤝' },
+  'fr-b22-passive': { label: 'The passive voice', group: 'grammar', emoji: '📥' },
+  'fr-b22-se-faire': { label: 'se faire + infinitive', group: 'grammar', emoji: '🎯' },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
   // grammar points – French A2.1, unit 1

@@ -53,6 +53,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sort it (mood)', 'fr-b2-2-sante-sort-mood'],
   ['conjugation (subjunctive)', 'fr-b2-2-sante-conj-subjunctive'],
   ['dialogue (unit 2)', 'fr-b2-2-sante-dialogues'],
+  // unit 3
+  ['flashcards (unit 3)', 'fr-b2-2-solidarite-flash-engagement'],
+  ['gap fill (passive)', 'fr-b2-2-solidarite-gap-passive'],
+  ['gap fill (se faire)', 'fr-b2-2-solidarite-gap-sefaire'],
+  ['sort it (voice)', 'fr-b2-2-solidarite-sort-voice'],
+  ['dialogue (unit 3)', 'fr-b2-2-solidarite-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {
