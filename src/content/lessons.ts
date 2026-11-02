@@ -1372,6 +1372,15 @@ export const LESSONS = {
       'Le sujet dont nous parlons est délicat.',
     ],
   },
+  'fr-c11-emphasis': {
+    title: 'Highlighting with c’est … qui / que',
+    rule: 'To put a word in the spotlight: c’est … qui (subject), c’est … que (object, place, time), ce sont … qui (plural). To highlight a whole clause: ce qui / ce que / ce dont … c’est. Dislocation repeats the noun with a pronoun: Cette pièce, je l’ai adorée.',
+    examples: [
+      'C’est le réalisateur qui a choisi cette musique.',
+      'Ce que je retiens, c’est l’émotion.',
+      'Cette exposition, je l’ai adorée.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

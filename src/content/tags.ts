@@ -437,6 +437,7 @@ export const TAGS = {
   'fr-c11-pronouns': { label: 'y, en and double pronouns', group: 'grammar', emoji: '👉' },
   'fr-c11-subjunctive': { label: 'Subjunctive: wish, need, doubt', group: 'grammar', emoji: '💭' },
   'fr-c11-reprise': { label: 'celui, ce qui, dont, lequel', group: 'grammar', emoji: '🔗' },
+  'fr-c11-emphasis': { label: 'c’est … qui / que, ce qui … c’est', group: 'grammar', emoji: '🔦' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

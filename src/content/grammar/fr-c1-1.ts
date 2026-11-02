@@ -724,4 +724,74 @@ export const FRC11_TOPICS: GrammarTopic[] = [
     related: ['fr-c11-pronouns'],
     sources: [S.demonstrativePronoun, S.relativePronoun, S.anaphora, S.celui, S.lequel, S.dont],
   },
+  {
+    id: 'fr-c11-emphasis',
+    title: 'Highlighting with c’est … qui / que',
+    tagline: 'How do I put one word or idea in the spotlight?',
+    level: LEVEL,
+    summary:
+      'French puts an element in the spotlight with a frame rather than by stress. C’est … qui highlights a subject and c’est … que an object, a place or a time. Ce qui, ce que and ce dont … c’est highlight a whole clause. Dislocation moves a word to the start or end and repeats it with a pronoun. These structures are common in speech and in reviews.',
+    sections: [
+      section(
+        'cleft',
+        'C’est … qui and c’est … que',
+        p(
+          'Put the word to highlight between **c’est** and **qui / que**. **Qui** is used when the highlighted word is the **subject** of the verb that follows (*C’est le réalisateur qui a choisi cette musique*). **Que** is used for an **object** (*C’est ce film que j’ai préféré*) and for a **place or time** (*C’est à Cannes que le film a été présenté*). With a plural subject: **ce sont … qui**. After c’est, a person is a stressed pronoun: *c’est moi / toi / elle / eux qui*.',
+        ),
+        table(
+          'Cleft sentences.',
+          ['Structure', 'Highlights', 'Example'],
+          [
+            ['c’est … qui', 'subject', 'C’est elle qui a écrit le scénario.'],
+            ['ce sont … qui', 'plural subject', 'Ce sont les acteurs qui ont improvisé.'],
+            ['c’est … que', 'object', 'C’est ce film que j’ai préféré.'],
+            ['c’est … que', 'place or time', 'C’est en 1959 que la Nouvelle Vague est née.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ C’est ce film qui j’ai préféré.  ✓ C’est ce film que j’ai préféré.',
+          '✗ C’est à Cannes où le film a été présenté.  ✓ C’est à Cannes que le film a été présenté.',
+        ),
+      ),
+      section(
+        'pseudo-cleft',
+        'Ce qui … c’est: highlighting a whole clause',
+        p(
+          'To highlight a clause, start with **ce qui** (subject), **ce que** (object) or **ce dont / ce à quoi** (with de / à), and close with **c’est** + the highlighted element: *Ce qui m’a plu, c’est la mise en scène.* *Ce que je retiens, c’est l’émotion.* *Ce dont je me souviens, c’est de la dernière scène.*',
+        ),
+        examples(
+          ['Ce qui compte, c’est le message.', 'What matters is the message.'],
+          ['Ce que j’admire, c’est son courage.', 'What I admire is his courage.'],
+          ['Ce dont j’ai besoin, c’est d’inspiration.', 'What I need is inspiration.'],
+        ),
+      ),
+      section(
+        'dislocation',
+        'Dislocation',
+        p(
+          'In **dislocation**, an element is moved to the start (or end) of the sentence and repeated by a pronoun: *Cette exposition, je l’ai adorée. Les acteurs, ils ont été formidables.* Or the pronoun comes first: *Je l’ai adorée, cette exposition.* This is natural in speech and in informal reviews.',
+        ),
+        compare(
+          {
+            title: 'Plain',
+            question: 'No emphasis',
+            example: 'J’ai adoré cette exposition.',
+          },
+          {
+            title: 'Cleft',
+            question: 'Emphasis with a frame',
+            example: 'C’est cette exposition que j’ai adorée.',
+          },
+          {
+            title: 'Dislocation',
+            question: 'Emphasis by moving',
+            example: 'Cette exposition, je l’ai adorée.',
+          },
+        ),
+      ),
+    ],
+    related: ['fr-c11-reprise'],
+    sources: [S.cleft, S.dislocation, S.emphasis, S.cest],
+  },
 ];
