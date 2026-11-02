@@ -602,4 +602,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b11-wishes' },
     { topic: 'fr-b11-duration' },
   ],
+  'fr-b1-1-apprendre': [
+    { topic: 'fr-b11-gerund' },
+    { topic: 'fr-b11-participle-avoir' },
+    { topic: 'fr-b11-agreement' },
+  ],
 };

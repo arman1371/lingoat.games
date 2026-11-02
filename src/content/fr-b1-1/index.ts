@@ -6,8 +6,9 @@ import { consommer } from './u4-consommer';
 import { monde } from './u5-monde';
 import { medias } from './u6-medias';
 import { temps } from './u7-temps';
+import { apprendre } from './u8-apprendre';
 
-const units = [ensemble, souvenirs, travail, consommer, monde, medias, temps];
+const units = [ensemble, souvenirs, travail, consommer, monde, medias, temps, apprendre];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

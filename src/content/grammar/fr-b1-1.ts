@@ -1185,4 +1185,142 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
     related: ['fr-b11-chronology'],
     sources: [S.preposition],
   },
+  {
+    id: 'fr-b11-gerund',
+    title: 'The gerund (en + -ant)',
+    tagline: 'Do two things at once, or say how',
+    level: LEVEL,
+    summary:
+      'The gerund is en + the present participle (the nous stem + -ant). It says how something is done or what happens at the same time. The subject of both verbs is the same.',
+    sections: [
+      section(
+        'form',
+        'Form and use',
+        table(
+          'The gerund.',
+          ['Infinitive', 'Gerund', 'Meaning'],
+          [
+            ['regarder', 'en regardant', 'by / while watching'],
+            ['finir', 'en finissant', 'by / while finishing'],
+            ['faire', 'en faisant', 'by / while doing'],
+            ['manger', 'en mangeant', 'keep the e: mangeant'],
+            ['être / avoir / savoir', 'en étant / en ayant / en sachant', 'irregular'],
+          ],
+        ),
+        p(
+          'Take the **nous** form of the present, drop **-ons**, add **-ant**. The gerund never changes (no agreement). It answers *comment ?* (*Elle apprend en regardant des films*) or says two actions happen together (*Je révise en écoutant de la musique*).',
+        ),
+        examples(
+          ['Il s’est blessé en jouant au football.', 'He hurt himself while playing football.'],
+          ['On apprend à nager en nageant.', 'You learn to swim by swimming.'],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Je révise écoutant de la musique.  ✓ Je révise en écoutant de la musique.',
+          '✗ en avoir  ✓ en ayant',
+          '✗ Elle lit en mangeant, il regarde la télé (two subjects).  ✓ Elle lit en mangeant.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-participle-avoir'],
+    sources: [S.gerund],
+  },
+  {
+    id: 'fr-b11-participle-avoir',
+    title: 'Participle agreement with avoir',
+    tagline: 'La leçon que j’ai apprise',
+    level: LEVEL,
+    summary:
+      'With avoir, the past participle agrees with the direct object only if the object stands before the verb (que, l’, les, a question word). If it comes after, the participle does not change.',
+    sections: [
+      section(
+        'rule',
+        'Before or after?',
+        table(
+          'Direct object and participle.',
+          ['Object', 'Example', 'Agreement'],
+          [
+            ['before the verb (que)', 'La leçon que j’ai apprise est difficile.', 'yes'],
+            ['before the verb (pronoun)', 'Je l’ai vue hier.', 'yes'],
+            ['before the verb (question)', 'Quels cours as-tu suivis ?', 'yes'],
+            ['after the verb', 'J’ai appris la leçon.', 'no'],
+          ],
+        ),
+        p(
+          'To check: ask **qui ?** or **quoi ?** after the participle. If the answer stands before the verb, make the participle agree in gender and number with it. With **être** the participle agrees with the subject, as you saw in unit 2.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Les exercices qu’il a fait.  ✓ Les exercices qu’il a faits.',
+          '✗ Elle a reçue les résultats.  ✓ Elle a reçu les résultats.',
+          '✗ Je l’ai vu (la directrice).  ✓ Je l’ai vue.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-reflexive-agreement', 'fr-b11-gerund'],
+    sources: [S.participleAgreement],
+  },
+  {
+    id: 'fr-b11-agreement',
+    title: 'Agree, disagree, nuance',
+    tagline: 'Take part in a discussion',
+    level: LEVEL,
+    summary:
+      'Use tout à fait or je suis d’accord to agree, pas du tout or au contraire to disagree, and certes … mais or ça dépend to nuance. Mix them to build a balanced argument.',
+    sections: [
+      section(
+        'phrases',
+        'Phrases for a discussion',
+        table(
+          'Taking a position.',
+          ['Function', 'Phrases'],
+          [
+            ['agree', 'tout à fait, je suis d’accord, c’est exact, je partage votre avis'],
+            [
+              'disagree',
+              'pas du tout, je ne suis pas d’accord, au contraire, je ne suis pas convaincu',
+            ],
+            [
+              'nuance',
+              'certes … mais, ça dépend, dans une certaine mesure, d’un côté … de l’autre',
+            ],
+            ['add', 'd’ailleurs, de plus, en outre'],
+          ],
+        ),
+        examples(
+          [
+            'Certes, c’est pratique, mais ça dépend des gens.',
+            'Admittedly it is practical, but it depends on the people.',
+          ],
+          [
+            'Au contraire, on apprend mieux en classe.',
+            'On the contrary, you learn better in class.',
+          ],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Je suis pas d’accord.  ✓ Je ne suis pas d’accord.',
+          '✗ Ça dépends.  ✓ Ça dépend.',
+        ),
+        tip(
+          'Polite disagreement',
+          'Soften with certes or dans une certaine mesure before you say mais.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-opinion'],
+    sources: [S.connector],
+  },
 ];

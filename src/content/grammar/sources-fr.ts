@@ -62,5 +62,10 @@ export const FR_SOURCES = {
   adverb: wp('Adverbe_en_français', 'Adverbe en français'),
   possessivePronoun: wp('Pronom_possessif', 'Pronom possessif'),
   esperer: wiktionary('espérer', 'espérer'),
+  gerund: wp('Gérondif', 'Gérondif'),
+  participleAgreement: wp(
+    'Accord_du_participe_passé_en_français',
+    'Accord du participe passé en français',
+  ),
   connector: wp('Connecteur_logique', 'Connecteur logique'),
 } as const satisfies Record<string, Source>;

@@ -1248,6 +1248,33 @@ export const LESSONS = {
       'Le train part dans dix minutes.',
     ],
   },
+  'fr-b11-gerund': {
+    title: 'The gerund (en + -ant)',
+    rule: 'The gerund is en + the nous stem + -ant (en regardant, en finissant, en faisant). It says how (by doing) or at the same time (while doing). Both actions have the same subject. Irregular: en étant, en ayant, en sachant.',
+    examples: [
+      'Elle apprend le français en regardant des films.',
+      'Je révise en écoutant de la musique.',
+      'En travaillant beaucoup, il a réussi.',
+    ],
+  },
+  'fr-b11-participle-avoir': {
+    title: 'Participle agreement with avoir',
+    rule: 'With avoir, the participle agrees in gender and number with a direct object that comes BEFORE the verb (que, l’, les, quel cours). If the object comes after the verb, there is no agreement: la leçon que j’ai apprise, but j’ai appris la leçon.',
+    examples: [
+      'La leçon que j’ai apprise est difficile.',
+      'Je l’ai vue hier.',
+      'Elle a reçu les résultats.',
+    ],
+  },
+  'fr-b11-agreement': {
+    title: 'Agree, disagree, nuance',
+    rule: 'Agree: tout à fait, je suis d’accord, c’est exact. Disagree: pas du tout, au contraire, je ne suis pas convaincu. Nuance: certes … mais, ça dépend, dans une certaine mesure, d’un côté … de l’autre.',
+    examples: [
+      'Tout à fait, je suis d’accord.',
+      'Au contraire, je pense que c’est faux.',
+      'Certes, mais ça dépend des gens.',
+    ],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',

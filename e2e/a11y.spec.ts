@@ -57,6 +57,7 @@ const PAGES: [string, string, string][] = [
   ],
   ['unit 6 of B1.1 in French', '/fr/levels/fr-b1-1/units/fr-b1-1-medias', 'Médias en masse'],
   ['unit 7 of B1.1 in French', '/fr/levels/fr-b1-1/units/fr-b1-1-temps', 'Prendre le temps'],
+  ['unit 8 of B1.1 in French', '/fr/levels/fr-b1-1/units/fr-b1-1-apprendre', 'Apprendre autrement'],
   ['level A1.2 in French', '/fr/levels/fr-a1-2', 'A1.2'],
   ['A1.2 unit 1 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-journee', 'Ma journée'],
   ['A1.2 unit 2 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-fetes', 'Félicitations !'],
