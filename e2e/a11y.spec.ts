@@ -59,6 +59,11 @@ const PAGES: [string, string, string][] = [
   ['unit 7 of B1.1 in French', '/fr/levels/fr-b1-1/units/fr-b1-1-temps', 'Prendre le temps'],
   ['unit 8 of B1.1 in French', '/fr/levels/fr-b1-1/units/fr-b1-1-apprendre', 'Apprendre autrement'],
   ['unit 9 of B1.1 in French', '/fr/levels/fr-b1-1/units/fr-b1-1-critique', 'Esprit critique'],
+  [
+    'unit 10 of B1.1 in French',
+    '/fr/levels/fr-b1-1/units/fr-b1-1-sentiments',
+    'Caractères et sentiments',
+  ],
   ['level A1.2 in French', '/fr/levels/fr-a1-2', 'A1.2'],
   ['A1.2 unit 1 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-journee', 'Ma journée'],
   ['A1.2 unit 2 in French', '/fr/levels/fr-a1-2/units/fr-a1-2-fetes', 'Félicitations !'],

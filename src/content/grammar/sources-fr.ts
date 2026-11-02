@@ -68,5 +68,7 @@ export const FR_SOURCES = {
     'Accord du participe passé en français',
   ),
   conditional: wp('Conditionnel', 'Conditionnel'),
+  si: wiktionary('si', 'si'),
+  devoir: wiktionary('devoir', 'devoir'),
   connector: wp('Connecteur_logique', 'Connecteur logique'),
 } as const satisfies Record<string, Source>;

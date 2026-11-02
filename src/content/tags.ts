@@ -431,6 +431,10 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🎚️',
   },
+  // grammar points – French B1.1, unit 10
+  'fr-b11-si-hypothesis': { label: 'si + présent / imparfait', group: 'grammar', emoji: '🔮' },
+  'fr-b11-feelings': { label: 'Feelings: que + subjunctive', group: 'grammar', emoji: '💓' },
+  'fr-b11-regrets': { label: 'j’aurais dû, si + plus-que-parfait', group: 'grammar', emoji: '↩️' },
   // grammar points – French A1.2, unit 1
   'fr-pronominal': { label: 'Pronominal verbs (se lever)', group: 'grammar', emoji: '🪞' },
   'fr-frequency': { label: 'toujours, souvent, ne … jamais', group: 'grammar', emoji: '🔁' },

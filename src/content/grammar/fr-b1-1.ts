@@ -1450,4 +1450,133 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
     related: ['fr-b11-certainty', 'fr-b11-cond-news'],
     sources: [S.connector],
   },
+  {
+    id: 'fr-b11-si-hypothesis',
+    title: 'si + présent / imparfait',
+    tagline: 'If I had time, I would travel',
+    level: LEVEL,
+    summary:
+      'Si + présent introduces a real possibility and is followed by the future. Si + imparfait introduces an imagined situation and is followed by the conditional. The conditional and the future never come right after si.',
+    sections: [
+      section(
+        'rule',
+        'Two patterns',
+        table(
+          'Hypotheses with si.',
+          ['After si', 'Result', 'Example'],
+          [
+            [
+              'présent',
+              'future or imperative',
+              'Si tu viens, nous irons au cinéma. / Si tu veux, dis-le-moi.',
+            ],
+            ['imparfait', 'conditional', 'Si j’avais plus de temps, je voyagerais.'],
+          ],
+        ),
+        formsTable('Conditional forms you need.', ['savoir', 'vouloir', 'venir', 'faire'], (v) =>
+          conditionnel(v),
+        ),
+        examples(
+          ['Si j’étais toi, j’accepterais.', 'If I were you, I would accept.'],
+          [
+            'S’il fait beau demain, nous ferons une randonnée.',
+            'If the weather is fine tomorrow, we will go hiking.',
+          ],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Si j’aurais le temps, je voyagerais.  ✓ Si j’avais le temps, je voyagerais.',
+          '✗ Si tu viendras, nous irons.  ✓ Si tu viens, nous irons.',
+          '✗ Si il pleut  ✓ S’il pleut (si elides before il, but not before elle).',
+        ),
+      ),
+    ],
+    related: ['fr-b11-regrets', 'fr-b11-cond-news'],
+    sources: [S.si, S.conditional],
+  },
+  {
+    id: 'fr-b11-feelings',
+    title: 'Feelings: que + subjunctive',
+    tagline: 'Je suis content que tu sois venu',
+    level: LEVEL,
+    summary:
+      'Expressions of feeling (être content / déçu / fier / ravi que, avoir peur que, regretter que, dommage que) take the subjunctive when the subject changes. With one subject use de + infinitive.',
+    sections: [
+      section(
+        'rule',
+        'Two subjects or one?',
+        table(
+          'Expressing feelings.',
+          ['Situation', 'Construction', 'Example'],
+          [
+            ['two subjects', 'que + subjunctive', 'Je suis content que tu sois venu.'],
+            ['two subjects', 'avoir peur que (+ ne)', 'J’ai peur qu’il ne puisse pas venir.'],
+            ['one subject', 'de + infinitive', 'Je suis soulagé d’avoir fini.'],
+            ['one subject', 'regretter de + infinitive', 'Je regrette de ne pas pouvoir venir.'],
+          ],
+        ),
+        subjunctiveTable('Verbs you need after feelings.', ['être', 'avoir', 'pouvoir', 'prendre']),
+        p(
+          'The **past subjunctive** (*que tu sois venu, qu’il ait réussi*) says that the feeling is about something that has already happened. After *avoir peur que* a literary *ne* is often added: *J’ai peur qu’il ne vienne pas.*',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Je suis content que tu es venu.  ✓ Je suis content que tu sois venu.',
+          '✗ Je regrette que je ne peux pas venir.  ✓ Je regrette de ne pas pouvoir venir.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-subjunctive', 'fr-b11-wishes'],
+    sources: [S.subjunctive],
+  },
+  {
+    id: 'fr-b11-regrets',
+    title: 'j’aurais dû, si + plus-que-parfait',
+    tagline: 'Regrets and reproaches',
+    level: LEVEL,
+    summary:
+      'The past conditional (aurais + participle, serais + participle) expresses regrets and reproaches: j’aurais dû t’écouter, tu aurais pu me prévenir. An imagined past is si + plus-que-parfait followed by the past conditional.',
+    sections: [
+      section(
+        'rule',
+        'The past conditional',
+        table(
+          'Regrets, reproaches and imagined pasts.',
+          ['Function', 'Pattern', 'Example'],
+          [
+            ['regret', 'j’aurais dû + infinitive', 'J’aurais dû t’écouter.'],
+            ['reproach', 'tu aurais dû / pu + infinitive', 'Tu aurais pu me prévenir.'],
+            [
+              'imagined past',
+              'si + plus-que-parfait, conditional past',
+              'Si j’avais su, je ne serais pas venu.',
+            ],
+            ['wish', 'si seulement + plus-que-parfait', 'Si seulement il avait écouté !'],
+          ],
+        ),
+        p(
+          'The participle of **devoir** is **dû** (with a circumflex in the masculine singular): *j’aurais dû*, but *elle aurait dû* too. Pronominal and movement verbs take **être**: *je ne serais pas venu, elle se serait trompée.*',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Si j’aurais su, je serais venu.  ✓ Si j’avais su, je serais venu.',
+          '✗ J’aurais du t’écouter.  ✓ J’aurais dû t’écouter.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-si-hypothesis', 'fr-b11-pqp'],
+    sources: [S.devoir, S.conditional],
+  },
 ];

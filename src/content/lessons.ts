@@ -1302,6 +1302,33 @@ export const LESSONS = {
       'Il paraît que la nouvelle est fausse.',
     ],
   },
+  'fr-b11-si-hypothesis': {
+    title: 'si + présent / imparfait',
+    rule: 'A real possibility: si + présent, then the future (or the imperative): S’il fait beau, nous irons. An imagined situation: si + imparfait, then the conditional: Si j’avais le temps, je voyagerais. Never the conditional or the future right after si.',
+    examples: [
+      'Si tu viens, nous irons au cinéma.',
+      'Si j’avais plus de temps, je voyagerais.',
+      'Si j’étais toi, j’accepterais.',
+    ],
+  },
+  'fr-b11-feelings': {
+    title: 'Feelings: que + subjunctive',
+    rule: 'Feelings with a new subject take que + subjunctive: je suis content que tu sois venu, j’ai peur qu’il ne puisse pas, dommage que … With the same subject use de + infinitive: je suis soulagé d’avoir fini, je regrette de ne pas pouvoir venir.',
+    examples: [
+      'Je suis content que tu sois venu.',
+      'Je regrette de ne pas pouvoir venir.',
+      'Dommage que tu doives partir.',
+    ],
+  },
+  'fr-b11-regrets': {
+    title: 'j’aurais dû, si + plus-que-parfait',
+    rule: 'Regrets and reproaches use the past conditional: j’aurais dû t’écouter, tu aurais pu me prévenir. An imagined past: si + plus-que-parfait, then the past conditional: Si j’avais su, je ne serais pas venu. Dû has a circumflex.',
+    examples: [
+      'Tu aurais dû m’appeler.',
+      'Si j’avais su, je ne serais pas venu.',
+      'Si seulement il avait écouté !',
+    ],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',
