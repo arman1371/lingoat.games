@@ -36,7 +36,7 @@ const effects = vocabList(U, 'Cause and effect', [
 
 const judging = vocabList(U, 'Judging results', [
   ['inévitable', 'unavoidable', '🪨'],
-  ['durable', 'lasting, sustainable', '🌳'],
+  ['pérenne', 'lasting', '🌳'],
   ['néfaste', 'harmful', '🧪'],
   ['bénéfique', 'beneficial', '💚'],
   ['prévisible', 'foreseeable', '🔮'],
@@ -147,7 +147,7 @@ export const cause: UnitContent = {
         'un enjeu',
         'un risque',
         'inévitable',
-        'durable',
+        'pérenne',
         'néfaste',
         'désastreux',
       ],

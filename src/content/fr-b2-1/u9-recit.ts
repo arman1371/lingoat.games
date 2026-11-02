@@ -36,12 +36,12 @@ const story = vocabList(U, 'Storytelling', [
 ]);
 
 const time = vocabList(U, 'Time in a story', [
-  ['soudain', 'suddenly', '⚡'],
+  ['brusquement', 'abruptly', '⚡'],
   ['aussitôt', 'immediately', '💨'],
   ['dès lors', 'from then on', '➡️'],
   ['peu à peu', 'little by little', '🐢'],
   ['à l’improviste', 'unexpectedly', '🎁'],
-  ['tout à coup', 'all of a sudden', '💥'],
+  ['peu après', 'shortly after', '⏱️'],
   ['au fil du temps', 'as time went by', '⏳'],
   ['jadis', 'long ago', '🏺'],
   ['naguère', 'not long ago, formerly', '🕰️'],
@@ -116,7 +116,7 @@ export const recit: UnitContent = {
         'une intrigue',
         'un dénouement',
         'un rebondissement',
-        'soudain',
+        'brusquement',
         'aussitôt',
         'peu à peu',
         'jadis',

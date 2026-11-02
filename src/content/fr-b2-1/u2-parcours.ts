@@ -26,7 +26,7 @@ const stages = vocabList(U, 'Stages of life', [
   ['le troisième âge', 'old age, senior years', '🧓'],
   ['le décès', 'death', '🕯️'],
   ['une génération', 'a generation', '👪'],
-  ['un souvenir', 'a memory', '💭'],
+  ['un jalon', 'a milestone', '🚩'],
   ['le deuil', 'mourning, bereavement', '🖤'],
   ['les fiançailles', 'engagement', '💍'],
   ['le baptême', 'baptism', '⛪'],
@@ -129,7 +129,7 @@ export const parcours: UnitContent = {
       ],
       spell: [
         ['unscramble', 'vieillesse', 'old age', '👵', 'la vieillesse'],
-        ['unscramble', 'souvenir', 'memory', '💭', 'un souvenir'],
+        ['unscramble', 'jalon', 'a milestone', '🚩', 'un jalon'],
         ['type', 'puberté', 'puberty', '🧑‍🎤', 'la puberté'],
         ['type', 'tournant', 'turning point', '↪️', 'un tournant'],
         ['type', 'jumeau', 'twin', '👯', 'un jumeau'],

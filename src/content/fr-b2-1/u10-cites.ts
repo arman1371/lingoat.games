@@ -24,7 +24,7 @@ const cityLife = vocabList(U, 'City life', [
   ['un boulevard', 'a boulevard', '🛣️'],
   ['une ruelle', 'a narrow lane', '🚶'],
   ['un gratte-ciel', 'a skyscraper', '🏙️'],
-  ['un immeuble', 'a (block of) building', '🏢'],
+  ['une tour', 'a tower block', '🏢'],
   ['un espace vert', 'a green space', '🌳'],
   ['la circulation', 'traffic', '🚗'],
   ['un embouteillage', 'a traffic jam', '🚦'],
@@ -148,7 +148,7 @@ export const cites: UnitContent = {
         ['unscramble', 'boulevard', 'boulevard', '🛣️', 'un boulevard'],
         ['type', 'circulation', 'traffic', '🚗', 'la circulation'],
         ['type', 'cathédrale', 'cathedral', '⛪', 'une cathédrale'],
-        ['type', 'immeuble', 'building', '🏢', 'un immeuble'],
+        ['type', 'tour', 'a tower block', '🏢', 'une tour'],
       ],
     }),
 

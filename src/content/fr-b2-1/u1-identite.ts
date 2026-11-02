@@ -38,9 +38,9 @@ const identity = vocabList(U, 'Identity and origins', [
 
 const traits = vocabList(U, 'Personality traits', [
   ['chaleureux', 'warm, friendly', '🤗'],
-  ['réservé', 'reserved', '🤐'],
-  ['têtu', 'stubborn', '🐂'],
-  ['sensible', 'sensitive', '💧'],
+  ['effacé', 'self-effacing', '🫥'],
+  ['obstiné', 'obstinate', '🐂'],
+  ['susceptible', 'touchy, easily offended', '😤'],
   ['ouvert d’esprit', 'open-minded', '🪟'],
   ['curieux', 'curious', '🔎'],
   ['ambitieux', 'ambitious', '🚀'],
@@ -171,7 +171,7 @@ export const identite: UnitContent = {
           'l’héritage',
           'le métissage',
           'chaleureux',
-          'têtu',
+          'obstiné',
           'discret',
           'fier',
         ),

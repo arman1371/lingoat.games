@@ -35,18 +35,18 @@ const paperwork = vocabList(U, 'Paperwork and procedures', [
 ]);
 
 const travel = vocabList(U, 'Travel and tourism', [
-  ['un séjour', 'a stay', '🏨'],
+  ['un périple', 'a long trip', '🧳'],
   ['un circuit', 'a guided tour, a route', '🚌'],
   ['un forfait', 'a package, a flat rate', '🎟️'],
-  ['une escale', 'a stopover', '🛬'],
+  ['une halte', 'a stop, a break', '🛑'],
   ['le dépaysement', 'a change of scenery', '🌴'],
-  ['un hébergement', 'accommodation', '🛏️'],
+  ['un gîte', 'a holiday cottage', '🏡'],
   ['une auberge de jeunesse', 'a youth hostel', '🎒'],
-  ['un office de tourisme', 'a tourist office', 'ℹ️'],
+  ['une agence de voyages', 'a travel agency', '✈️'],
   ['une randonnée', 'a hike', '🥾'],
   ['un itinéraire', 'an itinerary', '🗺️'],
   ['le patrimoine', 'heritage', '🏰'],
-  ['une visite guidée', 'a guided tour', '🧑‍🏫'],
+  ['une croisière', 'a cruise', '🚢'],
 ]);
 
 const phrases = vocabList(U, 'Aims and purposes', [
@@ -162,7 +162,7 @@ export const demarches: UnitContent = {
         'un justificatif',
         'un guichet',
         'un délai',
-        'une escale',
+        'une halte',
         'un forfait',
         'une randonnée',
         'le patrimoine',
@@ -172,7 +172,7 @@ export const demarches: UnitContent = {
         ['unscramble', 'itinéraire', 'itinerary', '🗺️', 'un itinéraire'],
         ['type', 'guichet', 'counter', '🪟', 'un guichet'],
         ['type', 'attestation', 'certificate', '📜', 'une attestation'],
-        ['type', 'hébergement', 'accommodation', '🛏️', 'un hébergement'],
+        ['type', 'gîte', 'a holiday cottage', '🏡', 'un gîte'],
       ],
     }),
 
