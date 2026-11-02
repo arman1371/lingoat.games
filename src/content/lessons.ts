@@ -1329,7 +1329,7 @@ export const LESSONS = {
   },
   'fr-participle-agreement': {
     title: 'Agreement of the past participle',
-    rule: 'With être the participle agrees with the subject (elle est née). With avoir it agrees with a direct object that stands before the verb (les photos que j’ai trouvées), never with one after it. With pronominal verbs it agrees with the reflexive pronoun when that is the direct object (elles se sont rencontrées), not when it is an indirect object (elles se sont parlé).',
+    rule: 'With être the participle agrees with the subject (elle est née). With avoir it agrees with a direct object placed before the verb (les photos que j’ai trouvées), never after it. In pronominal verbs it agrees when se is the direct object (elles se sont rencontrées), not when it is indirect (elles se sont parlé).',
     examples: [
       'Ma grand-mère est née en 1940.',
       'Les photos que j’ai trouvées datent de mon enfance.',
@@ -1347,7 +1347,7 @@ export const LESSONS = {
   },
   'fr-conditionnel-present': {
     title: 'The conditional for advice and politeness',
-    rule: 'Form the conditional from the future stem plus the imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient): devrais, pourrais, ferais, irais. Use it to soften advice and requests (vous devriez, pourriez-vous), to state a wish (je voudrais), to report unconfirmed news (il serait malade) and after si + imparfait (si j’étais toi, je me reposerais).',
+    rule: 'Future stem plus imparfait endings: devrais, pourrais, ferais, irais. It softens advice and requests (vous devriez, pourriez-vous), states a wish (je voudrais), reports unconfirmed news (il serait malade) and answers si + imparfait (si j’étais toi, je me reposerais).',
     examples: [
       'À ta place, je consulterais un médecin.',
       'Pourriez-vous m’indiquer un bon kiné ?',
@@ -1365,7 +1365,7 @@ export const LESSONS = {
   },
   'fr-subjonctif-present': {
     title: 'The present subjunctive',
-    rule: 'Take the ils form of the present, drop -ent and add -e, -es, -e, -ent; nous and vous end in -ions, -iez like the imparfait (que je prenne, que nous prenions). Irregular: être (sois), avoir (aie), aller (aille), faire (fasse), pouvoir (puisse), savoir (sache), vouloir (veuille). It follows il faut que, vouloir que, douter que, il est possible que.',
+    rule: 'Take the ils form, drop -ent, add -e, -es, -e, -ent; nous and vous end in -ions, -iez (que je prenne, que nous prenions). Irregular: être (sois), avoir (aie), aller (aille), faire (fasse), pouvoir (puisse), savoir (sache), vouloir (veuille). Used after il faut que, vouloir que, douter que.',
     examples: [
       'Il faut que tu sois à l’heure.',
       'Je doute qu’il ait raison.',
@@ -1446,7 +1446,7 @@ export const LESSONS = {
   },
   'fr-passe-simple': {
     title: 'The passé simple (recognition)',
-    rule: 'The passé simple is the past tense of written narrative; it tells single events in sequence while the imparfait describes the background. Third persons: -er verbs end in -a / -èrent (il entra), -ir and many -re verbs in -it / -irent (il finit), many irregular verbs in -ut / -urent (il eut, il dut) and venir in -int / -inrent (il vint). In speech the passé composé replaces it.',
+    rule: 'The passé simple is the past tense of written narrative: single events in sequence, while the imparfait gives the background. Third persons: -a / -èrent (il entra), -it / -irent (il finit), -ut / -urent (il eut), venir: il vint. In speech the passé composé replaces it.',
     examples: [
       'Il ouvrit la porte et entra.',
       'Un étranger vint au village.',
