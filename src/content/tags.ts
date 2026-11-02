@@ -453,6 +453,9 @@ export const TAGS = {
   },
   'paperwork-travel': { label: 'Paperwork & travel', group: 'topic', emoji: '🛂' },
   'fr-purpose': { label: 'pour, afin de, pour que', group: 'grammar', emoji: '🎯' },
+  'cause-effect': { label: 'Cause & effect', group: 'topic', emoji: '⛓️' },
+  'fr-consequence': { label: 'donc, si bien que, tellement … que', group: 'grammar', emoji: '🌊' },
+  'fr-cause-verbs': { label: 'provoquer, être dû à, résulter de', group: 'grammar', emoji: '🔗' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

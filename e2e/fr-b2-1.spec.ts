@@ -112,6 +112,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue', 'fr-b2-1-demarches-dialogues'],
   ['blitz', 'fr-b2-1-demarches-blitz'],
   ['quiz', 'fr-b2-1-demarches-challenge'],
+  ['gap fill (consequence)', 'fr-b2-1-cause-gap-consequence'],
+  ['gap fill (verbs of cause)', 'fr-b2-1-cause-gap-verbs'],
+  ['sort it (cause or result)', 'fr-b2-1-cause-sort-side'],
+  ['sentence builder', 'fr-b2-1-cause-sentences'],
+  ['dialogue', 'fr-b2-1-cause-dialogues'],
+  ['blitz', 'fr-b2-1-cause-blitz'],
+  ['quiz', 'fr-b2-1-cause-challenge'],
 ];
 
 test.describe('French B2.1 – playing the games', () => {

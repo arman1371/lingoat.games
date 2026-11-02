@@ -1426,6 +1426,24 @@ export const LESSONS = {
       'Il se dépêche de peur de rater le train.',
     ],
   },
+  'fr-consequence': {
+    title: 'Expressing consequence',
+    rule: 'Link a result with donc, alors, c’est pourquoi or (formal) par conséquent. Si bien que and de sorte que (result) take the indicative; tellement, si and tant … que express an effect that follows from a degree; trop / assez … pour (+ infinitive, or pour que + subjunctive) says whether a quality is enough.',
+    examples: [
+      'Il pleut, donc nous restons à la maison.',
+      'Il est si fatigué qu’il s’endort au travail.',
+      'Il est assez grand pour comprendre.',
+    ],
+  },
+  'fr-cause-verbs': {
+    title: 'Verbs of cause and effect',
+    rule: 'Provoquer, causer, entraîner and engendrer have the cause as subject; conduire à and mener à describe a process. Être dû à, résulter de and découler de have the effect as subject. Dû agrees: des retards dus à une grève.',
+    examples: [
+      'La sécheresse a provoqué une hausse des prix.',
+      'Ce problème est dû à un manque de moyens.',
+      'Les accidents résultent de la fatigue.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

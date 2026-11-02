@@ -6,8 +6,9 @@ import { doute } from './u4-doute';
 import { sentiments } from './u5-sentiments';
 import { migrations } from './u6-migrations';
 import { demarches } from './u7-demarches';
+import { cause } from './u8-cause';
 
-const units = [identite, parcours, sante, doute, sentiments, migrations, demarches];
+const units = [identite, parcours, sante, doute, sentiments, migrations, demarches, cause];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

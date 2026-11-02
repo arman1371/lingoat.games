@@ -590,4 +590,8 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-cause-prepositions', note: 'à cause de, grâce à, faute de' },
   ],
   'fr-b2-1-demarches': [{ topic: 'fr-purpose', note: 'pour, afin de, pour que, afin que' }],
+  'fr-b2-1-cause': [
+    { topic: 'fr-consequence', note: 'donc, si bien que, tellement … que' },
+    { topic: 'fr-cause-verbs', note: 'provoquer, être dû à, résulter de' },
+  ],
 };
