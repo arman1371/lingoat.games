@@ -589,4 +589,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-cause-conjunctions', note: 'parce que, puisque, comme, car' },
     { topic: 'fr-cause-prepositions', note: 'à cause de, grâce à, faute de' },
   ],
+  'fr-b2-1-demarches': [{ topic: 'fr-purpose', note: 'pour, afin de, pour que, afin que' }],
 };

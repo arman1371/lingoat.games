@@ -1417,6 +1417,15 @@ export const LESSONS = {
       'Faute de temps, il n’a pas fini.',
     ],
   },
+  'fr-purpose': {
+    title: 'Expressing a purpose',
+    rule: 'With the same subject use pour, afin de, de manière à or dans le but de and an infinitive (il vient pour renouveler son visa). With a new subject use pour que, afin que, de peur que and the subjunctive (je vous écris pour que vous examiniez mon dossier).',
+    examples: [
+      'Il a pris rendez-vous pour renouveler son titre de séjour.',
+      'Je vous envoie ce formulaire pour que vous le remplissiez.',
+      'Il se dépêche de peur de rater le train.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

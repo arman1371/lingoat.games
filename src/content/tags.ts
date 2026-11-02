@@ -451,6 +451,8 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🏷️',
   },
+  'paperwork-travel': { label: 'Paperwork & travel', group: 'topic', emoji: '🛂' },
+  'fr-purpose': { label: 'pour, afin de, pour que', group: 'grammar', emoji: '🎯' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

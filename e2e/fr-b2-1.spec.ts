@@ -105,6 +105,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue', 'fr-b2-1-migrations-dialogues'],
   ['blitz', 'fr-b2-1-migrations-blitz'],
   ['quiz', 'fr-b2-1-migrations-challenge'],
+  ['gap fill (connectors of purpose)', 'fr-b2-1-demarches-gap-connector'],
+  ['gap fill (subjunctive after pour que)', 'fr-b2-1-demarches-gap-form'],
+  ['sort it (one subject or two)', 'fr-b2-1-demarches-sort-subject'],
+  ['sentence builder', 'fr-b2-1-demarches-sentences'],
+  ['dialogue', 'fr-b2-1-demarches-dialogues'],
+  ['blitz', 'fr-b2-1-demarches-blitz'],
+  ['quiz', 'fr-b2-1-demarches-challenge'],
 ];
 
 test.describe('French B2.1 – playing the games', () => {
