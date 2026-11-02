@@ -1,58 +1,58 @@
 # Graph Report - lingoat.games  (2026-11-02)
 
 ## Corpus Check
-- 709 files · ~850,642 words
+- 732 files · ~896,009 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 10 file(s) not represented in the graph (top: (none) 5, .in 1, .ico 1)
 
 ## Summary
-- 4336 nodes · 12302 edges · 175 communities (166 shown, 9 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 188 edges (avg confidence: 0.86)
+- 4419 nodes · 12614 edges · 186 communities (174 shown, 12 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 190 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `47074d2c`
+- Built from commit: `3fc22967`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- Quiz.tsx
-- gap
+- Gapfill.test.tsx
+- sortItems
 - manifest.json
 - german/conjugation.ts
-- you
+- gap
 - B1.1 coverage and research doc
 - meta
 - german/numbers.ts
 - content/schema.ts
 - router.tsx
-- a2-2/index.ts
+- grammar.test.ts
 - package.json
 - progressStore.ts
-- fr-a2-2.ts
+- typed
 - devDependencies
-- AppLayout.tsx
-- a1-2/index.ts
+- ref_i18n
+- a1-1/index.ts
 - react
 - builders.ts
 - build.mjs
 - e2e/helpers.ts
 - compilerOptions
-- fr-b2-1.ts
-- lessons.ts
+- GrammarTopic
+- kit.ts
 - Clock.tsx
-- b1-1/index.ts
-- fr-a2-1/helpers.ts
+- a2-2/index.ts
+- u8-etudes.ts
 - compilerOptions
-- ref_i18n
+- grammar/grammar.test.tsx
 - rng.ts
-- UnitContent
-- Sentence.tsx
+- c2-2/helpers.ts
+- sentence/logic.ts
 - C1.1 – syllabus research, coverage and overlap with A1.1–B1.2
 - u4-zahlen.ts
 - lib.ts
 - scripts
-- say
+- UnitContent
 - What You Must Do When Invoked
 - graphify reference: extra exports and benchmark
 - b1-2/index.ts
@@ -60,18 +60,18 @@
 - filters.ts
 - Icon.tsx
 - u4-famille.ts
-- heard
+- flashcards
 - dependencies
-- forms.ts
+- nouns.ts
 - guard.ts
 - answer-check.ts
 - sfx.ts
 - tts.test.ts
-- activity
+- say
 - appIcons.test.ts
 - app-icons.md
 - srs.ts
-- fr-b1-1/helpers.ts
+- fr-b1-1/index.ts
 - i18n/index.ts
 - graphify reference: query, path, explain
 - worker/report.ts
@@ -99,57 +99,57 @@
 - WordImage.tsx
 - worker/index.ts
 - Conjugation.tsx
-- u11-sport.ts
+- byDe
 - B1.2 – syllabus research, coverage and overlap with A1.1–B1.1
-- build.ts
+- a2-2.ts
 - B2.1 – syllabus research, coverage and overlap with A1.1–B1.2
-- u12-culture.ts
+- vocabList
 - Button.tsx
 - README (lingoat)
 - @testing-library/react
 - u7-tag.ts
 - scoring.test.ts
 - french/conjugation.ts
-- grammar.test.ts
+- b2-1/index.ts
 - fetch.ts
-- Market.tsx
+- market/logic.ts
 - lib/report.ts
 - c1-2/index.ts
 - tenses.ts
-- byDe
+- u3-woher.ts
 - ui.test.tsx
-- fr-b1-2/u7-ville.ts
+- b2-2/index.ts
 - turnstile.ts
 - u2-fetes.ts
 - PlayPage.tsx
 - images/index.ts
 - c1-1/index.ts
-- u10-cause.ts
-- u3-sante.ts
+- forms.ts
+- u4-doute.ts
 - C2.2 – syllabus research, coverage and overlap with A1.1–C2.1
 - Tabs.tsx
 - French A2.2 – syllabus research and plan
 - path.ts
-- c2-1.ts
+- c2-2.ts
 - grammar/schema.ts
-- u6-convaincre.ts
+- Architecture doc
 - vitest
 - compound.ts
 - vite.config.ts
-- frTable
+- main
 - u8-temps.ts
 - u2-presenter.ts
-- French B1.1 – syllabus research and plan
+- adjectives.ts
 - u6-table.ts
 - u4-logement.ts
-- table
-- fr-b1-2/helpers.ts
+- build.ts
+- Adding content guide
 - fr-a1-1/u7-ville.ts
 - grammar/index.ts
 - u7-cuisine.ts
 - French A2.1 – syllabus research and plan
-- u8-rapporter.ts
-- fr-b1-1/index.ts
+- fr-a2-1/index.ts
+- activity
 - subjunctive.ts
 - Grammar lesson sources
 - C1.2 – syllabus research, coverage and overlap with A1.1–B1.1
@@ -159,26 +159,26 @@
 - fr-b1-2/index.ts
 - u6-futur.ts
 - fr-b2-1/helpers.ts
-- fr-c2-1/index.ts
+- u2-humour.ts
 - u3-recit.ts
-- u9-etudes.ts
+- u5-portrait.ts
 - ref_lib_german_conjugation
 - French C2.1 – syllabus research and plan
 - u5-loisirs.ts
-- u1-journee.ts
+- fr-a1-1/helpers.ts
 - u8-institutions.ts
 - u4-cause.ts
 - u5-concession.ts
 - u7-relief.ts
 - u9-debat.ts
-- u4-regrets.ts
-- u2-paysages.ts
-- u4-doute.ts
-- u5-planete.ts
+- u1-ensemble.ts
+- articles.ts
+- u1-bonjour.ts
+- u2-sorties.ts
 - ProgressBar.tsx
 - French B1.2 – syllabus research and plan
-- fr-b2-1/index.ts
-- u2-souvenirs.ts
+- u8-cause.ts
+- fr-a2-1/helpers.ts
 - u12-ville.ts
 - u1-identite.ts
 - u6-migrations.ts
@@ -189,13 +189,23 @@
 - c1-1.ts
 - u5-sentiments.ts
 - u9-recit.ts
+- fr-b2-1/index.ts
+- fr-a2-1-b.ts
+- u8-einkaufen.ts
+- konjunktiv1.ts
+- u2-wer.ts
+- u5-familie.ts
+- u3-sante.ts
+- moreTenses.ts
+- French B2.2 – syllabus research and plan
+- fr-c2-1/index.ts
 
 ## God Nodes (most connected - your core abstractions)
-1. `UnitContent` - 235 edges
-2. `activity()` - 215 edges
-3. `vocabList()` - 199 edges
-4. `byDe()` - 198 edges
-5. `flashcards()` - 182 edges
+1. `UnitContent` - 239 edges
+2. `activity()` - 218 edges
+3. `vocabList()` - 202 edges
+4. `byDe()` - 201 edges
+5. `flashcards()` - 185 edges
 6. `meta()` - 164 edges
 7. `say()` - 163 edges
 8. `you()` - 163 edges
@@ -221,39 +231,39 @@
 - **B1.1 research sources** — docs_b1_1_coverage_schritte, docs_b1_1_coverage_menschen, docs_b1_1_coverage_netzwerk, docs_b1_1_coverage_ziel, docs_b1_1_coverage_goethe_b1, docs_b1_1_coverage_cefr [EXTRACTED 1.00]
 - **Level authoring knowledge (procedure, coverage rules, level docs)** — docs_adding_content_new_level, docs_a2_2_coverage, docs_b1_1_coverage [INFERRED 0.85]
 
-## Communities (175 total, 9 thin omitted)
+## Communities (186 total, 12 thin omitted)
 
-### Community 0 - "Quiz.tsx"
-Cohesion: 0.11
-Nodes (23): ref_lib_german_nouns, pick(), answerRight(), answerWrong(), config, prompt(), statements, truth() (+15 more)
+### Community 0 - "Gapfill.test.tsx"
+Cohesion: 0.07
+Nodes (31): ref_lib_german_nouns, ref_test_render, ref_test_speech, @testing-library/user-event, pick(), Blitz(), answerRight(), answerWrong() (+23 more)
 
-### Community 1 - "gap"
+### Community 1 - "sortItems"
 Cohesion: 0.03
-Nodes (104): gap(), pastTable(), Pronoun, Question, readRound(), sepTable(), setRound(), sortItems() (+96 more)
+Nodes (112): dictation(), pastTable(), Pronoun, Question, readRound(), sepTable(), setRound(), sortItems() (+104 more)
 
 ### Community 2 - "manifest.json"
 Cohesion: 0.00
 Nodes (500): a1-1-einkaufen-apfel, a1-1-einkaufen-banane, a1-1-einkaufen-bier, a1-1-einkaufen-broetchen, a1-1-einkaufen-brot, a1-1-einkaufen-butter, a1-1-einkaufen-das-kilo, a1-1-einkaufen-das-stueck (+492 more)
 
 ### Community 3 - "german/conjugation.ts"
-Cohesion: 0.13
-Nodes (23): conjugate(), conjugatePreterite(), DATIVE_REFLEXIVE_PRONOUNS, f(), Forms, IRREGULAR, konjunktiv2, MIXED_PRETERITE (+15 more)
+Cohesion: 0.18
+Nodes (18): conjugate(), conjugatePreterite(), DATIVE_REFLEXIVE_PRONOUNS, f(), IRREGULAR, konjunktiv2, MIXED_PRETERITE, needsE() (+10 more)
 
-### Community 4 - "you"
-Cohesion: 0.04
-Nodes (85): q(), sent(), you(), Blanks, compound(), futurTable(), k2PastTable(), passiveModalTable() (+77 more)
+### Community 4 - "gap"
+Cohesion: 0.06
+Nodes (56): customTable(), gap(), adjGap(), k2Table(), passiveTable(), reflexiveAccTable(), Blanks, compound() (+48 more)
 
 ### Community 5 - "B1.1 coverage and research doc"
-Cohesion: 0.16
-Nodes (14): A2.2 coverage doc, A2.2 communication goals, A2.2 grammar coverage (Konjunktiv II, Passiv, adjective endings, relative clauses), Rule: teach new, extend, only review inside activities, B1.1 coverage and research doc, CEFR B1 global scale (Council of Europe), Goethe-Zertifikat B1 and word list, Menschen B1 (Hueber) (+6 more)
+Cohesion: 0.14
+Nodes (17): A2.2 coverage doc, A2.2 communication goals, A2.2 grammar coverage (Konjunktiv II, Passiv, adjective endings, relative clauses), Rule: teach new, extend, only review inside activities, Integrity between levels (no repeated vocab), Procedure: add a new level, Tags and filters, B1.1 coverage and research doc (+9 more)
 
 ### Community 6 - "meta"
-Cohesion: 0.06
-Nodes (49): meta(), tf(), typed(), authorities, countries, forms, nat(), vocab (+41 more)
+Cohesion: 0.07
+Nodes (42): meta(), sent(), events, phrases, vocab, unitC12(), conflict, team (+34 more)
 
 ### Community 7 - "german/numbers.ts"
-Cohesion: 0.07
-Nodes (48): year(), below100(), below1000(), digitsToFrench(), LETTER_NAMES_FR, numberToFrench(), ONES, priceToFrench() (+40 more)
+Cohesion: 0.06
+Nodes (57): Build plan, French A1.1 – syllabus research and plan, How the units were chosen, Sources (what was actually read), Build plan, French A1.2 – syllabus research and plan, How the units were chosen, Sources (what was actually read) (+49 more)
 
 ### Community 8 - "content/schema.ts"
 Cohesion: 0.04
@@ -263,9 +273,9 @@ Nodes (64): VocabList, ContentContext, ContentProvider(), Props, State, Probe(),
 Cohesion: 0.11
 Nodes (10): ref_react_dom_client, ref_react_router_dom, AppLayout(), createAppRouter(), createRoutes(), createTestRouter(), pages, routerOptions() (+2 more)
 
-### Community 10 - "a2-2/index.ts"
+### Community 10 - "grammar.test.ts"
 Cohesion: 0.05
-Nodes (57): ref_test_contentsuite, content, content, units, vocab, beruf, online, freizeit (+49 more)
+Nodes (64): ref_test_contentsuite, ref_test_playability, hints, content, units, vocab, alltag, stadt (+56 more)
 
 ### Community 11 - "package.json"
 Cohesion: 0.08
@@ -275,29 +285,29 @@ Nodes (28): description, name, private, type, version, @dnd-kit/sortable, @dnd-k
 Cohesion: 0.10
 Nodes (27): zustand, ref_zustand_middleware, ActivityProgress, createProgressStore(), dailyXp, getProgressStore(), initialProgress(), nextStreak() (+19 more)
 
-### Community 13 - "fr-a2-2.ts"
-Cohesion: 0.20
-Nodes (4): FR22_TOPICS, FR12_SOURCES, FR22_SOURCES, Source
+### Community 13 - "typed"
+Cohesion: 0.04
+Nodes (66): typed(), authorities, countries, forms, nat(), vocab, phrases, service (+58 more)
 
 ### Community 14 - "devDependencies"
 Cohesion: 0.07
 Nodes (29): devDependencies, aws4fetch, @axe-core/playwright, eslint, @eslint/js, eslint-plugin-jsx-a11y, eslint-plugin-react-hooks, globals (+21 more)
 
-### Community 15 - "AppLayout.tsx"
+### Community 15 - "ref_i18n"
 Cohesion: 0.04
-Nodes (70): ref_app_path, ref_components_activitycard, ref_components_dailygoalcard, ref_components_grammar_grammarindex, ref_components_grammar_grammarlesson, ref_components_grammar_unitgrammar, ref_components_grammar_usegrammar, ref_components_languageswitcher (+62 more)
+Nodes (79): ref_app_language, ref_app_path, ref_components_activitycard, ref_components_dailygoalcard, ref_components_grammar_grammarindex, ref_components_grammar_grammarlesson, ref_components_grammar_unitgrammar, ref_components_grammar_usegrammar (+71 more)
 
-### Community 16 - "a1-2/index.ts"
-Cohesion: 0.07
-Nodes (33): hints, hints, units, vocab, alltag, stadt, wohnen, arbeit (+25 more)
+### Community 16 - "a1-1/index.ts"
+Cohesion: 0.12
+Nodes (19): hints, units, vocab, sortitTranslations, adjectiveHint(), ENDINGS, HintableItem, HintEntry (+11 more)
 
 ### Community 17 - "react"
 Cohesion: 0.09
-Nodes (43): ref_components_ui_feedbackbanner, ref_components_ui_icon, ref_components_ui_speakbutton, ref_lib_tts, react, collectNpcLines(), latestNpcText(), Line (+35 more)
+Nodes (49): What the issue contains, ref_components_ui_feedbackbanner, ref_components_ui_speakbutton, ref_components_ui_umlautkeyboard, ref_components_wordimage, @dnd-kit/core, ref_lib_answer_check, ref_lib_sfx (+41 more)
 
 ### Community 18 - "builders.ts"
-Cohesion: 0.03
-Nodes (130): byes, feelings, hallo, hellos, polite, vocab, familie, female (+122 more)
+Cohesion: 0.06
+Nodes (57): byes, feelings, hallo, hellos, polite, vocab, freizeit, hobbies (+49 more)
 
 ### Community 19 - "build.mjs"
 Cohesion: 0.15
@@ -305,51 +315,51 @@ Nodes (9): ref_node_fs_promises, ref_node_path, ICO_SIZES, PNGS, publicDir, BRAN
 
 ### Community 20 - "e2e/helpers.ts"
 Cohesion: 0.05
-Nodes (56): PAGES, PLAYED, PLAYED, PLAYED, PLAYED, PLAYED, PLAYED, PLAYED (+48 more)
+Nodes (55): PAGES, PLAYED, PLAYED, PLAYED, PLAYED, PLAYED, PLAYED, PLAYED (+47 more)
 
 ### Community 21 - "compilerOptions"
 Cohesion: 0.09
 Nodes (21): compilerOptions, allowImportingTsExtensions, jsx, lib, module, moduleDetection, moduleResolution, noEmit (+13 more)
 
-### Community 22 - "fr-b2-1.ts"
+### Community 22 - "GrammarTopic"
 Cohesion: 0.26
 Nodes (19): compare(), examples(), mistake(), p(), section(), tip(), FRB21_U10_TOPICS, FRB21_U11_TOPICS (+11 more)
 
-### Community 23 - "lessons.ts"
-Cohesion: 0.14
-Nodes (16): Meta, VocabPathOptions, BROAD, COVERS, isLessonId(), Lesson, LESSON_IDS, lessonForTags() (+8 more)
+### Community 23 - "kit.ts"
+Cohesion: 0.06
+Nodes (68): Meta, VocabRow, VocabPathOptions, unitFr(), content, units, AVOIR, buildUnit() (+60 more)
 
 ### Community 24 - "Clock.tsx"
 Cohesion: 0.20
 Nodes (14): ref_lib_french_time, ref_lib_german_time, ref_lib_rng, ref_lib_spoken, AnalogClock(), ClockMaster(), buildClockOptions(), sameTime() (+6 more)
 
-### Community 25 - "b1-1/index.ts"
+### Community 25 - "a2-2/index.ts"
 Cohesion: 0.04
-Nodes (53): sortitTranslations, sortitTranslations, sortitTranslations, sortitTranslations, units, vocab, sortitTranslations, feiern (+45 more)
+Nodes (49): sortitTranslations, sortitTranslations, hints, units, vocab, sortitTranslations, bankUnit, leben (+41 more)
 
-### Community 26 - "fr-a2-1/helpers.ts"
-Cohesion: 0.09
-Nodes (27): GapRow, gaps(), QuizRow, quizRows(), SentRow, sentRows(), SpellRow, Table (+19 more)
+### Community 26 - "u8-etudes.ts"
+Cohesion: 0.20
+Nodes (9): quizRows(), CAUSE, CONS, PCI, phrases, study, system, verbs (+1 more)
 
 ### Community 27 - "compilerOptions"
 Cohesion: 0.11
 Nodes (18): compilerOptions, allowImportingTsExtensions, lib, module, moduleDetection, moduleResolution, noEmit, noUncheckedIndexedAccess (+10 more)
 
-### Community 28 - "ref_i18n"
-Cohesion: 0.12
-Nodes (17): ref_content_grammar, ref_content_lessons, ref_games_shared_hints, ref_games_shared_mistakehint, ref_i18n, FullLessonLink(), GrammarLesson(), LessonMeta() (+9 more)
+### Community 28 - "grammar/grammar.test.tsx"
+Cohesion: 0.15
+Nodes (13): ref_content_grammar, ref_games_shared_hints, ref_games_shared_mistakehint, GrammarLesson(), LessonMeta(), Props, GrammarSheet(), Props (+5 more)
 
 ### Community 29 - "rng.ts"
 Cohesion: 0.40
 Nodes (8): createRng(), hashString(), parseSeed(), pickMany(), pickOne(), randomSeed(), Rng, shuffle()
 
-### Community 30 - "UnitContent"
-Cohesion: 0.04
-Nodes (73): UnitContent, customTable(), reflexiveAccTable(), Blanks, compound(), futur2Table(), k1Table(), konjunktiv1() (+65 more)
+### Community 30 - "c2-2/helpers.ts"
+Cohesion: 0.05
+Nodes (53): Blanks, compound(), modalPerfectTable(), passiveFutureTable(), passivePerfectTable(), passivePreteriteTable(), SixForms, stateTable() (+45 more)
 
-### Community 31 - "Sentence.tsx"
-Cohesion: 0.22
-Nodes (10): @dnd-kit/core, buildTiles(), isCorrectSentence(), moveItem(), sentenceOf(), WordTile, Sentence(), ALT (+2 more)
+### Community 31 - "sentence/logic.ts"
+Cohesion: 0.54
+Nodes (6): buildTiles(), isCorrectSentence(), moveItem(), sentenceOf(), WordTile, Sentence()
 
 ### Community 32 - "C1.1 – syllabus research, coverage and overlap with A1.1–B1.2"
 Cohesion: 0.18
@@ -360,16 +370,16 @@ Cohesion: 0.14
 Nodes (7): num(), NUMBERS, numberVocab, numCard(), vocab, words, zahlen
 
 ### Community 34 - "lib.ts"
-Cohesion: 0.12
-Nodes (28): Code quality: SonarQube Cloud, One-time setup (by hand), Code graph (Graphify), Locally, Pinned install, Repo settings, The workflow, The pipeline (`scripts/images/`) (+20 more)
+Cohesion: 0.20
+Nodes (18): The pipeline (`scripts/images/`), cleanQuery(), cropsWell(), isBlocked(), isCandidate(), Overrides, pagePath(), pickHit() (+10 more)
 
 ### Community 35 - "scripts"
 Cohesion: 0.12
 Nodes (17): scripts, build, check, deploy, dev, format, format:check, icons (+9 more)
 
-### Community 36 - "say"
-Cohesion: 0.06
-Nodes (46): say(), Blanks, compound(), futur2Table(), k1PerfectTable(), k1Table(), k2ModalPastTable(), konjunktiv1() (+38 more)
+### Community 36 - "UnitContent"
+Cohesion: 0.07
+Nodes (41): UnitContent, Blanks, compound(), futur2Table(), k1PerfectTable(), k1Table(), k2ModalPastTable(), konjunktiv1() (+33 more)
 
 ### Community 37 - "What You Must Do When Invoked"
 Cohesion: 0.08
@@ -384,8 +394,8 @@ Cohesion: 0.12
 Nodes (15): units, vocab, sortitTranslations, heimat, kunst, diskussion, kollegen, digital (+7 more)
 
 ### Community 40 - "fr-a1-1/index.ts"
-Cohesion: 0.05
-Nodes (38): ref_content_items, ref_content_tags, ref_test_playability, content, units, earlierLevels, key(), REVIEW_WORDS (+30 more)
+Cohesion: 0.07
+Nodes (27): ref_content_items, ref_content_tags, content, units, earlierLevels, key(), REVIEW_WORDS, content (+19 more)
 
 ### Community 41 - "filters.ts"
 Cohesion: 0.19
@@ -399,17 +409,17 @@ Nodes (30): FEEDBACK_TINT, FeedbackBanner(), FeedbackKind, Props, STYLE, Icon(),
 Cohesion: 0.18
 Nodes (10): adjectives, CEST_CARDS, emojiFamily, famille, family, meaning(), PAIRS, phrases (+2 more)
 
-### Community 44 - "heard"
+### Community 44 - "flashcards"
 Cohesion: 0.05
-Nodes (49): ref_lib_german_ordinals, src_content_a1_2_helpers_activity, heard(), unit12(), chores, people, rules, vocab (+41 more)
+Nodes (55): ref_lib_german_numbers, ref_lib_german_ordinals, src_content_a1_2_helpers_activity, heard(), chores, people, rules, vocab (+47 more)
 
 ### Community 45 - "dependencies"
 Cohesion: 0.17
 Nodes (12): dependencies, @dnd-kit/core, @dnd-kit/sortable, @dnd-kit/utilities, @fontsource-variable/fredoka, @fontsource-variable/plus-jakarta-sans, motion, react (+4 more)
 
-### Community 46 - "forms.ts"
-Cohesion: 0.07
-Nodes (49): adjectiveEnding(), DeclensionKind, declineAdjective(), ENDINGS, stemBeforeEnding(), GENDERS, row(), Case (+41 more)
+### Community 46 - "nouns.ts"
+Cohesion: 0.24
+Nodes (16): bareNoun(), buildNounIndex(), CASE_TAGS, drillsCase(), findGapNoun(), GENDER, isCapitalised(), isDeterminer() (+8 more)
 
 ### Community 47 - "guard.ts"
 Cohesion: 0.13
@@ -427,17 +437,17 @@ Nodes (7): AudioContextCtor, Note, playSfx(), resetSfx(), SFX, SfxKind, sfxSuppo
 Cohesion: 0.32
 Nodes (8): pickGermanVoice(), pickVoice(), setSpeechLanguage(), speak(), SpeakOptions, stopSpeaking(), Utterance, ttsSupported()
 
-### Community 51 - "activity"
-Cohesion: 0.05
-Nodes (45): people, phrases, vocab, wer, activity(), Blanks, k1PerfectTable(), k1Table() (+37 more)
+### Community 51 - "say"
+Cohesion: 0.06
+Nodes (43): say(), tf(), lx(), unitC11(), economy, finance, vocab, society (+35 more)
 
 ### Community 54 - "srs.ts"
 Cohesion: 0.39
 Nodes (7): addMistake(), dayNumber(), INTERVAL_DAYS, isDue(), Mistake, mistakeKey(), reviewMistake()
 
-### Community 55 - "fr-b1-1/helpers.ts"
-Cohesion: 0.11
-Nodes (19): ref_lib_french_moretenses, ref_lib_french_subjunctive, futurTable(), pcReflexiveTable(), pcTable(), sortCards(), pqpTable(), Table (+11 more)
+### Community 55 - "fr-b1-1/index.ts"
+Cohesion: 0.12
+Nodes (15): EARLIER, earlierVocab, key(), REVIEW_WORDS, content, units, sentiments, souvenirs (+7 more)
 
 ### Community 56 - "i18n/index.ts"
 Cohesion: 0.32
@@ -464,8 +474,8 @@ Cohesion: 0.32
 Nodes (6): ALL_PERSONS, FrenchPronoun, Person, PERSON_SETS, personLabel(), personsOf()
 
 ### Community 62 - "upload.ts"
-Cohesion: 0.17
-Nodes (17): aws4fetch, bucketUrl(), CACHE_CONTROL, CONTENT_TYPE, decodeXml(), OBJECT_NAME, parseList(), planUpload() (+9 more)
+Cohesion: 0.16
+Nodes (18): aws4fetch, ref_node_util, bucketUrl(), CACHE_CONTROL, CONTENT_TYPE, decodeXml(), OBJECT_NAME, parseList() (+10 more)
 
 ### Community 63 - "graphify reference: add a URL and watch a folder"
 Cohesion: 0.50
@@ -488,8 +498,8 @@ Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
 ### Community 73 - "Memory.tsx"
-Cohesion: 0.11
-Nodes (20): ref_lib_sfx, ref_test_render, ref_test_speech, Blitz(), Dialogue(), config, BACK, config (+12 more)
+Cohesion: 0.13
+Nodes (18): ref_components_grammar_fulllessonlink, ref_content_lessons, ref_lib_german_forms, buildColumns(), isMatch(), MemoryCard, MemoryColumns, ColumnProps (+10 more)
 
 ### Community 74 - "u1-voyage.ts"
 Cohesion: 0.14
@@ -513,51 +523,51 @@ Nodes (30): zod, applyImport(), applyImportAll(), buildExport(), count, day, exp
 
 ### Community 79 - "u2-medias.ts"
 Cohesion: 0.05
-Nodes (53): DialogueScene, gap(), GapItem, mc(), npc(), QuizQuestion, Turn, unitFr() (+45 more)
+Nodes (54): DialogueScene, gap(), GapItem, mc(), npc(), QuizQuestion, Turn, unitFr() (+46 more)
 
 ### Community 80 - "WordImage.tsx"
-Cohesion: 0.08
-Nodes (21): In the app, ref_content_images, ref_lib_useimagemanifest, ref_lib_wordphotos, Props, SIZES, manifest, TileProps (+13 more)
+Cohesion: 0.06
+Nodes (30): In the app, Storage and delivery, Where the photos come from, Word photos, ref_content_images, ref_lib_useimagemanifest, ref_lib_wordphotos, Props (+22 more)
 
 ### Community 81 - "worker/index.ts"
 Cohesion: 0.22
 Nodes (9): CacheLike, Env, fetch(), get(), R2ObjectLike, serveImage(), env(), run() (+1 more)
 
 ### Community 82 - "Conjugation.tsx"
-Cohesion: 0.17
-Nodes (17): ref_components_grammar_fulllessonlink, ref_components_ui_umlautkeyboard, ref_lib_answer_check, ref_lib_german_forms, Conjugation(), config, forms, CellVerdicts (+9 more)
+Cohesion: 0.40
+Nodes (8): Conjugation(), config, forms, CellVerdicts, conjugationWhy(), Forms, gradeTable(), pronounOrder()
 
-### Community 83 - "u11-sport.ts"
-Cohesion: 0.15
-Nodes (12): DBL, EMP, events, FA, mean(), ORDER, phrases, sport (+4 more)
+### Community 83 - "byDe"
+Cohesion: 0.03
+Nodes (117): byDe(), conditionnelTable(), condPasseTable(), futAnterieurTable(), futurTable(), imparfaitTable(), manualTable(), pqpTable() (+109 more)
 
 ### Community 84 - "B1.2 – syllabus research, coverage and overlap with A1.1–B1.1"
 Cohesion: 0.20
 Nodes (9): B1.2 – syllabus research, coverage and overlap with A1.1–B1.1, Communication goals, Engines, Grammar, Grammar hints, How the units were chosen, Left out on purpose, Pronunciation (+1 more)
 
-### Community 85 - "build.ts"
-Cohesion: 0.13
+### Community 85 - "a2-2.ts"
+Cohesion: 0.08
 Nodes (21): ref_lib_german_adjectives, ref_lib_german_articles, A11_TOPICS, CASES, GENDERS, A12_TOPICS, A21_TOPICS, superlativeRows() (+13 more)
 
 ### Community 86 - "B2.1 – syllabus research, coverage and overlap with A1.1–B1.2"
 Cohesion: 0.22
 Nodes (8): B2.1 – syllabus research, coverage and overlap with A1.1–B1.2, Communication goals, Engines, Grammar, Grammar hints, How the units were chosen, Left out on purpose, Sources
 
-### Community 87 - "u12-culture.ts"
-Cohesion: 0.15
-Nodes (12): arts, culture, KIND, mean(), OPP, opposition, phrases, PS (+4 more)
+### Community 87 - "vocabList"
+Cohesion: 0.07
+Nodes (33): you(), unitB11(), environment, materials, vocab, mishaps, reactions, vocab (+25 more)
 
 ### Community 88 - "Button.tsx"
 Cohesion: 0.18
 Nodes (9): Button(), Props, Size, SIZES, Variant, VARIANTS, ConfirmDialog(), ConfirmProps (+1 more)
 
 ### Community 89 - "README (lingoat)"
-Cohesion: 0.07
-Nodes (37): CLAUDE.md project notes, graphify trigger instructions (.claude/CLAUDE.md), npm run check, Repo rules (tests, zod content, seeded rng, i18n, a11y), Adding content guide, Authoring helpers and german grammar generators, Grammar hints: mini lessons and why, Integrity between levels (no repeated vocab) (+29 more)
+Cohesion: 0.20
+Nodes (11): Lazy level content packs (levels.ts), ProgressRepository (local-first storage seam), Deployment doc, Cloudflare Pages / Workers hosting, Alternative hosts (Vercel, Netlify, Render), PWA service worker and caching headers, wrangler.jsonc SPA config, index.html app shell (+3 more)
 
 ### Community 90 - "@testing-library/react"
-Cohesion: 0.08
-Nodes (21): ref_app_router, ref_content_a1_1, ref_content_a1_2, ref_content_a2_1, ref_content_a2_2, ref_content_b1_1, ref_content_b1_2, ref_content_b2_1 (+13 more)
+Cohesion: 0.07
+Nodes (32): ref_app_router, ref_content_a1_1, ref_content_a1_2, ref_content_a2_1, ref_content_a2_2, ref_content_b1_1, ref_content_b1_2, ref_content_b2_1 (+24 more)
 
 ### Community 91 - "u7-tag.ts"
 Cohesion: 0.18
@@ -568,20 +578,20 @@ Cohesion: 0.73
 Nodes (4): accuracy(), GameResult, starsFor(), xpFor()
 
 ### Community 93 - "french/conjugation.ts"
-Cohesion: 0.20
-Nodes (14): conjugateFr(), ER_ENDINGS, ER_STRONG_STEM, forms(), FrenchForms, IR_ENDINGS, IRREGULAR, nousStem() (+6 more)
+Cohesion: 0.17
+Nodes (16): Unit 2 – Félicitations ! (`fetes`), French A1.2 (5 topics so far), conjugateFr(), ER_ENDINGS, ER_STRONG_STEM, forms(), FrenchForms, IR_ENDINGS (+8 more)
 
-### Community 94 - "grammar.test.ts"
-Cohesion: 0.06
-Nodes (31): content, units, vocab, sortitTranslations, sprache, arbeit, wirtschaft, digitalUnit (+23 more)
+### Community 94 - "b2-1/index.ts"
+Cohesion: 0.12
+Nodes (15): units, vocab, sortitTranslations, wissenschaft, unterwegs, klima, beziehungen, besitz (+7 more)
 
 ### Community 95 - "fetch.ts"
-Cohesion: 0.11
-Nodes (23): ref_node_crypto, ref_node_util, sharp, apiTurn, byId(), CACHE, download(), downloadTurn (+15 more)
+Cohesion: 0.13
+Nodes (21): ref_node_crypto, sharp, apiTurn, byId(), CACHE, download(), downloadTurn, downloadWithRetry() (+13 more)
 
-### Community 96 - "Market.tsx"
-Cohesion: 0.21
-Nodes (12): ref_app_language, ref_components_wordimage, adjust(), Basket, basketMatches(), OrderItem, Product, products (+4 more)
+### Community 96 - "market/logic.ts"
+Cohesion: 0.31
+Nodes (8): adjust(), Basket, basketMatches(), OrderItem, Product, products, totalCents(), Market()
 
 ### Community 97 - "lib/report.ts"
 Cohesion: 0.17
@@ -589,23 +599,23 @@ Nodes (16): cleanNote(), isId(), isType(), NOTE_MAX, REPORT_BASE_LABEL, REPORT_B
 
 ### Community 98 - "c1-2/index.ts"
 Cohesion: 0.12
-Nodes (16): content, units, vocab, sortitTranslations, team10, nachhaltigkeit, vortrag, finanzen (+8 more)
+Nodes (15): units, vocab, sortitTranslations, team10, nachhaltigkeit, vortrag, finanzen, gesundheit (+7 more)
 
 ### Community 99 - "tenses.ts"
-Cohesion: 0.14
-Nodes (20): COND_ENDINGS, conditionnel(), PLURAL, plusQueParfait(), beforeI(), ETRE_VERBS, EXTRA_PRESENT, forms() (+12 more)
+Cohesion: 0.18
+Nodes (13): beforeI(), EXTRA_PRESENT, forms(), FUTURE_ENDINGS, FUTURE_STEM, imparfait(), IMPARFAIT_ENDINGS, imparfaitStem() (+5 more)
 
-### Community 100 - "byDe"
-Cohesion: 0.07
-Nodes (22): ref_lib_german_numbers, countries, country(), languages, vocab, woher, words, einkaufen (+14 more)
+### Community 100 - "u3-woher.ts"
+Cohesion: 0.25
+Nodes (6): countries, country(), languages, vocab, woher, words
 
 ### Community 101 - "ui.test.tsx"
 Cohesion: 0.08
 Nodes (24): ref_content_gametypes, ref_games_shared_gameframe, ActivityCard(), Props, DailyGoalCard(), Card(), Props, Chip() (+16 more)
 
-### Community 102 - "fr-b1-2/u7-ville.ts"
-Cohesion: 0.17
-Nodes (11): manualTable(), actions, IND, KIND, mean(), phrases, pronouns, street (+3 more)
+### Community 102 - "b2-2/index.ts"
+Cohesion: 0.12
+Nodes (15): units, vocab, sortitTranslations, stadt, druck, netz, beziehungen, ernaehrung (+7 more)
 
 ### Community 103 - "turnstile.ts"
 Cohesion: 0.22
@@ -613,25 +623,25 @@ Nodes (4): TURNSTILE_SITE_KEY, TurnstileApi, TurnstileOptions, Window
 
 ### Community 104 - "u2-fetes.ts"
 Cohesion: 0.15
-Nodes (13): ref_lib_french_passecompose, pcTable(), unitFr(), events, family, heard, looks, markers (+5 more)
+Nodes (12): pcTable(), events, family, fetes, heard, looks, markers, PARTICIPLE_CARDS (+4 more)
 
 ### Community 105 - "PlayPage.tsx"
-Cohesion: 0.05
-Nodes (40): How it is protected, Report a problem, Setup (once, in the Cloudflare and GitHub dashboards), Tests, What the issue contains, What the player sees, ref_components_reportbutton, ref_components_ui_dialog (+32 more)
+Cohesion: 0.09
+Nodes (19): What the player sees, ref_components_reportbutton, ref_components_ui_dialog, ref_components_ui_iconbutton, ref_games_shared_nounarticle, ref_games_shared_progressslot, ref_games_shared_sentencenouns, ref_games_shared_usefocusonmount (+11 more)
 
 ### Community 106 - "images/index.ts"
 Cohesion: 0.36
 Nodes (7): authorPageUrl(), imageUrl(), loadManifest(), Manifest, ManifestEntry, photoPageUrl(), PIXABAY_PHOTO_PREFIX
 
 ### Community 107 - "c1-1/index.ts"
-Cohesion: 0.12
-Nodes (15): content, units, vocab, sortitTranslations, wirtschaft, gesellschaft, zeit, digital (+7 more)
+Cohesion: 0.13
+Nodes (14): units, vocab, sortitTranslations, wirtschaft, gesellschaft, zeit, digital, sprache (+6 more)
 
-### Community 108 - "u10-cause.ts"
+### Community 108 - "forms.ts"
 Cohesion: 0.17
-Nodes (11): presentTable(), cause, causes, connectors, events, mean(), PART, ROLE (+3 more)
+Nodes (14): adjectiveEndingWhy(), adjectiveRule(), AFTER, CASE_NAME, CASES, contrastForms(), DEFINITE, describeForm() (+6 more)
 
-### Community 109 - "u3-sante.ts"
+### Community 109 - "u4-doute.ts"
 Cohesion: 0.14
 Nodes (14): Build plan, Checks done and not done, French B2.1 – syllabus research and plan, How the units were chosen, Sources (what was actually read), frForms(), meta(), vocabGames() (+6 more)
 
@@ -651,45 +661,41 @@ Nodes (5): Build status, French A2.2 – syllabus research and plan, Grammar add
 Cohesion: 0.25
 Nodes (7): ref_test_factories, nextActivity(), pathStates(), playUrl(), queueAfter(), StepState, path
 
-### Community 114 - "c2-1.ts"
-Cohesion: 0.24
-Nodes (5): C21_TOPICS, futur2Rows, WERDEN, C22_TOPICS, C2_SOURCES
-
 ### Community 115 - "grammar/schema.ts"
-Cohesion: 0.15
-Nodes (12): BlockSchema, Callout, Compare, Examples, GrammarTopicSchema, lessonId, List, Paragraph (+4 more)
+Cohesion: 0.14
+Nodes (13): BlockSchema, Callout, Compare, Examples, GrammarTopicSchema, lessonId, List, Paragraph (+5 more)
 
-### Community 116 - "u6-convaincre.ts"
-Cohesion: 0.17
-Nodes (11): CON, connectors, convaincre, GER, ideas, mean(), MEANING, phrases (+3 more)
+### Community 116 - "Architecture doc"
+Cohesion: 0.19
+Nodes (13): CLAUDE.md project notes, graphify trigger instructions (.claude/CLAUDE.md), npm run check, Repo rules (tests, zod content, seeded rng, i18n, a11y), Architecture doc, Accessible by default, Seeded determinism (rng.ts), Testing pyramid (+5 more)
 
 ### Community 117 - "vitest"
 Cohesion: 0.29
 Nodes (3): ref_testing_library_jest_dom_vitest, vitest, Utterance
 
 ### Community 118 - "compound.ts"
-Cohesion: 0.24
-Nodes (12): conditionnelPasse(), futurAnterieur(), gerondif(), PARTICIPE_PRESENT, participePresent(), PLURAL, plusQueParfait(), withAuxiliary() (+4 more)
+Cohesion: 0.22
+Nodes (14): conditionnelPasse(), futurAnterieur(), gerondif(), PARTICIPE_PRESENT, participePresent(), PLURAL, plusQueParfait(), withAuxiliary() (+6 more)
 
 ### Community 119 - "vite.config.ts"
 Cohesion: 0.22
 Nodes (6): ref_node_fs, ref_node_url, @tailwindcss/vite, vite, vite-plugin-pwa, @vitejs/plugin-react
 
-### Community 120 - "frTable"
-Cohesion: 0.15
-Nodes (11): Build plan, French A1.1 – syllabus research and plan, How the units were chosen, Sources (what was actually read), Build plan, French A1.2 – syllabus research and plan, How the units were chosen, Sources (what was actually read) (+3 more)
+### Community 120 - "main"
+Cohesion: 0.19
+Nodes (11): Code quality: SonarQube Cloud, One-time setup (by hand), Code graph (Graphify), Locally, Pinned install, Repo settings, The workflow, loadVocab() (+3 more)
 
 ### Community 121 - "u8-temps.ts"
 Cohesion: 0.17
 Nodes (9): clothes, days, months, pictureQuiz, POSITION_CARDS, SORT_CARDS, temps, vocab (+1 more)
 
 ### Community 122 - "u2-presenter.ts"
-Cohesion: 0.17
-Nodes (11): Table, unitFr(), countries, GENDER_CARDS, jobs, nationalities, pairs, phrases (+3 more)
+Cohesion: 0.20
+Nodes (9): unitFr(), countries, GENDER_CARDS, jobs, nationalities, pairs, phrases, presenter (+1 more)
 
-### Community 123 - "French B1.1 – syllabus research and plan"
-Cohesion: 0.29
-Nodes (6): Build plan, French B1.1 – syllabus research and plan, How the units were chosen, Limits of the research, Sources (what was actually read), condTable()
+### Community 123 - "adjectives.ts"
+Cohesion: 0.26
+Nodes (11): adjectiveEnding(), DeclensionKind, declineAdjective(), ENDINGS, stemBeforeEnding(), GENDERS, row(), Case (+3 more)
 
 ### Community 124 - "u6-table.ts"
 Cohesion: 0.18
@@ -697,55 +703,55 @@ Nodes (9): ref_lib_french_numbers, drinksMeals, foods, phrases, pictureQuiz, qua
 
 ### Community 125 - "u4-logement.ts"
 Cohesion: 0.18
-Nodes (10): spellRows(), building, CMP, furniture, IF, phrases, REL, renting (+2 more)
+Nodes (10): gaps(), building, CMP, furniture, IF, phrases, REL, renting (+2 more)
 
-### Community 126 - "table"
-Cohesion: 0.10
-Nodes (26): ref_lib_french_conjugation, ref_lib_french_tenses, ref_lib_persons, frConjugationTable(), table(), FR11_TOPICS, FR12_TOPICS, pcTable() (+18 more)
+### Community 126 - "build.ts"
+Cohesion: 0.11
+Nodes (28): ref_lib_french_compound, ref_lib_french_conditional, ref_lib_french_conjugation, ref_lib_french_moretenses, ref_lib_french_subjunctive, ref_lib_french_tenses, ref_lib_persons, CASES (+20 more)
 
-### Community 127 - "fr-b1-2/helpers.ts"
-Cohesion: 0.29
-Nodes (10): ref_lib_french_compound, ref_lib_french_conditional, conditionnelTable(), condPasseTable(), futAnterieurTable(), futurTable(), imparfaitTable(), pqpTable() (+2 more)
+### Community 127 - "Adding content guide"
+Cohesion: 0.18
+Nodes (11): Adding content guide, Authoring helpers and german grammar generators, Grammar hints: mini lessons and why, Procedure: add a new game engine, Procedure: add a new unit (builders.ts), Content is data, engines are generic, Game engine contract (GameProps, useSequence, GameFrame), Answer sounds (sfx.ts) (+3 more)
 
 ### Community 128 - "fr-a1-1/u7-ville.ts"
 Cohesion: 0.20
 Nodes (9): phrases, pictureQuiz, places, route, SORT_CARDS, ville, vocab, where (+1 more)
 
 ### Community 129 - "grammar/index.ts"
-Cohesion: 0.11
-Nodes (18): ref_lib_german_konjunktiv1, B21_TOPICS, sein, werden, B22_TOPICS, FR11_TOPICS_B, FRB21_TOPICS, FRC21_TOPICS (+10 more)
+Cohesion: 0.09
+Nodes (24): ref_lib_german_konjunktiv1, B21_TOPICS, sein, werden, B22_TOPICS, conjugationTable(), C21_TOPICS, futur2Rows (+16 more)
 
 ### Community 130 - "u7-cuisine.ts"
-Cohesion: 0.07
-Nodes (29): presentTable(), unitFr21(), units, events, jobs, lifeVerbs, linkers, parcours (+21 more)
+Cohesion: 0.18
+Nodes (10): sentRows(), actions, kitchen, measures, MS, NQ, OB, phrases (+2 more)
 
 ### Community 131 - "French A2.1 – syllabus research and plan"
 Cohesion: 0.40
 Nodes (4): Build plan, French A2.1 – syllabus research and plan, Sources (what was actually read), Units
 
-### Community 132 - "u8-rapporter.ts"
-Cohesion: 0.18
-Nodes (10): sp(), formal, INV, mean(), messages, phrases, REP, STYLE (+2 more)
+### Community 132 - "fr-a2-1/index.ts"
+Cohesion: 0.20
+Nodes (9): content, units, parcours, souvenirs, logement, portrait, futur, cuisine (+1 more)
 
-### Community 133 - "fr-b1-1/index.ts"
-Cohesion: 0.06
-Nodes (35): subjTable(), unitFr(), units, character, FEELING_CARDS, feelings, regrets, sentiments (+27 more)
+### Community 133 - "activity"
+Cohesion: 0.04
+Nodes (72): q(), activity(), vocabPath(), gericht, grammarTags, LESSON, verfahren, vocab (+64 more)
 
 ### Community 134 - "subjunctive.ts"
-Cohesion: 0.48
-Nodes (5): forms(), IRREGULAR, nousStem(), subjunctiveFr(), list()
+Cohesion: 0.21
+Nodes (10): Build plan, French B1.1 – syllabus research and plan, How the units were chosen, Limits of the research, Sources (what was actually read), forms(), IRREGULAR, nousStem() (+2 more)
 
 ### Community 135 - "Grammar lesson sources"
 Cohesion: 0.12
-Nodes (15): A1.1 and A1.2 (22 topics), A2.1 and A2.2 (19 topics), B1.1 and B1.2 (17 topics), B2.1 and B2.2 (28 topics), C1.1 and C1.2 (19 topics), C2.1 and C2.2 (18 topics), French A1.1 (25 topics), French A1.2 (5 topics so far) (+7 more)
+Nodes (15): A1.1 and A1.2 (22 topics), A2.1 and A2.2 (19 topics), B1.1 and B1.2 (17 topics), B2.1 and B2.2 (28 topics), C1.1 and C1.2 (19 topics), C2.1 and C2.2 (18 topics), French A1.1 (25 topics), French A2.1 (21 topics) (+7 more)
 
 ### Community 136 - "C1.2 – syllabus research, coverage and overlap with A1.1–B1.1"
 Cohesion: 0.33
 Nodes (5): C1.2 – syllabus research, coverage and overlap with A1.1–B1.1, Grammar, How the units were chosen, Overlap with earlier levels, Sources
 
 ### Community 137 - "u3-souvenirs.ts"
-Cohesion: 0.20
-Nodes (9): EN, IMP, landscapes, memories, phrases, USE, verbs, vocab (+1 more)
+Cohesion: 0.18
+Nodes (10): spellRows(), EN, IMP, landscapes, memories, phrases, USE, verbs (+2 more)
 
 ### Community 138 - "u1-registres.ts"
 Cohesion: 0.18
@@ -756,28 +762,28 @@ Cohesion: 0.18
 Nodes (9): moodItems, quizWords, reporting, Six, subjonctif, Table, timeShift, triggers (+1 more)
 
 ### Community 142 - "fr-b1-2/index.ts"
-Cohesion: 0.12
-Nodes (15): units, paysages, COND, dreams, hypotheses, KIND, links, mean() (+7 more)
+Cohesion: 0.13
+Nodes (14): earlierLevels, key(), REVIEW_WORDS, content, units, cause, culture, paysages (+6 more)
 
 ### Community 143 - "u6-futur.ts"
 Cohesion: 0.20
-Nodes (9): FUT, futur, ideas, IRR, phrases, SI, tech, verbs (+1 more)
+Nodes (9): tfRows(), FUT, ideas, IRR, phrases, SI, tech, verbs (+1 more)
 
 ### Community 144 - "fr-b2-1/helpers.ts"
 Cohesion: 0.22
 Nodes (7): g(), Question, SixForms, SpellRow, split(), Turn, Wrong
 
-### Community 145 - "fr-c2-1/index.ts"
-Cohesion: 0.22
-Nodes (8): units, humour, humourUnit, irony, kinds, paronyms, vocab, institutions
+### Community 145 - "u2-humour.ts"
+Cohesion: 0.25
+Nodes (6): humour, humourUnit, irony, kinds, paronyms, vocab
 
 ### Community 146 - "u3-recit.ts"
 Cohesion: 0.20
 Nodes (8): events, recit, registerItems, Six, Table, tenseItems, times, vocab
 
-### Community 147 - "u9-etudes.ts"
-Cohesion: 0.18
-Nodes (10): etudes, feelings, FORM, mean(), phrases, REL, studies, TOPIC (+2 more)
+### Community 147 - "u5-portrait.ts"
+Cohesion: 0.20
+Nodes (8): character, CT, EQ, faces, looks, phrases, PP, vocab
 
 ### Community 148 - "ref_lib_german_conjugation"
 Cohesion: 0.31
@@ -791,13 +797,13 @@ Nodes (7): French C2.1 – syllabus research and plan, How C2 was split into C2.
 Cohesion: 0.22
 Nodes (8): activities, likes, loisirs, phrases, pictureQuiz, SORT_CARDS, sports, vocab
 
-### Community 151 - "u1-journee.ts"
-Cohesion: 0.22
-Nodes (8): chores, heard, journee, morning, order, pictureQuiz, vocab, when
+### Community 151 - "fr-a1-1/helpers.ts"
+Cohesion: 0.15
+Nodes (13): ref_lib_french_passecompose, frTable(), Table, unitFr(), chores, heard, journee, morning (+5 more)
 
 ### Community 152 - "u8-institutions.ts"
 Cohesion: 0.25
-Nodes (6): europe, france, powers, quizWords, vocab, whereItems
+Nodes (7): europe, france, institutions, powers, quizWords, vocab, whereItems
 
 ### Community 153 - "u4-cause.ts"
 Cohesion: 0.25
@@ -815,21 +821,21 @@ Nodes (7): markers, nouns, press, quizWords, relief, structureItems, vocab
 Cohesion: 0.25
 Nodes (7): debat, debate, linkItems, positions, quizWords, structure, vocab
 
-### Community 157 - "u4-regrets.ts"
+### Community 157 - "u1-ensemble.ts"
 Cohesion: 0.20
-Nodes (9): scene(), feelings, links, mean(), phrases, PQP, TIME, verbs (+1 more)
+Nodes (9): ensemble, housing, living, NEGATION_CARDS, phrases, pictureQuiz, PREFIX_CARDS, RULE_CARDS (+1 more)
 
-### Community 158 - "u2-paysages.ts"
-Cohesion: 0.20
-Nodes (9): sortCards(), FORMS, L, landscapes, mean(), outdoors, phrases, vocab (+1 more)
+### Community 158 - "articles.ts"
+Cohesion: 0.31
+Nodes (8): DEFINITE, definiteArticle(), genderOfArticle(), INDEFINITE, indefiniteArticle(), negativeArticle(), possessive(), PossessiveStem
 
-### Community 159 - "u4-doute.ts"
-Cohesion: 0.25
-Nodes (8): q(), qs(), attitudes, doute, ideas, MOOD, phrases, vocab
-
-### Community 160 - "u5-planete.ts"
+### Community 159 - "u1-bonjour.ts"
 Cohesion: 0.22
-Nodes (8): unitFr(), actions, mean(), phrases, planet, PREP, prepositions, vocab
+Nodes (7): bonjour, byes, feelings, hellos, manners, polite, vocab
+
+### Community 160 - "u2-sorties.ts"
+Cohesion: 0.22
+Nodes (8): presentTable(), unitFr21(), phrases, places, sorties, things, verbs, vocab
 
 ### Community 161 - "ProgressBar.tsx"
 Cohesion: 0.50
@@ -839,41 +845,41 @@ Nodes (3): FILL, ProgressBar(), Props
 Cohesion: 0.33
 Nodes (5): French B1.2 – syllabus research and plan, How the units were chosen, Open points, Sources (what was actually read), Status
 
-### Community 163 - "fr-b2-1/index.ts"
-Cohesion: 0.25
-Nodes (7): units, cause, effects, judging, phrases, SIDE, vocab
+### Community 163 - "u8-cause.ts"
+Cohesion: 0.29
+Nodes (6): tf(), effects, judging, phrases, SIDE, vocab
 
-### Community 164 - "u2-souvenirs.ts"
-Cohesion: 0.25
-Nodes (7): imparfaitTable(), family, relations, souvenirs, story, TENSE_CARDS, vocab
+### Community 164 - "fr-a2-1/helpers.ts"
+Cohesion: 0.22
+Nodes (8): futurTable(), GapRow, imparfaitTable(), QuizRow, SentRow, SpellRow, Table, TfRow
 
 ### Community 165 - "u12-ville.ts"
 Cohesion: 0.25
-Nodes (7): src_content_fr_b2_1_helpers_activity, citizens, green, KIND, phrases, ville, vocab
+Nodes (7): cards(), citizens, green, KIND, phrases, ville, vocab
 
 ### Community 166 - "u1-identite.ts"
-Cohesion: 0.25
-Nodes (7): cards(), identite, identity, phrases, SORT, traits, vocab
+Cohesion: 0.29
+Nodes (6): src_content_fr_b2_1_helpers_activity, identity, phrases, SORT, traits, vocab
 
 ### Community 167 - "u6-migrations.ts"
 Cohesion: 0.25
-Nodes (7): say(), KIND, migrations, people, phrases, reasons, vocab
+Nodes (7): you(), KIND, migrations, people, phrases, reasons, vocab
 
 ### Community 168 - "u2-parcours.ts"
 Cohesion: 0.25
-Nodes (7): sent(), family, MOOD, parcours, phrases, stages, vocab
+Nodes (8): q(), qs(), family, MOOD, parcours, phrases, stages, vocab
 
 ### Community 169 - "u7-demarches.ts"
-Cohesion: 0.25
-Nodes (7): tf(), demarches, paperwork, phrases, SUBJ, travel, vocab
+Cohesion: 0.29
+Nodes (6): unitFr(), paperwork, phrases, SUBJ, travel, vocab
 
 ### Community 170 - "u11-logement.ts"
-Cohesion: 0.25
-Nodes (7): unitFr(), describing, logement, phrases, PREP, renting, vocab
+Cohesion: 0.29
+Nodes (6): say(), describing, phrases, PREP, renting, vocab
 
 ### Community 171 - "u10-cites.ts"
-Cohesion: 0.25
-Nodes (7): you(), cites, cityLife, oldNew, phrases, ROLE, vocab
+Cohesion: 0.29
+Nodes (6): sent(), cityLife, oldNew, phrases, ROLE, vocab
 
 ### Community 172 - "c1-1.ts"
 Cohesion: 0.36
@@ -887,25 +893,61 @@ Nodes (6): feelings, looks, phrases, sentiments, TIME, vocab
 Cohesion: 0.29
 Nodes (6): phrases, recit, story, TENSE, time, vocab
 
+### Community 175 - "fr-b2-1/index.ts"
+Cohesion: 0.25
+Nodes (7): content, units, cites, logement, identite, demarches, cause
+
+### Community 176 - "fr-a2-1-b.ts"
+Cohesion: 0.31
+Nodes (5): formsTable(), FR21_TOPICS_B, futurTable(), imparfaitTable(), FR21_SOURCES
+
+### Community 177 - "u8-einkaufen.ts"
+Cohesion: 0.25
+Nodes (5): einkaufen, food, genderItems, shopping, vocab
+
+### Community 178 - "konjunktiv1.ts"
+Cohesion: 0.39
+Nodes (5): Forms, PRONOUNS, konjunktiv1(), konjunktiv1Perfect(), SEIN
+
+### Community 179 - "u2-wer.ts"
+Cohesion: 0.29
+Nodes (5): people, phrases, vocab, wer, quizEnDe()
+
+### Community 180 - "u5-familie.ts"
+Cohesion: 0.29
+Nodes (5): familie, female, male, relatives, vocab
+
+### Community 181 - "u3-sante.ts"
+Cohesion: 0.29
+Nodes (6): ADVICE, care, phrases, sante, symptoms, vocab
+
+### Community 182 - "moreTenses.ts"
+Cohesion: 0.38
+Nodes (5): COND_ENDINGS, conditionnel(), PLURAL, plusQueParfait(), ETRE_VERBS
+
+### Community 183 - "French B2.2 – syllabus research and plan"
+Cohesion: 0.40
+Nodes (4): Build plan and status, French B2.2 – syllabus research and plan, How the units were chosen, Sources (what was actually read)
+
 ## Knowledge Gaps
-- **2142 isolated node(s):** `singleQuote`, `semi`, `trailingComma`, `printWidth`, `PLAYED` (+2137 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2395 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **2167 isolated node(s):** `singleQuote`, `semi`, `trailingComma`, `printWidth`, `PLAYED` (+2162 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2422 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `react` to `Quiz.tsx`, `content/schema.ts`, `router.tsx`, `package.json`, `AppLayout.tsx`, `Clock.tsx`, `ref_i18n`, `Sentence.tsx`, `Icon.tsx`, `Memory.tsx`, `controls.test.tsx`, `WordImage.tsx`, `Conjugation.tsx`, `Button.tsx`, `@testing-library/react`, `Market.tsx`, `ui.test.tsx`, `PlayPage.tsx`, `Tabs.tsx`?**
-  _High betweenness centrality (0.067) - this node is a cross-community bridge._
-- **Why does `UnitContent` connect `UnitContent` to `fr-a1-1/u7-ville.ts`, `gap`, `u7-cuisine.ts`, `you`, `fr-b1-1/index.ts`, `meta`, `u8-rapporter.ts`, `content/schema.ts`, `u3-souvenirs.ts`, `a2-2/index.ts`, `u1-registres.ts`, `u6-subjonctif.ts`, `fr-b1-2/index.ts`, `u6-futur.ts`, `fr-b2-1/helpers.ts`, `fr-c2-1/index.ts`, `builders.ts`, `u9-etudes.ts`, `u3-recit.ts`, `u9-debat.ts`, `u5-loisirs.ts`, `u1-journee.ts`, `u8-institutions.ts`, `b1-1/index.ts`, `fr-a2-1/helpers.ts`, `u4-cause.ts`, `u5-concession.ts`, `u4-regrets.ts`, `u2-paysages.ts`, `u4-doute.ts`, `u5-planete.ts`, `u4-zahlen.ts`, `u7-relief.ts`, `fr-b2-1/index.ts`, `say`, `u2-souvenirs.ts`, `u12-ville.ts`, `b1-2/index.ts`, `u1-identite.ts`, `u2-parcours.ts`, `u11-logement.ts`, `u4-famille.ts`, `heard`, `u10-cites.ts`, `u5-sentiments.ts`, `u6-migrations.ts`, `u7-demarches.ts`, `u9-recit.ts`, `activity`, `fr-b1-1/helpers.ts`, `u3-nombres.ts`, `u1-voyage.ts`, `u2-medias.ts`, `u11-sport.ts`, `u12-culture.ts`, `u7-tag.ts`, `grammar.test.ts`, `c1-2/index.ts`, `byDe`, `fr-b1-2/u7-ville.ts`, `u2-fetes.ts`, `c1-1/index.ts`, `u10-cause.ts`, `u3-sante.ts`, `u6-convaincre.ts`, `u8-temps.ts`, `u2-presenter.ts`, `u6-table.ts`, `u4-logement.ts`, `fr-b1-2/helpers.ts`?**
-  _High betweenness centrality (0.055) - this node is a cross-community bridge._
+- **Why does `react` connect `react` to `Gapfill.test.tsx`, `ui.test.tsx`, `content/schema.ts`, `router.tsx`, `PlayPage.tsx`, `package.json`, `controls.test.tsx`, `Icon.tsx`, `Memory.tsx`, `ref_i18n`, `Tabs.tsx`, `WordImage.tsx`, `Conjugation.tsx`, `Button.tsx`, `Clock.tsx`, `@testing-library/react`, `grammar/grammar.test.tsx`?**
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
+- **Why does `UnitContent` connect `UnitContent` to `fr-a1-1/u7-ville.ts`, `sortItems`, `u7-cuisine.ts`, `gap`, `activity`, `meta`, `content/schema.ts`, `u3-souvenirs.ts`, `grammar.test.ts`, `u1-registres.ts`, `typed`, `u6-subjonctif.ts`, `u6-futur.ts`, `fr-b2-1/helpers.ts`, `u2-humour.ts`, `builders.ts`, `u5-portrait.ts`, `u3-recit.ts`, `u5-loisirs.ts`, `fr-a1-1/helpers.ts`, `kit.ts`, `a2-2/index.ts`, `u8-etudes.ts`, `u4-cause.ts`, `u5-concession.ts`, `u1-ensemble.ts`, `c2-2/helpers.ts`, `u1-bonjour.ts`, `u2-sorties.ts`, `u4-zahlen.ts`, `u7-relief.ts`, `u8-cause.ts`, `u9-debat.ts`, `u12-ville.ts`, `u1-identite.ts`, `b1-2/index.ts`, `u2-parcours.ts`, `u6-migrations.ts`, `u11-logement.ts`, `u4-famille.ts`, `flashcards`, `u10-cites.ts`, `u5-sentiments.ts`, `u7-demarches.ts`, `u9-recit.ts`, `u8-einkaufen.ts`, `u2-wer.ts`, `u5-familie.ts`, `say`, `u3-sante.ts`, `a1-1/types.ts`, `u3-nombres.ts`, `u1-voyage.ts`, `u2-medias.ts`, `byDe`, `vocabList`, `u7-tag.ts`, `b2-1/index.ts`, `c1-2/index.ts`, `u3-woher.ts`, `b2-2/index.ts`, `u2-fetes.ts`, `c1-1/index.ts`, `u4-doute.ts`, `u8-institutions.ts`, `u8-temps.ts`, `u2-presenter.ts`, `u6-table.ts`, `u4-logement.ts`?**
+  _High betweenness centrality (0.056) - this node is a cross-community bridge._
 - **Why does `zod` connect `progressTransfer.ts` to `grammar/schema.ts`, `content/schema.ts`, `@testing-library/react`, `package.json`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.044) - this node is a cross-community bridge._
 - **What connects `singleQuote`, `semi`, `trailingComma` to the rest of the system?**
-  _2142 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Quiz.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.11092436974789915 - nodes in this community are weakly interconnected._
-- **Should `gap` be split into smaller, more focused modules?**
-  _Cohesion score 0.0327263779527559 - nodes in this community are weakly interconnected._
+  _2167 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Gapfill.test.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.0726950354609929 - nodes in this community are weakly interconnected._
+- **Should `sortItems` be split into smaller, more focused modules?**
+  _Cohesion score 0.029290853031860225 - nodes in this community are weakly interconnected._
 - **Should `manifest.json` be split into smaller, more focused modules?**
   _Cohesion score 0.003992015968063872 - nodes in this community are weakly interconnected._
