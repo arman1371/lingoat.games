@@ -226,6 +226,38 @@ imperative of être and avoir, the negation of the near future, the chez + perso
 Wiktionnaire conjugation pages were checked for prendre, vouloir and finir; the other verb tables come from the
 generated forms in `src/lib/french`.
 
+## French B2.2 (25 topics)
+
+The lessons are in `src/content/grammar/fr-b2-2.ts`, `fr-b2-2-b.ts` (units 2 to 6) and `fr-b2-2-c.ts` (units 7 to 12); the
+pages are in `sources-fr.ts`. The pages were checked to exist (HTTP 200); several pages the content tool returned for
+a neighbouring article were not usable, so the rules below were written from common textbook teaching and the pages serve
+as references for the reader.
+
+| Topic                                          | Pages                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reported speech                                | [Discours indirect](https://fr.wikipedia.org/wiki/Discours_indirect)                                                                                                                                                                                                                                                              |
+| c’est … qui / que                              | [Phrase clivée](https://fr.wikipedia.org/wiki/Phrase_cliv%C3%A9e)                                                                                                                                                                                                                                                                 |
+| lequel, auquel, duquel                         | Wiktionnaire [lequel](https://fr.wiktionary.org/wiki/lequel)                                                                                                                                                                                                                                                                      |
+| Subjunctive or infinitive; ne explétif         | [Subjonctif en français](https://fr.wikipedia.org/wiki/Subjonctif_en_fran%C3%A7ais)                                                                                                                                                                                                                                               |
+| Passive; se faire + infinitive                 | [Voix passive](https://fr.wikipedia.org/wiki/Voix_passive), [Voix pronominale](https://fr.wikipedia.org/wiki/Voix_pronominale)                                                                                                                                                                                                    |
+| Si clauses; condition connectors               | [Phrase conditionnelle](https://fr.wikipedia.org/wiki/Phrase_conditionnelle), [Conditionnel](https://fr.wikipedia.org/wiki/Conditionnel), [Conditionnel passé](https://fr.wikipedia.org/wiki/Conditionnel_pass%C3%A9), [Plus-que-parfait](https://fr.wikipedia.org/wiki/Plus-que-parfait)                                         |
+| Subjunctive after superlatives; verbs + à / de | [Subjonctif en français](https://fr.wikipedia.org/wiki/Subjonctif_en_fran%C3%A7ais), [Préposition](https://fr.wikipedia.org/wiki/Pr%C3%A9position), [Pronom personnel](https://fr.wikipedia.org/wiki/Pronom_personnel)                                                                                                            |
+| Cause; consequence and aim                     | [Proposition subordonnée circonstancielle](https://fr.wikipedia.org/wiki/Proposition_subordonn%C3%A9e_circonstancielle), [Connecteur logique](https://fr.wikipedia.org/wiki/Connecteur_logique)                                                                                                                                   |
+| Concession; comparison                         | same adverbial-clause and connector pages, [Comparatif](https://fr.wikipedia.org/wiki/Comparatif), [Superlatif](https://fr.wikipedia.org/wiki/Superlatif)                                                                                                                                                                         |
+| Passé simple; narrative tenses                 | [Passé simple](https://fr.wikipedia.org/wiki/Pass%C3%A9_simple), [Plus-que-parfait](https://fr.wikipedia.org/wiki/Plus-que-parfait)                                                                                                                                                                                               |
+| Participle agreement; gérondif and -ant forms  | [Accord du participe passé en français](https://fr.wikipedia.org/wiki/Accord_du_participe_pass%C3%A9_en_fran%C3%A7ais), [Participe passé](https://fr.wikipedia.org/wiki/Participe_pass%C3%A9), [Participe présent](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent), [Gérondif](https://fr.wikipedia.org/wiki/G%C3%A9rondif) |
+| Purpose; conditionnel passé                    | adverbial-clause page, [Subjonctif en français](https://fr.wikipedia.org/wiki/Subjonctif_en_fran%C3%A7ais), [Conditionnel passé](https://fr.wikipedia.org/wiki/Conditionnel_pass%C3%A9)                                                                                                                                           |
+| Time connectors; futur antérieur               | adverbial-clause and connector pages, [Plus-que-parfait](https://fr.wikipedia.org/wiki/Plus-que-parfait)                                                                                                                                                                                                                          |
+| Logical connectors; register                   | [Connecteur logique](https://fr.wikipedia.org/wiki/Connecteur_logique), [Registre de langue](https://fr.wikipedia.org/wiki/Registre_de_langue)                                                                                                                                                                                    |
+
+**French B2.2 limits:** the pages do not state every rule. These follow common textbook teaching and are **not** checked
+against a fetched page: the questions in reported speech (si, ce que, ce qui), the list of introducing verbs and their
+nuances, the shift of the time words, the pseudo-cleft sentences with ce qui / ce que / ce dont, the use of qui instead of
+a composed pronoun for people, the mood after superlatives and negative antecedents (subjunctive in careful French,
+indicative in everyday use), après que + indicative, the distinction par / de after a passive, the choice of avoir beau +
+infinitive, the passé simple endings, the spelling differences of the adjectifs verbaux (convaincant, fatigant …), the
+futur antérieur as a guess about the past and the examples of familiar, standard and formal vocabulary.
+
 ## French A1.2 (5 topics so far)
 
 The lessons are in `src/content/grammar/fr-a1-2.ts`, the pages in `sources-fr-a1-2.ts`. Verb tables use
@@ -278,6 +310,69 @@ page gives the general structure and "Personne n'est venu", not the place of rie
 participle or of personne after it; those follow common textbook teaching. The Wiktionnaire entries for depuis and
 pendant give the meaning (starting point, "during") but no tense rule, so "depuis + present for a continuing situation"
 and "pendant + passé composé" are textbook teaching, not checked against a fetched page.
+
+## French C1.2 (25 topics)
+
+`src/content/grammar/fr-c1-2.ts` and `fr-c1-2-b.ts`, pages in `sources-fr.ts`. The French content has **not yet been
+reviewed by a native speaker**. Pages below were fetched while writing; each lesson lists them as its sources.
+
+| Topic(s)                                                       | Pages read                                                                                                                                                                                                                                                                        |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Participe présent, gérondif, adjectif verbal                   | [Participe présent en français](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent_en_fran%C3%A7ais), [Participe présent](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent), [Gérondif](https://fr.wikipedia.org/wiki/G%C3%A9rondif), Wiktionnaire fatigant and convaincant |
+| Registres de langue; reprise pronominale / nominale            | [Registre de langue](https://fr.wikipedia.org/wiki/Registre_de_langue), [Anaphore (grammaire)](<https://fr.wikipedia.org/wiki/Anaphore_(grammaire)>)                                                                                                                              |
+| Temps du récit, passé simple                                   | [Plus-que-parfait](https://fr.wikipedia.org/wiki/Plus-que-parfait), [Passé simple en français](https://fr.wikipedia.org/wiki/Pass%C3%A9_simple_en_fran%C3%A7ais), [Imparfait de l'indicatif](https://fr.wikipedia.org/wiki/Imparfait_de_l%27indicatif_en_fran%C3%A7ais)           |
+| Subjonctif présent, modalisation, but, indicatif ou subjonctif | [Subjonctif en français](https://fr.wikipedia.org/wiki/Subjonctif_en_fran%C3%A7ais), [Conditionnel en français](https://fr.wikipedia.org/wiki/Conditionnel_en_fran%C3%A7ais)                                                                                                      |
+| Pronoms relatifs composés                                      | [Pronom relatif](https://fr.wikipedia.org/wiki/Pronom_relatif) (simple relatives only)                                                                                                                                                                                            |
+| Futur antérieur                                                | [Futur antérieur](https://fr.wikipedia.org/wiki/Futur_ant%C3%A9rieur)                                                                                                                                                                                                             |
+| Concordance des temps, conditionnel, hypothèse                 | [Concordance des temps](https://fr.wikipedia.org/wiki/Concordance_des_temps), [Conditionnel en français](https://fr.wikipedia.org/wiki/Conditionnel_en_fran%C3%A7ais)                                                                                                             |
+| Prépositions with places                                       | [Préposition](https://fr.wikipedia.org/wiki/Pr%C3%A9position), [Francophonie](https://fr.wikipedia.org/wiki/Francophonie)                                                                                                                                                         |
+| Cause / consequence, concession, indefinites, connectors       | [Proposition (grammaire)](<https://fr.wikipedia.org/wiki/Proposition_(grammaire)>) (subordination in general)                                                                                                                                                                     |
+
+**French limits:** the pages above describe the tenses and moods, but **not** the lists of triggers and connectors, so
+these follow common textbook practice and are not checked against a fetched page: which expressions of certainty and
+doubt take the subjunctive (modalisation, appreciation), the purpose structures (pour que, afin que, de peur que), the
+forms of lequel and its contractions, the cause and consequence connectors, the concession structures (bien que, même si,
+malgré, avoir beau), the indefinite pronouns and their agreement, the prepositions with countries and cities, the
+si-patterns and au cas où / à condition que / à moins que, the logical connectors, the après que + indicative rule, the
+reported-speech shifts and time words, and the choice of depuis, pendant, il y a, dans and en. Dedicated pages for
+"Concession (grammaire)" and "Connecteur logique" were not usable. Also from textbook practice: the compound participle,
+the meanings of the gérondif beyond simultaneity, the très test for the adjectif verbal, the pairs provoquant /
+provocant and différant / différent, the passé simple endings of irregular verbs beyond the table, and the use of the
+futur antérieur for a guess about the past.
+
+## French B2.1
+
+The lessons are in `src/content/grammar/fr-b2-1.ts` (unit 1) and `fr-b2-1-u2.ts` to `fr-b2-1-u12.ts`; the pages are in
+`sources-fr-b2-1.ts`. The forms in the tables are written by hand. The French content has **not yet been reviewed by a
+native speaker**.
+
+| Topic                                        | Pages (fr.wikipedia.org)                                                                               |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Imparfait or passé composé?                  | Imparfait de l’indicatif en français, Passé composé                                                    |
+| The plus-que-parfait                         | Indicatif plus-que-parfait en français, Passé composé                                                  |
+| Agreement of the past participle             | Accord du participe passé en français, Passé composé                                                   |
+| Conjunctions of time                         | Conjonction de subordination, Proposition subordonnée circonstancielle                                 |
+| The conditional for advice, giving advice    | Conditionnel en français, Impératif (grammaire), Subjonctif en français                                |
+| The present subjunctive, opinion verbs       | Subjonctif présent en français, Subjonctif en français, Proposition subordonnée conjonctive            |
+| Subjunctive or infinitive, past subjunctive  | Subjonctif en français, Subjonctif passé, Proposition subordonnée conjonctive                          |
+| Cause (conjunctions, prepositions), purpose  | Conjonction de subordination, Proposition subordonnée circonstancielle                                 |
+| Consequence, verbs of cause                  | Conjonction de subordination, Proposition subordonnée circonstancielle                                 |
+| Passé simple, passé antérieur                | Passé simple en français, Passé antérieur en français                                                  |
+| Relative pronouns, ce qui / ce que / ce dont | Pronom relatif en français, Proposition subordonnée relative                                           |
+| Lequel, auquel, duquel; choosing the pronoun | Pronom relatif en français, Proposition subordonnée relative                                           |
+| The passive, opposition and concession       | Voix passive, Voix pronominale, Conjonction de subordination, Proposition subordonnée circonstancielle |
+
+**How the pages were checked:** the existence of every page was confirmed by fetching it (HTTP 200). Only a few pages were
+searched for the terms the lessons use (the circumstantial subordinate page lists cause, time, consequence, concession,
+condition, opposition and purpose; the subordinating-conjunction page lists conjunctions with their relation, for example
+"afin que (but)" and "alors que (opposition)"; the conditional page names advice, politeness and uncertain information among
+its uses). The other pages were **not** read in full.
+
+**French B2.1 limits:** the pages do not state every detail. These follow common textbook teaching and are **not** checked
+against a fetched page: the signal-word table of the imparfait, the list of verbs that take être, the mood after each
+conjunction (the exact lists of indicative and subjunctive conjunctions), the nuance between parce que, puisque, comme and
+car, the nuance between à cause de and grâce à, the ladder from soft to firm advice, the endings of the passé simple
+(third persons), the contractions auquel and duquel, and the dont / duquel split.
 
 ## French C2.1
 
@@ -333,6 +428,68 @@ The lessons are in `src/content/grammar/fr-a2-2.ts`, the pages in `sources-fr-a2
 | The superlative: le plus, le meilleur   | [Degré de comparaison](https://fr.wikipedia.org/wiki/Degr%C3%A9_de_comparaison) (section "En français")                                                                                                                                                      |
 | Qui, que, quoi, lequel                  | [Pronom interrogatif](https://fr.wikipedia.org/wiki/Pronom_interrogatif) (section "En français")                                                                                                                                                             |
 
+## French C1.1
+
+- `fr-c11-connectors` (unit 1): read Wikipédia _Connecteur logique (linguistique)_ and _Conjonction de coordination_ (car is
+  a coordinating conjunction; donc is now classed as an adverb and is movable) and the Wiktionnaire entries _puisque_ and
+  _grâce à_ (grâce à has a positive connotation, unlike à cause de). **Not stated by any fetched page and taken from common
+  textbook teaching:** puisque presenting a reason the listener already knows, car never opening a sentence, comme opening the
+  sentence, en raison de being formal and neutral, faute de meaning "for lack of", si bien que taking the indicative, and the
+  register of en outre, par ailleurs and de surcroît. Needs a native speaker's check.
+- `fr-c11-si-clauses` (unit 2): linked Wikipédia _Phrase conditionnelle_, _Conditionnel présent_, _Conditionnel passé_,
+  _Plus-que-parfait_ and the Wiktionnaire entries _si_ and _au cas où_. The page _Phrase conditionnelle_ confirms the tense
+  pairs of the three si-clauses and that the verb after si is not in the future or the conditional. **Taken from textbook
+  teaching, not stated on a fetched page:** the label "real / unlikely / missed" for the three types, and the moods after
+  _sauf si_ and _à condition que_.
+- `fr-c11-affixes` (unit 3): linked Wikipédia _Préfixe_, _Suffixe_, _Affixe_ and the Wiktionnaire annexes of French prefixes
+  and suffixes. The prefix and suffix lists come from those annexes; the choice of im-/il-/ir- before certain consonants and
+  the typical meaning of each suffix is textbook teaching. Needs a native speaker's check.
+- `fr-c11-concession` (unit 4): linked Wikipédia _Mode subjonctif_ and _Proposition subordonnée circonstancielle_ and the
+  Wiktionnaire entries _bien que_, _quoique_, _pourtant_ and _cependant_. **Taken from textbook teaching:** bien que /
+  quoique + subjonctif versus même si / alors que + indicatif, and the formal register of toutefois and néanmoins.
+- `fr-c11-pronouns` (unit 5): linked Wikipédia _Pronom personnel_ and _Impératif_ and the Wiktionnaire entries _en_ and _y_.
+  **Taken from textbook teaching:** the order of double pronouns (me le, le lui, lui en, y en) and the order after a positive
+  imperative (donnez-le-moi).
+- `fr-c11-subjunctive` (unit 6): linked Wikipédia _Mode subjonctif_ and the Wiktionnaire entries _falloir_, _douter_ and
+  _souhaiter_. **Taken from textbook teaching:** the lists of triggers (will, feeling, doubt), the infinitive when the subject
+  is the same, and the indicative after certainty (il est évident que).
+- `fr-c11-reprise` (unit 7): linked Wikipédia _Pronom démonstratif_, _Pronom relatif_, _Anaphore (grammaire)_ and the
+  Wiktionnaire entries _celui_, _lequel_ and _dont_. **Taken from textbook teaching:** ce qui / ce que / ce dont / ce à quoi
+  as summing-up pronouns, and the choice between dont and duquel.
+- `fr-c11-emphasis` (unit 8): linked Wikipédia _Phrase clivée_, _Dislocation (linguistique)_ and _Mise en relief_ and the
+  Wiktionnaire entry _c'est_. **Taken from textbook teaching:** the pseudo-cleft (ce qui … c'est) and the register notes.
+- `fr-c11-narrative-tenses` (unit 9): linked Wikipédia _Passé simple_, _Passé composé_, _Imparfait_, _Plus-que-parfait_ and
+  _Passé antérieur_. The passé simple is taught for recognition and third-person writing only; **taken from textbook
+  teaching:** the scene-versus-event split between imparfait and passé composé / passé simple.
+- `fr-c11-registers` (unit 10): linked Wikipédia _Registre de langue_ and _Niveau de langue_ and the Wiktionnaire entries
+  _cordialement_ and _veuillez_. **Taken from textbook teaching:** the register of each example (bosser, œuvrer), the three
+  question forms and the closing formulas of a formal email. Needs a native speaker's check.
+- `fr-c11-modality` (unit 11): linked Wikipédia _Modalité (linguistique)_ and the Wiktionnaire entries _peut-être_ and
+  _apparemment_. **Taken from textbook teaching:** certainty with the indicative, doubt with the subjonctif, and the
+  journalistic conditionnel for unconfirmed information.
+
+## French B1.2
+
+The French B1.2 lessons are in `src/content/grammar/fr-b1-2.ts`, the pages in `sources-fr.ts`. Forms in the tables come
+from `src/lib/french/tenses.ts` and `conditional.ts`. Not reviewed by a native speaker.
+
+| Topic                                          | Pages linked                                                                                                                                                                                          |
+| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The simple future, which future                | [Futur simple](https://fr.wikipedia.org/wiki/Futur_simple) (first 100 000 characters read), Wiktionnaire [aller](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/aller)                      |
+| Si clauses, conditional                        | [Phrase conditionnelle](https://fr.wikipedia.org/wiki/Phrase_conditionnelle), [Conditionnel](https://fr.wikipedia.org/wiki/Conditionnel)                                                              |
+| Plus-que-parfait, past conditional, futur ant. | [Plus-que-parfait](https://fr.wikipedia.org/wiki/Plus-que-parfait), [Futur antérieur](https://fr.wikipedia.org/wiki/Futur_ant%C3%A9rieur)                                                             |
+| Gérondif, participe présent                    | [Gérondif](https://fr.wikipedia.org/wiki/G%C3%A9rondif), [Participe présent](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent)                                                                    |
+| Connectors, cause, consequence, concession     | [Connecteur logique](https://fr.wikipedia.org/wiki/Connecteur_logique), [Cause](https://fr.wikipedia.org/wiki/Cause), [Conséquence](https://fr.wikipedia.org/wiki/Cons%C3%A9quence)                   |
+| Reported speech                                | [Discours indirect](https://fr.wikipedia.org/wiki/Discours_indirect), [Concordance des temps](https://fr.wikipedia.org/wiki/Concordance_des_temps)                                                    |
+| Relative and indefinite pronouns, emphasis     | [Pronom relatif](https://fr.wikipedia.org/wiki/Pronom_relatif), [Pronom indéfini](https://fr.wikipedia.org/wiki/Pronom_ind%C3%A9fini), [Mise en relief](https://fr.wikipedia.org/wiki/Mise_en_relief) |
+| Passé simple                                   | [Passé simple](https://fr.wikipedia.org/wiki/Pass%C3%A9_simple)                                                                                                                                       |
+
+**French B1.2 limits:** only the Futur simple page was read in full (first 100 000 characters). The other pages were
+checked to exist (HTTP 200) and are linked as further reading; the lessons themselves follow the SUL référentiel, the
+Paris Cité B1 grammar sheet and standard textbook teaching, and have not been checked line by line against those pages.
+The Wikipedia page does not state the future after quand / dès que (it only describes the futur d'anticipation) or the
+spelling of payer. The quand + future tip, paierai / payerai, the order of double pronouns and the passé simple forms
+follow common textbook teaching and are not checked against a fetched page.
 Units 2 to 6 of French A2.2 (added together). For these topics the linked pages were checked to exist (HTTP 200 on
 2026-11-01) and are given as references; the lessons themselves follow the standard grammar and were not copied from
 the pages. A few Wikipedia and Wiktionary pages answered with HTTP 429 (rate limit) when checked and could not be
@@ -356,3 +513,46 @@ confirmed; they are not linked.
 | The imperative with pronouns                 | [Impératif (grammaire)](<https://fr.wikipedia.org/wiki/Imp%C3%A9ratif_(grammaire)>), [Pronom personnel](https://fr.wikipedia.org/wiki/Pronom_personnel)                                                                                                                          |
 | Purpose: pour, afin de, pour que             | Wiktionnaire: [afin de](https://fr.wiktionary.org/wiki/afin_de), [pour que](https://fr.wiktionary.org/wiki/pour_que)                                                                                                                                                             |
 | The passive voice                            | [Voix passive](https://fr.wikipedia.org/wiki/Voix_passive)                                                                                                                                                                                                                       |
+
+## French C2.2
+
+- Participe présent, gérondif, adjectif verbal (`fr-c22-participe-present`): fr.wikipedia.org _Participe présent_,
+  _Gérondif_, _Adjectif verbal_ and fr.wiktionary.org _fatigant_ were read. The pages give the formation, the
+  invariability of the participle and the gérondif, the agreement of the adjectif verbal and the spelling alternations
+  -guant/-gant, -quant/-cant, -ant/-ent; they do not mention the pairs provoquant/provocant, différant/différent and
+  négligeant/négligent, which follow the same pattern but are not checked against a fetched page.
+- Past participle agreement (`fr-c22-accord-participe`): fr.wikipedia.org _Accord du participe passé en français_
+  was read for être/avoir, reflexive verbs, participle + infinitive, en, the neutral le and verbs of measure. The page
+  does not cover collective subjects. The remark on se voir + infinitive is textbook teaching.
+- The passive (`fr-c22-passif`): fr.wikipedia.org _Voix passive_ was read for the formation, the agent with par, the
+  restriction to transitive verbs, on and the impersonal passive. It does not cover the pronominal passive, se faire /
+  se voir + infinitive or the choice between par and de (the lesson follows textbook teaching).
+- Relatives (`fr-c22-relatives`): fr.wikipedia.org _Pronom relatif_ (short overview: forms and functions) and
+  fr.wiktionary.org _dont_ and _lequel_ were read. They confirm the role of dont, the forms of lequel and its
+  contractions, and that lequel is used after prepositions other than de. They do not cover ce qui / ce que / ce dont
+  or the dont / duquel choice after a noun with a preposition; those parts follow textbook teaching.
+- Negation (`fr-c22-negation`): fr.wikipedia.org _Négation en français_ was read for ne … que, ni … ni, the negative
+  pronouns as subjects, ne without pas, the ne explétif and pas de after a negation. The page does not give a full list
+  of verbs that allow ne alone; the examples (pouvoir, savoir, cesser, oser) follow textbook teaching.
+- Reserve and distance (`fr-c22-modalisation`): fr.wikipedia.org _Conditionnel en français_ was read (first 100,000 of
+  about 110,000 characters) for the value “information incertaine” (conditionnel journalistique), its alternative names
+  and the other uses of the conditional. The term “conditionnel de réserve” does not appear on the page, and the page
+  calls the analysis of this value disputed. The distance markers (selon, d’après, soi-disant, prétendument) and the
+  subjunctive after il semblerait que follow textbook teaching.
+- The infinitive (`fr-c22-infinitif`): fr.wikipedia.org _Infinitif passé_ was read for the formation (auxiliary +
+  participle), the choice of auxiliary and agreement as in the passé composé, and the rule that après takes the past
+  infinitive. fr.wikipedia.org _Infinitif_ was also read but does not cover the French prepositions. The negative
+  infinitive (ne pas avoir signé), avant de, pour, sans, de peur de and the same-subject rule follow textbook teaching.
+- Agreement with quantifiers (`fr-c22-accord-quantite`): fr.wiktionary.org _plupart_ was read for the verb after la plupart
+  de + noun (agrees with the noun) and la plupart alone (plural). fr.wiktionary.org _tout_ (first 100,000 of about
+  134,000 characters) was read for tout as an adverb: the traditional rule (toute / toutes before a feminine adjective
+  with an initial consonant) and the note that the majority usage writes toute / toutes in all cases; the lesson only
+  tests the consonant case. fr.wikipedia.org _Accord (grammaire)_ was read for collective nouns (foule, multitude,
+  dizaine, centaine: singular or plural verb when a plural noun follows). It does not mention bon nombre de, un grand
+  nombre de or plus d’un; those rules (plural, plural, singular) follow textbook teaching.
+- Figures of style (`fr-c22-figures`): fr.wikipedia.org _Figure de style_ was read (first 100,000 of about 310,000
+  characters) for métaphore, comparaison, litote, antithèse, hyperbole, métonymie, euphémisme, oxymore,
+  personnification, anaphore, périphrase and synecdoque; the literary quotations in the quiz (Labé, Valéry, Brel, Proust,
+  Corneille) come from that page. fr.wikipedia.org _Proverbe_ was read for the definition of a proverb; it quotes only
+  “Chat échaudé craint l’eau froide”. The other proverbs and the idioms (poser un lapin, avoir le cafard…) are classic
+  expressions that were not checked against a fetched list.

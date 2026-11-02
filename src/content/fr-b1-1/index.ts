@@ -1,0 +1,32 @@
+import type { LevelContent } from '../schema';
+import { ensemble } from './u1-ensemble';
+import { souvenirs } from './u2-souvenirs';
+import { travail } from './u3-travail';
+import { consommer } from './u4-consommer';
+import { monde } from './u5-monde';
+import { medias } from './u6-medias';
+import { temps } from './u7-temps';
+import { apprendre } from './u8-apprendre';
+import { critique } from './u9-critique';
+import { sentiments } from './u10-sentiments';
+
+const units = [
+  ensemble,
+  souvenirs,
+  travail,
+  consommer,
+  monde,
+  medias,
+  temps,
+  apprendre,
+  critique,
+  sentiments,
+];
+
+const content: LevelContent = {
+  units: units.map((u) => u.unit),
+  vocab: units.flatMap((u) => u.vocab),
+  activities: units.flatMap((u) => u.activities),
+};
+
+export default content;

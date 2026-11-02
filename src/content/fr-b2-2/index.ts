@@ -1,0 +1,36 @@
+import type { LevelContent } from '../schema';
+import { actu } from './u1-actu';
+import { sante } from './u2-sante';
+import { solidarite } from './u3-solidarite';
+import { justice } from './u4-justice';
+import { culture } from './u5-culture';
+import { science } from './u6-science';
+import { economie } from './u7-economie';
+import { histoire } from './u8-histoire';
+import { territoire } from './u9-territoire';
+import { societe } from './u10-societe';
+import { climat } from './u11-climat';
+import { debat } from './u12-debat';
+
+const units = [
+  actu,
+  sante,
+  solidarite,
+  justice,
+  culture,
+  science,
+  economie,
+  histoire,
+  territoire,
+  societe,
+  climat,
+  debat,
+];
+
+const content: LevelContent = {
+  units: units.map((u) => u.unit),
+  vocab: units.flatMap((u) => u.vocab),
+  activities: units.flatMap((u) => u.activities),
+};
+
+export default content;
