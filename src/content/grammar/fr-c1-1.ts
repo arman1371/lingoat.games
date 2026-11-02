@@ -972,4 +972,99 @@ export const FRC11_TOPICS: GrammarTopic[] = [
     related: ['fr-c11-connectors'],
     sources: [S.register, S.level, S.cordialement, S.veuillez],
   },
+  {
+    id: 'fr-c11-modality',
+    title: 'Certainty, doubt and reported news',
+    tagline: 'How do I show how sure I am, and report what I cannot confirm?',
+    level: LEVEL,
+    summary:
+      'Modalisation shows your attitude to a fact. Certainty (il est certain que, sans aucun doute, manifestement) keeps the indicative. Possibility and doubt (il se peut que, il est peu probable que) call for the subjunctive, while peut-être and probablement take the indicative. Information you cannot confirm is reported with the conditional, often after selon, d’après or à en croire.',
+    sections: [
+      section(
+        'degrees',
+        'Degrees of certainty',
+        p(
+          'French marks how sure you are with adverbs and fixed expressions, and the mood of the verb follows. The more certain, the more the verb stays in the **indicative**; the more doubtful, the more it moves to the **subjunctive** or the **conditional**.',
+        ),
+        table(
+          'From sure to doubtful.',
+          ['Degree', 'Expression', 'Verb'],
+          [
+            [
+              'Certain',
+              'il est certain / évident que, sans aucun doute, manifestement',
+              'indicatif',
+            ],
+            ['Probable', 'probablement, sans doute, il est probable que', 'indicatif'],
+            [
+              'Possible',
+              'peut-être, il se peut que, il est possible que',
+              'peut-être (que) + indicatif; il se peut que + subjonctif',
+            ],
+            ['Doubtful', 'il est peu probable que, je doute que', 'subjonctif'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il est certain que ce soit utile.  ✓ Il est certain que c’est utile.',
+          '✗ Il se peut que c’est gratuit.  ✓ Il se peut que ce soit gratuit.',
+        ),
+      ),
+      section(
+        'peut-etre',
+        'Peut-être and probablement',
+        p(
+          '**Peut-être** at the start of a sentence is followed by **inversion** (*Peut-être viendra-t-il*) or by **que** (*Peut-être qu’il viendra*). In the middle of a sentence, no inversion is needed: *Il viendra peut-être.* **Probablement** and **sans doute** work the same way, and **apparemment** expresses what looks true from the outside.',
+        ),
+        examples(
+          [
+            'Peut-être pourrons-nous bientôt réduire nos déchets.',
+            'Perhaps we will soon be able to reduce our waste.',
+          ],
+          ['Apparemment, les serveurs sont en panne.', 'Apparently the servers are down.'],
+          [
+            'Sans aucun doute, l’IA va bouleverser les métiers de demain.',
+            'Without a doubt, AI will upend the jobs of tomorrow.',
+          ],
+        ),
+      ),
+      section(
+        'reported',
+        'The conditional of reported news',
+        p(
+          'Journalists use the **conditionnel** to say that the source is not verified. It often appears after **selon, d’après, à en croire, il paraît que, on dit que**. The **conditionnel présent** speaks about now or the future (*la 5G serait risquée*) and the **conditionnel passé** about the past (*le ministre aurait démissionné*).',
+        ),
+        compare(
+          {
+            title: 'Indicative',
+            question: 'Confirmed fact',
+            example: 'Le ministre a démissionné.',
+          },
+          {
+            title: 'Conditional',
+            question: 'Reported, not confirmed',
+            example: 'Selon la presse, le ministre aurait démissionné.',
+          },
+          {
+            title: 'Subjunctive',
+            question: 'Doubt or possibility',
+            example: 'Il se peut que le ministre démissionne.',
+          },
+        ),
+        tip(
+          'Il semble que',
+          '**Il semble que** takes the subjunctive, but **il me semble que** takes the indicative: *Il semble que ce soit vrai. Il me semble que c’est vrai.*',
+        ),
+      ),
+    ],
+    related: ['fr-c11-subjunctive', 'fr-c11-si-clauses'],
+    sources: [
+      S.modality,
+      S.presentConditional,
+      S.pastConditional,
+      S.subjonctifWp,
+      S.peutEtre,
+      S.apparemment,
+    ],
+  },
 ];

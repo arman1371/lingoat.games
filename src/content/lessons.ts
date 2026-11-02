@@ -1399,6 +1399,15 @@ export const LESSONS = {
       'Veuillez agréer, Madame, mes salutations distinguées.',
     ],
   },
+  'fr-c11-modality': {
+    title: 'Certainty, doubt and reported news',
+    rule: 'Certainty takes the indicative (il est certain que, sans aucun doute, manifestement). Possibility and doubt take the subjunctive (il se peut que, il est peu probable que); peut-être que takes the indicative. For news you cannot confirm, use the conditional with selon, d’après, à en croire.',
+    examples: [
+      'Il est certain que ce progrès sera utile.',
+      'Il se peut que l’application soit bientôt payante.',
+      'Selon la presse, le ministre aurait démissionné.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

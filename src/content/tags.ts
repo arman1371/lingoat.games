@@ -448,6 +448,7 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🎩',
   },
+  'fr-c11-modality': { label: 'Certainty, doubt, reported news', group: 'grammar', emoji: '🎚️' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

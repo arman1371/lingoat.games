@@ -575,4 +575,5 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'fr-c1-1-culture': [{ topic: 'fr-c11-emphasis' }],
   'fr-c1-1-litterature': [{ topic: 'fr-c11-narrative-tenses' }],
   'fr-c1-1-travail': [{ topic: 'fr-c11-registers' }],
+  'fr-c1-1-numerique': [{ topic: 'fr-c11-modality' }],
 };

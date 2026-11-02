@@ -134,6 +134,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (type)', 'fr-c1-1-travail-gap-typed'],
   ['dialogue (two scenes)', 'fr-c1-1-travail-dialogues'],
   ['unit challenge', 'fr-c1-1-travail-challenge'],
+  ['sort it (certainty)', 'fr-c1-1-numerique-sort-certainty'],
+  ['conjugation (conditional)', 'fr-c1-1-numerique-conj-conditionnel'],
+  ['gap fill (choose)', 'fr-c1-1-numerique-gap-modality'],
+  ['gap fill (type)', 'fr-c1-1-numerique-gap-typed'],
+  ['dialogue (two scenes)', 'fr-c1-1-numerique-dialogues'],
+  ['unit challenge', 'fr-c1-1-numerique-challenge'],
 ];
 
 test.describe('French C1.1 – playing the games', () => {
