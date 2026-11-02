@@ -92,6 +92,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (type)', 'fr-c1-1-egalite-gap-typed'],
   ['dialogue (two scenes)', 'fr-c1-1-egalite-dialogues'],
   ['unit challenge', 'fr-c1-1-egalite-challenge'],
+  ['sort it (concession)', 'fr-c1-1-alimentation-sort-concession'],
+  ['conjugation (subjunctive)', 'fr-c1-1-alimentation-conj-subjonctif'],
+  ['gap fill (choose)', 'fr-c1-1-alimentation-gap-concession'],
+  ['gap fill (type)', 'fr-c1-1-alimentation-gap-typed'],
+  ['sentence builder', 'fr-c1-1-alimentation-sentences'],
+  ['unit challenge', 'fr-c1-1-alimentation-challenge'],
 ];
 
 test.describe('French C1.1 – playing the games', () => {

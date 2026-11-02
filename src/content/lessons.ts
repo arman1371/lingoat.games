@@ -1336,6 +1336,15 @@ export const LESSONS = {
       'Il faut égaliser les salaires.',
     ],
   },
+  'fr-c11-concession': {
+    title: 'Concession: although, even if, despite',
+    rule: 'Bien que / quoique + subjonctif; même si / alors que + indicatif (never future or conditional after si); malgré / en dépit de + noun. Pourtant, cependant, néanmoins and toutefois are adverbs that mark the contrast between two sentences.',
+    examples: [
+      'Bien qu’il soit très occupé, il cuisine tous les soirs.',
+      'Même si c’est plus cher, j’achète bio.',
+      'Malgré la pluie, le marché est ouvert.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

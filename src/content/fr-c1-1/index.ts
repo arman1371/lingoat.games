@@ -2,8 +2,9 @@ import type { LevelContent } from '../schema';
 import { medias } from './u1-medias';
 import { societe } from './u2-societe';
 import { egalite } from './u3-egalite';
+import { alimentation } from './u4-alimentation';
 
-const units = [medias, societe, egalite];
+const units = [medias, societe, egalite, alimentation];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

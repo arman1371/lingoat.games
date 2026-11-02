@@ -60,6 +60,11 @@ const PAGES: [string, string, string][] = [
     '/fr/levels/fr-c1-1/units/fr-c1-1-egalite',
     'Égalité et diversité',
   ],
+  [
+    'unit alimentation in French C1.1',
+    '/fr/levels/fr-c1-1/units/fr-c1-1-alimentation',
+    'Manger, produire, consommer',
+  ],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],

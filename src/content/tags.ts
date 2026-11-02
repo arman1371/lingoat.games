@@ -429,6 +429,11 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🧱',
   },
+  'fr-c11-concession': {
+    label: 'Concession: bien que, même si, malgré',
+    group: 'grammar',
+    emoji: '🤷',
+  },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

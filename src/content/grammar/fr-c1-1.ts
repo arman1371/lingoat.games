@@ -355,4 +355,100 @@ export const FRC11_TOPICS: GrammarTopic[] = [
     related: ['fr-c11-connectors'],
     sources: [S.prefix, S.suffix, S.affix, S.prefixList, S.suffixList],
   },
+  {
+    id: 'fr-c11-concession',
+    title: 'Concession: although, even if, despite',
+    tagline: 'How do I admit a fact and still defend my view?',
+    level: LEVEL,
+    summary:
+      'Concession admits a fact that seems to contradict your point, and then holds the point. Bien que and quoique are followed by the subjonctif; même si, alors que and tandis que by the indicatif. Malgré and en dépit de are followed by a noun group. Pourtant, cependant, néanmoins and toutefois are adverbs that link two sentences.',
+    sections: [
+      section(
+        'clauses',
+        'Concession clauses: which mood?',
+        p(
+          'The conjunction decides the mood. **Bien que** and **quoique** (and the literary **encore que**) introduce a fact you accept, and the verb is in the **subjonctif**. **Même si**, **alors que** and **tandis que** are followed by the **indicatif**, and **si** never takes the future or the conditional.',
+        ),
+        table(
+          'Concession conjunctions.',
+          ['Expression', 'Then', 'Example'],
+          [
+            [
+              'bien que, quoique',
+              'subjonctif',
+              'Bien qu’il soit très occupé, il cuisine tous les soirs.',
+            ],
+            ['même si', 'indicatif', 'Même si c’est plus cher, j’achète bio.'],
+            [
+              'alors que, tandis que',
+              'indicatif',
+              'Elle est végétarienne alors que son mari adore la viande.',
+            ],
+            ['malgré, en dépit de', 'noun group', 'Malgré la pluie, le marché est ouvert.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Bien qu’il est occupé.  ✓ Bien qu’il soit occupé.',
+          '✗ Même s’il soit cher.  ✓ Même s’il est cher.',
+          '✗ Malgré qu’il pleuve.  ✓ Malgré la pluie. / Bien qu’il pleuve.',
+        ),
+      ),
+      section(
+        'subjunctive',
+        'Forming the subjonctif présent',
+        p(
+          'For most verbs, take the **ils/elles** form of the present, drop **-ent**, and add **-e, -es, -e, -ent**; **nous** and **vous** keep the imparfait-like **-ions, -iez**. A handful of verbs are irregular: **être, avoir, aller, faire, pouvoir, savoir, vouloir**.',
+        ),
+        table(
+          'Subjonctif présent.',
+          ['Person', 'finir', 'prendre', 'faire', 'être'],
+          [
+            ['que je', 'finisse', 'prenne', 'fasse', 'sois'],
+            ['que tu', 'finisses', 'prennes', 'fasses', 'sois'],
+            ['qu’il/elle/on', 'finisse', 'prenne', 'fasse', 'soit'],
+            ['que nous', 'finissions', 'prenions', 'fassions', 'soyons'],
+            ['que vous', 'finissiez', 'preniez', 'fassiez', 'soyez'],
+            ['qu’ils/elles', 'finissent', 'prennent', 'fassent', 'soient'],
+          ],
+        ),
+      ),
+      section(
+        'adverbs',
+        'Pourtant, cependant, néanmoins',
+        p(
+          'These adverbs link two sentences. **Pourtant** opens a statement that surprises after the first one; **cependant** and **néanmoins** are more formal; **toutefois** often appears after the first word of the clause. They are never followed by the subjonctif, because they are not conjunctions.',
+        ),
+        examples(
+          [
+            'Ce fromage sent très fort. Pourtant, il est délicieux.',
+            'This cheese smells very strong. Yet it is delicious.',
+          ],
+          [
+            'Le plat est simple ; néanmoins, il est excellent.',
+            'The dish is simple; nevertheless, it is excellent.',
+          ],
+        ),
+        compare(
+          {
+            title: 'bien que + subjonctif',
+            question: 'Although (a clause)',
+            example: 'Bien qu’il pleuve, nous sortons.',
+          },
+          {
+            title: 'malgré + noun',
+            question: 'Despite (a noun)',
+            example: 'Malgré la pluie, nous sortons.',
+          },
+          {
+            title: 'pourtant + new sentence',
+            question: 'Yet (an adverb)',
+            example: 'Il pleut. Pourtant, nous sortons.',
+          },
+        ),
+      ),
+    ],
+    related: ['fr-c11-si-clauses'],
+    sources: [S.subjonctifWp, S.subordCirc, S.bienQue, S.quoique, S.pourtant, S.cependant],
+  },
 ];
