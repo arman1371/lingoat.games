@@ -540,6 +540,16 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-futur-proche' },
     { topic: 'fr-adjective-position' },
   ],
+  // ---- French C2.1 ------------------------------------------------------------------------
+  'fr-c2-1-registres': [{ topic: 'fr-c21-word-formation' }],
+  'fr-c2-1-humour': [{ topic: 'fr-c21-wordplay' }],
+  'fr-c2-1-recit': [{ topic: 'fr-c21-passe-simple' }, { topic: 'fr-c21-narrative-tenses' }],
+  'fr-c2-1-cause': [{ topic: 'fr-c21-cause-consequence' }],
+  'fr-c2-1-concession': [{ topic: 'fr-c21-concession' }],
+  'fr-c2-1-subjonctif': [{ topic: 'fr-c21-subjunctive' }, { topic: 'fr-c21-reported-speech' }],
+  'fr-c2-1-relief': [{ topic: 'fr-c21-emphasis' }, { topic: 'fr-c21-nominalisation' }],
+  'fr-c2-1-institutions': [{ topic: 'fr-c21-acronyms', note: 'SNCF, BCE, ONG, OTAN' }],
+  'fr-c2-1-debat': [{ topic: 'fr-c21-argument' }],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

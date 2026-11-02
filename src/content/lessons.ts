@@ -1263,6 +1263,114 @@ export const LESSONS = {
     rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
     examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
   },
+  // ---- French C2.1 -------------------------------------------------------------------------
+  'fr-c21-word-formation': {
+    title: 'Prefixes and suffixes',
+    rule: 'A prefix changes the meaning: in-, im-, ir-, il- = not (inlassable), dé-, dés-, mé- = undo or wrongly (déconseiller, méconnaissable), sur- = too much and sous- = too little (surestimer, sous-estimer). Suffixes change the word class: -able / -ible = can be (lisible), -ité and -ation make nouns.',
+    examples: [
+      'inlassable = qu’on ne peut pas lasser',
+      'sous-estimer ≠ surestimer',
+      'méconnaissable = qu’on ne reconnaît plus',
+    ],
+  },
+  'fr-c21-wordplay': {
+    title: 'Homophones and paronyms',
+    rule: 'Homophones sound the same and are spelt differently (mer, mère, maire). Paronyms look or sound almost alike but mean different things (effraction / infraction, éminent / imminent, conjecture / conjoncture). Puns play on both, so check the meaning, not just the sound.',
+    examples: [
+      'mer · mère · maire (homophones)',
+      'éminent (distinguished) ≠ imminent (about to happen)',
+      'une conjecture (a guess) ≠ la conjoncture (the situation)',
+    ],
+  },
+  'fr-c21-passe-simple': {
+    title: 'Passé simple and passé antérieur',
+    rule: 'The passé simple tells finished events in writing. Verbs in -er take -ai, -as, -a, -âmes, -âtes, -èrent; most others -is, -it, -îmes, -îtes, -irent or -us, -ut. Être (fus), avoir (eus), venir (vins) are irregular. The passé antérieur is eut / fut + participle (il eut fini).',
+    examples: [
+      'Il ouvrit la porte et entra.',
+      'Ils furent surpris.',
+      'Dès qu’il eut fini, il partit.',
+    ],
+  },
+  'fr-c21-narrative-tenses': {
+    title: 'Tenses of a story',
+    rule: 'In a story the passé simple moves events forward, the imparfait gives the background and habits, and the plus-que-parfait or passé antérieur what came earlier. The présent historique makes past events vivid but alternates with past tenses. In conversation use the passé composé instead of the passé simple.',
+    examples: [
+      'Il pleuvait quand le facteur frappa.',
+      'En 1789, le peuple prend la Bastille.',
+      'On est allés à la plage. (spoken)',
+    ],
+  },
+  'fr-c21-cause-consequence': {
+    title: 'Cause and consequence',
+    rule: 'Cause: parce que (new reason), puisque (known reason), étant donné que, vu que; before a noun en raison de, faute de, grâce à. Consequence: si bien que, au point que, tellement … que + indicative; de sorte que + indicative for a result, + subjunctive for a purpose.',
+    examples: [
+      'Puisque vous êtes là, aidez-moi.',
+      'Faute de temps, nous avons abrégé.',
+      'Il parle de sorte que tous comprennent.',
+    ],
+  },
+  'fr-c21-concession': {
+    title: 'Concession and hypothesis',
+    rule: 'Concession: bien que, quoique + subjunctive; quand bien même + conditional; en dépit de + noun. Opposition: alors que, tandis que + indicative. Condition: si + present → future, si + imparfait → conditional; au cas où + conditional; à condition que, pourvu que, à moins que + subjunctive.',
+    examples: [
+      'Bien qu’il soit fatigué, il continue.',
+      'Au cas où il pleuvrait, prends un parapluie.',
+      'Quand bien même vous insisteriez, je refuserais.',
+    ],
+  },
+  'fr-c21-argument': {
+    title: 'Structuring an argument',
+    rule: 'State the thesis, then support it with arguments and examples, and answer the other side. Connectors mark each step: tout d’abord, ensuite, en second lieu (list); cependant, toutefois, en revanche (opposition); donc, en définitive, en conclusion (end). Certes … toutefois grants a point before objecting.',
+    examples: [
+      'Tout d’abord, il faut définir la thèse.',
+      'Certes, c’est cher ; toutefois, c’est utile.',
+      'En conclusion, je plaide pour cette réforme.',
+    ],
+  },
+  'fr-c21-acronyms': {
+    title: 'Acronyms and institution names',
+    rule: 'A sigle is read letter by letter (SNCF), an acronyme as a word (OTAN). It takes the gender of the core noun of the full name (la SNCF, le CIO, la BCE) and no plural s (des ONG, des BD). Write capitals without full stops: UE, BCE.',
+    examples: [
+      'La BCE a relevé ses taux.',
+      'Le CIO a choisi la ville.',
+      'Plusieurs ONG ont protesté.',
+    ],
+  },
+  'fr-c21-emphasis': {
+    title: 'Emphasis',
+    rule: 'Stress one element with c’est … qui (subject) or c’est … que (object, adverbial), with ce qui / ce que / ce dont … c’est, or by dislocation: Ce livre, je l’ai lu. / Je l’ai lu, ce livre. The detached noun is taken up by a pronoun. Before a plural noun, careful writing uses ce sont.',
+    examples: [
+      'C’est Marie qui a gagné.',
+      'Ce que je veux, c’est du calme.',
+      'Ce livre, je l’ai lu.',
+    ],
+  },
+  'fr-c21-nominalisation': {
+    title: 'Nominalisation',
+    rule: 'Written French packs verbs into nouns: Les prix ont flambé → la flambée des prix. The noun often has a suffix (-ation, -ment, -ion, -ée) or is the stem itself (le report, le recul). The result is shorter and denser; not every infinitive becomes a noun.',
+    examples: [
+      'La situation s’aggrave → l’aggravation de la situation.',
+      'Il a démissionné → sa démission.',
+    ],
+  },
+  'fr-c21-subjunctive': {
+    title: 'The subjunctive',
+    rule: 'The subjunctive follows will, necessity, doubt, emotion and possibility: il faut que, exiger que, douter que, regretter que, il se peut que. Facts and certainty take the indicative: je pense que, il est certain que. Irregular: être → sois, avoir → aie, aller → aille, faire → fasse, savoir → sache.',
+    examples: [
+      'Il faut que tu sois patient.',
+      'Je doute qu’il dise la vérité.',
+      'Il est certain qu’elle a raison.',
+    ],
+  },
+  'fr-c21-reported-speech': {
+    title: 'Reported speech in the past',
+    rule: 'After a past verb of saying, tenses move back: présent → imparfait, passé composé → plus-que-parfait, futur → conditionnel. Time words change: hier → la veille, demain → le lendemain. A yes/no question uses si. A general truth keeps its tense.',
+    examples: [
+      'Il a dit qu’il viendrait le lendemain.',
+      'Elle a dit qu’elle avait fini.',
+      'Il m’a demandé si je venais.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',
