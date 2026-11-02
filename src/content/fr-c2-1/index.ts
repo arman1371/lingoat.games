@@ -6,8 +6,18 @@ import { cause } from './u4-cause';
 import { concessionUnit } from './u5-concession';
 import { subjonctif } from './u6-subjonctif';
 import { relief } from './u7-relief';
+import { institutions } from './u8-institutions';
 
-const units = [registres, humourUnit, recit, cause, concessionUnit, subjonctif, relief];
+const units = [
+  registres,
+  humourUnit,
+  recit,
+  cause,
+  concessionUnit,
+  subjonctif,
+  relief,
+  institutions,
+];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

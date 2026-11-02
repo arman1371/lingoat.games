@@ -809,4 +809,62 @@ export const FRC21_TOPICS: GrammarTopic[] = [
     related: ['fr-c21-emphasis', 'fr-c21-word-formation'],
     sources: [S.nominalisation],
   },
+  {
+    id: 'fr-c21-acronyms',
+    title: 'Acronyms and institution names',
+    tagline: 'Read and write UE, BCE, SNCF and ONG',
+    level: LEVEL,
+    summary:
+      'Institutions are named by acronyms. A sigle is read letter by letter, an acronyme as a word. The acronym takes the gender of the core noun of the full name and does not take a plural s.',
+    sections: [
+      section(
+        'kinds',
+        'Sigle or acronyme?',
+        p(
+          'A **sigle** is read letter by letter: SNCF is read “ès-ène-cé-èf”. An **acronyme** is pronounced as a word: OTAN, Unesco, Medef. Some abbreviations can be read both ways, depending on the speaker: ONU, PIB.',
+        ),
+        table(
+          'Sigle or acronyme.',
+          ['Abbreviation', 'Full name', 'Read as'],
+          [
+            ['SNCF', 'Société nationale des chemins de fer français', 'letters'],
+            ['BCE', 'Banque centrale européenne', 'letters'],
+            ['OTAN', 'Organisation du traité de l’Atlantique nord', 'a word'],
+            ['ONG', 'organisation non gouvernementale', 'letters'],
+          ],
+        ),
+      ),
+      section(
+        'gender',
+        'Gender and plural',
+        p(
+          'The acronym takes the **gender of the core noun** of the full name: la SNCF (société), le CIO (comité), la BCE (banque), le FBI (bureau), la CIA (agence). Acronyms take **no plural s** in French: des ONG, des BD, des CD.',
+        ),
+        examples(
+          ['La BCE a relevé ses taux.', 'The ECB has raised its rates.'],
+          ['Le CIO a choisi la ville.', 'The IOC chose the city.'],
+          ['Plusieurs ONG ont protesté.', 'Several NGOs protested.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ le BCE  ✓ la BCE (banque is feminine)',
+          '✗ des ONGs  ✓ des ONG',
+          '✗ des BD’s  ✓ des BD',
+        ),
+      ),
+      section(
+        'writing',
+        'Writing acronyms and institution names',
+        p(
+          'The recommended style is capital letters without full stops: CNES, RATP, UE. The trend is to drop the stops even in letter-by-letter acronyms (IVG, SOS). Very common acronyms that are easy to pronounce may be written with only an initial capital: Unesco, Euratom. The institutions themselves are named with a capital on the first word: l’Assemblée nationale, le Conseil constitutionnel (common typographic practice).',
+        ),
+        tip(
+          'In a text',
+          'The first time, write the full name and put the acronym in brackets: la Banque centrale européenne (BCE). After that the acronym is enough.',
+        ),
+      ),
+    ],
+    related: ['fr-c21-emphasis'],
+    sources: [S.sigle, S.euInstitutions, S.fifthRepublic],
+  },
 ];

@@ -1318,6 +1318,15 @@ export const LESSONS = {
       'Quand bien même vous insisteriez, je refuserais.',
     ],
   },
+  'fr-c21-acronyms': {
+    title: 'Acronyms and institution names',
+    rule: 'A sigle is read letter by letter (SNCF), an acronyme as a word (OTAN). It takes the gender of the core noun of the full name (la SNCF, le CIO, la BCE) and no plural s (des ONG, des BD). Write capitals without full stops: UE, BCE.',
+    examples: [
+      'La BCE a relevé ses taux.',
+      'Le CIO a choisi la ville.',
+      'Plusieurs ONG ont protesté.',
+    ],
+  },
   'fr-c21-emphasis': {
     title: 'Emphasis',
     rule: 'Stress one element with c’est … qui (subject) or c’est … que (object, adverbial), with ce qui / ce que / ce dont … c’est, or by dislocation: Ce livre, je l’ai lu. / Je l’ai lu, ce livre. The detached noun is taken up by a pronoun. Before a plural noun, careful writing uses ce sont.',

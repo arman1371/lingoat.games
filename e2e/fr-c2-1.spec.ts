@@ -88,6 +88,10 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (nominalisation)', 'fr-c2-1-relief-gap-nominal'],
   ['spell (stress words)', 'fr-c2-1-relief-spell-words'],
   ['quiz (emphasis challenge)', 'fr-c2-1-relief-challenge'],
+  ['sort it (France or the EU)', 'fr-c2-1-institutions-sort-where'],
+  ['gap fill (acronyms)', 'fr-c2-1-institutions-gap-acronyms'],
+  ['spell (institutions)', 'fr-c2-1-institutions-spell-words'],
+  ['quiz (institutions challenge)', 'fr-c2-1-institutions-challenge'],
 ];
 
 test.describe('French C2.1 – playing the games', () => {

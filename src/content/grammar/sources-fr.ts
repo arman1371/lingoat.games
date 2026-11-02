@@ -65,5 +65,8 @@ export const FR_SOURCES = {
   cleft: wp('Phrase_clivée', 'Phrase clivée'),
   dislocation: wp('Dislocation_(linguistique)', 'Dislocation (linguistique)'),
   nominalisation: wp('Nominalisation', 'Nominalisation'),
+  sigle: wp('Sigle', 'Sigle'),
+  euInstitutions: wp('Institutions_de_l’Union_européenne', 'Institutions de l’Union européenne'),
+  fifthRepublic: wp('Cinquième_République_(France)', 'Cinquième République (France)'),
   deSorteQue: wiktionary('de_sorte_que', 'de sorte que'),
 } as const satisfies Record<string, Source>;
