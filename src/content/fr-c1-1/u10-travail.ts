@@ -20,10 +20,10 @@ const U = 'fr-c1-1-travail';
 const L = 'fr-c11-registers' as const;
 
 const contrats = vocabList(U, 'Contracts and working conditions', [
-  ['le télétravail', 'remote working', '🏠'],
+  ['le présentiel', 'on-site working', '🏢'],
   ['un CDI', 'a permanent contract', '📄'],
   ['un CDD', 'a fixed-term contract', '🗓️'],
-  ['l’intérim', 'temping, agency work', '🔁'],
+  ['le chômage partiel', 'short-time working, furlough', '⏸️'],
   ['un préavis', 'a period of notice', '⏳'],
   ['une démission', 'a resignation', '🚪'],
   ['un licenciement', 'a dismissal, a redundancy', '📦'],
@@ -44,7 +44,7 @@ const equipe = vocabList(U, 'Teamwork and management', [
   ['un entretien annuel', 'an annual review', '🗂️'],
   ['un retour d’expérience', 'a lessons-learned review', '🔍'],
   ['un enjeu', 'a stake, an issue', '🎯'],
-  ['une échéance', 'a deadline, a due date', '📅'],
+  ['une date butoir', 'a cut-off date', '🛑'],
   ['un délai', 'a time limit, a delay', '⌛'],
   ['la charge de travail', 'workload', '🏋️'],
   ['un indicateur', 'an indicator, a KPI', '📈'],
