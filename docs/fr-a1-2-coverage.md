@@ -34,12 +34,12 @@ time of day, no routine verbs). That makes eight units, the same size as French 
 | --- | ------------------------------ | ------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | 1   | Ma journée (`journee`)         | SUL (daily habits)  | describe a routine, say how often, put the day in order, give a time | pronominal verbs, toujours / souvent / ne … jamais, d'abord / enfin, vers / de … à                            |
 | 2   | Félicitations ! (`fetes`)      | 6 Félicitations !   | family events, congratulate, describe looks and character            | passé composé with avoir, past and future time markers                                                        |
-| 3   | Chez moi (`logement`)          | 7 Chez moi          | rooms, furniture, report a problem at home, house rules              | object pronouns le / la / l' / les, more place prepositions, y, obligation and prohibition                    |
-| 4   | Bonnes vacances ! (`vacances`) | 8 Bonnes vacances ! | book and plan a trip, say a preference, write a postcard             | comparison with plus / moins / aussi … que, -ir verbs (partir), passé composé with être, c'était / il y avait |
-| 5   | Pas de chance ! (`sante`)      | 9 Pas de chance !   | body, doctor and pharmacy, complain, explain, give advice            | pronominal passé composé, devoir / falloir, lui / leur, pourquoi / parce que                                  |
-| 6   | Beau travail ! (`travail`)     | 10 Beau travail !   | university and work, ability, goals                                  | si + présent, depuis / pendant, qui / que, intensity                                                          |
-| 7   | Au grand air (`nature`)        | 11 Au grand air     | town and countryside, nature, a change of life                       | plus de / moins de + noun, comparison of equality, y                                                          |
-| 8   | C'était bien ? (`langues`)     | 12 C'était bien ?   | learning French, difficulties, encourage, agree and disagree         | me / te / nous / vous as objects, review of the tenses                                                        |
+| 3   | Chez moi (`logement`)          | 7 Chez moi          | rooms, furniture, report a problem at home, house rules              | object pronouns le / la / l' / les, y, rules and orders, more place prepositions                              |
+| 4   | Bonnes vacances ! (`vacances`) | 8 Bonnes vacances ! | book and plan a trip, say a preference, write a postcard             | plus / moins / aussi … que, meilleur, partir / sortir / dormir, passé composé with être, c'était / il y avait |
+| 5   | Pas de chance ! (`sante`)      | 9 Pas de chance !   | body, doctor and pharmacy, complain, explain, give advice            | avoir mal à, devoir / il faut, lui / leur, pronominal passé composé, pourquoi / parce que                     |
+| 6   | Beau travail ! (`travail`)     | 10 Beau travail !   | university and work, ability, goals                                  | savoir / pouvoir / vouloir, si + présent, depuis / pendant, qui / que, très / trop / assez                    |
+| 7   | Au grand air (`nature`)        | 11 Au grand air     | town and countryside, nature, a change of life                       | plus de / moins de / autant de + noun, the pronoun en, adverbs in -ment                                       |
+| 8   | C'était bien ? (`langues`)     | 12 C'était bien ?   | learning French, difficulties, encourage, agree and disagree         | me / te / nous / vous as objects, giving an opinion, verbs + à / de, which tense                              |
 
 Every unit aims at 10 to 16 games with at least 6 of the 13 engines, an easy first game and a final "… challenge".
 Vocabulary cards are never repeated across French levels: `src/content/fr-a1-2/content.test.ts` compares A1.2 with every
@@ -50,7 +50,7 @@ earlier French level.
 1. Plumbing: level entry in `levels.ts`, tags and mini lessons prefixed `fr-`, full grammar lessons
    (`src/content/grammar/fr-a1-2.ts`, topic level `fr-a1-2`), unit links in `unitTopics.ts`, e2e entry.
    **Done** with unit 1.
-2. Units, one pull request each. **Units 1 (`journee`, 16 games) and 2 (`fetes`, 16 games) are done.** Units 3 to 8 follow, each with its
+2. Units, one pull request each. **All eight units are done (16 games each).** Units 1 and 2 were merged separately; units 3 to 8 ship in one pull request, each with its
    grammar lessons so that every `fr-` mini lesson has its full lesson.
 
 ## Unit 1 – Ma journée (`journee`)
@@ -71,3 +71,78 @@ earlier French level.
   character reuse the A1.1 `fr-adjectives` lesson.
 - Games: 5 flashcard sets, picture quiz, listening, passé composé tables, participle sort, 2 gap fills, looks /
   character sort, sentence builder, dialogue (3 scenes), blitz, challenge.
+
+## Unit 3 – Chez moi (`logement`)
+
+- Vocabulary fields: Rooms and the building (20) · Furniture and appliances (21) · Problems and repairs (14) ·
+  House rules (13) · Where exactly? (12). Nothing repeats A1.1 or units 1 and 2.
+- Grammar: direct object pronouns le / la / l' / les (`fr-a12-object-pronouns`), the pronoun y for a place (`fr-y`),
+  written rules and orders with the infinitive and the imperative (`fr-rules`), and longer place expressions
+  with de (`fr-place-more`). Édito unit 9 introduces il faut and devoir with the doctor, so obligation with those
+  verbs waits for unit 5.
+- Games: 5 flashcard sets, picture quiz, listening, room sort, 4 gap fills (pronouns, y, place words, rules),
+  sentence builder, dialogue (3 scenes), blitz, challenge.
+
+## Unit 4 – Bonnes vacances ! (`vacances`)
+
+- Vocabulary fields: Planning a trip (17) · Where to stay (12) · On holiday (14) · Postcards and memories (9) ·
+  Comparing places (10).
+- Grammar: comparison with plus / moins / aussi … que and meilleur (`fr-a12-comparison`), partir / sortir / dormir
+  (`fr-a12-partir`), the passé composé with être (`fr-a12-pc-etre`; forms from `passeCompose()` in
+  `src/lib/french/tenses.ts`) and c'était / il y avait / il faisait (`fr-a12-cetait`).
+- Games: 5 flashcard sets, picture quiz, listening, 2 conjugation games, avoir / être sort, 3 gap fills, sentence
+  builder, dialogue (2 scenes), blitz, challenge.
+
+## Unit 5 – Pas de chance ! (`sante`)
+
+- Vocabulary fields: The body (18) · At the doctor's (14) · At the pharmacy (10) · Advice and emergencies (10) ·
+  Accidents and bad luck (10). **A2.2 also has a health unit** (`fr-a2-2-sante`) whose vocabulary test compares with
+  A1.2, so about twenty health words (genou, fièvre, toux, rhume, grippe, sirop, pansement, urgences, SAMU, guérir …)
+  were left to A2.2 and A1.2 uses other words for the same situations.
+- Grammar: avoir mal à (`fr-a12-avoir-mal`), devoir and il faut (`fr-a12-devoir-falloir`), lui / leur
+  (`fr-a12-lui-leur`), the passé composé of pronominal verbs (`fr-a12-pc-pronominal`) and pourquoi / parce que / alors
+  (`fr-a12-because`).
+- Games: 3 flashcard sets, picture quiz, listening, 2 conjugation games, 5 gap fills, sentence builder, dialogue
+  (2 scenes), blitz, challenge.
+
+## Unit 6 – Beau travail ! (`travail`)
+
+- Vocabulary fields: Working life (17) · Looking for a job (12) · Skills and qualities (12) · University life (10) ·
+  Plans and goals (8).
+- Grammar: savoir / pouvoir / vouloir (`fr-a12-savoir-pouvoir`), si + present (`fr-a12-si-present`), depuis and
+  pendant (`fr-a12-depuis-pendant`), qui and que (`fr-a12-qui-que`) and très / trop / assez / un peu
+  (`fr-a12-intensity`).
+- Games: 4 flashcard sets, picture quiz, listening, conjugation, 5 gap fills, sentence builder, dialogue (2 scenes),
+  blitz, challenge.
+
+## Unit 7 – Au grand air (`nature`)
+
+- Vocabulary fields: Town and countryside (14) · Nature and landscape (16) · Animals (12) · Environment and a new life (12).
+- Grammar: plus de / moins de / autant de + noun (`fr-a12-quantity-compare`), the pronoun en (`fr-a12-en`) and
+  adverbs in -ment (`fr-a12-adverbs`). The pronoun y (listed here in the first plan) was already taught in unit 3.
+  The regular -er verbs of the A1.1 lesson `fr-er-verbs` are practised with déménager, cultiver and recycler.
+- Games: 4 flashcard sets, picture quiz, listening, town / countryside sort, spelling, conjugation, 3 gap fills,
+  sentence builder, dialogue (2 scenes), blitz, challenge.
+
+## Unit 8 – C'était bien ? (`langues`)
+
+- Vocabulary fields: Learning a language (16) · Difficulties (10) · Encouraging someone (9) · Giving an opinion (10) ·
+  Practising (8).
+- Grammar: me / te / nous / vous as objects (`fr-a12-me-te`), giving an opinion (`fr-a12-opinion`), verbs followed by
+  à or de (`fr-a12-verbs-a-de`) and a review of the tenses (`fr-a12-tenses`).
+- Games: 4 flashcard sets, picture quiz, listening, conjugation, à / de sort, 4 gap fills, sentence builder, dialogue
+  (2 scenes), blitz, challenge.
+
+## Notes for the other French levels
+
+- Grammar ids of units 4 to 8 use the prefix `fr-a12-` so that parallel French levels cannot collide with them
+  (A2.2 already owns `fr-object-pronouns`, which is why the unit 3 topic is `fr-a12-object-pronouns`).
+- The vocabulary tests of A2.1 and A2.2 compare with A1.2, so A1.2 had to avoid everything they teach. Later A2 units
+  that overlap with A1.2 must change their own words.
+
+## Vocabulary shared with other French levels
+
+The levels from A2.1 up were merged before units 3 to 8 of A1.2, and they teach many of the same everyday nouns (housing,
+holidays, nature, work). Each level may teach a word only once, so the 129 A1.2 cards that repeated a word from A1.1 or from
+A2.1 to C1.2 were removed from the A1.2 word lists. Those words are learned at the higher level. A few still appear inside
+example sentences.
