@@ -421,6 +421,10 @@ export const TAGS = {
   'fr-b12-prepositions': { label: 'Verbs with prepositions', group: 'grammar', emoji: '🔗' },
   'fr-b12-gerondif': { label: 'The gérondif', group: 'grammar', emoji: '🚶' },
   'fr-b12-connectors': { label: 'Linking words', group: 'grammar', emoji: '🧷' },
+  'fr-b12-indefinite': { label: 'Indefinite pronouns', group: 'grammar', emoji: '👥' },
+  'fr-b12-reported-speech': { label: 'Reported speech', group: 'grammar', emoji: '🗒️' },
+  'fr-b12-inversion': { label: 'Formal questions', group: 'grammar', emoji: '🎩' },
+  'fr-b12-compound-relatives': { label: 'lequel, auquel, dont', group: 'grammar', emoji: '🔗' },
   'fr-b12-past-hypotheses': { label: 'Regrets and the past', group: 'grammar', emoji: '⏪' },
 } as const satisfies Record<string, TagInfo>;
 

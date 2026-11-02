@@ -2,7 +2,7 @@ import type { FrenchForms } from '@/lib/french/conjugation';
 import { conditionnelPasse, futurAnterieur, plusQueParfait } from '@/lib/french/compound';
 import { conditionnel } from '@/lib/french/conditional';
 import { conjugateFr } from '@/lib/french/conjugation';
-import { futurSimple } from '@/lib/french/tenses';
+import { futurSimple, imparfait } from '@/lib/french/tenses';
 import { FRENCH_PRONOUNS, type FrenchPronoun } from '@/lib/persons';
 import { unit as baseUnit } from '../builders';
 import type { ConfigOf } from '../schema';
@@ -56,6 +56,14 @@ export const futurTable = (
   meaning: string,
   blanks: FrenchPronoun[],
 ): Table => tense(id, verb, 'futur simple', meaning, futurSimple(verb), blanks);
+
+/** Imparfait table: je disais, nous finissions … */
+export const imparfaitTable = (
+  id: string,
+  verb: string,
+  meaning: string,
+  blanks: FrenchPronoun[],
+): Table => tense(id, verb, 'imparfait', meaning, imparfait(verb), blanks);
 
 /** Conditionnel présent table: j’irais, tu irais … */
 export const conditionnelTable = (

@@ -544,4 +544,225 @@ export const FRB12_TOPICS: GrammarTopic[] = [
     related: ['fr-b12-gerondif', 'fr-sequence'],
     sources: [S.connecteur, S.cependant],
   },
+  {
+    id: 'fr-b12-indefinite',
+    title: 'Indefinite pronouns',
+    tagline: 'Quelqu’un, personne, plusieurs, la plupart',
+    level: LEVEL,
+    summary:
+      'Indefinite pronouns refer to people, things or amounts without naming them exactly. Personne and rien are negative and go with ne. Plusieurs, certains and aucun can be combined with en, and la plupart is followed by des + plural noun.',
+    sections: [
+      section(
+        'overview',
+        'People, things and amounts',
+        table(
+          'The main indefinite pronouns.',
+          ['Group', 'Positive', 'Negative'],
+          [
+            ['People', 'quelqu’un, tout le monde, chacun', 'personne … ne / ne … personne'],
+            ['Things', 'quelque chose, tout, n’importe quoi', 'rien … ne / ne … rien'],
+            ['Amounts', 'plusieurs, certains, la plupart (des)', 'aucun(e) … ne / ne … aucun(e)'],
+          ],
+        ),
+        p(
+          '**Personne** and **rien** can be the subject (*Personne n’a rien dit*) or the object (*Je n’ai vu personne*). In a compound tense, **rien** sits before the participle (*Je n’ai rien vu*) and **personne** after it (*Je n’ai vu personne*).',
+        ),
+      ),
+      section(
+        'agreement',
+        'Verb and noun agreement',
+        p(
+          '**Chacun** and **aucun** are singular: *Chacun a son avis.* **Plusieurs** and **certains** are plural: *Plusieurs sont partis.* **La plupart des** + plural noun takes a plural verb: *La plupart des gens respectent les règles.* **Aucun** has a feminine form, **aucune**.',
+        ),
+        tip(
+          'With en',
+          'When the noun is dropped, en stays in the sentence and the pronoun gives the amount: Des fresques ? Il y en a plusieurs. / Je n’en ai vu aucune.',
+        ),
+        examples(
+          ['Personne n’a protesté.', 'Nobody protested.'],
+          ['Certains aiment, d’autres non.', 'Some like it, others do not.'],
+          ['J’en ai vu plusieurs.', 'I saw several of them.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Chacun ont leur avis.  ✓ Chacun a son avis.',
+          '✗ Je n’ai vu rien.  ✓ Je n’ai rien vu.',
+          '✗ Je n’ai pas vu personne.  ✓ Je n’ai vu personne.',
+        ),
+      ),
+    ],
+    related: ['fr-negation', 'fr-object-pronouns'],
+    sources: [S.indefini, S.negation],
+  },
+  {
+    id: 'fr-b12-reported-speech',
+    title: 'Reported speech',
+    tagline: 'Il a dit qu’il viendrait',
+    level: LEVEL,
+    summary:
+      'Reported speech tells what someone said without quoting. Statements use que, yes/no questions use si, and other questions use the question word (with ce que for que). When the introducing verb is in the past, the tenses and time words shift.',
+    sections: [
+      section(
+        'basics',
+        'Statements and questions',
+        table(
+          'From direct to reported speech.',
+          ['Direct', 'Reported'],
+          [
+            ['Il dit : « Je suis fatigué. »', 'Il dit qu’il est fatigué.'],
+            ['Elle demande : « Tu as faim ? »', 'Elle demande si j’ai faim.'],
+            ['Il demande : « Où est la gare ? »', 'Il demande où est la gare.'],
+            ['Il demande : « Que veux-tu ? »', 'Il demande ce que je veux.'],
+          ],
+        ),
+        p(
+          'Pronouns and possessives change with the point of view: *« Je t’aime »* becomes *Il dit qu’il m’aime* when you report it to the person addressed. The word order is that of a statement, with **no inversion**.',
+        ),
+      ),
+      section(
+        'tenses',
+        'Agreement of tenses',
+        p(
+          'When the introducing verb is in the **past** (*il a dit, elle demandait*), the tenses of the original sentence shift back one step. If the introducing verb is in the present, nothing changes.',
+        ),
+        table(
+          'Shifts after a past verb of saying.',
+          ['Direct speech', 'Reported speech'],
+          [
+            ['présent', 'imparfait'],
+            ['passé composé', 'plus-que-parfait'],
+            ['futur simple', 'conditionnel présent'],
+            ['futur proche (je vais partir)', 'aller à l’imparfait (il allait partir)'],
+          ],
+        ),
+        table(
+          'Time words shift too.',
+          ['Direct', 'Reported (in the past)'],
+          [
+            ['demain', 'le lendemain'],
+            ['hier', 'la veille'],
+            ['aujourd’hui', 'ce jour-là'],
+            ['maintenant', 'à ce moment-là'],
+            ['la semaine prochaine', 'la semaine suivante'],
+          ],
+        ),
+        examples(
+          ['Il a dit : « Je viendrai demain. »', 'He said: “I will come tomorrow.”'],
+          ['Il a dit qu’il viendrait le lendemain.', 'He said that he would come the next day.'],
+          ['Elle a demandé si nous avions fini.', 'She asked whether we had finished.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il a dit qu’il viendra demain.  ✓ Il a dit qu’il viendrait le lendemain.',
+          '✗ Elle a demandé que j’avais faim.  ✓ Elle a demandé si j’avais faim.',
+        ),
+      ),
+    ],
+    related: ['fr-b12-inversion', 'fr-b12-past-hypotheses'],
+    sources: [S.discoursIndirect, S.concordance],
+  },
+  {
+    id: 'fr-b12-inversion',
+    title: 'Formal questions',
+    tagline: 'Où habitez-vous ? Pourriez-vous… ?',
+    level: LEVEL,
+    summary:
+      'Formal French questions invert the verb and the subject pronoun and join them with a hyphen. A noun subject stays in front and is repeated by a pronoun. A -t- separates two vowels. Inversion is common in writing, at offices and in polite requests.',
+    sections: [
+      section(
+        'form',
+        'How to invert',
+        table(
+          'Three ways to ask the same question.',
+          ['Style', 'Example'],
+          [
+            ['Intonation (everyday)', 'Vous habitez où ?'],
+            ['Est-ce que (neutral)', 'Où est-ce que vous habitez ?'],
+            ['Inversion (formal)', 'Où habitez-vous ?'],
+          ],
+        ),
+        p(
+          'Put the **verb first** and the **pronoun after it**, with a **hyphen**: *Parlez-vous français ? Avez-vous votre passeport ?* In a compound tense only the **auxiliary** is inverted: *Avez-vous décidé ?*',
+        ),
+      ),
+      section(
+        'details',
+        'Nouns and -t-',
+        p(
+          'A **noun subject** is not inverted: it stays first and a pronoun is added: *Paul est-il arrivé ? Vos parents ont-ils répondu ?* When the verb ends in a vowel and the pronoun is il, elle or on, add **-t-**: *A-t-il répondu ? Parle-t-elle anglais ?*',
+        ),
+        tip(
+          'Polite requests',
+          'Pourriez-vous… ? and Auriez-vous… ? are the standard polite request forms in shops and offices. Je voudrais… is the polite statement.',
+        ),
+        examples(
+          ['Pourriez-vous m’indiquer le tarif ?', 'Could you tell me the price?'],
+          ['Quand votre collègue est-il arrivé ?', 'When did your colleague arrive?'],
+          ['A-t-elle déjà répondu ?', 'Has she already answered?'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Paul est arrivé-t-il ?  ✓ Paul est-il arrivé ?',
+          '✗ A il répondu ?  ✓ A-t-il répondu ?',
+        ),
+      ),
+    ],
+    related: ['fr-b12-reported-speech', 'fr-b12-conditional'],
+    sources: [S.discoursIndirect],
+  },
+  {
+    id: 'fr-b12-compound-relatives',
+    title: 'lequel, auquel, dont',
+    tagline: 'The method with which I study',
+    level: LEVEL,
+    summary:
+      'After a preposition, French uses lequel, laquelle, lesquels and lesquelles, which agree with the noun they replace. With à they combine into auquel, auxquels and auxquelles; with de they give duquel, desquels and desquelles, but dont usually replaces de + noun and also means “whose”.',
+    sections: [
+      section(
+        'forms',
+        'The forms',
+        table(
+          'Lequel and its contractions.',
+          [
+            'Combined with',
+            'Masculine singular',
+            'Feminine singular',
+            'Masculine plural',
+            'Feminine plural',
+          ],
+          [
+            ['preposition +', 'lequel', 'laquelle', 'lesquels', 'lesquelles'],
+            ['à +', 'auquel', 'à laquelle', 'auxquels', 'auxquelles'],
+            ['de +', 'duquel', 'de laquelle', 'desquels', 'desquelles'],
+          ],
+        ),
+        p(
+          'Use them after **any preposition** (*avec, dans, pour, sans, sur…*) for things: *La méthode avec laquelle j’étudie est efficace.* For people **qui** also works: *les amis avec qui je révise.*',
+        ),
+      ),
+      section(
+        'dont',
+        'Dont',
+        p(
+          '**Dont** replaces **de + noun** and links the clause to its antecedent: *le livre dont j’ai besoin* (avoir besoin **de** ce livre), *le sujet dont elle parle*. It also means **“whose”**: *l’étudiant dont le mémoire est prêt.* Dont is followed by the subject of its clause, never by a preposition.',
+        ),
+        examples(
+          ['Le professeur auquel j’ai écrit m’a répondu.', 'The teacher I wrote to answered me.'],
+          [
+            'Les examens auxquels je pense sont difficiles.',
+            'The exams I am thinking of are hard.',
+          ],
+          ['Voilà le livre dont j’ai besoin.', 'Here is the book I need.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Le livre que j’ai besoin.  ✓ Le livre dont j’ai besoin.',
+          '✗ Le cours que je participe.  ✓ Le cours auquel je participe.',
+          '✗ La salle dans lequel nous révisons.  ✓ La salle dans laquelle nous révisons.',
+        ),
+      ),
+    ],
+    related: ['fr-b12-prepositions', 'fr-interrogative-pronouns'],
+    sources: [S.relatif],
+  },
 ];

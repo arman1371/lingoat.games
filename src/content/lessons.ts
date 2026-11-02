@@ -1377,6 +1377,38 @@ export const LESSONS = {
       'En somme, nous sommes d’accord.',
     ],
   },
+  'fr-b12-indefinite': {
+    title: 'Indefinite pronouns',
+    rule: 'People: quelqu’un, personne, tout le monde, chacun. Things: quelque chose, rien, n’importe quoi. Amounts: plusieurs, certains, la plupart (des), aucun. Personne and rien go with ne: Personne n’a rien dit. With en: J’en ai vu plusieurs.',
+    examples: [
+      'Personne n’a protesté.',
+      'La plupart des gens respectent les règles.',
+      'Des affiches ? J’en ai vu plusieurs.',
+    ],
+  },
+  'fr-b12-reported-speech': {
+    title: 'Reported speech',
+    rule: 'After dire que, demander si and ce que, the words are reported without quotation marks. After a past verb of saying, shift the tenses: present → imparfait, passé composé → plus-que-parfait, future → conditional; demain → le lendemain, hier → la veille.',
+    examples: [
+      'Il a dit qu’il viendrait.',
+      'Elle a demandé si j’avais faim.',
+      'Il dit qu’il est fatigué.',
+    ],
+  },
+  'fr-b12-inversion': {
+    title: 'Formal questions',
+    rule: 'Formal questions invert the verb and the pronoun with a hyphen: Où habitez-vous ? Pourriez-vous m’aider ? A noun subject is repeated by a pronoun (Paul est-il arrivé ?), and -t- separates two vowels (A-t-il répondu ?).',
+    examples: ['Où habitez-vous ?', 'Pourriez-vous m’indiquer le tarif ?', 'A-t-il déjà répondu ?'],
+  },
+  'fr-b12-compound-relatives': {
+    title: 'lequel, auquel, dont',
+    rule: 'After a preposition use lequel, laquelle, lesquels, lesquelles (avec laquelle). With à they merge: auquel, auxquels, auxquelles. Dont replaces de + noun and also means “whose”: le livre dont j’ai besoin. For people qui is possible after a preposition.',
+    examples: [
+      'La méthode avec laquelle j’étudie.',
+      'Le cours auquel je participe.',
+      'Voilà le livre dont j’ai besoin.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
