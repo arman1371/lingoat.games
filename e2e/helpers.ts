@@ -13,6 +13,7 @@ import c11 from '../src/content/c1-1';
 import c21 from '../src/content/c2-1';
 import c22 from '../src/content/c2-2';
 import fr11 from '../src/content/fr-a1-1';
+import frc21 from '../src/content/fr-c2-1';
 import fr12 from '../src/content/fr-a1-2';
 import fr21 from '../src/content/fr-a2-1';
 import fr22 from '../src/content/fr-a2-2';
@@ -47,6 +48,7 @@ export const frenchActivities: Activity[] = [
   ...fr12.activities,
   ...fr21.activities,
   ...fr22.activities,
+  ...frc21.activities,
 ];
 
 /** Every vocabulary entry of every available German level. */

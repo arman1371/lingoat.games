@@ -361,6 +361,15 @@ export const TAGS = {
   'c22-prefix-verbs': { label: 'übersetzen or übersetzen?', group: 'grammar', emoji: '🔧' },
   'c22-passive-alternatives': { label: 'Replacing the passive', group: 'grammar', emoji: '🔀' },
   'c22-nuance-particles': { label: 'Nuance particles & adverbs', group: 'grammar', emoji: '🎚️' },
+  // topics – French C2.1
+  'fr-c21-registers': { label: 'Registers & nuance', group: 'topic', emoji: '🎚️' },
+  'fr-c21-humour': { label: 'Humour & irony', group: 'topic', emoji: '🎭' },
+  'fr-c21-narration': { label: 'Telling a story', group: 'topic', emoji: '📖' },
+  'fr-c21-mood': { label: 'Mood & reported speech', group: 'topic', emoji: '🗣️' },
+  'fr-c21-style': { label: 'Emphasis & written style', group: 'topic', emoji: '🔦' },
+  'fr-c21-institutions': { label: 'Institutions & politics', group: 'topic', emoji: '🏛️' },
+  'fr-c21-debate': { label: 'Debate & argument', group: 'topic', emoji: '🗨️' },
+  'fr-c21-logic': { label: 'Cause, result & concession', group: 'topic', emoji: '🔗' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },
@@ -398,6 +407,23 @@ export const TAGS = {
   'fr-demonstratives': { label: 'ce, cet, cette, ces', group: 'grammar', emoji: '👉' },
   'fr-futur-proche': { label: 'aller + infinitive', group: 'grammar', emoji: '🔮' },
   'fr-adjective-position': { label: 'un petit pull rouge', group: 'grammar', emoji: '↔️' },
+  // grammar points – French C2.1
+  'fr-c21-word-formation': {
+    label: 'Prefixes & suffixes (in-, dé-, sur-)',
+    group: 'grammar',
+    emoji: '🧱',
+  },
+  'fr-c21-wordplay': { label: 'Homophones & paronyms', group: 'grammar', emoji: '🔤' },
+  'fr-c21-passe-simple': { label: 'Passé simple & passé antérieur', group: 'grammar', emoji: '📜' },
+  'fr-c21-narrative-tenses': { label: 'Tenses of a story', group: 'grammar', emoji: '🎞️' },
+  'fr-c21-subjunctive': { label: 'The subjunctive', group: 'grammar', emoji: '🌫️' },
+  'fr-c21-reported-speech': { label: 'Reported speech', group: 'grammar', emoji: '💬' },
+  'fr-c21-emphasis': { label: 'Emphasis (c’est … qui)', group: 'grammar', emoji: '🔦' },
+  'fr-c21-nominalisation': { label: 'Nominalisation', group: 'grammar', emoji: '🗞️' },
+  'fr-c21-acronyms': { label: 'Acronyms & institution names', group: 'grammar', emoji: '🔤' },
+  'fr-c21-argument': { label: 'Structuring an argument', group: 'grammar', emoji: '🧭' },
+  'fr-c21-concession': { label: 'Concession & hypothesis', group: 'grammar', emoji: '⚖️' },
+  'fr-c21-cause-consequence': { label: 'Cause & consequence', group: 'grammar', emoji: '🔗' },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
   // grammar points – French A2.1, unit 1
