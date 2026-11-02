@@ -540,6 +540,36 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-futur-proche' },
     { topic: 'fr-adjective-position' },
   ],
+  // ---- French B2.2 ----------------------------------------------------------------------------
+  'fr-b2-2-actu': [
+    { topic: 'fr-b22-reported-speech', note: 'what the minister said, what the journalists asked' },
+    { topic: 'fr-b22-cleft', note: 'stressing the source or the culprit' },
+    { topic: 'fr-b22-relative-composed', note: 'the report she refers to' },
+  ],
+  'fr-b2-2-sante': [
+    { topic: 'fr-b22-subj-or-inf', note: 'advising, insisting, fearing, doubting' },
+    { topic: 'fr-b22-ne-expletif', note: 'après craindre que, avant que, à moins que' },
+  ],
+  'fr-b2-2-solidarite': [
+    { topic: 'fr-b22-passive', note: 'les repas sont servis, les familles ont été aidées' },
+    { topic: 'fr-b22-se-faire', note: 'il s’est fait voler son sac' },
+  ],
+  'fr-b2-2-justice': [
+    { topic: 'fr-b22-si-clauses', note: 'si on avait su, on aurait agi' },
+    { topic: 'fr-b22-condition', note: 'à condition que, à moins que, au cas où, sauf si' },
+  ],
+  'fr-b2-2-culture': [
+    { topic: 'fr-b22-superlative-subj', note: 'le plus beau film que j’aie vu' },
+    { topic: 'fr-b22-verb-prep', note: 'rêver de, s’intéresser à, y et en' },
+  ],
+  'fr-b2-2-science': [
+    { topic: 'fr-b22-cause', note: 'grâce à, à cause de, puisque, ce n’est pas que' },
+    { topic: 'fr-b22-consequence', note: 'si bien que, tellement … que, de façon que' },
+  ],
+  'fr-b2-2-economie': [
+    { topic: 'fr-b22-concession', note: 'bien que, même si, malgré, pourtant' },
+    { topic: 'fr-b22-comparison', note: 'plus … plus, de plus en plus, autant … que' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

@@ -1263,6 +1263,138 @@ export const LESSONS = {
     rule: 'Most adjectives follow the noun: une robe rouge, un pull noir. A few short, common ones go before it: petit, grand, beau, joli, jeune, bon. Colours and nationalities always come after. With both: une petite robe rouge.',
     examples: ['Un pull rouge.', 'Une petite robe.', 'Un grand manteau noir.'],
   },
+  // ---- French B2.2 -------------------------------------------------------------------------
+  'fr-b22-reported-speech': {
+    title: 'Reported speech',
+    rule: 'After a past verb of saying (a dit, a annoncé) tenses shift back: présent → imparfait, passé composé → plus-que-parfait, futur → conditionnel. Time words change too: demain → le lendemain, hier → la veille. After a present verb nothing shifts. A yes/no question uses si.',
+    examples: [
+      '« Je suis fatiguée. » → Elle a dit qu’elle était fatiguée.',
+      '« Je partirai demain. » → Il a dit qu’il partirait le lendemain.',
+      '« Tu as lu l’article ? » → Elle a demandé si j’avais lu l’article.',
+    ],
+  },
+  'fr-b22-cleft': {
+    title: 'c’est … qui / que',
+    rule: 'To stress one part of a sentence, frame it with c’est … qui (the stressed word is the subject) or c’est … que (an object, a time or a place). To stress a whole clause use ce qui, ce que or ce dont, then c’est.',
+    examples: [
+      'C’est le journal qui a publié l’enquête.',
+      'C’est la veille que le ministre a démissionné.',
+      'Ce dont j’ai besoin, c’est d’un démenti.',
+    ],
+  },
+  'fr-b22-relative-composed': {
+    title: 'lequel, auquel, duquel',
+    rule: 'After a preposition other than de, a thing is replaced by lequel, laquelle, lesquels or lesquelles, matching the noun. À and de contract with the masculine and plural forms: auquel, auxquels, duquel, desquels. For people, qui is usual: la collègue avec qui je travaille.',
+    examples: [
+      'Voici l’article sur lequel elle a travaillé.',
+      'Le rapport auquel elle fait référence est faux.',
+      'Les raisons pour lesquelles il a menti.',
+    ],
+  },
+  'fr-b22-subj-or-inf': {
+    title: 'Subjunctive or infinitive?',
+    rule: 'Will, necessity, feeling and doubt (vouloir que, il faut que, craindre que, douter que) take the subjunctive. If both verbs have the same subject, use the infinitive instead: je veux partir, not je veux que je parte. Belief and certainty (penser que, savoir que) take the indicative.',
+    examples: [
+      'Il faut que tu dormes huit heures.',
+      'Je veux me coucher plus tôt.',
+      'Je ne pense pas qu’il ait raison.',
+    ],
+  },
+  'fr-b22-ne-expletif': {
+    title: 'The ne explétif',
+    rule: 'After verbs of fear (craindre que, avoir peur que), avant que, à moins que, de peur que and comparatives, careful French can add a ne that is not a negation: Je crains qu’il ne pleuve means I fear it will rain. Do not translate it as not; a real negation still needs pas.',
+    examples: [
+      'Je crains qu’elle ne soit malade.',
+      'Partons avant qu’il ne pleuve.',
+      'Je crains qu’il ne vienne pas. → real negation',
+    ],
+  },
+  'fr-b22-passive': {
+    title: 'The passive voice',
+    rule: 'Passive = être (in the tense of the active verb) + past participle, which agrees with the subject. The agent is introduced by par; de is used for states and feelings (entouré de, aimé de). Les familles ont été aidées par l’association.',
+    examples: [
+      'Les repas sont servis à 19 h.',
+      'La loi a été votée à l’unanimité.',
+      'Elle est respectée de tous.',
+    ],
+  },
+  'fr-b22-se-faire': {
+    title: 'se faire + infinitive',
+    rule: 'Se faire + infinitive says that something happens to the subject, usually something unwelcome: Il s’est fait voler son sac. Fait stays invariable and the verb after it is an infinitive. A thing can also be the subject of a pronominal passive: Ce vin se boit frais.',
+    examples: [
+      'Elle s’est fait licencier.',
+      'Ils se sont fait aider par une voisine.',
+      'Le riz se vend en vrac.',
+    ],
+  },
+  'fr-b22-si-clauses': {
+    title: 'Si clauses',
+    rule: 'Si never takes the conditional. Real possibility: si + présent → futur (Si tu viens, je serai content). Unreal present: si + imparfait → conditionnel (Si j’étais juge, je ferais autrement). Unreal past: si + plus-que-parfait → conditionnel passé (Si j’avais su, je serais venu).',
+    examples: [
+      'Si tu portes plainte, il paiera.',
+      'Si j’avais le temps, je viendrais.',
+      'S’il avait menti, il aurait été condamné.',
+    ],
+  },
+  'fr-b22-condition': {
+    title: 'Conditions: à condition que, au cas où',
+    rule: 'À condition que, à moins que, pourvu que and pour peu que take the subjunctive. Au cas où and dans l’hypothèse où take the conditional. Sauf si, même si and si take the indicative. Je signe à condition que vous lisiez le texte.',
+    examples: [
+      'Je viens, à moins que tu ne préfères rester.',
+      'Prends un parapluie au cas où il pleuvrait.',
+      'Il gagnera, sauf si le tribunal annule tout.',
+    ],
+  },
+  'fr-b22-superlative-subj': {
+    title: 'Subjunctive after superlatives',
+    rule: 'In careful French a relative clause after a superlative (le plus beau…), le seul, l’unique, le premier, le dernier, or after personne, rien, aucun takes the subjunctive: C’est le plus beau film que j’aie vu. A plain certainty (je sais que, il est certain que) keeps the indicative.',
+    examples: [
+      'C’est le seul peintre que je connaisse.',
+      'Il n’y a personne qui puisse le remplacer.',
+      'Je suis sûr qu’elle est la meilleure.',
+    ],
+  },
+  'fr-b22-verb-prep': {
+    title: 'Verbs with à / de, y and en',
+    rule: 'Many verbs need à (s’intéresser à, assister à, participer à, penser à) or de (parler de, rêver de, s’inspirer de, se souvenir de). Other verbs take their object directly (regarder, écouter, critiquer). A thing introduced by à is replaced by y, a thing introduced by de by en.',
+    examples: ['Je m’y intéresse.', 'Il en parle souvent.', 'Elle rêve de réaliser un film.'],
+  },
+  'fr-b22-cause': {
+    title: 'Expressing cause',
+    rule: 'Parce que, puisque (known cause), comme, étant donné que, du fait que and sous prétexte que take the indicative; ce n’est pas que and non que take the subjunctive. Before a noun: grâce à (favourable), à cause de (unwelcome), en raison de (formal). Grâce à ses efforts, il a réussi.',
+    examples: [
+      'Puisque tu es là, aide-moi.',
+      'Le vol est annulé à cause du brouillard.',
+      'Ce n’est pas qu’il soit paresseux.',
+    ],
+  },
+  'fr-b22-consequence': {
+    title: 'Consequence and aim',
+    rule: 'A real result takes the indicative: donc, par conséquent, c’est pourquoi, si bien que, tellement … que, tant de … que. An aim takes the subjunctive: de façon que, de sorte que. Il a tant travaillé qu’il est épuisé. Explique-le de façon que tous comprennent.',
+    examples: [
+      'Il y a tant d’erreurs que l’étude est retirée.',
+      'Le budget baisse, donc la recherche ralentit.',
+      'Parlez de sorte que chacun vous entende.',
+    ],
+  },
+  'fr-b22-concession': {
+    title: 'Contrast and concession',
+    rule: 'Bien que, quoique, sans que take the subjunctive. Même si, alors que, tandis que take the indicative. Malgré and en dépit de take a noun. Avoir beau takes an infinitive: Il a beau essayer, il échoue. Certes … mais and pourtant also mark a contrast.',
+    examples: [
+      'Bien qu’il soit cher, il se vend bien.',
+      'Même si les prix montent, nous continuons.',
+      'Malgré la crise, les ventes progressent.',
+    ],
+  },
+  'fr-b22-comparison': {
+    title: 'Comparing',
+    rule: 'Plus / moins / aussi + adjective or adverb + que; plus de / moins de / autant de + noun + que. Bon → meilleur, bien → mieux. Plus … plus (proportion), de plus en plus (progression), d’autant plus … que (all the more as). Plus on dépense, moins on épargne.',
+    examples: [
+      'Elle gagne autant que moi.',
+      'De plus en plus de gens achètent d’occasion.',
+      'Il travaille mieux que moi.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',
