@@ -177,4 +177,18 @@ export const FR_SOURCES = {
   connectors: wp('Connecteur_logique_(linguistique)', 'Connecteur logique (linguistique)'),
   debate: wp('Débat', 'Débat'),
   deSorteQue: wiktionary('de_sorte_que', 'de sorte que'),
+  // C2.2
+  participle: wp('Participe_présent', 'Participe présent'),
+  adjectifVerbal: wp('Adjectif_verbal', 'Adjectif verbal'),
+  conditionalFr: wp('Conditionnel_en_français', 'Conditionnel en français'),
+  infinitivePast: wp('Infinitif_passé', 'Infinitif passé'),
+  agreement: wp('Accord_(grammaire)', 'Accord (grammaire)'),
+  plupart: wiktionary('plupart', 'plupart'),
+  tout: wiktionary('tout', 'tout'),
+  figures: wp('Figure_de_style', 'Figure de style'),
+  proverb: wp('Proverbe', 'Proverbe'),
+  pastParticipleAgreement: wp(
+    'Accord_du_participe_passé_en_français',
+    'Accord du participe passé en français',
+  ),
 } as const satisfies Record<string, Source>;

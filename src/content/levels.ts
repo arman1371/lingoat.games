@@ -2,15 +2,7 @@ import { DEFAULT_LANGUAGE, type LanguageId } from './languages';
 import type { LevelMeta } from './schema';
 
 /** French is on its way: A1.1 is the pilot, the other CEFR half-levels are listed without content. */
-const FRENCH_COMING_SOON: LevelMeta[] = [['c2-2', 'C2.2', 'Mastery, second half']].map(
-  ([id, title, subtitle]) => ({
-    language: 'fr',
-    id: `fr-${id}`,
-    title: title!,
-    subtitle: subtitle!,
-    status: 'coming-soon',
-  }),
-);
+const FRENCH_COMING_SOON: LevelMeta[] = [];
 
 /** CEFR order of the French levels, so a level that becomes available stays in its place. */
 const FRENCH_ORDER = [
@@ -129,6 +121,15 @@ const FRENCH_LEVELS: LevelMeta[] = (
       load: () => import('./fr-c1-1'),
     },
     ...FRENCH_COMING_SOON,
+    {
+      language: 'fr',
+      id: 'fr-c2-2',
+      title: 'C2.2',
+      subtitle:
+        'Arts, literature, cinema, heritage, law, media, civic engagement, climate, proverbs and figures of style at near-native level',
+      status: 'available',
+      load: () => import('./fr-c2-2'),
+    },
   ] satisfies LevelMeta[]
 ).sort((a, b) => FRENCH_ORDER.indexOf(a.id) - FRENCH_ORDER.indexOf(b.id));
 
