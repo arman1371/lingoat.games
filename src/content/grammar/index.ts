@@ -12,6 +12,9 @@ import { C21_TOPICS } from './c2-1';
 import { C22_TOPICS } from './c2-2';
 import { FR11_TOPICS } from './fr-a1-1';
 import { FR11_TOPICS_B } from './fr-a1-1-b';
+import { FR22B_TOPICS } from './fr-b2-2';
+import { FR22B_TOPICS_B } from './fr-b2-2-b';
+import { FR22B_TOPICS_C } from './fr-b2-2-c';
 import { FR_B11_TOPICS } from './fr-b1-1';
 import { FRC21_TOPICS } from './fr-c2-1';
 import { FR12_TOPICS } from './fr-a1-2';
@@ -42,6 +45,9 @@ export const GRAMMAR_TOPICS: readonly GrammarTopic[] = [
   ...C22_TOPICS,
   ...FR11_TOPICS,
   ...FR11_TOPICS_B,
+  ...FR22B_TOPICS,
+  ...FR22B_TOPICS_B,
+  ...FR22B_TOPICS_C,
   ...FRC21_TOPICS,
   ...FR12_TOPICS,
   ...FR21_TOPICS,

@@ -226,6 +226,38 @@ imperative of être and avoir, the negation of the near future, the chez + perso
 Wiktionnaire conjugation pages were checked for prendre, vouloir and finir; the other verb tables come from the
 generated forms in `src/lib/french`.
 
+## French B2.2 (25 topics)
+
+The lessons are in `src/content/grammar/fr-b2-2.ts`, `fr-b2-2-b.ts` (units 2 to 6) and `fr-b2-2-c.ts` (units 7 to 12); the
+pages are in `sources-fr.ts`. The pages were checked to exist (HTTP 200); several pages the content tool returned for
+a neighbouring article were not usable, so the rules below were written from common textbook teaching and the pages serve
+as references for the reader.
+
+| Topic                                          | Pages                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reported speech                                | [Discours indirect](https://fr.wikipedia.org/wiki/Discours_indirect)                                                                                                                                                                                                                                                              |
+| c’est … qui / que                              | [Phrase clivée](https://fr.wikipedia.org/wiki/Phrase_cliv%C3%A9e)                                                                                                                                                                                                                                                                 |
+| lequel, auquel, duquel                         | Wiktionnaire [lequel](https://fr.wiktionary.org/wiki/lequel)                                                                                                                                                                                                                                                                      |
+| Subjunctive or infinitive; ne explétif         | [Subjonctif en français](https://fr.wikipedia.org/wiki/Subjonctif_en_fran%C3%A7ais)                                                                                                                                                                                                                                               |
+| Passive; se faire + infinitive                 | [Voix passive](https://fr.wikipedia.org/wiki/Voix_passive), [Voix pronominale](https://fr.wikipedia.org/wiki/Voix_pronominale)                                                                                                                                                                                                    |
+| Si clauses; condition connectors               | [Phrase conditionnelle](https://fr.wikipedia.org/wiki/Phrase_conditionnelle), [Conditionnel](https://fr.wikipedia.org/wiki/Conditionnel), [Conditionnel passé](https://fr.wikipedia.org/wiki/Conditionnel_pass%C3%A9), [Plus-que-parfait](https://fr.wikipedia.org/wiki/Plus-que-parfait)                                         |
+| Subjunctive after superlatives; verbs + à / de | [Subjonctif en français](https://fr.wikipedia.org/wiki/Subjonctif_en_fran%C3%A7ais), [Préposition](https://fr.wikipedia.org/wiki/Pr%C3%A9position), [Pronom personnel](https://fr.wikipedia.org/wiki/Pronom_personnel)                                                                                                            |
+| Cause; consequence and aim                     | [Proposition subordonnée circonstancielle](https://fr.wikipedia.org/wiki/Proposition_subordonn%C3%A9e_circonstancielle), [Connecteur logique](https://fr.wikipedia.org/wiki/Connecteur_logique)                                                                                                                                   |
+| Concession; comparison                         | same adverbial-clause and connector pages, [Comparatif](https://fr.wikipedia.org/wiki/Comparatif), [Superlatif](https://fr.wikipedia.org/wiki/Superlatif)                                                                                                                                                                         |
+| Passé simple; narrative tenses                 | [Passé simple](https://fr.wikipedia.org/wiki/Pass%C3%A9_simple), [Plus-que-parfait](https://fr.wikipedia.org/wiki/Plus-que-parfait)                                                                                                                                                                                               |
+| Participle agreement; gérondif and -ant forms  | [Accord du participe passé en français](https://fr.wikipedia.org/wiki/Accord_du_participe_pass%C3%A9_en_fran%C3%A7ais), [Participe passé](https://fr.wikipedia.org/wiki/Participe_pass%C3%A9), [Participe présent](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent), [Gérondif](https://fr.wikipedia.org/wiki/G%C3%A9rondif) |
+| Purpose; conditionnel passé                    | adverbial-clause page, [Subjonctif en français](https://fr.wikipedia.org/wiki/Subjonctif_en_fran%C3%A7ais), [Conditionnel passé](https://fr.wikipedia.org/wiki/Conditionnel_pass%C3%A9)                                                                                                                                           |
+| Time connectors; futur antérieur               | adverbial-clause and connector pages, [Plus-que-parfait](https://fr.wikipedia.org/wiki/Plus-que-parfait)                                                                                                                                                                                                                          |
+| Logical connectors; register                   | [Connecteur logique](https://fr.wikipedia.org/wiki/Connecteur_logique), [Registre de langue](https://fr.wikipedia.org/wiki/Registre_de_langue)                                                                                                                                                                                    |
+
+**French B2.2 limits:** the pages do not state every rule. These follow common textbook teaching and are **not** checked
+against a fetched page: the questions in reported speech (si, ce que, ce qui), the list of introducing verbs and their
+nuances, the shift of the time words, the pseudo-cleft sentences with ce qui / ce que / ce dont, the use of qui instead of
+a composed pronoun for people, the mood after superlatives and negative antecedents (subjunctive in careful French,
+indicative in everyday use), après que + indicative, the distinction par / de after a passive, the choice of avoir beau +
+infinitive, the passé simple endings, the spelling differences of the adjectifs verbaux (convaincant, fatigant …), the
+futur antérieur as a guess about the past and the examples of familiar, standard and formal vocabulary.
+
 ## French A1.2 (5 topics so far)
 
 The lessons are in `src/content/grammar/fr-a1-2.ts`, the pages in `sources-fr-a1-2.ts`. Verb tables use

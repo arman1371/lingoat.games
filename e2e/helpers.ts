@@ -17,6 +17,7 @@ import frc21 from '../src/content/fr-c2-1';
 import fr12 from '../src/content/fr-a1-2';
 import fr21 from '../src/content/fr-a2-1';
 import fr22 from '../src/content/fr-a2-2';
+import frb22 from '../src/content/fr-b2-2';
 import frB21 from '../src/content/fr-b2-1';
 import frB11 from '../src/content/fr-b1-1';
 import frB12 from '../src/content/fr-b1-2';
@@ -51,6 +52,7 @@ export const frenchActivities: Activity[] = [
   ...fr12.activities,
   ...fr21.activities,
   ...fr22.activities,
+  ...frb22.activities,
   ...frB21.activities,
   ...frB11.activities,
   ...frB12.activities,
