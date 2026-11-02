@@ -55,3 +55,30 @@ like the German units. Vocabulary cards of one unit are not repeated in another.
 
 Open points: French nouns carry their article inside the word ("le pain", "l'eau"), because the `article` field
 is German-only (der / die / das); the field that holds the target-language text is still named `de`.
+
+## Cross-check against a DELF A1 curriculum overview
+
+Arman supplied a three-page "Curriculum overview for DELF A1" from a language school
+([PDF](https://www.dyplus.com.ng/wp-content/uploads/2020/08/Updated-Curriculum-For-DELF-A1.pdf)), read on 2026-11-02.
+It is a school's teaching plan, **not** the official DELF référentiel (the France Éducation international page is
+bot-blocked and the Council of Europe pages return 403), and it spreads all of A1 over nine units, so the later
+units belong to A1.2. Result for A1.1:
+
+| Topic in the overview                                                          | Status in A1.1                                                                      |
+| ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| greetings, introducing oneself, être / s'appeler, countries and nationalities  | covered: units 1 and 2                                                              |
+| numbers to 99, alphabet, days and months, time, weather                        | covered: units 3 and 8                                                              |
+| articles, avoir, possessives, regular -er verbs, negation, quel, likes         | covered: units 2 to 5                                                               |
+| place in town, giving directions, faire, near future, imperative, on = we      | covered: units 5, 7 and 8                                                           |
+| professions and gender, describing someone, family, colours                    | covered: units 2, 4 and 8                                                           |
+| buying and selling, restaurant menu, quantities (pas de, assez / trop de), -ir | covered: unit 6                                                                     |
+| devoir, pouvoir + infinitive, il faut + infinitive                             | **gap**: vouloir only; no unit teaches devoir, pouvoir or il faut                   |
+| prepositions with countries (en France, au Canada, aux États-Unis)             | **thin**: only a tip in the "au, aux, du, des" lesson, no game                      |
+| tonic pronouns (moi, toi, lui …)                                               | **thin**: only "moi non plus" in unit 5                                             |
+| the verb dire, making an appointment                                           | **gap**: appointment only as a plan in the unit 8 dialogue                          |
+| pronominal verbs, passé composé, avoir mal à, recent past                      | not A1.1: belong to French A1.2 (daily routine, health), as in the overview's units |
+| pronunciation (liaison, nasal vowels, eu / œu, s as [s] or [z])                | **gap**: the app has listening games but no pronunciation lessons                   |
+
+Suggested follow-up for the French A1.2 thread: devoir / pouvoir / il faut and the tonic pronouns are the A1.1 items
+the overview teaches early, so they fit in its first units. Direct and indirect object pronouns, relative qui / que,
+en, comparatives and the imparfait in the overview are A2 material for this app.
