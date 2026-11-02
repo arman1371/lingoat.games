@@ -581,6 +581,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     },
     { topic: 'fr-b22-present-participle', note: 'en créant, habitant, accueillante' },
   ],
+  'fr-b2-2-societe': [
+    { topic: 'fr-b22-purpose', note: 'pour que, afin de, de peur que' },
+    { topic: 'fr-b22-conditional-past', note: 'regret, reproche, information non confirmée' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

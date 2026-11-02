@@ -1,4 +1,4 @@
-import { compare, mistake, p, section, table, tip } from './build';
+import { compare, examples, mistake, p, section, table, tip } from './build';
 import type { GrammarTopic } from './schema';
 import { FR_SOURCES as S } from './sources-fr';
 
@@ -326,5 +326,102 @@ export const FR22B_TOPICS_C: GrammarTopic[] = [
     ],
     related: ['fr-b22-participle-agreement'],
     sources: [S.presentParticiple, S.gerund],
+  },
+  {
+    id: 'fr-b22-purpose',
+    title: 'Expressing purpose',
+    tagline: 'pour que · afin que · afin de · de peur que',
+    level: LEVEL,
+    summary:
+      'Purpose answers pourquoi in the sense of what for. With two subjects it takes que + subjunctive (pour que, afin que, de peur que). With one subject French uses the infinitive (pour, afin de, de peur de).',
+    sections: [
+      section(
+        'forms',
+        'Subjunctive or infinitive',
+        table(
+          'Purpose connectors.',
+          ['Same subject → infinitive', 'Different subjects → subjunctive', 'Meaning'],
+          [
+            ['pour, afin de', 'pour que, afin que', 'so that, in order to'],
+            ['dans le but de, en vue de', 'dans le but que, de façon que', 'with the aim of'],
+            ['de peur de, de crainte de', 'de peur que (+ ne), de crainte que', 'for fear of'],
+          ],
+        ),
+        examples(
+          ['Il milite pour que chacun soit entendu.', 'He campaigns so that everyone is heard.'],
+          [
+            'Elle s’engage afin de défendre les plus faibles.',
+            'She gets involved to defend the weakest.',
+          ],
+          [
+            'Il parle bas de peur qu’on ne l’entende.',
+            'He speaks low for fear of being overheard.',
+          ],
+        ),
+      ),
+      section(
+        'traps',
+        'Frequent mistakes',
+        mistake(
+          'Watch out',
+          '✗ Je viens pour que je t’aide.  ✓ Je viens pour t’aider.',
+          '✗ Pour que tout le monde est d’accord.  ✓ Pour que tout le monde soit d’accord.',
+        ),
+        tip(
+          'Cause or purpose?',
+          'Parce que tells why something happened (a cause, indicative). Pour que tells what it is done for (a purpose, subjunctive).',
+        ),
+      ),
+    ],
+    related: ['fr-b22-conditional-past', 'fr-b22-consequence'],
+    sources: [S.subordinateAdverbial, S.subjunctive],
+  },
+  {
+    id: 'fr-b22-conditional-past',
+    title: 'The conditionnel passé',
+    tagline: 'J’aurais dû · il aurait démissionné',
+    level: LEVEL,
+    summary:
+      'The conditionnel passé (aurais / serais + participle) expresses regret and reproach, the result of an unreal past condition, and reported news that is not confirmed.',
+    sections: [
+      section(
+        'forms',
+        'Forms and uses',
+        table(
+          'Three main uses.',
+          ['Use', 'Example', 'Meaning'],
+          [
+            ['regret, reproach', 'J’aurais dû t’écouter.', 'I should have listened to you.'],
+            [
+              'unreal past result',
+              'Si j’avais su, je serais venu.',
+              'If I had known, I would have come.',
+            ],
+            [
+              'unconfirmed news',
+              'Le ministre aurait démissionné.',
+              'The minister has reportedly resigned.',
+            ],
+          ],
+        ),
+        p(
+          'It is built with the **conditionnel** of *avoir* or *être* plus the **past participle**: *j’aurais fait*, *elle serait partie*, *ils auraient été informés*. The same rules decide the auxiliary and the agreement as in the passé composé.',
+        ),
+      ),
+      section(
+        'press',
+        'Press and prudence',
+        p(
+          'Journalists use the conditionnel passé to report **something not yet verified**: *Deux personnes auraient été blessées*. The present conditional does the same for present or future facts: *Le ministre démissionnerait*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ J’avais dû t’écouter (for a regret).  ✓ J’aurais dû t’écouter.',
+          '✗ Si j’aurais su, je serais venu.  ✓ Si j’avais su, je serais venu.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-si-clauses', 'fr-b22-purpose'],
+    sources: [S.conditionalPast, S.conditional],
   },
 ];

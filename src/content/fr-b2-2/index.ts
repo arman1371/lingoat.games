@@ -8,8 +8,20 @@ import { science } from './u6-science';
 import { economie } from './u7-economie';
 import { histoire } from './u8-histoire';
 import { territoire } from './u9-territoire';
+import { societe } from './u10-societe';
 
-const units = [actu, sante, solidarite, justice, culture, science, economie, histoire, territoire];
+const units = [
+  actu,
+  sante,
+  solidarite,
+  justice,
+  culture,
+  science,
+  economie,
+  histoire,
+  territoire,
+  societe,
+];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

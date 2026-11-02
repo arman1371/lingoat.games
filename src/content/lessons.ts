@@ -1431,6 +1431,24 @@ export const LESSONS = {
       'Une ville accueillante.',
     ],
   },
+  'fr-b22-purpose': {
+    title: 'Expressing purpose',
+    rule: 'Pour que, afin que, de peur que and de crainte que take the subjunctive. When both verbs share the subject use the infinitive: pour, afin de, de peur de, dans le but de, en vue de. Il milite pour que chacun soit entendu. Elle s’engage afin de défendre les plus faibles.',
+    examples: [
+      'Parle fort pour qu’on t’entende.',
+      'Il vient afin de t’aider.',
+      'Elle se tait de peur d’être critiquée.',
+    ],
+  },
+  'fr-b22-conditional-past': {
+    title: 'The conditionnel passé',
+    rule: 'Conditionnel passé = conditionnel of avoir / être + past participle (j’aurais dû, elle serait venue). It expresses regret or reproach (Tu aurais pu appeler), the result of an unreal past condition (Si j’avais su, je serais venu) and news that is reported but not confirmed (Il aurait démissionné).',
+    examples: [
+      'J’aurais dû t’écouter.',
+      'Deux personnes auraient été blessées.',
+      'Sans lui, nous n’aurions pas réussi.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',

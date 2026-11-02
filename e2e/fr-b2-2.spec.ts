@@ -98,6 +98,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (-ant forms)', 'fr-b2-2-territoire-gap-ant'],
   ['sort it (-ant forms)', 'fr-b2-2-territoire-sort-ant'],
   ['dialogue (unit 9)', 'fr-b2-2-territoire-dialogues'],
+  // unit 10
+  ['flashcards (unit 10)', 'fr-b2-2-societe-flash-values'],
+  ['gap fill (purpose)', 'fr-b2-2-societe-gap-purpose'],
+  ['gap fill (conditionnel passé)', 'fr-b2-2-societe-gap-conditional-past'],
+  ['sort it (purpose)', 'fr-b2-2-societe-sort-purpose'],
+  ['conjugation (conditionnel passé)', 'fr-b2-2-societe-conj-conditional-past'],
+  ['dialogue (unit 10)', 'fr-b2-2-societe-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {

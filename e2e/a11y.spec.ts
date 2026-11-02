@@ -66,6 +66,7 @@ const PAGES: [string, string, string][] = [
   ],
   ['unit 8 B2.2 in French', '/fr/levels/fr-b2-2/units/fr-b2-2-histoire', 'Histoire et mémoire'],
   ['unit 9 B2.2 in French', '/fr/levels/fr-b2-2/units/fr-b2-2-territoire', 'Villes et territoires'],
+  ['unit 10 B2.2 in French', '/fr/levels/fr-b2-2/units/fr-b2-2-societe', 'Société et valeurs'],
   ['level', '/levels/a1-1', 'A1.1'],
   ['unit', '/levels/a1-1/units/a1-1-hallo', 'Hallo & Tschüss'],
   ['level A1.2', '/levels/a1-2', 'A1.2'],

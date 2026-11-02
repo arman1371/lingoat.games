@@ -444,6 +444,9 @@ export const TAGS = {
     group: 'grammar',
     emoji: '➡️',
   },
+  'fr-b22-society': { label: 'Society & values', group: 'topic', emoji: '🗳️' },
+  'fr-b22-purpose': { label: 'Expressing purpose', group: 'grammar', emoji: '🎯' },
+  'fr-b22-conditional-past': { label: 'The conditionnel passé', group: 'grammar', emoji: '⏮️' },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
   // grammar points – French A2.1, unit 1
