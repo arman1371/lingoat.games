@@ -693,7 +693,7 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
         'Comparative and superlative',
         table(
           'Degrees of comparison.',
-          ['', 'Adjective / adverb', 'Noun'],
+          ['Degree', 'Adjective / adverb', 'Noun'],
           [
             ['more', 'plus cher que', 'plus de bruit que'],
             ['less', 'moins cher que', 'moins de bruit que'],
