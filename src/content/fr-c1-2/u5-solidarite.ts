@@ -49,7 +49,7 @@ const vocab = vocabList(U, 'Solidarité et engagement', [
   ['le réfugié', 'refugee', '🧳'],
   ['l’accueil', 'welcome, reception', '🚪'],
   ['accueillir', 'to welcome, to take in', '🏠'],
-  ['l’hébergement', 'accommodation, shelter', '🛏️'],
+  ['le foyer d’accueil', 'shelter, hostel', '🛏️'],
   ['le mécénat', 'corporate sponsorship', '🏛️'],
   ['la cause', 'cause', '🎗️'],
   ['soutenir', 'to support', '💪'],

@@ -30,7 +30,7 @@ const vocab = vocabList(U, 'Climat et transition écologique', [
   ['la transition écologique', 'ecological transition', '🔄'],
   ['les énergies renouvelables', 'renewable energy', '♻️'],
   ['l’éolienne', 'wind turbine', '🌬️'],
-  ['le panneau solaire', 'solar panel', '☀️'],
+  ['la centrale solaire', 'solar power plant', '☀️'],
   ['la sobriété énergétique', 'energy frugality', '💡'],
   ['le gaspillage', 'waste (of food or resources)', '🗑️'],
   ['le tri sélectif', 'sorting of waste for recycling', '🚮'],

@@ -50,7 +50,7 @@ const vocab = vocabList(U, 'Histoire et mémoire', [
   ['les archives', 'archives', '🗄️'],
   ['le témoignage', 'testimony, eyewitness account', '🗣️'],
   ['le patrimoine', 'heritage', '🏛️'],
-  ['le monument', 'monument', '🗼'],
+  ['le vestige', 'ruin, relic', '🗼'],
   ['la mémoire collective', 'collective memory', '🧠'],
   ['le devoir de mémoire', 'duty to remember', '🕯️'],
   ['commémorer', 'to commemorate', '🌹'],

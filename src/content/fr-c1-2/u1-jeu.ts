@@ -23,7 +23,7 @@ const games = vocabList(U, 'Jeux et paris', [
   ['le plateau', 'game board', '🗺️'],
   ['la partie', 'a game, one round', '⏱️'],
   ['la règle du jeu', 'rule of the game', '📜'],
-  ['tricher', 'to cheat', '🥷'],
+  ['frauder', 'to cheat (rules, taxes)', '🥷'],
   ['le tricheur', 'cheat', '🕵️'],
   ['perdre gros', 'to lose a lot of money', '📉'],
   ['le joueur', 'player, gambler', '🎮'],
@@ -63,7 +63,7 @@ const betting = byDe(
   'le gros lot',
   'le tirage au sort',
   'la machine à sous',
-  'tricher',
+  'frauder',
 );
 const memoryPairs = byDe(
   vocab,
