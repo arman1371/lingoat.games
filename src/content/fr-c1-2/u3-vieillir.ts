@@ -21,7 +21,7 @@ const vocab = vocabList(U, 'Vieillesse et retraite', [
   ['le vieillissement', 'ageing (of a population)', '⏳'],
   ['le troisième âge', 'old age, senior citizens', '👴'],
   ['la personne âgée', 'elderly person', '👵'],
-  ['la retraite', 'retirement', '🏖️'],
+  ['l’âge de la retraite', 'retirement age', '🎂'],
   ['le retraité', 'retired person', '🧑‍🦳'],
   ['la pension de retraite', 'retirement pension', '💶'],
   ['cotiser', 'to pay contributions', '🧾'],

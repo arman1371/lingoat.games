@@ -4,8 +4,9 @@ import { vieillir } from './u3-vieillir';
 import { sante } from './u4-sante';
 import { jeu } from './u1-jeu';
 import { solidarite } from './u5-solidarite';
+import { sport } from './u6-sport';
 
-const units = [jeu, famille, vieillir, sante, solidarite];
+const units = [jeu, famille, vieillir, sante, solidarite, sport];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

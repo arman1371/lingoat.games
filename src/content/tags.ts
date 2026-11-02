@@ -391,6 +391,14 @@ export const TAGS = {
   'fr-c12-solidarity': { label: 'Solidarity & volunteering', group: 'topic', emoji: '🤝' },
   'fr-c12-modalisation': { label: 'Modalisation', group: 'grammar', emoji: '🎚️' },
   'fr-c12-subjonctif-present': { label: 'Present subjunctive', group: 'grammar', emoji: '🟣' },
+  // unit 6
+  'fr-c12-sport': { label: 'Sport & competition', group: 'topic', emoji: '🏅' },
+  'fr-c12-but': { label: 'Expressing purpose', group: 'grammar', emoji: '🎯' },
+  'fr-c12-relatifs-composes': {
+    label: 'Compound relative pronouns',
+    group: 'grammar',
+    emoji: '🔗',
+  },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
   'fr-questions': { label: 'Questions (Comment …?)', group: 'grammar', emoji: '❓' },

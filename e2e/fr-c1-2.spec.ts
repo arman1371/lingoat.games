@@ -72,6 +72,22 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue (three scenes)', 'fr-c1-2-jeu-dialogues'],
   ['blitz', 'fr-c1-2-jeu-blitz'],
   ['quiz (unit challenge)', 'fr-c1-2-jeu-challenge'],
+  // units 2 to 6: a definitions quiz, a grammar game and the challenge each
+  ['quiz (definitions, family)', 'fr-c1-2-famille-quiz-definitions'],
+  ['sort it (registers)', 'fr-c1-2-famille-sort-register'],
+  ['quiz (family challenge)', 'fr-c1-2-famille-challenge'],
+  ['quiz (definitions, ageing)', 'fr-c1-2-vieillir-quiz-definitions'],
+  ['gap fill (pronouns)', 'fr-c1-2-vieillir-gap-pronouns'],
+  ['quiz (ageing challenge)', 'fr-c1-2-vieillir-challenge'],
+  ['quiz (definitions, health)', 'fr-c1-2-sante-quiz-definitions'],
+  ['conjugation (passé simple)', 'fr-c1-2-sante-conj-passe-simple'],
+  ['quiz (health challenge)', 'fr-c1-2-sante-challenge'],
+  ['quiz (definitions, solidarity)', 'fr-c1-2-solidarite-quiz-definitions'],
+  ['conjugation (subjunctive)', 'fr-c1-2-solidarite-conj-subjonctif'],
+  ['quiz (solidarity challenge)', 'fr-c1-2-solidarite-challenge'],
+  ['quiz (definitions, sport)', 'fr-c1-2-sport-quiz-definitions'],
+  ['sort it (relative pronouns)', 'fr-c1-2-sport-sort-relatifs'],
+  ['quiz (sport challenge)', 'fr-c1-2-sport-challenge'],
 ];
 
 test.describe('French C1.2 – playing the games', () => {

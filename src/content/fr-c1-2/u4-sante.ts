@@ -19,7 +19,7 @@ const U = 'fr-c1-2-sante';
 
 const vocab = vocabList(U, 'Santé et médecine', [
   ['la consultation', 'medical appointment', '🩺'],
-  ['le généraliste', 'general practitioner', '👨‍⚕️'],
+  ['le médecin traitant', 'registered family doctor', '👨‍⚕️'],
   ['le spécialiste', 'specialist', '🔬'],
   ['l’ordonnance', 'prescription', '📝'],
   ['le traitement', 'treatment', '💊'],
@@ -28,7 +28,7 @@ const vocab = vocabList(U, 'Santé et médecine', [
   ['le dépistage', 'screening test', '🧪'],
   ['l’intervention chirurgicale', 'surgical operation', '🛏️'],
   ['la rééducation', 'rehabilitation, physiotherapy', '🦵'],
-  ['les urgences', 'emergency room', '🚑'],
+  ['le service d’urgence', 'emergency department', '🚑'],
   ['le dossier médical', 'medical record', '🗂️'],
   ['le secret médical', 'medical confidentiality', '🤐'],
   ['la mutuelle', 'supplementary health insurance', '🪪'],
@@ -49,7 +49,7 @@ const vocab = vocabList(U, 'Santé et médecine', [
   ['l’essai clinique', 'clinical trial', '🧫'],
   ['le vaccin', 'vaccine', '💉'],
   ['l’épidémie', 'epidemic', '🦠'],
-  ['guérir', 'to heal, to recover', '🌈'],
+  ['se rétablir', 'to make a recovery', '🌈'],
   ['soulager', 'to relieve', '😌'],
   ['prescrire', 'to prescribe', '🖊️'],
   ['être en rémission', 'to be in remission', '🌤️'],

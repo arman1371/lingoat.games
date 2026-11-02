@@ -463,4 +463,105 @@ export const FRC12_TOPICS_B: GrammarTopic[] = [
     related: ['fr-c12-modalisation'],
     sources: [S.subjonctif],
   },
+  {
+    id: 'fr-c12-but',
+    title: 'Expressing purpose',
+    tagline: 'Say what you do something for',
+    level: LEVEL,
+    summary:
+      'To say why you do something, use pour or afin de with an infinitive when the subject stays the same. When the subject changes, use pour que or afin que with the subjunctive.',
+    sections: [
+      section(
+        'forms',
+        'Choosing the structure',
+        table(
+          'Purpose expressions.',
+          ['Situation', 'Structure', 'Example'],
+          [
+            [
+              'Same subject',
+              'pour / afin de / de façon à + infinitive',
+              'Elle s’entraîne pour gagner.',
+            ],
+            [
+              'New subject',
+              'pour que / afin que / de façon à ce que + subjunctive',
+              'On installe un écran pour que tous voient le match.',
+            ],
+            [
+              'Avoiding something',
+              'de peur que / de crainte que + subjunctive',
+              'Elle parle bas de peur que l’arbitre l’entende.',
+            ],
+          ],
+        ),
+        examples(
+          ['Il court afin de battre son record.', 'He runs to break his record.'],
+          ['Le coach crie pour que nous l’entendions.', 'The coach shouts so that we hear him.'],
+        ),
+      ),
+      section(
+        'register',
+        'Style and traps',
+        p(
+          '**Afin de / afin que** sound more formal than **pour / pour que**. Do not use pour que when the subject is the same: say *Je m’échauffe pour éviter une blessure*, not *pour que j’évite*. With **de peur que**, written French often adds a *ne* with no negative meaning: *de peur qu’il ne tombe*.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elle s’entraîne pour qu’elle gagne.  ✓ Elle s’entraîne pour gagner.',
+          '✗ Je parle pour que tu comprends.  ✓ Je parle pour que tu comprennes.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-subjonctif-present'],
+    sources: [S.subjonctif, S.proposition],
+  },
+  {
+    id: 'fr-c12-relatifs-composes',
+    title: 'Compound relative pronouns',
+    tagline: 'lequel, auquel, duquel and dont',
+    level: LEVEL,
+    summary:
+      'After a preposition, lequel and its forms take up a thing and agree with it. À and de contract with the plural and masculine forms. Dont replaces de + noun.',
+    sections: [
+      section(
+        'forms',
+        'The forms',
+        table(
+          'Compound relative pronouns.',
+          ['Form', 'Masc. sing.', 'Fem. sing.', 'Masc. pl.', 'Fem. pl.'],
+          [
+            ['basic', 'lequel', 'laquelle', 'lesquels', 'lesquelles'],
+            ['à +', 'auquel', 'à laquelle', 'auxquels', 'auxquelles'],
+            ['de +', 'duquel', 'de laquelle', 'desquels', 'desquelles'],
+          ],
+        ),
+        examples(
+          ['Le stade dans lequel ils jouent est neuf.', 'The stadium they play in is new.'],
+          [
+            'La compétition à laquelle elle participe commence.',
+            'The competition she takes part in starts.',
+          ],
+          [
+            'Le terrain à côté duquel nous campons est inondé.',
+            'The field next to which we are camping is flooded.',
+          ],
+        ),
+      ),
+      section(
+        'qui-dont',
+        'Persons and dont',
+        p(
+          'After a preposition a **person** is usually taken up by **qui**: *l’entraîneur avec qui je travaille*. **Dont** replaces **de + noun** for things and persons: *le sport dont je rêve* (rêver de), *le club dont il est membre* (membre de). But after a preposition of place such as *à côté de*, use **duquel**.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Le sport dont je rêve de.  ✓ Le sport dont je rêve.',
+          '✗ Les épreuves lesquelles elle participe.  ✓ Les épreuves auxquelles elle participe.',
+        ),
+      ),
+    ],
+    related: ['fr-c12-but'],
+    sources: [S.pronomRelatif],
+  },
 ];

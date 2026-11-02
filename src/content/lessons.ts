@@ -1160,6 +1160,24 @@ export const LESSONS = {
       'Je veux qu’elle vienne.',
     ],
   },
+  'fr-c12-but': {
+    title: 'Expressing purpose',
+    rule: 'Same subject: pour, afin de or de façon à + infinitive. New subject: pour que, afin que or de façon à ce que + subjunctive. De peur que (+ subjunctive) gives a purpose to avoid something.',
+    examples: [
+      'Elle s’entraîne pour gagner.',
+      'On installe un écran afin que tout le monde voie le match.',
+      'Elle parle bas de peur que l’arbitre l’entende.',
+    ],
+  },
+  'fr-c12-relatifs-composes': {
+    title: 'Compound relative pronouns',
+    rule: 'After a preposition, a thing is taken up by lequel, laquelle, lesquels or lesquelles (a person: usually qui). With à and de they contract: auquel, auxquels, auxquelles, duquel, desquels, desquelles. Dont replaces de + noun and needs no further preposition.',
+    examples: [
+      'Le stade dans lequel ils jouent est neuf.',
+      'Les épreuves auxquelles elle participe durent trois jours.',
+      'Le club dont il est président recrute.',
+    ],
+  },
   // ---- French A1.1 -------------------------------------------------------------------------
   'fr-tu-vous': {
     title: 'tu or vous?',
