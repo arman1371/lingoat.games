@@ -886,4 +886,90 @@ export const FRC11_TOPICS: GrammarTopic[] = [
     related: ['fr-c11-si-clauses'],
     sources: [S.passeSimple, S.passeCompose, S.imparfaitWp, S.pqp, S.passeAnterieur],
   },
+  {
+    id: 'fr-c11-registers',
+    title: 'Registers: familier, courant, soutenu',
+    tagline: 'How do I sound right with a friend, a colleague and a recruiter?',
+    level: LEVEL,
+    summary:
+      'French has three broad registers. The familier is for friends and family (bosser, le boulot, je sais pas). The courant is neutral and works almost everywhere (travailler, le travail, je ne sais pas). The soutenu is formal and mostly written (œuvrer, le labeur, pourriez-vous… ?). Choosing between them shows tact, and in a formal email it also decides the opening, the pronoun and the closing.',
+    sections: [
+      section(
+        'levels',
+        'Three registers',
+        p(
+          'The same idea can be said in three ways. **Familier** words belong to speech between friends; **courant** words are neutral; **soutenu** words are elegant, often written. You do not need to use the soutenu, but you must recognise it, and you must **avoid familiar words** in formal writing.',
+        ),
+        table(
+          'Words by register.',
+          ['Familier', 'Courant', 'Soutenu'],
+          [
+            ['le boulot, le taf', 'le travail', 'le labeur'],
+            ['bosser', 'travailler', 'œuvrer'],
+            ['bouffer', 'manger', 'se restaurer'],
+            ['se tirer', 'partir', 'prendre congé'],
+            ['un mec', 'un homme', 'un individu'],
+          ],
+        ),
+      ),
+      section(
+        'grammar-registers',
+        'Questions and negation by register',
+        p(
+          'Grammar also changes with register. In speech, **ne** disappears (*je sais pas*) and the question is made with intonation (*tu viens ?*). The neutral register uses **est-ce que** (*est-ce que tu viens ?*). Formal writing uses **inversion** (*viendrez-vous ?*) or an indirect question (*pourriez-vous m’indiquer quand vous êtes disponible ?*).',
+        ),
+        table(
+          'Questions and negation.',
+          ['Register', 'Question', 'Negation'],
+          [
+            ['Familier', 'Tu viens ?', 'Je sais pas.'],
+            ['Courant', 'Est-ce que tu viens ?', 'Je ne sais pas.'],
+            ['Soutenu', 'Viendrez-vous ?', 'Je ne saurais vous le dire.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Salut Madame, t’as un moment ?  ✓ Bonjour Madame, auriez-vous un moment ?',
+          '✗ Je sais pas, Monsieur le Directeur.  ✓ Je ne sais pas, Monsieur le Directeur.',
+        ),
+      ),
+      section(
+        'formal-email',
+        'A formal email',
+        p(
+          'A formal email opens with **Madame, Monsieur,** (or *Madame / Monsieur* + the name), uses **vous**, makes requests with the conditional (*pourriez-vous… ?*) or **je vous prie de**, and closes with a formula: **Cordialement** (neutral), **Bien cordialement** (warmer) or **Veuillez agréer, Madame, Monsieur, l’expression de mes salutations distinguées** (very formal).',
+        ),
+        examples(
+          [
+            'Madame, Monsieur, je vous écris pour postuler au poste de responsable.',
+            'Dear Sir or Madam, I am writing to apply for the position of manager.',
+          ],
+          [
+            'Je me tiens à votre disposition pour un entretien.',
+            'I am at your disposal for an interview.',
+          ],
+          ['Veuillez trouver ci-joint mon curriculum vitæ.', 'Please find my CV attached.'],
+        ),
+        compare(
+          {
+            title: 'Familier',
+            question: 'Friends',
+            example: 'T’es dispo ce soir ?',
+          },
+          {
+            title: 'Courant',
+            question: 'Colleagues',
+            example: 'Es-tu disponible ce soir ?',
+          },
+          {
+            title: 'Soutenu',
+            question: 'Formal writing',
+            example: 'Seriez-vous disponible ce soir ?',
+          },
+        ),
+      ),
+    ],
+    related: ['fr-c11-connectors'],
+    sources: [S.register, S.level, S.cordialement, S.veuillez],
+  },
 ];

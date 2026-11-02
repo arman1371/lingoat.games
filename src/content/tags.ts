@@ -443,6 +443,11 @@ export const TAGS = {
     group: 'grammar',
     emoji: '📜',
   },
+  'fr-c11-registers': {
+    label: 'Registers: familier, courant, soutenu',
+    group: 'grammar',
+    emoji: '🎩',
+  },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

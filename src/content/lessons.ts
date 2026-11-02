@@ -1390,6 +1390,15 @@ export const LESSONS = {
       'Elle avait déjà fermé la fenêtre quand il est arrivé.',
     ],
   },
+  'fr-c11-registers': {
+    title: 'Registers: familier, courant, soutenu',
+    rule: 'Match the register to the situation. Familier: bosser, le boulot, je sais pas. Courant: travailler, le travail, je ne sais pas. Soutenu: œuvrer, le labeur, pourriez-vous… ? In a formal email use vous, Madame, Monsieur, je vous prie de, veuillez, cordialement.',
+    examples: [
+      'Je bosse. / Je travaille. / J’œuvre à ce projet.',
+      'Tu peux m’envoyer ça ? / Pourriez-vous m’envoyer ce document ?',
+      'Veuillez agréer, Madame, mes salutations distinguées.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

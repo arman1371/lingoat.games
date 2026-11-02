@@ -8,6 +8,7 @@ import { ville } from './u6-ville';
 import { famille7 } from './u7-famille';
 import { culture } from './u8-culture';
 import { litterature } from './u9-litterature';
+import { travail } from './u10-travail';
 
 const units = [
   medias,
@@ -19,6 +20,7 @@ const units = [
   famille7,
   culture,
   litterature,
+  travail,
 ];
 
 const content: LevelContent = {
