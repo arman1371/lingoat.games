@@ -51,11 +51,11 @@ const expat = vocabList(U, 'Living abroad', [
 const chrono = vocabList(U, 'Telling things in order', [
   ['tout d’abord', 'first of all', '1️⃣'],
   ['par la suite', 'afterwards', '2️⃣'],
-  ['dès que', 'as soon as', '⚡'],
+  ['aussitôt que', 'as soon as', '⚡'],
   ['avant de', 'before (doing)', '⏪'],
   ['après avoir', 'after (having)', '⏩'],
   ['il y a', 'ago', '🕰️'],
-  ['au bout de', 'after (a period)', '⌛'],
+  ['au terme de', 'at the end of', '⌛'],
   ['en même temps', 'at the same time', '⏱️'],
 ]);
 
@@ -182,8 +182,8 @@ export const monde: UnitContent = {
           'le permis de séjour',
           's’adapter',
           'les racines',
-          'dès que',
-          'au bout de',
+          'aussitôt que',
+          'au terme de',
         ),
         vocab,
       ),

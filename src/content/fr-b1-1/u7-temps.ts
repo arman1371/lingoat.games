@@ -30,12 +30,12 @@ const rhythm = vocabList(U, 'Time and rhythm', [
   ['gagner du temps', 'to save time', '⏱️'],
   ['perdre son temps', 'to waste one’s time', '🗑️'],
   ['prendre le temps de', 'to take the time to', '🕰️'],
-  ['flâner', 'to stroll, to wander', '🚶'],
+  ['traîner', 'to hang about', '🚶'],
 ]);
 
 const nature = vocabList(U, 'Nature and the outdoors', [
   ['la clairière', 'clearing', '🌲'],
-  ['la randonnée', 'hike', '🥾'],
+  ['la balade', 'walk, stroll', '🥾'],
   ['l’horizon', 'horizon', '🏞️'],
   ['la piste', 'track, trail', '🛤️'],
   ['le lever du soleil', 'sunrise', '🌅'],
@@ -52,11 +52,11 @@ const wishes = vocabList(U, 'Hopes and wishes', [
   ['souhaiter que', 'to wish that', '🌠'],
   ['espérer que', 'to hope that', '🤞'],
   ['j’aimerais que', 'I would like (you) to', '💭'],
-  ['pourvu que', 'let us hope that, provided that', '🙏'],
-  ['à condition que', 'on condition that', '📝'],
+  ['sous réserve que', 'provided that', '🙏'],
+  ['supposons que', 'let us suppose that', '📝'],
   ['avoir envie de', 'to feel like', '😋'],
   ['rêver de', 'to dream of', '💤'],
-  ['tant pis', 'too bad', '🤷'],
+  ['tant mieux', 'so much the better', '🤷'],
 ]);
 
 const vocab = [...rhythm, ...nature, ...wishes];
@@ -148,10 +148,10 @@ export const temps: UnitContent = {
           'ralentir',
           'le surmenage',
           'le délai',
-          'flâner',
+          'traîner',
           'le potager',
           'le coteau',
-          'tant pis',
+          'tant mieux',
         ),
         vocab,
       ),
@@ -175,8 +175,8 @@ export const temps: UnitContent = {
           'la piste',
           'le lever du soleil',
           'respirer',
-          'pourvu que',
-          'à condition que',
+          'sous réserve que',
+          'supposons que',
           'rêver de',
         ),
         vocab,

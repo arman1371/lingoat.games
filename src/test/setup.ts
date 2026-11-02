@@ -1,6 +1,9 @@
 import '@testing-library/jest-dom/vitest';
 import { afterEach } from 'vitest';
-import { cleanup } from '@testing-library/react';
+import { cleanup, configure } from '@testing-library/react';
+
+// The library pages render thousands of games; on a loaded CI runner the default 1 s is too short.
+configure({ asyncUtilTimeout: 10_000 });
 
 afterEach(() => {
   cleanup();

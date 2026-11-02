@@ -28,14 +28,14 @@ const living = vocabList(U, 'Living together', [
   ['la fête des voisins', 'neighbours’ party', '🎉'],
   ['s’entendre bien', 'to get along well', '😊'],
   ['respecter', 'to respect', '🙇'],
-  ['déranger', 'to disturb', '🙉'],
-  ['se plaindre', 'to complain', '😤'],
+  ['gêner', 'to bother', '🙉'],
+  ['râler', 'to grumble', '😤'],
   ['le vivre-ensemble', 'living together, community spirit', '🏘️'],
   ['la convivialité', 'friendly atmosphere', '🥂'],
   ['accueillir', 'to welcome', '🚪'],
   ['le règlement intérieur', 'house rules', '📜'],
   ['le tapage nocturne', 'night-time disturbance', '🌙'],
-  ['un malentendu', 'a misunderstanding', '🤷'],
+  ['une brouille', 'a falling-out', '🤷'],
 ]);
 
 const phrases = vocabList(U, 'Interest, advice and good wishes', [

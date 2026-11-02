@@ -662,6 +662,29 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b11-feelings' },
     { topic: 'fr-b11-regrets' },
   ],
+  // ---- French B1.2 ----------------------------------------------------------------------------
+  'fr-b1-2-voyage': [{ topic: 'fr-futur-simple' }],
+  'fr-b1-2-paysages': [
+    { topic: 'fr-b12-future-choice' },
+    { topic: 'fr-futur-simple', note: 'outdoor verbs' },
+  ],
+  'fr-b1-2-hypotheses': [{ topic: 'fr-b12-si-clauses' }, { topic: 'fr-b12-conditional' }],
+  'fr-b1-2-planete': [{ topic: 'fr-b12-prepositions' }],
+  'fr-b1-2-convaincre': [{ topic: 'fr-b12-gerondif' }, { topic: 'fr-b12-connectors' }],
+  'fr-b1-2-ville': [{ topic: 'fr-b12-indefinite' }],
+  'fr-b1-2-rapporter': [{ topic: 'fr-b12-reported-speech' }, { topic: 'fr-b12-inversion' }],
+  'fr-b1-2-etudes': [{ topic: 'fr-b12-compound-relatives' }],
+  'fr-b1-2-cause': [{ topic: 'fr-b12-cause-consequence' }, { topic: 'fr-b12-participe-present' }],
+  'fr-b1-2-sport': [
+    { topic: 'fr-b12-double-pronouns' },
+    { topic: 'fr-b12-emphasis' },
+    { topic: 'fr-b12-futur-anterieur' },
+  ],
+  'fr-b1-2-culture': [{ topic: 'fr-b12-opposition' }, { topic: 'fr-b12-passe-simple' }],
+  'fr-b1-2-regrets': [
+    { topic: 'fr-b12-past-hypotheses' },
+    { topic: 'fr-b12-si-clauses', note: 'si + plus-que-parfait' },
+  ],
   'fr-a2-2-medias': [
     { topic: 'fr-a22-cause-consequence' },
     { topic: 'fr-a22-subjunctive', note: 'il faut que' },

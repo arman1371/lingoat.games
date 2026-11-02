@@ -45,7 +45,7 @@ const experience = vocabList(U, 'Experience and responsibilities', [
   ['atteindre un objectif', 'to reach a goal', '🥅'],
   ['la motivation', 'motivation', '🔥'],
   ['l’épanouissement', 'personal fulfilment', '🌱'],
-  ['la reconversion', 'career change', '🔀'],
+  ['le recrutement', 'recruitment', '🔀'],
   ['le savoir-faire', 'know-how', '🛠️'],
   ['les compétences', 'skills', '🧰'],
 ]);
@@ -57,9 +57,9 @@ const opinion = vocabList(U, 'Giving your opinion', [
   ['en ce qui me concerne', 'as far as I am concerned', '🙋'],
   ['je suis convaincu que', 'I am convinced that', '💯'],
   ['d’une part … d’autre part', 'on the one hand … on the other', '⚖️'],
-  ['par contre', 'on the other hand', '↔️'],
-  ['en revanche', 'whereas, in return', '🔁'],
-  ['en effet', 'indeed', '✔️'],
+  ['en contrepartie', 'in return, on the other hand', '↔️'],
+  ['de son côté', 'for his/her part', '🔁'],
+  ['effectivement', 'indeed, in fact', '✔️'],
 ]);
 
 const vocab = [...world, ...experience, ...opinion];
@@ -163,7 +163,7 @@ export const travail: UnitContent = {
           'le licenciement',
           'la démission',
           'encadrer',
-          'la reconversion',
+          'le recrutement',
           'le savoir-faire',
         ),
         vocab,
@@ -190,7 +190,7 @@ export const travail: UnitContent = {
           'l’intérimaire',
           'gérer',
           'les compétences',
-          'en revanche',
+          'de son côté',
         ),
         vocab,
       ),

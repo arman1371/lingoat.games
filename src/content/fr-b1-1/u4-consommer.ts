@@ -22,8 +22,8 @@ const consumption = vocabList(U, 'Consuming differently', [
   ['la consommation', 'consumption', '🛒'],
   ['reconditionné', 'refurbished', '♻️'],
   ['le troc', 'bartering', '🔁'],
-  ['la location', 'renting', '🔑'],
-  ['le covoiturage', 'carpooling', '🚗'],
+  ['le prêt', 'loan', '🔑'],
+  ['l’autopartage', 'car sharing', '🚗'],
   ['le gaspillage', 'waste', '🗑️'],
   ['le sachet', 'small bag, sachet', '🛍️'],
   ['le circuit court', 'short supply chain', '🥕'],
@@ -32,7 +32,7 @@ const consumption = vocabList(U, 'Consuming differently', [
   ['la consigne', 'bottle deposit', '🍾'],
   ['résilier', 'to cancel (a contract)', '✂️'],
   ['la plateforme', 'platform', '💻'],
-  ['trier', 'to sort (waste)', '🗂️'],
+  ['composter', 'to compost', '🌱'],
 ]);
 
 const places = vocabList(U, 'Shops and markets', [
@@ -47,7 +47,7 @@ const places = vocabList(U, 'Shops and markets', [
   ['le client fidèle', 'loyal customer', '🤝'],
   ['les soldes', 'sales', '🏷️'],
   ['la promotion', 'special offer', '💸'],
-  ['le tarif', 'price list, rate', '💶'],
+  ['la facture', 'bill, invoice', '💶'],
 ]);
 
 const certainty = vocabList(U, 'Certainty and doubt', [
@@ -55,9 +55,9 @@ const certainty = vocabList(U, 'Certainty and doubt', [
   ['il est évident que', 'it is obvious that', '👁️'],
   ['il est probable que', 'it is likely that', '📈'],
   ['il est possible que', 'it is possible that', '🤷'],
-  ['il se peut que', 'it may be that', '🎲'],
+  ['il n’est pas exclu que', 'it cannot be ruled out that', '🎲'],
   ['je doute que', 'I doubt that', '🤨'],
-  ['il est douteux que', 'it is doubtful that', '❓'],
+  ['il est peu probable que', 'it is unlikely that', '❓'],
   ['je ne crois pas que', 'I do not think that', '🙅'],
 ]);
 
@@ -195,14 +195,14 @@ export const consommer: UnitContent = {
       listen(
         byDe(
           vocab,
-          'la location',
-          'le covoiturage',
+          'le prêt',
+          'l’autopartage',
           'l’avoir',
           'le vide-grenier',
           'résilier',
-          'trier',
+          'composter',
           'la vitrine',
-          'il se peut que',
+          'il n’est pas exclu que',
         ),
         vocab,
       ),

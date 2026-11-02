@@ -25,12 +25,12 @@ const press = vocabList(U, 'News and the press', [
   ['l’investigation', 'investigative reporting', '🔍'],
   ['le rédacteur', 'editor, writer', '🖋️'],
   ['la rédaction', 'editorial team', '🖋️'],
-  ['l’enquête', 'investigation', '🔎'],
+  ['le scoop', 'scoop', '🔎'],
   ['l’éditorial', 'editorial', '✍️'],
   ['la chronique', 'column, regular feature', '📅'],
   ['le mensuel', 'monthly magazine', '🗓️'],
   ['la chaîne d’information', 'news channel', '📺'],
-  ['le public', 'audience', '🎧'],
+  ['l’audience', 'audience', '🎧'],
 ]);
 
 const social = vocabList(U, 'Social networks', [
@@ -39,7 +39,7 @@ const social = vocabList(U, 'Social networks', [
   ['diffuser', 'to broadcast, to spread', '🔁'],
   ['le fil d’actualité', 'news feed', '📜'],
   ['l’internaute', 'web user', '👤'],
-  ['la rumeur', 'rumour', '🗣️'],
+  ['la propagande', 'propaganda', '🗣️'],
   ['la fausse information', 'fake news', '🚫'],
   ['l’influenceur', 'influencer', '🤳'],
   ['la notification', 'notification', '🔔'],
@@ -49,14 +49,14 @@ const social = vocabList(U, 'Social networks', [
 ]);
 
 const reporting = vocabList(U, 'Reporting what is said', [
-  ['annoncer', 'to announce', '📢'],
+  ['proclamer', 'to proclaim', '📢'],
   ['révéler', 'to reveal', '🔓'],
-  ['affirmer', 'to claim', '☝️'],
+  ['avancer', 'to put forward', '☝️'],
   ['démentir', 'to deny', '🙅'],
-  ['dénoncer', 'to denounce', '🚨'],
+  ['divulguer', 'to disclose, to leak', '🚨'],
   ['selon', 'according to', '📍'],
   ['d’après', 'according to', '📌'],
-  ['rapporter', 'to report', '🧾'],
+  ['relater', 'to recount', '🧾'],
 ]);
 
 const vocab = [...press, ...social, ...reporting];
@@ -165,13 +165,13 @@ export const medias: UnitContent = {
         byDe(
           vocab,
           'la rubrique',
-          'l’enquête',
+          'le scoop',
           'le mensuel',
           'le fil d’actualité',
-          'la rumeur',
+          'la propagande',
           'la fausse information',
           'démentir',
-          'dénoncer',
+          'divulguer',
         ),
         vocab,
       ),
