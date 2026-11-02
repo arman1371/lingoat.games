@@ -451,4 +451,97 @@ export const FRC11_TOPICS: GrammarTopic[] = [
     related: ['fr-c11-si-clauses'],
     sources: [S.subjonctifWp, S.subordCirc, S.bienQue, S.quoique, S.pourtant, S.cependant],
   },
+  {
+    id: 'fr-c11-pronouns',
+    title: 'The pronouns y and en',
+    tagline: 'How do I replace a place, a thing or a quantity, and combine two pronouns?',
+    level: LEVEL,
+    summary:
+      'En replaces de + noun or a quantity; y replaces à, chez or dans + place or thing. Both stand before the verb. When two pronouns meet, they follow a fixed order: me, te, nous, vous, then le, la, les, then lui, leur, then y, then en. After a positive imperative they follow the verb, joined by hyphens.',
+    sections: [
+      section(
+        'y-en',
+        'What y and en replace',
+        p(
+          '**En** takes the place of a group introduced by **de** (*parler de, avoir besoin de*), of a **partitive** (*du sport, des vitamines*) or of a noun with a **quantity** (*deux comprimés → j’en ai pris deux*). **Y** takes the place of **à, chez, dans, sur** + a place or a thing (*aller à la pharmacie, penser à son traitement*). With a person, **à** is replaced by **lui / leur**.',
+        ),
+        table(
+          'En and y.',
+          ['Pronoun', 'Replaces', 'Example'],
+          [
+            ['en', 'de + noun', 'Vous avez besoin de repos ? – J’en ai besoin.'],
+            [
+              'en',
+              'a partitive or a quantity',
+              'Tu fais du sport ? – J’en fais deux fois par semaine.',
+            ],
+            ['y', 'à / chez / dans + place', 'Tu vas chez le médecin ? – J’y vais demain.'],
+            ['y', 'à + thing', 'Tu penses à ton traitement ? – J’y pense tous les jours.'],
+            ['lui / leur', 'à + person', 'Tu parles à ta sœur ? – Je lui parle.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je pense à lui.  ✓ for a person, but ✓ J’y pense for a thing.',
+          '✗ Je vais en la pharmacie.  ✓ J’y vais.',
+        ),
+      ),
+      section(
+        'order',
+        'Two pronouns before the verb',
+        p(
+          'When two object pronouns appear together, the order never changes. Think of it as a ladder: **me / te / nous / vous** come first, then **le / la / les**, then **lui / leur**, then **y**, and **en** is always last. Before a vowel, me becomes **m’**, le and la become **l’**.',
+        ),
+        table(
+          'Order of the pronouns.',
+          ['Step', 'Pronouns', 'Example'],
+          [
+            ['1', 'me, te, se, nous, vous', 'Il me les a prescrits.'],
+            ['2', 'le, la, les', 'Nous le lui avons expliqué.'],
+            ['3', 'lui, leur', 'Je lui en ai donné.'],
+            ['4', 'y', 'Il y en a trois.'],
+            ['5', 'en', 'Il m’en a parlé.'],
+          ],
+        ),
+        tip(
+          'Negation',
+          'In a negative sentence, **ne** goes before the pronouns and **pas** after the verb: *Je ne lui en ai pas parlé.*',
+        ),
+      ),
+      section(
+        'imperative',
+        'The positive imperative',
+        p(
+          'After a positive command, the pronouns follow the verb, joined by hyphens: **direct** (le, la, les) first, then **moi / toi / lui / nous / vous / leur**, then **y / en**. Moi and toi become **m’ / t’** before en: *donnez-m’en, vas-y, parlez-en*. In a negative command, the usual order comes back: *ne leur en parlez pas*.',
+        ),
+        examples(
+          [
+            'Vous avez des symptômes ? Parlez-en à votre médecin.',
+            'You have symptoms? Talk to your doctor about it.',
+          ],
+          ['Donnez-le-moi, s’il vous plaît.', 'Give it to me, please.'],
+          ['Ne leur en parlez pas !', 'Do not tell them about it!'],
+        ),
+        compare(
+          {
+            title: 'Je lui en ai donné.',
+            question: 'Statement: lui before en',
+            example: 'Je lui en ai donné.',
+          },
+          {
+            title: 'Donnez-lui-en.',
+            question: 'Positive command: after the verb',
+            example: 'Donnez-lui-en.',
+          },
+          {
+            title: 'Ne lui en donnez pas.',
+            question: 'Negative command: before the verb again',
+            example: 'Ne lui en donnez pas.',
+          },
+        ),
+      ),
+    ],
+    related: ['fr-object-pronouns'],
+    sources: [S.personalPronoun, S.imperative, S.pronEn, S.pronY],
+  },
 ];

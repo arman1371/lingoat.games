@@ -1345,6 +1345,15 @@ export const LESSONS = {
       'Malgré la pluie, le marché est ouvert.',
     ],
   },
+  'fr-c11-pronouns': {
+    title: 'The pronouns y and en',
+    rule: 'En replaces de + noun or a quantity (j’en ai besoin, j’en prends deux); y replaces à / chez / dans + place or thing (j’y vais). Order before the verb: me, te, nous, vous → le, la, les → lui, leur → y → en. After a positive imperative: donnez-le-moi, parlez-en.',
+    examples: [
+      'Tu penses à ton traitement ? – Oui, j’y pense.',
+      'Vous avez besoin de repos ? – Oui, j’en ai besoin.',
+      'Il m’en a prescrit. / Je ne lui en ai pas parlé.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

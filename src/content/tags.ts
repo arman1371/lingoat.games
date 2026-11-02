@@ -434,6 +434,7 @@ export const TAGS = {
     group: 'grammar',
     emoji: '🤷',
   },
+  'fr-c11-pronouns': { label: 'y, en and double pronouns', group: 'grammar', emoji: '👉' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

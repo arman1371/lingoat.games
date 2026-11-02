@@ -63,6 +63,8 @@ export const FR_SOURCES = {
   quoique: wiktionary('quoique', 'quoique'),
   pourtant: wiktionary('pourtant', 'pourtant'),
   cependant: wiktionary('cependant', 'cependant'),
+  pronEn: wiktionary('en', 'en'),
+  pronY: wiktionary('y', 'y'),
   prefix: wp('Préfixe', 'Préfixe'),
   suffix: wp('Suffixe', 'Suffixe'),
   affix: wp('Affixe', 'Affixe'),
