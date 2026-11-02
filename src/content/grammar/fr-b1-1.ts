@@ -1051,4 +1051,138 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
     related: ['fr-b11-passive'],
     sources: [S.adverb],
   },
+  {
+    id: 'fr-b11-possessive-pronouns',
+    title: 'le mien, la tienne, les leurs',
+    tagline: 'Mine, yours, theirs',
+    level: LEVEL,
+    summary:
+      'A possessive pronoun replaces a possessive adjective plus noun. It always has an article, which agrees with the thing owned, not the owner: le mien, la mienne, les miens, les miennes.',
+    sections: [
+      section(
+        'forms',
+        'The forms',
+        table(
+          'Possessive pronouns.',
+          ['Owner', 'masc. sg.', 'fem. sg.', 'masc. pl.', 'fem. pl.'],
+          [
+            ['je', 'le mien', 'la mienne', 'les miens', 'les miennes'],
+            ['tu', 'le tien', 'la tienne', 'les tiens', 'les tiennes'],
+            ['il / elle', 'le sien', 'la sienne', 'les siens', 'les siennes'],
+            ['nous', 'le nôtre', 'la nôtre', 'les nôtres', 'les nôtres'],
+            ['vous', 'le vôtre', 'la vôtre', 'les vôtres', 'les vôtres'],
+            ['ils / elles', 'le leur', 'la leur', 'les leurs', 'les leurs'],
+          ],
+        ),
+        p(
+          'Compare: *C’est mon livre.* (adjective + noun) → *C’est le mien.* (pronoun). With **à** and **de** the article contracts: *Je pense aux miens. Je parle du tien.*',
+        ),
+        examples(
+          ['Ton sac est vert, le mien est noir.', 'Your bag is green, mine is black.'],
+          ['Notre jardin est grand, le leur est petit.', 'Our garden is big, theirs is small.'],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ C’est mien.  ✓ C’est le mien.',
+          '✗ Notre maison est grande, la leurs est petite.  ✓ …, la leur est petite.',
+          '✗ le notre  ✓ le nôtre (with a circumflex)',
+        ),
+      ),
+    ],
+    related: ['fr-b11-wishes'],
+    sources: [S.possessivePronoun],
+  },
+  {
+    id: 'fr-b11-wishes',
+    title: 'Wishes and hopes',
+    tagline: 'souhaiter que + subjunctive, espérer que + indicative',
+    level: LEVEL,
+    summary:
+      'Verbs of wishing (souhaiter que, vouloir que, j’aimerais que) and pourvu que take the subjunctive. Espérer que takes the indicative, usually the future. With only one subject, use the infinitive.',
+    sections: [
+      section(
+        'rule',
+        'Which verb, which mood?',
+        table(
+          'Wishes and hopes.',
+          ['Expression', 'Mood', 'Example'],
+          [
+            [
+              'souhaiter que / vouloir que / j’aimerais que',
+              'subjunctive',
+              'Je souhaite que tu sois heureux.',
+            ],
+            ['pourvu que', 'subjunctive', 'Pourvu qu’il fasse beau !'],
+            ['à condition que', 'subjunctive', 'À condition que tu puisses venir.'],
+            ['espérer que', 'indicative', 'J’espère qu’il fera beau.'],
+            ['one subject', 'infinitive', 'Je rêve de vivre à la campagne.'],
+          ],
+        ),
+        subjunctiveTable('Verbs you need after these wishes.', [
+          'finir',
+          'venir',
+          'faire',
+          'vouloir',
+        ]),
+        p(
+          '**Espérer** is the exception: although it is a wish, it takes the **indicative**. Do not mix it up with *souhaiter que*.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ J’espère que tu viennes.  ✓ J’espère que tu viendras.',
+          '✗ Je souhaite que tu seras heureux.  ✓ Je souhaite que tu sois heureux.',
+          '✗ Je rêve que vivre à la campagne.  ✓ Je rêve de vivre à la campagne.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-subjunctive', 'fr-b11-possessive-pronouns'],
+    sources: [S.subjunctive, S.esperer],
+  },
+  {
+    id: 'fr-b11-duration',
+    title: 'en, pendant, dans, pour + time',
+    tagline: 'How long? When?',
+    level: LEVEL,
+    summary:
+      'En says how long something took to finish; pendant says how long it lasts; dans names a point in the future; pour gives a planned length after partir or aller.',
+    sections: [
+      section(
+        'rule',
+        'Four small words',
+        table(
+          'Duration and time.',
+          ['Word', 'Meaning', 'Example'],
+          [
+            ['en', 'it took … to finish', 'J’ai fini en deux heures.'],
+            ['pendant', 'for … (it lasted)', 'Il a dormi pendant huit heures.'],
+            ['dans', 'in … from now', 'Le train part dans dix minutes.'],
+            ['pour', 'planned stay (after partir, aller)', 'Nous partons pour une semaine.'],
+          ],
+        ),
+        p(
+          'Useful phrases: *prendre le temps de + infinitive* (to take the time to), *gagner du temps* (to save time), *perdre son temps* (to waste one’s time; the possessive agrees with the subject: *je perds mon temps*).',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Le train part en dix minutes.  ✓ Le train part dans dix minutes.',
+          '✗ J’ai lu ce livre pendant une soirée (in the sense of finishing it).  ✓ … en une soirée.',
+          '✗ Je perds le temps.  ✓ Je perds mon temps.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-chronology'],
+    sources: [S.preposition],
+  },
 ];

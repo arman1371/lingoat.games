@@ -407,6 +407,14 @@ export const TAGS = {
   'fr-b11-passive': { label: 'The passive voice', group: 'grammar', emoji: '🔄' },
   'fr-b11-nominalisation': { label: 'Headlines: verb → noun', group: 'grammar', emoji: '🗞️' },
   'fr-b11-adverbs': { label: 'Adverbs in -ment', group: 'grammar', emoji: '➡️' },
+  // grammar points – French B1.1, unit 7
+  'fr-b11-possessive-pronouns': {
+    label: 'le mien, la tienne, les leurs',
+    group: 'grammar',
+    emoji: '🫴',
+  },
+  'fr-b11-wishes': { label: 'Wishes and hopes', group: 'grammar', emoji: '🌠' },
+  'fr-b11-duration': { label: 'en, pendant, dans, pour + time', group: 'grammar', emoji: '⏱️' },
   // grammar points – French A1.2, unit 1
   'fr-pronominal': { label: 'Pronominal verbs (se lever)', group: 'grammar', emoji: '🪞' },
   'fr-frequency': { label: 'toujours, souvent, ne … jamais', group: 'grammar', emoji: '🔁' },

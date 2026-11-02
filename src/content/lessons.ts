@@ -1221,6 +1221,33 @@ export const LESSONS = {
     rule: 'Most adverbs are the feminine adjective + -ment: lent → lentement, heureux → heureusement. If the adjective ends in a vowel, add -ment: vrai → vraiment. Adjectives in -ent / -ant give -emment / -amment: évident → évidemment.',
     examples: ['Elle répond rapidement.', 'Évidemment, c’est faux.', 'Il se plaint constamment.'],
   },
+  'fr-b11-possessive-pronouns': {
+    title: 'le mien, la tienne, les leurs',
+    rule: 'A possessive pronoun replaces mon / ton / son + noun and always has an article that agrees with the thing owned: le mien, la mienne, les miens, les miennes (tien, sien, nôtre, vôtre, leur). C’est mon sac. → C’est le mien.',
+    examples: [
+      'Ton sac est vert, le mien est noir.',
+      'Notre jardin est grand, le leur est petit.',
+      'Voici mes clés. Où sont les tiennes ?',
+    ],
+  },
+  'fr-b11-wishes': {
+    title: 'Wishes and hopes',
+    rule: 'Souhaiter que, vouloir que, aimerais que and pourvu que take the subjunctive. Espérer que takes the indicative (often the future): j’espère que tu viendras. With one subject use the infinitive: je rêve de vivre à la campagne.',
+    examples: [
+      'Je souhaite que tu sois heureux.',
+      'J’espère qu’il fera beau.',
+      'Pourvu qu’il fasse beau !',
+    ],
+  },
+  'fr-b11-duration': {
+    title: 'en, pendant, dans, pour + time',
+    rule: 'En + time = how long it takes to finish (en deux heures). Pendant = how long it lasts (pendant trois jours). Dans = a point in the future (dans dix minutes). Pour = planned length after partir or aller (pour une semaine).',
+    examples: [
+      'J’ai lu ce livre en une soirée.',
+      'Il reste pendant trois jours.',
+      'Le train part dans dix minutes.',
+    ],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',

@@ -60,5 +60,7 @@ export const FR_SOURCES = {
   passive: wp('Voix_passive', 'Voix passive'),
   nominalisation: wp('Nominalisation', 'Nominalisation'),
   adverb: wp('Adverbe_en_français', 'Adverbe en français'),
+  possessivePronoun: wp('Pronom_possessif', 'Pronom possessif'),
+  esperer: wiktionary('espérer', 'espérer'),
   connector: wp('Connecteur_logique', 'Connecteur logique'),
 } as const satisfies Record<string, Source>;

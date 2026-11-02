@@ -597,4 +597,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b11-nominalisation' },
     { topic: 'fr-b11-adverbs' },
   ],
+  'fr-b1-1-temps': [
+    { topic: 'fr-b11-possessive-pronouns' },
+    { topic: 'fr-b11-wishes' },
+    { topic: 'fr-b11-duration' },
+  ],
 };
