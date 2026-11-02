@@ -29,7 +29,7 @@ const studies = vocabList(U, 'Studies and university', [
   ['le mémoire', 'dissertation', '📖'],
   ['la soutenance', 'oral defence', '🎤'],
   ['la moyenne', 'average mark', '🎓'],
-  ['le doctorat', 'doctorate', '🏛️'],
+  ['le doctorant', 'PhD student', '🏛️'],
   ['le partiel', 'term exam', '✏️'],
   ['la résidence universitaire', 'halls of residence', '🏫'],
   ['la bibliothèque universitaire', 'university library', '🏟️'],
@@ -245,7 +245,7 @@ export const etudes: UnitContent = {
       ),
       {
         items: [
-          sp('sp-doctorat', 'unscramble', 'doctorat', mean('le doctorat'), '🏛️', 'le doctorat'),
+          sp('sp-doctorant', 'unscramble', 'doctorant', mean('le doctorant'), '🏛️', 'le doctorant'),
           sp(
             'sp-certificat',
             'unscramble',

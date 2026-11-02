@@ -25,7 +25,7 @@ const landscapes = vocabList(U, 'Landscapes', [
   ['le rocher', 'rock', '🧗'],
   ['la côte', 'coast', '🏖️'],
   ['l’archipel', 'archipelago', '🏝️'],
-  ['l’étang', 'pond', '🛶'],
+  ['le lagon', 'lagoon', '🛶'],
   ['le désert', 'desert', '🏜️'],
   ['la plaine', 'plain', '🌾'],
   ['le cratère', 'crater', '🌋'],
