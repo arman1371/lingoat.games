@@ -570,6 +570,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b22-concession', note: 'bien que, même si, malgré, pourtant' },
     { topic: 'fr-b22-comparison', note: 'plus … plus, de plus en plus, autant … que' },
   ],
+  'fr-b2-2-histoire': [
+    { topic: 'fr-b22-passe-simple', note: 'il fut, ils prirent, elle naquit' },
+    { topic: 'fr-b22-plus-que-parfait', note: 'événement, arrière-plan, antériorité' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

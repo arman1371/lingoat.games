@@ -430,6 +430,9 @@ export const TAGS = {
   'fr-b22-economy': { label: 'Economy & consumption', group: 'topic', emoji: '📈' },
   'fr-b22-concession': { label: 'Contrast and concession', group: 'grammar', emoji: '↔️' },
   'fr-b22-comparison': { label: 'Comparing', group: 'grammar', emoji: '⚖️' },
+  'fr-b22-history': { label: 'History & memory', group: 'topic', emoji: '🏰' },
+  'fr-b22-passe-simple': { label: 'The passé simple', group: 'grammar', emoji: '📜' },
+  'fr-b22-plus-que-parfait': { label: 'Narrative tenses', group: 'grammar', emoji: '⏪' },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
   // grammar points – French A2.1, unit 1

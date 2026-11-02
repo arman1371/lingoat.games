@@ -114,4 +114,107 @@ export const FR22B_TOPICS_C: GrammarTopic[] = [
     related: ['fr-b22-concession'],
     sources: [S.comparative, S.superlative],
   },
+  {
+    id: 'fr-b22-passe-simple',
+    title: 'The passé simple',
+    tagline: 'Il fut · ils prirent · elle naquit',
+    level: LEVEL,
+    summary:
+      'The passé simple is the tense of written narration. At B2 you must recognise it, above all the third person singular and plural, and be able to place it next to the imparfait. In speech the passé composé replaces it.',
+    sections: [
+      section(
+        'forms',
+        'Forms to recognise',
+        table(
+          'Endings of the passé simple.',
+          ['Group', 'il / elle', 'ils / elles', 'Example'],
+          [
+            ['-er verbs', '-a', '-èrent', 'il arriva, ils arrivèrent'],
+            ['-ir, -re verbs', '-it', '-irent', 'il finit, ils prirent'],
+            ['-oir, -ir irregular', '-ut', '-urent', 'il fut, il eut, il mourut'],
+            ['venir, tenir', '-int', '-inrent', 'il vint, ils vinrent'],
+          ],
+        ),
+        table(
+          'Irregular forms you will meet often.',
+          ['Infinitive', 'il / elle', 'ils / elles'],
+          [
+            ['être', 'fut', 'furent'],
+            ['avoir', 'eut', 'eurent'],
+            ['faire', 'fit', 'firent'],
+            ['dire', 'dit', 'dirent'],
+            ['voir', 'vit', 'virent'],
+            ['naître', 'naquit', 'naquirent'],
+          ],
+        ),
+      ),
+      section(
+        'use',
+        'Where it is used',
+        p(
+          'The **passé simple** appears in history books, novels and press reports of the past. It states **completed events**, one after another: *Il entra, regarda autour de lui et sortit.* In conversation and in everyday writing French uses the **passé composé** instead: *Il est entré, il a regardé et il est sorti.*',
+        ),
+        tip(
+          'Do you have to produce it?',
+          'Not in speech. Produce the third person (il fut, ils prirent) if you write narrative; recognise all forms when you read.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-plus-que-parfait'],
+    sources: [S.passeSimple],
+  },
+  {
+    id: 'fr-b22-plus-que-parfait',
+    title: 'Narrative tenses',
+    tagline: 'Il pleuvait quand ils arrivèrent · il avait déjà quitté',
+    level: LEVEL,
+    summary:
+      'In a story the passé simple or passé composé gives the events, the imparfait the background and habits, and the plus-que-parfait the actions that had already happened.',
+    sections: [
+      section(
+        'roles',
+        'Three tenses, three roles',
+        table(
+          'How the tenses work together.',
+          ['Tense', 'Role', 'Example'],
+          [
+            ['passé simple / passé composé', 'the events in sequence', 'Ils arrivèrent à midi.'],
+            ['imparfait', 'background, description, habit', 'Il pleuvait, la ville était calme.'],
+            [
+              'plus-que-parfait',
+              'what had happened before',
+              'Le roi avait signé le traité deux ans plus tôt.',
+            ],
+          ],
+        ),
+        p(
+          'The **plus-que-parfait** is the imparfait of *avoir* or *être* plus the participle: *j’avais fini*, *elle était partie*, *nous nous étions levés*. It often follows verbs of saying and remembering in the past: *Il dit qu’il avait perdu la bataille.*',
+        ),
+      ),
+      section(
+        'contrast',
+        'Choosing the tense',
+        compare(
+          { title: 'imparfait', question: 'the scene', example: 'Le soleil se levait…' },
+          {
+            title: 'passé simple',
+            question: 'the new event',
+            example: '…quand l’armée entra dans la ville.',
+          },
+          {
+            title: 'plus-que-parfait',
+            question: 'before that',
+            example: 'La population avait déjà fui.',
+          },
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il a dit qu’il a oublié.  ✓ Il a dit qu’il avait oublié.',
+          '✗ Il pleuvait quand ils arrivaient.  ✓ Il pleuvait quand ils arrivèrent. / sont arrivés.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-passe-simple', 'fr-b22-si-clauses'],
+    sources: [S.pluperfect, S.passeSimple],
+  },
 ];

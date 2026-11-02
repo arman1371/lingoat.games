@@ -85,6 +85,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (comparison)', 'fr-b2-2-economie-gap-comparison'],
   ['sort it (concession)', 'fr-b2-2-economie-sort-concession'],
   ['dialogue (unit 7)', 'fr-b2-2-economie-dialogues'],
+  // unit 8
+  ['flashcards (unit 8)', 'fr-b2-2-histoire-flash-events'],
+  ['gap fill (passé simple)', 'fr-b2-2-histoire-gap-passe-simple'],
+  ['gap fill (narration)', 'fr-b2-2-histoire-gap-narration'],
+  ['sort it (narrative roles)', 'fr-b2-2-histoire-sort-roles'],
+  ['conjugation (passé simple)', 'fr-b2-2-histoire-conj-passe-simple'],
+  ['dialogue (unit 8)', 'fr-b2-2-histoire-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {

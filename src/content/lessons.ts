@@ -1395,6 +1395,24 @@ export const LESSONS = {
       'Il travaille mieux que moi.',
     ],
   },
+  'fr-b22-passe-simple': {
+    title: 'The passé simple',
+    rule: 'The passé simple is the tense of written narration (history, novels). Learn to recognise it: -er verbs take -a / -èrent (il arriva, ils arrivèrent); many others take -it / -irent (il prit, ils prirent); irregular: fut, eut, fit, vint, dit, vit. In speech the passé composé replaces it.',
+    examples: [
+      'Napoléon devint empereur en 1804.',
+      'Les rois furent renversés.',
+      'Elle naquit en 1867.',
+    ],
+  },
+  'fr-b22-plus-que-parfait': {
+    title: 'Narrative tenses',
+    rule: 'In a story the passé simple (or passé composé) gives the events, the imparfait the background and repeated actions, and the plus-que-parfait what had happened before: Il avait plu toute la nuit ; quand le soleil se leva, la ville était silencieuse. Plus-que-parfait = imparfait of avoir / être + participle.',
+    examples: [
+      'Le traité avait été signé deux ans plus tôt.',
+      'Il pleuvait quand ils arrivèrent.',
+      'Elle raconta ce qu’elle avait vu.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',
