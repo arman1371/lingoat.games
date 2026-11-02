@@ -16,38 +16,21 @@ import {
 const U = 'fr-a1-2-nature';
 
 const town = vocabList(U, 'Town and countryside', [
-  ['la campagne', 'countryside', '🌄'],
-  ['le village', 'village', '🏘️'],
   ['la banlieue', 'suburbs', '🏙️'],
-  ['la circulation', 'traffic', '🚦'],
-  ['la pollution', 'pollution', '🏭'],
   ['le calme', 'calm, peace and quiet', '🕊️'],
   ['la foule', 'crowd', '👥'],
-  ['les transports en commun', 'public transport', '🚌'],
-  ['la ferme', 'farm', '🚜'],
   ['l’agriculteur, l’agricultrice', 'farmer', '👨‍🌾'],
-  ['le champ', 'field', '🌾'],
-  ['le mode de vie', 'lifestyle', '🌿'],
   ['le voisinage', 'neighbourhood, neighbours', '🤝'],
-  ['le potager', 'vegetable garden', '🥕'],
 ]);
 
 const nature = vocabList(U, 'Nature and landscape', [
-  ['la forêt', 'forest', '🌲'],
   ['l’arbre', 'tree', '🌳'],
   ['la fleur', 'flower', '🌸'],
   ['l’herbe', 'grass', '🌱'],
-  ['le lac', 'lake', '🏞️'],
-  ['la rivière', 'river', '🏞️'],
-  ['la colline', 'hill', '⛰️'],
-  ['la vallée', 'valley', '🏔️'],
-  ['le sentier', 'path, trail', '🥾'],
   ['l’île', 'island', '🏝️'],
   ['le ciel', 'sky', '🌌'],
   ['l’étoile', 'star', '⭐'],
-  ['le nuage', 'cloud', '☁️'],
   ['la pierre', 'stone', '🪨'],
-  ['le feu de camp', 'campfire', '🔥'],
   ['le coucher de soleil', 'sunset', '🌇'],
 ]);
 
@@ -59,25 +42,13 @@ const animals = vocabList(U, 'Animals', [
   ['la poule', 'hen', '🐔'],
   ['le lapin', 'rabbit', '🐇'],
   ['l’oiseau', 'bird', '🐦'],
-  ['le renard', 'fox', '🦊'],
-  ['le cerf', 'deer', '🦌'],
   ['la grenouille', 'frog', '🐸'],
   ['l’abeille', 'bee', '🐝'],
-  ['le papillon', 'butterfly', '🦋'],
 ]);
 
 const change = vocabList(U, 'Environment and a new life', [
-  ['l’environnement', 'environment', '🌍'],
-  ['la planète', 'planet', '🪐'],
-  ['protéger', 'to protect', '🛡️'],
-  ['polluer', 'to pollute', '🚱'],
-  ['recycler', 'to recycle', '♻️'],
-  ['le déchet', 'waste', '🗑️'],
-  ['économiser', 'to save', '💡'],
   ['recommencer à zéro', 'to start from scratch', '🔄'],
   ['quitter la ville', 'to leave the city', '🚪'],
-  ['cultiver', 'to grow (plants)', '🪴'],
-  ['élever', 'to raise (animals)', '🐮'],
   ['tranquillement', 'quietly, calmly', '🧘'],
 ]);
 
@@ -87,22 +58,13 @@ const pictureQuiz = byDe(
   vocab,
   'le cheval',
   'la vache',
-  'le renard',
-  'la forêt',
-  'le lac',
   'l’île',
-  'le papillon',
   'le coucher de soleil',
 );
 
 const heard = byDe(
   vocab,
-  'la circulation',
-  'la rivière',
   'l’agriculteur, l’agricultrice',
-  'le sentier',
-  'protéger',
-  'le déchet',
   'tranquillement',
 );
 
@@ -225,15 +187,9 @@ export const grandAir: UnitContent = {
           { id: 'campagne', label: 'à la campagne', emoji: '🌄' },
         ],
         items: sortCards('t', [
-          ['la circulation', 'ville', 'traffic'],
-          ['la pollution', 'ville', 'pollution'],
           ['la foule', 'ville', 'crowd'],
-          ['les transports en commun', 'ville', 'public transport'],
           ['la banlieue', 'ville', 'suburbs'],
-          ['la ferme', 'campagne', 'farm'],
-          ['le champ', 'campagne', 'field'],
           ['le calme', 'campagne', 'peace and quiet'],
-          ['le potager', 'campagne', 'vegetable garden'],
           ['l’agriculteur', 'campagne', 'farmer'],
         ]),
       },

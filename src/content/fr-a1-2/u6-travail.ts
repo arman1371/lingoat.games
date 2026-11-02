@@ -5,34 +5,24 @@ const U = 'fr-a1-2-travail';
 
 const work = vocabList(U, 'Working life', [
   ['le métier', 'profession, trade', '🛠️'],
-  ['le poste', 'post, position', '💼'],
   ['l’employé, l’employée', 'employee', '👷'],
   ['l’entreprise', 'company', '🏭'],
   ['le patron, la patronne', 'boss', '🧑‍💼'],
   ['le collègue', 'colleague', '🧑‍🤝‍🧑'],
-  ['le salaire', 'salary', '💶'],
-  ['le contrat', 'contract', '📃'],
   ['les horaires', 'working hours', '🕘'],
-  ['le congé', 'leave from work', '🌴'],
   ['la réunion', 'meeting', '🗂️'],
   ['l’ordinateur', 'computer', '💻'],
   ['le courriel', 'email', '📧'],
   ['gagner sa vie', 'to earn a living', '💰'],
   ['à temps plein', 'full time', '⏱️'],
   ['à temps partiel', 'part time', '🕒'],
-  ['le chômage', 'unemployment', '📉'],
 ]);
 
 const search = vocabList(U, 'Looking for a job', [
   ['chercher un emploi', 'to look for a job', '🔍'],
-  ['postuler', 'to apply', '✍️'],
   ['la candidature', 'application', '📨'],
-  ['le CV', 'CV, résumé', '📄'],
   ['la lettre de motivation', 'cover letter', '✉️'],
-  ['l’entretien', 'interview', '🤝'],
   ['l’offre d’emploi', 'job ad', '📰'],
-  ['le recruteur', 'recruiter', '🕵️'],
-  ['embaucher', 'to hire', '✅'],
   ['démissionner', 'to resign', '🚪'],
   ['licencier', 'to dismiss', '🚫'],
   ['l’expérience', 'experience', '🧠'],
@@ -40,16 +30,12 @@ const search = vocabList(U, 'Looking for a job', [
 
 const skills = vocabList(U, 'Skills and qualities', [
   ['la compétence', 'skill', '🎯'],
-  ['le talent', 'talent', '🌟'],
   ['être doué, douée', 'to be gifted', '🏅'],
   ['être bon, bonne en …', 'to be good at …', '👍'],
   ['parler couramment', 'to speak fluently', '🗣️'],
   ['conduire', 'to drive', '🚗'],
   ['le permis de conduire', 'driving licence', '🪪'],
-  ['le logiciel', 'software', '🖥️'],
   ['l’informatique', 'computing, IT', '⌨️'],
-  ['la qualité', 'quality, strength', '✨'],
-  ['le défaut', 'flaw, weakness', '⚠️'],
   ['motivé, motivée', 'motivated', '🔥'],
 ]);
 
@@ -59,22 +45,13 @@ const study = vocabList(U, 'University life', [
   ['le cours', 'class, lecture', '📚'],
   ['l’examen', 'exam', '📝'],
   ['réussir un examen', 'to pass an exam', '🏆'],
-  ['rater', 'to fail, to miss', '😖'],
-  ['la note', 'mark, grade', '🔢'],
-  ['le campus', 'campus', '🏫'],
-  ['le professeur', 'teacher, professor', '👨‍🏫'],
-  ['la matière', 'subject', '📐'],
 ]);
 
 const goals = vocabList(U, 'Plans and goals', [
-  ['le projet', 'project, plan', '🗺️'],
   ['le but', 'goal', '🎯'],
   ['rêver de …', 'to dream of …', '💭'],
   ['avoir envie de …', 'to feel like …', '😍'],
-  ['progresser', 'to make progress', '📈'],
   ['réaliser', 'to achieve, to carry out', '🏁'],
-  ['l’avenir', 'future', '🔮'],
-  ['la réussite', 'success', '🥇'],
 ]);
 
 const vocab = [...work, ...search, ...skills, ...study, ...goals];
@@ -82,9 +59,6 @@ const vocab = [...work, ...search, ...skills, ...study, ...goals];
 const pictureQuiz = byDe(
   vocab,
   'l’ordinateur',
-  'le salaire',
-  'le CV',
-  'le campus',
   'le permis de conduire',
   'la réunion',
   'l’étudiant, l’étudiante',
@@ -94,11 +68,8 @@ const pictureQuiz = byDe(
 const heard = byDe(
   vocab,
   'le métier',
-  'l’entretien',
   'la candidature',
   'les horaires',
-  'embaucher',
-  'rater',
   'le but',
 );
 

@@ -18,28 +18,21 @@ const U = 'fr-a1-2-sante';
 const body = vocabList(U, 'The body', [
   ['la tête', 'head', '🗣️'],
   ['le cou', 'neck', '🦒'],
-  ['le menton', 'chin', '🧔'],
   ['le bras', 'arm', '💪'],
   ['le doigt', 'finger', '☝️'],
   ['le dos', 'back', '🔙'],
   ['le ventre', 'belly, stomach', '🫃'],
   ['la jambe', 'leg', '🦵'],
-  ['la joue', 'cheek', '😊'],
   ['le pied', 'foot', '🦶'],
   ['l’œil', 'eye', '👁️'],
   ['l’oreille', 'ear', '👂'],
   ['la bouche', 'mouth', '👄'],
   ['la dent', 'tooth', '🦷'],
-  ['la gorge', 'throat', '🗯️'],
   ['le sang', 'blood', '🩸'],
   ['le visage', 'face', '😀'],
-  ['le front', 'forehead', '🙂'],
 ]);
 
 const doctor = vocabList(U, 'At the doctor’s', [
-  ['le médecin', 'doctor', '🧑‍⚕️'],
-  ['la consultation', 'appointment, consultation', '🩺'],
-  ['l’ordonnance', 'prescription', '📄'],
   ['la maladie', 'illness', '🤒'],
   ['malade', 'ill, sick', '🤧'],
   ['la température', 'temperature', '🌡️'],
@@ -47,7 +40,6 @@ const doctor = vocabList(U, 'At the doctor’s', [
   ['tousser', 'to cough', '🤧'],
   ['l’angine', 'tonsillitis, sore throat', '😷'],
   ['éternuer', 'to sneeze', '🥶'],
-  ['le symptôme', 'symptom', '🔎'],
   ['avoir mal à …', 'to have a pain in …', '🤕'],
   ['se sentir', 'to feel', '🫥'],
   ['aller mieux', 'to feel better', '🙂'],
@@ -67,12 +59,10 @@ const pharmacy = vocabList(U, 'At the pharmacy', [
 ]);
 
 const advice = vocabList(U, 'Advice and emergencies', [
-  ['le conseil', 'piece of advice', '💡'],
   ['Il vaut mieux …', 'It is better to …', '👍'],
   ['consulter', 'to see (a doctor)', '🩺'],
   ['prendre rendez-vous', 'to make an appointment', '📅'],
   ['Soigne-toi bien !', 'Take care of yourself!', '💐'],
-  ['le médecin de garde', 'doctor on call', '🚑'],
   ['l’ambulance', 'ambulance', '🚑'],
   ['les pompiers', 'firefighters', '🚒'],
   ['Au secours !', 'Help!', '🆘'],
@@ -81,15 +71,12 @@ const advice = vocabList(U, 'Advice and emergencies', [
 
 const accidents = vocabList(U, 'Accidents and bad luck', [
   ['l’accident', 'accident', '💥'],
-  ['la blessure', 'injury', '🩸'],
   ['se faire mal', 'to hurt oneself', '🤕'],
   ['se casser', 'to break (a limb)', '🦴'],
   ['le plâtre', 'plaster cast', '🦽'],
   ['glisser', 'to slip', '🧊'],
   ['la chance', 'luck', '🍀'],
-  ['Pas de chance !', 'Bad luck!', '😬'],
   ['Quelle malchance !', 'What bad luck!', '🙃'],
-  ['Ce n’est pas grave.', 'It is not serious.', '😌'],
 ]);
 
 const vocab = [...body, ...doctor, ...pharmacy, ...advice, ...accidents];
@@ -101,7 +88,6 @@ const pictureQuiz = byDe(
   'la dent',
   'l’oreille',
   'le visage',
-  'le menton',
   'le thermomètre',
   'le bandage',
 );
@@ -110,10 +96,7 @@ const heard = byDe(
   vocab,
   'la migraine',
   'l’angine',
-  'l’ordonnance',
   'le médicament',
-  'le médecin de garde',
-  'le symptôme',
   'Au secours !',
 );
 

@@ -139,3 +139,10 @@ earlier French level.
   (A2.2 already owns `fr-object-pronouns`, which is why the unit 3 topic is `fr-a12-object-pronouns`).
 - The vocabulary tests of A2.1 and A2.2 compare with A1.2, so A1.2 had to avoid everything they teach. Later A2 units
   that overlap with A1.2 must change their own words.
+
+## Vocabulary shared with other French levels
+
+The levels from A2.1 up were merged before units 3 to 8 of A1.2, and they teach many of the same everyday nouns (housing,
+holidays, nature, work). Each level may teach a word only once, so the 129 A1.2 cards that repeated a word from A1.1 or from
+A2.1 to C1.2 were removed from the A1.2 word lists. Those words are learned at the higher level. A few still appear inside
+example sentences.

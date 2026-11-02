@@ -4,7 +4,6 @@ import { unitFr, type UnitContent } from './helpers';
 const U = 'fr-a1-2-logement';
 
 const rooms = vocabList(U, 'Rooms and the building', [
-  ['l’immeuble', 'apartment building', '🏢'],
   ['l’appartement', 'flat, apartment', '🏬'],
   ['la maison', 'house', '🏡'],
   ['la pièce', 'room', '🚪'],
@@ -13,17 +12,7 @@ const rooms = vocabList(U, 'Rooms and the building', [
   ['la chambre', 'bedroom', '🛌'],
   ['la salle de bains', 'bathroom', '🛁'],
   ['les toilettes', 'toilet', '🚽'],
-  ['le couloir', 'corridor, hall', '↔️'],
-  ['le balcon', 'balcony', '🌇'],
   ['le jardin', 'garden', '🌳'],
-  ['la cave', 'cellar', '🍷'],
-  ['l’escalier', 'stairs', '🪜'],
-  ['l’ascenseur', 'lift, elevator', '🛗'],
-  ['le rez-de-chaussée', 'ground floor', '🔽'],
-  ['l’étage', 'floor, storey', '🔼'],
-  ['le propriétaire', 'owner, landlord', '🔑'],
-  ['le locataire', 'tenant', '🧑‍💼'],
-  ['le loyer', 'rent', '💶'],
 ]);
 
 const furniture = vocabList(U, 'Furniture and appliances', [
@@ -31,23 +20,12 @@ const furniture = vocabList(U, 'Furniture and appliances', [
   ['l’armoire', 'wardrobe', '🗄️'],
   ['la table', 'table', '🍽️'],
   ['la chaise', 'chair', '🪑'],
-  ['le canapé', 'sofa', '🛋️'],
   ['le fauteuil', 'armchair', '💺'],
-  ['l’étagère', 'shelf', '📚'],
   ['le bureau', 'desk', '🖥️'],
-  ['la lampe', 'lamp', '🪔'],
-  ['le tapis', 'rug', '🟫'],
-  ['le rideau', 'curtain', '🪟'],
   ['la télévision', 'television', '📺'],
-  ['le frigo', 'fridge', '🧊'],
   ['la cuisinière', 'cooker, stove', '🍲'],
-  ['le four', 'oven', '♨️'],
-  ['le lave-linge', 'washing machine', '🧺'],
-  ['le lave-vaisselle', 'dishwasher', '🫧'],
   ['la douche', 'shower', '🚿'],
-  ['la baignoire', 'bathtub', '🛀'],
   ['le lavabo', 'washbasin', '🚰'],
-  ['le miroir', 'mirror', '🪞'],
 ]);
 
 const repairs = vocabList(U, 'Problems and repairs', [
@@ -60,7 +38,6 @@ const repairs = vocabList(U, 'Problems and repairs', [
   ['la lumière', 'light', '💡'],
   ['le plombier', 'plumber', '🧑‍🔧'],
   ['l’électricien', 'electrician', '⚡'],
-  ['réparer', 'to repair', '🔧'],
   ['marcher', 'to work (a machine)', '⚙️'],
   ['Ça ne marche pas.', 'It does not work.', '❌'],
   ['Il y a une fuite.', 'There is a leak.', '🚱'],
@@ -68,14 +45,9 @@ const repairs = vocabList(U, 'Problems and repairs', [
 ]);
 
 const rules = vocabList(U, 'House rules', [
-  ['le règlement', 'house rules', '📋'],
   ['interdit, interdite', 'forbidden', '⛔'],
-  ['Il est interdit de …', 'It is forbidden to …', '🚭'],
   ['Ne pas …', 'Do not … (written rule)', '🙅'],
-  ['le bruit', 'noise', '🔊'],
-  ['le silence', 'silence', '🤫'],
   ['fumer', 'to smoke', '🚬'],
-  ['jeter', 'to throw away', '🗑️'],
   ['la poubelle', 'rubbish bin', '♻️'],
   ['fermer', 'to close, to lock', '🔒'],
   ['la clé', 'key', '🗝️'],
@@ -102,14 +74,9 @@ const vocab = [...rooms, ...furniture, ...repairs, ...rules, ...where];
 
 const pictureQuiz = byDe(
   vocab,
-  'le canapé',
   'le lit',
   'la douche',
-  'le frigo',
-  'la baignoire',
-  'la lampe',
   'le plombier',
-  'l’ascenseur',
 );
 
 const heard = byDe(
@@ -119,24 +86,16 @@ const heard = byDe(
   'l’eau chaude',
   'le plombier',
   'l’électricien',
-  'réparer',
   'Ça ne marche pas.',
 );
 
 /** [object, bucket, English] for the room sort */
 const ROOM_CARDS: [string, 'kitchen' | 'bathroom' | 'living', string][] = [
-  ['le frigo', 'kitchen', 'fridge'],
-  ['le four', 'kitchen', 'oven'],
   ['la cuisinière', 'kitchen', 'cooker'],
-  ['le lave-vaisselle', 'kitchen', 'dishwasher'],
   ['la douche', 'bathroom', 'shower'],
-  ['la baignoire', 'bathroom', 'bathtub'],
   ['le lavabo', 'bathroom', 'washbasin'],
-  ['le miroir', 'bathroom', 'mirror'],
-  ['le canapé', 'living', 'sofa'],
   ['le fauteuil', 'living', 'armchair'],
   ['la télévision', 'living', 'television'],
-  ['le tapis', 'living', 'rug'],
 ];
 
 export const logement: UnitContent = {

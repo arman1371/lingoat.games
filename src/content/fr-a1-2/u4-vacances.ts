@@ -19,34 +19,15 @@ const U = 'fr-a1-2-vacances';
 const planning = vocabList(U, 'Planning a trip', [
   ['les vacances', 'holidays, vacation', '🏖️'],
   ['le voyage', 'trip, journey', '🧳'],
-  ['le touriste', 'tourist', '🧑‍🤝‍🧑'],
   ['la destination', 'destination', '📍'],
   ['l’agence de voyages', 'travel agency', '🏢'],
-  ['la réservation', 'booking', '📅'],
-  ['réserver', 'to book', '📝'],
-  ['annuler', 'to cancel', '❌'],
-  ['le billet', 'ticket', '🎫'],
-  ['l’aller simple', 'one-way ticket', '➡️'],
-  ['l’aller-retour', 'return ticket', '🔁'],
   ['la valise', 'suitcase', '🧳'],
-  ['le passeport', 'passport', '🛂'],
-  ['le guide', 'guidebook', '📘'],
-  ['le départ', 'departure', '🛫'],
-  ['l’arrivée', 'arrival', '🛬'],
-  ['le retard', 'delay', '⏳'],
 ]);
 
 const stay = vocabList(U, 'Where to stay', [
-  ['la piscine', 'swimming pool', '🏊'],
   ['la réception', 'reception desk', '🛎️'],
-  ['l’auberge de jeunesse', 'youth hostel', '🛏️'],
-  ['le camping', 'campsite', '⛺'],
   ['la tente', 'tent', '🏕️'],
-  ['le gîte', 'holiday cottage', '🏘️'],
-  ['le séjour', 'stay', '🗓️'],
   ['les bagages', 'luggage', '🧳'],
-  ['la chambre double', 'double room', '🛌'],
-  ['la pension complète', 'full board', '🍽️'],
   ['complet, complète', 'full, fully booked', '🈵'],
   ['libre', 'free, vacant', '🟢'],
 ]);
@@ -57,14 +38,8 @@ const holiday = vocabList(U, 'On holiday', [
   ['la montagne', 'mountain', '⛰️'],
   ['le soleil', 'sun', '☀️'],
   ['bronzer', 'to sunbathe', '😎'],
-  ['se baigner', 'to go for a swim', '🏊'],
   ['la crème solaire', 'sunscreen', '🧴'],
-  ['la randonnée', 'hike', '🥾'],
-  ['le paysage', 'landscape', '🏞️'],
-  ['visiter', 'to visit (a place)', '🏛️'],
   ['la visite guidée', 'guided tour', '🧭'],
-  ['le monument', 'monument', '🗼'],
-  ['le château', 'castle', '🏰'],
   ['l’appareil photo', 'camera', '📷'],
 ]);
 
@@ -102,19 +77,13 @@ const pictureQuiz = byDe(
   'la valise',
   'la tente',
   'l’appareil photo',
-  'le château',
   'la crème solaire',
-  'le passeport',
 );
 
 const heard = byDe(
   vocab,
-  'la réservation',
-  'l’aller-retour',
   'la visite guidée',
-  'la randonnée',
   'complet, complète',
-  'le retard',
   'la carte postale',
 );
 
@@ -314,8 +283,6 @@ export const vacances: UnitContent = {
           { id: 'etre', label: 'être (je suis …)', emoji: '🅱️' },
         ],
         items: sortCards('s', [
-          ['visiter', 'avoir', 'to visit: j’ai visité'],
-          ['réserver', 'avoir', 'to book: j’ai réservé'],
           ['voyager', 'avoir', 'to travel: j’ai voyagé'],
           ['envoyer', 'avoir', 'to send: j’ai envoyé'],
           ['prendre', 'avoir', 'to take: j’ai pris'],

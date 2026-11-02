@@ -17,11 +17,9 @@ const U = 'fr-a1-2-langues';
 
 const learning = vocabList(U, 'Learning a language', [
   ['la langue', 'language', '🗣️'],
-  ['l’accent', 'accent', '🎙️'],
   ['la prononciation', 'pronunciation', '👄'],
   ['le vocabulaire', 'vocabulary', '🔤'],
   ['la grammaire', 'grammar', '📐'],
-  ['la faute', 'mistake (in a text)', '✏️'],
   ['corriger', 'to correct', '✅'],
   ['traduire', 'to translate', '🔁'],
   ['le dictionnaire', 'dictionary', '📖'],
@@ -31,7 +29,6 @@ const learning = vocabList(U, 'Learning a language', [
   ['la méthode', 'method', '🧭'],
   ['l’application', 'app', '📱'],
   ['les sous-titres', 'subtitles', '🎬'],
-  ['le podcast', 'podcast', '🎧'],
 ]);
 
 const difficulties = vocabList(U, 'Difficulties', [
@@ -39,8 +36,6 @@ const difficulties = vocabList(U, 'Difficulties', [
   ['ne pas y arriver', 'not to manage', '🙁'],
   ['se tromper', 'to make a mistake', '🙈'],
   ['oublier', 'to forget', '🫥'],
-  ['retenir', 'to remember, to retain', '🧠'],
-  ['hésiter', 'to hesitate', '🤔'],
   ['avoir peur de …', 'to be afraid of …', '😨'],
   ['répéter', 'to repeat', '🔂'],
   ['parler plus lentement', 'to speak more slowly', '🐌'],
@@ -48,10 +43,8 @@ const difficulties = vocabList(U, 'Difficulties', [
 ]);
 
 const encourage = vocabList(U, 'Encouraging someone', [
-  ['Courage !', 'Keep going!', '💪'],
   ['Bien joué !', 'Well played!', '👏'],
   ['Continue !', 'Carry on!', '➡️'],
-  ['Ne t’inquiète pas.', 'Do not worry.', '🙂'],
   ['Tu y arrives !', 'You are getting there!', '🎯'],
   ['N’hésite pas !', 'Do not hesitate!', '🙌'],
   ['C’est normal.', 'That is normal.', '👌'],
@@ -60,20 +53,16 @@ const encourage = vocabList(U, 'Encouraging someone', [
 ]);
 
 const opinions = vocabList(U, 'Giving an opinion', [
-  ['à mon avis', 'in my opinion', '💬'],
   ['Je pense que …', 'I think that …', '💭'],
   ['Je trouve que …', 'I find that …', '🧐'],
   ['Je suis d’accord.', 'I agree.', '👍'],
   ['Je ne suis pas d’accord.', 'I disagree.', '👎'],
   ['avoir raison', 'to be right', '✔️'],
-  ['avoir tort', 'to be wrong', '✖️'],
   ['Pas du tout !', 'Not at all!', '🙅'],
   ['Exactement !', 'Exactly!', '🎯'],
-  ['peut-être', 'maybe', '🤷'],
 ]);
 
 const practise = vocabList(U, 'Practising', [
-  ['s’entraîner', 'to practise', '🏋️'],
   ['l’échange linguistique', 'language exchange', '🤝'],
   ['le tandem', 'language tandem partner', '👥'],
   ['tenir un journal', 'to keep a diary', '📓'],
@@ -88,11 +77,9 @@ const vocab = [...learning, ...difficulties, ...encourage, ...opinions, ...pract
 const pictureQuiz = byDe(
   vocab,
   'le dictionnaire',
-  'le podcast',
   'les sous-titres',
   'l’application',
   'Bien joué !',
-  'Courage !',
   'tenir un journal',
   'l’échange linguistique',
 );
@@ -102,9 +89,7 @@ const heard = byDe(
   'la prononciation',
   'corriger',
   'le dictionnaire',
-  'hésiter',
   'Pas de panique !',
-  'à mon avis',
   'Je ne suis pas d’accord.',
 );
 
