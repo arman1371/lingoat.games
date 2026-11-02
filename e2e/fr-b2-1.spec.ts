@@ -141,6 +141,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['dialogue', 'fr-b2-1-logement-dialogues'],
   ['blitz', 'fr-b2-1-logement-blitz'],
   ['quiz', 'fr-b2-1-logement-challenge'],
+  ['gap fill (passive)', 'fr-b2-1-ville-gap-passive'],
+  ['gap fill (concession)', 'fr-b2-1-ville-gap-concession'],
+  ['sort it (what follows)', 'fr-b2-1-ville-sort-concession'],
+  ['sentence builder', 'fr-b2-1-ville-sentences'],
+  ['dialogue', 'fr-b2-1-ville-dialogues'],
+  ['blitz', 'fr-b2-1-ville-blitz'],
+  ['quiz', 'fr-b2-1-ville-challenge'],
 ];
 
 test.describe('French B2.1 – playing the games', () => {

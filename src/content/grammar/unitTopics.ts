@@ -606,4 +606,8 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-lequel', note: 'lequel, auquel, duquel' },
     { topic: 'fr-relative-choice', note: 'qui, dont, où or lequel?' },
   ],
+  'fr-b2-1-ville': [
+    { topic: 'fr-passive', note: 'être + participle, se + verb' },
+    { topic: 'fr-concession', note: 'bien que, alors que, malgré, même si' },
+  ],
 };

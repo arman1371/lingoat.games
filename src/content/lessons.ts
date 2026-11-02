@@ -1498,6 +1498,24 @@ export const LESSONS = {
       'La ville où je travaille est loin.',
     ],
   },
+  'fr-passive': {
+    title: 'The passive and the pronominal passive',
+    rule: 'Passive: être (in the tense of the active verb) + past participle, which agrees with the subject, with the doer after par (la loi a été votée par le conseil). Pronominal passive: se + verb for general facts (ce quartier se visite à pied, les vélos se louent à la gare). French often prefers on with an active verb.',
+    examples: [
+      'Ces rues ont été rénovées par la mairie.',
+      'Ce quartier se visite à pied.',
+      'Les vélos se louent à la gare.',
+    ],
+  },
+  'fr-concession': {
+    title: 'Opposition and concession',
+    rule: 'Bien que and quoique take the subjunctive; alors que, tandis que and même si take the indicative (no future after si); malgré and en dépit de take a noun; pourtant, cependant and toutefois link two sentences. Avoid malgré que.',
+    examples: [
+      'Bien que la ville soit polluée, les habitants y restent.',
+      'Malgré la pluie, le marché a eu lieu.',
+      'Même si c’est cher, c’est nécessaire.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

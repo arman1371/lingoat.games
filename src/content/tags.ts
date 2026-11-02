@@ -464,6 +464,9 @@ export const TAGS = {
   'fr-relative-ce': { label: 'ce qui, ce que, ce dont', group: 'grammar', emoji: '🧩' },
   'fr-lequel': { label: 'lequel, auquel, duquel', group: 'grammar', emoji: '🔀' },
   'fr-relative-choice': { label: 'qui, dont, où or lequel?', group: 'grammar', emoji: '🧭' },
+  'future-city': { label: 'The city of tomorrow', group: 'topic', emoji: '🌆' },
+  'fr-passive': { label: 'The passive', group: 'grammar', emoji: '🔁' },
+  'fr-concession': { label: 'bien que, alors que, malgré, même si', group: 'grammar', emoji: '↔️' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

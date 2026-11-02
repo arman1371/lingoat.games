@@ -42,9 +42,9 @@ along its "Des mots et des formes" pages.
 | 3   | Santé ! (`sante`)                      | body, symptoms, doctors and medicines, advice, sport and doping | giving advice: conditional, impératif, il vaut mieux que             | Alter Ego + 4 D2, Édito B2 U6                       |
 | 4   | Doute et certitude (`doute`)           | opinions, certainty and doubt                                   | subjonctif présent, indicative or subjunctive after verbs of opinion | Alter Ego + 4 D2, Édito B2 U7–9 (UNAM), Édito B2 U1 |
 | 5   | Sentiments et jugements (`sentiments`) | feelings, judgements, apparence physique                        | subjunctive or infinitive, subjonctif passé                          | Alter Ego + 4 D2, Édito B2 U7–9 (UNAM)              |
-| 6   | Migrations (`migrations`)              | reasons for moving, migrants, mobility, welcoming countries     | expressing the reason and the result                                 | Alter Ego + 4 D3, Alter Ego 4 D1, Édito B2 U4       |
+| 6   | Migrations (`migrations`)              | reasons for moving, migrants, mobility, welcoming countries     | giving a reason: conjunctions and prepositions                       | Alter Ego + 4 D3, Alter Ego 4 D1, Édito B2 U4       |
 | 7   | Démarches et voyages (`demarches`)     | visa, administrative letters, tourism, describing a place       | expressing a purpose (pour que, afin que)                            | Alter Ego + 4 D3, Édito B2 U4, UNAM (but)           |
-| 8   | Cause et conséquence (`cause`)         | arguing: because, so that, as a result                          | cause, consequence                                                   | Alter Ego + 4 D3, Édito B2 U7–9 (UNAM)              |
+| 8   | Cause et conséquence (`cause`)         | arguing: because, so that, as a result                          | consequence, verbs of cause and effect                               | Alter Ego + 4 D3, Édito B2 U7–9 (UNAM)              |
 | 9   | Lire un récit (`recit`)                | narrative texts, a travel novel, anecdotes                      | passé simple, passé antérieur (recognition)                          | Alter Ego + 4 D3, Alter Ego 4 D1                    |
 | 10  | Cités (`cites`)                        | old and modern cities, the city of the future, small ads        | relative pronouns qui, que, où, dont                                 | Alter Ego + 4 D4, Alter Ego 4 D3                    |
 | 11  | Logement (`logement`)                  | flatshares, describing a flat, complaints                       | compound relatives (lequel, auquel, duquel)                          | Alter Ego + 4 D4, Alter Ego 4 D3                    |
@@ -55,11 +55,24 @@ cards are not repeated in another unit or in an earlier French level (`content.t
 
 ## Build plan
 
-1. Plumbing and **unit 1** (`identite`, 15 games): level entry in `levels.ts` (French levels are sorted in CEFR order),
-   tags, mini lessons with their two full grammar lessons (`src/content/grammar/fr-b2-1.ts`), shared test harnesses, e2e
-   spec. **Done.**
-2. Units 2 to 12 in separate PRs. Every French mini lesson needs a full lesson, so each unit PR adds its own topics (topic level
-   `fr-b2-1`, linked from the unit in `unitTopics.ts`).
+All twelve units go into one pull request (Arman's rule: one PR per level, not one per unit).
 
-French has no generator for the compound tenses, the conditional or the subjunctive yet, so the forms of these tables are
-written by hand (`frForms` in `fr-b2-1/helpers.ts`).
+1. Plumbing and **unit 1** (`identite`, 15 games): level entry in `levels.ts` (French levels are sorted in CEFR order),
+   tags, mini lessons with their full grammar lessons (`src/content/grammar/fr-b2-1.ts`), shared test harnesses, e2e
+   spec.
+2. Units 2 to 12, each with its vocabulary (about 34 words in three groups), 12 to 15 games with at least 6 of the 13
+   engines, its tags, its mini lessons and its full lessons (`src/content/grammar/fr-b2-1-u2.ts` … `fr-b2-1-u12.ts`, topic
+   level `fr-b2-1`, linked from the unit in `unitTopics.ts`) and its entries in `e2e/fr-b2-1.spec.ts`. **Done.**
+
+Units 2 to 12 build the six vocabulary games with `vocabGames()` in `fr-b2-1/helpers.ts` (flashcards of two word groups,
+meaning quiz, memory, listening, spelling) and add the grammar games by hand.
+
+French has no generator for the compound tenses, the conditional, the subjunctive or the passé simple yet, so the forms of
+these tables are written by hand (`frForms` in `fr-b2-1/helpers.ts`).
+
+## Checks done and not done
+
+- The vocabulary of B2.1 is compared with every earlier French level in `content.test.ts`; an earlier-level word had to be
+  replaced in four places (unit 2).
+- The unit list was **not** checked against the official DELF B2 exam description (see "Not read" above).
+- A native speaker has not reviewed the French.

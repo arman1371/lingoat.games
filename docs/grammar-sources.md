@@ -264,19 +264,39 @@ participle or of personne after it; those follow common textbook teaching. The W
 pendant give the meaning (starting point, "during") but no tense rule, so "depuis + present for a continuing situation"
 and "pendant + passé composé" are textbook teaching, not checked against a fetched page.
 
-## French B2.1 (topics added unit by unit)
+## French B2.1
 
-The lessons are in `src/content/grammar/fr-b2-1.ts`, the pages in `sources-fr-b2-1.ts`. The forms in the tables are written by
-hand. The French content has **not yet been reviewed by a native speaker**.
+The lessons are in `src/content/grammar/fr-b2-1.ts` (unit 1) and `fr-b2-1-u2.ts` to `fr-b2-1-u12.ts`; the pages are in
+`sources-fr-b2-1.ts`. The forms in the tables are written by hand. The French content has **not yet been reviewed by a
+native speaker**.
 
-| Topic                       | Pages read                                                                                                                                                                                      |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Imparfait or passé composé? | [Imparfait de l’indicatif en français](https://fr.wikipedia.org/wiki/Imparfait_de_l%E2%80%99indicatif_en_fran%C3%A7ais), [Passé composé](https://fr.wikipedia.org/wiki/Pass%C3%A9_compos%C3%A9) |
-| The plus-que-parfait        | [Indicatif plus-que-parfait en français](https://fr.wikipedia.org/wiki/Indicatif_plus-que-parfait_en_fran%C3%A7ais), [Passé composé](https://fr.wikipedia.org/wiki/Pass%C3%A9_compos%C3%A9)     |
+| Topic                                        | Pages (fr.wikipedia.org)                                                                               |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Imparfait or passé composé?                  | Imparfait de l’indicatif en français, Passé composé                                                    |
+| The plus-que-parfait                         | Indicatif plus-que-parfait en français, Passé composé                                                  |
+| Agreement of the past participle             | Accord du participe passé en français, Passé composé                                                   |
+| Conjunctions of time                         | Conjonction de subordination, Proposition subordonnée circonstancielle                                 |
+| The conditional for advice, giving advice    | Conditionnel en français, Impératif (grammaire), Subjonctif en français                                |
+| The present subjunctive, opinion verbs       | Subjonctif présent en français, Subjonctif en français, Proposition subordonnée conjonctive            |
+| Subjunctive or infinitive, past subjunctive  | Subjonctif en français, Subjonctif passé, Proposition subordonnée conjonctive                          |
+| Cause (conjunctions, prepositions), purpose  | Conjonction de subordination, Proposition subordonnée circonstancielle                                 |
+| Consequence, verbs of cause                  | Conjonction de subordination, Proposition subordonnée circonstancielle                                 |
+| Passé simple, passé antérieur                | Passé simple en français, Passé antérieur en français                                                  |
+| Relative pronouns, ce qui / ce que / ce dont | Pronom relatif en français, Proposition subordonnée relative                                           |
+| Lequel, auquel, duquel; choosing the pronoun | Pronom relatif en français, Proposition subordonnée relative                                           |
+| The passive, opposition and concession       | Voix passive, Voix pronominale, Conjonction de subordination, Proposition subordonnée circonstancielle |
 
-**French B2.1 limits:** the pages do not state every detail. These follow common textbook teaching and are **not** checked against a
-fetched page: the list of verbs that take être, the signal-word table (souvent, hier, soudain …), the spelling changes
-(mangeais, commençais) and the "film test" tip.
+**How the pages were checked:** the existence of every page was confirmed by fetching it (HTTP 200). Only a few pages were
+searched for the terms the lessons use (the circumstantial subordinate page lists cause, time, consequence, concession,
+condition, opposition and purpose; the subordinating-conjunction page lists conjunctions with their relation, for example
+"afin que (but)" and "alors que (opposition)"; the conditional page names advice, politeness and uncertain information among
+its uses). The other pages were **not** read in full.
+
+**French B2.1 limits:** the pages do not state every detail. These follow common textbook teaching and are **not** checked
+against a fetched page: the signal-word table of the imparfait, the list of verbs that take être, the mood after each
+conjunction (the exact lists of indicative and subjunctive conjunctions), the nuance between parce que, puisque, comme and
+car, the nuance between à cause de and grâce à, the ladder from soft to firm advice, the endings of the passé simple
+(third persons), the contractions auquel and duquel, and the dont / duquel split.
 
 ## Limits of the research
 
