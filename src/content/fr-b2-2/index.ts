@@ -5,8 +5,9 @@ import { solidarite } from './u3-solidarite';
 import { justice } from './u4-justice';
 import { culture } from './u5-culture';
 import { science } from './u6-science';
+import { economie } from './u7-economie';
 
-const units = [actu, sante, solidarite, justice, culture, science];
+const units = [actu, sante, solidarite, justice, culture, science, economie];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

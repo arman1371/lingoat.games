@@ -427,6 +427,9 @@ export const TAGS = {
   'fr-b22-science': { label: 'Science & innovation', group: 'topic', emoji: '🔬' },
   'fr-b22-cause': { label: 'Expressing cause', group: 'grammar', emoji: '🔙' },
   'fr-b22-consequence': { label: 'Consequence and aim', group: 'grammar', emoji: '➡️' },
+  'fr-b22-economy': { label: 'Economy & consumption', group: 'topic', emoji: '📈' },
+  'fr-b22-concession': { label: 'Contrast and concession', group: 'grammar', emoji: '↔️' },
+  'fr-b22-comparison': { label: 'Comparing', group: 'grammar', emoji: '⚖️' },
   // topics – French A2.1
   'life-path': { label: 'Life path & careers', group: 'topic', emoji: '🛤️' },
   // grammar points – French A2.1, unit 1

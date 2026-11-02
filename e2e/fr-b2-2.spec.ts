@@ -79,6 +79,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (consequence)', 'fr-b2-2-science-gap-consequence'],
   ['sort it (cause or consequence)', 'fr-b2-2-science-sort-link'],
   ['dialogue (unit 6)', 'fr-b2-2-science-dialogues'],
+  // unit 7
+  ['flashcards (unit 7)', 'fr-b2-2-economie-flash-economy'],
+  ['gap fill (concession)', 'fr-b2-2-economie-gap-concession'],
+  ['gap fill (comparison)', 'fr-b2-2-economie-gap-comparison'],
+  ['sort it (concession)', 'fr-b2-2-economie-sort-concession'],
+  ['dialogue (unit 7)', 'fr-b2-2-economie-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {

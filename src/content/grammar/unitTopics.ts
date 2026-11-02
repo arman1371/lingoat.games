@@ -566,6 +566,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b22-cause', note: 'grâce à, à cause de, puisque, ce n’est pas que' },
     { topic: 'fr-b22-consequence', note: 'si bien que, tellement … que, de façon que' },
   ],
+  'fr-b2-2-economie': [
+    { topic: 'fr-b22-concession', note: 'bien que, même si, malgré, pourtant' },
+    { topic: 'fr-b22-comparison', note: 'plus … plus, de plus en plus, autant … que' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

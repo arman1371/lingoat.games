@@ -1377,6 +1377,24 @@ export const LESSONS = {
       'Parlez de sorte que chacun vous entende.',
     ],
   },
+  'fr-b22-concession': {
+    title: 'Contrast and concession',
+    rule: 'Bien que, quoique, sans que take the subjunctive. Même si, alors que, tandis que take the indicative. Malgré and en dépit de take a noun. Avoir beau takes an infinitive: Il a beau essayer, il échoue. Certes … mais and pourtant also mark a contrast.',
+    examples: [
+      'Bien qu’il soit cher, il se vend bien.',
+      'Même si les prix montent, nous continuons.',
+      'Malgré la crise, les ventes progressent.',
+    ],
+  },
+  'fr-b22-comparison': {
+    title: 'Comparing',
+    rule: 'Plus / moins / aussi + adjective or adverb + que; plus de / moins de / autant de + noun + que. Bon → meilleur, bien → mieux. Plus … plus (proportion), de plus en plus (progression), d’autant plus … que (all the more as). Plus on dépense, moins on épargne.',
+    examples: [
+      'Elle gagne autant que moi.',
+      'De plus en plus de gens achètent d’occasion.',
+      'Il travaille mieux que moi.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',
