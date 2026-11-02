@@ -438,6 +438,11 @@ export const TAGS = {
   'fr-c11-subjunctive': { label: 'Subjunctive: wish, need, doubt', group: 'grammar', emoji: '💭' },
   'fr-c11-reprise': { label: 'celui, ce qui, dont, lequel', group: 'grammar', emoji: '🔗' },
   'fr-c11-emphasis': { label: 'c’est … qui / que, ce qui … c’est', group: 'grammar', emoji: '🔦' },
+  'fr-c11-narrative-tenses': {
+    label: 'Narrative tenses: imparfait, passé simple',
+    group: 'grammar',
+    emoji: '📜',
+  },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

@@ -7,8 +7,19 @@ import { sante } from './u5-sante';
 import { ville } from './u6-ville';
 import { famille7 } from './u7-famille';
 import { culture } from './u8-culture';
+import { litterature } from './u9-litterature';
 
-const units = [medias, societe, egalite, alimentation, sante, ville, famille7, culture];
+const units = [
+  medias,
+  societe,
+  egalite,
+  alimentation,
+  sante,
+  ville,
+  famille7,
+  culture,
+  litterature,
+];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

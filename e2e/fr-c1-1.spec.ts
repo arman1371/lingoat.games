@@ -122,6 +122,12 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sentence builder', 'fr-c1-1-culture-sentences'],
   ['dialogue (two scenes)', 'fr-c1-1-culture-dialogues'],
   ['unit challenge', 'fr-c1-1-culture-challenge'],
+  ['sort it (narrative tenses)', 'fr-c1-1-litterature-sort-tenses'],
+  ['conjugation (pass\u00e9 simple)', 'fr-c1-1-litterature-conj-narrative'],
+  ['gap fill (choose)', 'fr-c1-1-litterature-gap-tenses'],
+  ['gap fill (type)', 'fr-c1-1-litterature-gap-typed'],
+  ['sentence builder', 'fr-c1-1-litterature-sentences'],
+  ['unit challenge', 'fr-c1-1-litterature-challenge'],
 ];
 
 test.describe('French C1.1 – playing the games', () => {

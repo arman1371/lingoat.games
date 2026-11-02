@@ -794,4 +794,96 @@ export const FRC11_TOPICS: GrammarTopic[] = [
     related: ['fr-c11-reprise'],
     sources: [S.cleft, S.dislocation, S.emphasis, S.cest],
   },
+  {
+    id: 'fr-c11-narrative-tenses',
+    title: 'Narrative tenses',
+    tagline: 'How do I tell a story in the past, as in a novel?',
+    level: LEVEL,
+    summary:
+      'A story in the past uses three layers. The imparfait sets the scene and describes habits and states. The passé composé (in speech) or the passé simple (in written narration) moves the plot forward with completed events. The plus-que-parfait goes back to what had already happened. At C1 you must recognise the passé simple, even if you rarely write it.',
+    sections: [
+      section(
+        'layers',
+        'Scene, event, earlier event',
+        p(
+          'The **imparfait** is the camera that stays on the scene: weather, places, feelings, habits (*Il pleuvait. Les rues étaient vides.*). The **passé composé** or **passé simple** is the action that interrupts it (*Soudain, la porte s’ouvrit.*). The **plus-que-parfait** is the flashback (*Elle avait oublié son manteau.*).',
+        ),
+        table(
+          'The layers of a story.',
+          ['Layer', 'Tense', 'Example'],
+          [
+            ['Scene, habit, state', 'imparfait', 'Il faisait nuit quand le train arriva.'],
+            ['Event in speech', 'passé composé', 'Il a téléphoné à minuit.'],
+            ['Event in a novel', 'passé simple', 'Il ouvrit la porte et entra.'],
+            ['Earlier event', 'plus-que-parfait', 'Il était déjà parti.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Il plut ce soir-là.  ✓ Il pleuvait ce soir-là. (the weather is background)',
+          '✗ Elle a oublié son manteau avant de sortir (earlier event).  ✓ Elle avait oublié son manteau.',
+        ),
+      ),
+      section(
+        'passe-simple',
+        'The passé simple',
+        p(
+          'The **passé simple** is rarely spoken, but you meet it in every novel, in tales and in history. Most readers only need the **third persons**, *il / elle* and *ils / elles*. Verbs in **-er** take **-a** and **-èrent**; most others take **-it** and **-irent** or **-ut** and **-urent**. A few are irregular and worth learning: *être* (fut, furent), *avoir* (eut, eurent), *faire* (fit, firent), *venir* (vint, vinrent).',
+        ),
+        table(
+          'Passé simple, third persons.',
+          ['Verb', 'il / elle', 'ils / elles'],
+          [
+            ['parler', 'parla', 'parlèrent'],
+            ['finir', 'finit', 'finirent'],
+            ['prendre', 'prit', 'prirent'],
+            ['être', 'fut', 'furent'],
+            ['avoir', 'eut', 'eurent'],
+            ['faire', 'fit', 'firent'],
+            ['venir', 'vint', 'vinrent'],
+          ],
+        ),
+        tip(
+          'In speech',
+          'In conversation, use the passé composé where a novel uses the passé simple: *Il ouvrit la porte* in a book becomes *Il a ouvert la porte* in speech.',
+        ),
+      ),
+      section(
+        'plus-que-parfait',
+        'The plus-que-parfait',
+        p(
+          'The **plus-que-parfait** is the **imparfait** of **avoir** or **être** plus the **past participle**: *j’avais fini, elle était partie, nous nous étions réveillés*. It shows that an action was **already finished** before another past moment, and it explains causes (*Elle était triste car son frère était parti*).',
+        ),
+        examples(
+          [
+            'Elle avait déjà fermé la fenêtre quand il est arrivé.',
+            'She had already closed the window when he arrived.',
+          ],
+          [
+            'Le narrateur évoque une enfance qu’il avait oubliée.',
+            'The narrator evokes a childhood he had forgotten.',
+          ],
+        ),
+        compare(
+          {
+            title: 'imparfait',
+            question: 'Background',
+            example: 'Il pleuvait.',
+          },
+          {
+            title: 'passé simple / composé',
+            question: 'Event',
+            example: 'Il ouvrit la porte.',
+          },
+          {
+            title: 'plus-que-parfait',
+            question: 'Earlier event',
+            example: 'Il avait fermé la porte.',
+          },
+        ),
+      ),
+    ],
+    related: ['fr-c11-si-clauses'],
+    sources: [S.passeSimple, S.passeCompose, S.imparfaitWp, S.pqp, S.passeAnterieur],
+  },
 ];

@@ -1381,6 +1381,15 @@ export const LESSONS = {
       'Cette exposition, je l’ai adorée.',
     ],
   },
+  'fr-c11-narrative-tenses': {
+    title: 'Narrative tenses',
+    rule: 'Tell a story with three layers: imparfait for the scene and habits (il pleuvait), passé composé in speech or passé simple in literature for the events (il ouvrit la porte), plus-que-parfait for what had already happened (elle avait oublié son manteau).',
+    examples: [
+      'Il pleuvait et les rues étaient vides.',
+      'Soudain, la porte s’ouvrit.',
+      'Elle avait déjà fermé la fenêtre quand il est arrivé.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;
