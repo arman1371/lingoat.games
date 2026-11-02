@@ -1,5 +1,6 @@
 import { reflexiveFr } from '@/lib/french/conjugation';
 import { passeComposeAvoir } from '@/lib/french/passeCompose';
+import { passeCompose, passeComposeReflexive } from '@/lib/french/tenses';
 import { FRENCH_PRONOUNS } from '@/lib/persons';
 import { examples, mistake, p, section, table, tip } from './build';
 import type { GrammarTopic } from './schema';
@@ -28,7 +29,7 @@ const pcTable = (caption: string, verbs: readonly (readonly [string, string])[])
   );
 };
 
-/** French A1.2, units 1 to 3: the daily routine, family events, descriptions and the home. */
+/** French A1.2, units 1 to 8: routine, events, home, holidays, health, work, nature and learning French. */
 export const FR12_TOPICS: GrammarTopic[] = [
   {
     id: 'fr-pronominal',
@@ -522,5 +523,462 @@ export const FR12_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-articles', 'fr-place-prepositions', 'fr-contractions'],
     sources: [S.auDessus, FR.contraction],
+  },
+  {
+    id: 'fr-a12-comparison',
+    title: 'plus, moins, aussi … que',
+    tagline: 'Which hotel is cheaper? Which beach is nicer?',
+    level: LEVEL,
+    summary:
+      'Compare two things with plus, moins or aussi + adjective + que. The adjective agrees with the first noun. Bon is the exception: its comparative is meilleur, never plus bon.',
+    sections: [
+      section(
+        'three-degrees',
+        'More, less, as',
+        p(
+          'Put the little word before the adjective and **que** before the thing you compare with. **Plus** means *more*, **moins** means *less*, **aussi** means *as … as*.',
+        ),
+        table(
+          'Three ways to compare.',
+          ['Degree', 'Pattern', 'Example'],
+          [
+            ['more', 'plus + adjective + que', 'Le train est plus rapide que le bus.'],
+            ['less', 'moins + adjective + que', 'La ville est moins tranquille que la campagne.'],
+            ['as … as', 'aussi + adjective + que', 'L’hôtel est aussi cher que l’auberge.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'The adjective does not change form for the comparison, but it still agrees with the first noun: la chambre est moins chère, les prix sont moins chers.',
+          'Que becomes qu’ before a vowel: plus grand qu’avant.',
+        ),
+      ),
+      section(
+        'meilleur',
+        'bon becomes meilleur',
+        p(
+          'The adjective **bon** (good) has its own comparative: **meilleur**, **meilleure**, **meilleurs**, **meilleures**. French never says *plus bon*. For *less good*, use **moins bon**.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Cet hôtel est plus bon que l’autre.  ✓ Cet hôtel est meilleur que l’autre.',
+          '✗ La chambre est moins cher.  ✓ La chambre est moins chère.',
+          '✗ Il est plus grand de moi.  ✓ Il est plus grand que moi.',
+        ),
+        examples(
+          ['Le camping est moins cher que l’hôtel.', 'The campsite is cheaper than the hotel.'],
+          ['Cette plage est meilleure pour les enfants.', 'This beach is better for children.'],
+        ),
+      ),
+    ],
+    related: ['fr-adjectives', 'fr-adjective-position', 'fr-a12-cetait'],
+    sources: [S.plus, S.aussi, S.meilleur],
+  },
+  {
+    id: 'fr-a12-partir',
+    title: 'partir, sortir, dormir',
+    tagline: '-ir verbs that do not follow finir',
+    level: LEVEL,
+    summary:
+      'Partir, sortir and dormir are -ir verbs without -iss-. The singular drops the last consonant of the stem and adds -s, -s, -t (je pars, tu pars, il part); the plural is regular (nous partons).',
+    sections: [
+      section(
+        'forms',
+        'One pattern for three verbs',
+        table(
+          'Present tense of partir, sortir and dormir.',
+          ['Person', 'partir', 'sortir', 'dormir'],
+          [
+            ['je', 'pars', 'sors', 'dors'],
+            ['tu', 'pars', 'sors', 'dors'],
+            ['il/elle/on', 'part', 'sort', 'dort'],
+            ['nous', 'partons', 'sortons', 'dormons'],
+            ['vous', 'partez', 'sortez', 'dormez'],
+            ['ils/elles', 'partent', 'sortent', 'dorment'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'Compare with finir: nous finissons, but nous partons. There is no -iss- in these verbs.',
+          'In the singular the t of part- and the m of dorm- disappear: je pars, je dors.',
+        ),
+      ),
+      section(
+        'use',
+        'Where to? With what?',
+        p(
+          '**Partir** takes **à** or **en** for a destination (*partir à Rome, partir en France*) and **de** for the starting point (*partir de Paris*). **Sortir** means to go out, and **sortir avec** means to go out with someone.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je part demain.  ✓ Je pars demain.',
+          '✗ Nous partissons à midi.  ✓ Nous partons à midi.',
+          '✗ Il dormt bien.  ✓ Il dort bien.',
+        ),
+        examples(
+          ['Je pars en vacances lundi.', 'I am leaving on holiday on Monday.'],
+          ['Ils dorment dans une tente.', 'They are sleeping in a tent.'],
+        ),
+      ),
+    ],
+    related: ['fr-ir-verbs', 'fr-aller', 'fr-a12-pc-etre'],
+    sources: [S.partir, S.sortir, S.dormir],
+  },
+  {
+    id: 'fr-a12-pc-etre',
+    title: 'The passé composé with être',
+    tagline: 'Je suis allé, elle est arrivée',
+    level: LEVEL,
+    summary:
+      'Verbs of movement and change (aller, arriver, partir, rester, sortir, venir …) form the passé composé with être. The participle then agrees with the subject: elle est allée, nous sommes partis.',
+    sections: [
+      section(
+        'forms',
+        'être instead of avoir',
+        p(
+          'Most verbs take **avoir** (*j’ai mangé*). A small group takes **être** in the present plus the participle. The participle behaves like an adjective: add **-e** for a woman and **-s** for several people.',
+        ),
+        table(
+          'aller in the passé composé.',
+          ['Person', 'masculine', 'feminine'],
+          FRENCH_PRONOUNS.map((pr) => [
+            pr,
+            passeCompose('aller')[pr],
+            passeCompose('aller', { feminine: true })[pr],
+          ]),
+        ),
+        tip(
+          'Spot the pattern',
+          'Je suis allé / allée and tu es allé / allée sound the same: the agreement shows only in writing.',
+          'Nous sommes allés, vous êtes allés and ils sont allés add -s; elles sont allées adds -es.',
+        ),
+      ),
+      section(
+        'which-verbs',
+        'Which verbs take être?',
+        p(
+          'Learn them as a group: **aller, venir, arriver, partir, rester, sortir, entrer, rentrer, tomber, monter, descendre, naître, mourir**. All other verbs you know (visiter, réserver, prendre, dormir …) take avoir.',
+        ),
+        table(
+          'être or avoir?',
+          ['être (je suis …)', 'avoir (j’ai …)'],
+          [
+            ['je suis allé à la mer', 'j’ai visité le musée'],
+            ['elle est arrivée hier', 'elle a réservé une chambre'],
+            ['nous sommes restés', 'nous avons dormi'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ J’ai allé à Nice.  ✓ Je suis allé à Nice.',
+          '✗ Elle est arrivé hier.  ✓ Elle est arrivée hier.',
+          '✗ Je n’ai pas resté.  ✓ Je ne suis pas resté.',
+        ),
+        examples(
+          ['Mes parents sont partis lundi.', 'My parents left on Monday.'],
+          ['Léa n’est pas restée à l’hôtel.', 'Léa did not stay at the hotel.'],
+        ),
+      ),
+    ],
+    related: ['fr-passe-compose-avoir', 'fr-aller', 'fr-negation'],
+    sources: [S.passeCompose, FR.aller, S.arriver, S.rester],
+  },
+  {
+    id: 'fr-a12-cetait',
+    title: 'c’était, il y avait',
+    tagline: 'Describing a place or a holiday in the past',
+    level: LEVEL,
+    summary:
+      'To describe how things were, use c’était (it was), il y avait (there was, there were) and il faisait beau (the weather was nice). These phrases do not change for singular or plural.',
+    sections: [
+      section(
+        'phrases',
+        'Three phrases to describe the past',
+        p(
+          'The tense that describes a situation in the past is the **imparfait**. For now you only need three fixed phrases, built from verbs you already know: *être* → **c’était**, *avoir* → **il y avait**, *faire* → **il faisait**.',
+        ),
+        table(
+          'Present and past.',
+          ['Now', 'Then'],
+          [
+            ['C’est super.', 'C’était super.'],
+            ['Il y a une piscine.', 'Il y avait une piscine.'],
+            ['Il fait beau.', 'Il faisait beau.'],
+            ['Le paysage est magnifique.', 'Le paysage était magnifique.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'The endings -ais, -ait, -aient sound the same: était, avait and faisait all end in the sound [ɛ].',
+          'Il y avait does not become il y avaient with a plural: il y avait des touristes.',
+        ),
+      ),
+      section(
+        'when',
+        'Describing or telling what happened?',
+        p(
+          'Use **c’était** and **il y avait** to *describe* (the weather, the hotel, how it felt). Use the **passé composé** to say what *happened*: *Nous sommes allés à la plage. C’était super !*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Hier, c’est super.  ✓ Hier, c’était super.',
+          '✗ Il y avaient des touristes.  ✓ Il y avait des touristes.',
+          '✗ Il y avait beau.  ✓ Il faisait beau.',
+        ),
+        examples(
+          ['À l’hôtel, il y avait une piscine.', 'At the hotel there was a swimming pool.'],
+          ['Il faisait beau et c’était tranquille.', 'The weather was nice and it was quiet.'],
+        ),
+      ),
+    ],
+    related: ['fr-etre-avoir', 'fr-a12-pc-etre', 'fr-time-markers'],
+    sources: [S.imparfait, S.etreConj],
+  },
+  {
+    id: 'fr-a12-avoir-mal',
+    title: 'avoir mal à',
+    tagline: 'Where does it hurt?',
+    level: LEVEL,
+    summary:
+      'Say where it hurts with avoir mal à + the part of the body. À joins the article: à + le = au, à + les = aux; à la and à l’ do not change.',
+    sections: [
+      section(
+        'pattern',
+        'avoir mal + à + article + body part',
+        p(
+          'French uses **avoir** (not être) with **mal**: *J’ai mal à la tête* literally means *I have pain at the head*. The verb agrees with the person, and the body part comes after **à**.',
+        ),
+        table(
+          'À and the article.',
+          ['Body part', 'à + article', 'Example'],
+          [
+            ['la tête (feminine)', 'à la', 'J’ai mal à la tête.'],
+            ['le dos (masculine)', 'au', 'Il a mal au dos.'],
+            ['l’oreille (vowel)', 'à l’', 'Nous avons mal à l’oreille.'],
+            ['les dents (plural)', 'aux', 'Elle a mal aux dents.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'It is the same à + le = au and à + les = aux you know from au café and aux toilettes.',
+        ),
+      ),
+      section(
+        'mistakes',
+        'Common mistakes',
+        mistake(
+          'Watch out',
+          '✗ Je suis mal à la tête.  ✓ J’ai mal à la tête.',
+          '✗ Il a mal à le dos.  ✓ Il a mal au dos.',
+          '✗ Elle a mal à les dents.  ✓ Elle a mal aux dents.',
+        ),
+        examples(
+          ['Tu as mal au pied ?', 'Does your foot hurt?'],
+          ['J’ai mal à la gorge depuis hier.', 'I have had a sore throat since yesterday.'],
+        ),
+      ),
+    ],
+    related: ['fr-contractions', 'fr-etre-avoir', 'fr-a12-devoir-falloir'],
+    sources: [S.mal, FR.contraction],
+  },
+  {
+    id: 'fr-a12-devoir-falloir',
+    title: 'devoir and il faut',
+    tagline: 'What you must do, and what you must not do',
+    level: LEVEL,
+    summary:
+      'Devoir is irregular (je dois, nous devons, ils doivent) and takes an infinitive. Il faut + infinitive says what is needed in general; il ne faut pas means you must not.',
+    sections: [
+      section(
+        'devoir',
+        'devoir + infinitive',
+        table(
+          'Present tense of devoir.',
+          ['Person', 'devoir'],
+          [
+            ['je', 'dois'],
+            ['tu', 'dois'],
+            ['il/elle/on', 'doit'],
+            ['nous', 'devons'],
+            ['vous', 'devez'],
+            ['ils/elles', 'doivent'],
+          ],
+        ),
+        p(
+          'Use it like **vouloir** and **pouvoir**: the second verb stays in the infinitive. *Je dois aller chez le médecin.* In the negative, **ne … pas** wraps **devoir**: *Vous ne devez pas fumer.*',
+        ),
+      ),
+      section(
+        'il-faut',
+        'il faut: a general rule',
+        p(
+          '**Il faut** (from *falloir*) has only the form *il*. It talks about what is necessary for anybody. Followed by an infinitive: *Il faut se reposer.* **Il ne faut pas** is a prohibition, not “you do not need to”.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je dois-je reposer.  ✓ Je dois me reposer.',
+          '✗ Il faut pas fumer.  ✓ Il ne faut pas fumer.',
+          '✗ Vous devoir rester au lit.  ✓ Vous devez rester au lit.',
+        ),
+        examples(
+          [
+            'Il faut prendre ce sirop trois fois par jour.',
+            'You need to take this syrup three times a day.',
+          ],
+          ['Nous devons appeler les secours.', 'We must call the emergency services.'],
+        ),
+      ),
+    ],
+    related: ['fr-prendre-vouloir', 'fr-negation', 'fr-rules'],
+    sources: [S.devoir, S.falloir, S.pouvoir],
+  },
+  {
+    id: 'fr-a12-lui-leur',
+    title: 'lui and leur',
+    tagline: 'Replace “to him / to her” and “to them”',
+    level: LEVEL,
+    summary:
+      'Lui replaces à + one person (man or woman) and leur replaces à + several people. Both go before the verb. They are used after parler, téléphoner, donner, dire, demander and répondre.',
+    sections: [
+      section(
+        'forms',
+        'One person or several?',
+        p(
+          'With **parler à**, **téléphoner à**, **donner à**, **dire à**, **demander à** and **répondre à** the person is introduced by **à**. Replace *à + person* with **lui** (one person) or **leur** (several people). Men and women both take lui.',
+        ),
+        table(
+          'Replace à + person.',
+          ['With à + person', 'With the pronoun'],
+          [
+            ['Je téléphone à ma mère.', 'Je lui téléphone.'],
+            ['Je parle au médecin.', 'Je lui parle.'],
+            ['Il parle aux patients.', 'Il leur parle.'],
+            ['Tu ne réponds pas à tes amis.', 'Tu ne leur réponds pas.'],
+          ],
+        ),
+        tip(
+          'Spot the pattern',
+          'Like le, la and les, lui and leur stand right before the verb, and ne goes before them: je ne lui réponds pas.',
+          'Leur as a pronoun never takes an -s, and it is never written with an apostrophe.',
+        ),
+      ),
+      section(
+        'le-or-lui',
+        'le/la or lui?',
+        p(
+          'Ask yourself whether the verb takes **à**. *Je regarde Paul → je le regarde* (no à). *Je téléphone à Paul → je lui téléphone* (à). The pronouns for **me**, **te**, **nous** and **vous** stay the same for both kinds of verb.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je le téléphone.  ✓ Je lui téléphone.',
+          '✗ Il leurs parle.  ✓ Il leur parle.',
+          '✗ Je téléphone lui.  ✓ Je lui téléphone.',
+        ),
+        examples(
+          [
+            'Le pharmacien nous explique la pommade.',
+            'The pharmacist explains the ointment to us.',
+          ],
+          ['Je leur demande un conseil.', 'I ask them for advice.'],
+        ),
+      ),
+    ],
+    related: ['fr-a12-object-pronouns', 'fr-pronouns'],
+    sources: [S.lui, S.leur, S.coi],
+  },
+  {
+    id: 'fr-a12-pc-pronominal',
+    title: 'Pronominal verbs in the past',
+    tagline: 'Je me suis blessé, elle s’est reposée',
+    level: LEVEL,
+    summary:
+      'Pronominal verbs always form the passé composé with être: the pronoun, then être, then the participle. The participle agrees with the subject, and ne … pas wraps the pronoun and être.',
+    sections: [
+      section(
+        'forms',
+        'Pronoun + être + participle',
+        table(
+          'Passé composé of se blesser (masculine / feminine).',
+          ['Person', 'masculine', 'feminine'],
+          FRENCH_PRONOUNS.map((pr) => [
+            pr,
+            passeComposeReflexive('blesser')[pr],
+            passeComposeReflexive('blesser', { feminine: true })[pr],
+          ]),
+        ),
+        tip(
+          'Spot the pattern',
+          'The small pronoun (me, te, se, nous, vous, se) comes first, then être, then the participle: je me suis blessé.',
+          'Me and te become m’ and t’ before a vowel: tu t’es reposé.',
+        ),
+      ),
+      section(
+        'negative',
+        'Saying no, and the agreement',
+        p(
+          'Put **ne** before the pronoun and **pas** after **être**: *Je ne me suis pas reposé.* The participle agrees with the subject, as with all verbs that take être: *Elle s’est blessée.* After a body part, it stays unchanged: *Elle s’est cassé le bras.*',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je m’ai blessé.  ✓ Je me suis blessé.',
+          '✗ Elle s’est blessé.  ✓ Elle s’est blessée.',
+          '✗ Je me ne suis pas reposé.  ✓ Je ne me suis pas reposé.',
+        ),
+        examples(
+          ['Hier, je me suis blessé au genou.', 'Yesterday I hurt my knee.'],
+          ['Nous nous sommes reposés tout le week-end.', 'We rested all weekend.'],
+        ),
+      ),
+    ],
+    related: ['fr-pronominal', 'fr-a12-pc-etre', 'fr-negation'],
+    sources: [S.pronominal, S.pronominalForm, S.passeCompose],
+  },
+  {
+    id: 'fr-a12-because',
+    title: 'pourquoi, parce que, alors',
+    tagline: 'Ask for a reason, give a reason, say the result',
+    level: LEVEL,
+    summary:
+      'Ask for a reason with pourquoi and answer with parce que (parce qu’ before a vowel). Alors introduces the result of what you just said.',
+    sections: [
+      section(
+        'reason',
+        'Why? Because',
+        p(
+          '**Pourquoi** asks *why*. The answer starts with **parce que**. Before **il**, **elle**, **on**, **un** or **une** it shortens to **parce qu’**. Do not mix them up: *pourquoi* is the question, *parce que* the answer.',
+        ),
+        table(
+          'Reason and result.',
+          ['Word', 'Use', 'Example'],
+          [
+            ['pourquoi', 'asks for a reason', 'Pourquoi tu restes au lit ?'],
+            ['parce que', 'gives the reason', 'Parce que j’ai de la fièvre.'],
+            ['alors', 'gives the result', 'J’ai de la fièvre, alors je reste au lit.'],
+          ],
+        ),
+      ),
+      section(
+        'order',
+        'Reason first or result first',
+        p(
+          'You can give either one first. *Je reste au lit parce que je suis malade* and *Je suis malade, alors je reste au lit* say the same thing in two orders. Parce que needs a full sentence after it, not just a noun.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Pourquoi que tu restes au lit ?  ✓ Pourquoi tu restes au lit ?',
+          '✗ Parce que la fièvre.  ✓ Parce que j’ai de la fièvre.',
+          '✗ Elle reste parce que est malade.  ✓ Elle reste parce qu’elle est malade.',
+        ),
+        examples(
+          [
+            '– Pourquoi tu tousses ? – Parce que je suis enrhumé.',
+            '– Why are you coughing? – Because I have a cold.',
+          ],
+          ['Il est tombé, alors il a mal au genou.', 'He fell, so his knee hurts.'],
+        ),
+      ),
+    ],
+    related: ['fr-questions', 'fr-a12-devoir-falloir'],
+    sources: [S.pourquoi, S.parceQue],
   },
 ];

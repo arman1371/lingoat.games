@@ -557,6 +557,19 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-rules', note: 'infinitive and imperative' },
     { topic: 'fr-place-more' },
   ],
+  'fr-a1-2-vacances': [
+    { topic: 'fr-a12-comparison' },
+    { topic: 'fr-a12-partir' },
+    { topic: 'fr-a12-pc-etre' },
+    { topic: 'fr-a12-cetait' },
+  ],
+  'fr-a1-2-sante': [
+    { topic: 'fr-a12-avoir-mal' },
+    { topic: 'fr-a12-devoir-falloir' },
+    { topic: 'fr-a12-lui-leur' },
+    { topic: 'fr-a12-pc-pronominal' },
+    { topic: 'fr-a12-because' },
+  ],
   // ---- French A2.1 ----------------------------------------------------------------------------
   'fr-a2-1-parcours': [
     { topic: 'fr-a21-passe-compose', note: 'naître, aller, se marier' },

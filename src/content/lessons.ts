@@ -1209,6 +1209,63 @@ export const LESSONS = {
       'Le chat est sous le lit.',
     ],
   },
+  'fr-a12-comparison': {
+    title: 'plus, moins, aussi … que',
+    rule: 'Compare with plus (more), moins (less) or aussi (as) + adjective + que: Le train est plus rapide que le bus. L’hôtel est aussi cher que l’auberge. Bon is special: the comparative is meilleur, never plus bon. It agrees: meilleure, meilleurs.',
+    examples: [
+      'Elle est plus grande que moi.',
+      'Il est moins bruyant qu’avant.',
+      'Ce film est meilleur.',
+    ],
+  },
+  'fr-a12-partir': {
+    title: 'partir, sortir, dormir',
+    rule: 'These -ir verbs do not take -iss-. In the singular they lose the last consonant of the stem and add -s, -s, -t: je pars, tu pars, il part. The plural is regular: nous partons, vous partez, ils partent. Sortir (je sors) and dormir (je dors) work the same way.',
+    examples: ['Je pars lundi.', 'Tu sors ce soir ?', 'Ils dorment à l’hôtel.'],
+  },
+  'fr-a12-pc-etre': {
+    title: 'The passé composé with être',
+    rule: 'Verbs of movement and change use être, not avoir: aller, arriver, partir, rester, sortir, venir, entrer, tomber. The participle agrees with the subject: elle est allée, nous sommes partis. Ne … pas wraps être: je ne suis pas resté.',
+    examples: ['Je suis allé à la mer.', 'Elle est arrivée hier.', 'Ils sont restés à l’hôtel.'],
+  },
+  'fr-a12-cetait': {
+    title: 'c’était, il y avait',
+    rule: 'To describe a past place or situation use c’était (it was) and il y avait (there was, there were). The weather is il faisait beau. They stay the same for singular and plural: il y avait une plage, il y avait des touristes.',
+    examples: ['C’était super !', 'Il y avait beaucoup de monde.', 'Il faisait beau.'],
+  },
+  'fr-a12-avoir-mal': {
+    title: 'avoir mal à',
+    rule: 'To say where it hurts, use avoir mal à + the part of the body. À joins the article: à + le = au, à + les = aux, but à la and à l’ stay. So: j’ai mal à la tête, il a mal au dos, elle a mal aux dents, nous avons mal à l’oreille.',
+    examples: ['J’ai mal à la tête.', 'Il a mal au dos.', 'Elle a mal aux dents.'],
+  },
+  'fr-a12-devoir-falloir': {
+    title: 'devoir and il faut',
+    rule: 'Devoir (must, have to) is irregular: je dois, tu dois, il doit, nous devons, vous devez, ils doivent. It is followed by an infinitive. Il faut + infinitive says what is needed in general; il ne faut pas means you must not.',
+    examples: ['Je dois aller chez le médecin.', 'Il faut se reposer.', 'Il ne faut pas fumer.'],
+  },
+  'fr-a12-lui-leur': {
+    title: 'lui and leur',
+    rule: 'Lui replaces à + one person, leur replaces à + several people. They go before the verb: je lui téléphone, je leur parle. Use them with parler, téléphoner, donner, dire, demander, répondre. Leur never takes an -s as a pronoun.',
+    examples: ['Je lui téléphone.', 'Le médecin leur parle.', 'Il ne lui répond pas.'],
+  },
+  'fr-a12-pc-pronominal': {
+    title: 'Pronominal verbs in the past',
+    rule: 'Pronominal verbs form the passé composé with être: je me suis blessé, tu t’es reposé, nous nous sommes soignés. The participle agrees with the subject: elle s’est blessée. In the negative ne … pas wraps me suis: je ne me suis pas reposé.',
+    examples: [
+      'Je me suis blessé au pied.',
+      'Elle s’est reposée.',
+      'Nous ne nous sommes pas soignés.',
+    ],
+  },
+  'fr-a12-because': {
+    title: 'pourquoi, parce que, alors',
+    rule: 'Ask for a reason with pourquoi and answer with parce que (parce qu’ before a vowel): Pourquoi tu restes au lit ? – Parce que je suis malade. Alors introduces the result: Je suis malade, alors je reste au lit.',
+    examples: [
+      'Pourquoi tu tousses ?',
+      'Parce que je suis enrhumé.',
+      'J’ai de la fièvre, alors je reste au lit.',
+    ],
+  },
   'fr-likes': {
     title: 'J’aime, je déteste …',
     rule: 'Aimer, adorer and détester are regular -er verbs. Before a noun use the definite article, even for things in general: j’aime le café, elle adore les chats. Before an activity use the infinitive: j’aime danser. Add beaucoup for more: j’aime beaucoup la musique.',
