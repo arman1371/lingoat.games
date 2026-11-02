@@ -77,7 +77,7 @@ const FRENCH_LEVELS: LevelMeta[] = (
       id: 'fr-b1-1',
       title: 'B1.1',
       subtitle:
-        'Living together, family memories, work, consumption, French around the world and the media',
+        'Living together, memories, work, consumption, the French-speaking world, the media, time, studies, critical thinking and feelings',
       status: 'available',
       load: () => import('./fr-b1-1'),
     },

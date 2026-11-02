@@ -38,18 +38,42 @@ units 1 to 3) and the SUL référentiel for B1 agree on it. Ten units:
 | 4   | Consommer autrement (`consommer`)       | Édito 4               | certainty, point of view, describing a place, collaborative consumption | indicative or subjunctive after opinion verbs, comparison and superlative, adjectives     |
 | 5   | Le français dans le monde (`monde`)     | Édito 5               | French-speaking countries, expatriation, languages                      | plus-que-parfait, en / y, double pronouns, chronology                                     |
 | 6   | Médias en masse (`medias`)              | Édito 6               | news, press, social networks, reporting an event                        | nominalisation, the passive, adverbs in -ment                                             |
-| 7   | Prendre le temps (`temps`)              | Saison 3, unit 1; SUL | time and weather, nature, advice, wishes                                | goal expressions, possessive pronouns, dont                                               |
-| 8   | Apprendre autrement (`apprendre`)       | Saison 3, unit 2; SUL | studies and career, CV, agreement and disagreement                      | past participle with avoir / être, gerund, negation                                       |
-| 9   | Esprit critique (`critique`)            | Saison 3, unit 3      | degrees of certainty, checking information, contemporary art            | passive with se faire / se laisser, conditional for uncertain news, certainty and doubt   |
-| 10  | Caractères et sentiments (`sentiments`) | SUL B1 aims           | describe people, feelings, regrets, reproaches, hypotheses              | hypotheses with si, conditional, expressing feelings                                      |
+| 7   | Prendre le temps (`temps`)              | Saison 3, unit 1; SUL | time and weather, nature, advice, wishes                                | possessive pronouns, wishes and hopes, en / pendant / dans / pour + duration              |
+| 8   | Apprendre autrement (`apprendre`)       | Saison 3, unit 2; SUL | studies and career, CV, agreement and disagreement                      | gerund, past participle agreement with avoir, agree / disagree / nuance                   |
+| 9   | Esprit critique (`critique`)            | Saison 3, unit 3      | degrees of certainty, checking information, contemporary art            | se faire + infinitive, conditional for uncertain news, adverbs of certainty and doubt     |
+| 10  | Caractères et sentiments (`sentiments`) | SUL B1 aims           | describe people, feelings, regrets, reproaches, hypotheses              | si + présent / imparfait, feelings with the subjunctive, past conditional for regrets     |
 
 Every unit aims at 10 to 16 games with at least 6 of the 13 engines, an easy first game and a final "… challenge".
-Vocabulary cards are not repeated inside French B1.1 or from French A1.1 (`content.test.ts`); the other French
+Vocabulary cards are not repeated inside French B1.1 or from French A1.1 to A2.2 (`content.test.ts`); later French
 levels are checked as they land. The grammar topics a unit teaches get a mini lesson (`lessons.ts`) and a full lesson
 (`src/content/grammar/fr-b1-1.ts`) in the same PR as the unit.
 
 ## Build plan
 
+All ten units ship in **one pull request** (Arman's rule: one PR per French level).
+
 1. Level plumbing: level entry in `levels.ts` (French levels are listed in CEFR order), e2e spec, `subjunctiveFr`
-   (`src/lib/french/subjunctive.ts`) and the `subjTable` helper. **Done** with unit 1.
-2. Units one per PR. **Unit 1 (`ensemble`, 16 games) is done.** Units 2 to 10 follow.
+   (`src/lib/french/subjunctive.ts`), `plusQueParfait` and `conditionnel` (`src/lib/french/moreTenses.ts`) and the
+   `subjTable`, `pqpTable` and `condTable` helpers. **Done.**
+2. Units 1 to 10. **Done**, 13 to 16 games each: `ensemble` (16), `souvenirs` (15), `travail` (15), `consommer`
+   (15), `monde` (15), `medias` (15), `temps` (15), `apprendre` (15), `critique` (15), `sentiments` (15).
+3. Per unit: three grammar points, each with a tag (`fr-b11-*`), a mini lesson (`lessons.ts`) and a full lesson
+   (`src/content/grammar/fr-b1-1.ts`, listed in `unitTopics.ts`), plus an accessibility page in `e2e/a11y.spec.ts`.
+
+## Limits of the research
+
+Only pages that could be read were used (see Sources). The grammar lessons cite French Wikipedia and Wiktionary
+pages whose existence and general content were checked while writing, but several rules below come from standard
+French grammar rather than from a fetched page, and have **not been confirmed against a source**:
+
+- the exact set of verbs and expressions taking the subjunctive or indicative (`espérer que`, `il paraît que`,
+  `il semblerait que`, `pourvu que`, `à condition que`), apart from `douter que`, which the subjunctive page lists;
+- `ne … que`, `ne … ni … ni`, `aucun` and the prefix rules in unit 1;
+- the use of the conditional for unconfirmed news (the conditional page confirms uncertainty and hypothesis only);
+- the formation of adverbs in `-ment`, the headline style of unit 6 (the nominalisation page covers verb-to-noun
+  conversion in general) and the exceptions of `en` / `y` (the Wiktionary entries confirm they are pronouns);
+- the position of adjectives and the BAGS list (the adjective page confirms that position varies);
+- agreement of the participle after `avoir` with an object placed before (the participle page confirms the principle).
+
+The official DELF B1 description, the full table of contents of _Édito B1_ and the _Alter Ego 3_ dossier titles could
+not be read. The French content has not been reviewed by a native speaker.
