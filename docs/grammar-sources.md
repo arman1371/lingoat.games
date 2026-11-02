@@ -300,10 +300,20 @@ The lessons are in `src/content/grammar/fr-a2-2.ts`, the pages in `sources-fr-a2
 The French B1.2 lessons are in `src/content/grammar/fr-b1-2.ts`, the pages in `sources-fr.ts`. Forms in the tables come
 from `src/lib/french/tenses.ts` and `conditional.ts`. Not reviewed by a native speaker.
 
-| Topic             | Pages read                                                                                                                                                                  |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| The simple future | [Futur simple](https://fr.wikipedia.org/wiki/Futur_simple) (first 100 000 characters), Wiktionnaire [aller](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/aller) |
+| Topic                                          | Pages linked                                                                                                                                                                                          |
+| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The simple future, which future                | [Futur simple](https://fr.wikipedia.org/wiki/Futur_simple) (first 100 000 characters read), Wiktionnaire [aller](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/aller)                      |
+| Si clauses, conditional                        | [Phrase conditionnelle](https://fr.wikipedia.org/wiki/Phrase_conditionnelle), [Conditionnel](https://fr.wikipedia.org/wiki/Conditionnel)                                                              |
+| Plus-que-parfait, past conditional, futur ant. | [Plus-que-parfait](https://fr.wikipedia.org/wiki/Plus-que-parfait), [Futur antérieur](https://fr.wikipedia.org/wiki/Futur_ant%C3%A9rieur)                                                             |
+| Gérondif, participe présent                    | [Gérondif](https://fr.wikipedia.org/wiki/G%C3%A9rondif), [Participe présent](https://fr.wikipedia.org/wiki/Participe_pr%C3%A9sent)                                                                    |
+| Connectors, cause, consequence, concession     | [Connecteur logique](https://fr.wikipedia.org/wiki/Connecteur_logique), [Cause](https://fr.wikipedia.org/wiki/Cause), [Conséquence](https://fr.wikipedia.org/wiki/Cons%C3%A9quence)                   |
+| Reported speech                                | [Discours indirect](https://fr.wikipedia.org/wiki/Discours_indirect), [Concordance des temps](https://fr.wikipedia.org/wiki/Concordance_des_temps)                                                    |
+| Relative and indefinite pronouns, emphasis     | [Pronom relatif](https://fr.wikipedia.org/wiki/Pronom_relatif), [Pronom indéfini](https://fr.wikipedia.org/wiki/Pronom_ind%C3%A9fini), [Mise en relief](https://fr.wikipedia.org/wiki/Mise_en_relief) |
+| Passé simple                                   | [Passé simple](https://fr.wikipedia.org/wiki/Pass%C3%A9_simple)                                                                                                                                       |
 
-**French B1.2 limits:** the Wikipedia page does not state the future after quand / dès que (it only describes the futur
-d'anticipation) or the spelling of payer. The quand + future tip and paierai / payerai follow common textbook teaching and
-are not checked against a fetched page.
+**French B1.2 limits:** only the Futur simple page was read in full (first 100 000 characters). The other pages were
+checked to exist (HTTP 200) and are linked as further reading; the lessons themselves follow the SUL référentiel, the
+Paris Cité B1 grammar sheet and standard textbook teaching, and have not been checked line by line against those pages.
+The Wikipedia page does not state the future after quand / dès que (it only describes the futur d'anticipation) or the
+spelling of payer. The quand + future tip, paierai / payerai, the order of double pronouns and the passé simple forms
+follow common textbook teaching and are not checked against a fetched page.

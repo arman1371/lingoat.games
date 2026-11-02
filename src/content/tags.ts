@@ -427,6 +427,11 @@ export const TAGS = {
   'fr-b12-compound-relatives': { label: 'lequel, auquel, dont', group: 'grammar', emoji: '🔗' },
   'fr-b12-cause-consequence': { label: 'Cause and consequence', group: 'grammar', emoji: '🔗' },
   'fr-b12-participe-present': { label: 'The present participle', group: 'grammar', emoji: '⏳' },
+  'fr-b12-double-pronouns': { label: 'Two pronouns together', group: 'grammar', emoji: '✌️' },
+  'fr-b12-emphasis': { label: 'C’est … qui / que', group: 'grammar', emoji: '📍' },
+  'fr-b12-futur-anterieur': { label: 'The future perfect', group: 'grammar', emoji: '⏭️' },
+  'fr-b12-opposition': { label: 'Contrast and concession', group: 'grammar', emoji: '🚧' },
+  'fr-b12-passe-simple': { label: 'The passé simple', group: 'grammar', emoji: '📖' },
   'fr-b12-past-hypotheses': { label: 'Regrets and the past', group: 'grammar', emoji: '⏪' },
 } as const satisfies Record<string, TagInfo>;
 

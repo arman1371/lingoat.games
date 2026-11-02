@@ -9,6 +9,8 @@ import { ville } from './u7-ville';
 import { rapporter } from './u8-rapporter';
 import { etudes } from './u9-etudes';
 import { cause } from './u10-cause';
+import { sportUnit } from './u11-sport';
+import { culture } from './u12-culture';
 
 const units = [
   voyage,
@@ -21,6 +23,8 @@ const units = [
   rapporter,
   etudes,
   cause,
+  sportUnit,
+  culture,
 ];
 
 const content: LevelContent = {

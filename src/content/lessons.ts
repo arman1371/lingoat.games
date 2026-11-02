@@ -1427,6 +1427,43 @@ export const LESSONS = {
       'Sachant la réponse, elle a levé la main.',
     ],
   },
+  'fr-b12-double-pronouns': {
+    title: 'Two pronouns together',
+    rule: 'Order: me / te / nous / vous come before le / la / les (il me la prête); le / la / les come before lui / leur (je le lui donne); y and en come last (il leur en parle). In the affirmative imperative the order changes: donne-le-moi.',
+    examples: ['Je te le prête.', 'Elle la leur montre.', 'Il m’en parle.'],
+  },
+  'fr-b12-emphasis': {
+    title: 'C’est … qui / que',
+    rule: 'To stress a word, frame it with c’est … qui (for the subject) or c’est … que (for an object or a circumstance of place or time): C’est Paul qui a marqué. C’est ce match que j’ai préféré. Before a plural use ce sont.',
+    examples: [
+      'C’est Paul qui a marqué.',
+      'C’est à Lyon que nous jouons.',
+      'Ce sont les fans qui chantent.',
+    ],
+  },
+  'fr-b12-futur-anterieur': {
+    title: 'The future perfect',
+    rule: 'Futur antérieur = futur simple of avoir or être + participle: j’aurai fini, elle sera partie. It names an action that will be finished before another future action or a point in time: Quand j’aurai fini, je t’appellerai.',
+    examples: [
+      'Quand j’aurai fini, je t’appellerai.',
+      'Dès qu’il sera arrivé, nous commencerons.',
+      'Demain, elle aura gagné.',
+    ],
+  },
+  'fr-b12-opposition': {
+    title: 'Contrast and concession',
+    rule: 'Contrast: alors que, tandis que, au contraire. Concession: bien que + subjunctive, même si + indicative, malgré / en dépit de + noun, néanmoins, toutefois. Malgré la pluie, on sort. Bien qu’il pleuve, on sort.',
+    examples: [
+      'Il aime lire, alors qu’elle préfère écrire.',
+      'Bien qu’il pleuve, nous sortons.',
+      'Malgré la fatigue, il continue.',
+    ],
+  },
+  'fr-b12-passe-simple': {
+    title: 'The passé simple',
+    rule: 'The passé simple is the past tense of novels and history; you read it, you rarely say it. It is mostly third person: il parla, ils parlèrent, elle finit, il fut, elle eut, il dit, ils allèrent. In speech the passé composé replaces it.',
+    examples: ['Il ouvrit la porte et entra.', 'Elle naquit en 1850.', 'Ils furent surpris.'],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

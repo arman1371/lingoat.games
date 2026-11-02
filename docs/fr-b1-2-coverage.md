@@ -51,12 +51,33 @@ Every unit aims at 10 to 16 games with at least 6 of the 13 engines, an easy fir
 Vocabulary cards are not repeated inside the level or from French A1.1 (and any earlier French level on main); the
 content test checks this.
 
-## Build plan
+## Status
 
-French B1.2 ships in **one pull request** with all its units (Arman's rule for the French levels).
+All twelve units are built in one pull request (168 games, 10 to 16 per unit, at least 6 engines each).
 
-1. Level entry, `src/lib/french/conditional.ts` (conditionnel présent, on top of the futur simple of `tenses.ts`), unit 1,
-   its full lesson, e2e and a11y entries. **Done** (unit 1, `voyage`, 16 games).
-2. Units 2 to 12 in the same PR; forms for the other tenses (conditionnel passé, plus-que-parfait, futur antérieur,
-   participe présent, gérondif) are added to `src/lib/french` as the units need them.
-3. Full lessons are written with each unit (`src/content/grammar/fr-b1-2.ts`, linked in `unitTopics.ts`).
+| #   | Unit (id suffix) | Games | Lessons added (topic ids)                                             |
+| --- | ---------------- | ----- | --------------------------------------------------------------------- |
+| 1   | `voyage`         | 16    | `fr-futur-simple`                                                     |
+| 2   | `paysages`       | 13    | `fr-b12-future-choice`                                                |
+| 3   | `hypotheses`     | 14    | `fr-b12-si-clauses`, `fr-b12-conditional`                             |
+| 4   | `regrets`        | 14    | `fr-b12-past-hypotheses` (plus-que-parfait, conditionnel passé)       |
+| 5   | `planete`        | 14    | `fr-b12-prepositions`                                                 |
+| 6   | `convaincre`     | 14    | `fr-b12-gerondif`, `fr-b12-connectors`                                |
+| 7   | `ville`          | 13    | `fr-b12-indefinite`                                                   |
+| 8   | `rapporter`      | 14    | `fr-b12-reported-speech`, `fr-b12-inversion`                          |
+| 9   | `etudes`         | 13    | `fr-b12-compound-relatives`                                           |
+| 10  | `cause`          | 14    | `fr-b12-cause-consequence`, `fr-b12-participe-present`                |
+| 11  | `sport`          | 15    | `fr-b12-double-pronouns`, `fr-b12-emphasis`, `fr-b12-futur-anterieur` |
+| 12  | `culture`        | 14    | `fr-b12-opposition`, `fr-b12-passe-simple`                            |
+
+Forms generated in `src/lib/french`: `tenses.ts` (imparfait, futur simple, participes), `conditional.ts` (conditionnel
+présent), `compound.ts` (plus-que-parfait, conditionnel passé, futur antérieur, participe présent, gérondif). The
+passé simple tables and a few irregular presents (convaincre, conclure, se plaindre, s'inscrire) are written by hand in
+the unit files because the passé simple is only taught for recognition.
+
+## Open points
+
+- The French content has not been reviewed by a native speaker.
+- The unit list was compared with the Édito B1 outline from Leeds, not with the official DELF B1 description.
+- The grammar lessons are written from the SUL and Paris Cité syllabi and standard textbook teaching; the Wikipedia pages
+  they cite are linked as further reading and were checked to exist, not read in full (see `docs/grammar-sources.md`).

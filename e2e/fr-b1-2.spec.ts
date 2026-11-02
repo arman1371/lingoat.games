@@ -90,6 +90,19 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (participe présent)', 'fr-b1-2-cause-gap-participle'],
   ['dialogue (what happened)', 'fr-b1-2-cause-dialogues'],
   ['blitz (cause)', 'fr-b1-2-cause-blitz'],
+  ['sort it (pronoun order)', 'fr-b1-2-sport-sort-pronouns'],
+  ['conjugation (futur antérieur)', 'fr-b1-2-sport-conj-futur-anterieur'],
+  ['gap fill (two pronouns)', 'fr-b1-2-sport-gap-double'],
+  ['gap fill (c’est … qui / que)', 'fr-b1-2-sport-gap-emphasis'],
+  ['gap fill (futur antérieur)', 'fr-b1-2-sport-gap-futur-anterieur'],
+  ['dialogue (big match)', 'fr-b1-2-sport-dialogues'],
+  ['sort it (contrast or concession)', 'fr-b1-2-culture-sort-opposition'],
+  ['sort it (passé simple)', 'fr-b1-2-culture-sort-tenses'],
+  ['conjugation (passé simple)', 'fr-b1-2-culture-conj-passe-simple'],
+  ['gap fill (connectors of opposition)', 'fr-b1-2-culture-gap-opposition'],
+  ['sentence builder (culture)', 'fr-b1-2-culture-sentences'],
+  ['dialogue (art talk)', 'fr-b1-2-culture-dialogues'],
+  ['blitz (culture)', 'fr-b1-2-culture-blitz'],
 ];
 
 test.describe('French B1.2 – playing the games', () => {

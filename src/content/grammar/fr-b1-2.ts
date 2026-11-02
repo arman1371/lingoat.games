@@ -1,6 +1,7 @@
 import { conditionnel } from '@/lib/french/conditional';
 import {
   conditionnelPasse,
+  futurAnterieur,
   gerondif,
   participePresent,
   plusQueParfait,
@@ -865,5 +866,249 @@ export const FRB12_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-b12-gerondif', 'fr-b12-cause-consequence'],
     sources: [S.participePresent, S.gerondif],
+  },
+  {
+    id: 'fr-b12-double-pronouns',
+    title: 'Two pronouns together',
+    tagline: 'Je te le donne, il leur en parle',
+    level: LEVEL,
+    summary:
+      'When a verb has two object pronouns, they follow a fixed order before the verb: me, te, nous, vous come before le, la, les; le, la, les come before lui and leur; y and en always come last. In a negative sentence ne goes before the pronouns and pas after the verb.',
+    sections: [
+      section(
+        'order',
+        'The order',
+        table(
+          'Order of two object pronouns.',
+          ['First', 'Then', 'Example'],
+          [
+            ['me, te, nous, vous', 'le, la, les', 'Il me la prête.'],
+            ['le, la, les', 'lui, leur', 'Je le lui donne.'],
+            ['me, te, se, nous, vous, lui, leur', 'y', 'Il m’y emmène.'],
+            ['me, te, se, nous, vous, lui, leur', 'en', 'Elle leur en offre.'],
+          ],
+        ),
+        p(
+          'Two third-person pronouns need the pattern **le / la / les + lui / leur**: *Je le lui donne*, never *je lui le donne*. Combinations such as *me lui* or *lui leur* do not exist. If both **y** and **en** appear, **y** comes first (*il y en a*).',
+        ),
+      ),
+      section(
+        'forms',
+        'Tenses and the imperative',
+        p(
+          'In compound tenses the pronouns stand before the **auxiliary**: *Je te les ai donnés.* In a **negative** sentence: *Je ne te le prête pas.* In the **affirmative imperative** they follow the verb with hyphens, and the order changes to **direct object first**: *Donne-le-moi ! Parlez-lui-en !* Moi and toi replace me and te.',
+        ),
+        examples(
+          [
+            'Tu me prêtes ton maillot ? — Oui, je te le prête.',
+            'Will you lend me your shirt? — Yes, I will lend it to you.',
+          ],
+          [
+            'Elle parle du match à Léa ? — Oui, elle lui en parle.',
+            'Does she talk to Léa about the match? — Yes, she talks to her about it.',
+          ],
+          ['Donne-le-moi !', 'Give it to me!'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je lui le donne.  ✓ Je le lui donne.',
+          '✗ Il en lui parle.  ✓ Il lui en parle.',
+        ),
+      ),
+    ],
+    related: ['fr-object-pronouns', 'fr-b12-emphasis'],
+    sources: [S.pronounComplement],
+  },
+  {
+    id: 'fr-b12-emphasis',
+    title: 'C’est … qui / que',
+    tagline: 'It is Paul who scored',
+    level: LEVEL,
+    summary:
+      'To highlight one word, French frames it with c’est … qui when it is the subject and c’est … que when it is an object or a circumstance of place, time or manner. Before a plural noun or ils, use ce sont. After c’est moi qui, the verb agrees with the person.',
+    sections: [
+      section(
+        'qui-que',
+        'Qui or que?',
+        table(
+          'Stressing a word.',
+          ['Stressed word', 'Frame', 'Example'],
+          [
+            ['subject', 'c’est … qui', 'C’est Paul qui a marqué.'],
+            ['object', 'c’est … que', 'C’est ce match que j’ai préféré.'],
+            ['place or time', 'c’est … que', 'C’est à Lyon que nous jouons.'],
+            ['plural', 'ce sont … qui / que', 'Ce sont les fans qui chantent.'],
+          ],
+        ),
+        p(
+          'The stressed word is **moved to the front**: *Paul a marqué* becomes *C’est Paul qui a marqué.* Use it to correct, to contrast or to give a piece of information more force. With a pronoun use the stressed form: **c’est moi / toi / lui qui…**',
+        ),
+      ),
+      section(
+        'agreement',
+        'Agreement',
+        p(
+          'After **c’est moi qui** the verb agrees with *moi*: *C’est moi qui ai gagné.* After **c’est toi qui**: *C’est toi qui as gagné.* After **c’est nous qui**: *C’est nous qui avons gagné.* With a noun, the verb is third person: *C’est Paul qui a gagné.*',
+        ),
+        examples(
+          ['C’est moi qui ai gagné.', 'It was me who won.'],
+          ['C’est demain que commence le tournoi.', 'It is tomorrow that the tournament starts.'],
+          ['Ce sont les supporters qui chantent.', 'It is the fans who sing.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ C’est Paul que a marqué.  ✓ C’est Paul qui a marqué.',
+          '✗ C’est moi qui a gagné.  ✓ C’est moi qui ai gagné.',
+        ),
+      ),
+    ],
+    related: ['fr-b12-double-pronouns', 'fr-b12-compound-relatives'],
+    sources: [S.miseEnRelief],
+  },
+  {
+    id: 'fr-b12-futur-anterieur',
+    title: 'The future perfect',
+    tagline: 'Quand j’aurai fini…',
+    level: LEVEL,
+    summary:
+      'The futur antérieur is the futur simple of avoir or être plus the past participle. It names an action that will be completed before another future action or before a given moment. After quand, lorsque, dès que and aussitôt que it often sits next to a simple future.',
+    sections: [
+      section(
+        'form',
+        'How it is built',
+        table(
+          'Futur antérieur of three verbs.',
+          ['Person', 'finir', 'arriver', 'partir (elle)'],
+          FRENCH_PRONOUNS.map((pr) => [
+            pr,
+            futurAnterieur('finir')[pr],
+            futurAnterieur('arriver')[pr],
+            futurAnterieur('partir', { feminine: true })[pr],
+          ]),
+        ),
+        p(
+          'The auxiliary is the same as in the passé composé, and the participle agrees with the subject for être verbs (*elle sera partie, elles seront parties*).',
+        ),
+      ),
+      section(
+        'use',
+        'When to use it',
+        p(
+          'Use it for an action that will be **finished first**: *Quand j’aurai fini, je t’appellerai.* (finish, then call). It also expresses completion by a certain time: *Demain à midi, l’équipe aura gagné la finale.* Compare the simple future in both clauses, where the actions happen together or in no special order.',
+        ),
+        examples(
+          [
+            'Dès qu’il sera arrivé, nous commencerons.',
+            'As soon as he has arrived, we will start.',
+          ],
+          ['Elle sera rentrée avant vingt heures.', 'She will have come home before eight.'],
+          [
+            'Quand tu auras fait ton choix, dis-le-moi.',
+            'When you have made your choice, tell me.',
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Quand j’ai fini, je t’appellerai.  ✓ Quand j’aurai fini, je t’appellerai.',
+          '✗ Dès qu’il arrivera, nous aurons commencé.  ✓ Dès qu’il sera arrivé, nous commencerons.',
+        ),
+      ),
+    ],
+    related: ['fr-futur-simple', 'fr-b12-past-hypotheses'],
+    sources: [S.futurAnterieur],
+  },
+  {
+    id: 'fr-b12-opposition',
+    title: 'Contrast and concession',
+    tagline: 'Alors que, bien que, malgré',
+    level: LEVEL,
+    summary:
+      'To contrast two facts, French uses alors que, tandis que and au contraire. To concede a point despite an obstacle, it uses bien que with the subjunctive, même si with the indicative, malgré and en dépit de with a noun, and néanmoins or toutefois between clauses.',
+    sections: [
+      section(
+        'contrast',
+        'Contrast: two things side by side',
+        table(
+          'Contrast.',
+          ['Connector', 'Example'],
+          [
+            ['alors que', 'Il aime la peinture, alors qu’elle préfère la sculpture.'],
+            ['tandis que', 'Je préfère le cinéma, tandis que mon frère aime le théâtre.'],
+            ['au contraire', 'Il n’est pas timide ; au contraire, il adore parler.'],
+          ],
+        ),
+        p(
+          '**Alors que** and **tandis que** link two clauses that are in opposition. **Au contraire** corrects a previous idea.',
+        ),
+      ),
+      section(
+        'concession',
+        'Concession: despite an obstacle',
+        table(
+          'Concession.',
+          ['Connector', 'Followed by', 'Example'],
+          [
+            ['bien que', 'subjunctive', 'Bien qu’il pleuve, nous sortons.'],
+            ['même si', 'indicative', 'Même s’il pleut, nous sortirons.'],
+            ['malgré', 'a noun', 'Malgré la pluie, nous sortons.'],
+            ['en dépit de', 'a noun', 'En dépit des critiques, elle a réussi.'],
+            ['néanmoins, toutefois', 'a new clause', 'Il est jeune ; néanmoins, il joue bien.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Bien qu’il est tard…  ✓ Bien qu’il soit tard…',
+          '✗ Malgré il pleut…  ✓ Malgré la pluie… / Bien qu’il pleuve…',
+          '✗ Même si il pleut  ✓ Même s’il pleut (si elides before il)',
+        ),
+      ),
+    ],
+    related: ['fr-b12-connectors', 'fr-b12-cause-consequence'],
+    sources: [S.concession, S.bienQue],
+  },
+  {
+    id: 'fr-b12-passe-simple',
+    title: 'The passé simple',
+    tagline: 'Il ouvrit la porte et entra',
+    level: LEVEL,
+    summary:
+      'The passé simple is the past tense of novels, tales and history books. You need to recognise it when you read, but you rarely use it when you speak: the passé composé takes its place. It is found mostly in the third person singular and plural.',
+    sections: [
+      section(
+        'forms',
+        'Forms to recognise',
+        table(
+          'Passé simple of four verbs.',
+          ['Person', 'parler', 'finir', 'être', 'avoir'],
+          [
+            ['il / elle', 'parla', 'finit', 'fut', 'eut'],
+            ['ils / elles', 'parlèrent', 'finirent', 'furent', 'eurent'],
+            ['je', 'parlai', 'finis', 'fus', 'eus'],
+            ['nous', 'parlâmes', 'finîmes', 'fûmes', 'eûmes'],
+          ],
+        ),
+        p(
+          'Verbs in **-er** end in **-a** / **-èrent** in the third person; most other regular verbs in **-it** / **-irent**. Irregular ones to know: *il dit, il fit, il vit, il prit, il vint (venir), il naquit, il mourut, il eut, il fut.*',
+        ),
+      ),
+      section(
+        'use',
+        'Where you meet it',
+        p(
+          'The passé simple tells **completed events in a story**, often in a sequence, while the imparfait describes the background: *Il pleuvait quand il ouvrit la porte.* In conversation, emails and news, the passé composé is used instead: *Il a ouvert la porte.*',
+        ),
+        examples(
+          ['Il ouvrit la porte et entra.', 'He opened the door and went in.'],
+          ['Elle naquit en 1850.', 'She was born in 1850.'],
+          ['Ils furent très surpris.', 'They were very surprised.'],
+        ),
+        tip(
+          'Reading tip',
+          'If a past form ends in -a, -it or -ent (with -èrent / -irent) and has no auxiliary, think passé simple: replace it mentally by the passé composé to understand it.',
+        ),
+      ),
+    ],
+    related: ['fr-b12-past-hypotheses', 'fr-b12-reported-speech'],
+    sources: [S.passeSimple],
   },
 ];
