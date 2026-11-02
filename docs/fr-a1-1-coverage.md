@@ -80,5 +80,5 @@ units belong to A1.2. Result for A1.1:
 | pronunciation (liaison, nasal vowels, eu / œu, s as [s] or [z])                | **gap**: the app has listening games but no pronunciation lessons                   |
 
 Suggested follow-up for the French A1.2 thread: devoir / pouvoir / il faut and the tonic pronouns are the A1.1 items
-the overview teaches early, so they fit in its first units. Direct and indirect object pronouns, relative qui / que,
-en, comparatives and the imparfait in the overview are A2 material for this app.
+the overview teaches early, so they fit in its first units. Direct and indirect object pronouns, relative qui / que, en, comparatives and the imparfait in the overview are for the
+A1.2 and A2 threads to place.
