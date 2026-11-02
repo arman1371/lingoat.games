@@ -564,4 +564,20 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-superlative' },
     { topic: 'fr-interrogative-pronouns' },
   ],
+  // ---- French B1.2 ----------------------------------------------------------------------------
+  'fr-b1-2-voyage': [{ topic: 'fr-futur-simple' }],
+  'fr-b1-2-paysages': [
+    { topic: 'fr-b12-future-choice' },
+    { topic: 'fr-futur-simple', note: 'outdoor verbs' },
+  ],
+  'fr-b1-2-hypotheses': [{ topic: 'fr-b12-si-clauses' }, { topic: 'fr-b12-conditional' }],
+  'fr-b1-2-planete': [{ topic: 'fr-b12-prepositions' }],
+  'fr-b1-2-convaincre': [{ topic: 'fr-b12-gerondif' }, { topic: 'fr-b12-connectors' }],
+  'fr-b1-2-ville': [{ topic: 'fr-b12-indefinite' }],
+  'fr-b1-2-rapporter': [{ topic: 'fr-b12-reported-speech' }, { topic: 'fr-b12-inversion' }],
+  'fr-b1-2-etudes': [{ topic: 'fr-b12-compound-relatives' }],
+  'fr-b1-2-regrets': [
+    { topic: 'fr-b12-past-hypotheses' },
+    { topic: 'fr-b12-si-clauses', note: 'si + plus-que-parfait' },
+  ],
 };

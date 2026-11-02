@@ -1308,6 +1308,107 @@ export const LESSONS = {
     rule: 'Qui asks about a person. For things use qu’est-ce qui (subject) and qu’est-ce que or que (object); after a preposition or at the end of the question use quoi. Lequel, laquelle, lesquels and lesquelles ask “which one(s)?” and agree with the noun.',
     examples: ['Qui a appelé ?', 'Qu’est-ce que vous prenez ?', 'Laquelle est pour moi ?'],
   },
+  // ---- French B1.2 -------------------------------------------------------------------------
+  'fr-futur-simple': {
+    title: 'The simple future',
+    rule: 'Take the infinitive (drop the e of -re verbs) and add -ai, -as, -a, -ons, -ez, -ont: je voyagerai, nous prendrons. About a dozen verbs have an irregular stem, but the endings never change: être → ser-, avoir → aur-, aller → ir-, faire → fer-, venir → viendr-.',
+    examples: [
+      'Nous partirons samedi matin.',
+      'Je serai à Lyon à midi.',
+      'Elle fera la réservation.',
+    ],
+  },
+  'fr-b12-future-choice': {
+    title: 'Which future to use',
+    rule: 'Use the present for timetables and fixed arrangements (Le train part à huit heures). Use aller + infinitive for what is about to happen or is certain (Il va pleuvoir). Use the simple future for plans, predictions and promises further away, and after quand, lorsque and dès que (Dès qu’il fera beau, je sortirai).',
+    examples: [
+      'Le car part dans dix minutes.',
+      'Attention, il va pleuvoir !',
+      'Dès que je serai là, je t’appellerai.',
+    ],
+  },
+  'fr-b12-si-clauses': {
+    title: 'Si… clauses',
+    rule: 'Real possibility: si + present, then present, future or imperative (Si tu viens, on sortira). Imaginary or unlikely: si + imparfait, then conditional (Si j’avais le temps, je voyagerais). Never put the future or the conditional right after si.',
+    examples: [
+      'Si tu viens, on ira au lac.',
+      'Si j’avais plus de temps, je voyagerais.',
+      'Si tu as faim, mange !',
+    ],
+  },
+  'fr-b12-conditional': {
+    title: 'The conditional',
+    rule: 'Future stem plus the endings of the imparfait: je voyagerais, nous irions, ils feraient. Use it for imaginary results, polite requests (Je voudrais…, Pourriez-vous… ?), advice (Tu devrais…) and wishes.',
+    examples: ['Je voudrais un billet.', 'Tu devrais te reposer.', 'Nous irions en Corse.'],
+  },
+  'fr-b12-past-hypotheses': {
+    title: 'Regrets and the past',
+    rule: 'Plus-que-parfait = imparfait of avoir or être + participle (j’avais su). Past conditional = conditional of avoir or être + participle (je serais venu). Together: si + plus-que-parfait, then past conditional. J’aurais dû = I should have.',
+    examples: [
+      'Si j’avais su, je serais venu.',
+      'J’aurais dû vous écouter.',
+      'Tu aurais pu me prévenir !',
+    ],
+  },
+  'fr-b12-prepositions': {
+    title: 'Verbs with prepositions',
+    rule: 'Many verbs and adjectives need a fixed preposition before their complement: participer à, s’intéresser à, être sensible à; dépendre de, s’occuper de, être capable de; lutter contre, compter sur. à + le = au, à + les = aux, de + le = du, de + les = des.',
+    examples: [
+      'Il participe au tri.',
+      'Elle s’occupe du recyclage.',
+      'Nous luttons contre la pollution.',
+    ],
+  },
+  'fr-b12-gerondif': {
+    title: 'The gérondif',
+    rule: 'En + the participe présent (the nous form without -ons, plus -ant) shows two actions at once, the way, or a condition: Il chante en cuisinant. En travaillant, tu réussiras. It never changes. Exceptions: étant, ayant, sachant.',
+    examples: [
+      'Elle parle en marchant.',
+      'On apprend en pratiquant.',
+      'En partant tôt, tu éviteras les bouchons.',
+    ],
+  },
+  'fr-b12-connectors': {
+    title: 'Linking words',
+    rule: 'Connectors structure an argument: d’abord, ensuite, enfin (order); de plus, d’ailleurs (add); cependant, pourtant, en revanche (contrast); certes … mais (concede); par exemple (illustrate); en somme (conclude).',
+    examples: [
+      'Certes, c’est cher, mais c’est utile.',
+      'Le vélo est rapide ; de plus, il est écologique.',
+      'En somme, nous sommes d’accord.',
+    ],
+  },
+  'fr-b12-indefinite': {
+    title: 'Indefinite pronouns',
+    rule: 'People: quelqu’un, personne, tout le monde, chacun. Things: quelque chose, rien, n’importe quoi. Amounts: plusieurs, certains, la plupart (des), aucun. Personne and rien go with ne: Personne n’a rien dit. With en: J’en ai vu plusieurs.',
+    examples: [
+      'Personne n’a protesté.',
+      'La plupart des gens respectent les règles.',
+      'Des affiches ? J’en ai vu plusieurs.',
+    ],
+  },
+  'fr-b12-reported-speech': {
+    title: 'Reported speech',
+    rule: 'After dire que, demander si and ce que, the words are reported without quotation marks. After a past verb of saying, shift the tenses: present → imparfait, passé composé → plus-que-parfait, future → conditional; demain → le lendemain, hier → la veille.',
+    examples: [
+      'Il a dit qu’il viendrait.',
+      'Elle a demandé si j’avais faim.',
+      'Il dit qu’il est fatigué.',
+    ],
+  },
+  'fr-b12-inversion': {
+    title: 'Formal questions',
+    rule: 'Formal questions invert the verb and the pronoun with a hyphen: Où habitez-vous ? Pourriez-vous m’aider ? A noun subject is repeated by a pronoun (Paul est-il arrivé ?), and -t- separates two vowels (A-t-il répondu ?).',
+    examples: ['Où habitez-vous ?', 'Pourriez-vous m’indiquer le tarif ?', 'A-t-il déjà répondu ?'],
+  },
+  'fr-b12-compound-relatives': {
+    title: 'lequel, auquel, dont',
+    rule: 'After a preposition use lequel, laquelle, lesquels, lesquelles (avec laquelle). With à they merge: auquel, auxquels, auxquelles. Dont replaces de + noun and also means “whose”: le livre dont j’ai besoin. For people qui is possible after a preposition.',
+    examples: [
+      'La méthode avec laquelle j’étudie.',
+      'Le cours auquel je participe.',
+      'Voilà le livre dont j’ai besoin.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

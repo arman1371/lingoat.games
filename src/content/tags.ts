@@ -413,6 +413,19 @@ export const TAGS = {
   'fr-object-pronouns': { label: 'le, la, les, lui, leur', group: 'grammar', emoji: '🎯' },
   'fr-superlative': { label: 'le plus, le meilleur', group: 'grammar', emoji: '🥇' },
   'fr-interrogative-pronouns': { label: 'qui, que, quoi, lequel', group: 'grammar', emoji: '🔎' },
+  // grammar points – French B1.2
+  'fr-futur-simple': { label: 'The simple future', group: 'grammar', emoji: '🗓️' },
+  'fr-b12-future-choice': { label: 'Which future to use', group: 'grammar', emoji: '🔭' },
+  'fr-b12-si-clauses': { label: 'Si… clauses', group: 'grammar', emoji: '🤔' },
+  'fr-b12-conditional': { label: 'The conditional', group: 'grammar', emoji: '💭' },
+  'fr-b12-prepositions': { label: 'Verbs with prepositions', group: 'grammar', emoji: '🔗' },
+  'fr-b12-gerondif': { label: 'The gérondif', group: 'grammar', emoji: '🚶' },
+  'fr-b12-connectors': { label: 'Linking words', group: 'grammar', emoji: '🧷' },
+  'fr-b12-indefinite': { label: 'Indefinite pronouns', group: 'grammar', emoji: '👥' },
+  'fr-b12-reported-speech': { label: 'Reported speech', group: 'grammar', emoji: '🗒️' },
+  'fr-b12-inversion': { label: 'Formal questions', group: 'grammar', emoji: '🎩' },
+  'fr-b12-compound-relatives': { label: 'lequel, auquel, dont', group: 'grammar', emoji: '🔗' },
+  'fr-b12-past-hypotheses': { label: 'Regrets and the past', group: 'grammar', emoji: '⏪' },
 } as const satisfies Record<string, TagInfo>;
 
 export type TagId = keyof typeof TAGS;

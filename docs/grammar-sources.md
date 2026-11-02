@@ -294,3 +294,16 @@ The lessons are in `src/content/grammar/fr-a2-2.ts`, the pages in `sources-fr-a2
 | Object pronouns: le, la, les, lui, leur | [Complément d'objet direct](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_d'objet_direct), [Complément d'objet indirect](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_d'objet_indirect), [Pronom personnel](https://fr.wikipedia.org/wiki/Pronom_personnel) |
 | The superlative: le plus, le meilleur   | [Degré de comparaison](https://fr.wikipedia.org/wiki/Degr%C3%A9_de_comparaison) (section "En français")                                                                                                                                                      |
 | Qui, que, quoi, lequel                  | [Pronom interrogatif](https://fr.wikipedia.org/wiki/Pronom_interrogatif) (section "En français")                                                                                                                                                             |
+
+## French B1.2
+
+The French B1.2 lessons are in `src/content/grammar/fr-b1-2.ts`, the pages in `sources-fr.ts`. Forms in the tables come
+from `src/lib/french/tenses.ts` and `conditional.ts`. Not reviewed by a native speaker.
+
+| Topic             | Pages read                                                                                                                                                                  |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The simple future | [Futur simple](https://fr.wikipedia.org/wiki/Futur_simple) (first 100 000 characters), Wiktionnaire [aller](https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/aller) |
+
+**French B1.2 limits:** the Wikipedia page does not state the future after quand / dès que (it only describes the futur
+d'anticipation) or the spelling of payer. The quand + future tip and paierai / payerai follow common textbook teaching and
+are not checked against a fetched page.

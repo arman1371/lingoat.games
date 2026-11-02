@@ -1,6 +1,6 @@
 import { configure, screen, within } from '@testing-library/react';
-import { renderApp, resetStores } from '@/test/app';
 import { GRAMMAR_TOPICS } from '@/content/grammar';
+import { renderApp, resetStores } from '@/test/app';
 
 // every render loads all levels and the library queries a large DOM; CI runs ~100 test files in
 // parallel, so the default second (and even five) is too tight there
@@ -223,6 +223,7 @@ describe('French grammar', () => {
     expect(within(index).getByRole('heading', { level: 2, name: /A1\.1/ })).toBeInTheDocument();
     expect(within(index).getByTestId('grammar-fr-tu-vous')).toBeInTheDocument();
     expect(within(index).queryByTestId('grammar-word-order')).not.toBeInTheDocument();
+    expect(within(index).getByRole('heading', { level: 2, name: /B1\.2/ })).toBeInTheDocument();
     expect(within(index).getAllByTestId(/^grammar-fr-/)).toHaveLength(
       GRAMMAR_TOPICS.filter((t) => t.id.startsWith('fr-')).length,
     );
