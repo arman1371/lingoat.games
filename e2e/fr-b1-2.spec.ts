@@ -54,6 +54,18 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['gap fill (past hypotheses)', 'fr-b1-2-regrets-gap-past-hypothesis'],
   ['dialogue (apologies)', 'fr-b1-2-regrets-dialogues'],
   ['sentence builder (regrets)', 'fr-b1-2-regrets-sentences'],
+  ['flashcards (verbs with prepositions)', 'fr-b1-2-planete-flash-prepositions'],
+  ['sort it (prepositions)', 'fr-b1-2-planete-sort-prepositions'],
+  ['conjugation (environment verbs)', 'fr-b1-2-planete-conj-actions'],
+  ['gap fill (prepositions)', 'fr-b1-2-planete-gap-prepositions'],
+  ['dialogue (small actions)', 'fr-b1-2-planete-dialogues'],
+  ['blitz (prepositions)', 'fr-b1-2-planete-blitz'],
+  ['sort it (gérondif meanings)', 'fr-b1-2-convaincre-sort-gerund'],
+  ['conjugation (verbs of persuasion)', 'fr-b1-2-convaincre-conj-persuasion'],
+  ['gap fill (gérondif)', 'fr-b1-2-convaincre-gap-gerund'],
+  ['gap fill (linking words)', 'fr-b1-2-convaincre-gap-connectors'],
+  ['dialogue (convince me)', 'fr-b1-2-convaincre-dialogues'],
+  ['blitz (gérondif)', 'fr-b1-2-convaincre-blitz'],
 ];
 
 test.describe('French B1.2 – playing the games', () => {

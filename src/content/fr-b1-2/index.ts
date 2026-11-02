@@ -3,8 +3,10 @@ import { voyage } from './u1-voyage';
 import { paysages } from './u2-paysages';
 import { hypotheses } from './u3-hypotheses';
 import { regrets } from './u4-regrets';
+import { planete } from './u5-planete';
+import { convaincre } from './u6-convaincre';
 
-const units = [voyage, paysages, hypotheses, regrets];
+const units = [voyage, paysages, hypotheses, regrets, planete, convaincre];
 
 const content: LevelContent = {
   units: units.map((u) => u.unit),

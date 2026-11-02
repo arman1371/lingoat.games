@@ -1350,6 +1350,33 @@ export const LESSONS = {
       'Tu aurais pu me prévenir !',
     ],
   },
+  'fr-b12-prepositions': {
+    title: 'Verbs with prepositions',
+    rule: 'Many verbs and adjectives need a fixed preposition before their complement: participer à, s’intéresser à, être sensible à; dépendre de, s’occuper de, être capable de; lutter contre, compter sur. à + le = au, à + les = aux, de + le = du, de + les = des.',
+    examples: [
+      'Il participe au tri.',
+      'Elle s’occupe du recyclage.',
+      'Nous luttons contre la pollution.',
+    ],
+  },
+  'fr-b12-gerondif': {
+    title: 'The gérondif',
+    rule: 'En + the participe présent (the nous form without -ons, plus -ant) shows two actions at once, the way, or a condition: Il chante en cuisinant. En travaillant, tu réussiras. It never changes. Exceptions: étant, ayant, sachant.',
+    examples: [
+      'Elle parle en marchant.',
+      'On apprend en pratiquant.',
+      'En partant tôt, tu éviteras les bouchons.',
+    ],
+  },
+  'fr-b12-connectors': {
+    title: 'Linking words',
+    rule: 'Connectors structure an argument: d’abord, ensuite, enfin (order); de plus, d’ailleurs (add); cependant, pourtant, en revanche (contrast); certes … mais (concede); par exemple (illustrate); en somme (conclude).',
+    examples: [
+      'Certes, c’est cher, mais c’est utile.',
+      'Le vélo est rapide ; de plus, il est écologique.',
+      'En somme, nous sommes d’accord.',
+    ],
+  },
 } as const satisfies Record<string, Lesson>;
 
 export type LessonId = keyof typeof LESSONS;

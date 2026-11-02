@@ -571,6 +571,8 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-futur-simple', note: 'outdoor verbs' },
   ],
   'fr-b1-2-hypotheses': [{ topic: 'fr-b12-si-clauses' }, { topic: 'fr-b12-conditional' }],
+  'fr-b1-2-planete': [{ topic: 'fr-b12-prepositions' }],
+  'fr-b1-2-convaincre': [{ topic: 'fr-b12-gerondif' }, { topic: 'fr-b12-connectors' }],
   'fr-b1-2-regrets': [
     { topic: 'fr-b12-past-hypotheses' },
     { topic: 'fr-b12-si-clauses', note: 'si + plus-que-parfait' },

@@ -1,5 +1,10 @@
 import { conditionnel } from '@/lib/french/conditional';
-import { conditionnelPasse, plusQueParfait } from '@/lib/french/compound';
+import {
+  conditionnelPasse,
+  gerondif,
+  participePresent,
+  plusQueParfait,
+} from '@/lib/french/compound';
 import { futurSimple } from '@/lib/french/tenses';
 import { FRENCH_PRONOUNS } from '@/lib/persons';
 import { examples, mistake, p, section, table, tip } from './build';
@@ -385,5 +390,158 @@ export const FRB12_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-b12-si-clauses', 'fr-b12-conditional'],
     sources: [S.plusQueParfait, S.conditionnel],
+  },
+  {
+    id: 'fr-b12-prepositions',
+    title: 'Verbs with prepositions',
+    tagline: 'Participer à, dépendre de, lutter contre',
+    level: LEVEL,
+    summary:
+      'Many French verbs and adjectives need a fixed preposition before their complement, and it often differs from English. The preposition must be learned with the verb. After à and de remember the contractions: au, aux, du, des.',
+    sections: [
+      section(
+        'ad',
+        'Verbs with à and de',
+        table(
+          'Common verbs and adjectives.',
+          ['With à', 'With de'],
+          [
+            ['participer à un projet', 'dépendre de la pluie'],
+            ['s’intéresser à l’écologie', 'se soucier de l’avenir'],
+            ['contribuer à un changement', 's’occuper du tri'],
+            ['être sensible à un problème', 'être capable de changer'],
+            ['être favorable à une loi', 'être responsable de la planète'],
+          ],
+        ),
+        p(
+          'Before a **noun**, the preposition combines with the article: **à + le = au, à + les = aux, de + le = du, de + les = des**. Before an **infinitive** the preposition stays alone: *Il est capable de changer.*',
+        ),
+      ),
+      section(
+        'others',
+        'Other prepositions',
+        p(
+          'Some verbs take a different preposition, and some take none at all. Learn them as a block: **lutter contre** (to fight against), **compter sur** (to count on), **attendre** (to wait for, no preposition), **penser à** (to think of) but **penser que** (to think that).',
+        ),
+        examples(
+          ['Nous luttons contre le gaspillage.', 'We fight against waste.'],
+          ['Vous pouvez compter sur nous.', 'You can count on us.'],
+          ['J’attends le bus.', 'I am waiting for the bus.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Je m’occupe le tri.  ✓ Je m’occupe du tri.',
+          '✗ Il participe de la réunion.  ✓ Il participe à la réunion.',
+          '✗ J’attends pour le bus.  ✓ J’attends le bus.',
+        ),
+      ),
+    ],
+    related: ['fr-contractions'],
+    sources: [S.preposition, S.contraction],
+  },
+  {
+    id: 'fr-b12-gerondif',
+    title: 'The gérondif',
+    tagline: 'Parler en marchant, apprendre en pratiquant',
+    level: LEVEL,
+    summary:
+      'The gérondif is en + the participe présent (en parlant, en finissant). It never changes. It shows that two actions happen at the same time, how something is done, or a condition. Its subject is always the subject of the main verb.',
+    sections: [
+      section(
+        'form',
+        'How it is built',
+        p(
+          'Take the **nous** form of the present, drop **-ons** and add **-ant**: *nous parlons → parlant, nous finissons → finissant, nous faisons → faisant*. Put **en** in front. Three verbs are irregular: **être → étant, avoir → ayant, savoir → sachant**.',
+        ),
+        table(
+          'Participe présent and gérondif.',
+          ['Infinitive', 'Participe présent', 'Gérondif'],
+          ['parler', 'finir', 'prendre', 'faire', 'aller', 'savoir'].map((v) => [
+            v,
+            participePresent(v),
+            gerondif(v),
+          ]),
+        ),
+        tip(
+          'Invariable',
+          'The gérondif never agrees with anything: Elles chantent en marchant. Only the main verb changes.',
+        ),
+      ),
+      section(
+        'use',
+        'What it expresses',
+        table(
+          'Three meanings.',
+          ['Meaning', 'Example'],
+          [
+            ['At the same time', 'Elle chante en cuisinant.'],
+            ['The way (by doing)', 'On apprend en pratiquant.'],
+            ['Condition (if)', 'En partant tôt, vous éviterez les bouchons.'],
+          ],
+        ),
+        p(
+          'Both actions must have the **same subject**: *Je l’ai vu en sortant* means that I was going out. With two subjects, use a relative clause or quand.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Elle parle en marche.  ✓ Elle parle en marchant.',
+          '✗ Ils parlent en marchants.  ✓ Ils parlent en marchant.',
+          '✗ En étant sorti, … (to say “after”)  ✓ Après être sorti, …',
+        ),
+      ),
+    ],
+    related: ['fr-b12-connectors', 'fr-b12-prepositions'],
+    sources: [S.gerondif, S.participePresent],
+  },
+  {
+    id: 'fr-b12-connectors',
+    title: 'Linking words',
+    tagline: 'D’abord, de plus, cependant, en somme',
+    level: LEVEL,
+    summary:
+      'Connectors give a talk or a text its structure. They order ideas, add arguments, contrast, concede a point, give examples and conclude. Placed at the start of a sentence or clause, they are usually followed by a comma.',
+    sections: [
+      section(
+        'types',
+        'What connectors do',
+        table(
+          'Connectors by function.',
+          ['Function', 'Connectors'],
+          [
+            ['Order', 'd’abord, ensuite, puis, enfin'],
+            ['Add', 'de plus, d’ailleurs, en effet'],
+            ['Contrast', 'cependant, pourtant, en revanche'],
+            ['Concede', 'certes … mais'],
+            ['Illustrate / reformulate', 'par exemple, autrement dit'],
+            ['Conclude', 'en somme, en résumé'],
+          ],
+        ),
+      ),
+      section(
+        'use',
+        'Using them well',
+        p(
+          '**En effet** confirms and explains the previous sentence (*Il est fatigué. En effet, il a peu dormi.*). **Pourtant** and **cependant** contrast with what was expected: *Il pleut ; pourtant, nous sortons.* **En revanche** compares two things: *La ville est bruyante ; en revanche, la campagne est calme.*',
+        ),
+        examples(
+          [
+            'Certes, c’est cher, mais c’est utile.',
+            'Admittedly it is expensive, but it is useful.',
+          ],
+          [
+            'Le vélo est rapide ; de plus, il est écologique.',
+            'The bike is fast; moreover, it is ecological.',
+          ],
+          ['En somme, nous sommes d’accord.', 'In short, we agree.'],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Pourtant, mais c’est cher.  ✓ Certes, mais c’est cher.',
+          '✗ Pourtant il est riche, il est malheureux.  ✓ Il est riche ; pourtant, il est malheureux.',
+        ),
+      ),
+    ],
+    related: ['fr-b12-gerondif', 'fr-sequence'],
+    sources: [S.connecteur, S.cependant],
   },
 ];

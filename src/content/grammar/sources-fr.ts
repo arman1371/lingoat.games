@@ -45,6 +45,8 @@ export const FR_SOURCES = {
   imperative: wp('Impératif_(grammaire)', 'Impératif (grammaire)'),
   demonstrative: wp('Adjectif_démonstratif', 'Adjectif démonstratif'),
   futurProche: wp('Futur_proche', 'Futur proche'),
+  connecteur: wp('Connecteur_logique', 'Connecteur logique'),
+  cependant: wiktionary('cependant', 'cependant'),
   conditionnel: wp('Conditionnel', 'Conditionnel'),
   phraseConditionnelle: wp('Phrase_conditionnelle', 'Phrase conditionnelle'),
   plusQueParfait: wp('Plus-que-parfait', 'Plus-que-parfait'),

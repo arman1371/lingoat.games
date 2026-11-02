@@ -1,8 +1,9 @@
 import type { FrenchForms } from '@/lib/french/conjugation';
 import { conditionnelPasse, futurAnterieur, plusQueParfait } from '@/lib/french/compound';
 import { conditionnel } from '@/lib/french/conditional';
+import { conjugateFr } from '@/lib/french/conjugation';
 import { futurSimple } from '@/lib/french/tenses';
-import type { FrenchPronoun } from '@/lib/persons';
+import { FRENCH_PRONOUNS, type FrenchPronoun } from '@/lib/persons';
 import { unit as baseUnit } from '../builders';
 import type { ConfigOf } from '../schema';
 
@@ -24,6 +25,29 @@ function tense(
 ): Table {
   return { id, verb: `${verb} (${label})`, meaning, forms, blanks };
 }
+
+/** Present tense table of a verb the conjugation engine knows (no label: it is the default tense). */
+export const presentTable = (
+  id: string,
+  verb: string,
+  meaning: string,
+  blanks: FrenchPronoun[],
+): Table => ({ id, verb, meaning, forms: conjugateFr(verb), blanks });
+
+/** Table with hand-written forms for a verb the engine does not know (je, tu, il, nous, vous, ils). */
+export const manualTable = (
+  id: string,
+  verb: string,
+  meaning: string,
+  f: [string, string, string, string, string, string],
+  blanks: FrenchPronoun[],
+): Table => ({
+  id,
+  verb,
+  meaning,
+  forms: Object.fromEntries(FRENCH_PRONOUNS.map((p, i) => [p, f[i]])) as FrenchForms,
+  blanks,
+});
 
 /** Futur simple table: j’irai, tu iras … */
 export const futurTable = (
