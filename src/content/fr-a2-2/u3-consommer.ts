@@ -42,7 +42,7 @@ const green = vocabList(U, 'Environment and services', [
   ['économiser', 'to save', '🪙'],
   ['durable', 'long-lasting, sustainable', '🌱'],
   ['réutilisable', 'reusable', '🔁'],
-  ['louer', 'to rent', '🔑'],
+  ['prêter', 'to lend', '🔑'],
   ['emprunter', 'to borrow', '🤲'],
   ['Pourriez-vous m’aider ?', 'Could you help me?', '🙋'],
   ['Je voudrais un renseignement.', 'I would like some information.', 'ℹ️'],
