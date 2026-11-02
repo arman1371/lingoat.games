@@ -582,4 +582,9 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b11-opinion' },
     { topic: 'fr-b11-purpose' },
   ],
+  'fr-b1-1-consommer': [
+    { topic: 'fr-b11-certainty' },
+    { topic: 'fr-b11-comparison' },
+    { topic: 'fr-b11-adj-place' },
+  ],
 };

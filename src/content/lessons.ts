@@ -1152,6 +1152,29 @@ export const LESSONS = {
       'Je travaille pour que ma famille soit heureuse.',
     ],
   },
+  'fr-b11-certainty': {
+    title: 'Certainty: indicative or subjunctive',
+    rule: 'Certainty takes the indicative: je pense que, je suis sûr que, il est évident que. Doubt, denial or possibility takes the subjunctive: je doute que, je ne pense pas que, il est possible que, il se peut que.',
+    examples: [
+      'Je pense que c’est utile.',
+      'Je ne pense pas que ce soit utile.',
+      'Il est possible que nous consommions moins.',
+    ],
+  },
+  'fr-b11-comparison': {
+    title: 'plus … que, le plus, meilleur',
+    rule: 'Compare with plus / moins / aussi + adjective + que, and plus de / moins de / autant de + noun + que. The superlative adds the article: le / la / les plus. Bon becomes meilleur, bien becomes mieux.',
+    examples: [
+      'Ce magasin est moins cher que l’autre.',
+      'C’est le marché le plus animé de la ville.',
+      'Ce vélo est meilleur que l’ancien.',
+    ],
+  },
+  'fr-b11-adj-place': {
+    title: 'Place of the adjective',
+    rule: 'Most adjectives go after the noun (une voiture rouge). A few short, common ones go before it: beau, bon, petit, grand, jeune, vieux, nouveau, joli, gros, mauvais. Before a masculine noun with a vowel: un bel arbre.',
+    examples: ['une jolie robe rouge', 'un bon repas', 'un petit panier'],
+  },
   'fr-tu-vous': {
     title: 'tu or vous?',
     rule: 'Use tu with friends, family, children and people your age you know well. Use vous with strangers, your boss, your teacher and shop staff, and always when you speak to more than one person. Switch to tu only when the other person offers it.',

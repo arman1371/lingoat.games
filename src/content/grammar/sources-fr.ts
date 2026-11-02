@@ -52,5 +52,7 @@ export const FR_SOURCES = {
   prefixIn: wiktionary('in-', 'in-'),
   relative: wp('Pronom_relatif', 'Pronom relatif'),
   subordinate: wp('Proposition_(grammaire)', 'Proposition (grammaire)'),
+  comparative: wp('Comparatif', 'Comparatif'),
+  superlative: wp('Superlatif', 'Superlatif'),
   connector: wp('Connecteur_logique', 'Connecteur logique'),
 } as const satisfies Record<string, Source>;

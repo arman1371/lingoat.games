@@ -391,6 +391,14 @@ export const TAGS = {
   'fr-b11-relatives': { label: 'qui, que, dont, où', group: 'grammar', emoji: '🔗' },
   'fr-b11-opinion': { label: 'Giving an opinion', group: 'grammar', emoji: '💭' },
   'fr-b11-purpose': { label: 'pour, afin de, pour que', group: 'grammar', emoji: '🎯' },
+  // grammar points – French B1.1, unit 4
+  'fr-b11-certainty': {
+    label: 'Certainty: indicative or subjunctive',
+    group: 'grammar',
+    emoji: '🤔',
+  },
+  'fr-b11-comparison': { label: 'plus … que, le plus, meilleur', group: 'grammar', emoji: '⚖️' },
+  'fr-b11-adj-place': { label: 'Place of the adjective', group: 'grammar', emoji: '📏' },
   // grammar points – French A1.2, unit 1
   'fr-pronominal': { label: 'Pronominal verbs (se lever)', group: 'grammar', emoji: '🪞' },
   'fr-frequency': { label: 'toujours, souvent, ne … jamais', group: 'grammar', emoji: '🔁' },

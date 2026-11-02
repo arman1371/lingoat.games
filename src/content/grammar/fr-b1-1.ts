@@ -593,12 +593,7 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
             ],
           ],
         ),
-        subjunctiveTable('Verbs you need after pour que.', [
-          'prendre',
-          'pouvoir',
-          'être',
-          'avoir',
-        ]),
+        subjunctiveTable('Verbs you need after pour que.', ['prendre', 'pouvoir', 'être', 'avoir']),
         p(
           '**Afin de / afin que** are slightly more formal than **pour / pour que**. The subjunctive forms are the ones from unit 1.',
         ),
@@ -626,5 +621,167 @@ export const FR_B11_TOPICS: GrammarTopic[] = [
     ],
     related: ['fr-b11-subjunctive'],
     sources: [S.subordinate, S.subjunctive],
+  },
+  {
+    id: 'fr-b11-certainty',
+    title: 'Certainty: indicative or subjunctive',
+    tagline: 'How sure are you? The mood tells it',
+    level: LEVEL,
+    summary:
+      'Expressions of certainty (je pense que, je suis sûr que, il est évident que) take the indicative. Expressions of doubt, denial or possibility (je doute que, je ne pense pas que, il est possible que, il se peut que) take the subjunctive.',
+    sections: [
+      section(
+        'rule',
+        'Which mood?',
+        table(
+          'Certainty and doubt.',
+          ['Meaning', 'Expressions', 'Mood'],
+          [
+            [
+              'certain',
+              'je suis sûr que, il est évident que, il est certain que, je pense que, je crois que',
+              'indicative',
+            ],
+            ['probable', 'il est probable que', 'indicative'],
+            [
+              'doubt, denial, possibility',
+              'je doute que, il est douteux que, je ne pense pas que, je ne crois pas que, il est possible que, il se peut que',
+              'subjunctive',
+            ],
+          ],
+        ),
+        p(
+          'The negative flips the mood: *Je pense que c’est utile* (indicative) but *Je ne pense pas que ce **soit** utile* (subjunctive). The irregular subjunctives you need most are **être** (que ce soit), **avoir** (que j’aie), **aller** (que j’aille) and **savoir** (que je sache).',
+        ),
+        subjunctiveTable('Irregular verbs after doubt.', ['être', 'avoir', 'aller', 'savoir']),
+        examples(
+          ['Je suis sûr que tu as raison.', 'I am sure you are right.'],
+          [
+            'Je doute que cette marque soit vraiment locale.',
+            'I doubt this brand is really local.',
+          ],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ Je ne pense pas que c’est utile.  ✓ Je ne pense pas que ce soit utile.',
+          '✗ Je doute que tu as raison.  ✓ Je doute que tu aies raison.',
+          '✗ Je pense que ce soit utile.  ✓ Je pense que c’est utile.',
+        ),
+        tip(
+          'Same subject, no que',
+          'If the subject does not change, use the infinitive: je doute de pouvoir venir, not ✗ je doute que je puisse venir.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-subjunctive', 'fr-b11-comparison'],
+    sources: [S.subjunctive],
+  },
+  {
+    id: 'fr-b11-comparison',
+    title: 'plus … que, le plus, meilleur',
+    tagline: 'Compare things and say which is the best',
+    level: LEVEL,
+    summary:
+      'Compare adjectives with plus / moins / aussi + adjective + que, and amounts with plus de / moins de / autant de + noun + que. The superlative adds the article: le plus, la plus, les plus. Bon becomes meilleur and bien becomes mieux.',
+    sections: [
+      section(
+        'rule',
+        'Comparative and superlative',
+        table(
+          'Degrees of comparison.',
+          ['', 'Adjective / adverb', 'Noun'],
+          [
+            ['more', 'plus cher que', 'plus de bruit que'],
+            ['less', 'moins cher que', 'moins de bruit que'],
+            ['equal', 'aussi cher que', 'autant de bruit que'],
+            ['the most', 'le / la / les plus cher(s)', 'le plus de bruit'],
+          ],
+        ),
+        table(
+          'Irregular forms.',
+          ['Basic', 'Comparative', 'Superlative'],
+          [
+            ['bon (adjective)', 'meilleur(e)(s)', 'le / la / les meilleur(e)(s)'],
+            ['bien (adverb)', 'mieux', 'le mieux'],
+          ],
+        ),
+        p(
+          'The article of the superlative agrees with the noun: *le marché le plus animé*, *la plateforme la plus pratique*. After a superlative, **de** means “in”: *le plus beau de la ville*.',
+        ),
+        examples(
+          ['Ce magasin est moins cher que l’autre.', 'This shop is cheaper than the other one.'],
+          ['Elle cuisine mieux que moi.', 'She cooks better than me.'],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ plus bon, plus bonne  ✓ meilleur, meilleure',
+          '✗ Elle cuisine meilleur que moi.  ✓ Elle cuisine mieux que moi.',
+          '✗ C’est plus beau de la ville.  ✓ C’est le plus beau de la ville.',
+        ),
+      ),
+    ],
+    related: ['fr-b11-certainty', 'fr-b11-adj-place'],
+    sources: [S.comparative, S.superlative],
+  },
+  {
+    id: 'fr-b11-adj-place',
+    title: 'Place of the adjective',
+    tagline: 'Before or after the noun?',
+    level: LEVEL,
+    summary:
+      'Most French adjectives follow the noun. A few short and very common ones come before it: beau, bon, petit, grand, jeune, vieux, nouveau, joli, gros, mauvais. When two adjectives are used, each goes in its own place.',
+    sections: [
+      section(
+        'rule',
+        'Before or after?',
+        table(
+          'Position of the adjective.',
+          ['Position', 'Adjectives', 'Example'],
+          [
+            [
+              'before the noun',
+              'beau, bon, petit, grand, jeune, vieux, nouveau, joli, gros, mauvais',
+              'un petit panier, une jolie robe',
+            ],
+            [
+              'after the noun',
+              'colours, shapes, nationalities, most other adjectives',
+              'une robe rouge, un sac rond, un fromage français',
+            ],
+            ['both', 'one before and one after', 'une jolie robe rouge'],
+          ],
+        ),
+        p(
+          'Before a masculine noun that starts with a vowel, **beau, nouveau, vieux** become **bel, nouvel, vieil**: *un bel appartement, un nouvel emploi*. Some adjectives change meaning with the place: *un ancien élève* (a former pupil), *une maison ancienne* (an old house).',
+        ),
+        examples(
+          ['Elle a un vieux vélo rouge.', 'She has an old red bike.'],
+          [
+            'Nous cherchons un grand appartement lumineux.',
+            'We are looking for a big, bright flat.',
+          ],
+        ),
+      ),
+      section(
+        'mistakes',
+        'Typical mistakes',
+        mistake(
+          'Watch out',
+          '✗ un panier petit  ✓ un petit panier',
+          '✗ une rouge voiture  ✓ une voiture rouge',
+          '✗ un beau appartement  ✓ un bel appartement',
+        ),
+      ),
+    ],
+    related: ['fr-b11-comparison'],
+    sources: [S.adjective],
   },
 ];

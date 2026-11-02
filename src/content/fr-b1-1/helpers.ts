@@ -1,5 +1,6 @@
 import type { FrenchPronoun } from '@/lib/persons';
 import { subjunctiveFr } from '@/lib/french/subjunctive';
+import { conditionnel, plusQueParfait } from '@/lib/french/moreTenses';
 import { unit as baseUnit } from '../builders';
 import type { ConfigOf } from '../schema';
 
@@ -27,6 +28,32 @@ export function subjTable(
     forms: subjunctiveFr(verb),
     blanks,
   };
+}
+
+/** A plus-que-parfait table (avais fini, étions allés). */
+export function pqpTable(
+  id: string,
+  verb: string,
+  meaning: string,
+  blanks: FrenchPronoun[],
+): Table {
+  return {
+    id,
+    verb,
+    meaning: `${meaning} – plus-que-parfait`,
+    forms: plusQueParfait(verb),
+    blanks,
+  };
+}
+
+/** A conditionnel présent table (je parlerais). */
+export function condTable(
+  id: string,
+  verb: string,
+  meaning: string,
+  blanks: FrenchPronoun[],
+): Table {
+  return { id, verb, meaning: `${meaning} – conditionnel`, forms: conditionnel(verb), blanks };
 }
 
 /**
