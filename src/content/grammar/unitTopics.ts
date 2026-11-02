@@ -585,6 +585,10 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
     { topic: 'fr-b22-purpose', note: 'pour que, afin de, de peur que' },
     { topic: 'fr-b22-conditional-past', note: 'regret, reproche, information non confirmée' },
   ],
+  'fr-b2-2-climat': [
+    { topic: 'fr-b22-time-relations', note: 'avant que, jusqu’à ce que, après que' },
+    { topic: 'fr-b22-futur-anterieur', note: 'dès que j’aurai fini, d’ici 2030' },
+  ],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

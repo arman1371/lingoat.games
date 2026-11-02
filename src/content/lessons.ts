@@ -1449,6 +1449,24 @@ export const LESSONS = {
       'Sans lui, nous n’aurions pas réussi.',
     ],
   },
+  'fr-b22-time-relations': {
+    title: 'Time connectors',
+    rule: 'Avant que, jusqu’à ce que, en attendant que and d’ici à ce que take the subjunctive. Après que, dès que, aussitôt que, pendant que, lorsque, quand, une fois que and au moment où take the indicative. Agissons avant qu’il ne soit trop tard. Dès qu’il arrivera, nous commencerons.',
+    examples: [
+      'Attends jusqu’à ce qu’il vienne.',
+      'Après qu’ils sont partis, il a plu.',
+      'Pendant que tu dormais, il a neigé.',
+    ],
+  },
+  'fr-b22-futur-anterieur': {
+    title: 'The futur antérieur',
+    rule: 'Futur antérieur = future of avoir / être + past participle (j’aurai fini, nous serons arrivés). It expresses an action that will be completed before another future moment: Quand j’aurai fini, je t’appellerai. D’ici 2030, nous aurons réduit nos émissions. It also expresses a probable past fact: Il aura oublié.',
+    examples: [
+      'Dès qu’elle aura décidé, elle nous préviendra.',
+      'Demain, ils auront terminé.',
+      'Quand nous serons arrivés, nous mangerons.',
+    ],
+  },
   // ---- French A2.1 ---------------------------------------------------------------------------
   'fr-a21-passe-compose': {
     title: 'Passé composé with être',

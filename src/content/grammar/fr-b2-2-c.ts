@@ -424,4 +424,122 @@ export const FR22B_TOPICS_C: GrammarTopic[] = [
     related: ['fr-b22-si-clauses', 'fr-b22-purpose'],
     sources: [S.conditionalPast, S.conditional],
   },
+  {
+    id: 'fr-b22-time-relations',
+    title: 'Time connectors',
+    tagline: 'avant que · jusqu’à ce que · après que · dès que',
+    level: LEVEL,
+    summary:
+      'Connectors of time decide the mood: avant que, jusqu’à ce que and en attendant que take the subjunctive; après que, dès que, pendant que, lorsque and au moment où take the indicative.',
+    sections: [
+      section(
+        'moods',
+        'Which mood?',
+        table(
+          'Time connectors by mood.',
+          ['Mood', 'Connectors', 'Example'],
+          [
+            [
+              'subjunctive',
+              'avant que, jusqu’à ce que, en attendant que, d’ici à ce que',
+              'Agissons avant qu’il ne soit trop tard.',
+            ],
+            [
+              'indicative',
+              'après que, dès que, aussitôt que, une fois que',
+              'Dès qu’il arrivera, nous commencerons.',
+            ],
+            [
+              'indicative',
+              'pendant que, tandis que, lorsque, quand',
+              'Pendant que tu dormais, il a neigé.',
+            ],
+            [
+              'indicative',
+              'au moment où, le jour où, chaque fois que',
+              'Au moment où la loi a été votée, personne n’y croyait.',
+            ],
+          ],
+        ),
+        tip(
+          'Après que',
+          'Careful French uses the indicative after après que (après qu’ils sont partis). The subjunctive is often heard but is considered incorrect.',
+        ),
+      ),
+      section(
+        'same-subject',
+        'Same subject: preposition + infinitive',
+        p(
+          'When both clauses share a subject, prefer **avant de + infinitive** (*Je lis avant de dormir*) and **après + past infinitive** (*Après avoir lu, je dors*). **Jusqu’à ce que** keeps its clause.',
+        ),
+        mistake(
+          'Watch out',
+          '✗ Avant qu’il vient.  ✓ Avant qu’il vienne.',
+          '✗ Attends jusqu’il vienne.  ✓ Attends jusqu’à ce qu’il vienne.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-futur-anterieur', 'fr-b22-subj-or-inf'],
+    sources: [S.subordinateAdverbial, S.subjunctive],
+  },
+  {
+    id: 'fr-b22-futur-anterieur',
+    title: 'The futur antérieur',
+    tagline: 'Dès que j’aurai fini · d’ici 2030 nous aurons réduit',
+    level: LEVEL,
+    summary:
+      'The futur antérieur (future of avoir or être + participle) presents an action as completed before another future moment. It follows quand, dès que, lorsque, une fois que and après que when the main verb is in the future.',
+    sections: [
+      section(
+        'form',
+        'Form and use',
+        table(
+          'Futur antérieur.',
+          ['Verb', 'Forms', 'Example'],
+          [
+            [
+              'finir (avoir)',
+              'j’aurai fini, tu auras fini …',
+              'Quand j’aurai fini, je t’appellerai.',
+            ],
+            [
+              'arriver (être)',
+              'je serai arrivé(e), nous serons arrivé(e)s …',
+              'Quand nous serons arrivés, nous mangerons.',
+            ],
+            [
+              'se lever (être)',
+              'je me serai levé(e) …',
+              'Dès qu’elle se sera levée, elle partira.',
+            ],
+          ],
+        ),
+        p(
+          'Use it after **quand, lorsque, dès que, aussitôt que, une fois que, après que** when the main clause is in the **future**: *Une fois que la loi sera votée, elle s’appliquera.* It also gives a **deadline**: *D’ici 2030, le pays aura réduit ses émissions.*',
+        ),
+      ),
+      section(
+        'probability',
+        'A guess about the past',
+        p(
+          'The futur antérieur can express a **supposition about the past**: *Il n’est pas là ; il aura oublié.* (He is not here; he has probably forgotten.)',
+        ),
+        compare(
+          { title: 'futur simple', question: 'the second action', example: 'Je t’appellerai.' },
+          {
+            title: 'futur antérieur',
+            question: 'the first, completed action',
+            example: 'Quand j’aurai fini…',
+          },
+        ),
+        mistake(
+          'Watch out',
+          '✗ Quand j’aurai fini, je t’appelle (in a formal text).  ✓ Quand j’aurai fini, je t’appellerai.',
+          '✗ Dès qu’il a fini, il partira.  ✓ Dès qu’il aura fini, il partira.',
+        ),
+      ),
+    ],
+    related: ['fr-b22-time-relations', 'fr-b22-conditional-past'],
+    sources: [S.pluperfect, S.connector],
+  },
 ];

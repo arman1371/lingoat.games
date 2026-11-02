@@ -105,6 +105,13 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['sort it (purpose)', 'fr-b2-2-societe-sort-purpose'],
   ['conjugation (conditionnel passé)', 'fr-b2-2-societe-conj-conditional-past'],
   ['dialogue (unit 10)', 'fr-b2-2-societe-dialogues'],
+  // unit 11
+  ['flashcards (unit 11)', 'fr-b2-2-climat-flash-climate'],
+  ['gap fill (time connectors)', 'fr-b2-2-climat-gap-time'],
+  ['gap fill (futur antérieur)', 'fr-b2-2-climat-gap-futur-anterieur'],
+  ['sort it (time connectors)', 'fr-b2-2-climat-sort-mood'],
+  ['conjugation (futur antérieur)', 'fr-b2-2-climat-conj-futur-anterieur'],
+  ['dialogue (unit 11)', 'fr-b2-2-climat-dialogues'],
 ];
 
 test.describe('French B2.2 – playing the games', () => {

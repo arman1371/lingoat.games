@@ -153,6 +153,16 @@ export function conditionnelPasse(verb: string): Six {
   }) as Six;
 }
 
+/** Futur antérieur: future of avoir / être + participle (j’aurai fini, nous serons arrivés). */
+export function futurAnterieur(verb: string): Six {
+  const aux = futurSimple(ETRE_VERBS.has(verb) ? 'être' : 'avoir');
+  const part = participle(verb);
+  return FRENCH_PRONOUNS.map((p) => {
+    const agreed = ETRE_VERBS.has(verb) && PLURAL.has(p) ? `${part}s` : part;
+    return `${aux[p]} ${agreed}`;
+  }) as Six;
+}
+
 // ---- the unit builder -------------------------------------------------------------------------
 
 interface Games {
