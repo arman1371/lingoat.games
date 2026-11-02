@@ -84,6 +84,10 @@ const PLAYED: [engine: string, activityId: string][] = [
   ['conjugation (present subjunctive)', 'fr-c2-1-subjonctif-conj-subjunctive'],
   ['gap fill (reported speech)', 'fr-c2-1-subjonctif-gap-reported'],
   ['quiz (subjunctive challenge)', 'fr-c2-1-subjonctif-challenge'],
+  ['sort it (kinds of emphasis)', 'fr-c2-1-relief-sort-structures'],
+  ['gap fill (nominalisation)', 'fr-c2-1-relief-gap-nominal'],
+  ['spell (stress words)', 'fr-c2-1-relief-spell-words'],
+  ['quiz (emphasis challenge)', 'fr-c2-1-relief-challenge'],
 ];
 
 test.describe('French C2.1 – playing the games', () => {

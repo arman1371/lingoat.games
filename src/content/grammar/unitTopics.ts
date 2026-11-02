@@ -547,6 +547,7 @@ export const UNIT_TOPICS: Record<string, UnitTopicRef[]> = {
   'fr-c2-1-cause': [{ topic: 'fr-c21-cause-consequence' }],
   'fr-c2-1-concession': [{ topic: 'fr-c21-concession' }],
   'fr-c2-1-subjonctif': [{ topic: 'fr-c21-subjunctive' }, { topic: 'fr-c21-reported-speech' }],
+  'fr-c2-1-relief': [{ topic: 'fr-c21-emphasis' }, { topic: 'fr-c21-nominalisation' }],
   // ---- French A1.2 ----------------------------------------------------------------------------
   'fr-a1-2-journee': [
     { topic: 'fr-pronominal' },

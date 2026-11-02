@@ -1318,6 +1318,23 @@ export const LESSONS = {
       'Quand bien même vous insisteriez, je refuserais.',
     ],
   },
+  'fr-c21-emphasis': {
+    title: 'Emphasis',
+    rule: 'Stress one element with c’est … qui (subject) or c’est … que (object, adverbial), with ce qui / ce que / ce dont … c’est, or by dislocation: Ce livre, je l’ai lu. / Je l’ai lu, ce livre. The detached noun is taken up by a pronoun. Before a plural noun, careful writing uses ce sont.',
+    examples: [
+      'C’est Marie qui a gagné.',
+      'Ce que je veux, c’est du calme.',
+      'Ce livre, je l’ai lu.',
+    ],
+  },
+  'fr-c21-nominalisation': {
+    title: 'Nominalisation',
+    rule: 'Written French packs verbs into nouns: Les prix ont flambé → la flambée des prix. The noun often has a suffix (-ation, -ment, -ion, -ée) or is the stem itself (le report, le recul). The result is shorter and denser; not every infinitive becomes a noun.',
+    examples: [
+      'La situation s’aggrave → l’aggravation de la situation.',
+      'Il a démissionné → sa démission.',
+    ],
+  },
   'fr-c21-subjunctive': {
     title: 'The subjunctive',
     rule: 'The subjunctive follows will, necessity, doubt, emotion and possibility: il faut que, exiger que, douter que, regretter que, il se peut que. Facts and certainty take the indicative: je pense que, il est certain que. Irregular: être → sois, avoir → aie, aller → aille, faire → fasse, savoir → sache.',

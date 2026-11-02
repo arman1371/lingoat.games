@@ -366,6 +366,7 @@ export const TAGS = {
   'fr-c21-humour': { label: 'Humour & irony', group: 'topic', emoji: '🎭' },
   'fr-c21-narration': { label: 'Telling a story', group: 'topic', emoji: '📖' },
   'fr-c21-mood': { label: 'Mood & reported speech', group: 'topic', emoji: '🗣️' },
+  'fr-c21-style': { label: 'Emphasis & written style', group: 'topic', emoji: '🔦' },
   'fr-c21-logic': { label: 'Cause, result & concession', group: 'topic', emoji: '🔗' },
   // grammar points – French A1.1
   'fr-tu-vous': { label: 'tu or vous', group: 'grammar', emoji: '🎩' },
@@ -415,6 +416,8 @@ export const TAGS = {
   'fr-c21-narrative-tenses': { label: 'Tenses of a story', group: 'grammar', emoji: '🎞️' },
   'fr-c21-subjunctive': { label: 'The subjunctive', group: 'grammar', emoji: '🌫️' },
   'fr-c21-reported-speech': { label: 'Reported speech', group: 'grammar', emoji: '💬' },
+  'fr-c21-emphasis': { label: 'Emphasis (c’est … qui)', group: 'grammar', emoji: '🔦' },
+  'fr-c21-nominalisation': { label: 'Nominalisation', group: 'grammar', emoji: '🗞️' },
   'fr-c21-concession': { label: 'Concession & hypothesis', group: 'grammar', emoji: '⚖️' },
   'fr-c21-cause-consequence': { label: 'Cause & consequence', group: 'grammar', emoji: '🔗' },
   // topics – French A2.1

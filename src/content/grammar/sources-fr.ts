@@ -62,5 +62,8 @@ export const FR_SOURCES = {
   subjunctive: wp('Subjonctif_en_français', 'Subjonctif en français'),
   concordance: wp('Concordance_des_temps', 'Concordance des temps'),
   indirectSpeech: wp('Discours_indirect', 'Discours indirect'),
+  cleft: wp('Phrase_clivée', 'Phrase clivée'),
+  dislocation: wp('Dislocation_(linguistique)', 'Dislocation (linguistique)'),
+  nominalisation: wp('Nominalisation', 'Nominalisation'),
   deSorteQue: wiktionary('de_sorte_que', 'de sorte que'),
 } as const satisfies Record<string, Source>;

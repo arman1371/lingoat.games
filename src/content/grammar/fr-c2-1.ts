@@ -681,4 +681,132 @@ export const FRC21_TOPICS: GrammarTopic[] = [
     related: ['fr-c21-subjunctive', 'fr-c21-narrative-tenses'],
     sources: [S.indirectSpeech, S.concordance],
   },
+  {
+    id: 'fr-c21-emphasis',
+    title: 'Emphasis',
+    tagline: 'Put the spotlight on one element',
+    level: LEVEL,
+    summary:
+      'French stresses one element by framing it with c’est … qui / que, by a ce qui / ce que … c’est sentence, or by dislocation: the element is detached at the start or end of the sentence and taken up by a pronoun.',
+    sections: [
+      section(
+        'cleft',
+        'C’est … qui, c’est … que',
+        p(
+          'The cleft sentence frames one element between a presentative (**c’est**, **ce sont**) and a relative pronoun. **Qui** stands for the subject, **que** for an object or a complement. The stressed element excludes the alternatives: C’est Louis Jouvet qui a créé ces pièces (and not someone else).',
+        ),
+        table(
+          'Cleft sentences.',
+          ['Stressed element', 'Pronoun', 'Example'],
+          [
+            ['subject', 'qui', 'C’est Paul qui a cassé le vase.'],
+            ['direct object', 'que', 'C’est ce film que nous avons vu hier.'],
+            ['place or time', 'que', 'C’est demain que nous partons.'],
+            ['with a preposition', 'que', 'C’est à toi que je parle.'],
+            [
+              'plural noun (careful writing)',
+              'qui / que',
+              'Ce sont les enfants qui font le bruit.',
+            ],
+          ],
+        ),
+        examples(
+          [
+            'C’est Louis Jouvet qui a créé ces pièces.',
+            'It was Louis Jouvet who created these plays.',
+          ],
+          [
+            'Ce sont les pièces de Giraudoux que Jouvet a créées.',
+            'It was Giraudoux’s plays that Jouvet created.',
+          ],
+        ),
+      ),
+      section(
+        'pseudo',
+        'Ce qui, ce que, ce dont … c’est',
+        p(
+          'To stress an idea in a longer sentence, put it after **c’est** and introduce it with **ce qui** (subject), **ce que** (object) or **ce dont** (a verb with de): Ce qui m’intéresse, c’est la musique. After ce dont … c’est the preposition de returns: Ce dont j’ai besoin, c’est de temps.',
+        ),
+        examples(
+          ['Ce qui compte, c’est de participer.', 'What matters is taking part.'],
+          ['Ce que je veux, c’est du calme.', 'What I want is some peace.'],
+          ['Ce dont j’ai besoin, c’est de temps.', 'What I need is time.'],
+        ),
+      ),
+      section(
+        'dislocation',
+        'Dislocation',
+        p(
+          'A **dislocation** detaches an element at the beginning (left) or at the end (right) of the sentence. A pronoun takes it up inside the clause. It is very common in speech and also used in writing for emphasis.',
+        ),
+        table(
+          'Left and right dislocation.',
+          ['Left', 'Right'],
+          [
+            [
+              'Les pièces de Giraudoux, Jouvet les a créées.',
+              'Jouvet les a créées, les pièces de Giraudoux.',
+            ],
+            ['Ce livre, je l’ai lu deux fois.', 'Je l’ai lu deux fois, ce livre.'],
+            ['Les voisins, on ne les voit jamais.', 'On ne les voit jamais, les voisins.'],
+          ],
+        ),
+        mistake(
+          'Watch out',
+          '✗ Ce livre, je lis.  ✓ Ce livre, je le lis.',
+          '✗ C’est Hugo que l’a écrit.  ✓ C’est Hugo qui l’a écrit.',
+          '✗ Ce que m’intéresse, c’est ça.  ✓ Ce qui m’intéresse, c’est ça.',
+        ),
+      ),
+    ],
+    related: ['fr-c21-nominalisation', 'fr-c21-cause-consequence'],
+    sources: [S.cleft, S.dislocation],
+  },
+  {
+    id: 'fr-c21-nominalisation',
+    title: 'Nominalisation',
+    tagline: 'Pack a verb into a noun',
+    level: LEVEL,
+    summary:
+      'Nominalisation turns a verb or an adjective into a noun. It makes written French denser and is typical of articles, reports and headlines.',
+    sections: [
+      section(
+        'what',
+        'What nominalisation does',
+        p(
+          'A nominalisation changes a word that is not a noun into a noun. It is particularly used in written language: it shortens a sentence and increases the density of a text. A verbal sentence becomes a noun phrase that can be the subject of a new clause.',
+        ),
+        table(
+          'From a sentence with a verb to a noun phrase.',
+          ['Verbal sentence', 'Noun phrase'],
+          [
+            ['Les prix ont flambé.', 'La flambée des prix inquiète.'],
+            ['La situation s’aggrave.', 'L’aggravation de la situation inquiète.'],
+            ['Le ministre a démissionné.', 'La démission du ministre a surpris.'],
+            ['Les négociations ont abouti.', 'L’aboutissement des négociations est un succès.'],
+          ],
+        ),
+      ),
+      section(
+        'forms',
+        'How the noun is formed',
+        p(
+          'Many nouns are formed with a suffix: **-ation / -ion** (aggravation, opposition), **-ment** (aboutissement, développement) and **-ée** (flambée). Others are the bare stem (le report, le recul, l’essor) or an infinitive used as a noun (le coucher). French cannot nominalise every infinitive: we say le coucher but not le dormir.',
+        ),
+        examples(
+          ['Le déroulement de la réunion a été long.', 'The course of the meeting was long.'],
+          [
+            'L’émergence de ce parti a bouleversé la scène politique.',
+            'The emergence of this party upset the political scene.',
+          ],
+        ),
+        tip(
+          'Style',
+          'Nominalisations are typical of the press and of formal writing; in speech, prefer the verb. Adjectives can be nominalised too: pauvre → le pauvre, beau → le beau.',
+        ),
+      ),
+    ],
+    related: ['fr-c21-emphasis', 'fr-c21-word-formation'],
+    sources: [S.nominalisation],
+  },
 ];
