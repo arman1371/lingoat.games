@@ -9,8 +9,8 @@ const TONE: Record<Tone, string> = {
   neutral: 'bg-sunken text-ink',
 };
 const ICON_TONE: Record<Tone, string> = {
-  streak: 'text-streak',
-  xp: 'text-accent',
+  streak: 'text-on-streak-soft',
+  xp: 'text-on-xp-soft',
   info: 'text-info',
   neutral: 'text-muted',
 };
@@ -30,7 +30,7 @@ export function StatPill({ icon, value, label, tone = 'neutral', ...rest }: Prop
     <span
       role="img"
       aria-label={label}
-      className={`inline-flex h-9 items-center gap-1.5 rounded-full pl-2.5 pr-3.5 font-display text-lg font-semibold ${TONE[tone]}`}
+      className={`inline-flex h-9 items-center gap-1.5 rounded-full pl-2.5 pr-3.5 font-display text-lg font-extrabold ${TONE[tone]}`}
       {...rest}
     >
       <Icon name={icon} size={20} className={ICON_TONE[tone]} />

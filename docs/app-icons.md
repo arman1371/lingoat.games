@@ -1,6 +1,6 @@
 # App icon and favicon
 
-The icon is a simplified head of Goaty (the mascot) on the brand purple (`color/brand/primary`, `#584BCA`).
+The icon is a simplified head of Goaty (the mascot) on the brand lagoon teal (`DESIGN/` `--accent`, `#0F766E`).
 The design lives in the Penpot file "LingoatGames", page **App icon**; the small versions drop ears and beard so the
 head stays readable at 16 and 32 px.
 

@@ -14,10 +14,10 @@ export function Chip({ selected, onToggle, children, className = '', ...rest }: 
       type="button"
       aria-pressed={selected}
       onClick={onToggle}
-      className={`inline-flex min-h-11 items-center gap-2 rounded-full border-2 px-4 text-sm font-bold transition-colors ${
+      className={`inline-flex min-h-11 items-center gap-2 rounded-full border-2 px-4 text-sm font-bold transition-colors duration-180 ${
         selected
           ? 'border-primary-soft-line bg-primary-soft text-on-primary-soft'
-          : 'border-line bg-surface text-ink hover:bg-surface-2'
+          : 'border-line bg-surface text-muted hover:border-line-strong hover:text-ink'
       } ${className}`}
       {...rest}
     >

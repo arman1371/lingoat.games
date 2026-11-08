@@ -28,7 +28,7 @@ export function Dialog({ open, onClose, title, hero, children, actions }: Dialog
       ref={ref}
       aria-labelledby={titleId}
       onClose={onClose}
-      className="m-auto w-[min(92vw,26rem)] rounded-3xl border-2 border-line bg-surface p-6 text-ink shadow-(--shadow-4) backdrop:bg-overlay"
+      className="m-auto w-[min(92vw,26rem)] rounded-(--radius-lg) border-2 border-line bg-surface p-6 text-ink shadow-(--shadow-4) backdrop:bg-overlay"
     >
       {hero ? <div className="mb-3 flex justify-center">{hero}</div> : null}
       <h2 id={titleId} className={`text-xl font-semibold ${hero ? 'text-center' : ''}`}>

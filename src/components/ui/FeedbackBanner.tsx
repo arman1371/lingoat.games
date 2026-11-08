@@ -12,7 +12,7 @@ const STYLE: Record<FeedbackKind, { sheet: string; badge: string; icon: IconName
   },
   almost: {
     sheet: 'bg-warning-soft border-warning-soft-line text-on-warning-soft',
-    badge: 'bg-warning text-on-primary',
+    badge: 'bg-warning text-on-warning',
     icon: 'warning',
   },
   wrong: {

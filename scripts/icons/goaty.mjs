@@ -1,8 +1,8 @@
 // Simplified Goaty head for app icons and favicons (512 x 512 space, mirrors the Penpot "App icon" page).
 // "small" drops ears and beard so the head stays bold at 16 and 32 px; "mono" is the one-colour themed variant.
 
-export const BRAND = '#584BCA'; // color/brand/primary (brand/600)
-export const BRAND_LIGHT = '#CDC9F8'; // brand/200, tuft on the brand background
+export const BRAND = '#0F766E'; // DESIGN --accent (lagoon)
+export const BRAND_LIGHT = '#99F6E4'; // lagoon tint, tuft on the brand background
 
 const HORNS =
   '<path d="M186 204C124 190 88 138 86 72C85 54 102 52 108 68C130 112 184 132 242 152Z" fill="#D9A441"/>' +

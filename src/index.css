@@ -5,144 +5,153 @@
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
 /*
- * Design tokens from the Penpot design system (file "LingoatGames", light theme).
- * Semantic colours switch with the theme; Tailwind utilities read them in @theme below.
+ * Design tokens from DESIGN/ (Lingoat teal system). The app keeps its own semantic names; values map onto
+ * DESIGN/tokens.css (--bg, --surface, --fg, --muted, --border, --accent, ...). Where a DESIGN hue cannot carry
+ * white text at 4.5:1 (danger red, eel blue) the solid is one step darker and the DESIGN hue stays decorative.
  */
 :root {
-  --bg: #fbfaf8;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --surface-2: #f6f4f1;
-  --sunken: #edeae5;
-  --text: #1b1917;
-  --text-muted: #5a554f;
-  --border: #ddd9d2;
-  --border-strong: #c3beb5;
-  --primary: #584bca;
-  --primary-hover: #4b40a7;
-  --primary-edge: #3e3684;
-  --primary-soft: #f3f1fd;
-  --primary-soft-border: #cdc9f8;
-  --on-primary-soft: #4b40a7;
+  --surface-2: #f7f7f7;
+  --sunken: #e5e5e5;
+  --text: #3c3c3c;
+  --text-muted: #666666;
+  --border: #e5e5e5;
+  --border-strong: #afafaf;
+  --edge: #d7d7d7;
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --primary: #0f766e;
+  --primary-hover: #115e59;
+  --primary-edge: #134e4a;
+  --primary-soft: #ccfbf1;
+  --primary-soft-border: #99f6e4;
+  --on-primary-soft: #134e4a;
   --on-primary: #ffffff;
-  --success: #13754d;
-  --success-edge: #135e3f;
-  --success-soft: #ecf7f3;
-  --success-soft-border: #b4e1cf;
-  --on-success-soft: #135e3f;
-  --danger: #c74044;
-  --danger-edge: #a6373a;
-  --danger-soft: #fdf0f1;
-  --danger-soft-border: #f7c4c6;
-  --on-danger-soft: #842f31;
-  --warning: #926718;
-  --warning-soft: #fff9ed;
-  --warning-soft-border: #ffe6b8;
-  --on-warning-soft: #6c4d16;
-  --info: #2b70ce;
-  --info-edge: #265faa;
-  --info-soft: #eef5fe;
-  --info-soft-border: #bcd6f9;
-  --on-info-soft: #224d87;
-  --accent: #ffb020;
-  --xp-soft: #fff2db;
-  --on-xp-soft: #6c4d16;
-  --streak: #ff6b2c;
-  --streak-soft: #fff3ee;
-  --on-streak-soft: #92411f;
-  --focus: #6355e8;
-  --control-off: #77716a;
-  --overlay: rgb(27 25 23 / 0.55);
-  --shadow-1: 0 1px 2px rgb(27 25 23 / 0.06), 0 1px 3px rgb(27 25 23 / 0.05);
-  --shadow-2: 0 2px 8px rgb(27 25 23 / 0.08), 0 1px 2px rgb(27 25 23 / 0.05);
-  --shadow-3: 0 8px 24px rgb(27 25 23 / 0.12), 0 2px 6px rgb(27 25 23 / 0.06);
-  --shadow-4: 0 16px 40px rgb(27 25 23 / 0.18), 0 4px 12px rgb(27 25 23 / 0.08);
-  --game-flashcards-bg: #ede8ff;
-  --game-flashcards-fg: #543fa4;
-  --game-flashcards-solid: #7c5cff;
-  --game-quiz-bg: #e4edfe;
-  --game-quiz-fg: #2b579e;
-  --game-quiz-solid: #3b82f6;
-  --game-gapfill-bg: #def5f3;
-  --game-gapfill-fg: #137267;
-  --game-gapfill-solid: #14b8a6;
-  --game-sentence-bg: #fce5f1;
-  --game-sentence-fg: #993365;
-  --game-sentence-solid: #ec4899;
-  --game-listen-bg: #feebde;
-  --game-listen-fg: #a14e13;
-  --game-listen-solid: #f97316;
-  --game-spell-bg: #eef8de;
-  --game-spell-fg: #4f7613;
-  --game-spell-solid: #84cc16;
-  --game-memory-bg: #dcf5f9;
-  --game-memory-fg: #0b7181;
-  --game-memory-solid: #06b6d4;
-  --game-blitz-bg: #fde5e5;
-  --game-blitz-fg: #9b3030;
-  --game-blitz-solid: #ef4444;
-  --game-sortit-bg: #f3e7fe;
-  --game-sortit-fg: #6f3b9f;
-  --game-sortit-solid: #a855f7;
-  --game-dialogue-bg: #fde4e8;
-  --game-dialogue-fg: #9e2d40;
-  --game-dialogue-solid: #f43f5e;
-  --game-conjugation-bg: #def5ed;
-  --game-conjugation-fg: #117956;
-  --game-conjugation-solid: #10b981;
-  --game-clock-bg: #ddf2fc;
-  --game-clock-fg: #0f6d96;
-  --game-clock-solid: #0ea5e9;
-  --game-market-bg: #fef1dd;
-  --game-market-fg: #8d5d0d;
-  --game-market-solid: #f59e0b;
+  --success: #237a37;
+  --success-edge: #1a5c29;
+  --success-soft: #e8f5ea;
+  --success-soft-border: #b5deb9;
+  --on-success-soft: #1a5c29;
+  --danger: #d93636;
+  --danger-edge: #a82a2a;
+  --danger-soft: #fff0f0;
+  --danger-soft-border: #ffc9c9;
+  --on-danger-soft: #9b1c1c;
+  --warning: #ffc800;
+  --on-warning: #3d2f00;
+  --warning-soft: #fff8db;
+  --warning-soft-border: #ffe27a;
+  --on-warning-soft: #5c4500;
+  --info: #0c78b8;
+  --info-edge: #095a8a;
+  --info-soft: #e6f5fd;
+  --info-soft-border: #a8dbf5;
+  --on-info-soft: #0a4f7a;
+  --accent: #ffc800;
+  --xp-soft: #fff3bf;
+  --on-xp-soft: #5c4500;
+  --streak: #ff9600;
+  --streak-soft: #fff1da;
+  --on-streak-soft: #8a4a00;
+  --focus: #0f766e;
+  --focus-ring: 0 0 0 3px rgb(15 118 110 / 0.25);
+  --control-off: #777777;
+  --overlay: rgb(15 26 28 / 0.6);
+  --shadow-1: 0 0 #0000;
+  --shadow-2: 0 4px 0 var(--edge);
+  --shadow-3: 0 4px 0 var(--edge);
+  --shadow-4: 0 12px 32px rgb(15 26 28 / 0.28);
+  --game-flashcards-bg: #ccfbf1;
+  --game-flashcards-fg: #0f5f58;
+  --game-flashcards-solid: #0f766e;
+  --game-quiz-bg: #ffecd0;
+  --game-quiz-fg: #8a4a00;
+  --game-quiz-solid: #ff9600;
+  --game-gapfill-bg: #d9f0fc;
+  --game-gapfill-fg: #0a4f7a;
+  --game-gapfill-solid: #1cb0f6;
+  --game-sentence-bg: #d9f0fc;
+  --game-sentence-fg: #0a4f7a;
+  --game-sentence-solid: #1cb0f6;
+  --game-listen-bg: #f3e1ff;
+  --game-listen-fg: #7a3aa8;
+  --game-listen-solid: #ce82ff;
+  --game-spell-bg: #ccfbf1;
+  --game-spell-fg: #0f5f58;
+  --game-spell-solid: #0f766e;
+  --game-memory-bg: #ccfbf1;
+  --game-memory-fg: #0f5f58;
+  --game-memory-solid: #0f766e;
+  --game-blitz-bg: #ffe0e0;
+  --game-blitz-fg: #a02020;
+  --game-blitz-solid: #ff4b4b;
+  --game-sortit-bg: #ffecd0;
+  --game-sortit-fg: #8a4a00;
+  --game-sortit-solid: #ff9600;
+  --game-dialogue-bg: #f3e1ff;
+  --game-dialogue-fg: #7a3aa8;
+  --game-dialogue-solid: #ce82ff;
+  --game-conjugation-bg: #d9f0fc;
+  --game-conjugation-fg: #0a4f7a;
+  --game-conjugation-solid: #1cb0f6;
+  --game-clock-bg: #fff3bf;
+  --game-clock-fg: #5c4500;
+  --game-clock-solid: #ffc800;
+  --game-market-bg: #fff3bf;
+  --game-market-fg: #5c4500;
+  --game-market-solid: #ffc800;
   color-scheme: light;
 }
 
-/* Dark theme: kept working from the Settings toggle; the Penpot design only specifies light for now. */
+/* Dark theme: DESIGN.md section 8. Teal-tinted ink canvas, brighter teal accent with dark label text. */
 :root[data-theme='dark'] {
-  --bg: #111010;
-  --surface: #1b1917;
-  --surface-2: #2b2825;
-  --sunken: #111010;
-  --text: #f6f4f1;
-  --text-muted: #c3beb5;
-  --border: #413d39;
-  --border-strong: #5a554f;
-  --primary: #8a80ee;
-  --primary-hover: #b1aaf3;
-  --primary-edge: #4b40a7;
-  --primary-soft: #312b62;
-  --primary-soft-border: #4b40a7;
-  --on-primary-soft: #cdc9f8;
-  --on-primary: #111010;
-  --success: #4fb88e;
-  --success-edge: #13754d;
-  --success-soft: #134731;
-  --success-soft-border: #13754d;
-  --on-success-soft: #b4e1cf;
-  --danger: #eb767a;
-  --danger-edge: #a6373a;
-  --danger-soft: #622627;
-  --danger-soft-border: #a6373a;
-  --on-danger-soft: #f7c4c6;
-  --warning: #ffc458;
-  --warning-soft: #6c4d16;
-  --warning-soft-border: #926718;
-  --on-warning-soft: #ffe6b8;
-  --info: #63a0f1;
-  --info-edge: #265faa;
-  --info-soft: #1d3b64;
-  --info-soft-border: #265faa;
-  --on-info-soft: #bcd6f9;
-  --accent: #ffc458;
-  --xp-soft: #6c4d16;
-  --on-xp-soft: #ffe6b8;
-  --streak: #ff9061;
-  --streak-soft: #6c331a;
-  --on-streak-soft: #ffd0bb;
-  --focus: #b1aaf3;
-  --control-off: #77716a;
-  --overlay: rgb(0 0 0 / 0.7);
+  --bg: #0f1a1c;
+  --surface: #172427;
+  --surface-2: #1f3033;
+  --sunken: #0b1416;
+  --text: #eef4f3;
+  --text-muted: #a3b3b1;
+  --border: #2a3b3e;
+  --border-strong: #46605f;
+  --edge: #34474a;
+  --primary: #14b8a6;
+  --primary-hover: #2dd4bf;
+  --primary-edge: #0f766e;
+  --primary-soft: #0f3d3a;
+  --primary-soft-border: #0f766e;
+  --on-primary-soft: #99f6e4;
+  --on-primary: #042f2e;
+  --success: #4ade80;
+  --success-edge: #237a37;
+  --success-soft: #123a22;
+  --success-soft-border: #237a37;
+  --on-success-soft: #bbf7d0;
+  --danger: #ff6b6b;
+  --danger-edge: #b83a3a;
+  --danger-soft: #3d1a1c;
+  --danger-soft-border: #8f2f2f;
+  --on-danger-soft: #ffc9c9;
+  --warning: #ffc800;
+  --on-warning: #3d2f00;
+  --warning-soft: #3b3000;
+  --warning-soft-border: #8a6d00;
+  --on-warning-soft: #ffe27a;
+  --info: #38b6f5;
+  --info-edge: #1c7fb8;
+  --info-soft: #0f3047;
+  --info-soft-border: #1c6a9a;
+  --on-info-soft: #bde5fb;
+  --accent: #ffc800;
+  --xp-soft: #3b3000;
+  --on-xp-soft: #ffe27a;
+  --streak: #ff9600;
+  --streak-soft: #3d2400;
+  --on-streak-soft: #ffd9a0;
+  --focus: #14b8a6;
+  --focus-ring: 0 0 0 3px rgb(20 184 166 / 0.4);
+  --control-off: #6b7f7c;
+  --overlay: rgb(5 12 13 / 0.7);
+  --shadow-4: 0 12px 32px rgb(0 0 0 / 0.5);
   color-scheme: dark;
 }
 
@@ -173,6 +182,7 @@
   --color-danger-soft-line: var(--danger-soft-border);
   --color-on-danger-soft: var(--on-danger-soft);
   --color-warning: var(--warning);
+  --color-on-warning: var(--on-warning);
   --color-warning-soft: var(--warning-soft);
   --color-warning-soft-line: var(--warning-soft-border);
   --color-on-warning-soft: var(--on-warning-soft);
@@ -258,6 +268,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
+  font-weight: 800;
   letter-spacing: 0;
 }
 
@@ -266,15 +277,24 @@ h3 {
   outline-offset: 2px;
   border-radius: 0.75rem;
 }
+::selection {
+  background: var(--primary-soft);
+  color: var(--on-primary-soft);
+}
+input,
+textarea {
+  caret-color: var(--primary);
+}
 
 /* 3D "chunky" press effect shared by buttons, tiles and cards. */
 .press {
   transition:
-    transform 80ms ease,
-    box-shadow 80ms ease;
+    transform 180ms var(--ease-spring),
+    box-shadow 180ms var(--ease-spring),
+    background-color 180ms var(--ease-spring);
 }
 .press:active:not(:disabled) {
-  transform: translateY(2px);
+  transform: translateY(4px);
   box-shadow: none !important;
 }
 

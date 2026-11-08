@@ -278,7 +278,7 @@ describe('design-system tones', () => {
     );
     expect(container.querySelector('[aria-label="xp"] > div')).toHaveClass('bg-accent');
     expect(screen.getByTestId('s')).toHaveClass('border-primary');
-    expect(screen.getByTestId('i').className).toContain('0_3px_0');
+    expect(screen.getByTestId('i').className).toContain('0_4px_0');
   });
 });
 

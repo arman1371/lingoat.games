@@ -20,10 +20,10 @@ export function ProgressBar({ value, label, tone = 'primary' }: Props) {
       aria-valuemin={0}
       aria-valuemax={100}
       aria-valuenow={pct}
-      className="h-3 w-full overflow-hidden rounded-full bg-line"
+      className="h-4 w-full overflow-hidden rounded-full bg-line"
     >
       <div
-        className={`h-full rounded-full transition-[width] duration-300 ${FILL[tone]}`}
+        className={`h-full rounded-full transition-[width] duration-320 ease-out ${FILL[tone]}`}
         style={{ width: `${pct}%` }}
       />
     </div>
