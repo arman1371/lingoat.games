@@ -332,6 +332,18 @@ textarea {
     transform: translateX(6px);
   }
 }
+.anim-pulse {
+  animation: node-pulse 1.6s ease-in-out infinite;
+}
+@keyframes node-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
 .anim-pop {
   animation: pop 220ms ease-out;
 }
