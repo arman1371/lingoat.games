@@ -3140,7 +3140,7 @@
       "file_type": "code",
       "norm_label": "props",
       "source_file": "src/components/ui/Button.tsx",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "src_components_ui_button_size",
@@ -3780,7 +3780,7 @@
       "file_type": "code",
       "norm_label": "confetti()",
       "source_file": "src/components/ui/Confetti.tsx",
-      "source_location": "L4"
+      "source_location": "L11"
     },
     {
       "id": "src_components_ui_gametile_gametile",
@@ -12636,7 +12636,7 @@
       "file_type": "code",
       "norm_label": "button()",
       "source_file": "src/components/ui/Button.tsx",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "src_components_ui_dialog_confirmdialog",
@@ -51083,7 +51083,7 @@
       "file_type": "code",
       "norm_label": "sizes",
       "source_file": "src/components/ui/Button.tsx",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "src_components_ui_button_variants",
@@ -182466,7 +182466,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/ui/Button.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -182477,7 +182477,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/ui/Button.tsx",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -182488,7 +182488,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/ui/Button.tsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -182620,7 +182620,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/ui/Confetti.tsx",
-      "source_location": "L4",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -221211,5 +221211,5 @@
       "source_file": "docs/adding-content.md"
     }
   ],
-  "built_at_commit": "c154d26b92bae9ddc8d17d9a6767bbc9ddf8978b"
+  "built_at_commit": "af1747f920936f9c2c2dda95da0c76a5f30a8197"
 }
