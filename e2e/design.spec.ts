@@ -13,7 +13,7 @@ test('design tokens are applied', async ({ page }) => {
     };
   });
   expect(tokens.primary).toBe('#0f766e');
-  expect(tokens.bg).toBe('#ffffff');
+  expect(tokens.bg).toBe('#fff'); // the build minifies #ffffff
   expect(tokens.bodyFont).toContain('Plus Jakarta Sans');
 });
 
