@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceScope": "open-design-bundled-fixture",
-  "brandId": "duolingo",
+  "brandId": "lingoat",
   "files": [
     "DESIGN.md",
     "tokens.css",
@@ -65,7 +65,7 @@
     },
     {
       "name": "--accent",
-      "value": "#58cc02",
+      "value": "#0f766e",
       "layer": "A1-identity",
       "source": "tokens.css:44"
     },
@@ -77,19 +77,19 @@
     },
     {
       "name": "--accent-hover",
-      "value": "#89e219",
+      "value": "#115e59",
       "layer": "A2",
       "source": "tokens.css:46"
     },
     {
       "name": "--accent-active",
-      "value": "#58a700",
+      "value": "#134e4a",
       "layer": "A2",
       "source": "tokens.css:47"
     },
     {
       "name": "--success",
-      "value": "#58cc02",
+      "value": "#237a37",
       "layer": "A2",
       "source": "tokens.css:52"
     },
@@ -107,13 +107,13 @@
     },
     {
       "name": "--font-display",
-      "value": "\"Feather Bold\", \"DIN Round Pro\", \"Helvetica Neue\", sans-serif",
+      "value": "\"Fredoka\", \"Helvetica Neue\", sans-serif",
       "layer": "A1-identity",
       "source": "tokens.css:59"
     },
     {
       "name": "--font-body",
-      "value": "\"Mona Sans\", \"Helvetica Neue\", system-ui, sans-serif",
+      "value": "\"Plus Jakarta Sans\", \"Helvetica Neue\", system-ui, sans-serif",
       "layer": "A1-identity",
       "source": "tokens.css:60"
     },
@@ -299,7 +299,7 @@
     },
     {
       "name": "--focus-ring",
-      "value": "0 0 0 3px rgba(28, 176, 246, 0.2)",
+      "value": "0 0 0 3px rgba(15, 118, 110, 0.25)",
       "layer": "A2",
       "source": "tokens.css:114"
     },

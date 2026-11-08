@@ -123,7 +123,7 @@
     {
       "name": "--accent",
       "layer": "A1-identity",
-      "value": "#58cc02",
+      "value": "#0f766e",
       "confidence": "high",
       "reason": "Bundled tokens.css declares --accent; no upstream recrawl was performed for this backfill.",
       "sources": [
@@ -145,7 +145,7 @@
     {
       "name": "--accent-hover",
       "layer": "A2",
-      "value": "#89e219",
+      "value": "#115e59",
       "confidence": "high",
       "reason": "Bundled tokens.css declares --accent-hover; no upstream recrawl was performed for this backfill.",
       "sources": [
@@ -156,7 +156,7 @@
     {
       "name": "--accent-active",
       "layer": "A2",
-      "value": "#58a700",
+      "value": "#134e4a",
       "confidence": "high",
       "reason": "Bundled tokens.css declares --accent-active; no upstream recrawl was performed for this backfill.",
       "sources": [
@@ -167,7 +167,7 @@
     {
       "name": "--success",
       "layer": "A2",
-      "value": "#58cc02",
+      "value": "#237a37",
       "confidence": "high",
       "reason": "Bundled tokens.css declares --success; no upstream recrawl was performed for this backfill.",
       "sources": [
@@ -200,7 +200,7 @@
     {
       "name": "--font-display",
       "layer": "A1-identity",
-      "value": "\"Feather Bold\", \"DIN Round Pro\", \"Helvetica Neue\", sans-serif",
+      "value": "\"Fredoka\", \"Helvetica Neue\", sans-serif",
       "confidence": "high",
       "reason": "Bundled tokens.css declares --font-display; no upstream recrawl was performed for this backfill.",
       "sources": [
@@ -211,7 +211,7 @@
     {
       "name": "--font-body",
       "layer": "A1-identity",
-      "value": "\"Mona Sans\", \"Helvetica Neue\", system-ui, sans-serif",
+      "value": "\"Plus Jakarta Sans\", \"Helvetica Neue\", system-ui, sans-serif",
       "confidence": "high",
       "reason": "Bundled tokens.css declares --font-body; no upstream recrawl was performed for this backfill.",
       "sources": [
@@ -552,7 +552,7 @@
     {
       "name": "--focus-ring",
       "layer": "A2",
-      "value": "0 0 0 3px rgba(28, 176, 246, 0.2)",
+      "value": "0 0 0 3px rgba(15, 118, 110, 0.25)",
       "confidence": "high",
       "reason": "Bundled tokens.css declares --focus-ring; no upstream recrawl was performed for this backfill.",
       "sources": [

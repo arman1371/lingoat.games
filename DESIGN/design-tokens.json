@@ -135,7 +135,7 @@
     },
     {
       "name": "--accent",
-      "value": "#58cc02",
+      "value": "#0f766e",
       "type": "color",
       "layer": "A1-identity",
       "confidence": "high",
@@ -159,7 +159,7 @@
     },
     {
       "name": "--accent-hover",
-      "value": "#89e219",
+      "value": "#115e59",
       "type": "color",
       "layer": "A2",
       "confidence": "high",
@@ -171,7 +171,7 @@
     },
     {
       "name": "--accent-active",
-      "value": "#58a700",
+      "value": "#134e4a",
       "type": "color",
       "layer": "A2",
       "confidence": "high",
@@ -183,7 +183,7 @@
     },
     {
       "name": "--success",
-      "value": "#58cc02",
+      "value": "#237a37",
       "type": "color",
       "layer": "A2",
       "confidence": "high",
@@ -219,7 +219,7 @@
     },
     {
       "name": "--font-display",
-      "value": "\"Feather Bold\", \"DIN Round Pro\", \"Helvetica Neue\", sans-serif",
+      "value": "\"Fredoka\", \"Helvetica Neue\", sans-serif",
       "type": "fontFamily",
       "layer": "A1-identity",
       "confidence": "high",
@@ -231,7 +231,7 @@
     },
     {
       "name": "--font-body",
-      "value": "\"Mona Sans\", \"Helvetica Neue\", system-ui, sans-serif",
+      "value": "\"Plus Jakarta Sans\", \"Helvetica Neue\", system-ui, sans-serif",
       "type": "fontFamily",
       "layer": "A1-identity",
       "confidence": "high",
@@ -603,7 +603,7 @@
     },
     {
       "name": "--focus-ring",
-      "value": "0 0 0 3px rgba(28, 176, 246, 0.2)",
+      "value": "0 0 0 3px rgba(15, 118, 110, 0.25)",
       "type": "shadow",
       "layer": "A2",
       "confidence": "high",

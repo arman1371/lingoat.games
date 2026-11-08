@@ -1,25 +1,25 @@
 /* ─────────────────────────────────────────────────────────────────────────
- * design-systems/duolingo/tokens.css
+ * design-systems/lingoat/tokens.css
  *
- * Structured token bindings for "Design System Inspired by Duolingo".
- * Bright owl-green gamified universe: chunky 4px bottom-shadows, big
+ * Structured token bindings for "Design System Inspired by Lingoat".
+ * Bright lagoon-teal gamified universe: chunky 4px bottom-shadows, big
  * confident type, friendly pill geometry, mascot-driven warmth.
  *
  * Key brand decisions encoded here:
- *   - Owl Green (#58cc02) — dominant brand color, primary CTA + correct answer
+ *   - Lagoon (#0f766e) — dominant brand color, primary CTA + correct answer
  *   - Snow white canvas (#ffffff) — never tinted; optical clarity is the foundation
  *   - 4px chunky offset shadow (--elev-raised) — the "tactile press" signature
- *   - Feather Bold + Mona Sans — rounded display + Swiss workhorse body
- *   - Display starts at 56px — Duolingo never whispers; size is identity
+ *   - Fredoka + Plus Jakarta Sans — rounded display + Swiss workhorse body
+ *   - Display starts at 56px — Lingoat never whispers; size is identity
  *   - Pill-and-rounded radii — 16px cards, 12px buttons/inputs, 9999px chips
  *   - Spring easing (back-out, slight overshoot) — gamified joy in motion
- *   - Eel-blue focus ring (#1cb0f6 tinted) — playful contrast to the green brand
+ *   - Lagoon-tinted focus ring (rgba 15,118,110) — keeps focus on-brand
  * ─────────────────────────────────────────────────────────────────── */
 
 :root {
   /* ─── Surface ─────────────────────────────────────────────────────
    * Snow white canvas with Eel as the section-break tone. Pure optical
-   * clarity — Duolingo never tints the page itself, only the chrome. */
+   * clarity — Lingoat never tints the page itself, only the chrome. */
   --bg: #ffffff;             /* Snow — primary background, the page canvas */
   --surface: #f7f7f7;        /* Eel — section break, secondary surface, lesson row */
   --surface-warm: var(--surface); /* alias — palette has no third (warm) surface tier */
@@ -39,25 +39,25 @@
   --border-soft: var(--border); /* alias — single border tier (no inner-row separation) */
 
   /* ─── Accent ──────────────────────────────────────────────────────
-   * Owl Green — the brand IS this green. Used liberally in 30%+ of the
+   * Lagoon — the brand IS this teal. Used liberally in 30%+ of the
    * surface for buttons, progress bars, success states, brand chrome. */
-  --accent: #58cc02;
+  --accent: #0f766e;
   --accent-on: #ffffff;
-  --accent-hover: #89e219;   /* Owl Green Light — hover state, soft fills */
-  --accent-active: #58a700;  /* Owl Green Deep — pressed state, the chunky shadow color */
+  --accent-hover: #115e59;   /* Lagoon Hover — hover state, soft fills */
+  --accent-active: #134e4a;  /* Lagoon Deep — pressed state, the chunky shadow color */
 
   /* ─── Semantic ────────────────────────────────────────────────────
-   * Success IS owl green — DESIGN.md: "primary CTA, correct answer" are
+   * Success IS lagoon teal — DESIGN.md: "primary CTA, correct answer" are
    * the same affordance. Bee Yellow warns; Cardinal Red marks wrong. */
-  --success: #58cc02;        /* Owl Green — "correct answer" is the brand */
+  --success: #237a37;        /* Lagoon — "correct answer" is the brand */
   --warn: #ffc800;           /* Bee Yellow — pro badge, achievement glow */
   --danger: #ff4b4b;         /* Cardinal Red — wrong answer, life lost */
 
   /* ─── Typography ──────────────────────────────────────────────────
-   * Feather Bold (rounded display) drives chrome and headings; Mona Sans
-   * carries body. Default weight is 800 — Duolingo never whispers. */
-  --font-display: "Feather Bold", "DIN Round Pro", "Helvetica Neue", sans-serif;
-  --font-body: "Mona Sans", "Helvetica Neue", system-ui, sans-serif;
+   * Fredoka (rounded display) drives chrome and headings; Plus Jakarta Sans
+   * carries body. Default weight is 800 — Lingoat never whispers. */
+  --font-display: "Fredoka", "Helvetica Neue", sans-serif;
+  --font-body: "Plus Jakarta Sans", "Helvetica Neue", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, Menlo, Monaco, Consolas, monospace;
 
   /* Type scale — DESIGN.md §3. Display 56px is +25–40% above typical
@@ -101,7 +101,7 @@
   --radius-pill: 9999px;     /* Chips, progress bars, avatars */
 
   /* ─── Elevation ───────────────────────────────────────────────────
-   * Chunky 4px bottom-shadow IS Duolingo. Buttons and cards cast a hard
+   * Chunky 4px bottom-shadow IS Lingoat. Buttons and cards cast a hard
    * offset shadow that reads as a 3D button waiting to be pressed. The
    * raised value pairs with translateY(4px) on :active to "press" it. */
   --elev-flat: none;
@@ -109,9 +109,9 @@
   --elev-raised: 0 4px 0 #d7d7d7; /* Hard tactile shadow — the press affordance */
 
   /* ─── Focus ring ──────────────────────────────────────────────────
-   * Eel Blue 20% tint (DESIGN.md §4 inputs) — playful contrast against
-   * the ambient owl-green brand; signals "you can interact with this". */
-  --focus-ring: 0 0 0 3px rgba(28, 176, 246, 0.2);
+   * Lagoon 25% tint (DESIGN.md §4 inputs) — playful contrast against
+   * the ambient lagoon-teal brand; signals "you can interact with this". */
+  --focus-ring: 0 0 0 3px rgba(15, 118, 110, 0.25);
 
   /* ─── Motion ──────────────────────────────────────────────────────
    * 180ms button press, 320ms skill-node unlock; back-out spring with
@@ -122,7 +122,7 @@
 
   /* ─── Layout ──────────────────────────────────────────────────────
    * 1080px container (DESIGN.md §5) — narrower than a SaaS deck because
-   * Duolingo content reads vertically as a focused lesson tree column. */
+   * Lingoat content reads vertically as a focused lesson tree column. */
   --container-max: 1080px;
   --container-gutter-desktop: 24px;
   --container-gutter-tablet: 20px;

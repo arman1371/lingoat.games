@@ -1,4 +1,4 @@
-# Duolingo Source Evidence
+# Lingoat Source Evidence
 
 ## Source Scope
 
@@ -7,9 +7,9 @@ It does not claim a fresh crawl of the original upstream brand repository or web
 
 ## Included Fixture Files
 
-- design-systems/duolingo/DESIGN.md
-- design-systems/duolingo/tokens.css
-- design-systems/duolingo/components.html
+- design-systems/lingoat/DESIGN.md
+- design-systems/lingoat/tokens.css
+- design-systems/lingoat/components.html
 
 ## Token Contract
 

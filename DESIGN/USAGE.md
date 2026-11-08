@@ -1,4 +1,4 @@
-# Duolingo Usage
+# Lingoat Usage
 
 Design System 2.0 package guide for OpenDesign agents and reviewers.
 
@@ -12,10 +12,10 @@ Design System 2.0 package guide for OpenDesign agents and reviewers.
 
 ## Design Highlights
 
-- Owl green (`#58cc02`) as the dominant brand color, used in 30%+ of the surface
+- lagoon teal (`#0f766e`) as the dominant brand color, used in 30%+ of the surface
 - Chunky 4px bottom-shadow on every button (the "tactile press" affordance)
 - 2–3px solid borders, never hairlines
-- Feather Bold (rounded display) + Mona Sans (body)
+- Fredoka (rounded display) + Plus Jakarta Sans (body)
 
 ## Do
 

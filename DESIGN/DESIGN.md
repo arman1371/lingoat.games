@@ -1,37 +1,37 @@
-# Design System Inspired by Duolingo
+# Design System Inspired by Lingoat
 
 > Category: Productivity & SaaS
-> Language-learning platform. Bright owl green, chunky shadows, gamified joy.
+> Language-learning platform. Bright lagoon teal, chunky shadows, gamified joy.
 
 ## 1. Visual Theme & Atmosphere
 
-Duolingo is gamification rendered as visual language. The interface is unapologetically bright, with **owl green** (`#58cc02`) as the brand primary and a chunky 4px bottom-shadow on every interactive element that reads like a 3D button waiting to be pressed. The page is white (`#ffffff`) with thick 2–3px borders in a deep gray (`#e5e5e5`) and the entire system reads like an iOS app from 2015 reborn with better hierarchy.
+Lingoat is gamification rendered as visual language. The interface is unapologetically bright, with **lagoon teal** (`#0f766e`) as the brand primary and a chunky 4px bottom-shadow on every interactive element that reads like a 3D button waiting to be pressed. The page is white (`#ffffff`) with thick 2–3px borders in a deep gray (`#e5e5e5`) and the entire system reads like an iOS app from 2015 reborn with better hierarchy.
 
-Typography uses **Feather Bold** (a custom rounded sans) for chrome and **Mona Sans** (or Inter) for body. Display sizes are big and confident — Duolingo never whispers. Headings often carry the green underline-stroke or sit on a green pill, and the mascot Duo (a green owl) appears as an active illustration character, not a static logo.
+Typography uses **Fredoka** (a custom rounded sans) for chrome and **Plus Jakarta Sans** (or Inter) for body. Display sizes are big and confident — Lingoat never whispers. Headings often carry the teal underline-stroke or sit on a teal pill, and the mascot Goaty (a teal goat) appears as an active illustration character, not a static logo.
 
 Shape language is friendly: 16–20px radii on cards, 12px on buttons, 9999px on chips and progress bars. Iconography is filled, rounded, and color-coded by skill — every lesson surface has an instantly identifiable color pairing.
 
 **Key Characteristics:**
-- Owl green (`#58cc02`) as the dominant brand color, used in 30%+ of the surface
+- lagoon teal (`#0f766e`) as the dominant brand color, used in 30%+ of the surface
 - Chunky 4px bottom-shadow on every button (the "tactile press" affordance)
 - 2–3px solid borders, never hairlines
-- Feather Bold (rounded display) + Mona Sans (body)
+- Fredoka (rounded display) + Plus Jakarta Sans (body)
 - Big confident type — display sizes start at 48px and climb
-- Mascot-as-character: Duo the owl appears in onboarding, errors, streaks
+- Mascot-as-character: Goaty the goat appears in onboarding, errors, streaks
 - Streak orange (`#ff9600`) and gem pink (`#ce82ff`) as secondary brand colors
 
 ## 2. Color Palette & Roles
 
 ### Primary
-- **Owl Green** (`#58cc02`): Brand primary, primary CTA, correct answer.
-- **Owl Green Deep** (`#58a700`): Pressed/shadow color for green buttons.
-- **Owl Green Light** (`#89e219`): Hover, soft fills.
-- **Owl Green Pale** (`#dbf8c5`): Soft surface, success banner.
+- **Lagoon** (`#0f766e`): Brand primary, primary CTA, correct answer.
+- **Lagoon Deep** (`#134e4a`): Pressed/shadow color for teal buttons.
+- **Lagoon Hover** (`#115e59`): Hover, soft fills.
+- **Lagoon Pale** (`#ccfbf1`): Soft surface, success banner.
 
 ### Secondary Accents
 - **Streak Orange** (`#ff9600`): Streak counter, fire icon, premium energy.
 - **Streak Orange Deep** (`#cc7a00`): Pressed orange.
-- **Gem Pink** (`#ce82ff`): Gem currency, Super Duolingo.
+- **Gem Pink** (`#ce82ff`): Gem currency, Lingoat Plus.
 - **Eel Blue** (`#1cb0f6`): Hint button, info link.
 - **Cardinal Red** (`#ff4b4b`): Wrong answer, life lost.
 - **Bee Yellow** (`#ffc800`): Pro badge, achievement.
@@ -54,26 +54,26 @@ Shape language is friendly: 16–20px radii on cards, 12px on buttons, 9999px on
 ## 3. Typography Rules
 
 ### Font Family
-- **Display / UI / Headings**: `Feather Bold`, with fallback: `'DIN Round Pro', 'Helvetica Neue', sans-serif`
-- **Body / Long-form**: `Mona Sans`, with fallback: `'Helvetica Neue', system-ui, sans-serif`
+- **Display / UI / Headings**: `Fredoka`, with fallback: `'Helvetica Neue', sans-serif`
+- **Body / Long-form**: `Plus Jakarta Sans`, with fallback: `'Helvetica Neue', system-ui, sans-serif`
 - **Code (rare, schools/admin)**: `JetBrains Mono`, with fallback: `ui-monospace, Menlo, monospace`
 
 ### Hierarchy
 
 | Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
 |------|------|------|--------|-------------|----------------|-------|
-| Display | Feather Bold | 56px (3.5rem) | 800 | 1.05 | -0.01em | Onboarding hero |
-| H1 | Feather Bold | 32px (2rem) | 800 | 1.15 | -0.005em | Page title |
-| H2 | Feather Bold | 24px (1.5rem) | 800 | 1.2 | normal | Section heading |
-| H3 | Feather Bold | 18px (1.125rem) | 700 | 1.25 | normal | Card title, lesson row |
-| Body Large | Mona Sans | 17px (1.0625rem) | 500 | 1.5 | normal | Lesson prompt, instruction |
-| Body | Mona Sans | 15px (0.9375rem) | 400 | 1.5 | normal | Standard prose |
-| Caption | Mona Sans | 13px (0.8125rem) | 600 | 1.4 | 0.01em | XP counter, metadata |
-| Button | Feather Bold | 16px (1rem) | 800 | 1.2 | 0.02em | Standard button label |
-| Streak | Feather Bold | 14px (0.875rem) | 800 | 1.2 | normal | Streak number, on flame |
+| Display | Fredoka | 56px (3.5rem) | 800 | 1.05 | -0.01em | Onboarding hero |
+| H1 | Fredoka | 32px (2rem) | 800 | 1.15 | -0.005em | Page title |
+| H2 | Fredoka | 24px (1.5rem) | 800 | 1.2 | normal | Section heading |
+| H3 | Fredoka | 18px (1.125rem) | 700 | 1.25 | normal | Card title, lesson row |
+| Body Large | Plus Jakarta Sans | 17px (1.0625rem) | 500 | 1.5 | normal | Lesson prompt, instruction |
+| Body | Plus Jakarta Sans | 15px (0.9375rem) | 400 | 1.5 | normal | Standard prose |
+| Caption | Plus Jakarta Sans | 13px (0.8125rem) | 600 | 1.4 | 0.01em | XP counter, metadata |
+| Button | Fredoka | 16px (1rem) | 800 | 1.2 | 0.02em | Standard button label |
+| Streak | Fredoka | 14px (0.875rem) | 800 | 1.2 | normal | Streak number, on flame |
 
 ### Principles
-- **800 is default**: Feather Bold runs at 800 across headings and buttons. 700 feels weak in this system.
+- **800 is default**: Fredoka runs at 800 across headings and buttons. 700 feels weak in this system.
 - **Big type**: heading sizes are 25–40% larger than typical product brands — confidence as identity.
 - **Rounded letterforms**: every glyph has soft terminals; sharp serifs would break the friendliness contract.
 
@@ -81,13 +81,13 @@ Shape language is friendly: 16–20px radii on cards, 12px on buttons, 9999px on
 
 ### Buttons
 
-**Primary (Owl Green)**
-- Background: `#58cc02`
+**Primary (Lagoon)**
+- Background: `#0f766e`
 - Text: `#ffffff`
 - Padding: 14px 24px
 - Radius: 16px
-- Border-bottom: 4px solid `#58a700` (the chunky shadow)
-- Hover: background `#89e219`
+- Border-bottom: 4px solid `#134e4a` (the chunky shadow)
+- Hover: background `#115e59`
 - Active: translate-y 4px, border-bottom 0 (button "presses")
 - Use: "Continue", "Check", main CTA.
 
@@ -122,7 +122,7 @@ Shape language is friendly: 16–20px radii on cards, 12px on buttons, 9999px on
 
 ### Skill Tree Node (Lesson Bubble)
 - Size: 80×72px
-- Background: skill-color tinted (green for active, gray for locked)
+- Background: skill-color tinted (teal for active, gray for locked)
 - Border-bottom: 6px solid darker variant
 - Radius: 50% (circular)
 - Active: pulses 1.0 → 1.05 every 1.6s
@@ -132,11 +132,11 @@ Shape language is friendly: 16–20px radii on cards, 12px on buttons, 9999px on
 - Border: 2px solid `#e5e5e5`
 - Radius: 12px
 - Padding: 12px 16px
-- Focus: border `#1cb0f6` (eel blue), ring `0 0 0 3px rgba(28, 176, 246, 0.2)`
+- Focus: border `#0f766e` (lagoon), ring `0 0 0 3px rgba(15, 118, 110, 0.25)`
 
 ### Progress Bar
 - Track: `#e5e5e5`
-- Fill: `#58cc02` (or `#ff9600` for streak)
+- Fill: `#0f766e` (or `#ff9600` for streak)
 - Radius: 9999px
 - Height: 16px
 - Animated fill: 320ms ease-out on increment.
@@ -151,10 +151,10 @@ Shape language is friendly: 16–20px radii on cards, 12px on buttons, 9999px on
 
 - **Duration**: 180ms for button press; 320ms for skill-node unlock; 1.6s for active-node pulse.
 - **Easing**: `cubic-bezier(0.34, 1.56, 0.64, 1)` (back-out, slight overshoot) for unlocks.
-- **Mascot**: Duo blinks every 4–6s, jumps on streak milestones (480ms ease-out spring).
+- **Mascot**: Goaty blinks every 4–6s, jumps on streak milestones (480ms ease-out spring).
 
 ## 7. Usage Guardrails
 
-- Keep the high-saturation owl green, chunky bottom shadows, and rounded lesson geometry together; flat green buttons alone do not read as Duolingo.
+- Keep the high-saturation lagoon teal, chunky bottom shadows, and rounded lesson geometry together; flat teal buttons alone do not read as Lingoat.
 - Reserve oversized bold type for lesson, streak, and progress moments where the product needs encouragement or feedback.
 - Use playful motion sparingly around progress state changes, avoiding generic bouncy animation on every control.

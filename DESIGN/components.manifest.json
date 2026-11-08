@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "brandId": "duolingo",
+  "brandId": "lingoat",
   "source": {
     "componentsHtml": "components.html",
     "tokensCss": "tokens.css"
   },
   "fixture": {
-    "title": "Duolingo — reference components",
-    "description": "Reference fixture for design-systems/duolingo. Owl-green gamified universe, chunky 4px tactile shadows, big confident type, friendly pill geometry.",
+    "title": "Lingoat — reference components",
+    "description": "Reference fixture for design-systems/lingoat. lagoon-teal gamified universe, chunky 4px tactile shadows, big confident type, friendly pill geometry.",
     "styleBlockCount": 1,
     "selectorCount": 66,
     "classCount": 36,
@@ -156,7 +156,7 @@
     ".btn:focus-visible",
     ".card",
     ".card-icon",
-    ".card-icon-green",
+    ".card-icon-brand",
     ".card-icon-red",
     ".card-icon-yellow",
     ".card:hover",
@@ -214,7 +214,7 @@
     "btn-secondary",
     "card",
     "card-icon",
-    "card-icon-green",
+    "card-icon-brand",
     "card-icon-red",
     "card-icon-yellow",
     "container",
@@ -351,7 +351,7 @@
       "selectors": [
         ".card",
         ".card-icon",
-        ".card-icon-green",
+        ".card-icon-brand",
         ".card-icon-red",
         ".card-icon-yellow",
         ".card:hover"
@@ -359,7 +359,7 @@
       "classes": [
         "card",
         "card-icon",
-        "card-icon-green",
+        "card-icon-brand",
         "card-icon-red",
         "card-icon-yellow"
       ],

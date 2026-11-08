@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Duolingo — reference components</title>
+    <title>Lingoat — reference components</title>
     <meta
       name="description"
-      content="Reference fixture for design-systems/duolingo. Owl-green gamified
+      content="Reference fixture for design-systems/lingoat. lagoon-teal gamified
         universe, chunky 4px tactile shadows, big confident type, friendly pill geometry."
     />
 
@@ -24,17 +24,17 @@
         --border: #e5e5e5;
         --border-soft: var(--border);
 
-        --accent: #58cc02;
+        --accent: #0f766e;
         --accent-on: #ffffff;
-        --accent-hover: #89e219;
-        --accent-active: #58a700;
+        --accent-hover: #115e59;
+        --accent-active: #134e4a;
 
-        --success: #58cc02;
+        --success: #237a37;
         --warn: #ffc800;
         --danger: #ff4b4b;
 
-        --font-display: "Feather Bold", "DIN Round Pro", "Helvetica Neue", sans-serif;
-        --font-body: "Mona Sans", "Helvetica Neue", system-ui, sans-serif;
+        --font-display: "Fredoka", "Helvetica Neue", sans-serif;
+        --font-body: "Plus Jakarta Sans", "Helvetica Neue", system-ui, sans-serif;
         --font-mono: "JetBrains Mono", ui-monospace, Menlo, Monaco, Consolas, monospace;
 
         --text-xs: 12px;
@@ -72,7 +72,7 @@
         --elev-ring: 0 0 0 2px var(--border);
         --elev-raised: 0 4px 0 #d7d7d7;
 
-        --focus-ring: 0 0 0 3px rgba(28, 176, 246, 0.2);
+        --focus-ring: 0 0 0 3px rgba(15, 118, 110, 0.25);
 
         --motion-fast: 180ms;
         --motion-base: 320ms;
@@ -113,7 +113,7 @@
         section { padding-block: var(--section-y-phone); }
       }
 
-      /* ─── Typography — Feather Bold @ 800 across chrome ─────── */
+      /* ─── Typography — Fredoka @ 800 across chrome ─────── */
       h1, h2, h3 {
         font-family: var(--font-display);
         font-weight: 800;
@@ -174,7 +174,7 @@
       }
       .btn:focus-visible { outline: none; box-shadow: var(--focus-ring); }
 
-      /* Primary — Owl Green with darker green underside */
+      /* Primary — Lagoon with darker teal underside */
       .btn-primary {
         background: var(--accent);
         color: var(--accent-on);
@@ -274,7 +274,7 @@
         font-size: var(--text-xl);
         box-shadow: 0 3px 0 color-mix(in oklab, currentColor, black 22%);
       }
-      .card-icon-green { background: var(--accent); }
+      .card-icon-brand { background: var(--accent); }
       .card-icon-red { background: var(--danger); }
       .card-icon-yellow { background: var(--warn); color: var(--fg); }
 
@@ -401,12 +401,12 @@
       <section data-od-id="hero">
         <div class="hero-grid">
           <div class="stack-6">
-            <span class="eyebrow">Reference fixture · duolingo</span>
+            <span class="eyebrow">Reference fixture · lingoat</span>
             <div class="stack-4">
               <h1>Free language learning for the world.</h1>
               <p class="lead" style="max-width: 48ch">
                 15 minutes a day can teach you a language. Practice with bite-sized lessons,
-                keep your streak alive, and let Duo the owl cheer you on every step of the way.
+                keep your streak alive, and let Goaty the goat cheer you on every step of the way.
               </p>
             </div>
             <div class="hero-actions">
@@ -422,18 +422,15 @@
           </div>
           <aside class="mascot-card" aria-label="Today's lesson">
             <div class="mascot-row">
-              <svg class="mascot-svg" viewBox="0 0 96 96" aria-hidden="true">
-                <ellipse cx="48" cy="58" rx="34" ry="32" fill="var(--accent)"/>
-                <ellipse cx="48" cy="58" rx="22" ry="22" fill="color-mix(in oklab, var(--accent), white 22%)"/>
-                <circle cx="36" cy="46" r="9" fill="#ffffff"/>
-                <circle cx="60" cy="46" r="9" fill="#ffffff"/>
-                <circle cx="36" cy="48" r="4.5" fill="var(--fg)"/>
-                <circle cx="60" cy="48" r="4.5" fill="var(--fg)"/>
-                <circle cx="34.5" cy="46.5" r="1.6" fill="#ffffff"/>
-                <circle cx="58.5" cy="46.5" r="1.6" fill="#ffffff"/>
-                <path d="M40 60 L48 67 L56 60 Z" fill="var(--warn)"/>
-                <path d="M22 32 Q30 18 42 26" fill="none" stroke="var(--accent-active)" stroke-width="6" stroke-linecap="round"/>
-                <path d="M74 32 Q66 18 54 26" fill="none" stroke="var(--accent-active)" stroke-width="6" stroke-linecap="round"/>
+              <svg class="mascot-svg" viewBox="0 0 40 40" aria-hidden="true">
+                <path d="M28 0L12 0C5.37 0 0 5.37 0 12L0 28C0 34.63 5.37 40 12 40L28 40C34.63 40 40 34.63 40 28L40 12C40 5.37 34.63 0 28 0Z" fill="var(--accent)"/>
+                <path d="M15 14C13 8 9 6 5.5 7C9 8.5 11 11 11.5 15.5L15 14Z" fill="var(--warn)"/>
+                <path d="M25 14C27 8 31 6 34.5 7C31 8.5 29 11 28.5 15.5L25 14Z" fill="var(--warn)"/>
+                <path d="M20 11C27 11 30 16 30 21C30 28 26 33 20 34C14 33 10 28 10 21C10 16 13 11 20 11Z" fill="#ffffff"/>
+                <path d="M16.2 22.7C17.19 22.7 18 21.72 18 20.5C18 19.28 17.19 18.3 16.2 18.3C15.21 18.3 14.4 19.28 14.4 20.5C14.4 21.72 15.21 22.7 16.2 22.7Z" fill="var(--fg)"/>
+                <path d="M23.8 22.7C24.79 22.7 25.6 21.72 25.6 20.5C25.6 19.28 24.79 18.3 23.8 18.3C22.81 18.3 22 19.28 22 20.5C22 21.72 22.81 22.7 23.8 22.7Z" fill="var(--fg)"/>
+                <path d="M20 32C23.31 32 26 30.21 26 28C26 25.79 23.31 24 20 24C16.69 24 14 25.79 14 28C14 30.21 16.69 32 20 32Z" fill="var(--surface)"/>
+                <path d="M17.5 28.5C19.17 29.83 20.83 29.83 22.5 28.5" fill="none" stroke="var(--fg)" stroke-width="1.4" stroke-linecap="round"/>
               </svg>
               <div class="stack-2">
                 <h3>Spanish · Unit 3</h3>
@@ -465,17 +462,17 @@
           <span class="eyebrow">What this fixture exercises</span>
           <h2 style="max-width: 22ch">Joy is the curriculum.</h2>
           <p class="body-muted" style="max-width: 56ch">
-            Every surface is built for the next correct answer — green to celebrate,
-            chunky shadows to invite the press, and Duo waiting on the other side.
+            Every surface is built for the next correct answer — teal to celebrate,
+            chunky shadows to invite the press, and Goaty waiting on the other side.
           </p>
         </div>
         <div class="features-grid" style="margin-block-start: var(--space-8)">
           <article class="card">
-            <span class="card-icon card-icon-green" aria-hidden="true">✓</span>
-            <h3>Owl green throughout</h3>
+            <span class="card-icon card-icon-brand" aria-hidden="true">✓</span>
+            <h3>lagoon teal throughout</h3>
             <p class="body-muted body-sm">
-              --accent (#58cc02) covers 30%+ of every screen. Primary CTA, correct
-              answer, progress fill — they're all the same affirming green.
+              --accent (#0f766e) covers 30%+ of every screen. Primary CTA, correct
+              answer, progress fill — they're all the same affirming teal.
             </p>
             <a href="./tokens.css" class="body-sm">Inspect tokens →</a>
           </article>
@@ -492,7 +489,7 @@
             <span class="card-icon card-icon-red" aria-hidden="true">!</span>
             <h3>Big confident type</h3>
             <p class="body-muted body-sm">
-              --text-4xl (56px) is +25% over typical product brands. Feather Bold at
+              --text-4xl (56px) is +25% over typical product brands. Fredoka at
               800 is the default — we never whisper, we never apologize for size.
             </p>
             <a href="./tokens.css" class="body-sm">Inspect ladder →</a>
@@ -506,7 +503,7 @@
             <span class="eyebrow">Start your streak</span>
             <h2>One inbox is all it takes.</h2>
             <p class="body-muted" style="max-width: 48ch">
-              We'll send a friendly nudge when Duo notices you missed a day. No tricks,
+              We'll send a friendly nudge when Goaty notices you missed a day. No tricks,
               no spam — just the kind of gentle accountability that turns 15 minutes
               into a year-long habit.
             </p>
@@ -517,7 +514,7 @@
           <form class="form" onsubmit="event.preventDefault();">
             <div class="field">
               <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@duolingo.com" autocomplete="email" required />
+              <input id="email" type="email" placeholder="you@lingoat.com" autocomplete="email" required />
               <p class="field-help">Free forever · 600M+ learners worldwide</p>
             </div>
             <div class="form-actions">
