@@ -27,8 +27,10 @@ export function StatePanel({ kind, title, children, action, as: Heading = 'h2' }
       data-kind={kind}
       className="mx-auto flex max-w-md flex-col items-center gap-3 px-4 py-12 text-center"
     >
-      <Mascot mood={MOOD[kind]} size={96} />
-      <Heading className="text-2xl font-semibold text-ink">{title}</Heading>
+      <Mascot mood={MOOD[kind]} size={112} />
+      <Heading className="font-display text-2xl font-extrabold text-ink sm:text-3xl">
+        {title}
+      </Heading>
       {children ? <div className="text-muted">{children}</div> : null}
       {action ? <div className="mt-2">{action}</div> : null}
     </div>

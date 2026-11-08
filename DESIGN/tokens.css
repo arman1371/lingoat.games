@@ -129,6 +129,36 @@
   --container-gutter-desktop: 24px;
   --container-gutter-tablet: 20px;
   --container-gutter-phone: 16px;
+
+  /* ─── App extensions ─────────────────────────────────────────────
+   * Soft tints and AA-safe solids the app needs beyond the core palette.
+   * --danger-solid is --danger one step darker so white labels reach 4.5:1;
+   * --muted-strong is --muted at 4.5:1 on white and --surface. */
+  --muted-strong: #666666;
+  --accent-soft: #ccfbf1;
+  --accent-soft-border: #99f6e4;
+  --on-accent-soft: #134e4a;
+  --success-edge: #1a5c29;
+  --success-soft: #e8f5ea;
+  --success-soft-border: #b5deb9;
+  --on-success-soft: #1a5c29;
+  --danger-solid: #d93636;
+  --danger-edge: #a82a2a;
+  --danger-soft: #fff0f0;
+  --danger-soft-border: #ffc9c9;
+  --on-danger-soft: #9b1c1c;
+  --on-warn: #3d2f00;
+  --warn-soft: #fff8db;
+  --warn-soft-border: #ffe27a;
+  --on-warn-soft: #5c4500;
+  --info: #0c78b8;
+  --info-edge: #095a8a;
+  --info-soft: #e6f5fd;
+  --info-soft-border: #a8dbf5;
+  --on-info-soft: #0a4f7a;
+  --streak: #ff9600;
+  --streak-soft: #fff1da;
+  --on-streak-soft: #8a4a00;
 }
 
 /* ─── Dark theme ──────────────────────────────────────────────────────
@@ -154,6 +184,31 @@
     --danger: #ff6b6b;
     --elev-raised: 0 4px 0 #34474a;
     --focus-ring: 0 0 0 3px rgba(20, 184, 166, 0.4);
+    --muted-strong: #a3b3b1;
+    --accent-soft: #0f3d3a;
+    --accent-soft-border: #0f766e;
+    --on-accent-soft: #99f6e4;
+    --success-edge: #237a37;
+    --success-soft: #123a22;
+    --success-soft-border: #237a37;
+    --on-success-soft: #bbf7d0;
+    --danger-solid: #ff6b6b;
+    --danger-edge: #b83a3a;
+    --danger-soft: #3d1a1c;
+    --danger-soft-border: #8f2f2f;
+    --on-danger-soft: #ffc9c9;
+    --on-warn: #3d2f00;
+    --warn-soft: #3b3000;
+    --warn-soft-border: #8a6d00;
+    --on-warn-soft: #ffe27a;
+    --info: #38b6f5;
+    --info-edge: #1c7fb8;
+    --info-soft: #0f3047;
+    --info-soft-border: #1c6a9a;
+    --on-info-soft: #bde5fb;
+    --streak: #ff9600;
+    --streak-soft: #3d2400;
+    --on-streak-soft: #ffd9a0;
   }
 }
 :root[data-theme="dark"] {
@@ -173,4 +228,29 @@
   --danger: #ff6b6b;
   --elev-raised: 0 4px 0 #34474a;
   --focus-ring: 0 0 0 3px rgba(20, 184, 166, 0.4);
+  --muted-strong: #a3b3b1;
+  --accent-soft: #0f3d3a;
+  --accent-soft-border: #0f766e;
+  --on-accent-soft: #99f6e4;
+  --success-edge: #237a37;
+  --success-soft: #123a22;
+  --success-soft-border: #237a37;
+  --on-success-soft: #bbf7d0;
+  --danger-solid: #ff6b6b;
+  --danger-edge: #b83a3a;
+  --danger-soft: #3d1a1c;
+  --danger-soft-border: #8f2f2f;
+  --on-danger-soft: #ffc9c9;
+  --on-warn: #3d2f00;
+  --warn-soft: #3b3000;
+  --warn-soft-border: #8a6d00;
+  --on-warn-soft: #ffe27a;
+  --info: #38b6f5;
+  --info-edge: #1c7fb8;
+  --info-soft: #0f3047;
+  --info-soft-border: #1c6a9a;
+  --on-info-soft: #bde5fb;
+  --streak: #ff9600;
+  --streak-soft: #3d2400;
+  --on-streak-soft: #ffd9a0;
 }

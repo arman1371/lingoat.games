@@ -56,7 +56,7 @@ function MainNav({ mistakeCount }: { mistakeCount: number }) {
   return (
     <nav
       aria-label="Main"
-      className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t border-line bg-surface px-2 pb-[env(safe-area-inset-bottom)] md:static md:flex md:flex-col md:gap-1 md:border-0 md:bg-transparent md:p-0"
+      className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t-2 border-line bg-surface pb-[env(safe-area-inset-bottom)] pl-[max(0.5rem,env(safe-area-inset-left))] pr-[max(0.5rem,env(safe-area-inset-right))] md:static md:flex md:flex-col md:gap-1 md:border-0 md:bg-transparent md:p-0"
     >
       {NAV.map((n) => (
         <NavLink
@@ -64,10 +64,10 @@ function MainNav({ mistakeCount }: { mistakeCount: number }) {
           to={n.to}
           end={n.end}
           className={({ isActive }) =>
-            `relative flex min-h-16 flex-col items-center justify-center gap-1 pb-1.5 pt-2 text-xs font-bold md:min-h-12 md:flex-row md:justify-start md:gap-3 md:rounded-xl md:px-4 md:py-0 md:text-base ${
+            `relative flex min-h-16 flex-col items-center justify-center gap-1 pb-1.5 pt-2 font-display text-xs font-extrabold md:min-h-12 md:flex-row md:justify-start md:gap-3 md:rounded-2xl md:border-2 md:px-4 md:py-0 md:text-base ${
               isActive
-                ? 'text-on-primary-soft md:bg-primary-soft'
-                : 'text-muted hover:text-ink md:hover:bg-surface-2'
+                ? 'text-on-primary-soft md:border-primary-soft-line md:bg-primary-soft'
+                : 'text-muted hover:text-ink md:border-transparent md:hover:bg-surface-2'
             }`
           }
         >
@@ -111,7 +111,7 @@ function Shell() {
 
   return (
     <div
-      className={`min-h-dvh ${playing ? 'flex flex-col' : 'md:grid md:grid-cols-[16.5rem_minmax(0,1fr)]'}`}
+      className={`min-h-dvh pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] md:pl-0 md:pr-0 ${playing ? 'flex flex-col' : 'md:grid md:grid-cols-[16.5rem_minmax(0,1fr)]'}`}
     >
       <a
         href="#main"
@@ -120,7 +120,7 @@ function Shell() {
         Skip to content
       </a>
       {!playing ? (
-        <div className="md:sticky md:top-0 md:flex md:h-dvh md:flex-col md:gap-6 md:border-r md:border-line md:bg-surface md:px-4 md:py-6">
+        <div className="md:sticky md:top-0 md:flex md:h-dvh md:flex-col md:gap-6 md:border-r-2 md:border-line md:bg-surface md:px-4 md:py-6">
           <Link to="/" className="hidden px-2 md:inline-flex">
             <Logo />
           </Link>
@@ -132,8 +132,8 @@ function Shell() {
       ) : null}
       <div className="flex min-w-0 flex-1 flex-col">
         {playing ? null : (
-          <header className="bg-bg">
-            <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3 md:justify-end">
+          <header className="sticky top-0 z-30 border-b-2 border-line bg-bg pt-[env(safe-area-inset-top)] md:static md:border-b-0">
+            <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3 sm:px-5 md:justify-end lg:px-6">
               <Link to="/" className="inline-flex md:hidden">
                 <Logo />
               </Link>
@@ -161,7 +161,9 @@ function Shell() {
           id="main"
           tabIndex={-1}
           className={`mx-auto w-full max-w-5xl flex-1 px-4 ${
-            playing ? 'flex flex-col pt-3' : 'pb-28 pt-2 md:pb-10'
+            playing
+              ? 'flex flex-col pt-[max(0.75rem,env(safe-area-inset-top))]'
+              : 'pb-28 pt-4 sm:px-5 md:pb-10 lg:px-6'
           }`}
         >
           <Gate />

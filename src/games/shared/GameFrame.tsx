@@ -17,9 +17,9 @@ interface FrameProps {
 
 /**
  * Common chrome for sequential games: progress bar (in the page's top row when it has a slot),
- * content that fills the screen, and a footer under it. While the round fits the screen the
- * footer sits on the bottom edge; a long round (a conversation, a table) simply scrolls and the
- * footer follows at its end, so only short games keep their button in view. The "3 / 8" counter
+ * content that fills the screen, and a footer under it. The footer is sticky: it sits on the bottom
+ * edge while the round fits the screen and stays in thumb reach while a long round (a conversation,
+ * a table) scrolls behind it. The "3 / 8" counter
  * is only for screen readers; sighted learners see the bar.
  */
 export function GameFrame({ index, total, title, children, footer }: FrameProps) {
@@ -38,7 +38,9 @@ export function GameFrame({ index, total, title, children, footer }: FrameProps)
       <div className="flex flex-1 flex-col gap-4 pb-4 pt-2">{children}</div>
       {/* a feedback panel in here pulls this padding back so its tint reaches the screen edges */}
       {footer ? (
-        <div className="pb-[max(1rem,env(safe-area-inset-bottom))] pt-3">{footer}</div>
+        <div className="sticky bottom-0 z-10 bg-bg pb-[max(1rem,env(safe-area-inset-bottom))] pt-3">
+          {footer}
+        </div>
       ) : null}
     </section>
   );

@@ -122,6 +122,16 @@ describe('GameFrame / FeedbackFooter', () => {
     expect(screen.getByText('footer')).toBeInTheDocument();
   });
 
+  it('keeps the footer sticky at the bottom so the action stays in thumb reach on long rounds', () => {
+    render(
+      <GameFrame index={0} total={2} footer={<button type="button">Check</button>}>
+        <p>content</p>
+      </GameFrame>,
+    );
+    const footer = screen.getByRole('button', { name: 'Check' }).parentElement!;
+    expect(footer).toHaveClass('sticky', 'bottom-0');
+  });
+
   it('announces feedback, focuses Continue and labels the last item', async () => {
     const onNext = vi.fn();
     render(
