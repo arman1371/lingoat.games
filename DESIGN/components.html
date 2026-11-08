@@ -12,6 +12,7 @@
 
     <style>
       :root {
+        color-scheme: light;
         --bg: #ffffff;
         --surface: #f7f7f7;
         --surface-warm: var(--surface);
@@ -84,6 +85,50 @@
         --container-gutter-phone: 16px;
       }
 
+      /* ─── Dark theme ──────────────────────────────────────────────────────
+       * Colour tokens only; type, space, radius and motion are shared.
+       * Follows the OS setting; <html data-theme="light|dark"> forces a theme.
+       * Dark accent is brighter teal (#14b8a6) with dark text; the brand teal
+       * #0f766e becomes the chunky 4px underside. Aliases follow automatically. */
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          color-scheme: dark;
+          --bg: #0f1a1c;
+          --surface: #172427;
+          --fg: #eef4f3;
+          --muted: #a3b3b1;
+          --meta: #6b7f7c;
+          --border: #2a3b3e;
+          --accent: #14b8a6;
+          --accent-on: #042f2e;
+          --accent-hover: #2dd4bf;
+          --accent-active: #0f766e;
+          --success: #4ade80;
+          --warn: #ffc800;
+          --danger: #ff6b6b;
+          --elev-raised: 0 4px 0 #34474a;
+          --focus-ring: 0 0 0 3px rgba(20, 184, 166, 0.4);
+        }
+      }
+      :root[data-theme="dark"] {
+        color-scheme: dark;
+        --bg: #0f1a1c;
+        --surface: #172427;
+        --fg: #eef4f3;
+        --muted: #a3b3b1;
+        --meta: #6b7f7c;
+        --border: #2a3b3e;
+        --accent: #14b8a6;
+        --accent-on: #042f2e;
+        --accent-hover: #2dd4bf;
+        --accent-active: #0f766e;
+        --success: #4ade80;
+        --warn: #ffc800;
+        --danger: #ff6b6b;
+        --elev-raised: 0 4px 0 #34474a;
+        --focus-ring: 0 0 0 3px rgba(20, 184, 166, 0.4);
+      }
+
       /* ─── Reset ─────────────────────────────────────────────── */
       *, *::before, *::after { box-sizing: border-box; }
       html, body { margin: 0; padding: 0; }
@@ -137,7 +182,7 @@
         display: inline-block;
         font-family: var(--font-display);
         font-size: var(--text-xs);
-        color: var(--accent-active);
+        color: color-mix(in oklab, var(--accent), var(--fg) 35%);
         background: color-mix(in oklab, var(--accent), transparent 82%);
         text-transform: uppercase;
         letter-spacing: 0.08em;
@@ -203,7 +248,7 @@
       /* Streak — Bee Yellow with warm underside */
       .btn-streak {
         background: var(--warn);
-        color: var(--fg);
+        color: color-mix(in oklab, var(--warn), black 78%);
         box-shadow: 0 4px 0 color-mix(in oklab, var(--warn), black 18%);
       }
       .btn-streak:hover { background: color-mix(in oklab, var(--warn), white 8%); }
@@ -259,7 +304,7 @@
       }
       .card:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 0 #d7d7d7;
+        box-shadow: 0 6px 0 color-mix(in oklab, var(--border), var(--fg) 12%);
       }
       .card-icon {
         width: 56px;
@@ -276,7 +321,7 @@
       }
       .card-icon-brand { background: var(--accent); }
       .card-icon-red { background: var(--danger); }
-      .card-icon-yellow { background: var(--warn); color: var(--fg); }
+      .card-icon-yellow { background: var(--warn); color: color-mix(in oklab, var(--warn), black 78%); }
 
       /* ─── Badges + chips ────────────────────────────────────── */
       .badge {
@@ -293,7 +338,7 @@
         text-transform: uppercase;
       }
       .badge-success { color: var(--accent-on); background: var(--success); }
-      .badge-streak  { color: var(--fg); background: var(--warn); }
+      .badge-streak  { color: color-mix(in oklab, var(--warn), black 78%); background: var(--warn); }
       .badge-muted   { color: var(--muted); background: var(--surface); border: 2px solid var(--border); }
       .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 
@@ -338,7 +383,7 @@
       .row-between { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
 
       /* ─── Links + kbd ───────────────────────────────────────── */
-      a { color: var(--accent-active); text-decoration: none; font-weight: 700; }
+      a { color: color-mix(in oklab, var(--accent), var(--fg) 35%); text-decoration: none; font-weight: 700; }
       a:hover { text-decoration: underline; text-underline-offset: 3px; }
       kbd {
         font-family: var(--font-mono);
@@ -394,10 +439,20 @@
       }
       .form-actions { display: flex; gap: var(--space-3); margin-block-start: var(--space-2); }
       .icon { width: 18px; height: 18px; flex-shrink: 0; }
+      /* ─── Theme toggle (demo only) ─────────────────────────── */
+      .theme-toggle { display: flex; gap: var(--space-2); justify-content: flex-end; padding-block: var(--space-4); }
+      .theme-toggle .btn { padding: 8px var(--space-4); font-size: var(--text-sm); }
+      .theme-toggle .btn[aria-pressed="true"] { background: var(--accent); color: var(--accent-on); border-color: var(--accent); box-shadow: 0 4px 0 var(--accent-active); }
+
     </style>
   </head>
   <body>
     <main class="container">
+      <div class="theme-toggle" role="group" aria-label="Theme">
+        <button type="button" class="btn btn-secondary" data-theme-set="auto" aria-pressed="true">Auto</button>
+        <button type="button" class="btn btn-secondary" data-theme-set="light" aria-pressed="false">Light</button>
+        <button type="button" class="btn btn-secondary" data-theme-set="dark" aria-pressed="false">Dark</button>
+      </div>
       <section data-od-id="hero">
         <div class="hero-grid">
           <div class="stack-6">
@@ -525,5 +580,15 @@
         </div>
       </section>
     </main>
+    <script>
+      document.querySelectorAll("[data-theme-set]").forEach((b) =>
+        b.addEventListener("click", () => {
+          const v = b.dataset.themeSet;
+          if (v === "auto") document.documentElement.removeAttribute("data-theme");
+          else document.documentElement.dataset.theme = v;
+          document.querySelectorAll("[data-theme-set]").forEach((o) =>
+            o.setAttribute("aria-pressed", String(o === b)));
+        }));
+    </script>
   </body>
 </html>

@@ -19,6 +19,7 @@ Shape language is friendly: 16–20px radii on cards, 12px on buttons, 9999px on
 - Big confident type — display sizes start at 48px and climb
 - Mascot-as-character: Goaty the goat appears in onboarding, errors, streaks
 - Streak orange (`#ff9600`) and gem pink (`#ce82ff`) as secondary brand colors
+- A dark theme (§8) uses the same shapes, type and chunky edges with a teal-tinted ink canvas
 
 ## 2. Color Palette & Roles
 
@@ -158,3 +159,48 @@ Shape language is friendly: 16–20px radii on cards, 12px on buttons, 9999px on
 - Keep the high-saturation lagoon teal, chunky bottom shadows, and rounded lesson geometry together; flat teal buttons alone do not read as Lingoat.
 - Reserve oversized bold type for lesson, streak, and progress moments where the product needs encouragement or feedback.
 - Use playful motion sparingly around progress state changes, avoiding generic bouncy animation on every control.
+
+## 8. Dark Mode
+
+Dark mode changes colour tokens only. Type, spacing, radii, motion and the chunky bottom-edge language are identical to light. The canvas is teal-tinted ink (never pure black) so the lagoon brand still reads.
+
+### Palette
+
+| Token | Light | Dark | Role |
+|-------|-------|------|------|
+| `--bg` | `#ffffff` | `#0f1a1c` | Page canvas |
+| `--surface` | `#f7f7f7` | `#172427` | Cards, section breaks |
+| `--fg` | `#3c3c3c` | `#eef4f3` | Primary text |
+| `--muted` | `#777777` | `#a3b3b1` | Secondary text |
+| `--meta` | `#afafaf` | `#6b7f7c` | Placeholder, disabled |
+| `--border` | `#e5e5e5` | `#2a3b3e` | 2px borders, progress track |
+| `--accent` | `#0f766e` | `#14b8a6` | Primary CTA, links, correct answer |
+| `--accent-on` | `#ffffff` | `#042f2e` | Text on accent, success, danger |
+| `--accent-hover` | `#115e59` | `#2dd4bf` | Hover (lighter in dark) |
+| `--accent-active` | `#134e4a` | `#0f766e` | Chunky underside / pressed |
+| `--success` | `#237a37` | `#4ade80` | Correct state |
+| `--warn` | `#ffc800` | `#ffc800` | Streak, achievement (text on it stays dark) |
+| `--danger` | `#ff4b4b` | `#ff6b6b` | Wrong answer |
+| `--elev-raised` | `0 4px 0 #d7d7d7` | `0 4px 0 #34474a` | Neutral chunky edge |
+| `--focus-ring` | teal 25% | `rgba(20,184,166,0.4)` | Focus glow |
+
+### Switching
+
+- Default: follows the OS (`prefers-color-scheme`).
+- Force a theme with `<html data-theme="light">` or `<html data-theme="dark">`. Remove the attribute to return to auto.
+- Always paste the whole `tokens.css`, dark blocks included.
+
+### Component deltas
+
+- **Primary button**: `#14b8a6` fill, `#042f2e` label, `#0f766e` 4px underside; hover `#2dd4bf`.
+- **Secondary button / cards**: `--bg`/`--surface` fill, 2px `--border`, neutral edge `#34474a`.
+- **Inputs and progress track**: `--border`; focus border `--accent` plus the dark focus ring.
+- **Streak / warn surfaces**: keep `#ffc800`; labels use a near-black mix of `--warn`, not `--fg`.
+- **Links and eyebrows**: a mix of `--accent` and `--fg`, never `--accent-active` (too dark on dark).
+
+### Guardrails
+
+- Never pure black or pure white surfaces; keep the teal tint.
+- Keep the chunky edges visible: edge vs canvas contrast ≥ 1.3:1.
+- Text ≥ 4.5:1 on its background in both themes; `--accent-on` is dark in dark mode, so do not hard-code white on accent.
+- Do not use raw hex in components; reference tokens so both themes work.
