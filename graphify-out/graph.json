@@ -1281,7 +1281,7 @@
       "file_type": "code",
       "norm_label": "footerprops",
       "source_file": "src/games/shared/GameFrame.tsx",
-      "source_location": "L47"
+      "source_location": "L49"
     },
     {
       "id": "src_games_shared_gameframe_frameprops",
@@ -1307,7 +1307,7 @@
       "file_type": "code",
       "norm_label": "u",
       "source_file": "src/games/shared/shared.test.tsx",
-      "source_location": "L156"
+      "source_location": "L166"
     },
     {
       "id": "src_games_shared_usesequence_phase",
@@ -6828,7 +6828,7 @@
       "file_type": "code",
       "norm_label": "feedbackfooter()",
       "source_file": "src/games/shared/GameFrame.tsx",
-      "source_location": "L59"
+      "source_location": "L61"
     },
     {
       "id": "src_games_shared_gameframe_gameframe",
@@ -6852,7 +6852,7 @@
       "file_type": "code",
       "norm_label": "verdicttitle()",
       "source_file": "src/games/shared/GameFrame.tsx",
-      "source_location": "L82"
+      "source_location": "L84"
     },
     {
       "id": "src_games_shared_shared_test_u_constructor",
@@ -6864,7 +6864,7 @@
       "file_type": "code",
       "norm_label": ".constructor()",
       "source_file": "src/games/shared/shared.test.tsx",
-      "source_location": "L157"
+      "source_location": "L167"
     },
     {
       "id": "src_games_shared_useautospeak_useautospeak",
@@ -12816,7 +12816,7 @@
       "file_type": "code",
       "norm_label": "applayout()",
       "source_file": "src/app/AppLayout.tsx",
-      "source_location": "L174"
+      "source_location": "L176"
     },
     {
       "id": "src_app_applayout_gate",
@@ -59563,7 +59563,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/shared/GameFrame.tsx",
-      "source_location": "L60",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -181861,7 +181861,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/AppLayout.tsx",
-      "source_location": "L174",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -211869,7 +211869,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/shared/GameFrame.tsx",
-      "source_location": "L47",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -211880,7 +211880,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/shared/GameFrame.tsx",
-      "source_location": "L59",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -211891,7 +211891,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/shared/GameFrame.tsx",
-      "source_location": "L82",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -212056,7 +212056,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/shared/shared.test.tsx",
-      "source_location": "L156",
+      "source_location": "L166",
       "weight": 1.0
     },
     {
@@ -217784,7 +217784,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/shared/shared.test.tsx",
-      "source_location": "L157",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
@@ -221211,5 +221211,5 @@
       "source_file": "docs/adding-content.md"
     }
   ],
-  "built_at_commit": "af1747f920936f9c2c2dda95da0c76a5f30a8197"
+  "built_at_commit": "e0b8c4219ce339a156a7e8078a408fe85f7de50b"
 }
