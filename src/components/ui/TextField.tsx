@@ -24,7 +24,14 @@ export function TextField({
   const describedBy = [hint ? hintId : null, error ? errorId : null].filter(Boolean).join(' ');
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={id} className={hideLabel ? 'sr-only' : 'text-sm font-bold text-ink'}>
+      <label
+        htmlFor={id}
+        className={
+          hideLabel
+            ? 'sr-only'
+            : 'font-display text-sm font-extrabold uppercase tracking-[0.06em] text-ink'
+        }
+      >
         {label}
       </label>
       <input
@@ -32,8 +39,8 @@ export function TextField({
         type={type}
         aria-invalid={error ? true : undefined}
         aria-describedby={describedBy || undefined}
-        className={`min-h-12 w-full rounded-xl border-2 bg-surface px-4 text-base text-ink placeholder:text-muted ${
-          error ? 'border-danger' : 'border-line-strong'
+        className={`min-h-12 w-full rounded-xl border-2 bg-surface px-4 text-base text-ink placeholder:text-muted focus:border-primary focus:shadow-(--focus-ring) focus:outline-none ${
+          error ? 'border-danger' : 'border-line hover:border-line-strong'
         } ${className}`}
         {...rest}
       />

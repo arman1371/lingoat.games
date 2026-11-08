@@ -9,12 +9,12 @@ describe('app icons', () => {
   });
 
   it('uses the brand colour as the theme colour', () => {
-    expect(indexHtml).toContain('<meta name="theme-color" content="#584bca" />');
+    expect(indexHtml).toContain('<meta name="theme-color" content="#0f766e" />');
   });
 
   it('draws the favicon as Goaty on the brand background, not as a letter', () => {
     expect(faviconSvg).toContain('viewBox="0 0 512 512"');
-    expect(faviconSvg).toContain('fill="#584BCA"');
+    expect(faviconSvg).toContain('fill="#0F766E"');
     expect(faviconSvg).not.toContain('<text');
     expect(faviconSvg).toContain('fill="#D9A441"'); // horns
   });

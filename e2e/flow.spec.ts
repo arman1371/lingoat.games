@@ -210,7 +210,7 @@ test('installable PWA assets are served', async ({ request }) => {
   expect(manifest.ok()).toBe(true);
   const json = await manifest.json();
   expect(json.name).toBe('Lingoat');
-  expect(json.theme_color).toBe('#584bca');
+  expect(json.theme_color).toBe('#0f766e');
   expect((await request.get('/favicon.svg')).ok()).toBe(true);
   // Goaty icons: any (192, 512), maskable and monochrome, each really that size
   const purposes = json.icons.map(
@@ -253,7 +253,7 @@ test('the page head points at the Goaty icons', async ({ page }) => {
     'href',
     '/apple-touch-icon.png',
   );
-  await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute('content', '#584bca');
+  await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute('content', '#0f766e');
 });
 
 test('daily goal: playing a game fills the ring, and the goal can be changed in the profile', async ({

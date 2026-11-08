@@ -14,10 +14,10 @@ export function Segment<T extends string>({ label, value, options, onChange }: P
         {options.map((o) => (
           <label
             key={o.value}
-            className={`flex min-h-11 cursor-pointer items-center justify-center rounded-xl border-2 px-3 text-sm font-bold has-focus-visible:outline-[3px] has-focus-visible:outline-offset-2 has-focus-visible:outline-focus ${
+            className={`flex min-h-11 cursor-pointer items-center justify-center rounded-xl border-2 px-3 text-sm font-extrabold has-focus-visible:outline-[3px] has-focus-visible:outline-offset-2 has-focus-visible:outline-focus ${
               value === o.value
-                ? 'border-primary bg-primary text-on-primary'
-                : 'border-line bg-surface text-ink hover:bg-surface-2'
+                ? 'border-primary bg-primary text-on-primary shadow-[0_4px_0_var(--primary-edge)]'
+                : 'border-line bg-surface text-muted hover:border-line-strong hover:text-ink'
             }`}
           >
             <input

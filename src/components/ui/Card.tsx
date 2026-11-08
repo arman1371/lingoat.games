@@ -8,7 +8,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 export function Card({ className = '', interactive, selected, ...rest }: Props) {
   const tone = selected ? 'border-primary bg-primary-soft' : 'border-line bg-surface';
-  const edge = interactive || selected ? 'shadow-[0_3px_0_var(--border)]' : 'shadow-(--shadow-1)';
+  const edge = interactive || selected ? 'shadow-[0_4px_0_var(--edge)]' : 'shadow-(--shadow-1)';
   return (
     <div
       className={`rounded-(--radius-card) border-2 p-4 ${tone} ${edge} ${className}`}

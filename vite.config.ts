@@ -47,8 +47,8 @@ export default defineConfig({
         name: 'Lingoat',
         short_name: 'Lingoat',
         description: 'Play your way through German, level by level.',
-        theme_color: '#584bca',
-        background_color: '#fbfaf8',
+        theme_color: '#0f766e',
+        background_color: '#ffffff',
         display: 'standalone',
         start_url: '/',
         icons: [

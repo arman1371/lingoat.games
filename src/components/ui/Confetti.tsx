@@ -1,4 +1,11 @@
-const COLORS = ['#f59e0b', '#4338ca', '#15803d', '#db2777', '#0284c7'];
+const COLORS = [
+  'var(--primary)',
+  'var(--accent)',
+  'var(--streak)',
+  'var(--info)',
+  'var(--danger)',
+  'var(--success)',
+];
 
 /** Pure-CSS confetti burst. Hidden for reduced motion via the global [data-reduced-motion] rule. */
 export function Confetti({ count = 36 }: { count?: number }) {

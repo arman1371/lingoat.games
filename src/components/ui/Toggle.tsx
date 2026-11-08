@@ -32,7 +32,7 @@ export function Toggle({ label, hint, checked, onChange, className = '', ...rest
         />
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute left-1 top-1 h-6 w-6 rounded-full bg-white shadow-(--shadow-1) transition-transform peer-checked:translate-x-5"
+          className="pointer-events-none absolute left-1 top-1 h-6 w-6 rounded-full bg-surface shadow-[0_2px_0_var(--edge)] transition-transform peer-checked:translate-x-5"
         />
       </span>
     </label>
