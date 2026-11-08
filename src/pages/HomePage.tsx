@@ -53,18 +53,22 @@ export function HomePage() {
           </div>
         </Card>
       ) : null}
-      <DailyGoalCard xp={todayXp} goal={goal} />
 
       <section
-        className="rounded-3xl bg-primary p-6 text-on-primary shadow-[0_6px_0_var(--primary-edge)] md:p-8"
+        className="rounded-(--radius-lg) bg-primary p-6 text-on-primary shadow-[0_6px_0_var(--primary-edge)] md:p-8"
         aria-labelledby="hero-title"
       >
-        <p className="text-xs font-extrabold uppercase tracking-wider opacity-90">
-          {t('tagline', { language: languageName })}
-        </p>
-        <h1 id="hero-title" className="mt-1 text-3xl font-semibold md:text-4xl">
-          {hasStarted ? t('home.continueTitle') : t('home.startTitle')}
-        </h1>
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <p className="text-xs font-extrabold uppercase tracking-wider opacity-90">
+              {t('tagline', { language: languageName })}
+            </p>
+            <h1 id="hero-title" className="mt-1 text-3xl font-semibold md:text-4xl">
+              {hasStarted ? t('home.continueTitle') : t('home.startTitle')}
+            </h1>
+          </div>
+          <Mascot mood="happy" size={72} className="shrink-0" />
+        </div>
         {next && unit ? (
           <div className="mt-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-lg">
@@ -98,6 +102,8 @@ export function HomePage() {
         )}
       </section>
 
+      <DailyGoalCard xp={todayXp} goal={goal} />
+
       <section aria-label="Your stats" className="grid grid-cols-3 gap-3">
         <StatCard
           icon="flame"
@@ -121,7 +127,7 @@ export function HomePage() {
               <Link
                 to={`/library?view=games&type=${type}`}
                 data-testid={`home-game-${type}`}
-                className="press flex flex-col items-center gap-2 rounded-2xl border border-line bg-surface p-3 text-center font-bold text-ink shadow-(--shadow-1) hover:bg-surface-2"
+                className="press flex flex-col items-center gap-2 rounded-(--radius-md) border-2 border-line bg-surface p-3 text-center font-bold text-ink shadow-[0_4px_0_var(--edge)] hover:bg-surface-2"
               >
                 <GameTile type={type} size="md" />
                 {GAME_TYPE_LABELS[type].label}

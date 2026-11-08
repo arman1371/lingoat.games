@@ -22,7 +22,7 @@ export function ActivityCard({ activity, to, stars, unitTitle, badge }: Props) {
       to={to}
       data-testid="activity-card"
       data-activity-id={activity.id}
-      className="press flex h-full flex-col gap-2 rounded-(--radius-card) border-2 border-line bg-surface p-4 shadow-[0_3px_0_var(--border)] hover:bg-surface-2"
+      className="press flex h-full flex-col gap-2 rounded-(--radius-card) border-2 border-line bg-surface p-4 shadow-[0_4px_0_var(--edge)] hover:bg-surface-2"
     >
       <div className="flex items-start justify-between gap-2">
         <GameTile type={activity.gameType} />

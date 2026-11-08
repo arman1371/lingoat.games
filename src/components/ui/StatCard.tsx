@@ -20,7 +20,9 @@ interface Props {
 /** Large number with a caption, used on the Progress page. */
 export function StatCard({ icon, value, label, tone, hint }: Props) {
   return (
-    <div className={`flex flex-col gap-1 rounded-2xl p-4 ${TONE[tone]}`}>
+    <div
+      className={`flex flex-col gap-1 rounded-(--radius-md) border-2 border-current/15 p-4 ${TONE[tone]}`}
+    >
       <Icon name={icon} size={24} />
       <p className="font-display text-2xl font-bold leading-tight">{value}</p>
       <p className="text-sm font-medium">{label}</p>

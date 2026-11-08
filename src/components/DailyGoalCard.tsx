@@ -9,11 +9,11 @@ export function DailyGoalCard({ xp, goal }: { xp: number; goal: number }) {
     <section
       aria-labelledby="daily-goal-title"
       data-testid="daily-goal"
-      className="flex items-center gap-4 rounded-[20px] border border-line bg-surface p-4 shadow-(--shadow-1)"
+      className="flex items-center gap-4 rounded-(--radius-lg) border-2 border-line bg-surface p-4 shadow-[0_4px_0_var(--edge)]"
     >
       <ProgressRing value={goal > 0 ? xp / goal : 0} label={t('dailyGoal.title')} tone="xp" />
       <div className="flex min-w-0 flex-col gap-1">
-        <h2 id="daily-goal-title" className="font-bold text-ink">
+        <h2 id="daily-goal-title" className="font-display text-lg font-extrabold text-ink">
           {t('dailyGoal.title')}
         </h2>
         <p className="text-sm text-muted">{t('dailyGoal.collected', { xp, goal })}</p>

@@ -80,12 +80,12 @@ export function UnitPage() {
                   <div className="flex flex-col items-center">
                     <span
                       aria-hidden="true"
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full font-bold ${
+                      className={`flex h-14 w-16 shrink-0 items-center justify-center rounded-[50%] font-display text-xl font-extrabold ${
                         state === 'done'
-                          ? 'bg-success text-on-primary shadow-[0_3px_0_var(--success-edge)]'
+                          ? 'bg-success text-on-primary shadow-[0_6px_0_var(--success-edge)]'
                           : state === 'current'
-                            ? 'bg-primary text-on-primary shadow-[0_3px_0_var(--primary-edge)]'
-                            : 'bg-sunken text-muted shadow-[0_3px_0_var(--border)]'
+                            ? 'anim-pulse bg-primary text-on-primary shadow-[0_6px_0_var(--primary-edge)]'
+                            : 'bg-sunken text-muted shadow-[0_6px_0_var(--edge)]'
                       }`}
                     >
                       {state === 'done' ? <Icon name="check" size={20} /> : i + 1}

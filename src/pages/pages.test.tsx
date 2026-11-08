@@ -23,6 +23,11 @@ describe('Home', () => {
       await screen.findByRole('heading', { name: 'Start your first game' }),
     ).toBeInTheDocument();
     expect(screen.getByTestId('continue-cta')).toHaveTextContent('Start');
+    // the primary action comes first, above the daily goal, so it is on screen on a phone
+    expect(
+      screen.getByTestId('continue-cta').compareDocumentPosition(screen.getByTestId('daily-goal')) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
     expect(screen.getByTestId('level-a1-1')).toHaveTextContent(
       '0 / ' + content.activities.length + ' games',
     );
@@ -83,6 +88,10 @@ describe('Level and unit pages', () => {
     expect(steps[0]).toHaveAttribute('data-state', 'current');
     expect(steps[1]).toHaveAttribute('data-state', 'open');
     expect(within(steps[0]!).getByText('Up next')).toBeInTheDocument();
+    // only the current step's node pulses
+    const node = (i: number) => steps[i]!.querySelector('span[aria-hidden="true"]');
+    expect(node(0)).toHaveClass('anim-pulse');
+    expect(node(1)).not.toHaveClass('anim-pulse');
   });
 
   it('marks finished steps as done and moves the "up next" marker', async () => {

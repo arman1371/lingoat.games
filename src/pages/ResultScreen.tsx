@@ -37,7 +37,7 @@ export function ResultScreen({
       aria-labelledby="result-title"
     >
       {outcome.stars === 3 ? <Confetti /> : null}
-      <Mascot mood={mood} size={160} />
+      <Mascot mood={mood} size={160} className="anim-pop" />
       <h1 id="result-title" className="font-display text-4xl font-bold text-ink">
         {t('result.title')}
       </h1>

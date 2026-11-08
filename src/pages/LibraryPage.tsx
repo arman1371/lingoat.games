@@ -67,7 +67,7 @@ function GameLibrary() {
   const usedTags = new Set<string>(content.activities.flatMap((a) => a.tags));
   const tagFacet = (group: 'skill' | 'topic' | 'grammar', key: 'skills' | 'topics' | 'grammar') => (
     <fieldset className="flex flex-col gap-2">
-      <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
+      <legend className="mb-1 font-display text-sm font-extrabold uppercase tracking-[0.06em] text-muted">
         {GROUP_LABELS[group]}
       </legend>
       <div className="flex flex-wrap gap-2">
@@ -98,12 +98,12 @@ function GameLibrary() {
           placeholder={t('library.search')}
         />
         <details
-          className="rounded-2xl border-2 border-line bg-surface p-3"
+          className="rounded-(--radius-md) border-2 border-line bg-surface p-3 shadow-[0_4px_0_var(--edge)]"
           open={panelOpen}
           onToggle={(e) => setPanelOpen(e.currentTarget.open)}
           data-testid="filters"
         >
-          <summary className="flex min-h-11 cursor-pointer select-none items-center gap-2 py-2 text-lg font-bold text-ink">
+          <summary className="flex min-h-11 cursor-pointer select-none items-center gap-2 py-2 font-display text-lg font-extrabold text-ink">
             <Icon name="filter" size={20} />
             {t('library.filters')}
             {count > 0 ? ` (${count})` : ''}
@@ -111,7 +111,7 @@ function GameLibrary() {
           <div className="mt-3 flex flex-col gap-5">
             {levelsWithUnits.length > 1 && (
               <fieldset className="flex flex-col gap-2">
-                <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
+                <legend className="mb-1 font-display text-sm font-extrabold uppercase tracking-[0.06em] text-muted">
                   {t('library.level')}
                 </legend>
                 <div className="flex flex-wrap gap-2">
@@ -128,7 +128,7 @@ function GameLibrary() {
               </fieldset>
             )}
             <fieldset className="flex flex-col gap-2">
-              <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
+              <legend className="mb-1 font-display text-sm font-extrabold uppercase tracking-[0.06em] text-muted">
                 Unit
               </legend>
               <div className="flex flex-wrap gap-2">
@@ -147,7 +147,7 @@ function GameLibrary() {
             {tagFacet('topic', 'topics')}
             {tagFacet('grammar', 'grammar')}
             <fieldset className="flex flex-col gap-2">
-              <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
+              <legend className="mb-1 font-display text-sm font-extrabold uppercase tracking-[0.06em] text-muted">
                 Game type
               </legend>
               <div className="flex flex-wrap gap-2">
@@ -163,7 +163,7 @@ function GameLibrary() {
               </div>
             </fieldset>
             <fieldset className="flex flex-col gap-2">
-              <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">
+              <legend className="mb-1 font-display text-sm font-extrabold uppercase tracking-[0.06em] text-muted">
                 Difficulty &amp; length
               </legend>
               <div className="flex flex-wrap gap-2">
