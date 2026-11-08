@@ -118,7 +118,7 @@ export function Market({ config, seed, onFinish }: GameProps<'market'>) {
             return (
               <li
                 key={p.id}
-                className={`flex flex-col items-center gap-1 rounded-2xl border-2 p-3 ${qty > 0 ? 'border-primary bg-primary-soft shadow-[0_3px_0_var(--primary-soft-border)]' : 'border-line bg-surface shadow-[0_3px_0_var(--border)]'}`}
+                className={`flex flex-col items-center gap-1 rounded-2xl border-2 p-3 ${qty > 0 ? 'border-primary bg-primary-soft shadow-[0_4px_0_var(--primary-soft-border)]' : 'border-line bg-surface shadow-[0_4px_0_var(--edge)]'}`}
               >
                 <WordImage id={p.id} text={p.name} emoji={p.emoji} size="sm" />
                 <span className="font-extrabold text-ink">{p.name}</span>
@@ -178,7 +178,7 @@ export function Market({ config, seed, onFinish }: GameProps<'market'>) {
             disabled={done !== null}
             inputMode="decimal"
             autoComplete="off"
-            className="min-h-14 w-40 rounded-2xl border-2 border-line bg-surface px-4 text-center text-2xl font-bold text-ink"
+            className="min-h-14 w-40 rounded-2xl border-2 border-line bg-surface px-4 text-center text-2xl font-bold text-ink focus:border-primary focus:shadow-(--focus-ring) focus:outline-none"
           />
           {!done ? (
             <Button size="lg" onClick={checkPay} disabled={paid.trim() === ''}>

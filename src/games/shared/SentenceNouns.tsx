@@ -29,7 +29,7 @@ export function SentenceNouns({ text }: { text: string }) {
         <span aria-hidden="true" className="h-px flex-1 bg-line" />
         <span
           id={labelId}
-          className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-muted"
+          className="text-xs font-extrabold uppercase tracking-[0.08em] text-muted"
         >
           {t('noun.listLabel')}
         </span>
@@ -39,10 +39,10 @@ export function SentenceNouns({ text }: { text: string }) {
         {nouns.map((n) => (
           <li
             key={n.noun}
-            className="flex items-center gap-2 rounded-full border-[1.5px] border-line bg-surface py-[3px] pl-[3px] pr-3.5 text-[15px] font-bold text-ink"
+            className="flex items-center gap-2 rounded-full border-2 border-line bg-surface py-[3px] pl-[3px] pr-3.5 text-base font-bold text-ink"
             data-testid="sentence-noun"
           >
-            <span className="rounded-full bg-primary-soft px-2.5 py-[5px] text-[13px] font-extrabold leading-4 text-on-primary-soft">
+            <span className="rounded-full bg-primary-soft px-2.5 py-[5px] text-sm font-extrabold leading-4 text-on-primary-soft">
               {n.article}
             </span>{' '}
             {n.noun}

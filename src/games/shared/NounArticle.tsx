@@ -32,7 +32,7 @@ export function NounArticle({ text, answer }: Props) {
       className="mt-2 flex flex-wrap items-baseline gap-x-3 rounded-xl bg-surface px-3 py-2"
       data-testid="noun-article"
     >
-      <p className="text-[11px] font-extrabold uppercase tracking-wider text-muted">
+      <p className="text-xs font-extrabold uppercase tracking-wider text-muted">
         {t('noun.label')}
       </p>
       <p className="text-lg font-bold" lang="de" data-testid="noun-article-noun">

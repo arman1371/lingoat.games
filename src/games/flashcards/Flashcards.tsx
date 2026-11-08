@@ -25,7 +25,7 @@ export function Flashcards({ config, seed, onFinish }: GameProps<'flashcards'>) 
         type="button"
         onClick={() => setFlipped((f) => !f)}
         data-testid="card"
-        className={`press flex min-h-64 w-full flex-col items-center justify-center gap-3 rounded-3xl border-2 border-line p-6 text-center shadow-[0_6px_0_var(--border)] ${
+        className={`press flex min-h-64 w-full flex-col items-center justify-center gap-3 rounded-3xl border-2 border-line p-6 text-center shadow-[0_6px_0_var(--edge)] ${
           flipped ? 'bg-primary-soft' : 'bg-surface'
         }`}
       >
