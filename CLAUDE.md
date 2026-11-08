@@ -16,6 +16,23 @@ content packs). Read `docs/architecture.md` and `docs/adding-content.md` before 
 - Word photos: only through `scripts/images` (Pixabay, see `docs/images.md`); never commit image files or the
   `PIXABAY_API_KEY`; every word keeps its emoji as fallback (`WordImage`).
 
+## UI design system
+
+`DESIGN/` is the base for all UI design. Read `DESIGN/USAGE.md` and `DESIGN/DESIGN.md` before designing or
+restyling any screen, component or game; `DESIGN/tokens.css` is the source of truth for colours, type, radii,
+shadows and motion, and `DESIGN/components.html` shows the reference components.
+
+- Keep its look: teal brand (`#0f766e`), chunky 4px bottom-edge buttons, flat surfaces, thick borders, pill
+  geometry, spring motion, Goaty as the mascot, Fredoka + Plus Jakarta Sans.
+- Don't invent new colours, radii or shadows; add them to `DESIGN/tokens.css` first (and the derived files).
+- Don't paste `DESIGN/tokens.css` into `src/`: `--bg`, `--accent`, `--success` and `--danger` mean different things in
+  `src/index.css`. Map the values onto the app's tokens there instead.
+- The app is still on the old indigo palette (`--primary` `#584bca`). Moving it to the `DESIGN/` palette is pending
+  and also touches `Logo.tsx`, `mascotData.ts`, `Confetti.tsx`, `index.html`, `vite.config.ts`, the favicons and
+  `e2e/design.spec.ts`. New UI should follow `DESIGN/` and use the semantic tokens, never hard-coded hex.
+- Contrast and axe rules still win: white text needs ≥ 4.5:1 on its background.
+- `DESIGN/` is documentation only and is excluded from Prettier. Never import it from `src/`.
+
 ## Commands
 
 `npm run check` = lint + typecheck + unit tests + build + e2e. In the sandbox set
