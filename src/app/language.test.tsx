@@ -54,12 +54,13 @@ describe('French first visit and per-language data', () => {
   });
 
   it('keeps German grammar points out of the French library', async () => {
-    const { user } = renderApp('/fr/library?view=games');
-    // The French library lists every French level, so it can take a while to appear on a busy CI runner.
-    await user.click(await screen.findByText(/^Filters/, {}, { timeout: 20_000 }));
+    // A search nothing matches keeps jsdom from rendering every French game card (it took ~30s and
+    // timed out on busy CI runners); the tag chips come from the whole language, not from the results.
+    const { user } = renderApp('/fr/library?view=games&q=zzzz');
+    await user.click(await screen.findByText(/^Filters/));
     expect(await screen.findByRole('button', { name: /tu or vous/ })).toBeInTheDocument();
     expect(screen.queryByRole('button', { name: /Verb conjugation/ })).not.toBeInTheDocument();
-  }, 30_000);
+  });
 
   it('shows no welcome card in German', async () => {
     renderApp('/');
