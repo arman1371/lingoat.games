@@ -27,9 +27,13 @@ shadows and motion, and `DESIGN/components.html` shows the reference components.
 - Don't invent new colours, radii or shadows; add them to `DESIGN/tokens.css` first (and the derived files).
 - Don't paste `DESIGN/tokens.css` into `src/`: `--bg`, `--accent`, `--success` and `--danger` mean different things in
   `src/index.css`. Map the values onto the app's tokens there instead.
-- The app is still on the old indigo palette (`--primary` `#584bca`). Moving it to the `DESIGN/` palette is pending
-  and also touches `Logo.tsx`, `mascotData.ts`, `Confetti.tsx`, `index.html`, `vite.config.ts`, the favicons and
-  `e2e/design.spec.ts`. New UI should follow `DESIGN/` and use the semantic tokens, never hard-coded hex.
+- The app runs on the `DESIGN/` palette (`--primary` `#0f766e`, dark `#14b8a6`). `src/index.css` maps it onto the
+  app's semantic tokens; the 13 game colours share the six DESIGN hues. Use the semantic tokens (`bg-primary`,
+  `border-line`, `shadow-[0_4px_0_var(--edge)]`), never hard-coded hex. Buttons and field labels are uppercase Fredoka 800.
+- A DESIGN hue that can't carry white text at 4.5:1 (danger red, eel blue) has a darker solid for text-bearing
+  fills (`--danger` and `--info` in `src/index.css`, `--danger-solid` in `DESIGN/tokens.css`); the DESIGN hue stays decorative.
+- Mobile first: phones are the primary screen. Respect all four safe-area insets, keep touch targets ≥ 44px
+  (48px in games), and design at 360px before adding `md:`/`lg:` layouts.
 - Contrast and axe rules still win: white text needs ≥ 4.5:1 on its background.
 - `DESIGN/` is documentation only and is excluded from Prettier. Never import it from `src/`.
 

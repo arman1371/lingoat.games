@@ -58,7 +58,6 @@
   --control-off: #777777;
   --overlay: rgb(15 26 28 / 0.6);
   --shadow-1: 0 0 #0000;
-  --shadow-2: 0 4px 0 var(--edge);
   --shadow-3: 0 4px 0 var(--edge);
   --shadow-4: 0 12px 32px rgb(15 26 28 / 0.28);
   --game-flashcards-bg: #ccfbf1;
@@ -246,10 +245,6 @@
     'Fredoka Variable', 'Fredoka', ui-rounded, system-ui, -apple-system, 'Segoe UI', Roboto,
     sans-serif;
   --radius-card: 1rem;
-  --shadow-elevation-1: var(--shadow-1);
-  --shadow-elevation-2: var(--shadow-2);
-  --shadow-elevation-3: var(--shadow-3);
-  --shadow-elevation-4: var(--shadow-4);
 }
 
 html {
