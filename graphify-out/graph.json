@@ -6684,7 +6684,7 @@
       "file_type": "code",
       "norm_label": "choicelist()",
       "source_file": "src/games/shared/ChoiceList.tsx",
-      "source_location": "L14"
+      "source_location": "L16"
     },
     {
       "id": "src_games_shared_choices_shuffledoptions",
@@ -59536,7 +59536,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/games/shared/ChoiceList.tsx",
-      "source_location": "L17",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -211799,7 +211799,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/games/shared/ChoiceList.tsx",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -221185,5 +221185,5 @@
       "source_file": "docs/adding-content.md"
     }
   ],
-  "built_at_commit": "9ec984620cf26f28a245af57610c6e75ffdd0a67"
+  "built_at_commit": "cdb363068c737aa5fa07914385da48406744cc68"
 }

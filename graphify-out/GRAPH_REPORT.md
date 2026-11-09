@@ -1,7 +1,7 @@
 # Graph Report - lingoat.games  (2026-11-09)
 
 ## Corpus Check
-- 800 files · ~1,059,600 words
+- 800 files · ~1,059,749 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 11 file(s) not represented in the graph (top: (none) 5, .css 2, .in 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9ec98462`
+- Built from commit: `cdb36306`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -1017,11 +1017,11 @@ Nodes (8): q(), qs(), attitudes, doute, ideas, MOOD, phrases, vocab
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `UnitContent` connect `UnitContent` to `tf`, `say`, `sent`, `heard`, `u1-registres.ts`, `kit.ts`, `b2-1/index.ts`, `fr-a1-2/helpers.ts`, `meta`, `a2-2/index.ts`, `u4-zahlen.ts`, `you`, `activity`, `gap`, `b1-2/index.ts`, `u3-nombres.ts`, `b2-2/index.ts`, `fr-c1-2/helpers.ts`, `u1-voyage.ts`, `u1-sante.ts`, `u11-sport.ts`, `fr-c1-1/helpers.ts`, `u7-tag.ts`, `builders.ts`, `u2-fetes.ts`, `u3-sante.ts`, `u3-logement.ts`, `u12-culture.ts`, `u7-nature.ts`, `u8-temps.ts`, `fr-b1-1/u6-medias.ts`, `fr-b1-2/u7-ville.ts`, `u10-cause.ts`, `u6-travail.ts`, `u6-convaincre.ts`, `fr-b1-2/helpers.ts`, `fr-b1-1/helpers.ts`, `u8-rapporter.ts`, `u9-etudes.ts`, `u6-subjonctif.ts`, `u3-hypotheses.ts`, `u2-presenter.ts`, `u4-regrets.ts`, `u3-recit.ts`, `u4-famille.ts`, `u2-paysages.ts`, `u1-journee.ts`, `grammar.test.ts`, `u9-recit.ts`, `u6-table.ts`, `u5-planete.ts`, `fr-b2-1/helpers.ts`, `u8-etudes.ts`, `u8-langues.ts`, `u3-souvenirs.ts`, `u4-logement.ts`, `u8-cause.ts`, `u6-migrations.ts`, `u12-ville.ts`, `u1-identite.ts`, `u2-parcours.ts`, `u7-demarches.ts`, `u11-logement.ts`, `u10-cites.ts`, `u7-cuisine.ts`, `u5-sentiments.ts`, `u4-kunst.ts`, `byDe`, `u8-geschichte.ts`, `u2-humour.ts`, `u4-cause.ts`, `u5-concession.ts`, `u7-relief.ts`, `u8-institutions.ts`, `u9-debat.ts`, `fr-b1-1/index.ts`, `u5-loisirs.ts`, `fr-a2-1/helpers.ts`, `fr-a1-2/u5-sante.ts`, `u3-consommer.ts`, `u2-medias.ts`, `u4-doute.ts`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
+  _High betweenness centrality (0.062) - this node is a cross-community bridge._
 - **Why does `react` connect `react` to `Gapfill.test.tsx`, `AppLayout.tsx`, `StatePanel.tsx`, `package.json`, `PlayPage.tsx`, `router.tsx`, `Gapfill.tsx`, `Clock.tsx`, `Sentence.tsx`, `Icon.tsx`, `FeedbackBanner.tsx`, `Tabs.tsx`, `controls.test.tsx`, `Memory.tsx`, `Market.tsx`, `Button.tsx`, `@testing-library/react`, `ActivityCard.tsx`, `ui.test.tsx`, `ReportButton.tsx`, `WordImage.tsx`, `content/schema.ts`?**
   _High betweenness centrality (0.061) - this node is a cross-community bridge._
 - **Why does `zod` connect `progressTransfer.ts` to `grammar/schema.ts`, `@testing-library/react`, `package.json`, `content/schema.ts`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
 - **What connects `singleQuote`, `semi`, `trailingComma` to the rest of the system?**
   _2416 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Gapfill.test.tsx` be split into smaller, more focused modules?**
