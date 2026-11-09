@@ -47,7 +47,7 @@ function BucketTarget({
       disabled={disabled}
       onClick={onChoose}
       data-testid={`bucket-${bucket.id}`}
-      className={`press relative flex min-h-24 flex-col items-center justify-center gap-1 rounded-2xl border-2 p-3 text-center font-display text-lg font-bold shadow-[0_3px_0_var(--primary-soft-border)] disabled:cursor-default ${tone}`}
+      className={`press relative flex min-h-24 flex-col items-center justify-center gap-1 rounded-2xl border-2 p-3 text-center font-display text-lg font-bold shadow-[0_4px_0_var(--primary-soft-border)] disabled:cursor-default ${tone}`}
     >
       {state === 'right' ? (
         <>
@@ -100,7 +100,7 @@ function DraggableCard({
           transform: transform ? `translate3d(${transform.x}px, ${transform.y}px, 0)` : undefined,
           touchAction: 'none',
         }}
-        className={`relative z-10 flex min-h-32 cursor-grab flex-col items-center justify-center gap-2 rounded-3xl border-2 border-line bg-surface p-5 text-center shadow-[0_4px_0_var(--border)] ${isDragging ? 'opacity-90' : ''}`}
+        className={`relative z-10 flex min-h-32 cursor-grab flex-col items-center justify-center gap-2 rounded-3xl border-2 border-line bg-surface p-5 text-center shadow-[0_4px_0_var(--edge)] ${isDragging ? 'opacity-90' : ''}`}
       >
         {children}
       </div>

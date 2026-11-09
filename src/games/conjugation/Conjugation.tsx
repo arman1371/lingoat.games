@@ -109,7 +109,7 @@ export function Conjugation({ config, seed, onFinish }: GameProps<'conjugation'>
                     autoComplete="off"
                     autoCapitalize="off"
                     spellCheck={false}
-                    className={`min-h-12 w-full rounded-xl border-2 bg-surface px-3 text-xl font-bold text-ink ${
+                    className={`min-h-12 w-full rounded-xl border-2 bg-surface px-3 text-xl font-bold text-ink focus:shadow-(--focus-ring) focus:outline-none ${
                       v === 'wrong' ? 'border-danger' : v ? 'border-success' : 'border-line'
                     }`}
                   />

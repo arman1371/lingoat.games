@@ -44,7 +44,7 @@ function AnswerTile({
       aria-label={`Remove ${text}`}
       onClick={onRemove}
       style={{ transform: CSS.Transform.toString(transform), transition, touchAction: 'none' }}
-      className={`press min-h-12 rounded-xl px-4 text-lg font-bold border-2 border-line bg-surface text-ink shadow-[0_3px_0_var(--border)] ${
+      className={`press min-h-12 rounded-xl px-4 text-lg font-bold border-2 border-line bg-surface text-ink shadow-[0_4px_0_var(--edge)] ${
         isDragging ? 'z-10 opacity-80' : ''
       }`}
     >
@@ -149,7 +149,7 @@ export function Sentence({ config, seed, onFinish }: GameProps<'sentence'>) {
               say(tile.text);
               setPlaced((p) => [...p, tile.id]);
             }}
-            className="press min-h-12 rounded-xl px-4 text-lg font-bold border-2 border-line bg-surface text-ink shadow-[0_3px_0_var(--border)]"
+            className="press min-h-12 rounded-xl px-4 text-lg font-bold border-2 border-line bg-surface text-ink shadow-[0_4px_0_var(--edge)]"
           >
             {tile.text}
           </button>

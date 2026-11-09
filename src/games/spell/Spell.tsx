@@ -108,7 +108,7 @@ export function Spell({ config, seed, onFinish }: GameProps<'spell'>) {
                   disabled={verdict !== null}
                   aria-label={`Remove ${tile.ch}`}
                   onClick={() => setPicked((p) => p.filter((x) => x !== id))}
-                  className="press h-12 min-w-12 rounded-xl px-3 font-display text-xl font-bold border-2 border-line bg-surface text-ink shadow-[0_3px_0_var(--border)]"
+                  className="press h-12 min-w-12 rounded-xl px-3 font-display text-xl font-bold border-2 border-line bg-surface text-ink shadow-[0_4px_0_var(--edge)]"
                 >
                   {tile.ch}
                 </button>
@@ -122,7 +122,7 @@ export function Spell({ config, seed, onFinish }: GameProps<'spell'>) {
                 type="button"
                 disabled={picked.includes(tile.id) || verdict !== null}
                 onClick={() => setPicked((p) => [...p, tile.id])}
-                className="press h-12 min-w-12 rounded-xl px-3 font-display text-xl font-bold border-2 border-line bg-surface text-ink shadow-[0_3px_0_var(--border)] disabled:opacity-30"
+                className="press h-12 min-w-12 rounded-xl px-3 font-display text-xl font-bold border-2 border-line bg-surface text-ink shadow-[0_4px_0_var(--edge)] disabled:opacity-30"
               >
                 {tile.ch}
               </button>
@@ -148,7 +148,7 @@ export function Spell({ config, seed, onFinish }: GameProps<'spell'>) {
             autoCorrect="off"
             spellCheck={false}
             inputMode={item.numeric ? 'numeric' : 'text'}
-            className="min-h-14 w-full max-w-md rounded-2xl border-2 border-line bg-surface px-4 text-center text-2xl font-bold text-ink"
+            className="min-h-14 w-full max-w-md rounded-2xl border-2 border-line bg-surface px-4 text-center text-2xl font-bold text-ink focus:border-primary focus:shadow-(--focus-ring) focus:outline-none"
           />
           {!item.numeric ? <UmlautKeyboard onInsert={insert} /> : null}
         </form>

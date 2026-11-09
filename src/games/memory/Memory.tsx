@@ -166,12 +166,12 @@ function Column({ title, cards, selected, matched, miss, pictured, onPick }: Col
             onClick={() => onPick(card)}
             className={`press flex min-h-16 w-full items-center justify-center gap-2 rounded-2xl border-2 p-2 text-center text-base font-bold wrap-anywhere ${
               isMatched
-                ? 'border-success bg-success-soft text-on-success-soft shadow-[0_3px_0_var(--success-soft-border)]'
+                ? 'border-success bg-success-soft text-on-success-soft shadow-[0_4px_0_var(--success-soft-border)]'
                 : isSelected
                   ? 'border-primary bg-primary-soft text-on-primary-soft shadow-[0_4px_0_var(--primary-soft-border)]'
                   : isMiss
                     ? 'anim-shake border-danger bg-danger-soft text-on-danger-soft shadow-[0_4px_0_var(--danger-soft-border)]'
-                    : 'border-line bg-surface text-ink shadow-[0_4px_0_var(--border)] hover:bg-surface-2'
+                    : 'border-line bg-surface text-ink shadow-[0_4px_0_var(--edge)] hover:bg-surface-2'
             }`}
           >
             {isMatched ? <Icon name="check-circle" size={22} /> : null}

@@ -82,6 +82,21 @@ describe('ChoiceList', () => {
     expect(onSelect).toHaveBeenCalledTimes(2);
   });
 
+  it('gives every answer a raised edge: neutral, correct (green) and wrong (red)', () => {
+    render(
+      <ChoiceList
+        options={['Eins', 'Zwei', 'Drei']}
+        onSelect={() => {}}
+        picked="Eins"
+        answer="Zwei"
+      />,
+    );
+    const edge = (name: RegExp | string) => screen.getByRole('button', { name }).className;
+    expect(edge(/Zwei/)).toContain('0_4px_0_var(--success)');
+    expect(edge(/Eins/)).toContain('0_4px_0_var(--danger)');
+    expect(edge('Drei')).toContain('0_4px_0_var(--edge)');
+  });
+
   it('ignores number keys while typing in an input', async () => {
     const user = userEvent.setup();
     const onSelect = vi.fn();

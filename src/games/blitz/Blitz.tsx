@@ -107,7 +107,7 @@ export function Blitz({ config, seed, onFinish }: GameProps<'blitz'>) {
           {index + 1} / {order.length}
         </span>
       </div>
-      <div className="flex min-h-48 flex-col items-center justify-center gap-3 rounded-3xl border-2 border-line bg-surface p-6 text-center shadow-[0_6px_0_var(--border)]">
+      <div className="flex min-h-48 flex-col items-center justify-center gap-3 rounded-3xl border-2 border-line bg-surface p-6 text-center shadow-[0_6px_0_var(--edge)]">
         <p className="text-3xl font-extrabold text-ink" data-testid="prompt">
           {statement.text}
         </p>

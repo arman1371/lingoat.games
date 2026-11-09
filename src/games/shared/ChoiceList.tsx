@@ -26,10 +26,10 @@ export function ChoiceList({ options, onSelect, picked = null, answer, columns =
         const isAnswer = locked && option === answer;
         const isWrongPick = locked && option === picked && option !== answer;
         const tone = isAnswer
-          ? 'border-success bg-success-soft'
+          ? 'border-success bg-success-soft shadow-[0_4px_0_var(--success)]'
           : isWrongPick
-            ? 'border-danger bg-danger-soft anim-shake'
-            : 'border-line bg-surface hover:bg-surface-2';
+            ? 'border-danger bg-danger-soft shadow-[0_4px_0_var(--danger)] anim-shake'
+            : 'border-line bg-surface shadow-[0_4px_0_var(--edge)] hover:border-line-strong';
         return (
           <button
             key={option}
