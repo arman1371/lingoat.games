@@ -8,20 +8,28 @@ interface Props {
   picked?: string | null;
   answer?: string;
   columns?: 1 | 2;
+  /** two columns on phones too: for short answers, so the round leaves room for the feedback panel */
+  compact?: boolean;
 }
 
 /** Big tappable answer buttons with 1–9 keyboard shortcuts. */
-export function ChoiceList({ options, onSelect, picked = null, answer, columns = 1 }: Props) {
+export function ChoiceList({
+  options,
+  onSelect,
+  picked = null,
+  answer,
+  columns = 1,
+  compact = false,
+}: Readonly<Props>) {
   const locked = picked !== null;
+  let grid = '';
+  if (compact) grid = 'grid-cols-2';
+  else if (columns === 2) grid = 'sm:grid-cols-2';
 
   useNumberKeys(options.length, !locked, (i) => onSelect(options[i] as string));
 
   return (
-    <div
-      role="group"
-      aria-label="Answers"
-      className={`grid gap-3 ${columns === 2 ? 'sm:grid-cols-2' : ''}`}
-    >
+    <div role="group" aria-label="Answers" className={`grid gap-3 ${grid}`}>
       {options.map((option, i) => {
         const isAnswer = locked && option === answer;
         const isWrongPick = locked && option === picked && option !== answer;

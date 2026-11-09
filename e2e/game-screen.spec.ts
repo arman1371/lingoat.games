@@ -38,6 +38,27 @@ test.describe('game screen', () => {
     expect(await overflow(page)).toBeLessThanOrEqual(0);
   });
 
+  test('a gap fill with short options fits a small phone in every state: nothing to scroll', async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 360, height: 640 });
+    const gap = activity('a1-2-gesundheit-gap-modal');
+    if (gap.gameType !== 'gapfill') throw new Error('expected a gap fill');
+    await page.goto(`/play/${gap.id}?seed=${SEED}`);
+    await page.getByTestId('start').click();
+    const squash = (t: string) => t.replace(/\s+/g, ' ').trim();
+    for (let n = 0; n < gap.config.items.length; n++) {
+      const shown = squash(await page.getByTestId('sentence').innerText());
+      const item = gap.config.items.find((i) => squash(i.text.replace('___', '…')) === shown)!;
+      expect(await overflow(page)).toBeLessThanOrEqual(0);
+      await page.getByRole('button', { name: item.answer, exact: true }).click();
+      await expect(page.getByTestId('feedback')).toBeVisible();
+      await settle(page);
+      expect(await overflow(page), item.id).toBeLessThanOrEqual(0);
+      await page.getByTestId('continue').click();
+    }
+  });
+
   test('a wrong grammar answer shows a Why? button; the explanation opens in a sheet', async ({
     page,
   }) => {
