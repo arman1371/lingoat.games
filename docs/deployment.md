@@ -62,8 +62,9 @@ Notes
 ## CI
 
 `.github/workflows/ci.yml` runs on every push and pull request. Independent jobs run in parallel: lint and
-typecheck, unit tests with coverage thresholds, one production build, and the Playwright suite (desktop +
-mobile) split into 4 shards that serve the shared build. The `verify` job is green only when all of them
-are, so branch protection needs just `verify` (and `SonarCloud`). SonarCloud reuses the coverage report of
-the unit job. Superseded pull request runs are cancelled. Cloudflare builds only when you push; keep CI as the
+typecheck, unit tests split into 4 Vitest shards (their blobs are merged by `unit-coverage`, which enforces the
+coverage thresholds), and the Playwright suite (desktop + mobile) split into 15 shards that each build their
+own copy. Every job restores `node_modules` from a cache keyed on `package-lock.json` (`.github/actions/setup`).
+The `verify` job is green only when all of them are, so branch protection needs just `verify` (and
+`SonarCloud`). SonarCloud reuses the merged coverage report. Superseded pull request runs are cancelled. Cloudflare builds only when you push; keep CI as the
 gate by enabling branch protection on the default branch.
