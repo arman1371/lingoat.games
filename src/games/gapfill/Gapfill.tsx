@@ -109,7 +109,7 @@ export function Gapfill({ config, seed, onFinish }: GameProps<'gapfill'>) {
           )}
           {after}
         </p>
-        {item.translation ? <p className="mt-2 text-muted">{item.translation}</p> : null}
+        {item.translation ? <p className="mt-1 text-muted">{item.translation}</p> : null}
       </div>
       <SentenceNouns text={item.text} />
       {options ? (
@@ -118,6 +118,7 @@ export function Gapfill({ config, seed, onFinish }: GameProps<'gapfill'>) {
           picked={picked}
           answer={item.answer}
           columns={2}
+          compact={options.every((o) => o.length <= 14)}
           onSelect={(o) => {
             if (picked !== null) return;
             setPicked(o);
