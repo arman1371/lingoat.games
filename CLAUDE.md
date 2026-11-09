@@ -46,6 +46,7 @@ Never run `pkill -f "vite preview"` from a shell whose command line contains tha
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+When the user types `/graphify`, use the installed skill (`.claude/skills/graphify/SKILL.md`) before doing anything else.
 
 Rules:
 
