@@ -19,67 +19,69 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version-file: .nvmrc, cache: npm }
-      - run: npm ci
+      - uses: ./.github/actions/setup
       - run: npm run lint
       - run: npm run typecheck
 
+  # Vitest splits the test files over the shards; `unit-coverage` merges their blobs into one coverage run.
   unit:
-    name: Unit tests
+    name: Unit tests (shard ${{ matrix.shard }}/4)
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version-file: .nvmrc, cache: npm }
-      - run: npm ci
-      # The one and only coverage run: it enforces the thresholds and feeds SonarCloud.
-      - run: npm run test:coverage
-      - uses: actions/upload-artifact@v4
-        with:
-          name: coverage
-          path: coverage/lcov.info
-          retention-days: 1
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version-file: .nvmrc, cache: npm }
-      - run: npm ci
-      # Cloudflare's always-passing Turnstile test key: it shows the "Report a problem" button for the e2e tests.
-      # The real key is a build variable of the Cloudflare project.
-      - run: npm run build
-        env:
-          VITE_TURNSTILE_SITE_KEY: 1x00000000000000000000AA
-      - uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist
-          retention-days: 1
-
-  e2e:
-    name: e2e (shard ${{ matrix.shard }}/4)
-    needs: build
-    runs-on: ubuntu-latest
-    # The French levels pushed the shards to ~18 minutes; 20 cancelled shard 1 on #117 twice.
-    timeout-minutes: 35
     strategy:
       fail-fast: false
       matrix:
         shard: [1, 2, 3, 4]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version-file: .nvmrc, cache: npm }
-      - run: npm ci
-      # The shards serve the build from the `build` job instead of each building it again.
+      - uses: ./.github/actions/setup
+      # A shard only sees part of the code, so the thresholds are enforced on the merged report instead.
+      - run: >-
+          npx vitest run --shard=${{ matrix.shard }}/4 --reporter=blob --coverage
+          --coverage.reporter=text-summary --coverage.thresholds.lines=0 --coverage.thresholds.functions=0
+          --coverage.thresholds.statements=0 --coverage.thresholds.branches=0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vitest-blob-${{ matrix.shard }}
+          path: .vitest
+          include-hidden-files: true
+          retention-days: 1
+
+  unit-coverage:
+    name: Unit coverage
+    needs: unit
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
       - uses: actions/download-artifact@v4
-        with: { name: dist, path: dist }
+        with: { pattern: vitest-blob-*, path: .vitest, merge-multiple: true }
+      # The one and only coverage report: it enforces the thresholds and feeds SonarCloud.
+      - run: npx vitest --merge-reports --coverage
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage/lcov.info
+          retention-days: 1
+
+  e2e:
+    name: e2e (shard ${{ matrix.shard }}/15)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      # Every shard builds for itself (~20 s) instead of waiting for a separate build job to hand over `dist/`.
+      # Cloudflare's always-passing Turnstile test key shows the "Report a problem" button for the e2e tests.
+      # The real key is a build variable of the Cloudflare project.
+      - run: npm run build
+        env:
+          VITE_TURNSTILE_SITE_KEY: 1x00000000000000000000AA
       - name: Playwright version
         id: playwright
         run: echo "version=$(npx playwright --version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
@@ -94,7 +96,7 @@ jobs:
       - name: Install Chromium system dependencies
         if: steps.browsers.outputs.cache-hit == 'true'
         run: npx playwright install-deps chromium
-      - run: npx playwright test --shard=${{ matrix.shard }}/4
+      - run: npx playwright test --shard=${{ matrix.shard }}/15
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
@@ -106,7 +108,7 @@ jobs:
   verify:
     name: verify
     if: always()
-    needs: [static, unit, build, e2e]
+    needs: [static, unit-coverage, e2e]
     runs-on: ubuntu-latest
     steps:
       - name: All verification jobs passed
@@ -120,7 +122,7 @@ jobs:
 
   sonarcloud:
     name: SonarCloud
-    needs: unit
+    needs: unit-coverage
     runs-on: ubuntu-latest
     timeout-minutes: 15
     # Secrets are not available to PRs from forks (or Dependabot); skip there instead of failing.

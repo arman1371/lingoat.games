@@ -9,6 +9,7 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
+  workers: process.env.CI ? 3 : undefined,
   reporter: process.env.CI ? [['github'], ['html', { open: 'never' }]] : 'list',
   use: { baseURL: 'http://localhost:4173', trace: 'on-first-retry', launchOptions },
   projects: [
@@ -16,7 +17,7 @@ export default defineConfig({
     { name: 'mobile', use: { ...devices['Pixel 7'], launchOptions } },
   ],
   webServer: {
-    // CI builds once in its own job and hands `dist/` to every e2e shard.
+    // CI builds before the tests (each shard builds its own copy).
     command: process.env.CI ? 'npm run preview' : 'npm run build && npm run preview',
     url: 'http://localhost:4173',
     // Cloudflare's always-passing Turnstile test key makes the "Report a problem" button appear in the build
