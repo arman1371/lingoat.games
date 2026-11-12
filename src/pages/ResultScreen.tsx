@@ -33,11 +33,12 @@ export function ResultScreen({
   const mood = outcome.stars === 3 ? 'celebrate' : outcome.stars === 2 ? 'happy' : 'thinking';
   return (
     <section
-      className="mx-auto flex max-w-md flex-col items-center gap-5 py-6 text-center"
+      className="mx-auto flex w-full max-w-md flex-1 flex-col items-center justify-center gap-3 pb-[max(1rem,env(safe-area-inset-bottom))] text-center"
       aria-labelledby="result-title"
     >
       {outcome.stars === 3 ? <Confetti /> : null}
-      <Mascot mood={mood} size={160} className="anim-pop" />
+      {/* shrinks with the screen height so the whole result fits without scrolling */}
+      <Mascot mood={mood} size={160} className="anim-pop h-auto w-[clamp(6rem,18dvh,10rem)]" />
       <h1 id="result-title" className="font-display text-4xl font-bold text-ink">
         {t('result.title')}
       </h1>
