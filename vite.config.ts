@@ -94,7 +94,14 @@ export default defineConfig({
     include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.ts', 'worker/**/*.test.ts'],
     css: false,
     // the real site key is a build setting; this is Cloudflare's always-passing test key
-    env: { VITE_TURNSTILE_SITE_KEY: '1x00000000000000000000AA' },
+    // fake operator, so no real address is needed to run the tests
+    env: {
+      VITE_TURNSTILE_SITE_KEY: '1x00000000000000000000AA',
+      VITE_OPERATOR_NAME: 'Erika Mustermann',
+      VITE_OPERATOR_STREET: 'Musterstr. 1',
+      VITE_OPERATOR_CITY: '12345 Musterstadt',
+      VITE_OPERATOR_EMAIL: 'legal@example.test',
+    },
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html', 'lcov'],

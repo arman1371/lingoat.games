@@ -221,7 +221,16 @@ function ReportDialog({
             className="min-h-24 w-full resize-none rounded-xl border-2 border-line-strong bg-surface px-4 py-3 text-base text-ink placeholder:text-muted"
           />
           <p id={ids.hint} className="text-xs font-medium text-muted">
-            {t('report.privacy')}
+            {t('report.privacy')}{' '}
+            <a
+              href="/datenschutz"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="font-bold text-primary underline"
+            >
+              {t('legal.reportPrivacy')}
+              <span className="sr-only"> {t('legal.opensTab')}</span>
+            </a>
           </p>
         </div>
         <div ref={container} />

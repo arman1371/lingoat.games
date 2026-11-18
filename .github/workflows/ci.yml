@@ -82,6 +82,11 @@ jobs:
       - run: npm run build
         env:
           VITE_TURNSTILE_SITE_KEY: 1x00000000000000000000AA
+          # fake operator for the Impressum pages; the real one is a build variable of the Cloudflare project
+          VITE_OPERATOR_NAME: Erika Mustermann
+          VITE_OPERATOR_STREET: Musterstr. 1
+          VITE_OPERATOR_CITY: 12345 Musterstadt
+          VITE_OPERATOR_EMAIL: legal@example.test
       - name: Playwright version
         id: playwright
         run: echo "version=$(npx playwright --version | awk '{print $2}')" >> "$GITHUB_OUTPUT"

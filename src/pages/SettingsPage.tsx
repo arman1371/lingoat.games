@@ -195,6 +195,18 @@ export function SettingsPage() {
           <span className="text-sm font-bold text-muted">{t('credits.linkHint')}</span>
         </Card>
       </Link>
+      <Link to="/impressum" rel="nofollow" className="block">
+        <Card interactive className="flex items-center justify-between gap-3">
+          <span className="font-semibold text-ink">{t('legal.imprint')}</span>
+          <span className="text-sm font-bold text-muted">{t('legal.imprintHint')}</span>
+        </Card>
+      </Link>
+      <Link to="/datenschutz" rel="nofollow" className="block">
+        <Card interactive className="flex items-center justify-between gap-3">
+          <span className="font-semibold text-ink">{t('legal.privacy')}</span>
+          <span className="text-sm font-bold text-muted">{t('legal.privacyHint')}</span>
+        </Card>
+      </Link>
       <Card className="flex flex-col gap-3">
         <h2 className="font-extrabold text-ink">{t('data.title')}</h2>
         <p className="text-sm text-muted">{t('data.intro')}</p>
