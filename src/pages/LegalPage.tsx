@@ -3,16 +3,16 @@ import { Card } from '@/components/ui/Card';
 import { t } from '@/i18n';
 import { getLegal, type LegalDoc, type LegalId } from '@/legal/legal';
 
-function Doc({ doc, lang, level }: { doc: LegalDoc; lang: 'de' | 'en'; level: 1 | 2 }) {
+function Doc({ doc, lang, level }: Readonly<{ doc: LegalDoc; lang: 'de' | 'en'; level: 1 | 2 }>) {
   const H = level === 1 ? 'h1' : 'h2';
   const S = level === 1 ? 'h2' : 'h3';
   return (
     <section lang={lang} className="flex flex-col gap-3">
       <H className="text-3xl font-semibold text-ink">{doc.title}</H>
-      {doc.sections.map((s) => (
-        <Card key={s.heading} className="flex flex-col gap-2">
-          <S className="font-extrabold text-ink">{s.heading}</S>
-          {s.paragraphs.map((p) => (
+      {doc.sections.map(([heading, ...paragraphs]) => (
+        <Card key={heading} className="flex flex-col gap-2">
+          <S className="font-extrabold text-ink">{heading}</S>
+          {paragraphs.map((p) => (
             <p key={p} className="whitespace-pre-line text-sm text-ink">
               {p}
             </p>
@@ -24,7 +24,7 @@ function Doc({ doc, lang, level }: { doc: LegalDoc; lang: 'de' | 'en'; level: 1 
 }
 
 /** Impressum / Datenschutzerklärung: German (binding) first, English courtesy translation below. */
-function LegalPage({ id }: { id: LegalId }) {
+function LegalPage({ id }: Readonly<{ id: LegalId }>) {
   const { de, en } = getLegal(id);
   return (
     <div className="mx-auto flex w-full max-w-xl flex-col gap-6">
