@@ -1,17 +1,17 @@
-# Graph Report - lingoat.games  (2026-11-09)
+# Graph Report - lingoat.games  (2026-11-18)
 
 ## Corpus Check
-- 800 files · ~1,059,749 words
+- 800 files · ~1,059,730 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 11 file(s) not represented in the graph (top: (none) 5, .css 2, .in 1)
 
 ## Summary
-- 4843 nodes · 14106 edges · 200 communities (190 shown, 10 thin omitted)
+- 4843 nodes · 14105 edges · 201 communities (191 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 199 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cdb36306`
+- Built from commit: `cd2280a1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -204,6 +204,7 @@
 - a11y.spec.ts
 - fr-b1-1/index.ts
 - French C2.2 – syllabus research and plan
+- Conjugation.tsx
 - articles.ts
 - u5-loisirs.ts
 - fr-a2-1/helpers.ts
@@ -246,7 +247,7 @@
 - **B1.1 research sources** — docs_b1_1_coverage_schritte, docs_b1_1_coverage_menschen, docs_b1_1_coverage_netzwerk, docs_b1_1_coverage_ziel, docs_b1_1_coverage_goethe_b1, docs_b1_1_coverage_cefr [EXTRACTED 1.00]
 - **Level authoring knowledge (procedure, coverage rules, level docs)** — docs_adding_content_new_level, docs_a2_2_coverage, docs_b1_1_coverage [INFERRED 0.85]
 
-## Communities (200 total, 10 thin omitted)
+## Communities (201 total, 10 thin omitted)
 
 ### Community 0 - "Gapfill.test.tsx"
 Cohesion: 0.11
@@ -309,8 +310,8 @@ Cohesion: 0.07
 Nodes (29): devDependencies, aws4fetch, @axe-core/playwright, eslint, @eslint/js, eslint-plugin-jsx-a11y, eslint-plugin-react-hooks, globals (+21 more)
 
 ### Community 15 - "PlayPage.tsx"
-Cohesion: 0.05
-Nodes (52): ref_app_language, ref_app_path, ref_components_activitycard, ref_components_dailygoalcard, ref_components_grammar_fulllessonlink, ref_components_grammar_grammarindex, ref_components_grammar_grammarlesson, ref_components_grammar_unitgrammar (+44 more)
+Cohesion: 0.06
+Nodes (51): ref_app_language, ref_app_path, ref_components_activitycard, ref_components_dailygoalcard, ref_components_grammar_fulllessonlink, ref_components_grammar_grammarindex, ref_components_grammar_grammarlesson, ref_components_grammar_unitgrammar (+43 more)
 
 ### Community 16 - "router.tsx"
 Cohesion: 0.11
@@ -373,8 +374,8 @@ Cohesion: 0.04
 Nodes (54): ref_test_playability, content, units, vocab, sortitTranslations, beruf, online, freizeit (+46 more)
 
 ### Community 31 - "Sentence.tsx"
-Cohesion: 0.24
-Nodes (9): buildTiles(), isCorrectSentence(), moveItem(), sentenceOf(), WordTile, Sentence(), ALT, config (+1 more)
+Cohesion: 0.16
+Nodes (12): ref_test_speech, Dialogue(), config, buildTiles(), isCorrectSentence(), moveItem(), sentenceOf(), WordTile (+4 more)
 
 ### Community 32 - "C1.1 – syllabus research, coverage and overlap with A1.1–B1.2"
 Cohesion: 0.18
@@ -541,16 +542,16 @@ Cohesion: 0.22
 Nodes (8): advice, body, doctor, illness, meaningQuiz, sante, SORT_CARDS, vocab
 
 ### Community 80 - "Memory.tsx"
-Cohesion: 0.07
-Nodes (34): ref_content_gametypes, ref_lib_scoring, ref_lib_sfx, ref_test_render, ref_test_speech, Conjugation(), config, forms (+26 more)
+Cohesion: 0.12
+Nodes (20): ref_content_gametypes, ref_lib_filters, ref_lib_scoring, ref_lib_sfx, buildColumns(), isMatch(), MemoryCard, MemoryColumns (+12 more)
 
 ### Community 81 - "worker/index.ts"
 Cohesion: 0.22
 Nodes (9): CacheLike, Env, fetch(), get(), R2ObjectLike, serveImage(), env(), run() (+1 more)
 
 ### Community 82 - "Market.tsx"
-Cohesion: 0.12
-Nodes (20): ref_components_ui_umlautkeyboard, ref_components_wordimage, Flashcards(), BACK, config, adjust(), Basket, basketMatches() (+12 more)
+Cohesion: 0.10
+Nodes (24): ref_components_ui_umlautkeyboard, ref_components_wordimage, ref_test_render, Flashcards(), BACK, config, adjust(), Basket (+16 more)
 
 ### Community 83 - "u11-sport.ts"
 Cohesion: 0.15
@@ -968,6 +969,10 @@ Nodes (26): subjTable(), units, character, FEELING_CARDS, feelings, regrets, sen
 Cohesion: 0.40
 Nodes (4): French C2.2 – syllabus research and plan, Limits, Sources (what was actually read), Split with French C2.1
 
+### Community 190 - "Conjugation.tsx"
+Cohesion: 0.40
+Nodes (8): Conjugation(), config, forms, CellVerdicts, conjugationWhy(), Forms, gradeTable(), pronounOrder()
+
 ### Community 191 - "articles.ts"
 Cohesion: 0.31
 Nodes (8): DEFINITE, definiteArticle(), genderOfArticle(), INDEFINITE, indefiniteArticle(), negativeArticle(), possessive(), PossessiveStem
@@ -1018,7 +1023,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `UnitContent` connect `UnitContent` to `tf`, `say`, `sent`, `heard`, `u1-registres.ts`, `kit.ts`, `b2-1/index.ts`, `fr-a1-2/helpers.ts`, `meta`, `a2-2/index.ts`, `u4-zahlen.ts`, `you`, `activity`, `gap`, `b1-2/index.ts`, `u3-nombres.ts`, `b2-2/index.ts`, `fr-c1-2/helpers.ts`, `u1-voyage.ts`, `u1-sante.ts`, `u11-sport.ts`, `fr-c1-1/helpers.ts`, `u7-tag.ts`, `builders.ts`, `u2-fetes.ts`, `u3-sante.ts`, `u3-logement.ts`, `u12-culture.ts`, `u7-nature.ts`, `u8-temps.ts`, `fr-b1-1/u6-medias.ts`, `fr-b1-2/u7-ville.ts`, `u10-cause.ts`, `u6-travail.ts`, `u6-convaincre.ts`, `fr-b1-2/helpers.ts`, `fr-b1-1/helpers.ts`, `u8-rapporter.ts`, `u9-etudes.ts`, `u6-subjonctif.ts`, `u3-hypotheses.ts`, `u2-presenter.ts`, `u4-regrets.ts`, `u3-recit.ts`, `u4-famille.ts`, `u2-paysages.ts`, `u1-journee.ts`, `grammar.test.ts`, `u9-recit.ts`, `u6-table.ts`, `u5-planete.ts`, `fr-b2-1/helpers.ts`, `u8-etudes.ts`, `u8-langues.ts`, `u3-souvenirs.ts`, `u4-logement.ts`, `u8-cause.ts`, `u6-migrations.ts`, `u12-ville.ts`, `u1-identite.ts`, `u2-parcours.ts`, `u7-demarches.ts`, `u11-logement.ts`, `u10-cites.ts`, `u7-cuisine.ts`, `u5-sentiments.ts`, `u4-kunst.ts`, `byDe`, `u8-geschichte.ts`, `u2-humour.ts`, `u4-cause.ts`, `u5-concession.ts`, `u7-relief.ts`, `u8-institutions.ts`, `u9-debat.ts`, `fr-b1-1/index.ts`, `u5-loisirs.ts`, `fr-a2-1/helpers.ts`, `fr-a1-2/u5-sante.ts`, `u3-consommer.ts`, `u2-medias.ts`, `u4-doute.ts`?**
   _High betweenness centrality (0.062) - this node is a cross-community bridge._
-- **Why does `react` connect `react` to `Gapfill.test.tsx`, `AppLayout.tsx`, `StatePanel.tsx`, `package.json`, `PlayPage.tsx`, `router.tsx`, `Gapfill.tsx`, `Clock.tsx`, `Sentence.tsx`, `Icon.tsx`, `FeedbackBanner.tsx`, `Tabs.tsx`, `controls.test.tsx`, `Memory.tsx`, `Market.tsx`, `Button.tsx`, `@testing-library/react`, `ActivityCard.tsx`, `ui.test.tsx`, `ReportButton.tsx`, `WordImage.tsx`, `content/schema.ts`?**
+- **Why does `react` connect `react` to `Gapfill.test.tsx`, `AppLayout.tsx`, `StatePanel.tsx`, `package.json`, `PlayPage.tsx`, `router.tsx`, `Gapfill.tsx`, `Clock.tsx`, `Sentence.tsx`, `Icon.tsx`, `FeedbackBanner.tsx`, `Tabs.tsx`, `Conjugation.tsx`, `controls.test.tsx`, `Memory.tsx`, `Market.tsx`, `Button.tsx`, `@testing-library/react`, `ActivityCard.tsx`, `ui.test.tsx`, `ReportButton.tsx`, `WordImage.tsx`, `content/schema.ts`?**
   _High betweenness centrality (0.061) - this node is a cross-community bridge._
 - **Why does `zod` connect `progressTransfer.ts` to `grammar/schema.ts`, `@testing-library/react`, `package.json`, `content/schema.ts`?**
   _High betweenness centrality (0.040) - this node is a cross-community bridge._
