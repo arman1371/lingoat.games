@@ -35,8 +35,8 @@ version and the note. The ids come from the page itself: `PlayPage` knows the ac
 Labels that do not exist yet are created by GitHub on the first issue. If GitHub refuses a label, the Worker
 retries without labels so the report is not lost; the title prefix still says what it is.
 
-No personal data is collected: no account, no IP address (it is only the rate limiter's key and Turnstile's
-`remoteip`), no user agent. The only free text is the optional note, which is written into a code fence.
+No account and no user agent are collected. The IP address is not stored in the issue; it is only the rate
+limiter's key and Turnstile's `remoteip`, so Cloudflare does process it (see `docs/legal.md` and the privacy policy). The only free text is the optional note, which is written into a code fence.
 
 ## How it is protected
 

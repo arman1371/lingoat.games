@@ -97,6 +97,24 @@ function MainNav({ mistakeCount }: { mistakeCount: number }) {
   );
 }
 
+/** Legal links stay out of the game screen; every other screen is one tap from them. */
+function LegalFooter() {
+  const link = 'inline-flex min-h-11 items-center px-3 font-bold underline';
+  return (
+    <nav
+      aria-label={t('legal.footerLabel')}
+      className="mt-6 flex justify-center text-sm text-muted"
+    >
+      <Link to="/impressum" rel="nofollow" className={link}>
+        {t('legal.footerImprint')}
+      </Link>
+      <Link to="/datenschutz" rel="nofollow" className={link}>
+        {t('legal.footerPrivacy')}
+      </Link>
+    </nav>
+  );
+}
+
 function Shell() {
   useApplySettings();
   const { pathname } = useLocation();
@@ -167,6 +185,7 @@ function Shell() {
           }`}
         >
           <Gate />
+          {playing ? null : <LegalFooter />}
         </main>
       </div>
     </div>

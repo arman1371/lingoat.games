@@ -9,3 +9,12 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
+# Impressum and privacy policy name the operator: keep them out of search results (the rest stays indexable)
+/impressum
+  X-Robots-Tag: noindex, nofollow
+/datenschutz
+  X-Robots-Tag: noindex, nofollow
+/fr/impressum
+  X-Robots-Tag: noindex, nofollow
+/fr/datenschutz
+  X-Robots-Tag: noindex, nofollow

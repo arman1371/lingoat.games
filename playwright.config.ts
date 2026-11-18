@@ -21,7 +21,14 @@ export default defineConfig({
     command: process.env.CI ? 'npm run preview' : 'npm run build && npm run preview',
     url: 'http://localhost:4173',
     // Cloudflare's always-passing Turnstile test key makes the "Report a problem" button appear in the build
-    env: { VITE_TURNSTILE_SITE_KEY: '1x00000000000000000000AA' },
+    env: {
+      VITE_TURNSTILE_SITE_KEY: '1x00000000000000000000AA',
+      // fake operator for the Impressum pages
+      VITE_OPERATOR_NAME: 'Erika Mustermann',
+      VITE_OPERATOR_STREET: 'Musterstr. 1',
+      VITE_OPERATOR_CITY: '12345 Musterstadt',
+      VITE_OPERATOR_EMAIL: 'legal@example.test',
+    },
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,
   },

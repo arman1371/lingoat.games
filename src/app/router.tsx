@@ -20,6 +20,10 @@ const pages = {
   progress: page(() => import('@/pages/ProgressPage')),
   profile: page(() => import('@/pages/SettingsPage')),
   credits: page(() => import('@/pages/CreditsPage')),
+  impressum: page(() => import('@/pages/LegalPage').then((m) => ({ default: m.ImpressumPage }))),
+  datenschutz: page(() =>
+    import('@/pages/LegalPage').then((m) => ({ default: m.DatenschutzPage })),
+  ),
   notFound: page(() => import('@/pages/NotFoundPage')),
 };
 
@@ -40,6 +44,8 @@ export const createRoutes = (language: LanguageId): RouteObject[] => [
       { path: 'progress', ...pages.progress },
       { path: 'profile', ...pages.profile },
       { path: 'credits', ...pages.credits },
+      { path: 'impressum', ...pages.impressum },
+      { path: 'datenschutz', ...pages.datenschutz },
       { path: 'settings', element: <Navigate to="/profile" replace /> },
       { path: '*', ...pages.notFound },
     ],
