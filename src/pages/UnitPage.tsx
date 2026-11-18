@@ -7,7 +7,6 @@ import { Icon } from '@/components/ui/Icon';
 import { TabPanel, Tabs } from '@/components/ui/Tabs';
 import { useContent } from '@/content/ContentProvider';
 import { pathStates, playUrl } from '@/app/path';
-import { GAME_TYPE_LABELS } from '@/lib/filters';
 import { t } from '@/i18n';
 import { NotFoundPage } from './NotFoundPage';
 
@@ -120,11 +119,6 @@ export function UnitPage() {
           </ul>
         )}
       </TabPanel>
-      <p className="text-center text-sm text-muted">
-        {path.length} games · {new Set(path.map((a) => a.gameType)).size} game types
-        {' · '}
-        {[...new Set(path.map((a) => GAME_TYPE_LABELS[a.gameType].emoji))].join(' ')}
-      </p>
     </div>
   );
 }
