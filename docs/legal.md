@@ -8,8 +8,12 @@ Not legal advice: a careful baseline. German text is binding, English is a court
   shows anyone else's name or address. Tests and CI use a fake operator (`vite.config.ts`, `playwright.config.ts`,
   `ci.yml`). Never commit real details. **A fork must set its own and review the texts for its own setup** (hosting,
   report flow, any tracking it adds); the texts describe the original deployment on Cloudflare.
-- Texts: `src/legal/legal.ts`. Pages: `src/pages/LegalPage.tsx` at `/impressum` and `/datenschutz` (also under `/fr`).
-- Links: footer on every screen except `/play` (`LegalFooter` in `src/app/AppLayout.tsx`), two rows on the profile,
+- Texts: `src/legal/legal.ts`. Pages: `src/pages/LegalPage.tsx` at `/impressum`, `/datenschutz` and `/haftungsausschluss` (also under `/fr`).
+- `/haftungsausschluss` is the AI-content disclaimer and liability limit. It names no operator, so it shows even when the
+  operator variables are missing. The footer shows a one-line AI warning that links to it. German law does not allow
+  excluding liability for intent, gross negligence, injury to life, body or health, or product liability; the text
+  respects that. Have a lawyer review it before relying on it.
+- Links: footer on every screen except `/play` (`LegalFooter` in `src/app/AppLayout.tsx`), three rows on the profile,
   and a link in the "Report a problem" dialog. The game screen stays free of legal links.
 - Search engines: only the two legal pages are `noindex` (a `<meta name="robots">` rendered by the page, plus
   `X-Robots-Tag` in `public/_headers`). Never add them to `robots.txt`: a blocked crawler cannot see the noindex.
