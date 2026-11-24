@@ -60,8 +60,8 @@ export const C22_TOPICS: GrammarTopic[] = [
             'the hall that has been closed for years = der Saal, der seit Jahren geschlossen ist',
           ],
           [
-            'der eifrig ein Buch lesende Mann',
-            'the man eagerly reading a book = der Mann, der eifrig ein Buch liest',
+            'die laut ein Lied singende Frau',
+            'the woman loudly singing a song = die Frau, die laut ein Lied singt',
           ],
         ),
         p(

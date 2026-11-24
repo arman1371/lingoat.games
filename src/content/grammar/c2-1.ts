@@ -707,7 +707,7 @@ export const C21_TOPICS: GrammarTopic[] = [
         ),
         list(
           '**The verb becomes a noun:** verzögern → die Verzögerung, sich weigern → die Weigerung, ankommen → die Ankunft.',
-          '**The subject becomes a genitive:** Der Minister weigert sich. → die Weigerung des Ministers.',
+          '**The subject becomes a genitive:** Der Chef entscheidet. → die Entscheidung des Chefs.',
           '**Tense and mood are lost.** The phrase has no tense, so context must show the time.',
           '**A light verb is needed when the main verb has moved into the noun:** Die Verzögerung erfolgte … , Der Bericht kam zur Veröffentlichung.',
         ),
@@ -1015,7 +1015,7 @@ export const C21_TOPICS: GrammarTopic[] = [
               'admittedly, however',
               'Freilich muss man auch bemerken, dass er selten gewann.',
             ],
-            ['indes / indessen', 'however', 'Du solltest indes die Form bewahren.'],
+            ['indes / indessen', 'however', 'Er hoffte auf Hilfe; es kam indes niemand.'],
             ['trotzdem', 'nevertheless', 'Es regnete. Trotzdem gingen wir.'],
             ['wie dem auch sei', 'be that as it may', 'Wie dem auch sei, wir müssen entscheiden.'],
           ],

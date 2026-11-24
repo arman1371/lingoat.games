@@ -22,8 +22,8 @@ export const B11_TOPICS: GrammarTopic[] = [
         ),
         examples(
           [
-            'Sie waren sehr böse. Ich hatte wohl etwas falsch gemacht.',
-            'They were very angry. I had probably done something wrong.',
+            'Er schwieg den ganzen Abend. Ich hatte ihn wohl verletzt.',
+            'He was silent all evening. I had probably hurt him.',
           ],
           [
             'Als ich ankam, war der Zug schon abgefahren.',

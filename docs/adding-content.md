@@ -113,6 +113,11 @@ typical mistakes and examples. Full lessons are written once per topic and linke
 - Write in English with German examples. Do **not** copy text: read the references first, write in your own words and
   list the pages you actually read in `sources` (reusable entries live in `sources.ts`, overview in
   `docs/grammar-sources.md`).
+- **No verbatim text from third parties, ever.** This covers example sentences and passages from Wikipedia or Wiktionary
+  (CC BY-SA), course books, exam model papers, and the Goethe/ÖSD/telc word lists and PDFs (also those an LLM agent was
+  given): never paste or let an agent paste them into `src/content/`. Invent your own sentences and your own vocabulary
+  selection and order; sources only tell you which topics and rules to cover. Everyday stock phrases (≤ 6 words, such
+  as "Was kann ich für Sie tun?") are fine. Tell agents this rule in the prompt.
 - UI: the main-menu item **Library** has two tabs, **Grammar** first (the default at `/library`) and **Games**
   (`/library?view=games` plus the game filters). The Grammar tab lists every lesson by level (level chips `?glvl=`,
   search `?gq=`); `/library/grammar/:topicId` is the lesson page. The unit screen has a Grammar card with the unit's

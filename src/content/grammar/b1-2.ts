@@ -402,10 +402,10 @@ export const B12_TOPICS: GrammarTopic[] = [
         ),
         examples(
           ['Man spart Geld, indem man weniger heizt.', 'You save money by heating less.'],
-          ['Sie hat mir geholfen, ohne dass sie es wusste.', 'She helped me without knowing it.'],
+          ['Er ist gegangen, ohne dass jemand es bemerkt hat.', 'He left without anyone noticing.'],
           [
-            'Statt dass er uns zu Hilfe kommt, bleibt er lieber zu Hause.',
-            'Instead of coming to help us, he prefers to stay at home.',
+            'Statt dass sie anruft, schreibt sie lieber eine Nachricht.',
+            'Instead of calling, she prefers to write a message.',
           ],
         ),
       ),
@@ -683,8 +683,8 @@ export const B12_TOPICS: GrammarTopic[] = [
             'It was not I who said that but my brother.',
           ],
           [
-            'Laura hat einen Job nicht weit weg gefunden.',
-            'Laura did not find a job far away (she found one nearby).',
+            'Anna hat das Auto nicht gestern gekauft.',
+            'Anna did not buy the car yesterday (she bought it another day).',
           ],
         ),
       ),
@@ -733,8 +733,8 @@ export const B12_TOPICS: GrammarTopic[] = [
             'The talk was so long that everyone got tired.',
           ],
           [
-            'Er ist so krank, dass er zum Arzt muss.',
-            'He is so ill that he has to go to the doctor.',
+            'Sie ist so müde, dass sie sofort einschläft.',
+            'She is so tired that she falls asleep immediately.',
           ],
         ),
       ),
