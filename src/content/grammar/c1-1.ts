@@ -258,16 +258,16 @@ export const C11_TOPICS: GrammarTopic[] = [
         'what',
         'Verbal style and nominal style',
         p(
-          'In **verbal style** the action is a verb: Der Minister weigerte sich. In **nominal style** it becomes a noun, and a general verb is added: Die **Weigerung** des Ministers führte zu Streit. Nominal style is compact (it saves subordinate clauses) and typical of administrative, scientific and technical texts, news reports and formal letters. In speech and stories German is mostly verbal.',
+          'In **verbal style** the action is a verb: Die Firma lehnte den Vorschlag ab. In **nominal style** it becomes a noun, and a general verb is added: Die **Ablehnung** des Vorschlags führte zu Ärger. Nominal style is compact (it saves subordinate clauses) and typical of administrative, scientific and technical texts, news reports and formal letters. In speech and stories German is mostly verbal.',
         ),
         examples(
           [
-            'Der Minister weigerte sich, was zu Streit führte.',
-            'The minister refused, which led to a dispute. (verbal)',
+            'Die Firma lehnte den Vorschlag ab, was zu Ärger führte.',
+            'The company rejected the proposal, which led to anger. (verbal)',
           ],
           [
-            'Die Weigerung des Ministers führte zu Streit.',
-            'The minister’s refusal led to a dispute. (nominal)',
+            'Die Ablehnung des Vorschlags durch die Firma führte zu Ärger.',
+            'The company’s rejection of the proposal led to anger. (nominal)',
           ],
         ),
       ),

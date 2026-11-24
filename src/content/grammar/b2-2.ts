@@ -348,10 +348,7 @@ export const B22_TOPICS: GrammarTopic[] = [
             'Es ist zu spät, als dass wir noch helfen könnten.',
             'It is too late for us to still help.',
           ],
-          [
-            'Wir sind zu weit gekommen, um jetzt aufzugeben.',
-            'We have come too far to give up now.',
-          ],
+          ['Er ist zu jung, um allein zu reisen.', 'He is too young to travel alone.'],
         ),
         mistake(
           'Watch out',
@@ -408,7 +405,7 @@ export const B22_TOPICS: GrammarTopic[] = [
           'Indefinite quantity words.',
           ['Word', 'Meaning', 'Example'],
           [
-            ['einige', 'a few, some', 'Wir müssen noch einige Änderungen vornehmen.'],
+            ['einige', 'a few, some', 'Ich habe noch einige Fragen.'],
             ['mehrere', 'several (more than two)', 'Mehrere Nachbarn haben sich beschwert.'],
             ['manche', 'some (but not all), a number of', 'Manche Menschen trainieren täglich.'],
             ['etliche', 'quite a few', 'Etliche Gäste blieben bis spät.'],
@@ -687,7 +684,7 @@ export const B22_TOPICS: GrammarTopic[] = [
           ['Conjunction', 'Style', 'Example'],
           [
             ['obwohl', 'neutral', 'Obwohl er erkältet ist, geht er zur Arbeit.'],
-            ['obgleich', 'written', 'Er geht zur Arbeit, obgleich er stark erkältet ist.'],
+            ['obgleich', 'written', 'Sie fuhr los, obgleich es heftig schneite.'],
             [
               'wenngleich',
               'written',
@@ -772,8 +769,8 @@ export const B22_TOPICS: GrammarTopic[] = [
           'Without and with a second infinitive.',
           ['Without an infinitive', 'With an infinitive'],
           [
-            ['Ich habe das nicht gewollt.', 'Ich habe das nicht tun wollen.'],
-            ['Er hat es nicht gekonnt.', 'Er hat nicht kommen können.'],
+            ['Sie hat das nicht gewollt.', 'Sie hat das nicht sagen wollen.'],
+            ['Ich habe es nicht gekonnt.', 'Ich habe nicht helfen können.'],
             ['Sie hat es gesehen.', 'Sie hat es kommen sehen.'],
             ['Er hat das Buch zu Hause gelassen.', 'Er hat das Buch zu Hause liegen lassen.'],
           ],
@@ -918,7 +915,7 @@ export const B22_TOPICS: GrammarTopic[] = [
           {
             title: 'conclusion',
             question: 'from clues',
-            example: 'Du musst Annekes Schwester sein.',
+            example: 'Die Lichter brennen, also müssen sie zu Hause sein.',
           },
           { title: 'guess', question: 'probably', example: 'Er dürfte schon zu Hause sein.' },
         ),

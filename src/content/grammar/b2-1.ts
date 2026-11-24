@@ -947,7 +947,7 @@ export const B21_TOPICS: GrammarTopic[] = [
             [
               'falls',
               'in case (a possible, maybe unlikely case)',
-              'Ich rufe an, falls du Probleme hast.',
+              'Nimm einen Schirm mit, falls es regnet.',
             ],
             [
               'sofern',
@@ -1023,7 +1023,10 @@ export const B21_TOPICS: GrammarTopic[] = [
           'A text hangs together because its sentences refer to each other. One way is a **pronominal adverb**: **da(r)-** plus a preposition. It replaces **preposition + something (not a person)** that you have just said.',
         ),
         examples(
-          ['Heute ist Freitag. Darüber freue ich mich.', 'Today is Friday. I am happy about that.'],
+          [
+            'Der Chef hat mich gelobt. Darüber habe ich mich sehr gefreut.',
+            'The boss praised me. I was very happy about that.',
+          ],
           [
             'Der Akku ist leer. Dadurch schaltet sich das Gerät aus.',
             'The battery is empty. Because of that the device switches off.',
