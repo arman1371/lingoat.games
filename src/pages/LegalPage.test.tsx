@@ -50,6 +50,31 @@ describe('Legal pages', () => {
     );
   });
 
+  it('shows the AI disclaimer in both languages, even without operator details', async () => {
+    vi.stubEnv('VITE_OPERATOR_NAME', '');
+    renderApp('/haftungsausschluss');
+    expect(
+      await screen.findByRole('heading', { level: 1, name: 'Haftungsausschluss und KI-Hinweis' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 2, name: 'Disclaimer and AI notice' }),
+    ).toBeInTheDocument();
+    expect(screen.getAllByText(/künstlicher Intelligenz/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/artificial intelligence/).length).toBeGreaterThan(0);
+  });
+
+  it('points to the AI disclaimer from the footer and the profile', async () => {
+    const { user } = renderApp('/');
+    expect(
+      await screen.findByRole('link', { name: /AI-generated and may contain mistakes/ }),
+    ).toHaveAttribute('href', '/haftungsausschluss');
+    await user.click(screen.getByRole('link', { name: 'Profile' }));
+    expect(await screen.findByRole('link', { name: /Disclaimer/ })).toHaveAttribute(
+      'href',
+      '/haftungsausschluss',
+    );
+  });
+
   it('keeps the main site indexable and the game free of legal links', async () => {
     renderApp('/play/a1-1-food-flashcards');
     await screen.findByRole('main');

@@ -24,6 +24,9 @@ const pages = {
   datenschutz: page(() =>
     import('@/pages/LegalPage').then((m) => ({ default: m.DatenschutzPage })),
   ),
+  haftungsausschluss: page(() =>
+    import('@/pages/LegalPage').then((m) => ({ default: m.HaftungsausschlussPage })),
+  ),
   notFound: page(() => import('@/pages/NotFoundPage')),
 };
 
@@ -46,6 +49,7 @@ export const createRoutes = (language: LanguageId): RouteObject[] => [
       { path: 'credits', ...pages.credits },
       { path: 'impressum', ...pages.impressum },
       { path: 'datenschutz', ...pages.datenschutz },
+      { path: 'haftungsausschluss', ...pages.haftungsausschluss },
       { path: 'settings', element: <Navigate to="/profile" replace /> },
       { path: '*', ...pages.notFound },
     ],

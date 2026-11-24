@@ -42,3 +42,4 @@ function LegalPage({ id }: Readonly<{ id: LegalId }>) {
 
 export const ImpressumPage = () => <LegalPage id="impressum" />;
 export const DatenschutzPage = () => <LegalPage id="datenschutz" />;
+export const HaftungsausschlussPage = () => <LegalPage id="haftungsausschluss" />;

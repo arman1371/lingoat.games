@@ -195,6 +195,12 @@ export function SettingsPage() {
           <span className="text-sm font-bold text-muted">{t('credits.linkHint')}</span>
         </Card>
       </Link>
+      <Link to="/haftungsausschluss" className="block">
+        <Card interactive className="flex items-center justify-between gap-3">
+          <span className="font-semibold text-ink">{t('legal.disclaimer')}</span>
+          <span className="text-sm font-bold text-muted">{t('legal.disclaimerHint')}</span>
+        </Card>
+      </Link>
       <Link to="/impressum" rel="nofollow" className="block">
         <Card interactive className="flex items-center justify-between gap-3">
           <span className="font-semibold text-ink">{t('legal.imprint')}</span>

@@ -103,14 +103,19 @@ function LegalFooter() {
   return (
     <nav
       aria-label={t('legal.footerLabel')}
-      className="mt-6 flex justify-center text-sm text-muted"
+      className="mt-6 flex flex-col items-center text-sm text-muted"
     >
-      <Link to="/impressum" rel="nofollow" className={link}>
-        {t('legal.footerImprint')}
+      <Link to="/haftungsausschluss" className={`${link} py-2 text-center`}>
+        {t('legal.footerAiNotice')}
       </Link>
-      <Link to="/datenschutz" rel="nofollow" className={link}>
-        {t('legal.footerPrivacy')}
-      </Link>
+      <div className="flex justify-center">
+        <Link to="/impressum" rel="nofollow" className={link}>
+          {t('legal.footerImprint')}
+        </Link>
+        <Link to="/datenschutz" rel="nofollow" className={link}>
+          {t('legal.footerPrivacy')}
+        </Link>
+      </div>
     </nav>
   );
 }

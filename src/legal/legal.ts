@@ -11,7 +11,7 @@ export interface LegalDoc {
   sections: LegalSection[];
 }
 const doc = (title: string, sections: LegalSection[]): LegalDoc => ({ title, sections });
-export type LegalId = 'impressum' | 'datenschutz';
+export type LegalId = 'impressum' | 'datenschutz' | 'haftungsausschluss';
 
 /**
  * Who runs this deployment. Build variables, never source: every fork supplies its own (docs/legal.md).
@@ -131,6 +131,51 @@ const datenschutzEn = (o: Operator) =>
     ],
   ]);
 
+/** Names no operator, so it shows even when the operator details are not configured. */
+const HAFTUNG: { de: LegalDoc; en: LegalDoc } = {
+  de: doc('Haftungsausschluss und KI-Hinweis', [
+    [
+      'Inhalte werden mit KI erstellt',
+      'Die Lerninhalte von Lingoat (Wörter, Übersetzungen, Beispielsätze, Dialoge, Grammatikerklärungen, Hinweise und Aufgaben) werden mit Hilfe von künstlicher Intelligenz erstellt. Sie sind nicht durchgehend von Muttersprachlerinnen und Muttersprachlern oder anderen Fachleuten geprüft.',
+    ],
+    [
+      'Fehler sind möglich',
+      'KI-Inhalte können Fehler enthalten, zum Beispiel falsche oder unnatürliche Formulierungen, Rechtschreib- und Grammatikfehler, ungenaue Übersetzungen oder falsche Erklärungen. Wir übernehmen keine Gewähr für Richtigkeit, Vollständigkeit und Aktualität. Prüfen Sie Wichtiges in einem Wörterbuch, einem Lehrbuch oder mit einer Lehrkraft.',
+    ],
+    [
+      'Nur zum Lernen',
+      'Lingoat ersetzt weder einen Sprachkurs noch eine Prüfungsvorbereitung. Wir sichern weder Lernerfolg noch das Bestehen einer Prüfung oder den Erwerb eines Zertifikats zu. Die Zuordnung zu Niveaustufen (GER) ist eine Orientierung, keine offizielle Einstufung. Verwenden Sie Inhalte der App nicht ohne fachkundige Prüfung für Verträge, Behördenschreiben oder andere wichtige Zwecke.',
+    ],
+    [
+      'Haftung',
+      'Lingoat wird kostenlos angeboten. Wir haften nicht für Schäden, die aus der Nutzung der Inhalte oder dem Vertrauen auf sie entstehen, es sei denn, wir handeln vorsätzlich oder grob fahrlässig. Unberührt bleibt die Haftung für Schäden an Leben, Körper und Gesundheit, nach dem Produkthaftungsgesetz und in allen Fällen, in denen das Gesetz zwingend eine Haftung vorsieht. Für Inhalte externer Seiten, auf die wir verweisen, sind deren Betreiber verantwortlich.',
+    ],
+    [
+      'Fehler gefunden?',
+      'Öffnen Sie im Spiel „Problem melden“. So können wir den Fehler korrigieren.',
+    ],
+  ]),
+  en: doc('Disclaimer and AI notice', [
+    [
+      'Content is created with AI',
+      'The learning content of Lingoat (words, translations, example sentences, dialogues, grammar explanations, hints and exercises) is created with the help of artificial intelligence. It has not been consistently checked by native speakers or other experts.',
+    ],
+    [
+      'Mistakes are possible',
+      'AI content can contain mistakes, for example wrong or unnatural wording, spelling and grammar errors, inaccurate translations or wrong explanations. We give no warranty for correctness, completeness or up-to-dateness. Check anything important in a dictionary, a textbook or with a teacher.',
+    ],
+    [
+      'For learning only',
+      'Lingoat is no substitute for a language course or exam preparation. We do not promise learning success, passing an exam or earning a certificate. The assignment to CEFR levels is a guide, not an official placement. Do not use content from the app for contracts, letters to authorities or other important purposes without expert review.',
+    ],
+    [
+      'Liability',
+      'Lingoat is offered free of charge. We are not liable for damage arising from the use of, or reliance on, the content, unless we act intentionally or with gross negligence. Liability for injury to life, body or health, under the Product Liability Act, and in all cases where the law mandatorily provides for liability remains unaffected. The operators of external sites we link to are responsible for their own content.',
+    ],
+    ['Found a mistake?', 'Open “Report a problem” in a game. That is how we can fix it.'],
+  ]),
+};
+
 const NOTICE: Record<'de' | 'en', LegalDoc> = {
   de: doc('Rechtliche Angaben fehlen', [
     [
@@ -148,6 +193,7 @@ const NOTICE: Record<'de' | 'en', LegalDoc> = {
 
 /** The documents for this deployment; a notice instead when the operator details are not configured. */
 export function getLegal(id: LegalId): { de: LegalDoc; en: LegalDoc } {
+  if (id === 'haftungsausschluss') return HAFTUNG;
   const o = operator();
   if (!o.configured) return NOTICE;
   return id === 'impressum'
