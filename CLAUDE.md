@@ -16,6 +16,27 @@ content packs). Read `docs/architecture.md` and `docs/adding-content.md` before 
 - Word photos: only through `scripts/images` (Pixabay, see `docs/images.md`); never commit image files or the
   `PIXABAY_API_KEY`; every word keeps its emoji as fallback (`WordImage`).
 
+## Image credits
+
+Image licensing and credits must always be correct,
+complete and current. Check this on **every** change that touches images, however small: adding photos, replacing
+or removing them, changing `overrides.json`, rerunning `scripts/images`, changing the manifest, the credits page
+(`src/pages/CreditsPage.tsx`), or the legal pages (`src/legal/legal.ts`).
+
+- Every photo in the app must have a manifest entry (`src/content/images/manifest.json`: Pixabay page, author,
+  author id) and so appear on Profile → Image credits. Never ship a photo without its credit, and drop the credit
+  when its photo is removed.
+- Only use sources whose licence allows our use (today: Pixabay Content License, via `scripts/images`). Never add
+  photos from Google Images, other websites or scraped sources, and never copy a licence claim without checking
+  the source's current terms. If a licence is unclear, stop and ask the owner.
+- Respect Pixabay's API terms (`docs/images.md`): no hotlinking, no mass downloads, rate limits.
+- When photos are replaced (wrong photo, `overrides.json`), the manifest entry must change to the new author and
+  page in the same change.
+- Keep the credits text consistent in the credits page, the README ("Image credits") and the Impressum
+  (`src/legal/legal.ts`); update all three if the source or licence changes.
+- Run `src/content/images/images.test.ts` and report anything doubtful about licensing, people in photos or
+  brands in photos to the owner instead of deciding alone.
+
 ## UI design system
 
 `DESIGN/` is the base for all UI design. Read `DESIGN/USAGE.md` and `DESIGN/DESIGN.md` before designing or
