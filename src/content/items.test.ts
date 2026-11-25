@@ -11,3 +11,14 @@ describe('items', () => {
     expect(withItems(a, [])).toMatchObject({ id: 'act-1' });
   });
 });
+
+describe('itemLabel', () => {
+  it('gives every item of every game a non-empty text', async () => {
+    const { itemLabel } = await import('./items');
+    const { default: a11 } = await import('./a1-1');
+    for (const a of a11.activities) {
+      for (const item of getItems(a))
+        expect(itemLabel(a, item).text, `${a.id}::${item.id}`).toBeTruthy();
+    }
+  });
+});

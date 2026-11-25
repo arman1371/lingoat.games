@@ -178,6 +178,44 @@ test.describe('progress and review', () => {
     await expect(page.getByTestId('review-empty')).toBeVisible();
   });
 
+  test('the notebook lists a missed item and "Practise my weak spots" starts a review of it', async ({
+    page,
+  }) => {
+    const quiz = activity('a1-1-hallo-feelings');
+    if (quiz.gameType !== 'quiz') throw new Error('expected quiz');
+    await page.goto(`/play/${quiz.id}?seed=${SEED}`);
+    await page.getByTestId('start').click();
+    const total = quiz.config.questions.length;
+    for (let i = 0; i < total; i++) {
+      await expect(page.getByTestId('counter')).toHaveText(`${i + 1} / ${total}`);
+      const emoji = (await page.getByTestId('emoji').innerText()).trim();
+      const q = quiz.config.questions.find((x) => x.emoji === emoji)!;
+      await page
+        .getByRole('button', {
+          name: i === 0 ? q.options.find((o) => o !== q.answer)! : q.answer,
+          exact: true,
+        })
+        .click();
+      await page.getByTestId('continue').click();
+    }
+
+    await page.goto('/notebook');
+    await expect(page.getByRole('heading', { name: 'Mistake notebook' })).toBeVisible();
+    await expect(page.getByText('×1')).toBeVisible();
+    await page.getByTestId('practise-weak').click();
+    await expect(page.getByText('1 items to review')).toBeVisible();
+    await page.getByTestId('start').click();
+    const emoji = (await page.getByTestId('emoji').innerText()).trim();
+    const q = quiz.config.questions.find((x) => x.emoji === emoji)!;
+    await page.getByRole('button', { name: q.answer, exact: true }).click();
+    await page.getByTestId('continue').click();
+    await expect(page.getByRole('heading', { name: 'Well done!' })).toBeVisible();
+
+    // right answer lowers the score to 0, so the notebook is empty again
+    await page.goto('/notebook');
+    await expect(page.getByTestId('notebook-empty')).toBeVisible();
+  });
+
   test('settings: theme choice is applied and survives a reload; reset clears progress', async ({
     page,
   }) => {

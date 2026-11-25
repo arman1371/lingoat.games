@@ -280,3 +280,20 @@ describe('applyImport', () => {
     expect(applyImport(mine, theirs, 'replace')).toEqual(theirs);
   });
 });
+
+describe('weak scores in transfer', () => {
+  it('merges per key with the larger score and defaults to empty for old files', () => {
+    const merged = mergeProgress(
+      progress({ weak: { a: 1, b: 4 } }),
+      progress({ weak: { a: 3, c: 2 } }),
+    );
+    expect(merged.weak).toEqual({ a: 3, b: 4, c: 2 });
+    const file = buildExport(DEFAULT_SETTINGS, { de: progress({ weak: { a: 2 } }) });
+    const raw = JSON.parse(JSON.stringify(file));
+    const ok = parseImport(JSON.stringify(raw));
+    expect(ok.ok && ok.file.progress.de?.weak).toEqual({ a: 2 });
+    delete raw.progress.de.weak;
+    const old = parseImport(JSON.stringify(raw));
+    expect(old.ok && old.file.progress.de?.weak).toEqual({});
+  });
+});

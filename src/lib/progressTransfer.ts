@@ -48,6 +48,7 @@ const progressSchema = z.object({
       wrongCount: count,
     }),
   ),
+  weak: z.record(id, count).default({}),
   lastActivityId: id.nullable(),
   daily: z.object({ day, xp: count }),
 });
@@ -168,6 +169,11 @@ export function mergeProgress(local: ProgressData, incoming: ProgressData): Prog
     };
   }
 
+  const weak = { ...local.weak };
+  for (const [key, theirs] of Object.entries(incoming.weak)) {
+    weak[key] = Math.max(weak[key] ?? 0, theirs);
+  }
+
   const streak = later(local.streak, incoming.streak);
   const daily =
     incoming.daily.day > local.daily.day
@@ -192,6 +198,7 @@ export function mergeProgress(local: ProgressData, incoming: ProgressData): Prog
     },
     activities,
     mistakes,
+    weak,
     lastActivityId,
     daily,
   };

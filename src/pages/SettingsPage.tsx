@@ -48,6 +48,7 @@ const pickProgress = (p: ProgressData): ProgressData => ({
   streak: p.streak,
   activities: p.activities,
   mistakes: p.mistakes,
+  weak: p.weak,
   lastActivityId: p.lastActivityId,
   daily: p.daily,
 });

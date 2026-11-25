@@ -943,3 +943,25 @@ describe('Daily goal', () => {
     expect(router.state.location.search).toBe('?view=games&type=quiz');
   });
 });
+
+describe('Notebook', () => {
+  it('is empty at first', async () => {
+    renderApp('/notebook');
+    expect(await screen.findByTestId('notebook-empty')).toBeInTheDocument();
+  });
+
+  it('lists weak items and queues them for review', async () => {
+    const quiz = activityById('a1-1-hallo-time-of-day');
+    const first = (quiz.config as { questions: { id: string }[] }).questions[0]!.id;
+    useProgressStore
+      .getState()
+      .recordResult(quiz.id, { correct: 0, total: 1, played: [first], mistakes: [first] });
+    useProgressStore.setState({ mistakes: {} });
+    const { user } = renderApp('/notebook');
+    expect(await screen.findByRole('heading', { name: 'Mistake notebook' })).toBeInTheDocument();
+    expect(screen.getByText('×1')).toBeInTheDocument();
+    await user.click(screen.getByTestId('practise-weak'));
+    expect(await screen.findByText('1 items to review')).toBeInTheDocument();
+    expect(Object.keys(useProgressStore.getState().mistakes)).toEqual([`${quiz.id}::${first}`]);
+  });
+});
