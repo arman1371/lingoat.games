@@ -31,42 +31,69 @@ export function ResultScreen({
 }: Props) {
   const pct = Math.round(accuracy(result) * 100);
   const mood = outcome.stars === 3 ? 'celebrate' : outcome.stars === 2 ? 'happy' : 'thinking';
+  const mistakes = result.mistakes.length;
   return (
     <section
       className="mx-auto flex w-full max-w-md flex-1 flex-col items-center justify-center gap-3 pb-[max(1rem,env(safe-area-inset-bottom))] text-center"
       aria-labelledby="result-title"
     >
       {outcome.stars === 3 ? <Confetti /> : null}
-      {/* shrinks with the screen height so the whole result fits without scrolling */}
-      <Mascot mood={mood} size={160} className="anim-pop h-auto w-[clamp(6rem,18dvh,10rem)]" />
-      <h1 id="result-title" className="font-display text-4xl font-bold text-ink">
-        {t('result.title')}
-      </h1>
-      <p className="text-muted">{title}</p>
-      <Stars count={outcome.stars} size="lg" />
-      <ul className="grid w-full grid-cols-2 gap-3">
-        <li className="flex flex-col items-center gap-1 rounded-2xl bg-xp-soft p-3 text-on-xp-soft">
-          <Icon name="zap" size={24} />
-          <p className="font-display text-2xl font-bold" data-testid="xp-gained">
+      <div className="flex flex-col items-center gap-2">
+        {/* shrinks with the screen height so the whole result fits without scrolling */}
+        <Mascot mood={mood} size={160} className="anim-pop h-auto w-[clamp(5rem,12dvh,10rem)]" />
+        <h1
+          id="result-title"
+          className="font-display text-4xl font-extrabold leading-tight text-balance text-ink"
+        >
+          {t('result.title')}
+        </h1>
+        <p className="font-bold text-ink">{title}</p>
+        <p className="text-balance text-muted">{t(`result.tier${outcome.stars}`)}</p>
+      </div>
+      <Stars count={outcome.stars} size="lg" animate />
+      <ul className="anim-rise w-full divide-y-2 divide-line overflow-hidden rounded-(--radius-lg) border-2 border-line bg-surface text-left shadow-[0_4px_0_var(--edge)]">
+        <li className="flex items-center gap-3 p-2">
+          <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-xp-soft text-on-xp-soft">
+            <Icon name="zap" size={24} />
+          </span>
+          <p
+            className="min-w-0 flex-1 font-display text-2xl font-extrabold text-ink"
+            data-testid="xp-gained"
+          >
             {t('result.xp', { n: outcome.xpGained })}
           </p>
-          {outcome.newBest ? <p className="text-sm font-bold">{t('result.newBest')}</p> : null}
+          {outcome.newBest ? (
+            <span className="rounded-full bg-xp-soft px-3 py-1 text-sm font-bold text-on-xp-soft">
+              {t('result.newBest')}
+            </span>
+          ) : null}
         </li>
-        <li className="flex flex-col items-center gap-1 rounded-2xl bg-success-soft p-3 text-on-success-soft">
-          <Icon name="target" size={24} />
-          <p className="font-display text-2xl font-bold" data-testid="accuracy">
+        <li className="flex items-center gap-3 p-2">
+          <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-success-soft text-on-success-soft">
+            <Icon name="target" size={24} />
+          </span>
+          <p
+            className="min-w-0 flex-1 font-display text-2xl font-extrabold text-ink"
+            data-testid="accuracy"
+          >
             {t('result.accuracy', { n: pct })}
           </p>
-          <p className="text-sm font-medium">
+          <span className="font-display text-lg font-extrabold text-muted tabular-nums">
             {result.correct} / {result.total}
-          </p>
+          </span>
         </li>
       </ul>
-      {result.mistakes.length > 0 ? (
-        <p className="rounded-2xl bg-warning-soft p-3 text-ink" data-testid="mistakes-note">
-          {result.mistakes.length} item{result.mistakes.length === 1 ? '' : 's'} added to your
-          mistake box for later practice.
-        </p>
+      {mistakes > 0 ? (
+        <Link
+          to="/review"
+          data-testid="mistakes-note"
+          className="flex w-full items-center gap-3 rounded-2xl bg-warning-soft px-3 py-2 text-left font-medium text-on-warning-soft hover:bg-warning-soft-border"
+        >
+          <span className="flex-1">
+            {t(mistakes === 1 ? 'result.mistakesOne' : 'result.mistakesMany', { n: mistakes })}
+          </span>
+          <Icon name="chevron-right" size={20} />
+        </Link>
       ) : null}
       <div className="flex w-full flex-col gap-3">
         {nextTo ? (
@@ -76,7 +103,12 @@ export function ResultScreen({
             </Button>
           </Link>
         ) : null}
-        <Button variant="secondary" size="lg" onClick={onReplay} data-testid="replay">
+        <Button
+          variant={nextTo ? 'secondary' : 'primary'}
+          size="lg"
+          onClick={onReplay}
+          data-testid="replay"
+        >
           {t('common.playAgain')}
         </Button>
         <Link to={backTo}>

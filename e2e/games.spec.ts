@@ -57,6 +57,9 @@ test.describe('game engines', () => {
     await expect(page.getByTestId('accuracy')).toHaveText('60% correct');
     await expect(page.getByRole('img', { name: '1 of 3 stars' })).toBeVisible();
     await expect(page.getByTestId('mistakes-note')).toContainText('2 items');
+    // the note leads straight to the mistake box
+    await page.getByTestId('mistakes-note').click();
+    await expect(page).toHaveURL(/\/review$/);
     await page.goto('/review');
     await expect(page.getByTestId('review-count')).toContainText('2 due');
   });
