@@ -529,6 +529,7 @@ describe('Play flow', () => {
     expect(screen.getByTestId('accuracy')).toHaveTextContent('100% correct');
     expect(document.querySelector('[data-mood="celebrate"]')).not.toBeNull();
     expect(screen.getByTestId('next-activity')).toHaveTextContent(next.title);
+    expect(screen.getByText('Brilliant! Goaty is cheering.')).toBeInTheDocument();
     expect(screen.queryByTestId('mistakes-note')).not.toBeInTheDocument();
     const progress = useProgressStore.getState();
     expect(progress.activities[quiz.id]).toMatchObject({ stars: 3, plays: 1 });
@@ -553,7 +554,10 @@ describe('Play flow', () => {
     const { user } = renderApp(`/play/${quiz.id}?seed=2`);
     await user.click(await screen.findByTestId('start'));
     await playQuiz(user, quiz, { correct: false });
-    expect(await screen.findByTestId('mistakes-note')).toHaveTextContent('5 items');
+    const note = await screen.findByTestId('mistakes-note');
+    expect(note).toHaveTextContent('5 items');
+    expect(note).toHaveAttribute('href', '/review');
+    expect(screen.getByText('Every round makes it stick. Try again!')).toBeInTheDocument();
     expect(Object.keys(useProgressStore.getState().mistakes)).toHaveLength(5);
     await user.click(screen.getByTestId('replay'));
     expect(await screen.findByTestId('prompt')).toBeInTheDocument();

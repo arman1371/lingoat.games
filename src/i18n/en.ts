@@ -242,6 +242,11 @@ export const en = {
     backToUnit: 'Back to unit',
     toLibrary: 'More games',
     newBest: 'New best!',
+    tier3: 'Brilliant! Goaty is cheering.',
+    tier2: 'Solid work. One more round for three stars?',
+    tier1: 'Every round makes it stick. Try again!',
+    mistakesOne: '{n} item added to your mistake box for later practice.',
+    mistakesMany: '{n} items added to your mistake box for later practice.',
   },
   memory: {
     label: 'Memory',
