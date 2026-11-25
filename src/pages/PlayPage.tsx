@@ -1,11 +1,9 @@
 import { useProgress } from '@/app/language';
 import { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
-import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
+import { useNavigate, useParams, useSearchParams } from 'react-router';
 import { ReportButton } from '@/components/ReportButton';
 import { WordPhotoIndexContext } from '@/components/WordImage';
-import { Button } from '@/components/ui/Button';
 import { ConfirmDialog } from '@/components/ui/Dialog';
-import { GameTile } from '@/components/ui/GameTile';
 import { IconButton } from '@/components/ui/IconButton';
 import { useFocusOnMount } from '@/games/shared/useFocusOnMount';
 import { useContent } from '@/content/ContentProvider';
@@ -19,7 +17,6 @@ import { ProgressSlotContext } from '@/games/shared/progressSlot';
 import { ReportItemContext } from '@/games/shared/useReportItem';
 import { buildNounIndex, drillsCase } from '@/lib/german/nouns';
 import { buildWordPhotoIndex } from '@/lib/wordPhotos';
-import { FullLessonLink } from '@/components/grammar/FullLessonLink';
 import { lessonForTags } from '@/content/lessons';
 import { playUrl } from '@/app/path';
 import { parseSeed, randomSeed } from '@/lib/rng';
@@ -28,6 +25,7 @@ import { t } from '@/i18n';
 import { preloadImageManifest } from '@/lib/useImageManifest';
 import { type RecordOutcome } from '@/store/progressStore';
 import { NotFoundPage } from './NotFoundPage';
+import { IntroScreen } from './IntroScreen';
 import { ResultScreen } from './ResultScreen';
 
 function dueMistakeIds(
@@ -52,6 +50,7 @@ function PlayView({ activityId }: { activityId: string }) {
   const content = useContent();
   const recordResult = useProgress((s) => s.recordResult);
   const mistakes = useProgress((s) => s.mistakes);
+  const best = useProgress((s) => s.activities[activityId]);
 
   const review = params.get('review') === '1';
   const queue = useMemo(
@@ -166,34 +165,20 @@ function PlayView({ activityId }: { activityId: string }) {
           }}
         />
       ) : !started ? (
-        <section
-          className="mx-auto flex max-w-md flex-col items-center gap-4 py-6 text-center"
-          aria-labelledby="intro-title"
-        >
-          <GameTile type={activity.gameType} size="lg" />
-          <h1 id="intro-title" className="text-3xl font-extrabold text-ink">
-            {activity.title}
-          </h1>
-          <p className="text-muted">{activity.description}</p>
-          <p className="rounded-2xl bg-surface-2 p-3 text-ink">{GAME_HELP[activity.gameType]}</p>
-          <p className="text-sm font-bold text-muted">
-            {getItems(activity).length} {review ? 'items to review' : 'rounds'} · ~
-            {activity.estMinutes} min
-          </p>
-          {lesson ? <FullLessonLink lesson={lesson} intro /> : null}
-          <Button
-            ref={startRef}
-            size="lg"
-            block
-            onClick={() => setStarted(true)}
-            data-testid="start"
-          >
-            {review ? 'Start review' : t('common.start')}
-          </Button>
-          <Link to={backTo} className="text-sm font-bold text-primary">
-            {t('common.back')}
-          </Link>
-        </section>
+        <IntroScreen
+          gameType={activity.gameType}
+          title={activity.title}
+          description={activity.description}
+          help={GAME_HELP[activity.gameType]}
+          items={getItems(activity).length}
+          estMinutes={activity.estMinutes}
+          review={review}
+          bestStars={best?.stars}
+          lesson={lesson}
+          backTo={backTo}
+          startRef={startRef}
+          onStart={() => setStarted(true)}
+        />
       ) : (
         <Suspense
           fallback={

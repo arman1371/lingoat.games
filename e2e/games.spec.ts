@@ -64,6 +64,18 @@ test.describe('game engines', () => {
     await expect(page.getByTestId('review-count')).toContainText('2 due');
   });
 
+  test('the intro shows rounds and time, then your best stars after a run', async ({ page }) => {
+    const id = 'a1-1-hallo-time-of-day';
+    await page.goto(`/play/${id}?seed=${SEED}`);
+    await expect(page.getByText(/^\d+ rounds$/)).toBeVisible();
+    await expect(page.getByText('Best', { exact: true })).toHaveCount(0);
+    await playPerfectly(page, id);
+    await page.goto(`/play/${id}?seed=${SEED}`);
+    await expect(page.getByText('Best', { exact: true })).toBeVisible();
+    await expect(page.getByRole('img', { name: '3 of 3 stars' })).toBeVisible();
+    await expect(page.getByTestId('start')).toBeVisible();
+  });
+
   test('sentence builder: tiles can be removed and dragged to reorder', async ({ page }) => {
     await page.goto(`/play/a1-1-hallo-sentences?seed=${SEED}`);
     await page.getByTestId('start').click();
