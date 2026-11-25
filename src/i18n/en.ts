@@ -205,6 +205,11 @@ export const en = {
     exitBody: 'Your progress in this round will be lost.',
     exitConfirm: 'Leave',
     exitStay: 'Keep playing',
+    rounds: '{n} rounds',
+    reviewItems: '{n} items to review',
+    minutes: '~{n} min',
+    startReview: 'Start review',
+    best: 'Best',
   },
   report: {
     open: 'Report a problem',

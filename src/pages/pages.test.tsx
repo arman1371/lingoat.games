@@ -537,6 +537,22 @@ describe('Play flow', () => {
     expect(screen.getByTestId('xp-gained')).toBeInTheDocument();
   });
 
+  it('shows rounds and time on the intro, and no best stars before a first run', async () => {
+    renderApp(`/play/${quiz.id}?seed=1`);
+    expect(await screen.findByText('5 rounds')).toBeInTheDocument();
+    expect(screen.getByText(/^~\d+ min$/)).toBeInTheDocument();
+    expect(screen.queryByText('Best')).not.toBeInTheDocument();
+  });
+
+  it('shows your best stars on the intro once you have played', async () => {
+    useProgressStore.setState({
+      activities: { [quiz.id]: { stars: 2, bestAccuracy: 0.8, plays: 1, lastPlayed: 1 } },
+    });
+    renderApp(`/play/${quiz.id}?seed=1`);
+    expect(await screen.findByText('Best')).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: '2 of 3 stars' })).toBeInTheDocument();
+  });
+
   it('shows a clean game page without the stats header', async () => {
     const { user } = renderApp(`/play/${quiz.id}?seed=1`);
     await user.click(await screen.findByTestId('start'));
@@ -615,7 +631,8 @@ describe('Review', () => {
     const { user } = renderApp('/review');
     expect(await screen.findByTestId('review-count')).toHaveTextContent('1 due');
     await user.click(screen.getByTestId('start-review'));
-    expect(await screen.findByText('1 items to review · ~2 min')).toBeInTheDocument();
+    expect(await screen.findByText('1 items to review')).toBeInTheDocument();
+    expect(screen.getByText('~2 min')).toBeInTheDocument();
     await user.click(screen.getByTestId('start'));
     const prompt = (await screen.findByTestId('prompt')).textContent;
     const q = (
