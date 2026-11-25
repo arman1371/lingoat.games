@@ -3,11 +3,11 @@ import { speak, ttsSupported } from '@/lib/tts';
 import { useSettingsStore } from '@/store/settingsStore';
 
 /**
- * Speech for games that are not listening games, behind the "Read sentences aloud" setting.
+ * Speech for games that are not listening games, behind the "Read aloud automatically" setting.
  * Each call replaces whatever is still being spoken (`speak` cancels the previous utterance).
  */
 export function useSentenceSpeech() {
-  const enabled = useSettingsStore((s) => s.speakSentences);
+  const enabled = useSettingsStore((s) => s.autoSpeak);
   const rate = useSettingsStore((s) => s.ttsRate);
   return useCallback(
     (text: string | undefined) => {

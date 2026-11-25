@@ -9,9 +9,8 @@ export interface SettingsData {
   theme: ThemeSetting;
   motion: MotionSetting;
   sounds: boolean;
+  /** Speak words and sentences aloud on their own, in every game. */
   autoSpeak: boolean;
-  /** Read the German sentence aloud in games that are not listening games. */
-  speakSentences: boolean;
   ttsRate: number;
   /** XP to earn per day. */
   dailyGoal: number;
@@ -26,7 +25,6 @@ export const DEFAULT_SETTINGS = {
   motion: 'system',
   sounds: true,
   autoSpeak: true,
-  speakSentences: true,
   ttsRate: 0.9,
   dailyGoal: 50,
 } satisfies SettingsData;
@@ -34,14 +32,20 @@ export const DEFAULT_SETTINGS = {
 export const useSettingsStore = create<SettingsState>()(
   persist((set) => ({ ...DEFAULT_SETTINGS, set: (patch) => set(patch) }), {
     name: 'lingoat.settings',
-    version: 1,
+    version: 2,
+    // v1 had a second toggle for sentences; if either was off the player wanted quiet, so stay quiet.
+    migrate: (persisted, version) => {
+      const old = persisted as Partial<SettingsData> & { speakSentences?: boolean };
+      return version < 2
+        ? { ...old, autoSpeak: old.autoSpeak !== false && old.speakSentences !== false }
+        : old;
+    },
     storage: createJSONStorage(() => localRepository),
-    partialize: ({ theme, motion, sounds, autoSpeak, speakSentences, ttsRate, dailyGoal }) => ({
+    partialize: ({ theme, motion, sounds, autoSpeak, ttsRate, dailyGoal }) => ({
       theme,
       motion,
       sounds,
       autoSpeak,
-      speakSentences,
       ttsRate,
       dailyGoal,
     }),

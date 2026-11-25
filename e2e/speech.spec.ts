@@ -57,9 +57,9 @@ test('dialogue speaks the speaker lines as they appear', async ({ page }) => {
   expect((await spoken(page))[0]).toBe(first.kind === 'npc' ? first.text : '');
 });
 
-test('"Read sentences aloud" can be switched off in settings and stays off', async ({ page }) => {
+test('"Read aloud automatically" can be switched off in settings and stays off', async ({ page }) => {
   await page.goto('/settings');
-  const toggle = page.getByRole('switch', { name: 'Read sentences aloud' });
+  const toggle = page.getByRole('switch', { name: 'Read aloud automatically' });
   await expect(toggle).toBeChecked();
   await toggle.uncheck();
   await page.reload();

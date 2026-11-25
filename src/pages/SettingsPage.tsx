@@ -162,14 +162,10 @@ export function SettingsPage() {
           onChange={(sounds) => s.set({ sounds })}
         />
         <Toggle
-          label={t('settings.autoSpeak', { language: languageMeta.name })}
+          label={t('settings.autoSpeak')}
+          hint={t('settings.autoSpeakHint', { language: languageMeta.name })}
           checked={s.autoSpeak}
           onChange={(autoSpeak) => s.set({ autoSpeak })}
-        />
-        <Toggle
-          label={t('settings.speakSentences')}
-          checked={s.speakSentences}
-          onChange={(speakSentences) => s.set({ speakSentences })}
         />
         <div className="flex flex-col gap-2">
           <label htmlFor="rate" className="font-extrabold text-ink">

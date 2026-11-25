@@ -222,8 +222,8 @@ describe('sentence speech', () => {
     expect(speech.synth.cancel).toHaveBeenCalledTimes(2); // each utterance replaces the previous
   });
 
-  it('stays quiet when the setting is off, whatever auto-speak says', () => {
-    useSettingsStore.setState({ speakSentences: false, autoSpeak: true });
+  it('stays quiet when the setting is off', () => {
+    useSettingsStore.setState({ autoSpeak: false });
     renderHook(() => useSpeakSentence('Hallo'));
     const { result } = renderHook(() => useSentenceSpeech());
     result.current('Tschüss');

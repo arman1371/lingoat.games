@@ -81,6 +81,6 @@ describe('French first visit and per-language data', () => {
 
   it('says which language the speech sample and the auto-speak setting are for', async () => {
     renderApp('/fr/profile');
-    expect(await screen.findByLabelText('Speak French automatically')).toBeInTheDocument();
+    expect(await screen.findByLabelText(/Read aloud automatically.*French/)).toBeInTheDocument();
   });
 });
