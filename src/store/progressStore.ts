@@ -35,6 +35,11 @@ export interface ProgressData {
   streak: Streak;
   activities: Record<string, ActivityProgress>;
   mistakes: Record<string, Mistake>;
+  /**
+   * Notebook score per `activityId::itemId`: +1 per wrong answer, -1 per later right answer, removed at 0.
+   * Unlike `mistakes` it survives graduation, so "what do I get wrong most" keeps its history.
+   */
+  weak: Record<string, number>;
   lastActivityId: string | null;
   /** XP earned on `day`; starts over on the next day. */
   daily: DailyXp;
@@ -47,6 +52,8 @@ interface ProgressActions {
     result: GameResult,
     options?: { mode?: 'play' | 'review'; today?: number },
   ) => RecordOutcome;
+  /** Puts the given notebook items back into box 1 of the mistake box, due today. */
+  queueWeakSpots: (keys: readonly string[], today?: number) => void;
   reset: () => void;
 }
 
@@ -57,6 +64,7 @@ export const initialProgress = (): ProgressData => ({
   streak: { current: 0, longest: 0, lastDay: null },
   activities: {},
   mistakes: {},
+  weak: {},
   lastActivityId: null,
   daily: { day: 0, xp: 0 },
 });
@@ -90,9 +98,13 @@ const createProgressStore = (storageKey: string) =>
           const xpGained = xpFor(result);
 
           const mistakes = { ...state.mistakes };
+          const weak = { ...state.weak };
           for (const itemId of result.played) {
             const key = mistakeKey(activityId, itemId);
             const wrong = result.mistakes.includes(itemId);
+            const score = (weak[key] ?? 0) + (wrong ? 1 : -1);
+            if (score > 0) weak[key] = score;
+            else delete weak[key];
             const existing = mistakes[key];
             if (existing) {
               const updated = reviewMistake(existing, !wrong, today);
@@ -122,25 +134,48 @@ const createProgressStore = (storageKey: string) =>
             streak: nextStreak(state.streak, today),
             activities,
             mistakes,
+            weak,
             lastActivityId: mode === 'play' ? activityId : state.lastActivityId,
           });
           return { xpGained, stars, firstCompletion: mode === 'play' && !prev, newBest };
+        },
+        queueWeakSpots: (keys, today = dayNumber()) => {
+          const mistakes = { ...get().mistakes };
+          for (const key of keys) {
+            const [activityId, itemId] = key.split('::');
+            if (!activityId || !itemId) continue;
+            mistakes[key] = {
+              ...addMistake(mistakes[key], activityId, itemId, today),
+              wrongCount: mistakes[key]?.wrongCount ?? 1,
+            };
+          }
+          set({ mistakes });
         },
         reset: () => set(initialProgress()),
       }),
       {
         name: storageKey,
-        version: 1,
+        version: 2,
         storage: createJSONStorage(() => localRepository),
-        partialize: ({ xp, streak, activities, mistakes, lastActivityId, daily }) => ({
+        partialize: ({ xp, streak, activities, mistakes, weak, lastActivityId, daily }) => ({
           xp,
           streak,
           activities,
           mistakes,
+          weak,
           lastActivityId,
           daily,
         }),
-        migrate: (persisted) => ({ ...initialProgress(), ...(persisted as Partial<ProgressData>) }),
+        migrate: (persisted) => {
+          const data = { ...initialProgress(), ...(persisted as Partial<ProgressData>) };
+          // v1 had no notebook: start it from the counts the mistake box still holds
+          if (Object.keys(data.weak).length === 0) {
+            data.weak = Object.fromEntries(
+              Object.values(data.mistakes).map((m) => [m.key, Math.max(1, m.wrongCount)]),
+            );
+          }
+          return data;
+        },
       },
     ),
   );

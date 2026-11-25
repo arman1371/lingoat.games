@@ -98,6 +98,19 @@ export const en = {
     allDone: 'Review complete',
     emptyTitle: 'All caught up',
   },
+  notebook: {
+    title: 'Mistake notebook',
+    intro: 'The words and grammar points you miss most, worst first.',
+    emptyTitle: 'Nothing noted yet',
+    empty: 'Wrong answers land here. Play a few games and come back.',
+    practise: 'Practise my weak spots ({n})',
+    view: 'Notebook view',
+    words: 'Words ({n})',
+    grammar: 'Grammar ({n})',
+    wordsList: 'Weak words',
+    grammarList: 'Weak grammar points',
+    open: 'Open notebook',
+  },
   dailyGoal: {
     title: 'Daily goal',
     collected: '{xp} of {goal} XP collected',
@@ -152,6 +165,8 @@ export const en = {
     levels: 'Levels',
     review: 'Mistake box',
     reviewHint: '{n} items waiting',
+    notebook: 'Mistake notebook',
+    notebookHint: 'Your weak spots',
   },
   settings: {
     title: 'Settings',

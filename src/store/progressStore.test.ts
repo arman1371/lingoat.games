@@ -83,7 +83,7 @@ describe('progressStore', () => {
     useProgressStore.getState().recordResult('act', res(), { today: 1 });
     const raw = JSON.parse(localStorage.getItem('lingoat.progress')!);
     expect(raw.state.activities.act.stars).toBe(2);
-    expect(raw.version).toBe(1);
+    expect(raw.version).toBe(2);
     useProgressStore.getState().reset();
     expect(useProgressStore.getState().xp).toBe(0);
   });
@@ -122,7 +122,13 @@ describe('progress per language', () => {
     expect(fr.xp).toBeGreaterThan(0);
     expect(Object.keys(fr.mistakes)).toEqual(['fr-a1-1-x::d']);
     const de = useProgressStore.getState();
-    expect(de).toMatchObject({ xp: 0, activities: {}, mistakes: {}, lastActivityId: null });
+    expect(de).toMatchObject({
+      xp: 0,
+      activities: {},
+      mistakes: {},
+      weak: {},
+      lastActivityId: null,
+    });
     expect(de.streak.current).toBe(0);
   });
 
@@ -130,5 +136,27 @@ describe('progress per language', () => {
     getProgressStore('fr').getState().recordResult('fr-a1-1-x', res(), { today: 100 });
     expect(localStorage.getItem('lingoat.progress.fr')).toContain('fr-a1-1-x');
     expect(localStorage.getItem('lingoat.progress') ?? '').not.toContain('fr-a1-1-x');
+  });
+
+  it('scores weak items: +1 per wrong answer, -1 per right one, gone at 0', () => {
+    const { recordResult } = useProgressStore.getState();
+    recordResult('act', res(), { today: 1 });
+    recordResult('act', res({ played: ['d'], mistakes: ['d'] }), { today: 1 });
+    expect(useProgressStore.getState().weak).toEqual({ 'act::d': 2 });
+    recordResult('act', res({ played: ['d'], mistakes: [] }), { today: 2 });
+    expect(useProgressStore.getState().weak['act::d']).toBe(1);
+    recordResult('act', res({ played: ['d'], mistakes: [] }), { today: 3 });
+    expect(useProgressStore.getState().weak).toEqual({});
+  });
+
+  it('queues weak items back into box 1, due today', () => {
+    const s = useProgressStore.getState();
+    s.recordResult('act', res(), { today: 1 });
+    for (const day of [2, 5, 9])
+      s.recordResult('act', res({ played: ['d'], mistakes: [] }), { today: day });
+    expect(useProgressStore.getState().mistakes).toEqual({});
+    s.queueWeakSpots(['act::d', 'bad-key'], 20);
+    expect(useProgressStore.getState().mistakes['act::d']).toMatchObject({ box: 1, lastSeen: 20 });
+    expect(Object.keys(useProgressStore.getState().mistakes)).toEqual(['act::d']);
   });
 });

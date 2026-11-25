@@ -102,6 +102,13 @@ export function ProgressPage() {
           </span>
         </Card>
       </Link>
+
+      <Link to="/notebook" className="block">
+        <Card interactive className="flex items-center justify-between gap-3">
+          <span className="font-semibold text-ink">{t('progressPage.notebook')}</span>
+          <span className="text-sm font-bold text-muted">{t('progressPage.notebookHint')}</span>
+        </Card>
+      </Link>
     </div>
   );
 }

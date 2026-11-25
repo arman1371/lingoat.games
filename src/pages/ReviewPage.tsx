@@ -27,6 +27,9 @@ export function ReviewPage() {
       <header>
         <h1 className="font-display text-3xl font-bold text-ink">{t('review.title')}</h1>
         <p className="text-muted">{t('review.intro')}</p>
+        <Link to="/notebook" className="font-bold text-primary underline">
+          {t('notebook.open')}
+        </Link>
       </header>
 
       {due.length === 0 ? (

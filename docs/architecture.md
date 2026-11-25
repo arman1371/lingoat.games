@@ -78,6 +78,7 @@ Sequential engines use `useSequence` (shuffle, first-try verdicts, finish) and `
 Memory is a two-column matching board: words on the left, matches on the right, each column shuffled on its own
 (`buildColumns`); tap one card on each side to pair them. A wrong pair stays marked (with the usual `MistakeHint`) until the next tap.
 Every item has a stable `id`; that id is what the mistake box stores.
+  `weak` in the progress store keeps a lifetime score per item (+1 wrong, -1 right, gone at 0); `/notebook` splits it into words and grammar points and its button queues the worst items back into box 1.
 
 Noun article: gap fill and quiz gaps whose answer depends on a noun's article (`den`, `einem`, `zum`, an adjective
 ending, a relative pronoun) show a "The noun" row in the feedback (`NounArticle`, same sheet for right and wrong). PlayPage

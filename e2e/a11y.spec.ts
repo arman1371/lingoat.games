@@ -288,6 +288,7 @@ const PAGES: [string, string, string][] = [
   ['library games tab', '/library?view=games', 'Library'],
   ['library with level filter', '/library?view=games&lvl=a1-2', 'Library'],
   ['review', '/review', 'Mistake box'],
+  ['notebook', '/notebook', 'Mistake notebook'],
   ['profile', '/profile', 'Profile'],
   ['progress', '/progress', 'Progress'],
   ['play intro', '/play/a1-1-hallo-time-of-day?seed=1', 'Greeting for the time of day'],
