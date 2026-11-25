@@ -2555,7 +2555,7 @@
       "file_type": "code",
       "norm_label": "strings",
       "source_file": "src/i18n/en.ts",
-      "source_location": "L260"
+      "source_location": "L265"
     },
     {
       "id": "src_i18n_index_leaves",
@@ -213136,7 +213136,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/i18n/en.ts",
-      "source_location": "L260",
+      "source_location": "L265",
       "weight": 1.0
     },
     {
@@ -219812,7 +219812,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "e2e/games.spec.ts",
-      "source_location": "L92",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -220832,7 +220832,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "src/pages/pages.test.tsx",
-      "source_location": "L916",
+      "source_location": "L920",
       "weight": 1.0
     },
     {
@@ -222181,5 +222181,5 @@
       "source_file": "docs/adding-content.md"
     }
   ],
-  "built_at_commit": "b94fe24ec1689becf8088f6b640d67058dbba5f5"
+  "built_at_commit": "52c5cab8e4ac5d78d6e66afd1b7a96c884db3125"
 }
