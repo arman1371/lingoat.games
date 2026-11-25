@@ -29,7 +29,7 @@ not support a second language yet (see [Roadmap](#roadmap)).
 | **C2.1** |     9 |   122 | nuance and style, work, economy, digital life, AI, medicine, media, debate   |
 | **C2.2** |     9 |   134 | art, literature, heritage, law, politics, civil society, climate, nuance     |
 
-Unit lists are researched from course books, Goethe exam documents and the CEFR rather than invented; see
+Unit lists are researched from course books and the CEFR rather than invented; see
 [docs/a2-2-coverage.md](docs/a2-2-coverage.md), [docs/b1-1-coverage.md](docs/b1-1-coverage.md),
 [docs/b1-2-coverage.md](docs/b1-2-coverage.md), [docs/b2-1-coverage.md](docs/b2-1-coverage.md), [docs/b2-2-coverage.md](docs/b2-2-coverage.md),
 [docs/c1-1-coverage.md](docs/c1-1-coverage.md), [docs/c1-2-coverage.md](docs/c1-2-coverage.md), [docs/c2-1-coverage.md](docs/c2-1-coverage.md) and [docs/c2-2-coverage.md](docs/c2-2-coverage.md).

@@ -14,9 +14,9 @@ route prefix `/fr`; speech voice `fr-FR`. The French content has **not yet been 
 | [Université Paris Cité, LANSAD – Grammaire B1][paris]                              | A B1 grammar syllabus: past tenses, pronouns, the conditional, negation, simple relative pronouns, hypothesis with si, first subjunctive. Used to check the grammar order.                                                                                                                                                                                    |
 | [Wikipédia: Futur simple][futur]                                                   | Endings, irregular stems and spelling of the simple future (unit 1 lesson).                                                                                                                                                                                                                                                                                   |
 
-Not read: the Didier table of contents of Édito B1 (only the Leeds outline of it), the official DELF B1 description of
-France Éducation international (bot-blocked in earlier sessions; not retried), and the Basel B1.2 outline (title only).
-Before release, check the unit list against the DELF B1 exam description.
+Not read: the Didier table of contents of Édito B1 (only the Leeds outline of it), the official B1 exam description
+(bot-blocked in earlier sessions; not retried), and the Basel B1.2 outline (title only).
+Before release, check the unit list against the B1 exam description.
 
 [basel]: https://sprachenzentrum.unibas.ch/en/angebot/einstufung/franzoesisch/french-course-program-overview
 [leeds]: https://afleeds.org.uk/s/B1-curriculum.pdf
@@ -78,6 +78,6 @@ the unit files because the passé simple is only taught for recognition.
 ## Open points
 
 - The French content has not been reviewed by a native speaker.
-- The unit list was compared with the Édito B1 outline from Leeds, not with the official DELF B1 description.
+- The unit list was compared with the Édito B1 outline from Leeds, not with the official B1 exam description.
 - The grammar lessons are written from the SUL and Paris Cité syllabi and standard textbook teaching; the Wikipedia pages
   they cite are linked as further reading and were checked to exist, not read in full (see `docs/grammar-sources.md`).

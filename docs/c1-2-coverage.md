@@ -1,7 +1,7 @@
 # C1.2 – syllabus research, coverage and overlap with A1.1–B1.1
 
 C1.2 is the second half of the C1 syllabus. It was built from the second halves of C1 course books and from
-university C1.2 syllabi, checked against the CEFR C1 descriptors and the structure of the Goethe-Zertifikat C1.
+university C1.2 syllabi, checked against the CEFR C1 descriptors.
 The rule from A2.2 and B1.1 still applies: **teach what is new, extend what an earlier unit started, and only
 review – inside new activities, never as a stand-alone unit – what is already taught.**
 `src/content/c1-2/content.test.ts` enforces the vocabulary side: no word card in C1.2 repeats a word card of any
@@ -24,11 +24,10 @@ Unit ids: `c1-2-finanzen`, `-gesundheit`, `-recht`, `-psychologie`, `-stadt`, `-
 | [Ziel C1 Band 1, Hueber – Kursbuch Lektion 1–6][zielc1b1]                                               | Cross-check for intercultural communication and etiquette (L1, L2), working time and generations (L6), sustainable tourism and quantity expressions (L5), statistics and graphs (L4), present participle and genitive prepositions in written language (L6)                                                                         |
 | University C1.2 syllabi: [unibz][unibz], [Freiburg][freiburg], [Offenburg][offenburg], [Deggendorf][th] | Independent confirmation of the second-half topics (finance, international business, research and technology, psychology, literature, city and village, teamwork, health, nutrition, chemicals in agriculture) and of the grammar list (Verbal- vs Nominalstil, Passiversatz, Partizipialsätze, Satzstellung)                       |
 | [Bard College Berlin, Deutsch C1 on Aspekte neu][bard]                                                  | Chapter-by-chapter grammar of Aspekte neu C1, including the second half                                                                                                                                                                                                                                                             |
-| [Goethe-Zertifikat C1 – Durchführungsbestimmungen][goethe]                                              | Four modules; speaking = a short presentation plus a joint discussion of a controversial topic (the basis of unit 12)                                                                                                                                                                                                               |
 | [CEFR global scale, Council of Europe][cefr]                                                            | C1: understand demanding, longer texts and implicit meaning; express oneself fluently; use language flexibly for social, academic and professional purposes; produce clear, well-structured, detailed text with controlled use of connectors and cohesive devices                                                                   |
 
 Not retrievable online, so **not used**: the table of contents of Mittelpunkt neu C1 (Klett only confirms that the
-second volume is Lektion 7–12), the Goethe-Zertifikat C1 word list and the Profile Deutsch database.
+second volume is Lektion 7–12), the official C1 word list and the Profile Deutsch database.
 
 [sicher]: https://edit.hueber.de/media/36/978-3-19-701208-7_KB_Inhalt.pdf
 [aspekte]: https://www.klett-sprachen.de/downloads/8992/lehrbuch-inhaltsverzeichnis-aspekte-neu-c1/pdf
@@ -40,7 +39,6 @@ second volume is Lektion 7–12), the Goethe-Zertifikat C1 word list and the Pro
 [offenburg]: https://www.hs-offenburg.de/fileadmin/Einrichtungen/sprachenzentrum/20210930_Syllabus_C1.2._Astrid_Listner_korr.pdf
 [th]: https://www.cs-mariakirchen.th-deg.de/Studierende/AWP-Sprachkurse/kurbeschreibungen-daf/de_c1__3_4.pdf
 [bard]: https://www.bard.edu/wwwmedia/files/5077995/2/German%20Studies%20Curriculum%20Niveaustufen%20Uebersicht%20Spring%202021.pdf
-[goethe]: https://www.goethe.de/pro/relaunch/prf/ar/Durchfuehrungsbestimmungen_C1_neu.pdf
 [cefr]: https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale
 
 Several syllabi simply follow Sicher! or Kompass, so they confirm a topic but are not counted as an independent
@@ -65,7 +63,7 @@ is what those sources attach to the topic, minus anything A1.1–B1.1 already te
 | 9 Forschung & Technik          | L12         | –              | L4, L6, L7     | –        | Freiburg, Deggendorf                |
 | 10 Teamarbeit & Konflikte      | –           | K3             | L5             | B1 L6    | unibz (teamwork)                    |
 | 11 Landwirtschaft & Nachhalt.  | –           | –              | L7, L10        | B1 L5    | unibz (chemicals in agriculture)    |
-| 12 Vortrag, Diskussion, Moder. | –           | Strategies     | Moderation     | B2 L8–11 | Goethe C1 speaking                  |
+| 12 Vortrag, Diskussion, Moder. | –           | Strategies     | Moderation     | B2 L8–11 | –                                   |
 
 Left out because only one source teaches them: **Erinnerung und Gedächtnis** (Aspekte neu K10), **Tierintelligenz**
 (Kompass L9) and **Zeit und Beschleunigung** (Ziel C1 Band 1 L6). Spenden und Ehrenamt (Aspekte neu K5) and the

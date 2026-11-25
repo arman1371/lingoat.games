@@ -13,11 +13,11 @@ speaker**. Follow `docs/fr-a1-1-coverage.md` for the conventions that all French
 | [Universität Basel, Sprachenzentrum, French course overview][basel]              | Confirms the split: French B1.1 uses _Édito B1_ chapters 1 to 6, B1.2 chapters 7 to 12. This is why B1.1 follows units 1 to 6.                                                                                                                                                                                                                                                                     |
 | [LMU Sprachenzentrum, "Inhalte B1 (u. 1 – u. 3)" from _Saison 3_ (Didier)][lmu]  | A second course book for the first half of B1: Prendre le temps · Apprendre autrement · Développer son esprit critique, with communication, grammar (but, souhait, pronoms possessifs, relative pronouns, past participle, passive, conditional of uncertainty) and vocabulary fields.                                                                                                             |
 | [Aix-Marseille Université, SUL – Référentiel des niveaux de langue A1 à B2][sul] | The B1 descriptor (CECRL 2001), the communicative aims (advise, describe people, narrate, express feelings, hypotheses, argue, report), vocabulary themes and the language objectives (subjunctive, tenses of the past, pronouns, relative pronouns, negation, passive, reported speech).                                                                                                          |
-| [Hueber, _Alter Ego 3_ Guide pédagogique, sommaire and introduction][ae3]        | Confirms the shape of a B1 course: nine dossiers, around 120 hours, preparing for the DELF B1. The dossier titles themselves were not in the pages that could be read.                                                                                                                                                                                                                             |
+| [Hueber, _Alter Ego 3_ Guide pédagogique, sommaire and introduction][ae3]        | Confirms the shape of a B1 course: nine dossiers, around 120 hours, preparing for the B1 exam. The dossier titles themselves were not in the pages that could be read.                                                                                                                                                                                                                             |
 
-**Could not be read:** the official DELF B1 description of France Éducation international (the site blocks automated
+**Could not be read:** the official B1 exam description (the site blocks automated
 access, error ERR-BOT-403), the full table of contents of _Édito B1_ from the publisher, and the dossier titles of
-_Alter Ego 3_. Before release, check the unit list against the DELF B1 exam description.
+_Alter Ego 3_. Before release, check the unit list against the B1 exam description.
 
 [leeds]: https://static1.squarespace.com/static/56d0b039d51cd4e1cdf931e7/t/62f2b158418c771af433efd6/1660072286819/B1+curriculum.pdf
 [basel]: https://sprachenzentrum.unibas.ch/en/angebot/einstufung/franzoesisch/french-course-program-overview
@@ -75,5 +75,5 @@ French grammar rather than from a fetched page, and have **not been confirmed ag
 - the position of adjectives and the BAGS list (the adjective page confirms that position varies);
 - agreement of the participle after `avoir` with an object placed before (the participle page confirms the principle).
 
-The official DELF B1 description, the full table of contents of _Édito B1_ and the _Alter Ego 3_ dossier titles could
+The official B1 exam description, the full table of contents of _Édito B1_ and the _Alter Ego 3_ dossier titles could
 not be read. The French content has not been reviewed by a native speaker.

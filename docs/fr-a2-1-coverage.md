@@ -16,7 +16,7 @@ and mini lessons are prefixed `fr-a21-` so they cannot clash with the ones of th
 | [Aix-Marseille Université, SUL – Référentiel des niveaux de langue A1 à B2][sul]                      | The A2 descriptor (CECRL 2001, p. 25), the communicative aims (life path, past and future, comparing, advice, description), the vocabulary themes (activities, arts, food, people, clothes, health, housing, education, work, computing) and the language objectives (passé composé, imparfait, futur simple, negatives, time markers, comparison, relatives, pronouns). |
 | [Università di Bolzano, Français A2.1 syllabus (Prêt-à-parler 2)][unibz]                              | A second, independent A2.1 course outline: daily routine, neighbourhood, school memories, appearance and personality, health, shopping, education. Confirms the passé composé / imparfait / comparative / `en` / direct-object-pronoun core of A2.1.                                                                                                                     |
 
-The official DELF A2 pages of France Éducation international (and the FEI page for DELF A2 specifically) could not be
+The official A2 exam pages could not be
 opened from the build environment (they answer "Accès refusé" to automated requests), so they are **not** used as a
 source yet. Before release, check the unit list against the exam description.
 
@@ -61,4 +61,4 @@ cards use other words (_la nostalgie_, _svelte_, _réservé_, _rigolo_, _le plat
 
 **Sources for units 3 to 8:** the same three course outlines (LMU / Édito A2 units 2 to 6, SUL référentiel, unibz). The
 Édito unit "Tous pareils, tous différents" gives unit 5, "En route vers le futur !" unit 6 and "En cuisine" unit 7; unit 8 comes from the SUL education
-theme and the unibz "school memories" topic. As for units 1 and 2, the DELF pages could not be read.
+theme and the unibz "school memories" topic. As for units 1 and 2, the official exam pages could not be read.

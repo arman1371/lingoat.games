@@ -10,8 +10,7 @@ mini lessons start with `fr-c21-`.
 
 ## What the research could and could not find
 
-C2 is thinly documented, for French as for German. The official DELF/DALF pages of France Éducation international (DALF C2
-description, candidate manual) answered **403 / access denied** from the build environment and could not be read. The
+C2 is thinly documented, for French as for German. The official C2 exam pages (description, candidate manual) answered **403 / access denied** from the build environment and could not be read. The
 Riba / Beacco reference book _Niveaux C1/C2 pour le français_ (Didier 2016) is only known from catalogue entries; its thesis
 version on HAL was blocked too. No C2 course book (Édito C1, Grammaire progressive perfectionnement) publishes its table of
 contents in a readable form. The unit list therefore rests on the university course descriptions below, which are the best

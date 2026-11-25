@@ -11,16 +11,14 @@ built in two steps: level plumbing and unit 1 first (PR #103), then units 2 to 6
 | Source                                                                                                | What it contributes                                                                                                                                                                                                                                                           |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [LMU Sprachenzentrum, "Français A 2.2 – Table des matières d'après le manuel Édito A2 (Didier)"][lmu] | The model for the unit list: Édito A2 units 7 to 12 (À votre santé !, Dans les médias, Consommer responsable, Envie d'ailleurs ?, De jolis parcours, Soif de nature), each with communicative goals, grammar and vocabulary fields. Its A2.1 counterpart covers units 1 to 6. |
-| [France Éducation international, DELF tout public niveau A2][delf]                                    | Exam format and the CEFR scale statements for A2 (short texts on concrete topics, simple connected sentences with "et", "mais", "parce que", written messages of 60 words).                                                                                                   |
 | [Aix-Marseille Université, SUL – Référentiel des niveaux de langue A1 à B2][sul]                      | The A2 communicative aims, vocabulary themes and language objectives (interrogation, présent by verb bases, imparfait and passé composé in narration, relative pronouns, COD / COI, negation, adverbs, noun complements, cause, consequence and purpose).                     |
 | Université de Bâle, Sprachenzentrum, French course overview                                           | Confirms the split: A2.2 follows Édito A2, chapters 7 to 12.                                                                                                                                                                                                                  |
 
-The DELF page, which was bot-blocked when A1.1 was written, could be read this time. The Édito A2 book itself (and its
+The Édito A2 book itself (and its
 guide pédagogique) could not be read; the unit list comes from the LMU table of contents. Before release, compare the
-units with the DELF A2 sample papers.
+units with the A2 exam sample papers.
 
 [lmu]: https://cms-cdn.lmu.de/media/50-zentren/sprachenzentrum/downloads/kursinhalte-franzoesisch-a2.2-neu.pdf
-[delf]: https://www.france-education-international.fr/diplome/delf-tout-public/niveau-a2
 [sul]: https://www.univ-amu.fr/system/files/media-ressource/SUL_R%C3%A9f%C3%A9rentiel%20des%20niveaux%20de%20langue%20A1%20%C3%A0%20B2.pdf
 
 ## Units

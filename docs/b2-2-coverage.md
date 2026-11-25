@@ -1,7 +1,7 @@
 # B2.2 – syllabus research, coverage and overlap with A1.1–B2.1
 
 B2.2 was built from the second half of the B2 syllabus of the course books and university B2.2 syllabi listed below, checked
-against the Goethe-Zertifikat B2 model test and the CEFR B2 descriptor. The rule from A2.2 to B1.2 still applies: **teach what
+against the CEFR B2 descriptor. The rule from A2.2 to B1.2 still applies: **teach what
 is new, extend what an earlier unit started, and only review – inside new activities, never as a stand-alone unit – what is
 already taught.** `src/content/b2-2/content.test.ts` enforces the vocabulary side: no word card in B2.2 repeats a word card of
 A1.1–B2.1 (or another B2.2 unit).
@@ -20,7 +20,6 @@ Unit ids: `b2-2-beziehungen`, `-ernaehrung`, `-studium`, `-service`, `-gesundhei
 | [Vielfalt B2.2, Hueber – Stoffverteilungsplan][vielfalt] (Lektion 13–24)                                                  | 13 Mobilität (Adjektive mit Präposition, Relativsätze mit _wer_) · 14 Grün in der Stadt (lokale Präpositionen, Nominalisierung) · 15 Lärm (konzessive Zusammenhänge) · 16 Analphabetismus (_sollen_ / _wollen_, subjektive Modalverben) · 18 Diversität (_wo(r)_-Zusammensetzungen) · 19 Entscheidungsvielfalt (_irgend_-Wörter) · 20 Entscheidungen unter Druck (_es_) · 21 Widerstand (Perfekt mit Ersatzinfinitiv) · 22 Spielen (erweiterte Partizipien) · 23 Ghostwriting (Konjunktiv I und II, Recht und Kriminalität) · 24 Die goldenen Zwanziger (Passiv, subjektlose Passivsätze)                                                                                                   |
 | [Aspekte neu B2 Teil 2 (B2.2), Klett – course contents][aspekte]                                                          | Only the chapter titles could be retrieved: 6 Fit für … · 7 Kulturwelten · 8 Das macht(e) Geschichte · 9 Mit viel Gefühl · 10 Ein Blick in die Zukunft. Used as a second source for the sport / health, culture and history units, **not** for grammar                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | University B2.2 syllabi: [Freiburg][freiburg], [unibz B2.2a][unibza], [unibz B2.2b][unibzb], [Schmalkalden][schmalkalden] | Freiburg: relationships, nutrition, university, services, health, languages; nouns with prepositions, indirect speech, comparative clauses, subjective _sollen_, conditional / concessive / consecutive relations, noun-verb combinations. unibz B2.2a (Kompass DaF B2): nutrition and food waste, sport and fitness, health insurance; Konjunktiv I, _laut_, modal verbs for assumptions, modal clauses. Schmalkalden: waste and sustainability, working models, economy and globalisation, e-mobility; nominalisation, indirect speech, _wer_-clauses. unibz B2.2b (Spektrum Deutsch B2): wishes, dream jobs, nature, leisure, digitalisation, media; stative passive, noun + preposition |
-| [Goethe-Zertifikat B2 – model test][goethe]                                                                               | Reading: minimalism forum, history of tourism, health information on the internet, digital nomads, a university study regulation · Listening: future diets, alternative housing, work techniques (distractions, multitasking, time pressure) · Writing: plastic packaging forum post, a message to a supervisor about too much work · Speaking: presentation and discussion of a current topic                                                                                                                                                                                                                                                                                              |
 | [CEFR global scale][cefr]                                                                                                 | B2: understand the main ideas of complex texts, interact fluently and spontaneously, explain a viewpoint on a topical issue giving advantages and disadvantages of various options – the basis of the argue / weigh up / concede tasks in every unit                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 [sicher]: https://legacy.hueber.de/shared/elka/Internet_Inhaltsverz/Red1/9783196212075_Inhalt.pdf
@@ -32,7 +31,6 @@ Unit ids: `b2-2-beziehungen`, `-ernaehrung`, `-studium`, `-service`, `-gesundhei
 [unibza]: https://guide.unibz.it/assets/languages/language-courses/syllabi-single-modules/Syllabi-Deutsch/Syllabus_Deutsch-B2.2a_v2.pdf
 [unibzb]: https://guide.unibz.it/assets/languages/language-courses/sillabi/Syll_DE-B2.2b-2022-10-03.pdf
 [schmalkalden]: https://www.hs-schmalkalden.de/fileadmin/portal/International/A1_IO_General/IO_General_Syllabi/Syllabi/Syllabi_WS_25_26/IO/Syllabus_Deutsch_als_Fremdsprache_B2.2_Jesus_Romero.pdf
-[goethe]: https://www.goethe.de/pro/relaunch/prf/materialien/B2/b2_modellsatz_erwachsene.pdf
 [cefr]: https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale
 
 Limits of the research:
@@ -50,20 +48,20 @@ Limits of the research:
 A topic became a unit when at least two of the sources above teach it; the grammar of a unit is what those sources attach to the
 topic, minus anything A1.1–B1.2 already teach. B2.1 was built in parallel from the same books, so B2.2 shares some grammar with it (see below).
 
-| Unit                                 | Sicher! B2.2 | Kontext B2.2      | Vielfalt B2.2      | Aspekte neu B2.2               | University syllabi    | Goethe B2 model test          |
-| ------------------------------------ | ------------ | ----------------- | ------------------ | ------------------------------ | --------------------- | ----------------------------- |
-| 1 Beziehungen & Vielfalt             | L7           | K8                | L18                | –                              | Freiburg              | –                             |
-| 2 Ernährung & Lebensmittel           | L8           | –                 | –                  | –                              | Freiburg, unibz B2.2a | Hören 2                       |
-| 3 Studium & Bildung                  | L9           | K7 (M3, M4)       | –                  | –                              | Freiburg              | Lesen 5                       |
-| 4 Service & Beschwerden              | L10          | K9 (M2)           | –                  | –                              | Freiburg              | –                             |
-| 5 Gesundheit & Fitness               | L11          | –                 | –                  | K6 (Fit für)                   | Freiburg, unibz B2.2a | Lesen 3                       |
-| 6 Sprache & Regionen                 | L12          | K7 (M1)           | L16, L22           | –                              | Freiburg              | –                             |
-| 7 Wirtschaft, Tourismus & Geld       | –            | K9                | –                  | –                              | Schmalkalden          | Lesen 2                       |
-| 8 Kunst & Kreativität                | –            | K10               | L22                | K7 (Kulturwelten)              | unibz B2.2b           | –                             |
-| 9 Zeitgeschichte & Widerstand        | –            | –                 | L21, L24           | K8 (Das macht(e) Geschichte)   | –                     | –                             |
-| 10 Stadt, Mobilität & Nachhaltigkeit | –            | K8 (grammar only) | L13, L14, L15, L18 | K10 (Ein Blick in die Zukunft) | Schmalkalden          | Lesen 1, Hören 3, Schreiben 1 |
-| 11 Stress, Arbeit & Entscheidungen   | –            | K11 (M2, M3)      | L19, L20           | –                              | Schmalkalden, Sevilla | Hören 4, Schreiben 2          |
-| 12 Medien, Netz & Recht              | –            | K12               | L23                | –                              | unibz B2.2b (media)   | Lesen 3                       |
+| Unit                                 | Sicher! B2.2 | Kontext B2.2      | Vielfalt B2.2      | Aspekte neu B2.2               | University syllabi    |
+| ------------------------------------ | ------------ | ----------------- | ------------------ | ------------------------------ | --------------------- |
+| 1 Beziehungen & Vielfalt             | L7           | K8                | L18                | –                              | Freiburg              |
+| 2 Ernährung & Lebensmittel           | L8           | –                 | –                  | –                              | Freiburg, unibz B2.2a |
+| 3 Studium & Bildung                  | L9           | K7 (M3, M4)       | –                  | –                              | Freiburg              |
+| 4 Service & Beschwerden              | L10          | K9 (M2)           | –                  | –                              | Freiburg              |
+| 5 Gesundheit & Fitness               | L11          | –                 | –                  | K6 (Fit für)                   | Freiburg, unibz B2.2a |
+| 6 Sprache & Regionen                 | L12          | K7 (M1)           | L16, L22           | –                              | Freiburg              |
+| 7 Wirtschaft, Tourismus & Geld       | –            | K9                | –                  | –                              | Schmalkalden          |
+| 8 Kunst & Kreativität                | –            | K10               | L22                | K7 (Kulturwelten)              | unibz B2.2b           |
+| 9 Zeitgeschichte & Widerstand        | –            | –                 | L21, L24           | K8 (Das macht(e) Geschichte)   | –                     |
+| 10 Stadt, Mobilität & Nachhaltigkeit | –            | K8 (grammar only) | L13, L14, L15, L18 | K10 (Ein Blick in die Zukunft) | Schmalkalden          |
+| 11 Stress, Arbeit & Entscheidungen   | –            | K11 (M2, M3)      | L19, L20           | –                              | Schmalkalden, Sevilla |
+| 12 Medien, Netz & Recht              | –            | K12               | L23                | –                              | unibz B2.2b (media)   |
 
 ### Left out on purpose
 

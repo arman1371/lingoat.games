@@ -15,7 +15,7 @@ prefix `/fr`; speech voice `fr-FR`.
 | [Édito A1, guide pédagogique (Didier 2016), sommaire][edito]                                          | Confirms the book's structure: unit 0 "Bienvenue !", then Et vous ? · On va où ? · Qu'est-ce qu'on mange ? · Les soldes, c'est parti ! · C'est quoi le programme ? for the first half; the second half (Félicitations !, Chez moi, Bonnes vacances, Pas de chance !, Beau travail !, Au grand air, C'était bien ?) is A1.2.              |
 | [Aix-Marseille Université, SUL – Référentiel des niveaux de langue A1 à B2][sul]                      | The A1 descriptor (CECRL 2001, p. 25), communicative aims (introduce yourself, likes, greet, tu/vous, shops and restaurants, date and time, directions, weather), vocabulary themes, and the language objectives (present of être, avoir, aller, faire; regular verbs; negation; articles; adjectives; prepositions of place; "il y a"). |
 
-The official DELF A1 page of France Éducation international could not be opened from the build environment (it
+The official A1 exam page could not be opened from the build environment (it
 blocks automated access), so it is **not** used as a source yet. Before release, check the unit list against its
 exam description.
 
@@ -56,15 +56,14 @@ like the German units. Vocabulary cards of one unit are not repeated in another.
 Open points: French nouns carry their article inside the word ("le pain", "l'eau"), because the `article` field
 is German-only (der / die / das); the field that holds the target-language text is still named `de`.
 
-## Cross-check against the official DELF A1 page
+## Cross-check against the official A1 exam page
 
-Arman supplied the official page [DELF tout public, niveau A1](https://www.france-education-international.fr/diplome/delf-tout-public/niveau-a1)
-(France Éducation international, saved as a PDF because the site blocks automated access; read on 2026-11-02). It
+Arman supplied the official A1 exam page (saved as a PDF because the site blocks automated access; read on 2026-11-02). It
 lists no topics or vocabulary. It gives the "can do" statements for the level and the exam format: oral
 comprehension (4 exercises, 20 min), written comprehension (4 exercises, 30 min), written production (a form and a
 message of at least 40 words, 30 min) and an individual oral production (5 to 7 min, three parts), each out of 25.
 
-| "Je choisis le DELF A1 si je peux …"              | Where A1.1 teaches it                                                                    |
+| "Je choisis cet examen si je peux …"              | Where A1.1 teaches it                                                                    |
 | ------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | me présenter et présenter quelqu'un               | units 1, 2 and 4 (introductions, être, mon / ma, c'est / il est)                         |
 | comprendre des annonces et instructions orales    | listen games in every unit, directions and the imperative (unit 7)                       |
@@ -79,11 +78,10 @@ What the exam asks that the app cannot do yet: **speaking** (no engine records o
 plays French) and **free writing** (the 40-word message; the engines check answers against known solutions). These
 two skills would need a new kind of game, which is out of scope while only the 13 existing engines are used.
 
-## Cross-check against a DELF A1 curriculum overview
+## Cross-check against an A1 curriculum overview
 
-Arman also supplied a three-page "Curriculum overview for DELF A1" from a language school
-([PDF](https://www.dyplus.com.ng/wp-content/uploads/2020/08/Updated-Curriculum-For-DELF-A1.pdf)), read on 2026-11-02.
-It is a school's teaching plan, **not** the official DELF référentiel (it is useful because it names topics, which the
+Arman also supplied a three-page A1 curriculum overview from a language school (read on 2026-11-02).
+It is a school's teaching plan, **not** the official exam référentiel (it is useful because it names topics, which the
 official page does not), and it spreads all of A1 over nine units, so the later units belong to A1.2. Result for A1.1:
 
 | Topic in the overview                                                          | Status in A1.1                                                                      |

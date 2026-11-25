@@ -19,8 +19,8 @@ Checked against the French A1.1 pages (`docs/fr-a1-1-coverage.md`): the Édito u
 A1.2, which is why the Édito sommaire is the unit list here.
 
 **What could not be read:** the LMU Sprachenzentrum "Français A 1.2" table of contents (the A1.1 sibling file exists,
-the A1.2 URL returns 404) and the official DELF A1 page of France Éducation international (bot-blocked). Before
-release, check the unit list against the DELF A1 exam description.
+the A1.2 URL returns 404) and the official A1 exam page (bot-blocked). Before
+release, check the unit list against the A1 exam description.
 
 [edito]: https://www.klett-sprachen.de/downloads/14159/guide-pedagogique-a1/pdf
 [sul]: https://www.univ-amu.fr/system/files/media-ressource/SUL_R%C3%A9f%C3%A9rentiel%20des%20niveaux%20de%20langue%20A1%20%C3%A0%20B2.pdf
