@@ -161,7 +161,7 @@ describe('Gapfill speech', () => {
   });
 
   it('does not speak when "Read sentences aloud" is off', () => {
-    useSettingsStore.setState({ speakSentences: false });
+    useSettingsStore.setState({ autoSpeak: false });
     renderGame(Gapfill, chips);
     expect(speech.synth.speak).not.toHaveBeenCalled();
   });

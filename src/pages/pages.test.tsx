@@ -656,13 +656,11 @@ describe('Settings', () => {
     await waitFor(() => expect(document.documentElement.dataset.theme).toBe('dark'));
     await user.click(screen.getByLabelText('Reduced'));
     await waitFor(() => expect(document.documentElement.dataset.reducedMotion).toBe('true'));
-    await user.click(screen.getByLabelText('Speak German automatically'));
+    expect(screen.getByLabelText(/Read aloud automatically/)).toBeChecked();
+    await user.click(screen.getByLabelText(/Read aloud automatically/));
     expect(useSettingsStore.getState().autoSpeak).toBe(false);
     await user.click(screen.getByLabelText('Sound effects'));
     expect(useSettingsStore.getState().sounds).toBe(false);
-    expect(screen.getByLabelText('Read sentences aloud')).toBeChecked();
-    await user.click(screen.getByLabelText('Read sentences aloud'));
-    expect(useSettingsStore.getState().speakSentences).toBe(false);
   });
 
   it('links to the GitHub repo in a new tab without leaking the opener', async () => {

@@ -173,8 +173,8 @@ export const en = {
     theme: 'Theme',
     motion: 'Animations',
     sounds: 'Sound effects',
-    autoSpeak: 'Speak {language} automatically',
-    speakSentences: 'Read sentences aloud',
+    autoSpeak: 'Read aloud automatically',
+    autoSpeakHint: 'Hear {language} spoken as you play.',
     ttsRate: 'Speech speed',
     reset: 'Reset {language} progress',
     resetConfirm:

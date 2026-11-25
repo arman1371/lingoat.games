@@ -78,7 +78,7 @@ Sequential engines use `useSequence` (shuffle, first-try verdicts, finish) and `
 Memory is a two-column matching board: words on the left, matches on the right, each column shuffled on its own
 (`buildColumns`); tap one card on each side to pair them. A wrong pair stays marked (with the usual `MistakeHint`) until the next tap.
 Every item has a stable `id`; that id is what the mistake box stores.
-  `weak` in the progress store keeps a lifetime score per item (+1 wrong, -1 right, gone at 0); `/notebook` splits it into words and grammar points and its button queues the worst items back into box 1.
+`weak` in the progress store keeps a lifetime score per item (+1 wrong, -1 right, gone at 0); `/notebook` splits it into words and grammar points and its button queues the worst items back into box 1.
 
 Noun article: gap fill and quiz gaps whose answer depends on a noun's article (`den`, `einem`, `zum`, an adjective
 ending, a relative pronoun) show a "The noun" row in the feedback (`NounArticle`, same sheet for right and wrong). PlayPage
@@ -97,8 +97,9 @@ dialogue and self-graded flashcards pass `sounds: false` to `useSequence`. The "
 them.
 
 Speech: `src/lib/tts.ts` wraps the browser voice (de-DE); every `speak()` cancels the previous utterance.
-Listening engines use `useAutoSpeak` (setting "Speak German automatically"). The "Read sentences aloud"
-setting (`speakSentences`, default on) covers the other engines through `useSentenceSpeech`: gap fill reads
+Listening engines use `useAutoSpeak`; the other engines use `useSentenceSpeech`. Both sit behind the single
+"Read aloud automatically" setting (`autoSpeak`, default on; v1 also had `speakSentences`, merged in the
+store migration). `useSentenceSpeech`: gap fill reads
 the sentence without the missing word (`spokenWithoutGap`, the gap becomes a comma pause), the sentence
 builder speaks each word as it is tapped, and dialogue speaks the new speaker lines. Nothing is spoken when
 an answer is revealed. Blitz and quiz stay silent on purpose: half of the blitz sentences are deliberately

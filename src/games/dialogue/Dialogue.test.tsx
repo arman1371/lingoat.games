@@ -133,7 +133,7 @@ describe('Dialogue speech', () => {
   });
 
   it('stays silent when "Read sentences aloud" is off', () => {
-    useSettingsStore.setState({ speakSentences: false });
+    useSettingsStore.setState({ autoSpeak: false });
     renderGame(Dialogue, config);
     expect(speech.synth.speak).not.toHaveBeenCalled();
   });

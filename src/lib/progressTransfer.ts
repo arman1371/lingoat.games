@@ -23,7 +23,6 @@ const settingsSchema = z.object({
   motion: z.enum(['system', 'reduced', 'full']),
   sounds: z.boolean(),
   autoSpeak: z.boolean(),
-  speakSentences: z.boolean(),
   ttsRate: z.number().min(0.5).max(1.2),
   dailyGoal: z.number().int().min(1).max(10_000),
 });

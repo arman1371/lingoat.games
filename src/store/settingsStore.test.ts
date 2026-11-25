@@ -25,10 +25,25 @@ describe('settingsStore', () => {
     expect(JSON.parse(localStorage.getItem('lingoat.settings')!).state.dailyGoal).toBe(100);
   });
 
-  it('reads sentences aloud by default and persists the choice', () => {
-    expect(useSettingsStore.getState().speakSentences).toBe(true);
-    useSettingsStore.getState().set({ speakSentences: false });
-    expect(JSON.parse(localStorage.getItem('lingoat.settings')!).state.speakSentences).toBe(false);
+  it('reads aloud by default and persists the choice', () => {
+    expect(useSettingsStore.getState().autoSpeak).toBe(true);
+    useSettingsStore.getState().set({ autoSpeak: false });
+    expect(JSON.parse(localStorage.getItem('lingoat.settings')!).state.autoSpeak).toBe(false);
+  });
+
+  it('merges the old sentence toggle into autoSpeak: quiet if either was off', async () => {
+    for (const [autoSpeak, speakSentences, expected] of [
+      [true, true, true],
+      [true, false, false],
+      [false, true, false],
+    ] as const) {
+      localStorage.setItem(
+        'lingoat.settings',
+        JSON.stringify({ state: { autoSpeak, speakSentences }, version: 1 }),
+      );
+      await useSettingsStore.persist.rehydrate();
+      expect(useSettingsStore.getState().autoSpeak).toBe(expected);
+    }
   });
 
   it('resolves theme and motion', () => {

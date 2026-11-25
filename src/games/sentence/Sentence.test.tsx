@@ -120,7 +120,7 @@ describe('Sentence speech', () => {
   });
 
   it('stays silent when "Read sentences aloud" is off', async () => {
-    useSettingsStore.setState({ speakSentences: false });
+    useSettingsStore.setState({ autoSpeak: false });
     const { user } = renderGame(Sentence, config);
     await place(user, SOLUTION[prompt()]!.slice(0, 1));
     expect(speech.synth.speak).not.toHaveBeenCalled();
