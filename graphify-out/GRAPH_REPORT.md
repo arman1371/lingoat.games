@@ -1,7 +1,7 @@
 # Graph Report - lingoat.games  (2026-11-25)
 
 ## Corpus Check
-- 810 files · ~1,065,975 words
+- 810 files · ~1,066,068 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: (none) 5, .css 2, .example 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `40ef099f`
+- Built from commit: `e6aa5dfd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -1016,9 +1016,9 @@ Nodes (4): Included Fixture Files, Lingoat Source Evidence, Source Scope, Token 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `react` to `Gapfill.test.tsx`, `Conjugation.tsx`, `AppLayout.tsx`, `ActivityCard.tsx`, `package.json`, `ref_i18n`, `ref_lib_rng`, `Sentence.tsx`, `Icon.tsx`, `ref_content_schema`, `FeedbackBanner.tsx`, `Toast.tsx`, `Tabs.tsx`, `controls.test.tsx`, `Memory.tsx`, `Button.tsx`, `@testing-library/react`, `ui.test.tsx`, `router.tsx`, `PlayPage.tsx`, `WordImage.tsx`, `content/schema.ts`?**
-  _High betweenness centrality (0.074) - this node is a cross-community bridge._
+  _High betweenness centrality (0.072) - this node is a cross-community bridge._
 - **Why does `UnitContent` connect `UnitContent` to `typed`, `gap`, `vocabList`, `activity`, `flashcards`, `u1-registres.ts`, `kit.ts`, `b2-1/index.ts`, `u7-nature.ts`, `c1-2/index.ts`, `a1-1/index.ts`, `u4-zahlen.ts`, `say`, `u3-nombres.ts`, `fr-c1-2/helpers.ts`, `u1-voyage.ts`, `u4-logement.ts`, `u11-sport.ts`, `fr-c1-1/helpers.ts`, `u7-tag.ts`, `u10-cause.ts`, `meta`, `u2-fetes.ts`, `u3-sante.ts`, `u4-doute.ts`, `content/schema.ts`, `u3-logement.ts`, `u12-culture.ts`, `b2-2/index.ts`, `u8-temps.ts`, `fr-b1-1/index.ts`, `fr-b1-2/u7-ville.ts`, `fr-a1-1/u7-ville.ts`, `u6-travail.ts`, `u6-convaincre.ts`, `fr-b1-2/helpers.ts`, `fr-a2-1/helpers.ts`, `u8-rapporter.ts`, `u9-etudes.ts`, `u6-subjonctif.ts`, `fr-b1-2/index.ts`, `u2-presenter.ts`, `u4-regrets.ts`, `u3-recit.ts`, `b1-2/index.ts`, `u2-paysages.ts`, `c2-1/index.ts`, `a2-2/index.ts`, `u6-futur.ts`, `u9-recit.ts`, `u6-table.ts`, `u5-planete.ts`, `fr-b2-1/helpers.ts`, `u8-etudes.ts`, `fr-a1-2/helpers.ts`, `u5-portrait.ts`, `u8-cause.ts`, `u6-migrations.ts`, `u12-ville.ts`, `u1-identite.ts`, `u10-sentiments.ts`, `u2-parcours.ts`, `u7-demarches.ts`, `u11-logement.ts`, `u10-cites.ts`, `u1-parcours.ts`, `u5-sentiments.ts`, `u3-souvenirs.ts`, `builders.ts`, `u1-journee.ts`, `u2-humour.ts`, `u4-cause.ts`, `u5-concession.ts`, `u7-relief.ts`, `u8-institutions.ts`, `u9-debat.ts`, `u4-famille.ts`, `u8-langues.ts`, `u7-cuisine.ts`, `u2-medias.ts`?**
-  _High betweenness centrality (0.059) - this node is a cross-community bridge._
+  _High betweenness centrality (0.060) - this node is a cross-community bridge._
 - **Why does `zod` connect `@testing-library/react` to `grammar/schema.ts`, `package.json`, `progressTransfer.ts`, `content/schema.ts`?**
   _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **What connects `singleQuote`, `semi`, `trailingComma` to the rest of the system?**

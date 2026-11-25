@@ -592,7 +592,7 @@
       "file_type": "code",
       "norm_label": "settingsstate",
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L20"
+      "source_location": "L19"
     },
     {
       "id": "src_store_settingsstore_themesetting",
@@ -2919,7 +2919,7 @@
       "file_type": "code",
       "norm_label": "importerrorcode",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L83"
+      "source_location": "L82"
     },
     {
       "id": "src_lib_progresstransfer_importmode",
@@ -2932,7 +2932,7 @@
       "file_type": "code",
       "norm_label": "importmode",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L207"
+      "source_location": "L206"
     },
     {
       "id": "src_lib_progresstransfer_languagesummary",
@@ -2945,7 +2945,7 @@
       "file_type": "code",
       "norm_label": "languagesummary",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L233"
+      "source_location": "L232"
     },
     {
       "id": "src_lib_progresstransfer_parseresult",
@@ -2958,7 +2958,7 @@
       "file_type": "code",
       "norm_label": "parseresult",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L86"
+      "source_location": "L85"
     },
     {
       "id": "src_lib_progresstransfer_progressbylanguage",
@@ -2971,7 +2971,7 @@
       "file_type": "code",
       "norm_label": "progressbylanguage",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L81"
+      "source_location": "L80"
     },
     {
       "id": "src_lib_progresstransfer_transferfile",
@@ -2984,7 +2984,7 @@
       "file_type": "code",
       "norm_label": "transferfile",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L70"
+      "source_location": "L69"
     },
     {
       "id": "src_lib_progresstransfer_transfersummary",
@@ -2997,7 +2997,7 @@
       "file_type": "code",
       "norm_label": "transfersummary",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L240"
+      "source_location": "L239"
     },
     {
       "id": "src_lib_german_adjectives_declensionkind",
@@ -4881,7 +4881,7 @@
       "file_type": "code",
       "norm_label": "resolvereducedmotion()",
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L55"
+      "source_location": "L59"
     },
     {
       "id": "src_store_settingsstore_resolvetheme",
@@ -4893,7 +4893,7 @@
       "file_type": "code",
       "norm_label": "resolvetheme()",
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L51"
+      "source_location": "L55"
     },
     {
       "id": "src_content_fr_a1_1_u8_temps_readround",
@@ -12393,7 +12393,7 @@
       "file_type": "code",
       "norm_label": "applyimport()",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L210"
+      "source_location": "L209"
     },
     {
       "id": "src_lib_progresstransfer_applyimportall",
@@ -12405,7 +12405,7 @@
       "file_type": "code",
       "norm_label": "applyimportall()",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L220"
+      "source_location": "L219"
     },
     {
       "id": "src_lib_progresstransfer_buildexport",
@@ -12417,7 +12417,7 @@
       "file_type": "code",
       "norm_label": "buildexport()",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L88"
+      "source_location": "L87"
     },
     {
       "id": "src_lib_progresstransfer_exportfilename",
@@ -12429,7 +12429,7 @@
       "file_type": "code",
       "norm_label": "exportfilename()",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L103"
+      "source_location": "L102"
     },
     {
       "id": "src_lib_progresstransfer_later",
@@ -12441,7 +12441,7 @@
       "file_type": "code",
       "norm_label": "later()",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L137"
+      "source_location": "L136"
     },
     {
       "id": "src_lib_progresstransfer_mergeprogress",
@@ -12453,7 +12453,7 @@
       "file_type": "code",
       "norm_label": "mergeprogress()",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L148"
+      "source_location": "L147"
     },
     {
       "id": "src_lib_progresstransfer_parseimport",
@@ -12465,7 +12465,7 @@
       "file_type": "code",
       "norm_label": "parseimport()",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L113"
+      "source_location": "L112"
     },
     {
       "id": "src_lib_progresstransfer_summarize",
@@ -12477,7 +12477,7 @@
       "file_type": "code",
       "norm_label": "summarize()",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L249"
+      "source_location": "L248"
     },
     {
       "id": "src_lib_progresstransfer_test_exported",
@@ -12525,7 +12525,7 @@
       "file_type": "code",
       "norm_label": "upgradev1()",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L107"
+      "source_location": "L106"
     },
     {
       "id": "src_lib_german_adjectives_declineadjective",
@@ -18379,7 +18379,7 @@
       "file_type": "code",
       "norm_label": "default_settings",
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L24"
+      "source_location": "L23"
     },
     {
       "id": "src_store_settingsstore_test",
@@ -18401,7 +18401,7 @@
       "file_type": "code",
       "norm_label": "usesettingsstore",
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L34"
+      "source_location": "L32"
     },
     {
       "id": "ref_zustand",
@@ -49068,7 +49068,7 @@
       "file_type": "code",
       "norm_label": "progressbylanguageschema",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L57"
+      "source_location": "L56"
     },
     {
       "id": "src_lib_progresstransfer_progressschema",
@@ -49079,7 +49079,7 @@
       "file_type": "code",
       "norm_label": "progressschema",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L33"
+      "source_location": "L32"
     },
     {
       "id": "src_lib_progresstransfer_settingsschema",
@@ -49101,7 +49101,7 @@
       "file_type": "code",
       "norm_label": "stars",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L31"
+      "source_location": "L30"
     },
     {
       "id": "src_lib_progresstransfer_test",
@@ -49156,7 +49156,7 @@
       "file_type": "code",
       "norm_label": "transferschema",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L61"
+      "source_location": "L60"
     },
     {
       "id": "src_lib_german_adjectives",
@@ -55155,6 +55155,18 @@
       "type": "external"
     },
     {
+      "id": "ref_lib_notebook",
+      "label": "ref_lib_notebook",
+      "_origin": "semantic",
+      "community": 15,
+      "community_name": "ref_i18n",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_lib_notebook",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_lib_srs",
       "label": "ref_lib_srs",
       "_origin": "semantic",
@@ -55463,6 +55475,18 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "src_components_ui_icon_iconname",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_content",
+      "label": "ref_content",
+      "_origin": "semantic",
+      "community": 44,
+      "community_name": "ref_content_schema",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_content",
       "source_file": "",
       "type": "external"
     },
@@ -55979,28 +56003,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_node_crypto",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_lib_notebook",
-      "label": "ref_lib_notebook",
-      "community": 15,
-      "community_name": "ref_i18n",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_lib_notebook",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_content",
-      "label": "ref_content",
-      "community": 44,
-      "community_name": "ref_content_schema",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_content",
       "source_file": "",
       "type": "external"
     }
@@ -61739,7 +61741,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L214",
+      "source_location": "L213",
       "weight": 1.0
     },
     {
@@ -61751,7 +61753,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L228",
+      "source_location": "L227",
       "weight": 1.0
     },
     {
@@ -61763,7 +61765,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L177",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -61775,7 +61777,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L132",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
@@ -178001,7 +178003,7 @@
       "confidence_score": 1.0,
       "context": "type",
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L20",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -216282,7 +216284,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L103",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -216293,7 +216295,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L107",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -216315,7 +216317,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L113",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -216337,7 +216339,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L137",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -216348,7 +216350,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L148",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -216403,7 +216405,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L207",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_progresstransfer",
+      "target": "src_lib_progresstransfer_applyimport",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/progressTransfer.ts",
+      "source_location": "L209",
       "weight": 1.0
     },
     {
@@ -216419,24 +216432,13 @@
     },
     {
       "source": "src_lib_progresstransfer",
-      "target": "src_lib_progresstransfer_applyimport",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L210",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_progresstransfer",
       "target": "src_lib_progresstransfer_applyimportall",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L220",
+      "source_location": "L219",
       "weight": 1.0
     },
     {
@@ -216447,7 +216449,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L233",
+      "source_location": "L232",
       "weight": 1.0
     },
     {
@@ -216458,7 +216460,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L240",
+      "source_location": "L239",
       "weight": 1.0
     },
     {
@@ -216469,7 +216471,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L249",
+      "source_location": "L248",
       "weight": 1.0
     },
     {
@@ -216480,7 +216482,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L31",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -216491,7 +216493,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L33",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -216502,7 +216504,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L57",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -216513,7 +216515,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L61",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -216524,7 +216526,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L70",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -216535,7 +216537,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L81",
+      "source_location": "L80",
       "weight": 1.0
     },
     {
@@ -216546,7 +216548,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L83",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -216557,7 +216559,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L86",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -216568,7 +216570,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/progressTransfer.ts",
-      "source_location": "L88",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -217954,7 +217956,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L20",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -217965,7 +217967,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L24",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -217976,7 +217978,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L34",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -217998,7 +218000,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L51",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -218009,7 +218011,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/store/settingsStore.ts",
-      "source_location": "L55",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -221677,7 +221679,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "src/pages/pages.test.tsx",
-      "source_location": "L937",
+      "source_location": "L935",
       "weight": 1.0
     },
     {
@@ -223026,5 +223028,5 @@
       "source_file": "docs/adding-content.md"
     }
   ],
-  "built_at_commit": "40ef099f206c2369975fc6d3a531ac0a931c6bef"
+  "built_at_commit": "e6aa5dfd7a432e545b1f80ab1e5e1fa920e19ec4"
 }
