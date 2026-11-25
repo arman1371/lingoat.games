@@ -23,10 +23,10 @@ prefix `/fr`; speech voice `fr-FR`. Grammar tags and mini lessons start with `fr
 [basel]: https://sprachenzentrum.unibas.ch/en/angebot/einstufung/franzoesisch/french-course-program-overview
 [paderborn]: https://www.uni-paderborn.de/en/zfs/language-courses-for-students/french/french-b21
 
-**Not read:** the official DELF B2 exam description of France Éducation international was not opened (the site blocked
+**Not read:** the official B2 exam description was not opened (the site blocked
 automated access for A1; it was not retried), the Klett table of contents of Édito B2 (4th edition) is not on the
 product page, and a 10 MB demo PDF of an older Édito B2 could not be downloaded. Before release, check the unit list
-against the DELF B2 exam description.
+against the B2 exam description.
 
 ## How the units were chosen
 
@@ -74,5 +74,5 @@ these tables are written by hand (`frForms` in `fr-b2-1/helpers.ts`).
 
 - The vocabulary of B2.1 is compared with every earlier French level in `content.test.ts`; an earlier-level word had to be
   replaced in four places (unit 2).
-- The unit list was **not** checked against the official DELF B2 exam description (see "Not read" above).
+- The unit list was **not** checked against the official B2 exam description (see "Not read" above).
 - A native speaker has not reviewed the French.

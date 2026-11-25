@@ -1,7 +1,7 @@
 # B1.1 – syllabus research, coverage and overlap with A1.1–A2.2
 
 B1.1 was built from the first half of the B1 syllabus of four widely used course books, checked against the
-CEFR B1 descriptors and the Goethe-Zertifikat B1. The rule from A2.2 still applies: **teach what is new,
+CEFR B1 descriptors. The rule from A2.2 still applies: **teach what is new,
 extend what an earlier unit started, and only review – inside new activities, never as a stand-alone unit –
 what is already taught.** `src/content/b1-1/content.test.ts` enforces the vocabulary side: no word card in
 B1.1 repeats a word card of A1.1, A1.2, A2.1 or A2.2 (or another B1.1 unit).
@@ -19,7 +19,6 @@ Unit ids: `b1-1-glueck`, `-unterhaltung`, `-gesundheit`, `-sprachen`, `-beruf`, 
 | [Menschen B1, Hueber – table of contents][menschen] (Lektion 1–12 = B1.1)                                                          | Freundschaft (Adjektive als Nomen, n-Deklination) · Beruf und Arbeit (Präteritum) · Wohnen (Relativsätze im Dativ / mit Präpositionen) · Kundenservice (obwohl, trotzdem) · Zukunft (Futur I) · Einladungen (falls) · Beratung (Infinitiv mit zu) · Berufsfindung (da, während, bevor) · Gesundheit · Verpasste Gelegenheiten (Konjunktiv II Vergangenheit) · Glücksmomente (Plusquamperfekt, nachdem) · Feiern im Betrieb (Genitiv, trotz)           |
 | Netzwerk neu B1, Klett – [chapter titles][nwglossar], [clip overview][nwclips], [Bard College syllabus][bard] (Kapitel 1–6 = B1.1) | Gute Reise! (zu-Infinitiv, lassen, obwohl; n / ng / nk) · Das ist ja praktisch! (reklamieren / umtauschen) · Veränderungen (Präteritum, vor / nach / während; consonant clusters) · Arbeitswelt (Konjunktiv II der Modalverben, Pronominaladverbien) · Umweltfreundlich? (da, aus + Material) · Blick nach vorn (Futur I, Relativsätze im Dativ / mit Präpositionen)                                                                                  |
 | [Ziel B1+, Hueber – table of contents][ziel]                                                                                       | Cross-check: Glückwunsch / Beileid, Freizeit, Kausalangaben (darum, deswegen, nämlich, wegen), Vergangenheitstempora, Relativsätze, Passiv, statt / ohne zu, obwohl / zwar … aber, Konjunktiv II der Vergangenheit, Futur                                                                                                                                                                                                                             |
-| [Goethe-Zertifikat B1][goethe] and its [word list][wortliste]                                                                      | Everyday topics (work, school, leisure), giving reasons and explanations, personal and formal e-mails, planning something together, presenting a topic; ~2,400 lexical units                                                                                                                                                                                                                                                                          |
 | [CEFR global scale, Council of Europe][cefr]                                                                                       | B1: deal with most situations while travelling, describe experiences, events, dreams and hopes, briefly give reasons and explanations for opinions and plans                                                                                                                                                                                                                                                                                          |
 
 A second university syllabus ([Hochschule Offenburg, Deutsch B1.1][offenburg], based on _Motive B1_) confirms
@@ -31,8 +30,6 @@ the same grammar core: subordinate clauses and conjunctions, passive with modal 
 [nwclips]: https://www.klett-international.com/en/downloads/26409/netzwerk-5fneu-5fb1-5f-2d-5f-dcbersicht-5fclips-5f-2d-5fkapitel-5f1-2d12/pdf
 [bard]: https://tools.bard.edu/wwwmedia/files/9729970/6/2026_German%20Studies%20Curriculum%20Niveaustufen%20Uebersicht%20Spring%202026-r-mg-v2.pdf
 [ziel]: https://www.hueber.de/media/36/978-3-19-001676-1_Inhalt.pdf
-[goethe]: https://www.goethe.de/ins/au/en/spr/prf/gzb1.cfm
-[wortliste]: https://www.goethe.de/pro/relaunch/prf/da/Goethe-Zertifikat_B1_Wortliste.pdf
 [cefr]: https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale
 [offenburg]: https://cms9.hs-offenburg.de/fileadmin/_migrated/Syllabus_Deutsch_B1.1_WS22_23_Ramm-Weber_neu_ohne_Semesterangabe.pdf
 

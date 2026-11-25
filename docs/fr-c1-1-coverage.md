@@ -16,19 +16,19 @@ Topic tags are shared with the other levels (`media-news`, `nutrition` …); onl
 | [EOI Talavera, programación de francés 2025–26 (C1.1 and C1.2)][eoi]         | The sequencing for **Édito C1, 2e édition**: democracy in danger · climate crisis · the new faces of culture · feminism · family and education · ageing · health 3.0 · solidarity · animal welfare. Also names the C1.1 grammar of those units: logical connectors, si (condition and hypothesis), mise en relief, prefixes and suffixes, register, reprise (cohesion), narrative tenses, modalisation, de/d'/des + plural noun.                                    |
 | [Cosmopolite 5, guide pédagogique (Hachette FLE, 2019), Dossiers 1–6][cosmo] | The first six of the twelve dossiers (1–8 are C1, 9–12 C2): Désir de ville(s) · Alimentation · Prenons soin de nous · À corps et à cri · Dans quel monde vit-on ? · TAF (Travail à faire), with the communicative goals of each lesson (synthesis of documents, analysis of figures, reporting a survey, summarising a speech, press review, job interview, conflict at work …).                                                                                    |
 | [CEFR global scale, Council of Europe][cefr]                                 | C1: understand a wide range of demanding, longer texts and recognise implicit meaning; express ideas fluently and spontaneously; use language flexibly for social, academic and professional purposes.                                                                                                                                                                                                                                                              |
-| Hachette FLE page of Alter Ego 5 (product description only)                  | 12 dossiers under three headings (C'était hier · Réalités d'aujourd'hui · Et demain ?) and DALF C1 training; confirms the C1 register mix but gives no contents list, so it is **not** counted as unit evidence.                                                                                                                                                                                                                                                    |
+| Hachette FLE page of Alter Ego 5 (product description only)                  | 12 dossiers under three headings (C'était hier · Réalités d'aujourd'hui · Et demain ?) and C1 exam training; confirms the C1 register mix but gives no contents list, so it is **not** counted as unit evidence.                                                                                                                                                                                                                                                    |
 
 [uhu]: https://uhu.es/sites/lenguas-modernas/files/2024-06/Guia_Docente_FR_C1.1_23_24.pdf
 [eoi]: https://eoi-talavera.centros.castillalamancha.es/sites/eoi-talavera.centros.castillalamancha.es/files/documentos/programacion_frances_25_26.pdf
 [cosmo]: https://edit.hueber.de/shared/elka/Internet_Muster/Red6/9783193833860_Muster_4.pdf
 [cefr]: https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale
 
-**Limits of the research.** The official DALF C1 pages of France Éducation international answer automated requests with
+**Limits of the research.** The official C1 exam pages answer automated requests with
 "403 / bot detected", and the Didier, Hachette and Klett pages for Édito C1 and Alter Ego 5 give no contents list, so the exam
 description itself was **not** read; the exam format (documents of 1,500–2,000 words, synthesis and argumentative essay, oral
 monologue and interaction) is known only from secondary school and university summaries. The Cosmopolite 5 sample stops after
 Dossier 6. Both course-based sources are Édito C1; Cosmopolite 5 is the independent second source. Before release, check the unit
-list against the DALF C1 exam description.
+list against the C1 exam description.
 
 ## How the units were chosen
 
@@ -110,4 +110,4 @@ so that French levels written in parallel do not conflict.
   before this one.
 - No native speaker has checked the French; register labels (familier / courant / soutenu) and the choice of passé simple
   forms are the first things to review.
-- The unit list has not been checked against the DALF C1 description (the official pages could not be read).
+- The unit list has not been checked against the C1 exam description (the official pages could not be read).

@@ -1,7 +1,6 @@
 # B1.2 – syllabus research, coverage and overlap with A1.1–B1.1
 
-B1.2 was built from the second half of the B1 syllabus of the course books listed below, checked against the Goethe-Zertifikat
-B1 task types. The rule from A2.2 and B1.1 still applies: **teach what is new, extend what an earlier unit started, and only
+B1.2 was built from the second half of the B1 syllabus of the course books listed below. The rule from A2.2 and B1.1 still applies: **teach what is new, extend what an earlier unit started, and only
 review – inside new activities, never as a stand-alone unit – what is already taught.**
 `src/content/b1-2/content.test.ts` enforces the vocabulary side: no word card in B1.2 repeats a word card of A1.1–B1.1 (or
 another B1.2 unit).
@@ -20,7 +19,6 @@ Unit ids: `b1-2-kollegen`, `-digital`, `-konsum`, `-weiterbildung`, `-regeln`, `
 | Netzwerk neu B1, Klett – [chapter titles][nwglossar], [interactive course book contents][nwblink], [Bard syllabus][bard], [Basel B1.2 grammar list][basel] (Kapitel 7–12 = B1.2) | 7 Zwischenmenschliches (Konfliktgespräche führen) · 8 Rund um Körper und Geist (Lerntipps, Hilfe anbieten) · 9 Kunststücke (Stellung von nicht, Kursprogramm, Theater, Singen) · 10 Miteinander (Passiv, Freiwillig, Europa) · 11 Stadt, Land, Fluss (lebenswerte Städte, in der Diskussion vermitteln) · 12 Geld regiert die Welt? (Bankgeschäfte, Partizip als Adjektiv). Grammar lists: Passiv Präsens / Präteritum / Perfekt, Passiv mit Modalverben, innerhalb / außerhalb, Adjektive als Nomen, was / wo als Relativpronomen, Partizip I, Modalpartikeln, Komparativ / Superlativ vor Nomen |
 | [Motive B1, Hueber – table of contents][motive] (Kursbuch Lektion 19–30, numbered 1–12 in the contents)                                                                          | L2 indem · L3 Werbung, Reklamation, um … zu / damit · L5 Auswandern, Landschaft, Tourismus · L6 Umgangsformen, Höflichkeit · L7 Passiv Präteritum / Perfekt, technischer Support · L8 Kriminalität, sodass-ähnliche Konnektoren · L9 Kunst, Kultur, Bank · L10 Berliner Mauer, Konjunktiv II der Vergangenheit, als ob, Partizip I / II · L11 Futur, Relativsätze mit wo und was, je … desto, so … dass                                                                                                                                                                                           |
 | [Ziel B1+, Hueber – table of contents][ziel]                                                                                                                                     | Only Lektion 0–8 (the B1.1 half) could be retrieved, so Ziel B1+ is **not** used as evidence for B1.2 topics; it was cross-checked for overlap with B1.1 only.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| [Goethe-Zertifikat B1 – exam description][goethe] and [practice set][goethesatz]                                                                                                 | Task types of the exam: forum post with an opinion (Schreiben 2), planning something together (Sprechen 1), a presentation on a current topic and questions about it (Sprechen 2 / 3), radio discussions (Hören 4), house rules (Lesen 5), speed limit forum (Lesen 4). Practice-set topics include working hours, living without a car, weddings, learning languages as a child                                                                                                                                                                                                                  |
 
 [si6]: https://legacy.hueber.de/media/36/601086%20SiN_6_Loesungen_KB.pdf
 [menschen]: https://edit.hueber.de/media/36/978-3-19-101903-7_Inhalt.pdf
@@ -30,8 +28,6 @@ Unit ids: `b1-2-kollegen`, `-digital`, `-konsum`, `-weiterbildung`, `-regeln`, `
 [basel]: https://sprachenzentrum.unibas.ch/fileadmin/user_upload/sprachenzentrum/Einstufung/DE_B1.2.pdf
 [motive]: https://edit.hueber.de/shared/elka/Internet_Inhaltsverz/Red1/9783190018826_Inhalt.pdf
 [ziel]: https://legacy.hueber.de/media/36/978-3-19-001676-1_Inhalt.pdf
-[goethe]: https://www.goethe.de/ins/au/en/spr/prf/gzb1.cfm
-[goethesatz]: https://www.goethe.de/pro/relaunch/prf/materialien/B1/B1_Uebungssatz_Erwachsene.pdf
 
 Limits of the research: the Schritte international Neu 6 contents page itself could not be retrieved, so its lesson titles and
 grammar come from the published course-book solutions; the Netzwerk neu chapter contents come from a publisher's interactive
@@ -42,20 +38,20 @@ edition and two university syllabi rather than the printed table of contents.
 A topic became a unit when at least two of the B1.2 sources teach it; the grammar of a unit is what those sources attach to the
 topic, minus anything A1.1–B1.1 already teach.
 
-| Unit                          | Schritte int. Neu 6 | Menschen B1   | Netzwerk neu B1 | Motive B1  | Goethe B1                 |
-| ----------------------------- | ------------------- | ------------- | --------------- | ---------- | ------------------------- |
-| 1 Unter Kollegen              | L8                  | –             | K7              | –          | –                         |
-| 2 Digitale Welt               | L9                  | L24 (als ob)  | –               | L7, L10    | –                         |
-| 3 Konsum & Verbraucherrechte  | L10                 | L14           | K12             | L3         | –                         |
-| 4 Weiterbildung               | –                   | L14           | K8, K9          | –          | –                         |
-| 5 Regeln & Umgangsformen      | L11                 | L20           | –               | L6         | Lesen 5                   |
-| 6 Soziales Engagement         | L12                 | –             | K10             | L2 (indem) | –                         |
-| 7 Politik & Gesellschaft      | L13                 | L18           | –               | L10        | Lesen 4                   |
-| 8 Geschichte                  | L13                 | L22           | K10 (Passiv)    | L7, L10    | –                         |
-| 9 Stadt, Land & Tourismus     | L10 (was / wo)      | L19           | K11             | L5, L11    | –                         |
-| 10 Alte und neue Heimat       | L14                 | –             | K10 (Europa)    | L5         | –                         |
-| 11 Theater & Kunst            | –                   | L21           | K9              | L9         | –                         |
-| 12 Diskutieren & präsentieren | –                   | L18, L19, L21 | K11             | L11        | Sprechen 1–3, Schreiben 2 |
+| Unit                          | Schritte int. Neu 6 | Menschen B1   | Netzwerk neu B1 | Motive B1  |
+| ----------------------------- | ------------------- | ------------- | --------------- | ---------- |
+| 1 Unter Kollegen              | L8                  | –             | K7              | –          |
+| 2 Digitale Welt               | L9                  | L24 (als ob)  | –               | L7, L10    |
+| 3 Konsum & Verbraucherrechte  | L10                 | L14           | K12             | L3         |
+| 4 Weiterbildung               | –                   | L14           | K8, K9          | –          |
+| 5 Regeln & Umgangsformen      | L11                 | L20           | –               | L6         |
+| 6 Soziales Engagement         | L12                 | –             | K10             | L2 (indem) |
+| 7 Politik & Gesellschaft      | L13                 | L18           | –               | L10        |
+| 8 Geschichte                  | L13                 | L22           | K10 (Passiv)    | L7, L10    |
+| 9 Stadt, Land & Tourismus     | L10 (was / wo)      | L19           | K11             | L5, L11    |
+| 10 Alte und neue Heimat       | L14                 | –             | K10 (Europa)    | L5         |
+| 11 Theater & Kunst            | –                   | L21           | K9              | L9         |
+| 12 Diskutieren & präsentieren | –                   | L18, L19, L21 | K11             | L11        |
 
 ### Left out on purpose
 

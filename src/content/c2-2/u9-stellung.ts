@@ -58,7 +58,7 @@ export const stellung: UnitContent = {
     id: U,
     order: 9,
     title: 'Stellung nehmen & abwägen',
-    subtitle: 'Arguing, conceding and concluding – the C2 speech acts of the Goethe exam',
+    subtitle: 'Arguing, conceding and concluding – the C2 speech acts',
     emoji: '🧭',
     goals: [
       'Take a position, weigh arguments and respond to counter-arguments',

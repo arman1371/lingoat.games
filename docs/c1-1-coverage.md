@@ -1,7 +1,6 @@
 # C1.1 – syllabus research, coverage and overlap with A1.1–B1.2
 
-C1.1 was built from the first half of the C1 syllabus of the course books listed below, checked against the Goethe-Zertifikat C1
-exam description and the CEFR. The rule from A2.2 to B1.2 still applies: **teach what is new, extend what an earlier unit started,
+C1.1 was built from the first half of the C1 syllabus of the course books listed below, checked against the CEFR. The rule from A2.2 to B1.2 still applies: **teach what is new, extend what an earlier unit started,
 and only review – inside new activities, never as a stand-alone unit – what is already taught.**
 `src/content/c1-1/content.test.ts` enforces the vocabulary side: no word card in C1.1 repeats a word card of A1.1–B1.2 (or another
 C1.1 unit); overlap with B2.1 and B2.2 is allowed only for the words listed in that file (see below).
@@ -20,7 +19,6 @@ Unit ids: `c1-1-zeit`, `-digital`, `-sprache`, `-manieren`, `-tourismus`, `-arbe
 | [Ziel C1, Band 2, Hueber – table of contents][ziel2] (Lektion 7–12)         | Used as a cross-check only: L7 Zwischen den Zeilen (Handel, Gesellschaft, Werte; verkürzte Sätze) · L9 Ins Blaue (Nominalisierung, Konjunktiv I in festen Wendungen) · L10 Aus gutem Grund (Nomen-Verb-Verbindungen, Modalverben) · L11 Durch den Wind (Redewiedergabe)                                                                                                                                                                                                                                                                                                                                                                          |
 | [Aspekte neu C1, Klett – table of contents][aspekte] (Kapitel 1–5 = Teil 1) | K1 Alltägliches (Zeitgefühl: andernfalls / folglich; Vereine heute; Zuletzt online; Wohnprobleme) · K2 Hast du Worte? (Medien, Redewiedergabe, Nominal- und Verbalstil, Dialekte) · K3 An die Arbeit! (Lebenslauf, Studium oder Ausbildung, Multitasking, Soft Skills) · K4 Wirtschaftsgipfel (Ruhrgebiet, Globalisierung, Crowdfunding; Nominalisierung von Temporal-, Kausal- und Modalsätzen) · K5 Ziele (Netzwerke, berufliche Ziele, Ehrenamtlich; zu … um zu / als dass, Konzessiv- und Finalsätze)                                                                                                                                        |
 | [Kontext C1, Klett – grammar sequence in the Bard syllabus][bard]           | Grammar only, no topics: Nominal vs. verbal style · Konjunktiv I and II · subjective meaning of modal verbs · reported speech · alternatives to modal verbs · final and concessive clauses · participial attributes · separable and inseparable verbs · sein + zu / sich lassen · unreal consequences · noun-verb combinations. Used to confirm which grammar the C1 courses attach to the topics.                                                                                                                                                                                                                                               |
-| [Goethe-Zertifikat C1 – Prüfungsziele und Testbeschreibung][goethe]         | Life areas privat / öffentlich / beruflich / Bildung und Studium; popular-science articles, lectures and podcasts, commentary texts, forum posts and (semi-)formal e-mails. This is why the units mix formal register (Konnektoren, Nominalstil, Redewiedergabe) with academic and workplace topics.                                                                                                                                                                                                                                                                                                                                             |
 | [CEFR global scale, Council of Europe][cefr]                                | C1: understand a wide range of demanding, longer texts and recognise implicit meaning; express ideas fluently and spontaneously; use language flexibly for social, academic and professional purposes; produce clear, well-structured, detailed text on complex subjects                                                                                                                                                                                                                                                                                                                                                                         |
 
 [sicher]: https://dokumen.pub/sicher-kursbuch-c1-9783190012084-9783192286025-9783191012083.html
@@ -28,7 +26,6 @@ Unit ids: `c1-1-zeit`, `-digital`, `-sprache`, `-manieren`, `-tourismus`, `-arbe
 [ziel2]: https://legacy.hueber.de/shared/elka/Internet_Inhaltsverz/Red1/978-3-19-501675-9_Inhalt.pdf
 [aspekte]: https://ebin.pub/aspekte-neu-lehrbuch-c1-mit-dvd-3126050344-9783126050340.html
 [bard]: https://tools.bard.edu/wwwmedia/files/9729970/6/2026_German%20Studies%20Curriculum%20Niveaustufen%20Uebersicht%20Spring%202026-r-mg-v2.pdf
-[goethe]: https://goethe.de/pro/relaunch/prf/bg/Handbuch_Pruefungsziele_Testbeschreibung_C1.pdf
 [cefr]: https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale
 
 Limits of the research: the Mittelpunkt neu C1 contents pages (Klett) could not be retrieved, so Mittelpunkt neu is **not** used as
@@ -42,19 +39,19 @@ C1 is split into Teil 1 (Kapitel 1–5) and Teil 2.
 A topic became a unit when at least two of the C1.1 sources teach it; the grammar of a unit is what those sources attach to the
 topic, minus anything A1.1–B1.2 already teach.
 
-| Unit                                  | Sicher! C1/1  | Ziel C1 Bd. 1 | Aspekte neu C1 | Kontext C1 (grammar) | Goethe C1 life area   |
-| ------------------------------------- | ------------- | ------------- | -------------- | -------------------- | --------------------- |
-| 1 Zeit und Tempo                      | L1            | L1, L6        | K1 M1          | –                    | privat                |
-| 2 Digital und vernetzt                | L1            | –             | K1 M3, K2 M1   | K3                   | privat, öffentlich    |
-| 3 Sprache und Körpersprache           | L5, L6        | L1            | K2             | K2, K4               | privat                |
-| 4 Manieren und Beschwerden            | L2            | L2            | K1 M4          | K11                  | öffentlich            |
-| 5 Tourismus und Reisen                | L2            | L5            | K5 M4          | K6                   | öffentlich            |
-| 6 Arbeitsleben und Unternehmenskultur | L4            | L3, L6        | K3             | –                    | beruflich             |
-| 7 Lebenswege und Ziele                | L3 (grammar)  | L4            | K3, K5         | K9                   | beruflich             |
-| 8 Studium und Wissen                  | L3, L6        | L4, L5        | K3 M2          | K7                   | Bildung / Studium     |
-| 9 Konsum und Luxus                    | L1, L5        | L2            | K1 M3          | K8                   | öffentlich            |
-| 10 Wirtschaft und Globalisierung      | L2 (Gründung) | L6            | K4             | K2                   | beruflich, öffentlich |
-| 11 Gesellschaft und Ehrenamt          | L1, L3        | L6            | K1 M2, K5 M4   | K5, K8               | öffentlich            |
+| Unit                                  | Sicher! C1/1  | Ziel C1 Bd. 1 | Aspekte neu C1 | Kontext C1 (grammar) |
+| ------------------------------------- | ------------- | ------------- | -------------- | -------------------- |
+| 1 Zeit und Tempo                      | L1            | L1, L6        | K1 M1          | –                    |
+| 2 Digital und vernetzt                | L1            | –             | K1 M3, K2 M1   | K3                   |
+| 3 Sprache und Körpersprache           | L5, L6        | L1            | K2             | K2, K4               |
+| 4 Manieren und Beschwerden            | L2            | L2            | K1 M4          | K11                  |
+| 5 Tourismus und Reisen                | L2            | L5            | K5 M4          | K6                   |
+| 6 Arbeitsleben und Unternehmenskultur | L4            | L3, L6        | K3             | –                    |
+| 7 Lebenswege und Ziele                | L3 (grammar)  | L4            | K3, K5         | K9                   |
+| 8 Studium und Wissen                  | L3, L6        | L4, L5        | K3 M2          | K7                   |
+| 9 Konsum und Luxus                    | L1, L5        | L2            | K1 M3          | K8                   |
+| 10 Wirtschaft und Globalisierung      | L2 (Gründung) | L6            | K4             | K2                   |
+| 11 Gesellschaft und Ehrenamt          | L1, L3        | L6            | K1 M2, K5 M4   | K5, K8               |
 
 ### Left out on purpose
 

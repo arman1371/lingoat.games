@@ -6,20 +6,20 @@ prefixed `fr-c22-`. The French content has **not yet been reviewed by a native s
 
 ## Sources (what was actually read)
 
-| Source                                                                                                    | What it contributes                                                                                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UNAV, Français C2.2 A (ISSA), teaching guide 2025-26 (`asignatura.unav.edu`)                              | A university C2 course: "at C2 there is no grammar or conjugation", the course widens vocabulary, word nuance, proverbs and sayings, and introduces literary French (classical theatre, poems, fables) and press texts.     |
-| France Éducation international, DALF C2 demo subject (Sciences, via the Scribbr copy of the official PDF) | Exam shape: report on a 15-minute document, argued point of view, debate with the jury; two domains (lettres et sciences humaines, sciences); written synthesis from a ~2,000-word file.                                    |
-| DALF C2 LSH oral calibration sheet (University of Calgary copy of the FEI training material)              | What the C2 grid rewards: faithful, objective report; a structured argument with connectors; nuancing and specifying a position; a wide lexicon for rephrasing and nuance; correct, flexible morphosyntax and modalisation. |
-| Université de Fribourg, Centre de langues, "B2-C2 Renforcement grammatical I"                             | The grammar a B2-C2 course still revises: tenses and agreement of the past participle, passé simple and antérieur, the subjunctive.                                                                                         |
-| Wikipédia: Participe présent, Gérondif, Adjectif verbal; Wiktionnaire: fatigant                           | The rules behind the unit 1 grammar lesson (see `docs/grammar-sources.md`).                                                                                                                                                 |
+| Source                                                                                       | What it contributes                                                                                                                                                                                                         |
+| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| UNAV, Français C2.2 A (ISSA), teaching guide 2025-26 (`asignatura.unav.edu`)                 | A university C2 course: "at C2 there is no grammar or conjugation", the course widens vocabulary, word nuance, proverbs and sayings, and introduces literary French (classical theatre, poems, fables) and press texts.     |
+| Official C2 exam demo subject (Sciences, via the Scribbr copy of the official PDF)           | Exam shape: report on a 15-minute document, argued point of view, debate with the jury; two domains (lettres et sciences humaines, sciences); written synthesis from a ~2,000-word file.                                    |
+| C2 LSH oral calibration sheet (University of Calgary copy of the official training material) | What the C2 grid rewards: faithful, objective report; a structured argument with connectors; nuancing and specifying a position; a wide lexicon for rephrasing and nuance; correct, flexible morphosyntax and modalisation. |
+| Université de Fribourg, Centre de langues, "B2-C2 Renforcement grammatical I"                | The grammar a B2-C2 course still revises: tenses and agreement of the past participle, passé simple and antérieur, the subjunctive.                                                                                         |
+| Wikipédia: Participe présent, Gérondif, Adjectif verbal; Wiktionnaire: fatigant              | The rules behind the unit 1 grammar lesson (see `docs/grammar-sources.md`).                                                                                                                                                 |
 
-**Could not be read:** the official DALF C2 pages and the candidate manual of France Éducation international (bot
+**Could not be read:** the official C2 exam pages and the candidate manual (bot
 protection, HTTP 403), the Riba thesis on the C1/C2 specification (access denied), the Édito C1 table of contents (only the
 publisher's sales pages came back), and the table of contents of the Grammaire progressive and Vocabulaire progressif
 perfectionnement. There is therefore **no official list of C2 topics**; the unit themes below are the same cultural
 domains as German C2.2 (arts, literature, heritage, law, civil society, climate, idioms) and are supported by the
-UNAV guide (literature, theatre, press, proverbs) and by the humanities/society domains of the DALF C2 oral. Before
+UNAV guide (literature, theatre, press, proverbs) and by the humanities/society domains of the C2 oral. Before
 release, check the list against the CEFR Companion Volume and the Riba C1/C2 specification.
 
 ## Split with French C2.1

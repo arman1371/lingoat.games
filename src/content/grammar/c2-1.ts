@@ -664,7 +664,7 @@ export const C21_TOPICS: GrammarTopic[] = [
         'what',
         'What it is',
         p(
-          'There are two styles for the same content. The **verbal style** uses verbs and subordinate clauses; the **nominal style** puts the content into nouns and prepositional phrases. Official, academic and technical German prefers the nominal style because it packs a lot of information into few words. It is the focus of the reformulation task in the Goethe C2 exam.',
+          'There are two styles for the same content. The **verbal style** uses verbs and subordinate clauses; the **nominal style** puts the content into nouns and prepositional phrases. Official, academic and technical German prefers the nominal style because it packs a lot of information into few words. It is the focus of the reformulation task in the C2 exam.',
         ),
         examples(
           [
