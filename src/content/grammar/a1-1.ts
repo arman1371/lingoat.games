@@ -4,6 +4,8 @@ import {
   compare,
   conjugationTable,
   examples,
+  indefiniteTable,
+  list,
   mistake,
   p,
   section,
@@ -613,12 +615,22 @@ export const A11_TOPICS: GrammarTopic[] = [
         ),
       ),
       section(
+        'when',
+        'When it is used',
+        list(
+          '**Direct object** of most verbs: haben, sehen, kaufen, brauchen, besuchen, essen, trinken, lieben (Ich habe einen Bruder).',
+          '**Accusative prepositions**, always followed by the accusative: durch, für, gegen, ohne, um (für den Lehrer, ohne meinen Hund).',
+          '**Two-way prepositions** when they answer **Wohin?** (in, an, auf, neben, vor, hinter, über, unter, zwischen): Ich lege das Buch auf den Tisch.',
+        ),
+      ),
+      section(
         'forms',
         'The forms',
         p(
           'Compared with the nominative, only the **masculine singular** is different in the accusative. All other forms stay the same.',
         ),
         articleTable('The definite article; the accusative row is highlighted.', 'acc'),
+        indefiniteTable('The indefinite article in three cases.', 'acc'),
         table(
           'ein, kein and mein in the accusative.',
           ['Form', 'masc.', 'fem.', 'neut.', 'plural'],
@@ -627,6 +639,24 @@ export const A11_TOPICS: GrammarTopic[] = [
             ['kein', 'keinen', 'keine', 'kein', 'keine'],
             ['mein', 'meinen', 'meine', 'mein', 'meine'],
           ],
+        ),
+        table(
+          'Personal pronouns in the accusative.',
+          ['Nominative', 'Accusative', 'Example'],
+          [
+            ['ich', 'mich', 'Er sieht mich.'],
+            ['du', 'dich', 'Ich liebe dich.'],
+            ['er', 'ihn', 'Ich kenne ihn.'],
+            ['sie (she)', 'sie', 'Wir besuchen sie.'],
+            ['es', 'es', 'Ich brauche es.'],
+            ['wir', 'uns', 'Sie sucht uns.'],
+            ['ihr', 'euch', 'Ich rufe euch an.'],
+            ['sie (they)', 'sie', 'Ich sehe sie.'],
+            ['Sie', 'Sie', 'Ich verstehe Sie.'],
+          ],
+        ),
+        p(
+          'Like the nouns, only **er** changes to **ihn** among the third-person forms. **sie** and **es** stay the same. Dative forms (mir, dir, ihm …) are in the lesson “mich or mir?”.',
         ),
       ),
       section(
@@ -640,6 +670,7 @@ export const A11_TOPICS: GrammarTopic[] = [
           'Watch out',
           '✗ Ich habe ein Bruder.  ✓ Ich habe einen Bruder.',
           '✗ Ich kaufe der Tisch.  ✓ Ich kaufe den Tisch.',
+          '✗ Ich sehe er.  ✓ Ich sehe ihn.',
         ),
       ),
       section(
