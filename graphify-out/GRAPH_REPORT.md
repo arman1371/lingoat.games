@@ -1,17 +1,17 @@
-# Graph Report - lingoat.games  (2026-11-25)
+# Graph Report - lingoat.games  (2026-11-28)
 
 ## Corpus Check
-- 810 files · ~1,066,068 words
+- 810 files · ~1,066,374 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: (none) 5, .css 2, .example 1)
 
 ## Summary
-- 4901 nodes · 14205 edges · 199 communities (190 shown, 9 thin omitted)
+- 4901 nodes · 14208 edges · 199 communities (190 shown, 9 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 201 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e6aa5dfd`
+- Built from commit: `0fc7015c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -101,7 +101,7 @@
 - u4-logement.ts
 - u11-sport.ts
 - B1.2 – syllabus research, coverage and overlap with A1.1–B1.1
-- a2-2.ts
+- build.ts
 - B2.1 – syllabus research, coverage and overlap with A1.1–B1.2
 - DESIGN/manifest.json
 - Button.tsx
@@ -110,7 +110,7 @@
 - u7-tag.ts
 - scoring.test.ts
 - french/conjugation.ts
-- sources-fr.ts
+- c2-1.ts
 - fetch.ts
 - u10-cause.ts
 - lib/report.ts
@@ -162,7 +162,7 @@
 - u4-regrets.ts
 - u3-recit.ts
 - French A1.1 – syllabus research and plan
-- build.ts
+- ref_lib_german_conjugation
 - b1-2/index.ts
 - u2-paysages.ts
 - c2-1/index.ts
@@ -336,8 +336,8 @@ Cohesion: 0.09
 Nodes (21): compilerOptions, allowImportingTsExtensions, jsx, lib, module, moduleDetection, moduleResolution, noEmit (+13 more)
 
 ### Community 22 - "GrammarTopic"
-Cohesion: 0.22
-Nodes (22): compare(), examples(), frConjugationTable(), mistake(), p(), section(), tip(), FR11_TOPICS (+14 more)
+Cohesion: 0.20
+Nodes (24): compare(), examples(), frConjugationTable(), mistake(), p(), section(), tip(), FR11_TOPICS (+16 more)
 
 ### Community 23 - "kit.ts"
 Cohesion: 0.06
@@ -559,9 +559,9 @@ Nodes (12): DBL, EMP, events, FA, mean(), ORDER, phrases, sport (+4 more)
 Cohesion: 0.20
 Nodes (9): B1.2 – syllabus research, coverage and overlap with A1.1–B1.1, Communication goals, Engines, Grammar, Grammar hints, How the units were chosen, Left out on purpose, Pronunciation (+1 more)
 
-### Community 85 - "a2-2.ts"
-Cohesion: 0.16
-Nodes (14): ref_lib_german_adjectives, ref_lib_german_articles, A11_TOPICS, CASES, GENDERS, A21_TOPICS, superlativeRows(), A22_TOPICS (+6 more)
+### Community 85 - "build.ts"
+Cohesion: 0.08
+Nodes (27): ref_lib_german_adjectives, ref_lib_german_articles, A11_TOPICS, CASES, GENDERS, A12_TOPICS, A21_TOPICS, superlativeRows() (+19 more)
 
 ### Community 86 - "B2.1 – syllabus research, coverage and overlap with A1.1–B1.2"
 Cohesion: 0.22
@@ -595,9 +595,9 @@ Nodes (4): accuracy(), GameResult, starsFor(), xpFor()
 Cohesion: 0.17
 Nodes (16): Unit 2 – Félicitations ! (`fetes`), French A1.2 (30 topics), conjugateFr(), ER_ENDINGS, ER_STRONG_STEM, forms(), FrenchForms, IR_ENDINGS (+8 more)
 
-### Community 94 - "sources-fr.ts"
-Cohesion: 0.19
-Nodes (5): FR22_TOPICS, FR22_SOURCES, conj(), wiktionary(), Source
+### Community 94 - "c2-1.ts"
+Cohesion: 0.24
+Nodes (5): C21_TOPICS, futur2Rows, WERDEN, C22_TOPICS, C2_SOURCES
 
 ### Community 95 - "fetch.ts"
 Cohesion: 0.13
@@ -736,8 +736,8 @@ Cohesion: 0.29
 Nodes (10): ref_lib_french_compound, ref_lib_french_conditional, conditionnelTable(), condPasseTable(), futAnterieurTable(), futurTable(), imparfaitTable(), pqpTable() (+2 more)
 
 ### Community 129 - "grammar/index.ts"
-Cohesion: 0.06
-Nodes (31): ref_lib_german_konjunktiv1, B21_TOPICS, sein, werden, B22_TOPICS, conjugationTable(), C21_TOPICS, futur2Rows (+23 more)
+Cohesion: 0.08
+Nodes (26): ref_lib_german_konjunktiv1, B21_TOPICS, sein, werden, B22_TOPICS, conjugationTable(), FR11_TOPICS_B, FRB21_TOPICS (+18 more)
 
 ### Community 130 - "Conjugation.tsx"
 Cohesion: 0.40
@@ -803,9 +803,9 @@ Nodes (8): events, recit, registerItems, Six, Table, tenseItems, times, vocab
 Cohesion: 0.25
 Nodes (6): Build plan, Cross-check against an A1 curriculum overview, Cross-check against the official A1 exam page, French A1.1 – syllabus research and plan, How the units were chosen, Sources (what was actually read)
 
-### Community 148 - "build.ts"
-Cohesion: 0.13
-Nodes (14): ref_lib_german_conjugation, A12_TOPICS, B11_TOPICS, B12_TOPICS, articleTable(), CASES, GENDERS, indefiniteTable() (+6 more)
+### Community 148 - "ref_lib_german_conjugation"
+Cohesion: 0.31
+Nodes (4): ref_lib_german_conjugation, B11_TOPICS, B12_TOPICS, B1_SOURCES
 
 ### Community 149 - "b1-2/index.ts"
 Cohesion: 0.12
