@@ -249,6 +249,8 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* the page is as tall as the real layout viewport; 100dvh overshoots it in some Android PWAs/browsers and made every short screen scroll */
+  height: 100%;
 }
 body {
   margin: 0;
@@ -256,7 +258,14 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   line-height: 1.5;
-  min-height: 100dvh;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
