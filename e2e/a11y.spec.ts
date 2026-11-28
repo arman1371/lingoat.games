@@ -252,6 +252,7 @@ const PAGES: [string, string, string][] = [
   ['unit A1.2', '/levels/a1-2/units/a1-2-stadt', 'In der Stadt'],
   ['unit A1.2 with grammar card', '/levels/a1-2/units/a1-2-wohnen', 'Wohnen'],
   ['grammar lesson', '/library/grammar/two-way-prepositions', 'Wo? or Wohin?'],
+  ['grammar lesson accusative', '/library/grammar/accusative', 'Accusative (Wen? Was?)'],
   ['grammar lesson in French', '/fr/library/grammar/fr-demonstratives', 'ce, cet, cette, ces'],
   [
     'grammar lesson in French C1.1',
