@@ -1,5 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
-import { activity, SEED } from './helpers';
+import { activity, playPerfectly, SEED } from './helpers';
 
 const PHONE = { width: 390, height: 844 };
 
@@ -35,6 +35,32 @@ test.describe('game screen', () => {
     const box = await page.getByTestId('continue').boundingBox();
     expect(box!.y + box!.height).toBeLessThanOrEqual(PHONE.height);
     expect(box!.y + box!.height).toBeGreaterThan(PHONE.height - 40);
+    expect(await overflow(page)).toBeLessThanOrEqual(0);
+  });
+
+  test('the result screen fits the phone: nothing to scroll', async ({ page }) => {
+    await playPerfectly(page, 'a1-1-hallo-time-of-day');
+    await settle(page);
+    expect(await overflow(page)).toBeLessThanOrEqual(0);
+  });
+
+  test('the fullest result screen (mistakes note + next up) fits a short phone', async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 360, height: 640 });
+    const gap = activity('a1-2-gesundheit-gap-modal');
+    await page.goto(`/play/${gap.id}?seed=${SEED}&q=a1-1-hallo-time-of-day`);
+    await page.getByTestId('start').click();
+    const done = page.getByRole('heading', { name: 'Well done!' });
+    // tap the first option each round: some right, some wrong, so the mistakes note shows
+    for (let n = 0; n < 40 && !(await done.isVisible()); n++) {
+      const next = page.getByTestId('continue');
+      if (await next.isVisible()) await next.click();
+      else await page.locator('section[aria-label] button:not([disabled])').first().click();
+    }
+    await expect(page.getByTestId('mistakes-note')).toBeVisible();
+    await expect(page.getByTestId('next-activity')).toBeVisible();
+    await settle(page);
     expect(await overflow(page)).toBeLessThanOrEqual(0);
   });
 

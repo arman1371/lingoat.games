@@ -3,6 +3,9 @@
 @import '@fontsource-variable/plus-jakarta-sans';
 
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+/* short phone screens, e.g. a browser with its toolbars showing: the result screen tightens up to fit */
+@custom-variant short (@media (max-height: 760px));
+@custom-variant tiny (@media (max-height: 680px));
 
 /*
  * Design tokens from DESIGN/ (Lingoat teal system). The app keeps its own semantic names; values map onto
@@ -249,6 +252,8 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* the page is as tall as the real layout viewport; 100dvh overshoots it in some Android PWAs/browsers and made every short screen scroll */
+  height: 100%;
 }
 body {
   margin: 0;
@@ -256,7 +261,14 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   line-height: 1.5;
-  min-height: 100dvh;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,

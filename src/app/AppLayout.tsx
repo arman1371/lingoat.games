@@ -134,7 +134,7 @@ function Shell() {
 
   return (
     <div
-      className={`min-h-dvh pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] md:pl-0 md:pr-0 ${playing ? 'flex flex-col' : 'md:grid md:grid-cols-[16.5rem_minmax(0,1fr)]'}`}
+      className={`flex-1 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] md:pl-0 md:pr-0 ${playing ? 'flex flex-col' : 'md:grid md:grid-cols-[16.5rem_minmax(0,1fr)]'}`}
     >
       <a
         href="#main"
