@@ -3,6 +3,9 @@
 @import '@fontsource-variable/plus-jakarta-sans';
 
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+/* short phone screens, e.g. a browser with its toolbars showing: the result screen tightens up to fit */
+@custom-variant short (@media (max-height: 760px));
+@custom-variant tiny (@media (max-height: 680px));
 
 /*
  * Design tokens from DESIGN/ (Lingoat teal system). The app keeps its own semantic names; values map onto
